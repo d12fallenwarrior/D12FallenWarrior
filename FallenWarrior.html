@@ -1,81 +1,393 @@
-<div class="3colrow">
-    <div class="col">
-        <label>Name:</label><input type="text" name="attr_character_name" />
-        <label>Rank:</label><input type="text" name="attr_rank" />
-        <label>XP:</label><input type="number" name="attr_xp" />
+<!-- OPCIONES, PESTAÑAS -->
+<input type="checkbox" 
+
+<!-- SECCIÓN CABECERA -->
+<div>
+    <div class="row">
+        <div class="col">
+            <p>Nombre de personaje</p> <input type="text" value="@{character_name}">
+        </div>
+        <div class="col">
+            <p>Nombre de jugador</p> <input type="text">            
+        </div>
+        <div class="col">
+            <p>Experiencia a repartir/total</p> <input type="text">            
+        </div>     
     </div>
-
-    <div class="col">
-        <img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/kitchensink/logo.png" />
-    </div>
-
-    <div class="col">
-        <label>Setting:</label><input type="text" name="attr_setting" />
-        <label>Race:</label><input type="text" name="attr_race" />
-    </div>
-
-</div>
-
-<hr />
-<div class="3colrow">
-    <div class="col">
-        <h2>Attributes</h2>
-
-        <label>Agility </label><input type="text" name='attr_agility' class='sheet-short'>
-        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{agility}]]}}'></button><span class='dee'>d</span>
-        <br />
-        <label>Smarts </label><input type="text" name='attr_smarts' class='sheet-short'>
-        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{smarts}]]}}'></button><span class='dee'>d</span>
-        <br />
-        <label>Spirit </label><input type="text" name='attr_spirit' class='sheet-short'>
-        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{spirit}]]}}'></button><span class='dee'>d</span>
-        <br />
-        <label>Strength </label><input type="text" name='attr_strength' class='sheet-short'>
-        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{strength}]]}}'></button><span class='dee'>d</span>
-        <br />
-        <label>Vigor </label><input type="text" name='attr_vigor' class='sheet-short' value='25'>
-        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{vigor}]]}}'></button><span class='dee'>d</span>
-        <hr />
-
-        <h2">
-            Skills</h2>
-
-            <fieldset class="repeating_skills">
-                <select name="attr_dtype" class="dtype">
-                    <option value="d4">d4</option>
-                    <option value="d6">d6</option>
-                    <option value="d8">d8</option>
-                    <option value="d10">d10</option>
-                    <option value="d12">d12</option>
-                </select>
-                <input type="text" name="attr_skillname" />
-            </fieldset>
-
-    </div>
-
-    <div class="col">
-        <h2>Derived Stats</h2>
-        <div class="stats">
-            <h3>Base</h3><h3>Max</h3>
-            <label>Pace</label><input type="text" name="attr_pace" /><input type="text" name="attr_pace_max" />
-            <label>Parry</label><input type="text" name="attr_parry" /><input type="text" name="attr_parry_max" />
-            <label>Toughness</label><input type="text" name="attr_toughness" /><input type="text" name="attr_toughness_max" />
-            <label>Charisma</label><input type="text" name="attr_charisma" " /><input type="text" name="attr_charisma_max" />
+    <div class="row">
+        <div class="col">   
+            <p>Clase</p> <input type="text">        
+        </div>
+        <div class="col">
+            <p>Raza</p> <input type="text">           
+        </div>
+        <div class="col">
+            <p>Región</p> <input type="text">      
+        </div>
+        <div class="col">
+            <p>Peso</p> <input type="text">           
+        </div>
+        <div class="col">
+            <p>Altura</p> <input type="text">           
+        </div>
+        <div class="col">
+            <p>Edad</p> <input type="text">          
         </div>
     </div>
+</div>
 
+
+<!-- SECCIÓN ATRIBUTOS Y CARACTERÍSTICAS SECUNDARIAS -->
+<div class="2colrow">
+    <!-- Atributos -->
     <div class="col">
+        <h1>ATRIBUTOS</h1>
+        <p>Fuerza</p> <input name="attr_fue" type="number" value="0" min="0" max="8" />
+        <p>Destreza</p> <input name="attr_des" type="number" value="5" min="0" max="8" />
+        <p>Agilidad</p> <input name="attr_agi" type="number" value="0" min="0" max="8" />
+        <p>Resistencia</p> <input name="attr_res" type="number" value="0" min="0" max="8" />
+        <p>Astucia</p> <input name="attr_ast" type="number" value="0" min="0" max="8" />
+        <p>Inteligencia</p> <input name="attr_int" type="number" value="0" min="0" max="8" />
+    </div>
+        
+    <!-- Características secundarias -->
+    <div class="col">
+        <h1>CARACTERÍSTICAS SECUNDARIAS</h1>
+        <P>Característica / Fórmula / Mod. Especial / Valor final + Roll</P>
+        <span>
+            <p>Reflejos</p> <p>(Agi+Ast-5)</p> <input name="attr_ref_esp" type="number" value="0">
+            <input name="attr_ref" type="num" value="[[(@{agi}+@{ast}-5+@{ref_esp})]]" disabled>
+            <button name="roll_reflejos" type="roll" value="&{template:@{tipotirada}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[1d12cs0cf0]]}} {{r2=[[1d12cs0cf0]]}} {{crit=¡Crítico! Bono de +2}} {{charname=@{character_name}}}" ></button>
+        </span>
+        <span>
+            <p>Vitalidad</p> <p>(Res+Fue-5)</p> <input name="attr_vit_esp" type="number" value="0">
+            <input name="attr_vit" type="num" value="[[(@{res}+@{fue}-5+@{vit_esp})]]" disabled> 
+            <button name="roll_vitalidad"type="roll" value="/roll 2d12mkl1 [Dados] + @{vit} [Vitalidad]" ></button>
+        </span>
+        <span>
+            <p>Voluntad</p> <p>(Int+Ast-5)</p> <input name="attr_vol_esp" type="number" value="0">
+            <input name="attr_vol" type="num" value="[[(@{int}+@{ast}-5+@{vol_esp})]]" disabled>
+            <button name="roll_voluntad" type="roll" value="/roll 2d12mkl1 [Dados] + @{vol} [Voluntad]" ></button>
+        </span>
+        <span>
+            <p>Estrategia</p> <p>(Int+Ast)</p> <input name="attr_est_esp" type="number" value="0">
+            <input name="attr_est" type="num" value="[[(@{int}+@{ast}+@{est_esp})]]" disabled>
+            <button name="roll_vstrategia" type="roll" value="/roll 2d12mkl1 [Dados] + @{est} [Estrategia]" ></button>
+        </span>
+        <span>
+            <p>Espíritu</p> <p>(Res+Int)</p> <input name="attr_esp_esp" type="number" value="0">
+            <input name="attr_esp" type="num" value="[[(@{res}+@{int}+@{esp_esp})]]" disabled>
+            <button name="roll_espiritu" type="roll" value="/roll 2d12mkl1 [Dados] + @{esp} [Espíritu]" ></button>
+        </span>
+        <span>
+            <p>Energía</p> <p>(5+10*Res)</p> <input name="attr_ene_esp" type="number" value="0">
+            <input name="attr_ene" type="num" value="[[(5+(10*@{res})+@{ene_esp})]]" disabled>
+        </span>
+        <span>
+            <p>Herida</p> <p>(1+Res+Fue)</p> <input name="attr_her_esp" type="number" value="0">
+            <input name="attr_her" type="number" value="[[(1+@{res}+@{fue}+@{her_esp})]]" disabled>  
+        </span>
+        
+    </div>  
+</div>
 
-        <h2>Hindrances</h2>
-
-        <textarea name="attr_hindrances"></textarea>
-
-        <hr />
-
-        <h2>Edges</h2>
-
-        <textarea name="attr_edges"></textarea>
-
+<!--SECCIÓN COMBATE-->
+<h1>COMBATE</h1>
+<div class="row">
+    <div>
+        <p>Cansancio</p>
+        <input type="number" name="cansancio" value="0" />
+        <p>Daño Vital</p>
+        <input type ="number" name="danovital" value="0" />
+        <p>Puntos de Trauma</p>
+        <input type ="number" name="puntostrauma" value="0" />
+    </div>
+    <div>
+        <p>Esquiva</p>
+        <input type="num" name="attr_esq" value="(@{agi}+@{})" />
+        <button type="roll" value="/roll 2d12mkl1 [Dados] + @{esquiva} [Esquiva]" name="roll_Esquiva"></button>
+        <p>Bloqueo</p>
+        <input type="number" name="attr_esq" value="0" />
+        <button type="roll" value="/roll 2d12mkl1 [Dados] + @{bloqueo} [Bloqueo]" name="roll_Bloqueo"></button>
+        <p>Pelea</p>
+        <input type="number" name="attr_esq" value="0" />
+        <button type="roll" value="/roll 2d12mkl1 [Dados] + @{pelea} [Esquiva]" name="roll_Pelea"></button>
     </div>
 
+    <!--Armas Melee-->
+    <div>
+        <fieldset class="repeating_armamelee"> 
+            <!---->
+            <button type="roll" value="/roll 2d12mkl1 [Dados] + @{bonoataque} [Bono Ataque]" name="roll_armamelee"></button>
+            <input type="text" name="attr_nombrearma" /> 
+            <select name="attr_tipoarma"> 
+              <option value="hespada">Espada</option>
+              <option value="hhmayma">Maza y Martillo</option>
+              <option value="hmayca">Mangual y Cadena</option>
+              <option value="hasta">Arma de asta</option>
+              <option value="hhaypi">Hacha y Pico</option>
+            </select>
+            <p>Bonificador</p><input type="number" name="attr_bonoataque" value="0" />
+            <p>Daño</p><input type="number" name="attr_dano" value="0" />
+            <p>D.V.</p><input type="number" name="attr_dv" value="0" />
+            <p>Can.</p><input type="number" name="attr_can" value="0" />
+            <p>Alc.</p><input type="number" name="attr_alc" value="0" />
+            <p>Especial</p><input type="text">
+          </fieldset>
+    </div>
 </div>
+
+<!--SECCIÓN HABILIDADES-->
+<h1>HABILIDADES</h1>
+<!--Algunas habilidades tienen dos atributos y cogen el mayor:  Empatía: ast/int, Sanar: des/int, Seguridad: des/int. Defino esos máximos aquí y esto se edita con la API-->
+<input name="attr_max_desint" type="hidden" value="0">
+<input name="attr_max_astint" type="hidden" value="0">
+<div class="3colrow">
+    <div class="col"> <!--Habilidades Combate-->
+        <h3>Combate</h3>
+        <p>C. sin armas</p> <input name="attr_rang_sinarmas" type="number" value="0"/>
+        <p>Escudo</p> <input name="attr_rang_esc" type="number" value="0" />
+        <p>Esquiva*</p> <input name="attr_rang_esq" type="number" value="0" />
+        <p>Espada</p> <input name="attr_rang_esp" type="number" value="0" />
+        <p>Maza y martillo</p> <input name="attr_rang_mayma" type="number" value="0" />
+        <p>Mangual y cadena</p> <input name="attr_rang_mayca" type="number" value="0" />
+        <p>Arma de asta</p> <input name="attr_rang_asta" type="number" value="0" />
+        <p>Hacha y pico</p> <input name="attr_rang_haypi" type="number" value="0" />
+        <p>Arco</p> <input name="attr_rang_arco" type="number" value="0" />
+        <p>Ballesta</p> <input name="attr_rang_ball" type="number" value="0" />
+        <p>Arma de fuego</p> <input name="attr_rang_fuego" type="number" value="0" />
+        <p></p> <input name="attr_rang_" type="number" value="0" />
+        <p></p> <input name="attr_rang_" type="number" value="0" />
+        <p></p> <input name="attr_rang_" type="number" value="0" />
+    </div>
+    
+    <div class="col">
+        <h3>Comunes</h3>
+        <p>Habilidad (atributo)/ Rangos / Mod. Especial / Hab. Final + Roll</p>
+        <span>
+            <p>alerta (ast)</p> <input name="attr_rang_alerta" type="number" value="0" /> <input name="attr_hab_alerta_esp" type="number" value="0">
+            <input name="attr_hab_alerta" type="num" value="[[(@{rang_alerta}+@{ast}-5+@{hab_alerta_esp})]]" disabled>
+            <button name="roll_alerta" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_alerta}"></button>
+        </span>
+        <span>
+            <p>atletismo (fue)</p> <input name="attr_rang_atletismo" type="number" value="0" /> <input name="attr_hab_atletismo_esp" type="number" value="0">
+            <input name="attr_hab_atletismo" type="num" value="[[(@{rang_atletismo}+@{fue}-5+@{hab_atletismo_esp})]]" disabled>
+            <button name="roll_atletismo" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_atletismo}"></button>
+        </span>
+        <span>
+            <p>diplomacia (ast)</p> <input name="attr_rang_diplomacia" type="number" value="0" /> <input name="attr_hab_diplomacia_esp" type="number" value="0">
+            <input name="attr_hab_diplomacia" type="num" value="[[(@{rang_diplomacia}+@{ast}-5+@{hab_diplomacia_esp})]]" disabled>
+            <button name="roll_diplomacia" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_diplomacia}"></button>
+        </span>
+        <span>
+            <p>empatia (ast/int)</p><input name="attr_rang_empatia" type="number" value="0" /> <input name="attr_hab_empatia_esp" type="number" value="0">
+            <input name="attr_hab_empatia" type="num" value="[[(@{rang_empatia}+@{max_astint}-5+@{hab_empatia_esp})]]" disabled>
+            <button name="roll_empatia" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_empatia}"></button>
+        </span>
+        <span>
+            <p>enganar (ast)</p><input name="attr_rang_enganar" type="number" value="0" /> <input name="attr_hab_enganar_esp" type="number" value="0">
+            <input name="attr_hab_enganar" type="num" value="[[(@{rang_enganar}+@{ast}-5+@{hab_enganar_esp})]]" disabled>
+            <button name="roll_enganar" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_enganar}"></button>
+        </span>
+        <span>
+            <p>equilibrio (agi)</p><input name="attr_rang_equilibrio" type="number" value="0" /> <input name="attr_hab_equilibrio_esp" type="number" value="0">
+            <input name="attr_hab_equilibrio" type="num" value="[[(@{rang_equilibrio}+@{agi}-5+@{hab_equilibrio_esp})]]" disabled>
+            <button name="roll_equilibrio" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_equilibrio}"></button>
+        </span>
+        <span>
+            <p>intimidar (fue)</p><input name="attr_rang_intimidar" type="number" value="0" /> <input name="attr_hab_intimidar_esp" type="number" value="0">
+            <input name="attr_hab_intimidar" type="num" value="[[(@{rang_intimidar}+@{fue}-5+@{hab_intimidar_esp})]]" disabled>
+            <button name="roll_intimidar" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_intimidar}"></button>
+        </span>
+        <span>
+            <p>movilidad (agi)</p><input name="attr_rang_movilidad" type="number" value="0" /> <input name="attr_hab_movilidad_esp" type="number" value="0">
+            <input name="attr_hab_movilidad" type="num" value="[[(@{rang_movilidad}+@{agi}-5+@{hab_movilidad_esp})]]" disabled>
+            <button name="roll_movilidad" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_movilidad}"></button>
+        </span>
+        <span>
+            <p>nadar (fue)</p><input name="attr_rang_nadar" type="number" value="0" /> <input name="attr_hab_nadar_esp" type="number" value="0">
+            <input name="attr_hab_nadar" type="num" value="[[(@{rang_nadar}+@{fue}-5+@{hab_nadar_esp})]]" disabled>
+            <button name="roll_nadar" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_nadar}"></button>
+        </span>
+        <span>
+            <p>observacion (int)</p><input name="attr_rang_observacion" type="number" value="0" /> <input name="attr_hab_observacion_esp" type="number" value="0">
+            <input name="attr_hab_observacion" type="num" value="[[(@{rang_observacion}+@{int}-5+@{hab_observacion_esp})]]" disabled>
+            <button name="roll_observacion" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_observacion}"></button>
+        </span>
+        <span>
+            <p>sigilo (agi)</p><input name="attr_rang_sigilo" type="number" value="0" /> <input name="attr_hab_sigilo_esp" type="number" value="0">
+            <input name="attr_hab_sigilo" type="num" value="[[(@{rang_sigilo}+@{agi}-5+@{hab_sigilo_esp})]]" disabled>
+            <button name="roll_sigilo" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_sigilo}"></button>
+        </span>
+        <span>
+            <p>supervivencia (int)</p><input name="attr_rang_supervivencia" type="number" value="0" /> <input name="attr_hab_supervivencia_esp" type="number" value="0">
+            <input name="attr_hab_supervivencia" type="num" value="[[(@{rang_supervivencia}+@{int}-5+@{hab_supervivencia_esp})]]" disabled>
+            <button name="roll_supervivencia" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_supervivencia}"></button>
+        </span>
+        <span>
+            <p>tasacion (int)</p><input name="attr_rang_tasacion" type="number" value="0" /> <input name="attr_hab_tasacion_esp" type="number" value="0">
+            <input name="attr_hab_tasacion" type="num" value="[[(@{rang_tasacion}+@{int}-5+@{hab_tasacion_esp})]]" disabled>
+            <button name="roll_tasacion" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_tasacion}"></button>
+        </span>
+        <span>
+            <p>tratoanimal (int)</p><input name="attr_rang_tratoanimal" type="number" value="0" /> <input name="attr_hab_tratoanimal_esp" type="number" value="0">
+            <input name="attr_hab_tratoanimal" type="num" value="[[(@{rang_tratoanimal}+@{int}-5+@{hab_tratoanimal_esp})]]" disabled>
+            <button name="roll_tratoanimal" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_tratoanimal}"></button>
+        </span>
+    </div>
+
+    <div class="col">
+        <h3>Raras</h3>
+        <p>Habilidad (atributo)/ Rangos / Mod. Especial / Hab. Final + Roll</p>
+        <span>
+            <p>arte (ATR)</p> <input name="attr_rang_arte" type="number" value="0" /> <input name="attr_hab_arte_esp" type="number" value="0">
+            <input name="attr_hab_arte" type="num" value="[[(@{rang_arte}+@{ATR}-5+@{hab_arte_esp})]]" disabled>
+            <button name="roll_arte" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_arte}"></button>
+        </span>
+        <span>
+            <p>arte (ATR)</p> <input name="attr_rang_arte" type="number" value="0" /> <input name="attr_hab_arte_esp" type="number" value="0">
+            <input name="attr_hab_arte" type="num" value="[[(@{rang_arte}+@{ATR}-5+@{hab_arte_esp})]]" disabled>
+            <button name="roll_arte" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_arte}"></button>
+        </span>
+        <span>
+            <p>arte (ATR)</p> <input name="attr_rang_arte" type="number" value="0" /> <input name="attr_hab_arte_esp" type="number" value="0">
+            <input name="attr_hab_arte" type="num" value="[[(@{rang_arte}+@{ATR}-5+@{hab_arte_esp})]]" disabled>
+            <button name="roll_arte" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_arte}"></button>
+        </span>
+        <span>
+            <p>idiomas (int)</p> <input name="attr_rang_idiomas" type="number" value="0" /> <input name="attr_hab_idiomas_esp" type="number" value="0">
+            <input name="attr_hab_idiomas" type="num" value="[[(@{rang_idiomas}+@{int}-5+@{hab_idiomas_esp})]]" disabled>
+            <button name="roll_idiomas" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_idiomas}"></button>
+        </span>
+        <span>
+            <p>piruetas (agi)</p> <input name="attr_rang_piruetas" type="number" value="0" /> <input name="attr_hab_piruetas_esp" type="number" value="0">
+            <input name="attr_hab_piruetas" type="num" value="[[(@{rang_piruetas}+@{agi}-5+@{hab_piruetas_esp})]]" disabled>
+            <button name="roll_piruetas" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_piruetas}"></button>
+        </span>
+        <span>
+            <p>rastrear (int)</p> <input name="attr_rang_rastrear" type="number" value="0" /> <input name="attr_hab_rastrear_esp" type="number" value="0">
+            <input name="attr_hab_rastrear" type="num" value="[[(@{rang_rastrear}+@{int}-5+@{hab_rastrear_esp})]]" disabled>
+            <button name="roll_rastrear" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_rastrear}"></button>
+        </span>
+        <span>
+            <p>sarcano (int)</p> <input name="attr_rang_sarcano" type="number" value="0" /> <input name="attr_hab_sarcano_esp" type="number" value="0">
+            <input name="attr_hab_sarcano" type="num" value="[[(@{rang_sarcano}+@{int}-5+@{hab_sarcano_esp})]]" disabled>
+            <button name="roll_sarcano" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_sarcano}"></button>
+        </span>
+        <span>
+            <p>sbajosfondos (int)</p> <input name="attr_rang_sbajosfondos" type="number" value="0" /> <input name="attr_hab_sbajosfondos_esp" type="number" value="0">
+            <input name="attr_hab_sbajosfondos" type="num" value="[[(@{rang_sbajosfondos}+@{int}-5+@{hab_sbajosfondos_esp})]]" disabled>
+            <button name="roll_sbajosfondos" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_sbajosfondos}"></button>
+        </span>
+        <span>
+            <p>sculturas (int)</p> <input name="attr_rang_sculturas" type="number" value="0" /> <input name="attr_hab_sculturas_esp" type="number" value="0">
+            <input name="attr_hab_sculturas" type="num" value="[[(@{rang_sculturas}+@{int}-5+@{hab_sculturas_esp})]]" disabled>
+            <button name="roll_sculturas" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_sculturas}"></button>
+        </span>
+        <span>
+            <p>snaturaleza (int)</p> <input name="attr_rang_snaturaleza" type="number" value="0" /> <input name="attr_hab_snaturaleza_esp" type="number" value="0">
+            <input name="attr_hab_snaturaleza" type="num" value="[[(@{rang_snaturaleza}+@{int}-5+@{hab_snaturaleza_esp})]]" disabled>
+            <button name="roll_snaturaleza" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_snaturaleza}"></button>
+        </span>
+        <span>
+            <p>ssociedad (int)</p> <input name="attr_rang_ssociedad" type="number" value="0" /> <input name="attr_hab_ssociedad_esp" type="number" value="0">
+            <input name="attr_hab_ssociedad" type="num" value="[[(@{rang_ssociedad}+@{int}-5+@{hab_ssociedad_esp})]]" disabled>
+            <button name="roll_ssociedad" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_ssociedad}"></button>
+        </span>
+        <span>
+            <p>sanar (des/int)</p> <input name="attr_rang_sanar" type="number" value="0" /> <input name="attr_hab_sanar_esp" type="number" value="0">
+            <input name="attr_hab_sanar" type="num" value="[[(@{rang_sanar}+@{max_desint}-5+@{hab_sanar_esp})]]" disabled>
+            <button name="roll_sanar" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_sanar}"></button>
+        </span>
+        <span>
+            <p>seguridad (des/int)</p> <input name="attr_rang_seguridad" type="number" value="0" /> <input name="attr_hab_seguridad_esp" type="number" value="0">
+            <input name="attr_hab_seguridad" type="num" value="[[(@{rang_seguridad}+@{max_desint}-5+@{hab_seguridad_esp})]]" disabled>
+            <button name="roll_seguridad" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_seguridad}"></button>
+        </span>
+        <span>
+            <p>tactica (ast)</p> <input name="attr_rang_tactica" type="number" value="0" /> <input name="attr_hab_tactica_esp" type="number" value="0">
+            <input name="attr_hab_tactica" type="num" value="[[(@{rang_tactica}+@{ast}-5+@{hab_tactica_esp})]]" disabled>
+            <button name="roll_tactica" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_tactica}"></button>
+        </span>
+    </div>
+</div>
+
+<!-- PLANTILLA PARA LAS HABILIDADES, NO BORRAR-->
+<span>
+    <p>NOMBRE (ATR)</p> <input name="attr_rang_NOMBRE" type="number" value="0" /> <input name="attr_hab_NOMBRE_esp" type="number" value="0">
+    <input name="attr_hab_NOMBRE" type="num" value="&{template:simple} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cs0cf0]]}} {{r2=[[1d12cs0cf0]]}} {{crit=¡Crítico! Bono de +2}} {{charname=charname}}]]" disabled>
+    <button name="roll_NOMBRE" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_NOMBRE}"></button>
+</span>
+<!-- FIN PLANTILLA -->
+
+<!--ROLL TEMPLATE-->
+<!-- Macro:
+    &{template:simple} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cs0cf0]]}} {{r2=[[1d12cs0cf0]]}} {{crit=¡Crítico! Bono de +2}} {{charname=charname}}
+-->
+<rolltemplate class="sheet-rolltemplate-simple">
+    <div class="container">
+        <div class="result">
+                {{#rollLess() r1 r2}}
+                    <div class="adv">
+                        <span>{{r1}}</span>
+                    </div>
+                    <div class="advspacer"></div>
+                    <div class="adv">
+                        <span class="grey">{{r2}}</span>
+                    </div>
+                {{/rollLess() r1 r2}}
+                {{#rollTotal() r1 r2}}
+                    <div class="adv">
+                        <span class="green">{{r1}}</span>
+                    </div>
+                    <div class="advspacer"></div>
+                    <div class="adv">
+                        <span class="green">{{r2}}</span>
+                    </div>
+                {{/rollTotal() r1 r2}}
+                {{#rollGreater() r1 r2}}
+                    <div class="adv">
+                        <span class="grey">{{r1}}</span>
+                    </div>
+                    <div class="advspacer"></div>
+                    <div class="adv">
+                        <span>{{r2}}</span>
+                    </div>
+                {{/rollGreater() r1 r2}}
+        </div>
+        {{#rollTotal() r1 r2}}
+            <div class="label">
+                <div class="adv">
+                    <span>{{crit}}</span>
+                </div>
+            </div>
+        {{/rollTotal() r1 r2}}
+        <div class="label">
+            <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
+        </div>
+        {{#charname}}
+            <div class="charname">
+                <span>{{charname}}</span>
+            </div>
+        {{/charname}}
+    </div>
+</rolltemplate>
+-->
+<!--SHEETWORKER.JS-->
+<script type="text/worker">
+    // HABILIDADES DE ATRIBUTO VARIABLE
+    // Empatía: ast/int, Sanar: des/int, Seguridad: des/int
+    on("change:des change:ast change:int sheet:opened", function () {  // stat names need to be lower case here
+        getAttrs(["des","ast","int"], function(values) {
+            let d = parseInt(values.des)||0; 
+            let a = parseInt(values.ast)||0; 
+            let i = parseInt(values.int)||0; 
+            let m_ai = Math.max(a,i);
+            let m_di = Math.max(d,i);
+        
+            setAttrs({
+                max_desint: m_di, max_astint: m_ai
+            });
+        });
+    });
+</script>
