@@ -66,138 +66,66 @@ span.sheet-dee {
 }
 
 /* PLANTILLA DE TIRADAS*/
-/* Smaller margins - remove these if you want the huge default left margin */
-.sheet-rolltemplate-custom {
-	margin-left: -37px;
-  }
-  .withoutavatars .sheet-rolltemplate-custom {
-	margin-left: -7px;
-  }
-  
-  .sheet-rolltemplate-custom .sheet-container {
-	border: 1px solid;
-	/* by default, the border is the same color as the header. You can change this here, e.g. to black */
-	border-color: var(--header-bg-color);
-  }
-  
-  /* Header formatting - title and subtitle */
-  .sheet-rolltemplate-custom .sheet-header {
-	background-color: var(--header-bg-color);
-	/* change text-align to center to center the header text */
-	text-align: left;
-	color: var(--header-text-color);
-	padding: 5px;
-  }
-  .sheet-rolltemplate-custom .sheet-title {
-	font-size:1.1em;
-  }
-  .sheet-rolltemplate-custom .sheet-subtitle {
-	font-size:.9em;
-  }
-  
-  /* example colors */
-  .sheet-rolltemplate-custom .sheet-container {
-	/* this is the default color */
-	--header-bg-color: rgba(112,32,130,1);
-	--header-text-color: #FFF;
-  }
-  .sheet-rolltemplate-custom .sheet-container.sheet-color-red {
-	--header-bg-color: #F00;
-  }
-  .sheet-rolltemplate-custom .sheet-container.sheet-color-green {
-	--header-bg-color: #0F0;
-	--header-text-color: #000;
-  }
-  
-  /* Allprops part */
-  .sheet-rolltemplate-custom .sheet-content {
-	display: grid;
-	background: #FFF;
-	/* Header formatting - modify the column layout below */
-	grid-template-columns: auto auto;
-	/* Line height to match default roll template */
-	line-height:1.4em;
-  }
-  .sheet-rolltemplate-custom .sheet-content > div {
-	padding: 5px;
-  }
-  
-  /* Left column */
-  .sheet-rolltemplate-custom .sheet-content .sheet-key {
-	font-weight: bold;
-	padding-right: 10px;
-	text-align: right;
-  }
-  
-  /* Empty rule, use this if you want to change the right column 
-  .sheet-rolltemplate-custom .sheet-value {
-  }
-  */
-  
-  /* Make even-numbered rows grey */
-  .sheet-rolltemplate-custom .sheet-content :nth-child(4n+3),
-  .sheet-rolltemplate-custom .sheet-content :nth-child(4n) {
-	background:#EEE;
-  }
-  
-  /* Description field */
-  .sheet-rolltemplate-custom .sheet-desc {
-	grid-column: span 2;
-	padding: 5px;
-	text-align: center;
-  }
   .sheet-rolltemplate-simple .sheet-charname,
-
+  .sheet-rolltemplate-tres .sheet-charname
 {
     text-align: center;
     margin-top: -10px;
 }
 
 .sheet-rolltemplate-simple .sheet-charname span,
+.sheet-rolltemplate-tres .sheet-charname span
 {
     font-size: 11px;
     font-weight: normal;
     color: #A0A0A0;
 }
 
-.sheet-rolltemplate-simple{
-    width: 14em;
+.sheet-rolltemplate-simple,
+.sheet-rolltemplate-tres
+{
+    width: 14.35em;
 }
 
-.sheet-rolltemplate-simple .sheet-container {
+.sheet-rolltemplate-simple .sheet-container,
+.sheet-rolltemplate-tres .sheet-container
+{
     background-color: white;
     border          : 1px solid black;
     color           : black;
     width           : 100%;
 }
 
-.sheet-rolltemplate-simple .sheet-container {
+.sheet-rolltemplate-simple .sheet-container,
+.sheet-rolltemplate-tres .sheet-container
+{
     border-radius: 10px;
 }
 
-/* Obsolete Template */
-.sheet-rolltemplate-simple .sheet-containerold {
-    background-repeat: no-repeat;
-    background-size: 14em 100%;
-    color: black;
-    width: 81%;
-}
-
-/* Obsolete Template */
-.sheet-rolltemplate-simple .sheet-containerold {
-    background: url(http://i.imgur.com/53WSdhx.png) top left;
-}
-
-.sheet-rolltemplate-simple .sheet-adv{
+.sheet-rolltemplate-simple .sheet-adv
+{
     display       : inline-block;
     margin-top    : 1em;
     text-align    : center;
     vertical-align: top;
     width         : 45%;
 }
+.sheet-rolltemplate-tres .sheet-adv
+{
+    display       : inline-block;
+    margin-top    : 1em;
+    text-align    : center;
+    vertical-align: top;
+    width         : 28.75%;
+}
 
-.sheet-rolltemplate-simple .sheet-adv:first-child{
+.sheet-rolltemplate-simple .sheet-adv:first-child
+{
     margin-left: 0.2em;
+}
+.sheet-rolltemplate-tres .sheet-adv:first-child
+{
+    margin-left: 0.4em;
 }
 
 .sheet-rolltemplate-simple .sheet-adv:nth-child(3)
@@ -205,9 +133,16 @@ span.sheet-dee {
     margin-right: 8px;
     margin-left: -3px;
 }
+.sheet-rolltemplate-tres .sheet-adv:nth-child(3)
+{
+    margin-right: 0px;
+    margin-left: -3px;
+}
 
 .sheet-rolltemplate-simple .sheet-adv span,
-.sheet-rolltemplate-simple .sheet-solo span
+.sheet-rolltemplate-simple .sheet-solo span,
+.sheet-rolltemplate-tres .sheet-adv span,
+.sheet-rolltemplate-tres .sheet-solo span
 {
     background-color: transparent;
     border: 0px;
@@ -215,7 +150,8 @@ span.sheet-dee {
     padding: 0px;
 }
 
-.sheet-rolltemplate-simple .sheet-advspacer
+.sheet-rolltemplate-simple .sheet-advspacer,
+.sheet-rolltemplate-tres .sheet-advspacer
 {
     border: 1px solid black;
     display: inline-block;
@@ -223,7 +159,8 @@ span.sheet-dee {
     width: 0px;
 }
 
-.sheet-rolltemplate-simple .sheet-solo
+.sheet-rolltemplate-simple .sheet-solo,
+.sheet-rolltemplate-tres .sheet-solo
     height        : auto;
     padding-bottom: 0.5em;
     padding-top   : 1em;
@@ -231,7 +168,8 @@ span.sheet-dee {
     width         : 100%;
 }
 
-.sheet-rolltemplate-simple span
+.sheet-rolltemplate-simple span,
+.sheet-rolltemplate-triple span
 {
     font-size: 12px;
     font-weight: bold;
@@ -239,25 +177,16 @@ span.sheet-dee {
     text-align: center;
 }
 
-.sheet-rolltemplate-simple .sheet-grey,
-.sheet-rolltemplate-simple .sheet-grey .inlinerollresult.fullcrit,
-.sheet-rolltemplate-simple .sheet-grey .inlinerollresult.fullfail,
-.sheet-rolltemplate-simple .sheet-grey .inlinerollresult.importantroll,
-.sheet-rolltemplate-simple .sheet-label span span
-{
-    color: #A0A0A0;
-    border: 0px;
-    font-weight: normal;
-}
-
-.sheet-rolltemplate-simple .sheet-label
+.sheet-rolltemplate-simple .sheet-label,
+.sheet-rolltemplate-tres .sheet-label
 {
     margin-top: -3px;
     padding   : 0.25em;
     text-align: center;
 }
 
-.sheet-rolltemplate-simple .sheet-label span span
+.sheet-rolltemplate-simple .sheet-label span span,
+.sheet-rolltemplate-tres .sheet-label span span
 {
     padding: 0px;
     border: 0px;
@@ -265,20 +194,32 @@ span.sheet-dee {
     font-size: 12px;
 }
 
-.sheet-rolltemplate-simple .sheet-green
+
+.sheet-rolltemplate-simple .sheet-grey,
+.sheet-rolltemplate-simple .sheet-label span span,
+.sheet-rolltemplate-tres .sheet-grey,
+.sheet-rolltemplate-tres .sheet-label span span
+{
+    color: #A0A0A0;
+    border: 0px;
+    font-weight: normal;
+}
+
+.sheet-rolltemplate-simple .sheet-green,
+.sheet-rolltemplate-tres .sheet-green
 {
     color: #3FB315;
     border: 0px;
 }
 
-.sheet-rolltemplate-simple .inlinerollresult.fullfail
+.sheet-rolltemplate-tres .sheet-greengrey
 {
-    color: #B31515;
+    color: #81a574;
     border: 0px;
 }
 
-.sheet-rolltemplate-simple .inlinerollresult.importantroll
+.sheet-rolltemplate-tres .sheet-greengrey
 {
-    color: #4A57ED;
+    color: #92c079;
     border: 0px;
 }

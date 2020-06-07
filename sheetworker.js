@@ -13,3 +13,20 @@ on("change:des change:ast change:int sheet:opened", function () {  // stat names
         });
     });
 });
+on("change:tipotirada sheet:opened", function () {  // stat names need to be lower case here
+    getAttrs(["tipotirada"], function(values) {
+        let tipo = parseInt(values.tipotirada)||0; 
+        let newpla = ""
+        let newr3 = ""
+        if (tipo === 3) {
+            newpla = "tres";
+            newr3 = "1d12cs0cf0";
+          } else {
+            newpla = "simple";
+            newr3 = "0";
+          }
+        setAttrs({
+            r3: newr3, plantilla: newpla
+        });
+    });
+});
