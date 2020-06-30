@@ -69,7 +69,6 @@ span.sheet-dee {
 /***************************************/
   .sheet-rolltemplate-simple .sheet-charname,
   .sheet-rolltemplate-tres .sheet-charname,
-  .sheet-rolltemplate-tresd .sheet-charname,
   .sheet-rolltemplate-dmg .sheet-charname
 {
     text-align: center;
@@ -78,7 +77,6 @@ span.sheet-dee {
 
 .sheet-rolltemplate-simple .sheet-charname span,
 .sheet-rolltemplate-tres .sheet-charname span, 
-.sheet-rolltemplate-tresd .sheet-charname span, 
 .sheet-rolltemplate-dmg .sheet-charname span
 {
     font-size: 11px;
@@ -88,7 +86,6 @@ span.sheet-dee {
 
 .sheet-rolltemplate-simple,
 .sheet-rolltemplate-tres,
-.sheet-rolltemplate-tresd,
 .sheet-rolltemplate-dmg
 {
     width: 14.35em;
@@ -96,7 +93,6 @@ span.sheet-dee {
 
 .sheet-rolltemplate-simple .sheet-container,
 .sheet-rolltemplate-tres .sheet-container,
-.sheet-rolltemplate-tresd .sheet-container,
 .sheet-rolltemplate-dmg .sheet-container
 {
     background-color: white;
@@ -107,7 +103,6 @@ span.sheet-dee {
 
 .sheet-rolltemplate-simple .sheet-container,
 .sheet-rolltemplate-tres .sheet-container,
-.sheet-rolltemplate-tresd .sheet-container,
 .sheet-rolltemplate-dmg .sheet-container
 {
     border-radius: 10px;
@@ -121,8 +116,7 @@ span.sheet-dee {
     vertical-align: top;
     width         : 45%;
 }
-.sheet-rolltemplate-tres .sheet-adv,
-.sheet-rolltemplate-tresd .sheet-adv
+.sheet-rolltemplate-tres .sheet-adv
 {
     display       : inline-block;
     margin-top    : 1em;
@@ -145,8 +139,7 @@ span.sheet-dee {
 {
     margin-left: 0.2em;
 }
-.sheet-rolltemplate-tres .sheet-adv:first-child,
-.sheet-rolltemplate-tresd .sheet-adv:first-child
+.sheet-rolltemplate-tres .sheet-adv:first-child
 {
     margin-left: 0.4em;
 }
@@ -156,8 +149,7 @@ span.sheet-dee {
     margin-right: 8px;
     margin-left: -3px;
 }
-.sheet-rolltemplate-tres .sheet-adv:nth-child(3),
-.sheet-rolltemplate-tresd .sheet-adv:nth-child(3)
+.sheet-rolltemplate-tres .sheet-adv:nth-child(3)
 {
     margin-right: 0px;
     margin-left: -3px;
@@ -167,8 +159,6 @@ span.sheet-dee {
 .sheet-rolltemplate-simple .sheet-solo span,
 .sheet-rolltemplate-tres .sheet-adv span,
 .sheet-rolltemplate-tres .sheet-solo span,
-.sheet-rolltemplate-tresd .sheet-adv span,
-.sheet-rolltemplate-tresd .sheet-solo span,
 .sheet-rolltemplate-dmg .sheet-adv span,
 .sheet-rolltemplate-dmg .sheet-solo span
 {
@@ -180,7 +170,6 @@ span.sheet-dee {
 
 .sheet-rolltemplate-simple .sheet-advspacer,
 .sheet-rolltemplate-tres .sheet-advspacer,
-.sheet-rolltemplate-tresd .sheet-advspacer,
 .sheet-rolltemplate-dmg .sheet-advspacer
 {
     border: 1px solid black;
@@ -202,13 +191,12 @@ span.sheet-dee {
 
 .sheet-rolltemplate-simple .sheet-solo,
 .sheet-rolltemplate-tres .sheet-solo,
-.sheet-rolltemplate-tresd .sheet-solo,
-.sheet-rolltemplate-dmg .sheet-solo
-    height        : auto;
+.sheet-rolltemplate-dmg .sheet-solo {
+    height: auto;
     padding-bottom: 0.5em;
-    padding-top   : 1em;
-    text-align    : center;
-    width         : 100%;
+    padding-top: 1em;
+    text-align: center;
+    width: 100%;
 }
 
 .sheet-rolltemplate-simple span,
@@ -223,7 +211,6 @@ span.sheet-dee {
 
 .sheet-rolltemplate-simple .sheet-label,
 .sheet-rolltemplate-tres .sheet-label,
-.sheet-rolltemplate-tresd .sheet-label,
 .sheet-rolltemplate-dmg .sheet-label
 {
     margin-top: -3px;
@@ -233,7 +220,6 @@ span.sheet-dee {
 
 .sheet-rolltemplate-simple .sheet-label span span,
 .sheet-rolltemplate-tres .sheet-label span span,
-.sheet-rolltemplate-tresd .sheet-label span span,
 .sheet-rolltemplate-dmg .sheet-label span span
 {
     padding: 0px;
@@ -247,8 +233,6 @@ span.sheet-dee {
 .sheet-rolltemplate-simple .sheet-label span span,
 .sheet-rolltemplate-tres .sheet-grey,
 .sheet-rolltemplate-tres .sheet-label span span,
-.sheet-rolltemplate-tresd .sheet-grey,
-.sheet-rolltemplate-tresd .sheet-label span span,
 .sheet-rolltemplate-dmg .sheet-grey,
 .sheet-rolltemplate-dmg .sheet-label span span
 {
@@ -258,9 +242,13 @@ span.sheet-dee {
 }
 
 .sheet-rolltemplate-simple .sheet-green,
-.sheet-rolltemplate-tres .sheet-green,
-.sheet-rolltemplate-tresd .sheet-green
+.sheet-rolltemplate-tres .sheet-green
 {
     color: #3FB315;
     border: 0px;
 }
+
+/* ############################################# */
+/* ################## ESTILOS ################## */
+/* ############################################# */
+
