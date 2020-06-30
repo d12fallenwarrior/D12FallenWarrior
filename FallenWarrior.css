@@ -191,12 +191,12 @@ span.sheet-dee {
 
 .sheet-rolltemplate-simple .sheet-solo,
 .sheet-rolltemplate-tres .sheet-solo,
-.sheet-rolltemplate-dmg .sheet-solo
-    height        : auto;
+.sheet-rolltemplate-dmg .sheet-solo {
+    height: auto;
     padding-bottom: 0.5em;
-    padding-top   : 1em;
-    text-align    : center;
-    width         : 100%;
+    padding-top: 1em;
+    text-align: center;
+    width: 100%;
 }
 
 .sheet-rolltemplate-simple span,
@@ -247,3 +247,7 @@ span.sheet-dee {
     color: #3FB315;
     border: 0px;
 }
+
+/* ############################################# */
+/* ################## ESTILOS ################## */
+/* ############################################# */
