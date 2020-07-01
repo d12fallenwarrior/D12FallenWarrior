@@ -130,7 +130,7 @@
             <span>Conjuración (Ast)</span> <input name="attr_conjuracion_esp" type="number" value="0">
             <input name="attr_conjuracion" type="number" value="[[(@{rang_conjuracion} [Rangos] + @{ast} [Atributo] - 5 + @{conjuracion_esp} [Otros])]]" disabled>
             <button name="roll_conjuracion" type="roll" value="&{template:@{plantilla}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡Crítico!}} {{charname=@{character_name}}}" ></button>
-            <span>(Dificultad: 5 + Poder)</span>
+            <!-- <span>(Dificultad: 5 + Poder)</span> -->
         </div>
         <div class="col">
             <span>Éter predilecto</span>
@@ -192,28 +192,35 @@
             <div class="2colrow">
                 <div class="col">
                     <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{rname=Ataque}} {{mod=@{melee_ataque}}} {{arma=@{melee_nombrearma}}} {{r1=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r2=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r3=[[(@{r3}+@{melee_ataque})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-                    <input name="attr_melee_nombrearma" type="text" style="width: 150px;" /> 
-                    <input name="attr_melee_ataque" type="number" value="[[(@{melee_tipoarma} [Rangos] + @{des} [Des] - 5 + @{melee_ataque_esp} [Otros])]]" style="width: 50px;" disabled>
-                    <input name="attr_melee_ataque_esp" type="number" value="0">
-                    <!-- <select name="attr_melee_tipoarma" style="width: 150px;"> 
+                    <input name="attr_melee_nombrearma" type="text" style="width: 150px;" />
+                    <select name="attr_melee_tipoarma" style="width: 20px;"> 
                         <option value="@{rang_espada}">Espada</option>
                         <option value="@{rang_mazaymartillo}">Maza y Martillo</option>
                         <option value="@{rang_mangualycadena}">Mangual y Cadena</option>
                         <option value="@{rang_armasasta}">Arma de asta</option>
                         <option value="@{rang_hachaypico}">Hacha y Pico</option>
-                    </select> -->
+                    </select>
+                    <input name="attr_melee_ataque" type="number" value="0">
+                    <!-- <input name="attr_melee_ataque" type="number" value="[[(@{melee_tipoarma} [Rangos] + @{des} [Des] - 5 + @{melee_ataque_esp} [Otros])]]" style="width: 50px;" disabled>
+                    <input name="attr_melee_ataque_esp" type="number" value="0">
+                    -->
+
                     <!--Daño-->
-                    <button name="roll_melee_damage" type="roll" value="&{template:dmg} {{rname=Daño}} {{arma=@{melee_nombrearma}}} {{r1=[[1d12cs0cf0 + @{melee_dmg} [Daño base] + @{melee_dv} [Daño Vital] + @{melee_dmg_esp}cs0cf0 [Otros] ]]}} {{charname=@{character_name}}}"> Daño</button>
+                    <!-- <button name="roll_melee_damage" type="roll" value="&{template:dmg} {{rname=Daño}} {{arma=@{melee_nombrearma}}} {{r1=[[1d12cs0cf0 + @{melee_dmg} [Daño base] + @{melee_dv} [Daño Vital] + @{melee_dmg_esp}cs0cf0 [Otros] ]]}} {{charname=@{character_name}}}"> Daño</button> -->
                     <select name="attr_melee_tipodmg" style="width: 40px;">
                         <option value="P">P</option>
                         <option value="C">C</option>
                         <option value="T">T</option>
                     </select>
                     <input name="attr_melee_dmg" type="number" value="0" />
-                    <input name="attr_melee_dmg_esp" type="text" value="0" />
                     <input name="attr_melee_dv" type="number" value="0" />
                     <input name="attr_melee_can" type="number" value="0" />
-                    <input name="attr_melee_alc" type="text" value="1"/>
+                    <select name="attr_melee_alc" style="width: 40px;">
+                        <option value="-">-</option>
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                    </select>
                     <input type="text">
                     <!-- <p> Leyenda de recuadros: Roll / Nombre Arma / Hab. Final / Mod. Especial / Tipología (rangos) / Tipo de daño / Daño / Daño extra (pinchos y cosas asi) Daño Vital / Cansancio / Alcance / Especial </p> -->
                 </div>
@@ -233,26 +240,34 @@
             <div class="2colrow">
                 <div class="col">
                     <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{rname=Ataque - @{dist_nombrearma}}} {{mod=@{dist_ataque}}} {{r1=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r2=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r3=[[(@{r3}+@{dist_ataque})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-                    <input name="attr_dist_nombrearma" type="text" style="width: 150px;" /> 
-                    <input name="attr_dist_ataque" type="number" value="[[(@{dist_tipoarma} [Rangos] + @{des} [Des] - 5 + @{dist_ataque_esp} [Otros])]]" style="width: 50px;" disabled>
-                    <input name="attr_dist_ataque_esp" type="number" value="0">
-                    <!-- <select name="attr_dist_tipoarma" style="width: 150px;"> 
+                    <input name="attr_dist_nombrearma" type="text" style="width: 150px;" />
+                    <select name="attr_dist_tipoarma" style="width: 20px;"> 
                         <option value="@{rang_arco}">Arco</option>
                         <option value="@{rang_ballesta}">Ballesta</option>
                         <option value="@{rang_armasfuego}">Armas de fuego</option>
-                    </select> -->
+                    </select>
+                    <input name="attr_dist_ataque" type="number" value="0">
+                    <!--
+                    <input name="attr_dist_ataque" type="number" value="[[(@{dist_tipoarma} [Rangos] + @{des} [Des] - 5 + @{dist_ataque_esp} [Otros])]]" style="width: 50px;" disabled>
+                    <input name="attr_dist_ataque_esp" type="number" value="0">
+                      -->
                     <!--Daño-->
-                    <button name="roll_dist_damage" type="roll" value="&{template:dmg} {{rname=Daño}} {{arma=@{dist_nombrearma}}} {{r1=[[1d12cs0cf0 + @{dist_dmg} [Daño base] + @{dist_dv} [Daño Vital] + @{dist_dmg_esp}cs0cf0 [Otros] ]]}} {{charname=@{character_name}}}"> Daño</button>
+                    <!-- <button name="roll_dist_damage" type="roll" value="&{template:dmg} {{rname=Daño}} {{arma=@{dist_nombrearma}}} {{r1=[[1d12cs0cf0 + @{dist_dmg} [Daño base] + @{dist_dv} [Daño Vital] + @{dist_dmg_esp}cs0cf0 [Otros] ]]}} {{charname=@{character_name}}}"> Daño</button> -->
                     <select name="attr_dist_tipodmg" style="width: 40px;">
                         <option value="P">P</option>
                         <option value="C">C</option>
                         <option value="T">T</option>
                     </select>
                     <input name="attr_dist_dmg" type="number" value="0" />
-                    <input name="attr_dist_dmg_esp" type="text" value="0" />
                     <input name="attr_dist_dv" type="number" value="0" />
                     <input name="attr_dist_can" type="number" value="0" />
-                    <input name="attr_dist_alc" type="text" value="1"/>
+                    <select name="attr_dist_alc" style="width: 70px;">
+                        <option value="-">melé</option>
+                        <option value="I">corto</option>
+                        <option value="II">medio</option>
+                        <option value="III">largo</option>
+                        <option value="III">muy largo</option>
+                    </select>
                     <input type="text">
                     <!-- <p> Leyenda de recuadros: Roll / Nombre Arma / Hab. Final / Mod. Especial / Tipología (rangos) / Tipo de daño / Daño / Daño extra (pinchos y cosas asi) Daño Vital / Cansancio / Alcance / Especial </p> -->
                 </div>
