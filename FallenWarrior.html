@@ -1,7 +1,9 @@
 <!-- OPCIONES, PESTAÑAS -->
+
 <h5>Tirada con desventaja</h5><input name="attr_tipotirada" type="radio" value="1" />
 <h5>Tirada normal</h5><input name="attr_tipotirada" type="radio" value="2" checked="true"/>
 <h5>Tirada con ventaja</h5><input name="attr_tipotirada" type="radio" value="3" />
+
 
 <!-- SECCIÓN CABECERA -->
 <div>
@@ -61,54 +63,48 @@
     <!-- Características secundarias -->
     <div class="col">
         <h1>CARACTERÍSTICAS SECUNDARIAS</h1>
-        <p>Característica / Fórmula / Mod. Especial / Valor final + Roll</p>
+        <!-- <p>Característica / Fórmula / Mod. Especial / Valor final + Roll</p> -->
         <div>
-            <div>
-                <span>Reflejos</span> </span>(Agi+Ast-5)</span> <input name="attr_ref_esp" type="number" value="0">
+            
+                <span>Reflejos</span> <!--input name="attr_ref_esp" type="number" value="0"-->
                 <input name="attr_ref" type="number" value="[[(@{agi} [Agi] + @{ast} [Ast] -5 + @{ref_esp} [Otros])]]" disabled>
                 <button name="roll_reflejos" type="roll" value="&{template:@{plantilla}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cs0cf0+@{ref})]]}} {{r2=[[(1d12cs0cf0+@{ref})]]}} {{r3=[[(@{r3}+@{ref})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-            </div>
-            <div>
-                <span>Vitalidad</span> <span>(Res+Fue-5)</span> <input name="attr_vit_esp" type="number" value="0">
+            
+                <span>Vitalidad</span> <!--input name="attr_vit_esp" type="number" value="0"-->
                 <input name="attr_vit" type="number" value="[[(@{res} [Res] + @{fue} [Fue] - 5 + @{vit_esp} [Otros])]]" disabled> 
                 <button name="roll_vitalidad"type="roll" value="&{template:@{plantilla}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cs0cf0+@{vit})]]}} {{r2=[[(1d12cs0cf0+@{vit})]]}} {{r3=[[(@{r3}+@{vit})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-            </div>
-            <div>
-                <span>Voluntad</span> <span>(Int+Ast-5)</span> <input name="attr_vol_esp" type="number" value="0">
+            
+                <span>Voluntad</span> <!--input name="attr_vol_esp" type="number" value="0"-->
                 <input name="attr_vol" type="number" value="[[(@{int} [Int] + @{ast} [Ast] - 5 + @{vol_esp} [Otros])]]" disabled>
                 <button name="roll_voluntad" type="roll" value="&{template:@{plantilla}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cs0cf0+@{vol})]]}} {{r2=[[(1d12cs0cf0+@{vol})]]}} {{r3=[[(@{r3}+@{vol})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-            </div>   
+            
         </div>
         <p></p>
         <div>
-            <div>
-                <span>Estrategia</span> <span>(Int+Ast)</span> <input name="attr_est_esp" type="number" value="0">
-                <input name="attr_est" type="number" value="[[(@{int} [Int] + @{ast} [Ast] + @{est_esp} [Otros])]]" disabled>
-                <button name="roll_vstrategia" type="roll" value="&{template:@{plantilla}} {{rname=Estrategia}} {{mod=@{est}}} {{r1=[[(1d12cs0cf0+@{est})]]}} {{r2=[[(1d12cs0cf0+@{est})]]}} {{r3=[[(@{r3}+@{est})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-            </div>
-            <div>
-                <span>Espíritu</span> <span>(Res+Int)</span> <input name="attr_esp_esp" type="number" value="0">
-                <input name="attr_esp" type="number" value="[[(@{res} [Res] + @{int} [Int] + @{esp_esp} [Otros])]]" disabled>
-                <button name="roll_espiritu" type="roll" value="&{template:@{plantilla}} {{rname=Espíritu}} {{mod=@{esp}}} {{r1=[[(1d12cs0cf0+@{esp})]]}} {{r2=[[(1d12cs0cf0+@{esp})]]}} {{r3=[[(@{r3}+@{esp})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-            </div>
-        </div>
-        <p></p>
-        <div>
-            <div>
-                <span>Energía</span> <span>(5+10*Res)</span> <input name="attr_ene_esp" type="number" value="0">
-                <input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled>
-            </div>
-            <div>
-                <span>Herida</span> <span>(1+Res+Fue)</span> <input name="attr_her_esp" type="number" value="0">
-                <input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled>  
-            </div>
+            <table>
+                <tbody>
+                    <tr>
+            
+                        <td><span>Estrategia</span></td> <!--input name="attr_est_esp" type="number" value="0"-->
+                        <td><input name="attr_est" type="number" value="[[(@{int} [Int] + @{ast} [Ast] + @{est_esp} [Otros])]]" disabled></td>
+                        <td><span>Espíritu</span></td> <!--input name="attr_esp_esp" type="number" value="0"-->
+                        <td><input name="attr_esp" type="number" value="[[(@{res} [Res] + @{int} [Int] + @{esp_esp} [Otros])]]" disabled></td>
+                    </tr>
+                    <tr>
+                        <td><span>Energía</span></td> <!--input name="attr_ene_esp" type="number" value="0"-->
+                        <td><input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled></td>
+                        <td><span>Herida</span></td> <!--input name="attr_her_esp" type="number" value="0"-->
+                        <td><input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled></td> 
+                    </tr>
+                </tbody>
+            </table>
         </div>
         
     </div>  
 </div>
 
 <!--SECCIÓN COMBATE-->
-
+<p></p>
 <h1>COMBATE</h1>
 <!--SECCIÓN MAGOS-->
 <input name="sec_magia" type="checkbox" value="1" checked="true"> <span>Mostrar / ocultar magia</span>
@@ -122,7 +118,7 @@
             <span>(Dificultad: 5 + Poder)</span>
         </div>
         <div class="col">
-            <span>Éter predilecto</span> <input name="attr_HABILIDAD_esp" type="number" value="0">
+            <span>Éter predilecto</span>
             <select name="attr_eterpredilecto" type="text" style="width: 100px;">
                 <option value="Fuego">Fuego</option>
                 <option value="Agua">Agua</option>
