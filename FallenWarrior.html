@@ -40,7 +40,7 @@
                 </tr>
                 <tr>
                     <td><p></p><span>Destreza </span></td>
-                    <td><input name="attr_des" type="number" value="0" min="0" /></td><input name="attr_fue" type="radio" value="0" class="sheet-normal" />
+                    <td><input name="attr_des" type="number" value="0" min="0" /></td>
                 </tr>
                 <tr> 
                     <td><p></p><span>Agilidad</span></td>
@@ -124,7 +124,6 @@
         </div>     
     </div>
 <!--SECCIÓN MAGOS-->
-<input name="sec_magia" type="checkbox" value="1" checked="true"> <span>Mostrar / ocultar magia</span>
 <div>
     <!-- <h4>MAGIA</h4> -->
     <div class="2colrow">
@@ -310,10 +309,10 @@
 
     <p></p>
 
-    <h4>ARMADURA</h4>
-    <div>
+    <div class="armadura">
+        <h4>ARMADURA</h4>
             <input name="attr_nombrearmadura" type="text"/> 
-            <select name="tipoarmadura">
+            <select name="tipoarmadura" style="width: 80px;">
                 <option value="Ligera">Ligera</option>
                 <option value="Intermedia">Intermedia</option>
                 <option value="Pesada">Pesada</option>
@@ -324,7 +323,7 @@
             <input name="attr_pen_destreza" type="number" value="0">
             <input name="attr_pen_sigilo" type="number" value="0">
             <input name="attr_pen_porcarga" type="number" value="[[(@{penarm})]]" disabled>
-            <input name="attr_especial">
+            <!-- <input name="attr_especial"> -->
             <!-- <p>Nombre armadura / Tipo / Protección / Refuerzo / Pen. energia / Pen. des / Pen. sigilo / Pen. carga / Especial</p> -->
     </div>
 </div>
