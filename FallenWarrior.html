@@ -32,11 +32,13 @@
                 </tr>
                 <tr>
                     <td><p></p><span>Fuerza</span></td>
-                    <td><input name="attr_fue" type="number" value="0" /></td>
+                    <td><input name="attr_fue" type="number" value="0" class="sheet-normal" />
+                        <!-- <input name="attr_fue" type="radio" value="0" class="sheet-normal" /><input name="attr_fue" type="radio" value="0" class="sheet-normal" /><input name="attr_fue" type="radio" value="0" class="sheet-normal" /> -->
+                    </td>
                 </tr>
                 <tr>
                     <td><p></p><span>Destreza </span></td>
-                    <td><input name="attr_des" type="number" value="5" min="0" /></td>
+                    <td><input name="attr_des" type="number" value="0" min="0" /></td>
                 </tr>
                 <tr> 
                     <td><p></p><span>Agilidad</span></td>
@@ -120,7 +122,6 @@
         </div>     
     </div>
 <!--SECCIÓN MAGOS-->
-<input name="sec_magia" type="checkbox" value="1" checked="true"> <span>Mostrar / ocultar magia</span>
 <div>
     <!-- <h4>MAGIA</h4> -->
     <div class="2colrow">
@@ -225,8 +226,9 @@
                 <div class="col">
                     <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{rname=Desvío - @{melee_nombrearma}}} {{mod=@{melee_desvio}}} {{r1=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r2=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r3=[[(@{r3}+@{melee_desvio})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <span>Desvío</span>
-                    <input name="attr_melee_desvio" type="number" value="[[(@{tipoarma} [Rangos] + @{des} [Des] - 5 + @{desvio_esp} [Otros])]]" style="width: 50px;" disabled>
-                    <input name="attr_melee_desvio_esp" type="number" value="0">
+                    <input name="attr_melee_desvio" type="number" value="0" />
+                    <!-- <input name="attr_melee_desvio" type="number" value="[[(@{tipoarma} [Rangos] + @{des} [Des] - 5 + @{desvio_esp} [Otros])]]" style="width: 50px;" disabled>
+                    <input name="attr_melee_desvio_esp" type="number" value="0"> -->
                 </div>
             </div> 
           </fieldset>
@@ -281,33 +283,34 @@
             <div class="2colrow">
                 <div class="col">
                     <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{rname=Ataque sin armas} {{mod=@{sinarmas_ataque}}} {{r1=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r3=[[(@{r3}+@{sinarmas_ataque})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-                    <input name="attr_sinarmas_ataque" type="number" value="[[(@{rang_sinarmas} [Rangos] + @{des} [Des] - 5 + @{sinarmas_ataque_esp} [Otros])]]" style="width: 50px;" disabled>
+                    <input name="attr_sinarmas_ataque" type="number" value="0">
+                    <!-- <input name="attr_sinarmas_ataque" type="number" value="[[(@{rang_sinarmas} [Rangos] + @{des} [Des] - 5 + @{sinarmas_ataque_esp} [Otros])]]" style="width: 50px;" disabled>
                     <input name="attr_sinarmas_ataque_esp" type="number" value="0">
                     <button name="roll_sinarmas_damage" type="roll" value="&{template:dmg} {{rname=Daño sin arma}} {{r1=[[1d12cs0cf0 + @{sinarmas_dmg} [Daño base] + @{sinarmas_dv} [Daño Vital] + @{sinarmas_dmg_esp}cs0cf0 [Otros] ]]}} {{charname=@{character_name}}}"> Daño</button>
+                    -->
                     <span>T</span>
                     <input name="attr_sinarmas_dmg" type="number" value="0" />
-                    <input name="attr_sinarmas_dmg_esp" type="text" value="0" />
                     <input name="attr_sinarmas_dv" type="number" value="0" />
                     <input name="attr_sinarmas_can" type="number" value="0" />
-                    <input name="attr_sinarmas_alc" type="text" value="1"/>
                     <input type="text">
                     <!-- <p> Roll / Hab. Final / Mod. Especial / Tipo de daño / Daño / Daño Vital / Cansancio / Alcance / Especial </p> -->
                 </div>
                 <div class="col">
                     <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{rname=Desvío sin armas} {{mod=@{sinarmas_desvio}}} {{r1=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r3=[[(@{r3}+@{sinarmas_desvio})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <span>Desvío sin armas</span>
-                    <input name="attr_sinarmas_desvio" type="number" value="[[(@{attr_sinarmas_rang_sinarmas} [Rangos] + @{des} [Des] - 5 + @{desvio_esp} [Otros])]]" style="width: 50px;" disabled>
-                    <input name="attr_sinarmas_desvio_esp" type="number" value="0">
+                    <input name="attr_sinarmas_desvio" type="number" value="0" />
+                    <!-- <input name="attr_sinarmas_desvio" type="number" value="[[(@{attr_sinarmas_rang_sinarmas} [Rangos] + @{des} [Des] - 5 + @{desvio_esp} [Otros])]]" style="width: 50px;" disabled>
+                    <input name="attr_sinarmas_desvio_esp" type="number" value="0"> -->
                 </div>
             </div> 
     </div>
 
     <p></p>
 
-    <h4>ARMADURA</h4>
-    <div>
+    <div class="armadura">
+        <h4>ARMADURA</h4>
             <input name="attr_nombrearmadura" type="text"/> 
-            <select name="tipoarmadura">
+            <select name="tipoarmadura" style="width: 80px;">
                 <option value="Ligera">Ligera</option>
                 <option value="Intermedia">Intermedia</option>
                 <option value="Pesada">Pesada</option>
@@ -318,7 +321,7 @@
             <input name="attr_pen_destreza" type="number" value="0">
             <input name="attr_pen_sigilo" type="number" value="0">
             <input name="attr_pen_porcarga" type="number" value="[[(@{penarm})]]" disabled>
-            <input name="attr_especial">
+            <!-- <input name="attr_especial"> -->
             <!-- <p>Nombre armadura / Tipo / Protección / Refuerzo / Pen. energia / Pen. des / Pen. sigilo / Pen. carga / Especial</p> -->
     </div>
 </div>
