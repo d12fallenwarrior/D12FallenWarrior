@@ -252,3 +252,16 @@ span.sheet-dee {
 /* ################## ESTILOS ################## */
 /* ############################################# */
 
+.sheet-rolltemplates{
+    display: none;
+}
+
+.sheet-tipotiradas {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.sheet-tipotiradas input {
+    max-width: 1em;
+}
+

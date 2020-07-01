@@ -1,9 +1,7 @@
 <!-- OPCIONES, PESTAÑAS -->
-
-<h5>Tirada con desventaja</h5><input name="attr_tipotirada" type="radio" value="1" />
-<h5>Tirada normal</h5><input name="attr_tipotirada" type="radio" value="2" checked="true"/>
-<h5>Tirada con ventaja</h5><input name="attr_tipotirada" type="radio" value="3" />
-
+<p class='tipotiradas'>Tirada con desventaja <input name="attr_tipotirada" type="radio" value="1" /></p>
+<p class='tipotiradas'>Tirada normal <input name="attr_tipotirada" type="radio" value="2" checked="true"/></p>
+<p class='tipotiradas'>Tirada con ventaja <input name="attr_tipotirada" type="radio" value="3" /></p>
 
 <!-- SECCIÓN CABECERA -->
 <div>
@@ -777,6 +775,8 @@
     &{template:dmg} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cs0cf0]]}} {{charname=charname}}
 -->
 
+<div class='rolltemplates'>
+
 <rolltemplate class="sheet-rolltemplate-simple">
     <div class="container">
         <div class="result">
@@ -1225,3 +1225,4 @@
 </script>
 
 
+</div>
