@@ -134,11 +134,12 @@
             <input name="attr_intensidad" type="number" value="[[(@{rang_intensidad} [Rangos] @{int} [Atributo] - 5 + @{intensidad_esp} [Otros])]]" disabled>
             <button name="roll_intensidad" type="roll" value="&{template:@{plantilla}} {{rname=Conjuración}} {{mod=@{intensidad}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡Crítico!}} {{charname=@{character_name}}}" ></button>
         </div>
-        <div class="col"></div>
+        <div class="col">
             <span>Disparo (Ast)</span> <input name="attr_disparo_esp" type="number" value="0">
             <input name="attr_disparo" type="number" value="[[(@{rang_disparo} [Rangos] + @{ast} [Atributo] - 5 + @{disparo_esp} [Otros])]]" disabled>
             <button name="roll_disparo" type="roll" value="&{template:@{plantilla}} {{rname=Conjuración}} {{mod=@{disparo}}} {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}} {{crit=¡Crítico!}} {{charname=@{character_name}}}" ></button>
-        <div class="col"></div>
+        </div>
+        <div class="col">
             <span>Dominio (Int)</span> <input name="attr_dominio_esp" type="number" value="0">
             <input name="attr_dominio" type="number" value="[[(@{rang_dominio} [Rangos] + @{int} [Atributo] - 5 + @{dominio_esp} [Otros])]]" disabled>
             <button name="roll_dominio" type="roll" value="&{template:@{plantilla}} {{rname=Conjuración}} {{mod=@{dominio}}} {{r1=[[(1d12cs0cf0+@{dominio})]]}} {{r2=[[(1d12cs0cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}} {{crit=¡Crítico!}} {{charname=@{character_name}}}" ></button>
