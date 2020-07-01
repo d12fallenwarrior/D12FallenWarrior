@@ -252,6 +252,10 @@ span.sheet-dee {
 /* ################## ESTILOS ################## */
 /* ############################################# */
 
+.sheet-armadura{
+    text-align: center;
+}
+
 .sheet-rolltemplates{
     display: none;
 }
