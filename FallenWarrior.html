@@ -66,18 +66,24 @@
         <!-- <p>Característica / Fórmula / Mod. Especial / Valor final + Roll</p> -->
         <div>
             
-                <span>Reflejos</span> <!--input name="attr_ref_esp" type="number" value="0"-->
-                <input name="attr_ref" type="number" value="[[(@{agi} [Agi] + @{ast} [Ast] -5 + @{ref_esp} [Otros])]]" disabled>
-                <button name="roll_reflejos" type="roll" value="&{template:@{plantilla}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cs0cf0+@{ref})]]}} {{r2=[[(1d12cs0cf0+@{ref})]]}} {{r3=[[(@{r3}+@{ref})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-            
-                <span>Vitalidad</span> <!--input name="attr_vit_esp" type="number" value="0"-->
-                <input name="attr_vit" type="number" value="[[(@{res} [Res] + @{fue} [Fue] - 5 + @{vit_esp} [Otros])]]" disabled> 
-                <button name="roll_vitalidad"type="roll" value="&{template:@{plantilla}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cs0cf0+@{vit})]]}} {{r2=[[(1d12cs0cf0+@{vit})]]}} {{r3=[[(@{r3}+@{vit})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-            
-                <span>Voluntad</span> <!--input name="attr_vol_esp" type="number" value="0"-->
-                <input name="attr_vol" type="number" value="[[(@{int} [Int] + @{ast} [Ast] - 5 + @{vol_esp} [Otros])]]" disabled>
-                <button name="roll_voluntad" type="roll" value="&{template:@{plantilla}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cs0cf0+@{vol})]]}} {{r2=[[(1d12cs0cf0+@{vol})]]}} {{r3=[[(@{r3}+@{vol})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-            
+                <button name="roll_reflejos" type="roll" value="&{template:@{plantilla}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cs0cf0+@{ref})]]}} {{r2=[[(1d12cs0cf0+@{ref})]]}} {{r3=[[(@{r3}+@{ref})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+                <span>Reflejos</span> 
+                <input name="attr_ref" type="number" value="0">
+                <!-- <input name="attr_ref_esp" type="number" value="0">
+                <input name="attr_ref" type="number" value="[[(@{agi} [Agi] + @{ast} [Ast] -5 + @{ref_esp} [Otros])]]" disabled> -->
+                           
+                <button name="roll_vitalidad"type="roll" value="&{template:@{plantilla}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cs0cf0+@{vit})]]}} {{r2=[[(1d12cs0cf0+@{vit})]]}} {{r3=[[(@{r3}+@{vit})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+                <span>Vitalidad</span>
+                <input name="attr_vit" type="number" value="0">
+                <!-- <input name="attr_vit_esp" type="number" value="0">
+                <input name="attr_vit" type="number" value="[[(@{res} [Res] + @{fue} [Fue] - 5 + @{vit_esp} [Otros])]]" disabled> --> 
+                
+                <button name="roll_voluntad" type="roll" value="&{template:@{plantilla}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cs0cf0+@{vol})]]}} {{r2=[[(1d12cs0cf0+@{vol})]]}} {{r3=[[(@{r3}+@{vol})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+                <span>Voluntad</span> 
+                <input name="attr_vol" type="number" value="0">
+                <!-- <input name="attr_vol_esp" type="number" value="0">
+                <input name="attr_vol" type="number" value="[[(@{int} [Int] + @{ast} [Ast] - 5 + @{vol_esp} [Otros])]]" disabled> -->
+                
         </div>
         <p></p>
         <div>
@@ -85,16 +91,16 @@
                 <tbody>
                     <tr>
             
-                        <td><span>Estrategia</span></td> <!--input name="attr_est_esp" type="number" value="0"-->
-                        <td><input name="attr_est" type="number" value="[[(@{int} [Int] + @{ast} [Ast] + @{est_esp} [Otros])]]" disabled></td>
-                        <td><span>Espíritu</span></td> <!--input name="attr_esp_esp" type="number" value="0"-->
-                        <td><input name="attr_esp" type="number" value="[[(@{res} [Res] + @{int} [Int] + @{esp_esp} [Otros])]]" disabled></td>
+                        <td><span>Estrategia</span></td> <!-- <input name="attr_est_esp" type="number" value="0"> -->
+                        <td><input name="attr_est" type="number" value="0"><!-- <input name="attr_est" type="number" value="[[(@{int} [Int] + @{ast} [Ast] + @{est_esp} [Otros])]]" disabled> --></td>
+                        <td><span>Espíritu</span></td> <!-- <input name="attr_esp_esp" type="number" value="0"> -->
+                        <td><input name="attr_esp" type="number" value="0"> <!-- <input name="attr_esp" type="number" value="[[(@{res} [Res] + @{int} [Int] + @{esp_esp} [Otros])]]" disabled> --></td>
                     </tr>
                     <tr>
-                        <td><span>Energía</span></td> <!--input name="attr_ene_esp" type="number" value="0"-->
-                        <td><input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled></td>
-                        <td><span>Herida</span></td> <!--input name="attr_her_esp" type="number" value="0"-->
-                        <td><input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled></td> 
+                        <td><span>Energía</span></td> <!-- <input name="attr_ene_esp" type="number" value="0"> -->
+                        <td> <input name="attr_ene" type="number" value="0"> <!-- <input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled> --></td>
+                        <td><span>Herida</span></td> <!-- <input name="attr_her_esp" type="number" value="0"> -->
+                        <td><input name="attr_her" type="number" value="0"> <!-- <input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled> --></td> 
                     </tr>
                 </tbody>
             </table>
@@ -126,10 +132,12 @@
     <!-- <h4>MAGIA</h4> -->
     <div class="2colrow">
         <div class="col">
-            <span>Conjuración (Ast)</span> <input name="attr_conjuracion_esp" type="number" value="0">
-            <input name="attr_conjuracion" type="number" value="[[(@{rang_conjuracion} [Rangos] + @{ast} [Atributo] - 5 + @{conjuracion_esp} [Otros])]]" disabled>
-            <button name="roll_conjuracion" type="roll" value="&{template:@{plantilla}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡Crítico!}} {{charname=@{character_name}}}" ></button>
-            <!-- <span>(Dificultad: 5 + Poder)</span> -->
+            <button name="roll_conjuracion" type="roll" value="&{template:@{plantilla}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
+           
+            <span>Conjuración (Ast)</span> <input name="attr_conjuracion" type="number" value="0">
+            <!-- <input name="attr_conjuracion" type="number" value="[[(@{rang_conjuracion} [Rangos] + @{ast} [Atributo] - 5 + @{conjuracion_esp} [Otros])]]" disabled>
+            -->
+             <!-- <span>(Dificultad: 5 + Poder)</span> -->
         </div>
         <div class="col">
             <span>Éter predilecto</span>
@@ -144,61 +152,72 @@
     </div>
     <div class="3colrow">
         <div class="col">
-            <span>Intensidad (Int)</span> <input name="attr_intensidad_esp" type="number" value="0">
-            <input name="attr_intensidad" type="number" value="[[(@{rang_intensidad} [Rangos] @{int} [Atributo] - 5 + @{intensidad_esp} [Otros])]]" disabled>
-            <button name="roll_intensidad" type="roll" value="&{template:@{plantilla}} {{rname=Conjuración}} {{mod=@{intensidad}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡Crítico!}} {{charname=@{character_name}}}" ></button>
-        </div>
+            <button name="roll_intensidad" type="roll" value="&{template:@{plantilla}} {{rname=Conjuración}} {{mod=@{intensidad}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
+       
+            <span>Intensidad (Int)</span> <input name="attr_intensidad" type="number" value="0">
+            <!-- <input name="attr_intensidad" type="number" value="[[(@{rang_intensidad} [Rangos] @{int} [Atributo] - 5 + @{intensidad_esp} [Otros])]]" disabled>
+            -->
+             </div>
         <div class="col">
-            <span>Disparo (Ast)</span> <input name="attr_disparo_esp" type="number" value="0">
-            <input name="attr_disparo" type="number" value="[[(@{rang_disparo} [Rangos] + @{ast} [Atributo] - 5 + @{disparo_esp} [Otros])]]" disabled>
-            <button name="roll_disparo" type="roll" value="&{template:@{plantilla}} {{rname=Conjuración}} {{mod=@{disparo}}} {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}} {{crit=¡Crítico!}} {{charname=@{character_name}}}" ></button>
-        </div>
+            <button name="roll_disparo" type="roll" value="&{template:@{plantilla}} {{rname=Conjuración}} {{mod=@{disparo}}} {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
+       
+            <span>Disparo (Ast)</span> <input name="attr_disparo" type="number" value="0">
+            <!-- <input name="attr_disparo" type="number" value="[[(@{rang_disparo} [Rangos] + @{ast} [Atributo] - 5 + @{disparo_esp} [Otros])]]" disabled>
+            -->
+             </div>
         <div class="col">
-            <span>Dominio (Int)</span> <input name="attr_dominio_esp" type="number" value="0">
-            <input name="attr_dominio" type="number" value="[[(@{rang_dominio} [Rangos] + @{int} [Atributo] - 5 + @{dominio_esp} [Otros])]]" disabled>
-            <button name="roll_dominio" type="roll" value="&{template:@{plantilla}} {{rname=Conjuración}} {{mod=@{dominio}}} {{r1=[[(1d12cs0cf0+@{dominio})]]}} {{r2=[[(1d12cs0cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}} {{crit=¡Crítico!}} {{charname=@{character_name}}}" ></button>
-    </div>
+            <button name="roll_dominio" type="roll" value="&{template:@{plantilla}} {{rname=Conjuración}} {{mod=@{dominio}}} {{r1=[[(1d12cs0cf0+@{dominio})]]}} {{r2=[[(1d12cs0cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
+    
+            <span>Dominio (Int)</span> <input name="attr_dominio" type="number" value="0">
+            <!-- <input name="attr_dominio" type="number" value="[[(@{rang_dominio} [Rangos] + @{int} [Atributo] - 5 + @{dominio_esp} [Otros])]]" disabled>
+            -->
+            </div>
 </div>
 <p></p>
 
     <div class ="3colrow">
         <!-- <p>Habilidad (atributo)/ Rangos / Mod. Especial / Hab. Final + Roll </p> -->
         <div class="col">
+            <button name="roll_esquiva" type="roll" value="&{template:@{plantilla}} {{rname=Esquiva}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(@{r3}+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
             Esquiva (Agi)
-            <input name="attr_esquiva_esp" type="number" value="0">
-            <input name="attr_esquiva" type="number" value="[[(@{rang_esquiva} [Rangos] + @{agi} [Atributo] - 5 + @{esquiva_esp} [Otros])]]" disabled>
-            <button name="roll_esquiva" type="roll" value="&{template:@{plantilla}} {{rname=Esquiva}} {{mod=@{hab_esquiva}}} {{r1=[[(1d12cs0cf0+@{hab_esquiva})]]}} {{r2=[[(1d12cs0cf0+@{hab_esquiva})]]}} {{r3=[[(@{r3}+@{hab_esquiva})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-        </div>
+            <input name="attr_esquiva" type="number" value="0">
+            <!-- <input name="attr_esquiva" type="number" value="[[(@{rang_esquiva} [Rangos] + @{agi} [Atributo] - 5 + @{esquiva_esp} [Otros])]]" disabled>
+            -->
+            </div>
         <div class="col">
+            <button name="roll_bloqueo" type="roll" value="&{template:@{plantilla}} {{rname=Bloqueo}} {{mod=@{bloqueo}}} {{r1=[[(1d12cs0cf0+@{bloqueo})]]}} {{r2=[[(1d12cs0cf0+@{bloqueo})]]}} {{r3=[[(@{r3}+@{bloqueo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+        
             Bloqueo (Des)   
-            <input name="attr_bloqueo_esp" type="number" value="0">
-            <input name="attr_bloqueo" type="number" value="[[(@{rang_bloqueo} [Rangos] + @{des} [Atributo] - 5 + @{bloqueo_esp} [Otros])]]" disabled>
-            <button name="roll_bloqueo" type="roll" value="&{template:@{plantilla}} {{rname=Bloqueo}} {{mod=@{hab_bloqueo}}} {{r1=[[(1d12cs0cf0+@{hab_bloqueo})]]}} {{r2=[[(1d12cs0cf0+@{hab_bloqueo})]]}} {{r3=[[(@{r3}+@{hab_bloqueo})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-        </div>
+            <input name="attr_bloqueo" type="number" value="0">
+            <!-- <input name="attr_bloqueo" type="number" value="[[(@{rang_bloqueo} [Rangos] + @{des} [Atributo] - 5 + @{bloqueo_esp} [Otros])]]" disabled>
+            -->
+            </div>
         <div class="col">
+            <button name="roll_pelea" type="roll" value="&{template:@{plantilla}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+        
             Pelea (Fue)
-            <input name="attr_pelea_esp" type="number" value="0">
-            <input name="attr_pelea" type="number" value="[[(@{rang_pelea} [Rangos] + @{fue} [Atributo] - 5 + @{pelea_esp} [Otros])]]" disabled>
-            <button name="roll_pelea" type="roll" value="&{template:@{plantilla}} {{rname=Pelea}} {{mod=@{hab_pelea}}} {{r1=[[(1d12cs0cf0+@{hab_pelea})]]}} {{r2=[[(1d12cs0cf0+@{hab_pelea})]]}} {{r3=[[(@{r3}+@{hab_pelea})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-        </div>
+            <input name="attr_pelea" type="number" value="0">
+            <!-- <input name="attr_pelea" type="number" value="[[(@{rang_pelea} [Rangos] + @{fue} [Atributo] - 5 + @{pelea_esp} [Otros])]]" disabled>
+            -->
+            </div>
     </div>
  
     <p></p>
     <!--Armas Melee-->
-    <h4>ARMAS MELEE</h4>
+    <h4>ARMAS CUERPO A CUERPO</h4>
     <div>
         <fieldset class="repeating_armamelee"> 
             <div class="2colrow">
                 <div class="col">
-                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{rname=Ataque}} {{mod=@{melee_ataque}}} {{arma=@{melee_nombrearma}}} {{r1=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r2=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r3=[[(@{r3}+@{melee_ataque})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{rname=Ataque}} {{mod=@{melee_ataque}}} {{arma=@{melee_nombrearma}}} {{r1=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r2=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r3=[[(@{r3}+@{melee_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <input name="attr_melee_nombrearma" type="text" style="width: 150px;" />
-                    <select name="attr_melee_tipoarma" style="width: 20px;"> 
+                    <!-- <select name="attr_melee_tipoarma" style="width: 20px;"> 
                         <option value="@{rang_espada}">Espada</option>
                         <option value="@{rang_mazaymartillo}">Maza y Martillo</option>
                         <option value="@{rang_mangualycadena}">Mangual y Cadena</option>
                         <option value="@{rang_armasasta}">Arma de asta</option>
                         <option value="@{rang_hachaypico}">Hacha y Pico</option>
-                    </select>
+                    </select> -->
                     <input name="attr_melee_ataque" type="number" value="0">
                     <!-- <input name="attr_melee_ataque" type="number" value="[[(@{melee_tipoarma} [Rangos] + @{des} [Des] - 5 + @{melee_ataque_esp} [Otros])]]" style="width: 50px;" disabled>
                     <input name="attr_melee_ataque_esp" type="number" value="0">
@@ -224,7 +243,7 @@
                     <!-- <p> Leyenda de recuadros: Roll / Nombre Arma / Hab. Final / Mod. Especial / Tipología (rangos) / Tipo de daño / Daño / Daño extra (pinchos y cosas asi) Daño Vital / Cansancio / Alcance / Especial </p> -->
                 </div>
                 <div class="col">
-                    <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{rname=Desvío - @{melee_nombrearma}}} {{mod=@{melee_desvio}}} {{r1=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r2=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r3=[[(@{r3}+@{melee_desvio})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+                    <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{rname=Desvío - @{melee_nombrearma}}} {{mod=@{melee_desvio}}} {{r1=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r2=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r3=[[(@{r3}+@{melee_desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <span>Desvío</span>
                     <input name="attr_melee_desvio" type="number" value="0" />
                     <!-- <input name="attr_melee_desvio" type="number" value="[[(@{tipoarma} [Rangos] + @{des} [Des] - 5 + @{desvio_esp} [Otros])]]" style="width: 50px;" disabled>
@@ -239,13 +258,13 @@
         <fieldset class="repeating_armadistancia"> 
             <div class="2colrow">
                 <div class="col">
-                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{rname=Ataque - @{dist_nombrearma}}} {{mod=@{dist_ataque}}} {{r1=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r2=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r3=[[(@{r3}+@{dist_ataque})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{rname=Ataque - @{dist_nombrearma}}} {{mod=@{dist_ataque}}} {{r1=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r2=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r3=[[(@{r3}+@{dist_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <input name="attr_dist_nombrearma" type="text" style="width: 150px;" />
-                    <select name="attr_dist_tipoarma" style="width: 20px;"> 
+                    <!-- <select name="attr_dist_tipoarma" style="width: 20px;"> 
                         <option value="@{rang_arco}">Arco</option>
                         <option value="@{rang_ballesta}">Ballesta</option>
                         <option value="@{rang_armasfuego}">Armas de fuego</option>
-                    </select>
+                    </select> -->
                     <input name="attr_dist_ataque" type="number" value="0">
                     <!--
                     <input name="attr_dist_ataque" type="number" value="[[(@{dist_tipoarma} [Rangos] + @{des} [Des] - 5 + @{dist_ataque_esp} [Otros])]]" style="width: 50px;" disabled>
@@ -263,7 +282,7 @@
                     <input name="attr_dist_can" type="number" value="0" />
                     <select name="attr_dist_alc" style="width: 70px;">
                         <option value="-">melé</option>
-                        <option value="I">corto</option>
+                        <option value="I" selected="selected">corto</option>
                         <option value="II">medio</option>
                         <option value="III">largo</option>
                         <option value="III">muy largo</option>
@@ -282,7 +301,8 @@
     <div>
             <div class="2colrow">
                 <div class="col">
-                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{rname=Ataque sin armas} {{mod=@{sinarmas_ataque}}} {{r1=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r3=[[(@{r3}+@{sinarmas_ataque})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+                   
+                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{rname=Ataque sin armas}} {{mod=@{sinarmas_ataque}}} {{r1=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r3=[[(@{r3}+@{sinarmas_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <input name="attr_sinarmas_ataque" type="number" value="0">
                     <!-- <input name="attr_sinarmas_ataque" type="number" value="[[(@{rang_sinarmas} [Rangos] + @{des} [Des] - 5 + @{sinarmas_ataque_esp} [Otros])]]" style="width: 50px;" disabled>
                     <input name="attr_sinarmas_ataque_esp" type="number" value="0">
@@ -296,7 +316,7 @@
                     <!-- <p> Roll / Hab. Final / Mod. Especial / Tipo de daño / Daño / Daño Vital / Cansancio / Alcance / Especial </p> -->
                 </div>
                 <div class="col">
-                    <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{rname=Desvío sin armas} {{mod=@{sinarmas_desvio}}} {{r1=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r3=[[(@{r3}+@{sinarmas_desvio})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+                    <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{rname=Desvío sin armas}} {{mod=@{sinarmas_desvio}}} {{r1=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r3=[[(@{r3}+@{sinarmas_desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <span>Desvío sin armas</span>
                     <input name="attr_sinarmas_desvio" type="number" value="0" />
                     <!-- <input name="attr_sinarmas_desvio" type="number" value="[[(@{attr_sinarmas_rang_sinarmas} [Rangos] + @{des} [Des] - 5 + @{desvio_esp} [Otros])]]" style="width: 50px;" disabled>
@@ -310,7 +330,7 @@
     <div class="armadura">
         <h4>ARMADURA</h4>
             <input name="attr_nombrearmadura" type="text"/> 
-            <select name="tipoarmadura" style="width: 80px;">
+            <select name="tipoarmadura" style="width: 75px;">
                 <option value="Ligera">Ligera</option>
                 <option value="Intermedia">Intermedia</option>
                 <option value="Pesada">Pesada</option>
@@ -356,87 +376,87 @@
         <!-- <span>Habilidad (atributo)/ Rangos / Mod. Especial / Hab. Final + Roll</span> -->
         <p></p>
         <span>
-            <span>Alerta (Ast)</span> <input name="attr_rang_alerta" type="number" value="0" /> <input name="attr_hab_alerta_esp" type="number" value="0">
-            <input name="attr_hab_alerta" type="number" value="[[(@{rang_alerta} [Rangos] + @{ast} [Atributo] - 5 + @{hab_alerta_esp} [Otros])]]" disabled>
-            <button name="roll_alerta" type="roll" value="&{template:@{plantilla}} {{rname=Alerta}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r2=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r3=[[(@{r3}+@{hab_alerta})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_alerta" type="roll" value="&{template:@{plantilla}} {{rname=Alerta}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r2=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r3=[[(@{r3}+@{hab_alerta})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Alerta (Ast)</span> <input name="attr_rang_alerta" type="number" value="0" />
+            <input name="attr_hab_alerta" type="number" value="0">
+            </span>
+        <p></p>
+        <span>
+            <button name="roll_atletismo" type="roll" value="&{template:@{plantilla}} {{rname=Atletismo}} {{mod=@{hab_atletismo}}} {{r1=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r2=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r3=[[(@{r3}+@{hab_atletismo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Atletismo (Fue)</span> <input name="attr_rang_atletismo" type="number" value="0" />
+            <input name="attr_hab_atletismo" type="number" value="0">
+            </span>
+        <p></p>
+        <span>
+            <button name="roll_diplomacia" type="roll" value="&{template:@{plantilla}} {{rname=Diplomacia}} {{mod=@{hab_diplomacia}}} {{r1=[[(1d12cs0cf0+@{hab_diplomacia})]]}} {{r2=[[(1d12cs0cf0+@{hab_diplomacia})]]}} {{r3=[[(@{r3}+@{hab_diplomacia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Diplomacia (Ast)</span> <input name="attr_rang_diplomacia" type="number" value="0" />
+            <input name="attr_hab_diplomacia" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Atletismo (Fue)</span> <input name="attr_rang_atletismo" type="number" value="0" /> <input name="attr_hab_atletismo_esp" type="number" value="0">
-            <input name="attr_hab_atletismo" type="number" value="[[(@{rang_atletismo} [Rangos] + @{fue} [Atributo] - 5 + @{hab_atletismo_esp} [Otros])]]" disabled>
-            <button name="roll_atletismo" type="roll" value="&{template:@{plantilla}} {{rname=Atletismo}} {{mod=@{hab_atletismo}}} {{r1=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r2=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r3=[[(@{r3}+@{hab_atletismo})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_empatia" type="roll" value="&{template:@{plantilla}} {{rname=Empatía}} {{mod=@{hab_empatia}}} {{r1=[[(1d12cs0cf0+@{hab_empatia})]]}} {{r2=[[(1d12cs0cf0+@{hab_empatia})]]}} {{r3=[[(@{r3}+@{hab_empatia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Empatía (Ast/Int)</span><input name="attr_rang_empatia" type="number" value="0" /> 
+            <input name="attr_hab_empatia" type="number" value="0">
+         </span>
+        <p></p>
+        <span>
+            <button name="roll_enganar" type="roll" value="&{template:@{plantilla}} {{rname=Engañar}} {{mod=@{hab_enganar}}} {{r1=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r2=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r3=[[(@{r3}+@{hab_enganar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Engañar (Ast)</span><input name="attr_rang_enganar" type="number" value="0" /> 
+            <input name="attr_hab_enganar" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Diplomacia (Ast)</span> <input name="attr_rang_diplomacia" type="number" value="0" /> <input name="attr_hab_diplomacia_esp" type="number" value="0">
-            <input name="attr_hab_diplomacia" type="number" value="[[(@{rang_diplomacia} [Rangos] + @{ast} [Ast] - 5 + @{hab_diplomacia_esp} [Otros])]]" disabled>
-            <button name="roll_diplomacia" type="roll" value="&{template:@{plantilla}} {{rname=Diplomacia}} {{mod=@{hab_diplomacia}}} {{r1=[[(1d12cs0cf0+@{hab_diplomacia})]]}} {{r2=[[(1d12cs0cf0+@{hab_diplomacia})]]}} {{r3=[[(@{r3}+@{hab_diplomacia})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_equilibrio" type="roll" value="&{template:@{plantilla}} {{rname=Equilibrio}} {{mod=@{hab_equilibrio}}} {{r1=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{r2=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{r3=[[(@{r3}+@{hab_equilibrio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Equilibrio (Agi)</span><input name="attr_rang_equilibrio" type="number" value="0" /> 
+            <input name="attr_hab_equilibrio" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Empatía (Ast/Int)</span><input name="attr_rang_empatia" type="number" value="0" /> <input name="attr_hab_empatia_esp" type="number" value="0">
-            <input name="attr_hab_empatia" type="number" value="[[(@{rang_empatia} [Rangos] + @{max_astint} [Atributo] - 5 + @{hab_empatia_esp} [Otros])]]" disabled>
-            <button name="roll_empatia" type="roll" value="&{template:@{plantilla}} {{rname=Empatía}} {{mod=@{hab_empatia}}} {{r1=[[(1d12cs0cf0+@{hab_empatia})]]}} {{r2=[[(1d12cs0cf0+@{hab_empatia})]]}} {{r3=[[(@{r3}+@{hab_empatia})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_intimidar" type="roll" value="&{template:@{plantilla}} {{rname=Intimidar}} {{mod=@{hab_intimidar}}} {{r1=[[(1d12cs0cf0+@{hab_intimidar})]]}} {{r2=[[(1d12cs0cf0+@{hab_intimidar})]]}} {{r3=[[(@{r3}+@{hab_intimidar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Intimidar (Fue)</span><input name="attr_rang_intimidar" type="number" value="0" />
+            <input name="attr_hab_intimidar" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Engañar (Ast)</span><input name="attr_rang_enganar" type="number" value="0" /> <input name="attr_hab_enganar_esp" type="number" value="0">
-            <input name="attr_hab_enganar" type="number" value="[[(@{rang_enganar} [Rangos] + @{ast} - 5 + @{hab_enganar_esp} [Otros])]]" disabled>
-            <button name="roll_enganar" type="roll" value="&{template:@{plantilla}} {{rname=Engañar}} {{mod=@{hab_enganar}}} {{r1=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r2=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r3=[[(@{r3}+@{hab_enganar})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_movilidad" type="roll" value="&{template:@{plantilla}} {{rname=Movilidad}} {{mod=@{hab_movilidad}}} {{r1=[[(1d12cs0cf0+@{hab_movilidad})]]}} {{r2=[[(1d12cs0cf0+@{hab_movilidad})]]}} {{r3=[[(@{r3}+@{hab_movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Movilidad (Agi)</span><input name="attr_rang_movilidad" type="number" value="0" />
+            <input name="attr_hab_movilidad" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Equilibrio (Agi)</span><input name="attr_rang_equilibrio" type="number" value="0" /> <input name="attr_hab_equilibrio_esp" type="number" value="0">
-            <input name="attr_hab_equilibrio" type="number" value="[[(@{rang_equilibrio} [Rangos] + @{agi} [Atributo] - 5 + @{hab_equilibrio_esp} [Otros])]]" disabled>
-            <button name="roll_equilibrio" type="roll" value="&{template:@{plantilla}} {{rname=Equilibrio}} {{mod=@{hab_equilibrio}}} {{r1=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{r2=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{r3=[[(@{r3}+@{hab_equilibrio})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_nadar" type="roll" value="&{template:@{plantilla}} {{rname=Nadar}} {{mod=@{hab_nadar}}} {{r1=[[(1d12cs0cf0+@{hab_nadar})]]}} {{r2=[[(1d12cs0cf0+@{hab_nadar})]]}} {{r3=[[(@{r3}+@{hab_nadar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Nadar (Fue)</span><input name="attr_rang_nadar" type="number" value="0" />
+            <input name="attr_hab_nadar" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Intimidar (Fue)</span><input name="attr_rang_intimidar" type="number" value="0" /> <input name="attr_hab_intimidar_esp" type="number" value="0">
-            <input name="attr_hab_intimidar" type="number" value="[[(@{rang_intimidar} [Rangos] + @{fue} [Atributo] - 5 + @{hab_intimidar_esp} [Otros])]]" disabled>
-            <button name="roll_intimidar" type="roll" value="&{template:@{plantilla}} {{rname=Intimidar}} {{mod=@{hab_intimidar}}} {{r1=[[(1d12cs0cf0+@{hab_intimidar})]]}} {{r2=[[(1d12cs0cf0+@{hab_intimidar})]]}} {{r3=[[(@{r3}+@{hab_intimidar})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_observacion" type="roll" value="&{template:@{plantilla}} {{rname=Observación}} {{mod=@{hab_observacion}}} {{r1=[[(1d12cs0cf0+@{hab_observacion})]]}} {{r2=[[(1d12cs0cf0+@{hab_observacion})]]}} {{r3=[[(@{r3}+@{hab_observacion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Observación (Int)</span><input name="attr_rang_observacion" type="number" value="0" />
+            <input name="attr_hab_observacion" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Movilidad (Agi)</span><input name="attr_rang_movilidad" type="number" value="0" /> <input name="attr_hab_movilidad_esp" type="number" value="0">
-            <input name="attr_hab_movilidad" type="number" value="[[(@{rang_movilidad} [Rangos] + @{agi} [Atributo] - 5 + @{bonocarga} [Bono Sin Carga] + @{hab_movilidad_esp} [Otros])]]" disabled>
-            <button name="roll_movilidad" type="roll" value="&{template:@{plantilla}} {{rname=Movilidad}} {{mod=@{hab_movilidad}}} {{r1=[[(1d12cs0cf0+@{hab_movilidad})]]}} {{r2=[[(1d12cs0cf0+@{hab_movilidad})]]}} {{r3=[[(@{r3}+@{hab_movilidad})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_sigilo" type="roll" value="&{template:@{plantilla}} {{rname=Sigilo}} {{mod=@{hab_sigilo}}} {{r1=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{r2=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{r3=[[(@{r3}+@{hab_sigilo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Sigilo (Agi)</span><input name="attr_rang_sigilo" type="number" value="0" />
+            <input name="attr_hab_sigilo" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Nadar (Fue)</span><input name="attr_rang_nadar" type="number" value="0" /> <input name="attr_hab_nadar_esp" type="number" value="0">
-            <input name="attr_hab_nadar" type="number" value="[[(@{rang_nadar} [Rangos] + @{fue} [Atributo] - 5 + @{hab_nadar_esp} [Otros])]]" disabled>
-            <button name="roll_nadar" type="roll" value="&{template:@{plantilla}} {{rname=Nadar}} {{mod=@{hab_nadar}}} {{r1=[[(1d12cs0cf0+@{hab_nadar})]]}} {{r2=[[(1d12cs0cf0+@{hab_nadar})]]}} {{r3=[[(@{r3}+@{hab_nadar})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_supervivencia" type="roll" value="&{template:@{plantilla}} {{rname=Supervivencia}} {{mod=@{hab_supervivencia}}} {{r1=[[(1d12cs0cf0+@{hab_supervivencia})]]}} {{r2=[[(1d12cs0cf0+@{hab_supervivencia})]]}} {{r3=[[(@{r3}+@{hab_supervivencia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Supervivencia (Int)</span><input name="attr_rang_supervivencia" type="number" value="0" />
+            <input name="attr_hab_supervivencia" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Observación (Int)</span><input name="attr_rang_observacion" type="number" value="0" /> <input name="attr_hab_observacion_esp" type="number" value="0">
-            <input name="attr_hab_observacion" type="number" value="[[(@{rang_observacion} [Rangos] + @{int} [Atributo] - 5 + @{hab_observacion_esp} [Otros])]]" disabled>
-            <button name="roll_observacion" type="roll" value="&{template:@{plantilla}} {{rname=Observación}} {{mod=@{hab_observacion}}} {{r1=[[(1d12cs0cf0+@{hab_observacion})]]}} {{r2=[[(1d12cs0cf0+@{hab_observacion})]]}} {{r3=[[(@{r3}+@{hab_observacion})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_tasacion" type="roll" value="&{template:@{plantilla}} {{rname=Tasación}} {{mod=@{hab_tasacion}}} {{r1=[[(1d12cs0cf0+@{hab_tasacion})]]}} {{r2=[[(1d12cs0cf0+@{hab_tasacion})]]}} {{r3=[[(@{r3}+@{hab_tasacion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Tasacion (Int)</span><input name="attr_rang_tasacion" type="number" value="0" />
+            <input name="attr_hab_tasacion" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Sigilo (Agi)</span><input name="attr_rang_sigilo" type="number" value="0" /> <input name="attr_hab_sigilo_esp" type="number" value="0">
-            <input name="attr_hab_sigilo" type="number" value="[[(@{rang_sigilo} [Rangos] + @{agi} [Atributo] - 5 + @{hab_sigilo_esp} [Otros])]]" disabled>
-            <button name="roll_sigilo" type="roll" value="&{template:@{plantilla}} {{rname=Sigilo}} {{mod=@{hab_sigilo}}} {{r1=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{r2=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{r3=[[(@{r3}+@{hab_sigilo})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-        </span>
-        <p></p>
-        <span>
-            <span>Supervivencia (Int)</span><input name="attr_rang_supervivencia" type="number" value="0" /> <input name="attr_hab_supervivencia_esp" type="number" value="0">
-            <input name="attr_hab_supervivencia" type="number" value="[[(@{rang_supervivencia} [Rangos] + @{int} [Atributo] - 5 + @{hab_supervivencia_esp} [Otros])]]" disabled>
-            <button name="roll_supervivencia" type="roll" value="&{template:@{plantilla}} {{rname=Supervivencia}} {{mod=@{hab_supervivencia}}} {{r1=[[(1d12cs0cf0+@{hab_supervivencia})]]}} {{r2=[[(1d12cs0cf0+@{hab_supervivencia})]]}} {{r3=[[(@{r3}+@{hab_supervivencia})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-        </span>
-        <p></p>
-        <span>
-            <span>Tasacion (Int)</span><input name="attr_rang_tasacion" type="number" value="0" /> <input name="attr_hab_tasacion_esp" type="number" value="0">
-            <input name="attr_hab_tasacion" type="number" value="[[(@{rang_tasacion} [Rangos] + @{int} [Atributo] - 5 + @{hab_tasacion_esp} [Otros])]]" disabled>
-            <button name="roll_tasacion" type="roll" value="&{template:@{plantilla}} {{rname=Tasación}} {{mod=@{hab_tasacion}}} {{r1=[[(1d12cs0cf0+@{hab_tasacion})]]}} {{r2=[[(1d12cs0cf0+@{hab_tasacion})]]}} {{r3=[[(@{r3}+@{hab_tasacion})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-        </span>
-        <p></p>
-        <span>
-            <span>Trato Animal (Int)</span><input name="attr_rang_tratoanimal" type="number" value="0" /> <input name="attr_hab_tratoanimal_esp" type="number" value="0">
-            <input name="attr_hab_tratoanimal" type="number" value="[[(@{rang_tratoanimal} [Rangos] + @{int} [Atributo] - 5 + @{hab_tratoanimal_esp} [Otros])]]" disabled>
-            <button name="roll_tratoanimal" type="roll" value="&{template:@{plantilla}} {{rname=Trato Animal}} {{mod=@{hab_tratoanimal}}} {{r1=[[(1d12cs0cf0+@{hab_tratoanimal})]]}} {{r2=[[(1d12cs0cf0+@{hab_tratoanimal})]]}} {{r3=[[(@{r3}+@{hab_tratoanimal})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_tratoanimal" type="roll" value="&{template:@{plantilla}} {{rname=Trato Animal}} {{mod=@{hab_tratoanimal}}} {{r1=[[(1d12cs0cf0+@{hab_tratoanimal})]]}} {{r2=[[(1d12cs0cf0+@{hab_tratoanimal})]]}} {{r3=[[(@{r3}+@{hab_tratoanimal})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Trato Animal (Int)</span><input name="attr_rang_tratoanimal" type="number" value="0" />
+            <input name="attr_hab_tratoanimal" type="number" value="0">
         </span>
     </div>
 
@@ -445,114 +465,99 @@
         <!-- <span>Habilidad (atributo)/ Rangos / Mod. Especial / Hab. Final + Roll</span> <p></p> -->
         <p></p>
         <span>
+            <button name="roll_arte1" type="roll" value="&{template:@{plantilla}} {{rname=Arte (@{name_arte1})}} {{mod=@{hab_arte1}}} {{r1=[[(1d12cs0cf0+@{hab_arte1})]]}} {{r2=[[(1d12cs0cf0+@{hab_arte1})]]}} {{r3=[[(@{r3}+@{hab_arte1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
             <span>Arte</span> <input name="attr_name_arte1" type="text">
-            <select name="attr_stat_arte1">
+            <select name="attr_stat_arte1" style="width: 55px;">
                 <option value="@{fue}">Fue</option>
                 <option value="@{des}">Des</option>
                 <option value="@{agi}">Agi</option>
                 <option value="@{res}">Res</option>
                 <option value="@{ast}">Ast</option>
-                <option value="@{int}" selected="selected">int</option>
+                <option value="@{int}" selected="selected">Int</option>
             </select>
-            <input name="attr_rang_arte1" type="number" value="0" /> <input name="attr_hab_arte1_esp" type="number" value="0">
-            <input name="attr_hab_arte1" type="number" value="[[(@{rang_arte1} [Rangos] + @{stat_arte1} [Atributo] - 5 + @{hab_arte1_esp} [Otros])]]" disabled>
-            <button name="roll_arte1" type="roll" value="&{template:@{plantilla}} {{rname=Arte (@{name_arte1})}} {{mod=@{hab_arte1}}} {{r1=[[(1d12cs0cf0+@{hab_arte1})]]}} {{r2=[[(1d12cs0cf0+@{hab_arte1})]]}} {{r3=[[(@{r3}+@{hab_arte1})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <input name="attr_rang_arte1" type="number" value="0" />
+            <input name="attr_hab_arte1" type="number" value="0">
         </span>
         <p></p>
         <span>
+            <button name="roll_arte2" type="roll" value="&{template:@{plantilla}} {{rname=Arte (@{name_arte2})}} {{mod=@{hab_arte2}}} {{r1=[[(1d12cs0cf0+@{hab_arte2})]]}} {{r2=[[(1d12cs0cf0+@{hab_arte2})]]}} {{r3=[[(@{r3}+@{hab_arte2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
             <span>Arte</span> <input name="attr_name_arte2" type="text">
-            <select name="attr_stat_arte2">
-                <option value="@{fue}">fue</option>
-                <option value="@{des}">des</option>
-                <option value="@{agi}">agi</option>
-                <option value="@{res}">res</option>
-                <option value="@{ast}">ast</option>
-                <option value="@{int}" selected="selected">int</option>
+            <select name="attr_stat_arte2" style="width: 55px;">
+                <option value="@{fue}">Fue</option>
+                <option value="@{des}">Des</option>
+                <option value="@{agi}">Agi</option>
+                <option value="@{res}">Res</option>
+                <option value="@{ast}">Ast</option>
+                <option value="@{int}" selected="selected">Int</option>
             </select>
-            <input name="attr_rang_arte2" type="number" value="0" /> <input name="attr_hab_arte2_esp" type="number" value="0">
-            <input name="attr_hab_arte2" type="number" value="[[(@{rang_arte2} [Rangos] + @{stat_arte2} [Atributo] - 5 + @{hab_arte2_esp} [Otros])]]" disabled>
-            <button name="roll_arte2" type="roll" value="&{template:@{plantilla}} {{rname=Arte (@{name_arte2})}} {{mod=@{hab_arte2}}} {{r1=[[(1d12cs0cf0+@{hab_arte2})]]}} {{r2=[[(1d12cs0cf0+@{hab_arte2})]]}} {{r3=[[(@{r3}+@{hab_arte2})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <input name="attr_rang_arte2" type="number" value="0" />
+            <input name="attr_hab_arte2" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Arte</span>  <input name="attr_name_arte3" type="text">
-            <select name="attr_stat_arte3">
-                <option value="@{fue}">fue</option>
-                <option value="@{des}">des</option>
-                <option value="@{agi}">agi</option>
-                <option value="@{res}">res</option>
-                <option value="@{ast}">ast</option>
-                <option value="@{int}" selected="selected">int</option>
-            </select>
-            <input name="attr_rang_arte3" type="number" value="0" /> <input name="attr_hab_arte3_esp" type="number" value="0">
-            <input name="attr_hab_arte3" type="number" value="[[(@{rang_arte3} [Rangos] + @{stat_arte3} [Atributo] - 5 + @{hab_arte3_esp} [Otros])]]" disabled>
-            <button name="roll_arte3" type="roll" value="&{template:@{plantilla}} {{rname=Arte (@{name_arte3})}} {{mod=@{hab_arte3}}} {{r1=[[(1d12cs0cf0+@{hab_arte3})]]}} {{r2=[[(1d12cs0cf0+@{hab_arte3})]]}} {{r3=[[(@{r3}+@{hab_arte3})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_idiomas" type="roll" value="&{template:@{plantilla}} {{rname=Idiomas}} {{mod=@{hab_idiomas}}} {{r1=[[(1d12cs0cf0+@{hab_idiomas})]]}} {{r2=[[(1d12cs0cf0+@{hab_idiomas})]]}} {{r3=[[(@{r3}+@{hab_idiomas})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Idiomas (Int)</span> <input name="attr_rang_idiomas" type="number" value="0" />
+            <input name="attr_hab_idiomas" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Idiomas (Int)</span> <input name="attr_rang_idiomas" type="number" value="0" /> <input name="attr_hab_idiomas_esp" type="number" value="0">
-            <input name="attr_hab_idiomas" type="number" value="[[(@{rang_idiomas} [Rangos] + @{int} [Atributo] - 5 + @{hab_idiomas_esp} [Otros])]]" disabled>
-            <button name="roll_idiomas" type="roll" value="&{template:@{plantilla}} {{rname=Idiomas}} {{mod=@{hab_idiomas}}} {{r1=[[(1d12cs0cf0+@{hab_idiomas})]]}} {{r2=[[(1d12cs0cf0+@{hab_idiomas})]]}} {{r3=[[(@{r3}+@{hab_idiomas})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_piruetas" type="roll" value="&{template:@{plantilla}} {{rname=Piruetas}} {{mod=@{hab_piruetas}}} {{r1=[[(1d12cs0cf0+@{hab_piruetas})]]}} {{r2=[[(1d12cs0cf0+@{hab_piruetas})]]}} {{r3=[[(@{r3}+@{hab_piruetas})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Piruetas (Agi)</span> <input name="attr_rang_piruetas" type="number" value="0" />
+            <input name="attr_hab_piruetas" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Piruetas (Agi)</span> <input name="attr_rang_piruetas" type="number" value="0" /> <input name="attr_hab_piruetas_esp" type="number" value="0">
-            <input name="attr_hab_piruetas" type="number" value="[[(@{rang_piruetas} [Rangos] + @{agi} [Atributo] - 5 + @{hab_piruetas_esp} [Otros])]]" disabled>
-            <button name="roll_piruetas" type="roll" value="&{template:@{plantilla}} {{rname=Piruetas}} {{mod=@{hab_piruetas}}} {{r1=[[(1d12cs0cf0+@{hab_piruetas})]]}} {{r2=[[(1d12cs0cf0+@{hab_piruetas})]]}} {{r3=[[(@{r3}+@{hab_piruetas})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_rastrear" type="roll" value="&{template:@{plantilla}} {{rname=Rastrear}} {{mod=@{hab_rastrear}}} {{r1=[[(1d12cs0cf0+@{hab_rastrear})]]}} {{r2=[[(1d12cs0cf0+@{hab_rastrear})]]}} {{r3=[[(@{r3}+@{hab_rastrear})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Rastrear (Int)</span> <input name="attr_rang_rastrear" type="number" value="0" />
+            <input name="attr_hab_rastrear" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Rastrear (Int)</span> <input name="attr_rang_rastrear" type="number" value="0" /> <input name="attr_hab_rastrear_esp" type="number" value="0">
-            <input name="attr_hab_rastrear" type="number" value="[[(@{rang_rastrear} [Rangos] + @{int} [Atributo] - 5 + @{hab_rastrear_esp} [Otros])]]" disabled>
-            <button name="roll_rastrear" type="roll" value="&{template:@{plantilla}} {{rname=Rastrear}} {{mod=@{hab_rastrear}}} {{r1=[[(1d12cs0cf0+@{hab_rastrear})]]}} {{r2=[[(1d12cs0cf0+@{hab_rastrear})]]}} {{r3=[[(@{r3}+@{hab_rastrear})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_sarcano" type="roll" value="&{template:@{plantilla}} {{rname=Saber Arcano}} {{mod=@{hab_sarcano}}} {{r1=[[(1d12cs0cf0+@{hab_sarcano})]]}} {{r2=[[(1d12cs0cf0+@{hab_sarcano})]]}} {{r3=[[(@{r3}+@{hab_sarcano})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Saber Arcano (Int)</span> <input name="attr_rang_sarcano" type="number" value="0" />
+            <input name="attr_hab_sarcano" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Saber Arcano (Int)</span> <input name="attr_rang_sarcano" type="number" value="0" /> <input name="attr_hab_sarcano_esp" type="number" value="0">
-            <input name="attr_hab_sarcano" type="number" value="[[(@{rang_sarcano} [Rangos] + @{int} [Atributo] - 5 + @{hab_sarcano_esp} [Otros])]]" disabled>
-            <button name="roll_sarcano" type="roll" value="&{template:@{plantilla}} {{rname=Saber Arcano}} {{mod=@{hab_sarcano}}} {{r1=[[(1d12cs0cf0+@{hab_sarcano})]]}} {{r2=[[(1d12cs0cf0+@{hab_sarcano})]]}} {{r3=[[(@{r3}+@{hab_sarcano})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_sbajosfondos" type="roll" value="&{template:@{plantilla}} {{rname=Saber Bajos Fondos}} {{mod=@{hab_sbajosfondos}}} {{r1=[[(1d12cs0cf0+@{hab_sbajosfondos})]]}} {{r2=[[(1d12cs0cf0+@{hab_sbajosfondos})]]}} {{r3=[[(@{r3}+@{hab_sbajosfondos})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Saber Bajos Fondos (Int)</span> <input name="attr_rang_sbajosfondos" type="number" value="0" />
+            <input name="attr_hab_sbajosfondos" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Saber Bajos Fondos (Int)</span> <input name="attr_rang_sbajosfondos" type="number" value="0" /> <input name="attr_hab_sbajosfondos_esp" type="number" value="0">
-            <input name="attr_hab_sbajosfondos" type="number" value="[[(@{rang_sbajosfondos} [Rangos] + @{int} [Atributo] - 5 + @{hab_sbajosfondos_esp} [Otros])]]" disabled>
-            <button name="roll_sbajosfondos" type="roll" value="&{template:@{plantilla}} {{rname=Saber Bajos Fondos}} {{mod=@{hab_sbajosfondos}}} {{r1=[[(1d12cs0cf0+@{hab_sbajosfondos})]]}} {{r2=[[(1d12cs0cf0+@{hab_sbajosfondos})]]}} {{r3=[[(@{r3}+@{hab_sbajosfondos})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_sculturas" type="roll" value="&{template:@{plantilla}} {{rname=Saber Culturas}} {{mod=@{hab_sculturas}}} {{r1=[[(1d12cs0cf0+@{hab_sculturas})]]}} {{r2=[[(1d12cs0cf0+@{hab_sculturas})]]}} {{r3=[[(@{r3}+@{hab_sculturas})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Saber Culturas (Int)</span> <input name="attr_rang_sculturas" type="number" value="0" />
+            <input name="attr_hab_sculturas" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Saber Culturas (Int)</span> <input name="attr_rang_sculturas" type="number" value="0" /> <input name="attr_hab_sculturas_esp" type="number" value="0">
-            <input name="attr_hab_sculturas" type="number" value="[[(@{rang_sculturas} [Rangos] + @{int} [Atributo] - 5 + @{hab_sculturas_esp} [Otros])]]" disabled>
-            <button name="roll_sculturas" type="roll" value="&{template:@{plantilla}} {{rname=Saber Culturas}} {{mod=@{hab_sculturas}}} {{r1=[[(1d12cs0cf0+@{hab_sculturas})]]}} {{r2=[[(1d12cs0cf0+@{hab_sculturas})]]}} {{r3=[[(@{r3}+@{hab_sculturas})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_snaturaleza" type="roll" value="&{template:@{plantilla}} {{rname=Saber Naturaleza}} {{mod=@{hab_snaturaleza}}} {{r1=[[(1d12cs0cf0+@{hab_snaturaleza})]]}} {{r2=[[(1d12cs0cf0+@{hab_snaturaleza})]]}} {{r3=[[(@{r3}+@{hab_snaturaleza})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Saber Naturaleza (Int)</span> <input name="attr_rang_snaturaleza" type="number" value="0" />
+            <input name="attr_hab_snaturaleza" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Saber Naturaleza (Int)</span> <input name="attr_rang_snaturaleza" type="number" value="0" /> <input name="attr_hab_snaturaleza_esp" type="number" value="0">
-            <input name="attr_hab_snaturaleza" type="number" value="[[(@{rang_snaturaleza} [Rangos] + @{int} [Atributo] - 5 + @{hab_snaturaleza_esp} [Otros])]]" disabled>
-            <button name="roll_snaturaleza" type="roll" value="&{template:@{plantilla}} {{rname=Saber Naturaleza}} {{mod=@{hab_snaturaleza}}} {{r1=[[(1d12cs0cf0+@{hab_snaturaleza})]]}} {{r2=[[(1d12cs0cf0+@{hab_snaturaleza})]]}} {{r3=[[(@{r3}+@{hab_snaturaleza})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_ssociedad" type="roll" value="&{template:@{plantilla}} {{rname=Saber Sociedad}} {{mod=@{hab_ssociedad}}} {{r1=[[(1d12cs0cf0+@{hab_ssociedad})]]}} {{r2=[[(1d12cs0cf0+@{hab_ssociedad})]]}} {{r3=[[(@{r3}+@{hab_ssociedad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Saber Sociedad (Int)</span> <input name="attr_rang_ssociedad" type="number" value="0" />
+            <input name="attr_hab_ssociedad" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Saber Sociedad (Int)</span> <input name="attr_rang_ssociedad" type="number" value="0" /> <input name="attr_hab_ssociedad_esp" type="number" value="0">
-            <input name="attr_hab_ssociedad" type="number" value="[[(@{rang_ssociedad} [Rangos] + @{int} [Atributo] - 5 + @{hab_ssociedad_esp} [Otros])]]" disabled>
-            <button name="roll_ssociedad" type="roll" value="&{template:@{plantilla}} {{rname=Saber Sociedad}} {{mod=@{hab_ssociedad}}} {{r1=[[(1d12cs0cf0+@{hab_ssociedad})]]}} {{r2=[[(1d12cs0cf0+@{hab_ssociedad})]]}} {{r3=[[(@{r3}+@{hab_ssociedad})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_sanar" type="roll" value="&{template:@{plantilla}} {{rname=Sanar}} {{mod=@{hab_sanar}}} {{r1=[[(1d12cs0cf0+@{hab_sanar})]]}} {{r2=[[(1d12cs0cf0+@{hab_sanar})]]}} {{r3=[[(@{r3}+@{hab_sanar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Sanar (Des/Int)</span> <input name="attr_rang_sanar" type="number" value="0" />
+            <input name="attr_hab_sanar" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Sanar (Des/Int)</span> <input name="attr_rang_sanar" type="number" value="0" /> <input name="attr_hab_sanar_esp" type="number" value="0">
-            <input name="attr_hab_sanar" type="number" value="[[(@{rang_sanar} [Rangos] + @{max_desint} [Atributo] - 5 + @{hab_sanar_esp} [Otros])]]" disabled>
-            <button name="roll_sanar" type="roll" value="&{template:@{plantilla}} {{rname=Sanar}} {{mod=@{hab_sanar}}} {{r1=[[(1d12cs0cf0+@{hab_sanar})]]}} {{r2=[[(1d12cs0cf0+@{hab_sanar})]]}} {{r3=[[(@{r3}+@{hab_sanar})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_seguridad" type="roll" value="&{template:@{plantilla}} {{rname=Seguridad}} {{mod=@{hab_seguridad}}} {{r1=[[(1d12cs0cf0+@{hab_seguridad})]]}} {{r2=[[(1d12cs0cf0+@{hab_seguridad})]]}} {{r3=[[(@{r3}+@{hab_seguridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Seguridad (Des/Int)</span> <input name="attr_rang_seguridad" type="number" value="0" />
+            <input name="attr_hab_seguridad" type="number" value="0">
         </span>
         <p></p>
         <span>
-            <span>Seguridad (Des/Int)</span> <input name="attr_rang_seguridad" type="number" value="0" /> <input name="attr_hab_seguridad_esp" type="number" value="0">
-            <input name="attr_hab_seguridad" type="number" value="[[(@{rang_seguridad} [Rangos] + @{max_desint} [Atributo] - 5 + @{hab_seguridad_esp} [Otros])]]" disabled>
-            <button name="roll_seguridad" type="roll" value="&{template:@{plantilla}} {{rname=Seguridad}} {{mod=@{hab_seguridad}}} {{r1=[[(1d12cs0cf0+@{hab_seguridad})]]}} {{r2=[[(1d12cs0cf0+@{hab_seguridad})]]}} {{r3=[[(@{r3}+@{hab_seguridad})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-        </span>
-        <p></p>
-        <span>
-            <span>Táctica (Ast)</span> <input name="attr_rang_tactica" type="number" value="0" /> <input name="attr_hab_tactica_esp" type="number" value="0">
-            <input name="attr_hab_tactica" type="number" value="[[(@{rang_tactica} [Rangos] + @{ast} [Atributo] - 5 + @{hab_tactica_esp} [Otros])]]" disabled>
-            <button name="roll_tactica" type="roll" value="&{template:@{plantilla}} {{rname=Táctica}} {{mod=@{hab_tactica}}} {{r1=[[(1d12cs0cf0+@{hab_tactica})]]}} {{r2=[[(1d12cs0cf0+@{hab_tactica})]]}} {{r3=[[(@{r3}+@{hab_tactica})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_tactica" type="roll" value="&{template:@{plantilla}} {{rname=Táctica}} {{mod=@{hab_tactica}}} {{r1=[[(1d12cs0cf0+@{hab_tactica})]]}} {{r2=[[(1d12cs0cf0+@{hab_tactica})]]}} {{r3=[[(@{r3}+@{hab_tactica})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <span>Táctica (Ast)</span> <input name="attr_rang_tactica" type="number" value="0" />
+            <input name="attr_hab_tactica" type="number" value="0">
         </span>
     </div>
 </div>
@@ -758,23 +763,23 @@
 <!--
 <span>
     <p>NOMBRE (ATR)</p> <input name="attr_rang_NOMBRE" type="number" value="0" /> <input name="attr_hab_NOMBRE_esp" type="number" value="0">
-    <input name="attr_hab_NOMBRE" type="number" value="&{template:simple} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cs0cf0]]}} {{r2=[[1d12cs0cf0]]}} {{crit=¡Crítico! Bono de +2}} {{charname=charname}}]]" disabled>
+    <input name="attr_hab_NOMBRE" type="number" value="&{template:simple} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cs0cf0]]}} {{r2=[[1d12cs0cf0]]}} {{crit=¡¡Doble!! Bono de +2}} {{charname=charname}}]]" disabled>
     <button name="roll_NOMBRE" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_NOMBRE}"></button>
 </span>
 <span>
     <p>HABILIDAD (ATR)</p> <input name="attr_rang_arte" type="number" value="0" /> <input name="attr_hab_arte_esp" type="number" value="0">
     <input name="attr_hab_HABILIDAD" type="number" value="[[(@{rang_HABILIDAD} [Rangos] + @{STAT} [Atributo] - 5 + @{hab_HABILIDAD_esp} [Otros])]]" disabled>
-    <button name="roll_HABILIDAD" type="roll" value="&{template:@{plantilla}} {{rname=HABILIDAD}} {{mod=@{hab_HABILIDAD}}} {{r1=[[(1d12cs0cf0+@{hab_HABILIDAD})]]}} {{r2=[[(1d12cs0cf0+@{hab_HABILIDAD})]]}} {{r3=[[(@{r3}+@{hab_HABILIDAD})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+    <button name="roll_HABILIDAD" type="roll" value="&{template:@{plantilla}} {{rname=HABILIDAD}} {{mod=@{hab_HABILIDAD}}} {{r1=[[(1d12cs0cf0+@{hab_HABILIDAD})]]}} {{r2=[[(1d12cs0cf0+@{hab_HABILIDAD})]]}} {{r3=[[(@{r3}+@{hab_HABILIDAD})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
 </span>
 
-&{template:?{Dados|2,simple|3,tres}} {{rname=?{Habilidad}}} {{mod=?{mod|0}}} {{r1=[[(1d12cs0cf0+?{mod|0})]]}} {{r2=[[(1d12cs0cf0+?{mod|0})]]}} {{r3=[[(@{r3}+?{mod|0})]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=Especialista}
+&{template:?{Dados|2,simple|3,tres}} {{rname=?{Habilidad}}} {{mod=?{mod|0}}} {{r1=[[(1d12cs0cf0+?{mod|0})]]}} {{r2=[[(1d12cs0cf0+?{mod|0})]]}} {{r3=[[(@{r3}+?{mod|0})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=Especialista}
 -->
 <!-- FIN PLANTILLA -->
 
 <!--ROLL TEMPLATE-->
 <!-- Macro:
-    &{template:simple} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cs0cf0]]}} {{r2=[[1d12cs0cf0]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=charname}}
-    &{template:tres} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cs0cf0]]}} {{r2=[[1d12cs0cf0]]}} {{r3=[[1d12cs0cf0]]}} {{crit=¡Crítico!}} {{critbonus=2}} {{charname=charname}}
+    &{template:simple} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cs0cf0]]}} {{r2=[[1d12cs0cf0]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=charname}}
+    &{template:tres} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cs0cf0]]}} {{r2=[[1d12cs0cf0]]}} {{r3=[[1d12cs0cf0]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=charname}}
     &{template:dmg} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cs0cf0]]}} {{charname=charname}}
 -->
 
@@ -979,7 +984,7 @@
             </div>
         {{/arma}}
         <div class="label">
-            <span>{{rname}}{{#mod}} <span>(Modificador: {{mod}})</span>{{/mod}}</span>
+            <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
         </div>
         {{#charname}}
             <div class="charname">
@@ -1133,7 +1138,7 @@
             </div>
         {{/arma}}
         <div class="label">
-            <span>{{rname}}{{#mod}} <span>(Modificador: {{mod}})</span>{{/mod}}</span>
+            <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
         </div>
         {{#charname}}
             <div class="charname">
