@@ -819,24 +819,27 @@ w
         </div>
         {{#rollTotal() r1 r2}}
             <div class="label">
-                <div class="adv"></div>
-                    <span>{{crit}}</span>
-                </div>
+                <span>{{crit}}</span>
             </div>
         {{/rollTotal() r1 r2}}
-        {{#arma}}
-            <div class="label">
-                    <span>{{arma}}</span>
-            </div>
-        {{/arma}}
         <div class="label">
             <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
         </div>
-        {{#charname}}
+        {{#arma}}
+            <div class="label">
+                <span>{{arma}}</span>
+            </div>
+        {{/arma}}
+        {{#ataque}}
+            <div class="label">
+                <span>{{ataque}}</span>
+            </div>
+        {{/ataque}}
+        <!-- {{#charname}}
             <div class="charname">
                 <span>{{charname}}</span>
             </div>
-        {{/charname}}
+        {{/charname}} -->
     </div>
 </rolltemplate>
 
@@ -978,19 +981,20 @@ w
                 {{/rollTotal() r2 r3}}
             {{/^rollTotal() r1 r3}}
         {{/^rollTotal() r1 r2}}
+        
+        <div class="label">
+            <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
+        </div>
         {{#arma}}
             <div class="label">
                     <span>{{arma}}</span>
             </div>
         {{/arma}}
-        <div class="label">
-            <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
-        </div>
-        {{#charname}}
+        <!-- {{#charname}}
             <div class="charname">
                 <span>{{charname}}</span>
             </div>
-        {{/charname}}
+        {{/charname}} -->
     </div>
 </rolltemplate>
    
@@ -1121,19 +1125,19 @@ w
             {{/rollTotal() r1 r2}}
         {{/rollTotal() r1 r3}}
 
-     {{#arma}}
+        <div class="label">
+            <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
+        </div>
+        {{#arma}}
          <div class="label">
                  <span>{{arma}}</span>
          </div>
-     {{/arma}}
-     <div class="label">
-         <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
-     </div>
-     {{#charname}}
-         <div class="charname">
-             <span>{{charname}}</span>
-         </div>
-     {{/charname}}
+        {{/arma}}
+        <!-- {{#charname}}
+            <div class="charname">
+                <span>{{charname}}</span>
+            </div>
+        {{/charname}} -->
     </div>
 </rolltemplate>
 
