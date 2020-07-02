@@ -1113,6 +1113,14 @@ w
             {{/rollGreater() r1 r2}}
         </div>
          <!-- Sección extra en caso de crítico -->
+         {{#rollTotal() r1 r3}}
+            {{#rollTotal() r1 r2}}
+                <div class="label">
+                    <span>{{crit}}</span>
+                </div>
+            {{/rollTotal() r1 r2}}
+        {{/rollTotal() r1 r3}}
+
      {{#arma}}
          <div class="label">
                  <span>{{arma}}</span>
