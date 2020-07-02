@@ -1112,6 +1112,20 @@ w
                 {{/rollGreater() r3 r1}}
             {{/rollGreater() r1 r2}}
         </div>
+         <!-- Sección extra en caso de crítico -->
+     {{#arma}}
+         <div class="label">
+                 <span>{{arma}}</span>
+         </div>
+     {{/arma}}
+     <div class="label">
+         <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
+     </div>
+     {{#charname}}
+         <div class="charname">
+             <span>{{charname}}</span>
+         </div>
+     {{/charname}}
     </div>
 </rolltemplate>
 
@@ -1154,7 +1168,12 @@ w
             if (tipo === 3) {
                 newpla = "tres";
                 newr3 = "1d12cs0cf0";
-              } else {
+              } 
+              else if (tipo === 1) {
+                newpla = "tresd";
+                newr3 = "1d12cs0cf0";
+              }
+              else {
                 newpla = "simple";
                 newr3 = "0";
               };
