@@ -332,3 +332,12 @@ h1 {
 .sheet-armadura{
     text-align: center;
 }
+
+.sheet-ataques{
+    float: left;
+    width: 75%;
+    }
+
+.sheet-desvios{
+    width: 100%;
+    }
