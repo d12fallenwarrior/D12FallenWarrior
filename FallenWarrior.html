@@ -132,8 +132,19 @@
     <!-- <h4>MAGIA</h4> -->
     <div class="2colrow">
         <div class="col">
-            <button name="roll_conjuracion" type="roll" value="&{template:@{plantilla}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
-           
+            <button name="roll_conjuracion" type="roll" value="&{template:conj} {{rname=Conjuración}} {{poder=@{poder}}} {{mod=@{conjuracion}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
+            <select name="attr_poder" type="text" style="width: 40px;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
             <span>Conjuración (Ast)</span> <input name="attr_conjuracion" type="number" value="0">
             <!-- <input name="attr_conjuracion" type="number" value="[[(@{rang_conjuracion} [Rangos] + @{ast} [Atributo] - 5 + @{conjuracion_esp} [Otros])]]" disabled>
             -->
@@ -850,6 +861,56 @@ w
         {{/charname}} -->
     </div>
 </rolltemplate>
+
+
+<rolltemplate class="sheet-rolltemplate-conj">
+    <div class="container">
+        <div class="result">
+                {{#rollLess() r1 r2}}
+                    <div class="adv">
+                        <span class="grey">{{r1}}</span>
+                    </div>
+                    <div class="advspacer"></div>
+                    <div class="adv">
+                        <span>{{r2}}</span>
+                    </div>
+                {{/rollLess() r1 r2}}
+                {{#rollTotal() r1 r2}}
+                    <div class="adv">
+                        <span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                    </div>
+                    <div class="advspacer"></div>
+                    <div class="adv">
+                        <span class="green">{{r2}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                    </div>
+                {{/rollTotal() r1 r2}}
+                {{#rollGreater() r1 r2}}
+                    <div class="adv">
+                        <span>{{r1}}</span>
+                    </div>
+                    <div class="advspacer"></div>
+                    <div class="adv">
+                        <span class="grey">{{r2}}</span>
+                    </div>
+                {{/rollGreater() r1 r2}}
+        </div>
+     
+        <div class="label">
+            <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
+        </div>
+        {{#defensa}}
+            <div class="label">
+                <span>{{defensa}}</span>
+            </div>
+        {{/defensa}}
+        <!-- {{#charname}}
+            <div class="charname">
+                <span>{{charname}}</span>
+            </div>
+        {{/charname}} -->
+    </div>
+</rolltemplate>
+
 
 <rolltemplate class="sheet-rolltemplate-tres">
     <div class="container">
