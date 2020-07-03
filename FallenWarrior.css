@@ -87,6 +87,7 @@ span.sheet-dee {
 }
 
 .sheet-rolltemplate-simple,
+.sheet-rolltemplate-conj,
 .sheet-rolltemplate-tres,
 .sheet-rolltemplate-tresd,
 .sheet-rolltemplate-dmg
@@ -95,6 +96,7 @@ span.sheet-dee {
 }
 
 .sheet-rolltemplate-simple .sheet-container,
+.sheet-rolltemplate-conj .sheet-container,
 .sheet-rolltemplate-tres .sheet-container,
 .sheet-rolltemplate-tresd .sheet-container,
 .sheet-rolltemplate-dmg .sheet-container
@@ -106,6 +108,7 @@ span.sheet-dee {
 }
 
 .sheet-rolltemplate-simple .sheet-container,
+.sheet-rolltemplate-conj .sheet-container,
 .sheet-rolltemplate-tres .sheet-container,
 .sheet-rolltemplate-tresd .sheet-container,
 .sheet-rolltemplate-dmg .sheet-container
@@ -113,7 +116,8 @@ span.sheet-dee {
     border-radius: 10px;
 }
 
-.sheet-rolltemplate-simple .sheet-adv
+.sheet-rolltemplate-simple .sheet-adv,
+.sheet-rolltemplate-conj .sheet-adv
 {
     display       : inline-block;
     margin-top    : 1em;
@@ -141,6 +145,7 @@ span.sheet-dee {
 }
 
 .sheet-rolltemplate-simple .sheet-adv:first-child,
+.sheet-rolltemplate-conj .sheet-adv:first-child,
 .sheet-rolltemplate-dmg .sheet-adv:first-child
 {
     margin-left: 0.2em;
@@ -151,7 +156,8 @@ span.sheet-dee {
     margin-left: 0.4em;
 }
 
-.sheet-rolltemplate-simple .sheet-adv:nth-child(3)
+.sheet-rolltemplate-simple .sheet-adv:nth-child(3),
+.sheet-rolltemplate-conj .sheet-adv:nth-child(3)
 {
     margin-right: 8px;
     margin-left: -3px;
@@ -165,6 +171,8 @@ span.sheet-dee {
 
 .sheet-rolltemplate-simple .sheet-adv span,
 .sheet-rolltemplate-simple .sheet-solo span,
+.sheet-rolltemplate-conj .sheet-adv span,
+.sheet-rolltemplate-conj .sheet-solo span,
 .sheet-rolltemplate-tres .sheet-adv span,
 .sheet-rolltemplate-tres .sheet-solo span,
 .sheet-rolltemplate-tresd .sheet-adv span,
@@ -179,6 +187,7 @@ span.sheet-dee {
 }
 
 .sheet-rolltemplate-simple .sheet-advspacer,
+.sheet-rolltemplate-conj .sheet-advspacer,
 .sheet-rolltemplate-tres .sheet-advspacer,
 .sheet-rolltemplate-tresd .sheet-advspacer,
 .sheet-rolltemplate-dmg .sheet-advspacer
@@ -201,6 +210,7 @@ span.sheet-dee {
 }
 
 .sheet-rolltemplate-simple .sheet-solo,
+.sheet-rolltemplate-conj .sheet-solo,
 .sheet-rolltemplate-tres .sheet-solo,
 .sheet-rolltemplate-tresd .sheet-solo,
 .sheet-rolltemplate-dmg .sheet-solo
@@ -212,6 +222,7 @@ span.sheet-dee {
 }
 
 .sheet-rolltemplate-simple span,
+.sheet-rolltemplate-conj span,
 .sheet-rolltemplate-triple span,
 .sheet-rolltemplate-dmg span
 {
@@ -222,6 +233,7 @@ span.sheet-dee {
 }
 
 .sheet-rolltemplate-simple .sheet-label,
+.sheet-rolltemplate-conj .sheet-label,
 .sheet-rolltemplate-tres .sheet-label,
 .sheet-rolltemplate-tresd .sheet-label,
 .sheet-rolltemplate-dmg .sheet-label
@@ -232,6 +244,7 @@ span.sheet-dee {
 }
 
 .sheet-rolltemplate-simple .sheet-label span span,
+.sheet-rolltemplate-conj .sheet-label span span,
 .sheet-rolltemplate-tres .sheet-label span span,
 .sheet-rolltemplate-tresd .sheet-label span span,
 .sheet-rolltemplate-dmg .sheet-label span span
@@ -245,6 +258,8 @@ span.sheet-dee {
 
 .sheet-rolltemplate-simple .sheet-grey,
 .sheet-rolltemplate-simple .sheet-label span span,
+.sheet-rolltemplate-conj .sheet-grey,
+.sheet-rolltemplate-conj .sheet-label span span,
 .sheet-rolltemplate-tres .sheet-grey,
 .sheet-rolltemplate-tres .sheet-label span span,
 .sheet-rolltemplate-tresd .sheet-grey,
@@ -258,6 +273,7 @@ span.sheet-dee {
 }
 
 .sheet-rolltemplate-simple .sheet-green,
+.sheet-rolltemplate-conj .sheet-green,
 .sheet-rolltemplate-tres .sheet-green,
 .sheet-rolltemplate-tresd .sheet-green
 {
