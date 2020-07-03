@@ -393,7 +393,7 @@
         <!-- <span>Habilidad (atributo)/ Rangos / Mod. Especial / Hab. Final + Roll</span> -->
         <p></p>
         <span>
-            <button name="roll_alerta" type="roll" value="&{template:@{plantilla}} {{rname=Alerta}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r2=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r3=[[(@{r3}+@{hab_alerta})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_alerta" type="roll" value="&{template:@{plantilla}} {{rname=Alerta}}  {{estrategia=Estrategia @{est}}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r2=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r3=[[(@{r3}+@{hab_alerta})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
             <span>Alerta (Ast)</span> <input name="attr_rang_alerta" type="number" value="0" />
             <input name="attr_hab_alerta" type="number" value="0">
             </span>
@@ -855,6 +855,11 @@
                 <span>{{ataque}}</span>
             </div>
         {{/ataque}}
+        {{#estrategia}}
+            <div class="label">
+                <span>{{estrategia}}</span>
+            </div>
+        {{/estrategia}}
         {{#defensa}}
             <div class="label">
                 <span>{{defensa}}</span>
@@ -1071,6 +1076,11 @@
                         <span>{{ataque}}</span>
                     </div>
                 {{/ataque}}
+                {{#estrategia}}
+                <div class="label">
+                    <span>{{estrategia}}</span>
+                </div>
+                {{/estrategia}}
                 {{#defensa}}
                     <div class="label">
                         <span>{{defensa}}</span>
@@ -1225,6 +1235,11 @@
                 <span>{{ataque}}</span>
             </div>
         {{/ataque}}
+        {{#estrategia}}
+        <div class="label">
+            <span>{{estrategia}}</span>
+        </div>
+        {{/estrategia}}        
         {{#defensa}}
             <div class="label">
                 <span>{{defensa}}</span>
