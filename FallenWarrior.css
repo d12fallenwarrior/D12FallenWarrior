@@ -213,7 +213,7 @@ span.sheet-dee {
 .sheet-rolltemplate-conj .sheet-solo,
 .sheet-rolltemplate-tres .sheet-solo,
 .sheet-rolltemplate-tresd .sheet-solo,
-.sheet-rolltemplate-dmg .sheet-solo
+.sheet-rolltemplate-dmg .sheet-solo{
     height        : auto;
     padding-bottom: 0.5em;
     padding-top   : 1em;
@@ -296,6 +296,21 @@ span.sheet-dee {
 
 .sheet-tipotiradas input {
     max-width: 1em;
+}
+
+.sheet-atributos {
+    float: left;
+    width: 30%;
+    height: 17em;
+}
+
+.sheet-caracteristicas{
+    width: 100%;
+    height: 17em;
+}
+
+h1 {
+    margin-bottom: 1em;
 }
 
 
