@@ -289,6 +289,17 @@ span.sheet-dee {
     display: none;
 }
 
+.sheet-logo{
+    display: inline-block;
+    height: 110%;
+}
+
+.sheet-cabecera{
+    width: 80%;
+    float: right;
+}
+
+
 .sheet-tipotiradas {
     display: inline-block;
     margin-right: 1em;
