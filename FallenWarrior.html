@@ -132,9 +132,9 @@
     <!-- <h4>MAGIA</h4> -->
     <div class="2colrow">
         <div class="col">
-            <button name="roll_conjuracion" type="roll" value="&{template:conj} {{rname=Conjuración}} {{poder=@{poder}}} {{mod=@{conjuracion}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
-            <select name="attr_poder" type="text" style="width: 40px;">
-                <option value="1">1</option>
+            <button name="roll_conjuracion" type="roll" value="&{template:conj} {{rname=Conjuración}} {{poder=@{poder}}} {{eter=@{eter}}} {{mod=@{conjuracion}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
+            <select name="attr_poder" type="text" style="width: 50px;">
+                <option value="1" selected="selected">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
@@ -152,12 +152,12 @@
         </div>
         <div class="col">
             <span>Éter predilecto</span>
-            <select name="attr_eterpredilecto" type="text" style="width: 100px;">
-                <option value="Fuego">Fuego</option>
-                <option value="Agua">Agua</option>
-                <option value="Aire">Aire</option>
-                <option value="Tierra">Tierra</option>
-                <option value="Oscuro">Oscuro</option>
+            <select name="attr_eter" type="text" style="width: 100px;">
+                <option value="de fuego" selected="selected">Fuego</option>
+                <option value="de agua">Agua</option>
+                <option value="de aire">Aire</option>
+                <option value="de tierra">Tierra</option>
+                <option value="oscuro">Oscuro</option>
             </select>
         </div>
     </div>
@@ -898,11 +898,11 @@ w
         <div class="label">
             <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
         </div>
-        {{#defensa}}
-            <div class="label">
-                <span>{{defensa}}</span>
+        {{#eter}}
+            <div class="label">         
+                <span>Éter {{eter}}</span>
             </div>
-        {{/defensa}}
+        {{/eter}}
         <!-- {{#charname}}
             <div class="charname">
                 <span>{{charname}}</span>
