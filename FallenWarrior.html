@@ -124,12 +124,13 @@
 </div>
 
 <!--SECCIÓN COMBATE-->
+<div>
 <p></p>
 <h1>COMBATE</h1>
 <textarea></textarea>
 <p></p>
 <!--SECCIÓN DAÑO-->
-<div>
+
     <div class="3colrow">
         <div class="col">
             <span>Cansancio</span> <input type="number" name="cansancio" value="0" />
@@ -232,8 +233,8 @@
     <h4>ARMAS CUERPO A CUERPO</h4>
     <div>
         <fieldset class="repeating_armamelee"> 
-            <div class="2colrow">
-                <div class="col">
+            <div>
+                <div class="ataques">
                     <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{melee_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Can @{melee_can} &nbsp&nbsp&nbsp&nbsp&nbsp DV @{melee_dv}}} {{rname=Ataque}} {{mod=@{melee_ataque}}} {{arma=@{melee_nombrearma}}} {{r1=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r2=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r3=[[(@{r3}+@{melee_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <input name="attr_melee_nombrearma" type="text" style="width: 150px;" />
                     <!-- <select name="attr_melee_tipoarma" style="width: 20px;"> 
@@ -267,7 +268,7 @@
                     <input type="text">
                     <!-- <p> Leyenda de recuadros: Roll / Nombre Arma / Hab. Final / Mod. Especial / Tipología (rangos) / Tipo de daño / Daño / Daño extra (pinchos y cosas asi) Daño Vital / Cansancio / Alcance / Especial </p> -->
                 </div>
-                <div class="col">
+                <div class="desvios">
                     <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{defensa=pro @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp ref @{refuerzo} &nbsp&nbsp&nbsp&nbsp&nbsp Can 2}} {{rname=Desvío}} {{arma=@{melee_nombrearma}}} {{mod=@{melee_desvio}}} {{r1=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r2=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r3=[[(@{r3}+@{melee_desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <span>Desvío</span>
                     <input name="attr_melee_desvio" type="number" value="0" />
@@ -281,8 +282,8 @@
     <h4>ARMAS A DISTANCIA</h4>
     <div>
         <fieldset class="repeating_armadistancia"> 
-            <div class="2colrow">
-                <div class="col">
+            <div>
+                <div class="ataques">
                     <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{dist_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Can @{dist_can} &nbsp&nbsp&nbsp&nbsp&nbsp DV @{dist_dv}}} {{rname=Ataque}} {{arma=@{dist_nombrearma}}} {{mod=@{dist_ataque}}} {{r1=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r2=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r3=[[(@{r3}+@{dist_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <input name="attr_dist_nombrearma" type="text" style="width: 150px;" />
                     <!-- <select name="attr_dist_tipoarma" style="width: 20px;"> 
@@ -315,7 +316,7 @@
                     <input type="text">
                     <!-- <p> Leyenda de recuadros: Roll / Nombre Arma / Hab. Final / Mod. Especial / Tipología (rangos) / Tipo de daño / Daño / Daño extra (pinchos y cosas asi) Daño Vital / Cansancio / Alcance / Especial </p> -->
                 </div>
-                <div class="col">
+                <div class="desvios">
                     <span>Munición</span> <input name="attr_dist_municion" type="number"> / <input name="attr_dist_municion_max" type="number" value="0">
                 </div>
             </div> 
@@ -324,8 +325,8 @@
     <p></p>
     <h4>ATAQUE SIN ARMAS</h4>
     <div>
-            <div class="2colrow">
-                <div class="col">
+            <div>
+                <div class="ataques">
                    
                     <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{sinarmas_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Can @{sinarmas_can} &nbsp&nbsp&nbsp&nbsp&nbsp DV @{sinarmas_dv}}} {{rname=Ataque sin armas}} {{mod=@{sinarmas_ataque}}} {{r1=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r3=[[(@{r3}+@{sinarmas_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <input name="attr_sinarmas_ataque" type="number" value="0">
@@ -340,7 +341,7 @@
                     <input type="text">
                     <!-- <p> Roll / Hab. Final / Mod. Especial / Tipo de daño / Daño / Daño Vital / Cansancio / Alcance / Especial </p> -->
                 </div>
-                <div class="col">
+                <div class="desvios">
                     <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{rname=Desvío sin armas}} {{defensa=pro @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp ref @{refuerzo} &nbsp&nbsp&nbsp&nbsp&nbsp Can 2}} {{mod=@{sinarmas_desvio}}} {{r1=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r3=[[(@{r3}+@{sinarmas_desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <span>Desvío sin armas</span>
                     <input name="attr_sinarmas_desvio" type="number" value="0" />
