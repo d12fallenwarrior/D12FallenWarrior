@@ -347,6 +347,11 @@ h1 {
     text-align: center;
 }
 
+.sheet-negrita
+{
+    font-weight: bold;
+}
+
 .sheet-ataques{
     float: left;
     width: 75%;
