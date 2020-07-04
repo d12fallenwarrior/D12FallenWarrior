@@ -28,12 +28,14 @@
     </div>
 </div>
 <br></br>
+<div class="arrow-right"></div>
+<br></br>
 
 <!-- SECCIÓN ATRIBUTOS Y CARACTERÍSTICAS SECUNDARIAS -->
 <div>
     <!-- Atributos -->
     <div class="atributos">
-        <table>
+        <table style="margin: 0 auto;">
             <tbody>
                 <tr>
                     <h1>ATRIBUTOS</h1>
@@ -78,7 +80,9 @@
     <div class="caracteristicas">
         <h1>CARACTERÍSTICAS SECUNDARIAS</h1>
         <!-- <p>Característica / Fórmula / Mod. Especial / Valor final + Roll</p> -->
-        <div>
+        <br></br>
+        
+        <div class="centrado">
             
                 <button name="roll_reflejos" type="roll" value="&{template:@{plantilla}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cs0cf0+@{ref})]]}} {{r2=[[(1d12cs0cf0+@{ref})]]}} {{r3=[[(@{r3}+@{ref})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                 <span>Reflejos</span> 
@@ -99,21 +103,28 @@
                 <input name="attr_vol" type="number" value="[[(@{int} [Int] + @{ast} [Ast] - 5 + @{vol_esp} [Otros])]]" disabled> -->
                 
         </div>
+        <br></br>
         <p></p>
         <div>
-            <table>
+            <table style="margin: 0 auto;">
                 <tbody>
-                    <tr>
-            
+                    <tr>         
                         <td><span>Estrategia</span></td> <!-- <input name="attr_est_esp" type="number" value="0"> -->
+                        <td>&nbsp;&nbsp;</td>
                         <td><input name="attr_est" type="number" value="0"><!-- <input name="attr_est" type="number" value="[[(@{int} [Int] + @{ast} [Ast] + @{est_esp} [Otros])]]" disabled> --></td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                         <td><span>Espíritu</span></td> <!-- <input name="attr_esp_esp" type="number" value="0"> -->
+                        <td>&nbsp;&nbsp;</td>
                         <td><input name="attr_esp" type="number" value="0"> <!-- <input name="attr_esp" type="number" value="[[(@{res} [Res] + @{int} [Int] + @{esp_esp} [Otros])]]" disabled> --></td>
                     </tr>
+                    
                     <tr>
                         <td><span>Energía</span></td> <!-- <input name="attr_ene_esp" type="number" value="0"> -->
+                        <td>&nbsp;&nbsp;</td>
                         <td> <input name="attr_ene" type="number" value="0"> <!-- <input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled> --></td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                         <td><span>Herida</span></td> <!-- <input name="attr_her_esp" type="number" value="0"> -->
+                        <td>&nbsp;&nbsp;</td>
                         <td><input name="attr_her" type="number" value="0"> <!-- <input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled> --></td> 
                     </tr>
                 </tbody>
@@ -124,10 +135,13 @@
 </div>
 
 <!--SECCIÓN COMBATE-->
+
+<div class="arrow-left"></div>
+<br></br>
+
 <div>
-<p></p>
 <h1>COMBATE</h1>
-<textarea></textarea>
+<textarea style="height: 60px;"></textarea>
 <p></p>
 <!--SECCIÓN DAÑO-->
 
@@ -143,6 +157,7 @@
         </div>     
     </div>
 <!--SECCIÓN MAGOS-->
+<br></br>
 <div>
     <!-- <h4>MAGIA</h4> -->
     <div class="2colrow">
@@ -178,34 +193,34 @@
     </div>
     <div class="3colrow">
         <div class="col">
-            <button name="roll_intensidad" type="roll" value="&{template:@{plantilla}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_intensidad" type="roll" value="&{template:@{plantilla}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{conjuro=Intensidad}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
        
-            <span>Intensidad (Int)</span> <input name="attr_intensidad" type="number" value="0">
+            <span>Intensidad</span> <input name="attr_intensidad" type="number" value="0">
             <!-- <input name="attr_intensidad" type="number" value="[[(@{rang_intensidad} [Rangos] @{int} [Atributo] - 5 + @{intensidad_esp} [Otros])]]" disabled>
             -->
              </div>
         <div class="col">
-            <button name="roll_disparo" type="roll" value="&{template:@{plantilla}} {{rname=Disparo}} {{mod=@{disparo}}} {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_disparo" type="roll" value="&{template:@{plantilla}} {{rname=Disparo}} {{mod=@{disparo}}} {{conjuro=Disparo}} {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
        
-            <span>Disparo (Ast)</span> <input name="attr_disparo" type="number" value="0">
+            <span>Disparo</span> <input name="attr_disparo" type="number" value="0">
             <!-- <input name="attr_disparo" type="number" value="[[(@{rang_disparo} [Rangos] + @{ast} [Atributo] - 5 + @{disparo_esp} [Otros])]]" disabled>
             -->
              </div>
         <div class="col">
-            <button name="roll_dominio" type="roll" value="&{template:@{plantilla}} {{rname=Dominio}} {{mod=@{dominio}}} {{r1=[[(1d12cs0cf0+@{dominio})]]}} {{r2=[[(1d12cs0cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_dominio" type="roll" value="&{template:@{plantilla}} {{rname=Dominio}} {{mod=@{dominio}}} {{conjuro=Dominio}} {{r1=[[(1d12cs0cf0+@{dominio})]]}} {{r2=[[(1d12cs0cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
     
-            <span>Dominio (Int)</span> <input name="attr_dominio" type="number" value="0">
+            <span>Dominio</span> <input name="attr_dominio" type="number" value="0">
             <!-- <input name="attr_dominio" type="number" value="[[(@{rang_dominio} [Rangos] + @{int} [Atributo] - 5 + @{dominio_esp} [Otros])]]" disabled>
             -->
             </div>
 </div>
 <p></p>
-
+<br></br>
     <div class ="3colrow">
         <!-- <p>Habilidad (atributo)/ Rangos / Mod. Especial / Hab. Final + Roll </p> -->
         <div class="col">
             <button name="roll_esquiva" type="roll" value="&{template:@{plantilla}} {{rname=Esquiva}} {{defensa=pro @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp ref @{refuerzo} &nbsp&nbsp&nbsp&nbsp&nbsp Can 5}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(@{r3}+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-            Esquiva (Agi)
+            Esquiva
             <input name="attr_esquiva" type="number" value="0">
             <!-- <input name="attr_esquiva" type="number" value="[[(@{rang_esquiva} [Rangos] + @{agi} [Atributo] - 5 + @{esquiva_esp} [Otros])]]" disabled>
             -->
@@ -213,7 +228,7 @@
         <div class="col">
             <button name="roll_bloqueo" type="roll" value="&{template:@{plantilla}} {{rname=Bloqueo}} {{defensa=pro @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp ref @{refuerzo} &nbsp&nbsp&nbsp&nbsp&nbsp Can 0}} {{mod=@{bloqueo}}} {{r1=[[(1d12cs0cf0+@{bloqueo})]]}} {{r2=[[(1d12cs0cf0+@{bloqueo})]]}} {{r3=[[(@{r3}+@{bloqueo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
         
-            Bloqueo (Des)   
+            Bloqueo  
             <input name="attr_bloqueo" type="number" value="0">
             <!-- <input name="attr_bloqueo" type="number" value="[[(@{rang_bloqueo} [Rangos] + @{des} [Atributo] - 5 + @{bloqueo_esp} [Otros])]]" disabled>
             -->
@@ -221,21 +236,24 @@
         <div class="col">
             <button name="roll_pelea" type="roll" value="&{template:@{plantilla}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
         
-            Pelea (Fue)
+            Pelea
             <input name="attr_pelea" type="number" value="0">
             <!-- <input name="attr_pelea" type="number" value="[[(@{rang_pelea} [Rangos] + @{fue} [Atributo] - 5 + @{pelea_esp} [Otros])]]" disabled>
             -->
             </div>
     </div>
  
-    <p></p>
+    <br></br>
+    <div class="arrow-right"></div>
+    <br></br>
     <!--Armas Melee-->
     <h4>ARMAS CUERPO A CUERPO</h4>
     <div>
         <fieldset class="repeating_armamelee"> 
             <div>
+                
                 <div class="ataques">
-                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{melee_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Can @{melee_can} &nbsp&nbsp&nbsp&nbsp&nbsp DV @{melee_dv}}} {{rname=Ataque}} {{mod=@{melee_ataque}}} {{arma=@{melee_nombrearma}}} {{r1=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r2=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r3=[[(@{r3}+@{melee_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{melee_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Can @{melee_can} &nbsp&nbsp&nbsp&nbsp&nbsp DV @{melee_dv}}} {{rname=Ataque}} {{mod=@{melee_ataque}}} {{arma=@{melee_nombrearma}}} {{r1=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r2=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r3=[[(@{r3}+@{melee_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
                     <input name="attr_melee_nombrearma" type="text" style="width: 150px;" />
                     <!-- <select name="attr_melee_tipoarma" style="width: 20px;"> 
                         <option value="@{rang_espada}">Espada</option>
@@ -244,31 +262,72 @@
                         <option value="@{rang_armasasta}">Arma de asta</option>
                         <option value="@{rang_hachaypico}">Hacha y Pico</option>
                     </select> -->
-                    <input name="attr_melee_ataque" type="number" value="0">
+                    <br></br>
+                <table>
+                    <tbody>
+                        <tr>
+                            
+                            <td class="centrado"><input name="attr_melee_ataque" type="number" value="0"></td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
                     <!-- <input name="attr_melee_ataque" type="number" value="[[(@{melee_tipoarma} [Rangos] + @{des} [Des] - 5 + @{melee_ataque_esp} [Otros])]]" style="width: 50px;" disabled>
                     <input name="attr_melee_ataque_esp" type="number" value="0">
                     -->
 
                     <!--Daño-->
-                    <!-- <button name="roll_melee_damage" type="roll" value="&{template:dmg} {{rname=Daño}} {{arma=@{melee_nombrearma}}} {{r1=[[1d12cs0cf0 + @{melee_dmg} [Daño base] + @{melee_dv} [Daño Vital] + @{melee_dmg_esp}cs0cf0 [Otros] ]]}} {{charname=@{character_name}}}"> Daño</button> -->
-                    <select name="attr_melee_tipodmg" style="width: 40px;">
+                    <!-- <button name="roll_melee_damage" type="roll" value="&{template:dmg} {{rname=Daño}} {{arma=@{melee_nombrearma}}} {{r1=[[1d12cs0cf0 + @{melee_dmg} [Daño base] + @{melee_dv} [Daño Vital] + @{melee_dmg_esp}cs0cf0 [Otros] ]]}} {{charname=@{character_name}}}">Daño</button> -->
+                    
+                    <td class="centrado"><select name="attr_melee_tipodmg" style="width: 40px;">
                         <option value="P">P</option>
                         <option value="C">C</option>
                         <option value="T">T</option>
                     </select>
-                    <input name="attr_melee_dmg" type="number" value="0" />
-                    <input name="attr_melee_dv" type="number" value="0" />
-                    <input name="attr_melee_can" type="number" value="0" />
-                    <select name="attr_melee_alc" style="width: 40px;">
+                    <input name="attr_melee_dmg" type="number" value="0" /></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><input name="attr_melee_dv" type="number" value="0" /></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><input name="attr_melee_can" type="number" value="0" /></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><select name="attr_melee_alc" style="width: 40px;">
                         <option value="-">-</option>
                         <option value="I">I</option>
                         <option value="II">II</option>
                         <option value="III">III</option>
-                    </select>
-                    <input type="text">
+                    </select></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><input type="text"></td>
                     <!-- <p> Leyenda de recuadros: Roll / Nombre Arma / Hab. Final / Mod. Especial / Tipología (rangos) / Tipo de daño / Daño / Daño extra (pinchos y cosas asi) Daño Vital / Cansancio / Alcance / Especial </p> -->
+                        </tr>
+
+                        <tr>
+                            <td class="centrado"><span>Bonificador</span></td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+
+                            <td class="centrado"><span>Daño</span></td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+
+                            <td class="centrado"><span>DV</span></td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+
+                            <td class="centrado"><span>Can</span></td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+
+                            <td class="centrado"><span>Alc</span></td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+                    
+                            <td class="centrado"><span>Especial</span></td>
+                            
+                        </tr>
+                   </tbody>
+                </table>
+                        
+                        
                 </div>
                 <div class="desvios">
+                    <br></br>
                     <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{defensa=pro @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp ref @{refuerzo} &nbsp&nbsp&nbsp&nbsp&nbsp Can 2}} {{rname=Desvío}} {{arma=@{melee_nombrearma}}} {{mod=@{melee_desvio}}} {{r1=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r2=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r3=[[(@{r3}+@{melee_desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <span>Desvío</span>
                     <input name="attr_melee_desvio" type="number" value="0" />
@@ -279,10 +338,12 @@
           </fieldset>
     </div>
     <p></p>
+    <br></br>
     <h4>ARMAS A DISTANCIA</h4>
     <div>
         <fieldset class="repeating_armadistancia"> 
             <div>
+                
                 <div class="ataques">
                     <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{dist_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Can @{dist_can} &nbsp&nbsp&nbsp&nbsp&nbsp DV @{dist_dv}}} {{rname=Ataque}} {{arma=@{dist_nombrearma}}} {{mod=@{dist_ataque}}} {{r1=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r2=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r3=[[(@{r3}+@{dist_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <input name="attr_dist_nombrearma" type="text" style="width: 150px;" />
@@ -291,57 +352,136 @@
                         <option value="@{rang_ballesta}">Ballesta</option>
                         <option value="@{rang_armasfuego}">Armas de fuego</option>
                     </select> -->
-                    <input name="attr_dist_ataque" type="number" value="0">
+
+                    <br></br>
+                <table>
+                    <tbody>
+                        <tr>
+                            
+                            <td class="centrado"><input name="attr_dist_ataque" type="number" value="0"></td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
                     <!--
                     <input name="attr_dist_ataque" type="number" value="[[(@{dist_tipoarma} [Rangos] + @{des} [Des] - 5 + @{dist_ataque_esp} [Otros])]]" style="width: 50px;" disabled>
                     <input name="attr_dist_ataque_esp" type="number" value="0">
                       -->
                     <!--Daño-->
                     <!-- <button name="roll_dist_damage" type="roll" value="&{template:dmg} {{rname=Daño}} {{arma=@{dist_nombrearma}}} {{r1=[[1d12cs0cf0 + @{dist_dmg} [Daño base] + @{dist_dv} [Daño Vital] + @{dist_dmg_esp}cs0cf0 [Otros] ]]}} {{charname=@{character_name}}}"> Daño</button> -->
-                    <select name="attr_dist_tipodmg" style="width: 40px;">
+                    <td class="centrado"><select name="attr_dist_tipodmg" style="width: 40px;">
                         <option value="P">P</option>
                         <option value="C">C</option>
                         <option value="T">T</option>
                     </select>
-                    <input name="attr_dist_dmg" type="number" value="0" />
-                    <input name="attr_dist_dv" type="number" value="0" />
-                    <input name="attr_dist_can" type="number" value="0" />
-                    <select name="attr_dist_alc" style="width: 70px;">
+                    <input name="attr_dist_dmg" type="number" value="0" /></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><input name="attr_dist_dv" type="number" value="0" /></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><input name="attr_dist_can" type="number" value="0" /></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><select name="attr_dist_alc" style="width: 70px;">
                         <option value="-">melé</option>
                         <option value="I" selected="selected">corto</option>
                         <option value="II">medio</option>
                         <option value="III">largo</option>
                         <option value="III">muy largo</option>
-                    </select>
-                    <input type="text">
-                    <!-- <p> Leyenda de recuadros: Roll / Nombre Arma / Hab. Final / Mod. Especial / Tipología (rangos) / Tipo de daño / Daño / Daño extra (pinchos y cosas asi) Daño Vital / Cansancio / Alcance / Especial </p> -->
+                    </select></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><input type="text"></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="centrado"><span>Bonificador</span></td>
+                        <td>&nbsp;&nbsp;&nbsp;</td>
+
+                        <td class="centrado"><span>Daño</span></td>
+                        <td>&nbsp;&nbsp;&nbsp;</td>
+
+                        <td class="centrado"><span>DV</span></td>
+                        <td>&nbsp;&nbsp;&nbsp;</td>
+
+                        <td class="centrado"><span>Can</span></td>
+                        <td>&nbsp;&nbsp;&nbsp;</td>
+
+                        <td class="centrado"><span>Alc</span></td>
+                        <td>&nbsp;&nbsp;&nbsp;</td>
+                
+                        <td class="centrado"><span>Especial</span></td>
+                        
+                    </tr>
+                
+            </tbody>
+         </table>
+
                 </div>
                 <div class="desvios">
+                    <br></br>
                     <span>Munición</span> <input name="attr_dist_municion" type="number"> / <input name="attr_dist_municion_max" type="number" value="0">
                 </div>
             </div> 
           </fieldset>
     </div>
     <p></p>
+    <br></br>
     <h4>ATAQUE SIN ARMAS</h4>
     <div>
             <div>
                 <div class="ataques">
                    
                     <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{sinarmas_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Can @{sinarmas_can} &nbsp&nbsp&nbsp&nbsp&nbsp DV @{sinarmas_dv}}} {{rname=Ataque sin armas}} {{mod=@{sinarmas_ataque}}} {{r1=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r3=[[(@{r3}+@{sinarmas_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-                    <input name="attr_sinarmas_ataque" type="number" value="0">
+                    
+                    <br></br>
+                <table>
+                    <tbody>
+                        <tr>
+                            
+                            <td class="centrado"><input name="attr_sinarmas_ataque" type="number" value="0"></td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
                     <!-- <input name="attr_sinarmas_ataque" type="number" value="[[(@{rang_sinarmas} [Rangos] + @{des} [Des] - 5 + @{sinarmas_ataque_esp} [Otros])]]" style="width: 50px;" disabled>
                     <input name="attr_sinarmas_ataque_esp" type="number" value="0">
                     <button name="roll_sinarmas_damage" type="roll" value="&{template:dmg} {{rname=Daño sin arma}} {{r1=[[1d12cs0cf0 + @{sinarmas_dmg} [Daño base] + @{sinarmas_dv} [Daño Vital] + @{sinarmas_dmg_esp}cs0cf0 [Otros] ]]}} {{charname=@{character_name}}}"> Daño</button>
                     -->
-                    <span>T</span>
-                    <input name="attr_sinarmas_dmg" type="number" value="0" />
-                    <input name="attr_sinarmas_dv" type="number" value="0" />
-                    <input name="attr_sinarmas_can" type="number" value="0" />
-                    <input type="text">
-                    <!-- <p> Roll / Hab. Final / Mod. Especial / Tipo de daño / Daño / Daño Vital / Cansancio / Alcance / Especial </p> -->
+                    
+                    <td class="centrado"><span>T </span><input name="attr_sinarmas_dmg" type="number" value="0" /></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><input name="attr_sinarmas_dv" type="number" value="0" /></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><input name="attr_sinarmas_can" type="number" value="0" /></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><input type="text"></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                   </tr>
+
+                   <tr>
+                    <td class="centrado"><span>Bonificador</span></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><span>Daño</span></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><span>DV</span></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><span>Can</span></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                            
+                    <td class="centrado"><span>Especial</span></td>
+                    
+                </tr>
+
+                   </tbody>
+                </table>
                 </div>
                 <div class="desvios">
+                    <br></br>
                     <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{rname=Desvío sin armas}} {{defensa=pro @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp ref @{refuerzo} &nbsp&nbsp&nbsp&nbsp&nbsp Can 2}} {{mod=@{sinarmas_desvio}}} {{r1=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r3=[[(@{r3}+@{sinarmas_desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <span>Desvío sin armas</span>
                     <input name="attr_sinarmas_desvio" type="number" value="0" />
@@ -352,27 +492,106 @@
     </div>
 
     <p></p>
+    <br></br>
+    <br></br>
+    <div>
+        <table style="margin: 0 auto;">
+            <tbody>
+                <tr>
+                    <td><h4>ARMADURA</h4></td>
+                    <td>&nbsp;&nbsp;</td>
+        
+                    <td class="centrado"><span>Tipo</span></td>
+                    <td>&nbsp;&nbsp;</td>
+        
+                    <td class="centrado"><span>Protección</span></td>
+                    <td>&nbsp;&nbsp;</td>
+        
+                    <td class="centrado"><span>Refuerzo</span></td>
+                    <td>&nbsp;&nbsp;</td>
+        
+                    <td class="centrado"><span>Penalizador</span></td>
+                    <td>&nbsp;&nbsp;</td>
+        
+                    <td class="centrado"></td>
+                    <td>&nbsp;&nbsp;</td>
+        
+                    <td class="centrado"></td>
+                    <td>&nbsp;&nbsp;</td>
+            
+                    <td class="centrado"></td>
+                    
+                </tr>
+                <tr>
+                    
+                    <td class="centrado"><input name="attr_nombrearmadura" type="text"/></td>
+                    <td>&nbsp;&nbsp;</td>
 
-    <div class="armadura">
-        <h4>ARMADURA</h4>
-            <input name="attr_nombrearmadura" type="text"/> 
-            <select name="tipoarmadura" style="width: 75px;">
+            <td class="centrado"><select name="tipoarmadura" style="width: 75px;">
                 <option value="Ligera">Ligera</option>
                 <option value="Intermedia">Intermedia</option>
                 <option value="Pesada">Pesada</option>
-            </select>
-            <input name="attr_proteccion" type="number" value="0">
-            <input name="attr_refuerzo" type="number" value="0">
-            <input name="attr_pen_energia" type="number" value="0">
-            <input name="attr_pen_destreza" type="number" value="0">
-            <input name="attr_pen_sigilo" type="number" value="0">
-            <input name="attr_pen_porcarga" type="number" value="[[(@{penarm})]]" disabled>
+            </select></td>
+            <td>&nbsp;&nbsp;</td>
+
+            <td class="centrado"><input name="attr_proteccion" type="number" value="0"></td>
+            <td>&nbsp;&nbsp;</td>
+
+            <td class="centrado"><input name="attr_refuerzo" type="number" value="0"></td>
+            <td>&nbsp;&nbsp;</td>
+
+            <td class="centrado"><input name="attr_pen_energia" type="number" value="0"></td>
+            <td>&nbsp;&nbsp;</td>
+
+            <td class="centrado"><input name="attr_pen_destreza" type="number" value="0"></td>
+            <td>&nbsp;&nbsp;</td>
+
+            <td class="centrado"><input name="attr_pen_sigilo" type="number" value="0"></td>
+            <td>&nbsp;&nbsp;</td>
+
+            <td class="centrado"><input name="attr_pen_porcarga" type="number" value="[[(@{penarm})]]" disabled></td>
+            <td>&nbsp;&nbsp;</td>
+
+        </tr>
+
+        <tr>
+            <td class="centrado"></td>
+            <td>&nbsp;&nbsp;</td>
+
+            <td class="centrado"></td>
+            <td>&nbsp;&nbsp;</td>
+
+            <td class="centrado"></td>
+            <td>&nbsp;&nbsp;</td>
+
+            <td class="centrado"><span>-Daño</span></td>
+            <td>&nbsp;&nbsp;</td>
+
+            <td class="centrado"><span>Energía</span></td>
+            <td>&nbsp;&nbsp;</td>
+
+            <td class="centrado"><span>Destreza</span></td>
+            <td>&nbsp;&nbsp;</td>
+
+            <td class="centrado"><span>Sigilo</span></td>
+            <td>&nbsp;&nbsp;</td>
+    
+            <td class="centrado"><span>Por carga</span></td>
+            
+        </tr>
+    
+        </tbody>
+    </table>
             <!-- <input name="attr_especial"> -->
             <!-- <p>Nombre armadura / Tipo / Protección / Refuerzo / Pen. energia / Pen. des / Pen. sigilo / Pen. carga / Especial</p> -->
     </div>
 </div>
 
 <!--SECCIÓN HABILIDADES-->
+<br></br>
+<div class="arrow-left"></div>
+<br></br>
+
 <h1>HABILIDADES</h1>
 <!--Algunas habilidades tienen dos atributos y cogen el mayor:  Empatía: ast/int, Sanar: des/int, Seguridad: des/int. Defino esos máximos aquí y esto se edita con la API-->
 <div class="3colrow">
@@ -850,7 +1069,7 @@
             </div>
         {{/rollTotal() r1 r2}}
         -->
-
+        <div class="arrow-right"></div>
         <div class="label">
             <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
         </div>
@@ -860,12 +1079,23 @@
             </div>
         {{/arma}}
         {{#ataque}}
+        <div class="arrow-left"></div>            
             <div class="label">
-                <span>{{ataque}}</span>
+                <span>{{ataque}} </span>
+            </div>
+            <div class="label">
+                [Daño Extra](!&#13;#Daño)
             </div>
         {{/ataque}}
+        {{#conjuro}}
+        <div class="arrow-left"></div>
+           <div class="label">
+                [Daño Extra](!&#13;#Daño)
+            </div>
+        {{/conjuro}}
         {{#estrategia}}
-            <div class="label">
+        <div class="arrow-left"></div>
+        <div class="label">
                 <span>{{estrategia}}</span>
             </div>
         {{/estrategia}}
@@ -874,6 +1104,7 @@
                 <span>{{defensa}}</span>
             </div>
         {{/defensa}}
+               
         <!-- {{#charname}}
             <div class="charname">
                 <span>{{charname}}</span>
@@ -914,12 +1145,14 @@
                     </div>
                 {{/rollGreater() r1 r2}}
         </div>
-     
+
+        <div class="arrow-right"></div>        
         <div class="label">
             <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
         </div>
         {{#eter}}
-            <div class="label">         
+        <div class="arrow-left"></div>
+        <div class="label">         
                 <span>Éter {{eter}}</span>
             </div>
         {{/eter}}
@@ -1270,23 +1503,13 @@
         <div class="result">
             <div class="adv"><span>{{r1}}</span></div>
         </div>
-        {{#arma}} 
-            <div class="arrow-right"></div>
-            <div class="label">
-                <span>{{arma}}</span>
-            </div>
-            <div class="arrow-left"></div>
-        {{/arma}}
-        
+         
+        <div class="arrow-right"></div>
         <div class="label">
             <span>{{rname}}</span>
-        </div>
-        {{#charname}}
-        <div class="charname">
-                <span>{{charname}}</span>
-        </div>
-        {{/charname}}
+        </div> 
     </div>
+    
 </rolltemplate>
 
 
