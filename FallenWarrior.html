@@ -249,13 +249,13 @@
     <div class ="3colrow">
         <!-- <p>Habilidad (atributo)/ Rangos / Mod. Especial / Hab. Final + Roll </p> -->
         <div class="col">
-            <button name="roll_esquiva" type="roll" value="&{template:@{plantilla}} {{rname=Esquiva}} {{defensa=pro @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp ref @{refuerzo} &nbsp&nbsp&nbsp&nbsp&nbsp Can 5}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(@{r3}+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Esquiva</button>
+            <button name="roll_esquiva" type="roll" value="&{template:@{plantilla}} {{rname=Esquiva}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(@{r3}+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Esquiva</button>
             <input name="attr_esquiva" type="number" value="0">
             <!-- <input name="attr_esquiva" type="number" value="[[(@{rang_esquiva} [Rangos] + @{agi} [Atributo] - 5 + @{esquiva_esp} [Otros])]]" disabled>
             -->
             </div>
         <div class="col">
-            <button name="roll_bloqueo" type="roll" value="&{template:@{plantilla}} {{rname=Bloqueo}} {{defensa=pro @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp ref @{refuerzo} &nbsp&nbsp&nbsp&nbsp&nbsp Can 0}} {{mod=@{bloqueo}}} {{r1=[[(1d12cs0cf0+@{bloqueo})]]}} {{r2=[[(1d12cs0cf0+@{bloqueo})]]}} {{r3=[[(@{r3}+@{bloqueo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Bloqueo</button>    
+            <button name="roll_bloqueo" type="roll" value="&{template:@{plantilla}} {{rname=Bloqueo}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{mod=@{bloqueo}}} {{r1=[[(1d12cs0cf0+@{bloqueo})]]}} {{r2=[[(1d12cs0cf0+@{bloqueo})]]}} {{r3=[[(@{r3}+@{bloqueo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Bloqueo</button>    
             <input name="attr_bloqueo" type="number" value="0">
             <!-- <input name="attr_bloqueo" type="number" value="[[(@{rang_bloqueo} [Rangos] + @{des} [Atributo] - 5 + @{bloqueo_esp} [Otros])]]" disabled>
             -->
@@ -280,7 +280,7 @@
         <fieldset class="repeating_armamelee"> 
                 
                 <div class="ataques">
-                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{melee_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Can @{melee_can} &nbsp&nbsp&nbsp&nbsp&nbsp DV @{melee_dv}}} {{rname=Ataque}} {{mod=@{melee_ataque}}} {{arma=@{melee_nombrearma}}} {{r1=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r2=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r3=[[(@{r3}+@{melee_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> At. cuerpo a cuerpo</button>
+                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{melee_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{melee_can}}} {{rname=Ataque}} {{mod=@{melee_ataque}}} {{arma=@{melee_nombrearma}}} {{r1=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r2=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r3=[[(@{r3}+@{melee_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> At. cuerpo a cuerpo</button>
                     <input name="attr_melee_nombrearma" type="text" style="width: 150px;" />
                  
                     <!-- <select name="attr_melee_tipoarma" style="width: 20px;"> 
@@ -349,7 +349,7 @@
                 </div>
                 <div class="desvios">
                     
-                    <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{defensa=pro @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp ref @{refuerzo} &nbsp&nbsp&nbsp&nbsp&nbsp Can 2}} {{rname=Desvío}} {{arma=@{melee_nombrearma}}} {{mod=@{melee_desvio}}} {{r1=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r2=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r3=[[(@{r3}+@{melee_desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío</button>
+                    <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{rname=Desvío}} {{arma=@{melee_nombrearma}}} {{mod=@{melee_desvio}}} {{r1=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r2=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r3=[[(@{r3}+@{melee_desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío</button>
                     <input name="attr_melee_desvio" type="number" value="0" />
                                
                 </div>
@@ -362,7 +362,7 @@
         <fieldset class="repeating_armadistancia"> 
             <div>
                 <div class="ataques">
-                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{dist_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Can @{dist_can} &nbsp&nbsp&nbsp&nbsp&nbsp DV @{dist_dv}}} {{rname=Ataque}} {{arma=@{dist_nombrearma}}} {{mod=@{dist_ataque}}} {{r1=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r2=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r3=[[(@{r3}+@{dist_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > At. a distancia</button>
+                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{dist_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{dist_can}}} {{rname=Ataque}} {{arma=@{dist_nombrearma}}} {{mod=@{dist_ataque}}} {{r1=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r2=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r3=[[(@{r3}+@{dist_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > At. a distancia</button>
                     <input name="attr_dist_nombrearma" type="text" style="width: 150px;" />
                     <!-- <select name="attr_dist_tipoarma" style="width: 20px;"> 
                         <option value="@{rang_arco}">Arco</option>
@@ -449,7 +449,7 @@
     <br>
      
             <div class="ataques">           
-                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{sinarmas_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Can @{sinarmas_can} &nbsp&nbsp&nbsp&nbsp&nbsp DV @{sinarmas_dv}}} {{rname=Ataque sin armas}} {{mod=@{sinarmas_ataque}}} {{r1=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r3=[[(@{r3}+@{sinarmas_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > At. sin armas</button>
+                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{sinarmas_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{sinarmas_can}}} {{rname=Ataque sin armas}} {{mod=@{sinarmas_ataque}}} {{r1=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r3=[[(@{r3}+@{sinarmas_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > At. sin armas</button>
                     <br></br>
                 <table>
                     <tbody>
@@ -492,7 +492,7 @@
                 </div>
                 <div class="desvios">
                     <br></br>
-                    <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{rname=Desvío sin armas}} {{defensa=pro @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp ref @{refuerzo} &nbsp&nbsp&nbsp&nbsp&nbsp Can 2}} {{mod=@{sinarmas_desvio}}} {{r1=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r3=[[(@{r3}+@{sinarmas_desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío sin armas</button>
+                    <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{rname=Desvío sin armas}} {{defensa= Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{mod=@{sinarmas_desvio}}} {{r1=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r3=[[(@{r3}+@{sinarmas_desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío sin armas</button>
                     <input name="attr_sinarmas_desvio" type="number" value="0" />
                     <!-- <input name="attr_sinarmas_desvio" type="number" value="[[(@{attr_sinarmas_rang_sinarmas} [Rangos] + @{des} [Des] - 5 + @{desvio_esp} [Otros])]]" style="width: 50px;" disabled>
                     <input name="attr_sinarmas_desvio_esp" type="number" value="0"> -->
