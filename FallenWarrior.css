@@ -357,6 +357,11 @@ h1 {
     width: 75%;
     }
 
+.sheet-20porciento{
+    float: left;
+    width: 20%;
+    }
+
 .sheet-desvios{
     width: 100%;
     }
@@ -374,4 +379,19 @@ h1 {
     border-bottom: 2px solid transparent;
     border-right: 800px solid black;
     border-top: 3px solid transparent;
+}
+
+input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
+input.sheet-toggle-hide:checked ~ div.sheet-body {
+    display: none;
+}
+
+.sheet-block-a,
+.sheet-block-switch:checked ~ .sheet-block-b {
+  display: block;
+}
+
+.sheet-block-b,
+.sheet-block-switch:checked ~ .sheet-block-a {
+  display: none;
 }
