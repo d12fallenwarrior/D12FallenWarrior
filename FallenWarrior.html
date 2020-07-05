@@ -1,5 +1,15 @@
 <!-- LOGO // OPCIONES Y PESTAÑAS // CABECERA -->
 
+<input type="checkbox" class="sheet-block-switch" name="attr_block_switch" value="1">
+<div class="sheet-block-a">
+  Lorem ipsum dolor sit amet
+</div>
+<div class="sheet-block-b">
+  consectetur adipiscing elit
+</div>
+
+<hr>
+
 <div>
     <div class="logo">
         <img src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/logo.png"/>
@@ -30,6 +40,9 @@
 <br></br>
 <div class="arrow-right"></div>
 <br></br>
+
+<!-- PÁGINA A-->
+<div class="sheet-block-a">
 
 <!-- SECCIÓN ATRIBUTOS Y CARACTERÍSTICAS SECUNDARIAS -->
 <div>
@@ -161,6 +174,8 @@
 <!--SECCIÓN MAGOS-->
 <br></br>
 <div>
+<input type="checkbox" class="sheet-toggle-show" /><span>Mostrar magia</span>
+<div class="sheet-body">
     <!-- <h4>MAGIA</h4> -->
     <div class="2colrow">
         <div class="col">
@@ -223,8 +238,11 @@
             -->
             </div>
 </div>
-</div>
 <br></br>
+</div>
+</div>
+
+
     <div class ="3colrow">
         <!-- <p>Habilidad (atributo)/ Rangos / Mod. Especial / Hab. Final + Roll </p> -->
         <div class="col">
@@ -255,9 +273,12 @@
     <br></br>
     <div class="arrow-right"></div>
     <br></br>
+
+
     <!--Armas Melee-->
     <div>
-             
+        
+
         <fieldset class="repeating_armamelee"> 
                 
                 <div class="ataques">
@@ -272,6 +293,7 @@
                         <option value="@{rang_armasasta}">Arma de asta</option>
                         <option value="@{rang_hachaypico}">Hacha y Pico</option>
                     </select> -->                    
+                
                 <table>
                     <tbody>
                         <tr>
@@ -335,12 +357,12 @@
                     <input name="attr_melee_desvio" type="number" value="0" />
                                
                 </div>
-                
+            
                 <hr>  
           </fieldset>
-    </div>
+    
     <br>
-    <div>      
+          
         <fieldset class="repeating_armadistancia"> 
             <div>
                 <div class="ataques">
@@ -428,9 +450,9 @@
             </div>
             <hr> 
           </fieldset>
-    </div>
+    
     <br>
-    <div> 
+     
             <div class="ataques">           
                     <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{sinarmas_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Can @{sinarmas_can} &nbsp&nbsp&nbsp&nbsp&nbsp DV @{sinarmas_dv}}} {{rname=Ataque sin armas}} {{mod=@{sinarmas_ataque}}} {{r1=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_ataque})]]}} {{r3=[[(@{r3}+@{sinarmas_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                     <span class="negrita">AT. SIN ARMAS</span>
@@ -578,7 +600,7 @@
             <!-- <input name="attr_especial"> -->
             <!-- <p>Nombre armadura / Tipo / Protección / Refuerzo / Pen. energia / Pen. des / Pen. sigilo / Pen. carga / Especial</p> -->
     </div>
-</div>
+
 
 <!--SECCIÓN HABILIDADES-->
 <br></br>
@@ -798,6 +820,9 @@
             <input name="attr_hab_tactica" type="number" value="0">
         </span>
     </div>
+</div>
+
+
 </div>
 
 <!--SECCIÓN VENTAJAS, TALENTOS, IDEOLOGIA, IDIOMAS, ESTADOS-->
