@@ -443,3 +443,7 @@ label{
     position:relative;
 }
 
+
+.sheet-versalitas{
+    font-variant: small-caps;
+}
