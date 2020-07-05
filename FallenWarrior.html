@@ -1,13 +1,16 @@
 <!-- LOGO // OPCIONES Y PESTAÑAS // CABECERA -->
 
+
+<!-- SWAP DE PÁGINAS-->
 <input type="checkbox" class="sheet-block-switch" name="attr_block_switch" value="1">
 <div class="sheet-block-a">
-  Lorem ipsum dolor sit amet
+  Hoja de combate
 </div>
 <div class="sheet-block-b">
-  consectetur adipiscing elit
+  Hoja de talentos y equipo
 </div>
 
+<div class="arrow-right"></div>
 <hr>
 
 <div>
@@ -15,6 +18,7 @@
         <img src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/logo.png"/>
     </div>
     <div class="cabecera">
+        <br></br>
         <span>Nombre de personaje</span> <input name="attr_character_name" type="text" style="width: 80px;"/>
         
         <span>Nombre de jugador</span> <input name="attr_player_name" type="text" style="width: 80px;">
@@ -29,17 +33,12 @@
         <span>Peso</span> <input type="number"/>           
         <span>Altura</span> <input type="number"/> 
         <span>Edad</span> <input type="number"/>
-
-        <br></br>           
-        <br></br>
-        <p class='tipotiradas'>Tirada con desventaja <input name="attr_tipotirada" type="radio" value="1" /></p>
-        <p class='tipotiradas'>Tirada normal <input name="attr_tipotirada" type="radio" value="2" checked="true"/></p>
-        <p class='tipotiradas'>Tirada con ventaja <input name="attr_tipotirada" type="radio" value="3" /></p>
+       
     </div>
 </div>
 <br></br>
 <div class="arrow-right"></div>
-<br></br>
+<hr>
 
 <!-- PÁGINA A-->
 <div class="sheet-block-a">
@@ -150,17 +149,21 @@
 <!--SECCIÓN COMBATE-->
 
 <div class="arrow-left"></div>
-<br></br>
+<hr>
 
 
 <h1>COMBATE</h1>
-
 
 <!-- <textarea style="height: 20px;"></textarea> -->
 
 <p></p>
 <!--SECCIÓN DAÑO-->
-    <div class="3colrow">
+<div class="40porciento">
+        <p class='tipotiradas'>Desventaja <input name="attr_tipotirada" type="radio" value="1" /></p>
+        <p class='tipotiradas'>Tirada normal <input name="attr_tipotirada" type="radio" value="2" checked="true"/></p>
+        <p class='tipotiradas'>Ventaja <input name="attr_tipotirada" type="radio" value="3" /></p>   
+</div>
+<div class="danios">
         <div class="col">
             <span>Cansancio</span> <input type="number" name="cansancio" value="0" />
         </div>
@@ -171,8 +174,9 @@
             <span>Puntos de trauma</span> <input type ="number" name="puntostrauma" value="0" />
         </div>     
     </div>
+    <hr>
+
 <!--SECCIÓN MAGOS-->
-<br></br>
 <div>
 <input type="checkbox" class="sheet-toggle-show" /><span>Mostrar magia</span>
 <div class="sheet-body">
@@ -272,7 +276,7 @@
  
     <br></br>
     <div class="arrow-right"></div>
-    <br></br>
+    <hr>
 
 
     <!--Armas Melee-->
@@ -605,7 +609,7 @@
 <!--SECCIÓN HABILIDADES-->
 <br></br>
 <div class="arrow-left"></div>
-<br></br>
+<hr>
 
 <h1>HABILIDADES</h1>
 <!--Algunas habilidades tienen dos atributos y cogen el mayor:  Empatía: ast/int, Sanar: des/int, Seguridad: des/int. Defino esos máximos aquí y esto se edita con la API-->
@@ -825,15 +829,17 @@
 
 </div>
 
+<!-- PÁGINA B-->
 <!--SECCIÓN VENTAJAS, TALENTOS, IDEOLOGIA, IDIOMAS, ESTADOS-->
-<!--ANULO ESTA SECCIÓN TEMPORALMENTE, LA PONDREMOS EN UNA SEGUNDA PÁGINA (recolocar todos los comentarios al habilitarla de nuevo, les he quitado el <> para anularlos)
-    
+
+<div class="sheet-block-b">
+
     <div class="2colrow">
 
-    !-- Ventajas, ideología, idiomas y estados--
+    <!-- Ventajas, ideología, idiomas y estados-->
     <div class="col">
-        !--VENTAJAS, DESVENTAJAS--
-        <h1>VENTAJAS Y DESVENTAJAS</h1>
+        <!--RASGOS-->
+        <h1>RASGOS</h1>
         <div>
             <fieldset class="repeating_ventajas">
                 <p>Nombre / Descripción</p>
@@ -841,53 +847,65 @@
             </fieldset>
         </div>
         
-        !--IDEOLOGÍA--
+        <!--IDEOLOGÍA-->
         <h2>IDEOLOGÍA</h2>
     <div class="2colrow">
         <div class="col">
             <p>
                 Compañerismo 
+                <!--
                 <input name="companerismo" type="radio" value="1"> 
                 <input name="companerismo" type="radio" value="2"> 
                 <input name="companerismo" type="radio" value="3"> 
                 <input name="companerismo" type="radio" value="4"> 
+                --> 
             </p>
             <p>
                 Honor
+                <!--
                 <input name="honor" type="radio" value="1"> 
                 <input name="honor" type="radio" value="2"> 
                 <input name="honor" type="radio" value="3"> 
                 <input name="honor" type="radio" value="4"> 
+                --> 
             </p>
             <p>
                 Pacifismo 
+                <!--
                 <input name="pacifismo" type="radio" value="1"> 
                 <input name="pacifismo" type="radio" value="2"> 
                 <input name="pacifismo" type="radio" value="3"> 
                 <input name="pacifismo" type="radio" value="4"> 
+                --> 
             </p>
         </div>
         <div class="col">
             <p>
                 Antimagia
+                <!--
                 <input name="antimagia" type="radio" value="1"> 
                 <input name="antimagia" type="radio" value="2"> 
                 <input name="antimagia" type="radio" value="3"> 
-                <input name="antimagia" type="radio" value="4"> 
+                <input name="antimagia" type="radio" value="4">
+                --> 
             </p>
             <p>
                 Superstición
+                <!--
                 <input name="honor" type="radio" value="1"> 
                 <input name="honor" type="radio" value="2"> 
                 <input name="honor" type="radio" value="3"> 
                 <input name="honor" type="radio" value="4"> 
+                --> 
             </p>
             <p>
                 <input name="ideologiacustom" type="text">
+                <!--
                 <input name="ideo" type="radio" value="1"> 
                 <input name="ideo" type="radio" value="2"> 
                 <input name="ideo" type="radio" value="3"> 
                 <input name="ideo" type="radio" value="4"> 
+                --> 
             </p>
         </div>
     </div>
@@ -903,7 +921,7 @@
         </div>
     </div>
     </div>
-    !--TALENTOS--
+    <!--TALENTOS-->
     <div class="col">
         <h1>TALENTOS</h1>
         <fieldset class="repeating_talentos">
@@ -912,8 +930,9 @@
         </fieldset>
     </div>
 </div>
-
-!--EQUIPO--
+<div class="arrow-left"></div>
+<hr>
+<!--EQUIPO-->
 <div class="3colrow">
     <div class="col">
         <h2>EQUIPADO</h2>
@@ -979,9 +998,10 @@
         </fieldset>
     </div>
 </div>
-!--CARGA TRANSPORTABLE Y DINERO--
-<div class="2colrow">
-    <div class="col">
+<br></br>
+<hr>
+<!--CARGA TRANSPORTABLE Y DINERO-->
+    <div class="ataques">
         <h2>ESTADO DE CARGA</h2>
         <span>Peso base</span><input name="attr_pesobase" type="number">
         <p></p><input name="attr_carga" type="radio" value="99" /> <span>Límite (Caes derribado)</span> 
@@ -990,9 +1010,8 @@
         <p></p><input name="attr_carga" type="radio" value="1" /> <span>Carga media (-5 ene y pen. por carga -1)</span> 
         <p></p><input name="attr_carga" type="radio" value="0" checked="true" /> <span>Carga ligera (Sin modificadores)</span> 
         <p></p><input name="attr_carga" type="radio" value="999" /> <span>Sin carga (+1 movilidad)</span> 
-        <span>(Los penalizadores se aplican automáticamente)</span>
     </div>
-    <div class="col">
+    <div class="desvios">
         <h2>DINERO</h2>
         <input type="text">
         <p>ORO (1 oro = 30 pl)</p>
@@ -1001,8 +1020,11 @@
         <input type="text">
         <p>BRONCE</p>
     </div>
+
+
 </div>
 
+<!--
 <div>
     <p>Atributos a hacer invisibles con CSS</p>
     !-- Para las plantillas de 2 o 3 dados --
