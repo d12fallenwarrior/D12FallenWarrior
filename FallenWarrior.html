@@ -23,16 +23,16 @@
         
         <span>Nombre de jugador</span> <input name="attr_player_name" type="text" style="width: 80px;">
         
-        <span>Experiencia a repartir/total</span> <input type="number"/> 
+        <span>Experiencia</span> <input name="attr_experiencia" type="number"/> 
         <br></br>
         <br></br>
                 
         <span>Clase</span> <input name="attr_clase" type="text" style="width: 80px;"/>        
-        <span>Raza</span> <input type="text"  style="width: 80px;"/> 
-        <span>Región</span> <input type="text"  style="width: 80px;"/>         
-        <span>Peso</span> <input type="number"/>           
-        <span>Altura</span> <input type="number"/> 
-        <span>Edad</span> <input type="number"/>
+        <span>Raza</span> <input name="attr_raza" type="text"  style="width: 80px;"/> 
+        <span>Región</span> <input name="attr_region" type="text"  style="width: 80px;"/>         
+        <span>Peso</span> <input name="attr_peso" type="number"/>           
+        <span>Altura</span> <input name="attr_altura" type="number"/> 
+        <span>Edad</span> <input name="attr_edad" type="number"/>
        
     </div>
 </div>
@@ -50,7 +50,7 @@
         <table style="margin: 0 auto;">
             <tbody>
                 <tr>
-                    <h1>ATRIBUTOS</h1>
+                    <h1>Atributos</h1>
                 </tr>
                 <tr>
                     <td><p></p><span>Fuerza</span></td>
@@ -90,7 +90,7 @@
 
     <!-- Características secundarias -->
     <div class="caracteristicas">
-        <h1>CARACTERÍSTICAS SECUNDARIAS</h1>
+        <h1>Características secundarias</h1>
         <!-- <p>Característica / Fórmula / Mod. Especial / Valor final + Roll</p> -->
         <br></br>
         
@@ -151,7 +151,7 @@
 <hr>
 
 
-<h1>COMBATE</h1>
+<h1>Combate</h1>
 
 <!-- <textarea style="height: 20px;"></textarea> -->
 
@@ -323,7 +323,7 @@
                     </select></td>
                     <td>&nbsp;&nbsp;&nbsp;</td> -->
 
-                    <td class="centrado"><input type="text"></td>
+                    <td class="centrado"><input name="attr_melee_esp" type="text"></td>
                     <!-- <p> Leyenda de recuadros: Roll / Nombre Arma / Hab. Final / Mod. Especial / Tipología (rangos) / Tipo de daño / Daño / Daño extra (pinchos y cosas asi) Daño Vital / Cansancio / Alcance / Especial </p> -->
                         </tr>
 
@@ -402,7 +402,7 @@
                     </select></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
 
-                    <td class="centrado"><input type="text"></td>
+                    <td class="centrado"><input name="attr_dist_esp" type="text"></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
 
                     </tr>
@@ -468,7 +468,7 @@
                     <td class="centrado"><input name="attr_sinarmas_can" type="number" value="0" /></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
 
-                    <td class="centrado"><input type="text"></td>
+                    <td class="centrado"><input name="attr_sinarmas_esp" type="text"></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
 
                    </tr>
@@ -600,7 +600,7 @@
 <div class="arrow-left"></div>
 <hr>
 
-<h1>HABILIDADES</h1>
+<h1>Habilidades</h1>
 <!--Algunas habilidades tienen dos atributos y cogen el mayor:  Empatía: ast/int, Sanar: des/int, Seguridad: des/int. Defino esos máximos aquí y esto se edita con la API-->
 <div class="3colrow">
     <div class="col"> <!--Habilidades Combate-->
@@ -828,16 +828,16 @@
     <!-- Ventajas, ideología, idiomas y estados-->
     <div class="col">
         <!--RASGOS-->
-        <h1>RASGOS</h1>
+        <h1>Rasgos</h1>
         <div>
-            <fieldset class="repeating_ventajas">
+            <fieldset class="repeating_rasgos">
                 <p>Nombre / Descripción</p>
-                <input name="nombre" type="text"><input name="descripcion" type="text">
+                <input name="attr_rasgo_name" type="text"><input name="attr_rasgo_desc" type="text">
             </fieldset>
         </div>
         
         <!--IDEOLOGÍA-->
-        <h2>IDEOLOGÍA</h2>
+        <h2>Ideología</h2>
     <div class="2colrow">
         <div class="col">
             <p>
@@ -888,7 +888,7 @@
                 --> 
             </p>
             <p>
-                <input name="ideologiacustom" type="text">
+                <input name="attr_ideologiacustom" type="text">
                 <!--
                 <input name="ideo" type="radio" value="1"> 
                 <input name="ideo" type="radio" value="2"> 
@@ -901,21 +901,21 @@
 
     <div class="2colrow">
         <div class="col">
-            <h3>IDIOMAS</h3>
-            <textarea></textarea>
+            <h3>Idiomas</h3>
+            <textarea name="attr_idiomas"></textarea>
         </div>
         <div class="col">
-            <h3>ESTADO</h3>
-            <textarea></textarea>
+            <h3>Estado</h3>
+            <textarea name="attr_estados" style="height: 40px;"></textarea>
         </div>
     </div>
     </div>
     <!--TALENTOS-->
     <div class="col">
-        <h1>TALENTOS</h1>
+        <h1>Talentos</h1>
         <fieldset class="repeating_talentos">
             <p>Nombre / Descripción</p>
-            <input name="nombre" type="text"><input name="descripcion" type="text">
+            <input name="attr_talento_name" type="text"><input name="attr_talento_desc" type="text">
         </fieldset>
     </div>
 </div>
@@ -936,10 +936,10 @@
         <fieldset class="repeating_equipo">
             <div class="2colrow">
                 <div class="col">
-                    <input type="text">
+                    <input name="attr_equipado" type="text">
                 </div>
                 <div class="col">
-                    <input type="text">
+                    <input name="attr_equipado_peso" type="number">
                 </div>
             </div>
         </fieldset>
@@ -957,10 +957,10 @@
         <fieldset class="repeating_equipo">
             <div class="2colrow">
                 <div class="col">
-                    <input type="text">
+                    <input name="attr_mochila" type="text">
                 </div>
                 <div class="col">
-                    <input type="text">
+                    <input name="attr_mochila_peso" type="number">
                 </div>
             </div>
         </fieldset>
@@ -978,10 +978,10 @@
         <fieldset class="repeating_equipo">
             <div class="2colrow">
                 <div class="col">
-                    <input type="text">
+                    <input  name="attr_otros" type="text">
                 </div>
                 <div class="col">
-                    <input type="text">
+                    <input name="attr_otros_peso" type="number">
                 </div>
             </div>
         </fieldset>
@@ -1002,11 +1002,11 @@
     </div>
     <div class="desvios">
         <h2>DINERO</h2>
-        <input type="text">
+        <input name="attr_monedas_oro" type="number">
         <p>ORO (1 oro = 30 pl)</p>
-        <input type="text">
+        <input name="attr_monedas_plata" type="number">
         <p>PLATA (1 pl = 30 br)</p>
-        <input type="text">
+        <input name="attr_monedas_bronce" type="number">
         <p>BRONCE</p>
     </div>
 
