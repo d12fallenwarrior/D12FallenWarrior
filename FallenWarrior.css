@@ -1,3 +1,5 @@
+
+
 /* Set the min-width so that when the window is resized the look will stay consistant */
 
 .charsheet {
@@ -336,6 +338,7 @@ span.sheet-dee {
 h1 {
     margin-bottom: 0.3em;
     text-align: center;
+    font-variant: small-caps
 }
 
 
@@ -439,3 +442,4 @@ label{
     text-align:left;
     position:relative;
 }
+
