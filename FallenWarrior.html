@@ -53,36 +53,36 @@
                     <h1>Atributos</h1>
                 </tr>
                 <tr>
-                    <td><p></p><span>Fuerza</span></td>
+                    <td><p></p><h4>Fuerza</h4></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td><input name="attr_fue" type="number" value="0" class="sheet-normal" />
+                    <td><input name="attr_fue" type="number" class="centrado" value="0" class="sheet-normal" />
                         <!-- <input name="attr_fue" type="radio" value="0" class="sheet-normal" /><input name="attr_fue" type="radio" value="0" class="sheet-normal" /><input name="attr_fue" type="radio" value="0" class="sheet-normal" /> -->
                     </td>
                 </tr>
                 <tr>
-                    <td><p></p><span>Destreza </span></td>
+                    <td><p></p><h4>Destreza </h4></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td><input name="attr_des" type="number" value="0" min="0" /></td>
+                    <td><input name="attr_des" type="number" class="centrado" value="0" min="0" /></td>
                 </tr>
                 <tr> 
-                    <td><p></p><span>Agilidad</span></td>
+                    <td><p></p><h4>Agilidad</h4></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td><input name="attr_agi" type="number" value="0" min="0" /></td>
+                    <td><input name="attr_agi" type="number" class="centrado" value="0" min="0" /></td>
                 </tr>
                 <tr>
-                    <td><p></p><span>Resistencia</span></td>
+                    <td><p></p><h4>Resistencia</h4></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td><input name="attr_res" type="number" value="0" min="0" /></td>
+                    <td><input name="attr_res" type="number" class="centrado" value="0" min="0" /></td>
                 </tr>
                 <tr>
-                    <td><p></p><span>Astucia </span></td>
+                    <td><p></p><h4>Astucia </h4></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td><input name="attr_ast" type="number" value="0" min="0" /></td>
+                    <td><input name="attr_ast" type="number" class="centrado" value="0" min="0" /></td>
                 </tr>
                 <tr>
-                    <td><p></p><span>Inteligencia</span></td>
+                    <td><p></p><h4>Inteligencia</h4></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td><input name="attr_int" type="number" value="0" min="0" /></td>
+                    <td><input name="attr_int" type="number" class="centrado" value="0" min="0" /></td>
                 </tr>
             </tbody>
         </table>
@@ -97,19 +97,19 @@
         <div class="centrado">
             
                 <button name="roll_reflejos" type="roll" value="&{template:@{plantilla}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cs0cf0+@{ref})]]}} {{r2=[[(1d12cs0cf0+@{ref})]]}} {{r3=[[(@{r3}+@{ref})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Reflejos</button>
-                <input name="attr_ref" type="number" value="0">
+                <input name="attr_ref" type="number" class="centrado" value="0">
                 <!-- <input name="attr_ref_esp" type="number" value="0">
                 <input name="attr_ref" type="number" value="[[(@{agi} [Agi] + @{ast} [Ast] -5 + @{ref_esp} [Otros])]]" disabled> -->
                            
                 <button name="roll_vitalidad" type="roll" value="&{template:@{plantilla}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cs0cf0+@{vit})]]}} {{r2=[[(1d12cs0cf0+@{vit})]]}} {{r3=[[(@{r3}+@{vit})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Vitalidad</button>
                 
-                <input name="attr_vit" type="number" value="0">
+                <input name="attr_vit" type="number" class="centrado" value="0">
                 <!-- <input name="attr_vit_esp" type="number" value="0">
                 <input name="attr_vit" type="number" value="[[(@{res} [Res] + @{fue} [Fue] - 5 + @{vit_esp} [Otros])]]" disabled> --> 
                 
                 <button name="roll_voluntad" type="roll" value="&{template:@{plantilla}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cs0cf0+@{vol})]]}} {{r2=[[(1d12cs0cf0+@{vol})]]}} {{r3=[[(@{r3}+@{vol})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Voluntad</button>
                  
-                <input name="attr_vol" type="number" value="0">
+                <input name="attr_vol" type="number" class="centrado" value="0">
                 <!-- <input name="attr_vol_esp" type="number" value="0">
                 <input name="attr_vol" type="number" value="[[(@{int} [Int] + @{ast} [Ast] - 5 + @{vol_esp} [Otros])]]" disabled> -->
                 
@@ -120,23 +120,23 @@
             <table style="margin: 0 auto;">
                 <tbody>
                     <tr>         
-                        <td><span>Estrategia</span></td> <!-- <input name="attr_est_esp" type="number" value="0"> -->
+                        <td><h4>Estrategia</h4></td> <!-- <input name="attr_est_esp" type="number" value="0"> -->
                         <td>&nbsp;&nbsp;</td>
-                        <td><input name="attr_est" type="number" value="0"><!-- <input name="attr_est" type="number" value="[[(@{int} [Int] + @{ast} [Ast] + @{est_esp} [Otros])]]" disabled> --></td>
+                        <td><input name="attr_est" type="number" class="centrado" value="0"><!-- <input name="attr_est" type="number" value="[[(@{int} [Int] + @{ast} [Ast] + @{est_esp} [Otros])]]" disabled> --></td>
                             <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                        <td><span>Espíritu</span></td> <!-- <input name="attr_esp_esp" type="number" value="0"> -->
+                        <td><h4>Espíritu</h4></td> <!-- <input name="attr_esp_esp" type="number" value="0"> -->
                         <td>&nbsp;&nbsp;</td>
-                        <td><input name="attr_esp" type="number" value="0"> <!-- <input name="attr_esp" type="number" value="[[(@{res} [Res] + @{int} [Int] + @{esp_esp} [Otros])]]" disabled> --></td>
+                        <td><input name="attr_esp" type="number" class="centrado" value="0"> <!-- <input name="attr_esp" type="number" value="[[(@{res} [Res] + @{int} [Int] + @{esp_esp} [Otros])]]" disabled> --></td>
                     </tr>
                     
                     <tr>
-                        <td><span>Energía</span></td> <!-- <input name="attr_ene_esp" type="number" value="0"> -->
+                        <td><h4>Energía</h4></td> <!-- <input name="attr_ene_esp" type="number" value="0"> -->
                         <td>&nbsp;&nbsp;</td>
-                        <td> <input name="attr_ene" type="number" value="0"> <!-- <input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled> --></td>
+                        <td> <input name="attr_ene" type="number" class="centrado" value="0"> <!-- <input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled> --></td>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                        <td><span>Herida</span></td> <!-- <input name="attr_her_esp" type="number" value="0"> -->
+                        <td><h4>Herida</h4></td> <!-- <input name="attr_her_esp" type="number" value="0"> -->
                         <td>&nbsp;&nbsp;</td>
-                        <td><input name="attr_her" type="number" value="0"> <!-- <input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled> --></td> 
+                        <td><input name="attr_her" type="number" class="centrado" value="0"> <!-- <input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled> --></td> 
                     </tr>
                 </tbody>
             </table>
@@ -832,15 +832,15 @@
         <div>
             <fieldset class="repeating_rasgos">
                 <p>Nombre / Descripción</p>
-                <input name="attr_rasgo_name" type="text"><input name="attr_rasgo_desc" type="text">
+                <input name="attr_rasgo_name" type="text" class="negrita"><input name="attr_rasgo_desc" type="text">
             </fieldset>
         </div>
         
         <!--IDEOLOGÍA-->
-        <h2>Ideología</h2>
+        <h1>Ideología</h1>
     <div class="2colrow">
         <div class="col">
-            <p>
+            <p class="negrita">
                 Compañerismo 
                 <!--
                 <input name="companerismo" type="radio" value="1"> 
@@ -849,7 +849,7 @@
                 <input name="companerismo" type="radio" value="4"> 
                 --> 
             </p>
-            <p>
+            <p class="negrita">
                 Honor
                 <!--
                 <input name="honor" type="radio" value="1"> 
@@ -858,7 +858,7 @@
                 <input name="honor" type="radio" value="4"> 
                 --> 
             </p>
-            <p>
+            <p class="negrita">
                 Pacifismo 
                 <!--
                 <input name="pacifismo" type="radio" value="1"> 
@@ -869,7 +869,7 @@
             </p>
         </div>
         <div class="col">
-            <p>
+            <p class="negrita">
                 Antimagia
                 <!--
                 <input name="antimagia" type="radio" value="1"> 
@@ -878,7 +878,7 @@
                 <input name="antimagia" type="radio" value="4">
                 --> 
             </p>
-            <p>
+            <p class="negrita">
                 Superstición
                 <!--
                 <input name="honor" type="radio" value="1"> 
@@ -888,7 +888,7 @@
                 --> 
             </p>
             <p>
-                <input name="attr_ideologiacustom" type="text">
+                <input name="attr_ideologiacustom" type="text" class="negrita">
                 <!--
                 <input name="ideo" type="radio" value="1"> 
                 <input name="ideo" type="radio" value="2"> 
@@ -901,11 +901,11 @@
 
     <div class="2colrow">
         <div class="col">
-            <h3>Idiomas</h3>
-            <textarea name="attr_idiomas"></textarea>
+            <h1>Idiomas</h1>
+            <textarea name="attr_idiomas" style="height: 40px;"></textarea>
         </div>
         <div class="col">
-            <h3>Estado</h3>
+            <h1>Estado</h1>
             <textarea name="attr_estados" style="height: 40px;"></textarea>
         </div>
     </div>
@@ -915,7 +915,7 @@
         <h1>Talentos</h1>
         <fieldset class="repeating_talentos">
             <p>Nombre / Descripción</p>
-            <input name="attr_talento_name" type="text"><input name="attr_talento_desc" type="text">
+            <input name="attr_talento_name" type="text" class="negrita"><input name="attr_talento_desc" type="text">
         </fieldset>
     </div>
 </div>
@@ -924,7 +924,7 @@
 <!--EQUIPO-->
 <div class="3colrow">
     <div class="col">
-        <h2>EQUIPADO</h2>
+        <h1>Equipado</h1>
         <div class="2colrow">
             <div class="col">
                 <h5>OBJETO</h5>
@@ -945,7 +945,7 @@
         </fieldset>
     </div>
     <div class="col">
-        <h2>EN LA MOCHILA</h2>
+        <h1>En la mochila</h1>
         <div class="2colrow">
             <div class="col">
                 <h5>OBJETO</h5>
@@ -966,7 +966,7 @@
         </fieldset>
     </div>
     <div class="col">
-        <h2>OTROS</h2>
+        <h1>Otros</h1>
         <div class="2colrow">
             <div class="col">
                 <h5>OBJETO</h5>
@@ -991,7 +991,7 @@
 <hr>
 <!--CARGA TRANSPORTABLE Y DINERO-->
     <div class="ataques">
-        <h2>ESTADO DE CARGA</h2>
+        <h1>Estado de Carga</h1>
         <span>Peso base</span><input name="attr_pesobase" type="number">
         <p></p><input name="attr_carga" type="radio" value="99" /> <span>Límite (Caes derribado)</span> 
         <p></p><input name="attr_carga" type="radio" value="5" /> <span>Exceso (-25 ene y pen. por carga -5)</span> 
@@ -1001,13 +1001,14 @@
         <p></p><input name="attr_carga" type="radio" value="999" /> <span>Sin carga (+1 movilidad)</span> 
     </div>
     <div class="desvios">
-        <h2>DINERO</h2>
+        <h1>Dinero</h1>
+        <p class="negrita">ORO (1 oro = 30 pl)</p>
         <input name="attr_monedas_oro" type="number">
-        <p>ORO (1 oro = 30 pl)</p>
+        <p class="negrita">PLATA (1 pl = 30 br)</p>
         <input name="attr_monedas_plata" type="number">
-        <p>PLATA (1 pl = 30 br)</p>
+        <p class="negrita">BRONCE</p>
         <input name="attr_monedas_bronce" type="number">
-        <p>BRONCE</p>
+        
     </div>
 
 
