@@ -362,6 +362,16 @@ h1 {
     width: 20%;
     }
 
+.sheet-40porciento{
+    float: left;
+    width: 40%;
+    }    
+
+.sheet-60porciento{
+    float: left;
+    width: 60%;
+    } 
+
 .sheet-desvios{
     width: 100%;
     }
@@ -394,4 +404,16 @@ input.sheet-toggle-hide:checked ~ div.sheet-body {
 .sheet-block-b,
 .sheet-block-switch:checked ~ .sheet-block-a {
   display: none;
+}
+
+hr {
+    clear: both;
+    visibility: hidden;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+.sheet-danios{
+    width: 50%;
+    float: right;
 }
