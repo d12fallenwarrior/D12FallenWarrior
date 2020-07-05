@@ -1,9 +1,11 @@
 /* Set the min-width so that when the window is resized the look will stay consistant */
 
 .charsheet {
-	background-color: rgb(255, 255, 255);
-	min-width: 800px;
+	background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/fondoespada.jpg"); /*black space with tiny white stars*/
+    background-color: white;
+    min-width: 800px;
 }
+
 
 /* Universal styling applied to all elements of these types */
 
@@ -417,3 +419,4 @@ hr {
     width: 50%;
     float: right;
 }
+
