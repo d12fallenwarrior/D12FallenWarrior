@@ -362,6 +362,17 @@ h1 {
     font-size: smaller;
 }
 
+.sheet-versalitas{
+    font-variant: small-caps;
+}
+
+hr {
+    clear: both;
+    visibility: hidden;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
 
 .sheet-ataques{
     float: left;
@@ -417,12 +428,17 @@ input.sheet-toggle-hide:checked ~ div.sheet-body {
   display: none;
 }
 
-hr {
-    clear: both;
-    visibility: hidden;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
+.sheet-ficha_luchador,
+.sheet-tipodeficha:checked ~ .sheet-ficha_mago {
+  display: block;
 }
+
+.sheet-ficha_mago,
+.sheet-tipodeficha:checked ~ .sheet-ficha_luchador {
+  display: none;
+}
+
+
 
 .sheet-danios{
     width: 50%;
@@ -452,6 +468,3 @@ label{
 }
 
 
-.sheet-versalitas{
-    font-variant: small-caps;
-}
