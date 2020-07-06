@@ -243,7 +243,7 @@
 </div>
 <br></br>
 </div>
-</div>
+
 
 
     <div class ="3colrow">
@@ -267,20 +267,16 @@
             -->
             </div>
     </div>
- 
+
     <br></br>
     <div class="arrow-right"></div>
     <hr>
 
 
     <!--Armas Melee-->
-    <div>
-        
-
-        <fieldset class="repeating_armamelee"> 
-                
+    <div>                  
                 <div class="ataques">
-                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{melee_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{melee_can}}} {{rname=Ataque}} {{mod=@{melee_ataque}}} {{arma=@{melee_nombrearma}}} {{r1=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r2=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r3=[[(@{r3}+@{melee_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> At. cuerpo a cuerpo</button>
+                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{melee_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{melee_can}}} {{rname=Ataque}} {{mod=@{melee_ataque}}} {{arma=@{melee_nombrearma}}} {{r1=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r2=[[(1d12cs0cf0+@{melee_ataque})]]}} {{r3=[[(@{r3}+@{melee_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 1</button>
                     <input name="attr_melee_nombrearma" type="text" style="width: 150px;" />
                  
                     <!-- <select name="attr_melee_tipoarma" style="width: 20px;"> 
@@ -306,7 +302,7 @@
                     
                     <td class="centrado"><select name="attr_melee_tipodmg" style="width: 40px;">
                         <option value="P">P</option>
-                        <option value="C">C</option>
+                        <option value="C" selected="selected">C</option>
                         <option value="T">T</option>
                     </select>
                     <input name="attr_melee_dmg" type="number"  class="centrado" value="0" /></td>
@@ -355,14 +351,89 @@
                 </div>
             
                 <hr>  
-          </fieldset>
     
     <br>
-          
-        <fieldset class="repeating_armadistancia"> 
+                          <div class="ataques">
+                    <button name="roll_ataque2" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{melee_dmg2} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{melee_can2}}} {{rname=Ataque2}} {{mod=@{melee_ataque2}}} {{arma=@{melee_nombrearma2}}} {{r1=[[(1d12cs0cf0+@{melee_ataque2})]]}} {{r2=[[(1d12cs0cf0+@{melee_ataque2})]]}} {{r3=[[(@{r3}+@{melee_ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 2</button>
+                    <input name="attr_melee_nombrearma2" type="text" style="width: 150px;" />
+                 
+                    <!-- <select name="attr_melee_tipoarma" style="width: 20px;"> 
+                        <option value="@{rang_espada}">Espada</option>
+                        <option value="@{rang_mazaymartillo}">Maza y Martillo</option>
+                        <option value="@{rang_mangualycadena}">Mangual y Cadena</option>
+                        <option value="@{rang_armasasta}">Arma de asta</option>
+                        <option value="@{rang_hachaypico}">Hacha y Pico</option>
+                    </select> -->                    
+                
+                <table>
+                    <tbody>
+                        <tr>
+                            
+                            <td class="centrado"><input name="attr_melee_ataque2" type="number"  class="centrado" value="0"></td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+                    <!-- <input name="attr_melee_ataque" type="number" value="[[(@{melee_tipoarma} [Rangos] + @{des} [Des] - 5 + @{melee_ataque_esp} [Otros])]]" style="width: 50px;" disabled>
+                    <input name="attr_melee_ataque_esp" type="number" value="0">
+                    -->
+
+                    <!--Daño-->
+                    <!-- <button name="roll_melee_damage" type="roll" value="&{template:dmg} {{rname=Daño}} {{arma=@{melee_nombrearma}}} {{r1=[[1d12cs0cf0 + @{melee_dmg} [Daño base] + @{melee_dv} [Daño Vital] + @{melee_dmg_esp}cs0cf0 [Otros] ]]}} {{charname=@{character_name}}}">Daño</button> -->
+                    
+                    <td class="centrado"><select name="attr_melee_tipodmg2" style="width: 40px;">
+                        <option value="P">P</option>
+                        <option value="C" selected="selected">C</option>
+                        <option value="T">T</option>
+                    </select>
+                    <input name="attr_melee_dmg2" type="number"  class="centrado" value="0" /></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><input name="attr_melee_can2" type="number"  class="centrado" value="0" /></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+
+                    <!-- <td class="centrado"><select name="attr_melee_alc" style="width: 40px;">
+                        <option value="-">-</option>
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                    </select></td>
+                    <td>&nbsp;&nbsp;&nbsp;</td> -->
+
+                    <td><input name="attr_melee_esp2" type="text" ></td>
+                    <!-- <p> Leyenda de recuadros: Roll / Nombre Arma / Hab. Final / Mod. Especial / Tipología (rangos) / Tipo de daño / Daño / Daño extra (pinchos y cosas asi) Daño Vital / Cansancio / Alcance / Especial </p> -->
+                        </tr>
+
+                        <tr class="negrita">
+                            <td class="centrado"><span>Bonificador</span></td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+
+                            <td class="centrado"><span>Daño</span></td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+
+                            <td class="centrado"><span>Can</span></td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+
+                            <!-- <td class="centrado"><span>Alc</span></td>
+                            <td>&nbsp;&nbsp;&nbsp;</td> -->
+                    
+                            <td><span> Especial</span></td>
+                            
+                        </tr>
+                   </tbody>
+                </table>
+                                              
+                </div>
+                <div class="desvios">
+                    
+                    <button name="roll_desvio2" type="roll" value="&{template:@{plantilla}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{rname=Desvío}} {{arma=@{melee_nombrearma2}}} {{mod=@{melee_desvio2}}} {{r1=[[(1d12cs0cf0+@{melee_desvio2})]]}} {{r2=[[(1d12cs0cf0+@{melee_desvio2})]]}} {{r3=[[(@{r3}+@{melee_desvio2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío</button>
+                    <input name="attr_melee_desvio2" type="number"  class="centrado" value="0" />
+                               
+                </div>
+            
+                <hr>  
+    
+    <br>
             <div>
                 <div class="ataques">
-                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{dist_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{dist_can}}} {{rname=Ataque}} {{arma=@{dist_nombrearma}}} {{mod=@{dist_ataque}}} {{r1=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r2=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r3=[[(@{r3}+@{dist_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > At. a distancia</button>
+                    <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{dist_dmg} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{dist_can}}} {{rname=Ataque}} {{arma=@{dist_nombrearma}}} {{mod=@{dist_ataque}}} {{r1=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r2=[[(1d12cs0cf0+@{dist_ataque})]]}} {{r3=[[(@{r3}+@{dist_ataque})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Ataque 3</button>
                     <input name="attr_dist_nombrearma" type="text" style="width: 150px;" />
                     <!-- <select name="attr_dist_tipoarma" style="width: 20px;"> 
                         <option value="@{rang_arco}">Arco</option>
@@ -383,7 +454,7 @@
                     <!--Daño-->
                     <!-- <button name="roll_dist_damage" type="roll" value="&{template:dmg} {{rname=Daño}} {{arma=@{dist_nombrearma}}} {{r1=[[1d12cs0cf0 + @{dist_dmg} [Daño base] + @{dist_dv} [Daño Vital] + @{dist_dmg_esp}cs0cf0 [Otros] ]]}} {{charname=@{character_name}}}"> Daño</button> -->
                     <td class="centrado"><select name="attr_dist_tipodmg" style="width: 40px;">
-                        <option value="P">P</option>
+                        <option value="P" selected="selected">P</option>
                         <option value="C">C</option>
                         <option value="T">T</option>
                     </select>
@@ -444,7 +515,6 @@
                 </div>
             </div>
             <hr> 
-          </fieldset>
     
     <br>
      
@@ -462,7 +532,12 @@
                     <button name="roll_sinarmas_damage" type="roll" value="&{template:dmg} {{rname=Daño sin arma}} {{r1=[[1d12cs0cf0 + @{sinarmas_dmg} [Daño base] + @{sinarmas_dv} [Daño Vital] + @{sinarmas_dmg_esp}cs0cf0 [Otros] ]]}} {{charname=@{character_name}}}"> Daño</button>
                     -->
                     
-                    <td class="centrado"><span>T </span><input name="attr_sinarmas_dmg" type="number"  class="centrado" value="0" /></td>
+                    <td class="centrado"><select name="attr_sinarmas_tipodmg" style="width: 40px;">
+                        <option value="P">P</option>
+                        <option value="C">C</option>
+                        <option value="T" selected="selected">T</option>
+                    </select>
+                    <input name="attr_sinarmas_dmg" type="number"  class="centrado" value="0" /></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
 
                     <td class="centrado"><input name="attr_sinarmas_can" type="number"  class="centrado" value="0" /></td>
@@ -498,7 +573,7 @@
                     <input name="attr_sinarmas_desvio_esp" type="number" value="0"> -->
             </div>
     </div>
-
+</div>
     <p></p>
     <br></br>
     <br></br>
