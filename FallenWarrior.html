@@ -99,17 +99,17 @@
                 <tr class="centrado">
             
                     <td style="padding-bottom:2px"><button name="roll_reflejos" type="roll" value="&{template:@{plantilla}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cs0cf0+@{ref})]]}} {{r2=[[(1d12cs0cf0+@{ref})]]}} {{r3=[[(@{r3}+@{ref})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Reflejos</button></td>
-                    <td style="padding-bottom:2px"><input name="attr_ref" type="number" class="centrado" style="width: 70px;" value="0"></td>
+                    <td style="padding-bottom:2px"><input name="attr_ref" type="number" class="centrado bordecuad" style="width: 70px;" value="0"></td>
                 <!-- <input name="attr_ref_esp" type="number" value="0">
                 <input name="attr_ref" type="number" value="[[(@{agi} [Agi] + @{ast} [Ast] -5 + @{ref_esp} [Otros])]]" disabled> -->
                     <td style="padding-bottom:2px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>     
                     <td style="padding-bottom:2px"><button name="roll_vitalidad" type="roll" value="&{template:@{plantilla}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cs0cf0+@{vit})]]}} {{r2=[[(1d12cs0cf0+@{vit})]]}} {{r3=[[(@{r3}+@{vit})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Vitalidad</button></td>
-                    <td style="padding-bottom:2px"><input name="attr_vit" type="number" class="centrado" style="width: 70px;" value="0"></td>
+                    <td style="padding-bottom:2px"><input name="attr_vit" type="number" class="centrado bordecuad" style="width: 70px;" value="0"></td>
                 <!-- <input name="attr_vit_esp" type="number" value="0">
                 <input name="attr_vit" type="number" value="[[(@{res} [Res] + @{fue} [Fue] - 5 + @{vit_esp} [Otros])]]" disabled> --> 
                     <td style="padding-bottom:2px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
                     <td style="padding-bottom:2px"><button name="roll_voluntad" type="roll" value="&{template:@{plantilla}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cs0cf0+@{vol})]]}} {{r2=[[(1d12cs0cf0+@{vol})]]}} {{r3=[[(@{r3}+@{vol})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Voluntad</button></td>
-                    <td style="padding-bottom:2px"><input name="attr_vol" type="number" class="centrado" style="width: 70px;" value="0"></td>
+                    <td style="padding-bottom:2px"><input name="attr_vol" type="number" class="centrado bordecuad" style="width: 70px;" value="0"></td>
                 <!-- <input name="attr_vol_esp" type="number" value="0">
                 <input name="attr_vol" type="number" value="[[(@{int} [Int] + @{ast} [Ast] - 5 + @{vol_esp} [Otros])]]" disabled> -->
             </tr>
@@ -137,11 +137,11 @@
                     <tr class="centrado">         
                         <td style="padding-bottom:2px"><h4>Estrategia</h4></td> <!-- <input name="attr_est_esp" type="number" value="0"> -->
                         <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
-                        <td style="padding-bottom:2px"><input name="attr_est" type="number" class="centrado" style="width: 70px;" value="0"><!-- <input name="attr_est" type="number" value="[[(@{int} [Int] + @{ast} [Ast] + @{est_esp} [Otros])]]" disabled> --></td>
+                        <td style="padding-bottom:2px"><input name="attr_est" type="number" class="centrado bordecuad" style="width: 70px;" value="0"><!-- <input name="attr_est" type="number" value="[[(@{int} [Int] + @{ast} [Ast] + @{est_esp} [Otros])]]" disabled> --></td>
                         <td style="padding-bottom:2px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                         <td style="padding-bottom:2px"><h4>Espíritu</h4></td> <!-- <input name="attr_esp_esp" type="number" value="0"> -->
                         <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
-                        <td style="padding-bottom:2px"><input name="attr_esp" type="number" class="centrado" style="width: 70px;" value="0"> <!-- <input name="attr_esp" type="number" value="[[(@{res} [Res] + @{int} [Int] + @{esp_esp} [Otros])]]" disabled> --></td>
+                        <td style="padding-bottom:2px"><input name="attr_esp" type="number" class="centrado bordecuad" style="width: 70px;" value="0"> <!-- <input name="attr_esp" type="number" value="[[(@{res} [Res] + @{int} [Int] + @{esp_esp} [Otros])]]" disabled> --></td>
                     </tr>
                     <tr class="negrita smaller">
                         <td class="centrado"><span>(Int+Ast)</span></td>
@@ -161,13 +161,13 @@
         <table style="margin: 0 auto;">
             <tbody>
                     <tr class="centrado">
-                        <td style="padding-bottom:2px"><h4>Energía</h4></td> <!-- <input name="attr_ene_esp" type="number" value="0"> -->
+                        <td style="padding-bottom:2px"><h4>Energía</h4></td>
                         <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
-                        <td style="padding-bottom:2px"> <input name="attr_energia" type="number" class="centrado" style="width: 70px;" value="30"> <!-- <input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled> --></td>
+                        <td style="padding-bottom:2px"> <input name="attr_energia" type="number" class="centrado bordecuad" style="width: 70px;" value="30"> <!-- <input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled> --></td>
                         <td style="padding-bottom:2px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                        <td style="padding-bottom:2px"><h4>Herida</h4></td> <!-- <input name="attr_her_esp" type="number" value="0"> -->
+                        <td style="padding-bottom:2px"><h4>Herida</h4></td>
                         <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
-                        <td style="padding-bottom:2px"><input name="attr_her" type="number" class="centrado" style="width: 70px;" value="0"> <!-- <input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled> --></td> 
+                        <td style="padding-bottom:2px"><input name="attr_her" type="number" class="centrado bordecuad" style="width: 70px;" value="0"> <!-- <input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled> --></td> 
                     </tr>
                     <tr class="negrita smaller">
                         <td class="centrado"><span>(10+10xRes)</span></td>
@@ -200,26 +200,42 @@
 <!-- <textarea style="height: 20px;"></textarea> -->
 
 <p></p>
-<!--SECCIÓN DAÑO-->
-<div class="40porciento">
+
+<!--SECCIÓN DAÑO Y TIPO TIRADA-->
+<div class="40porciento centrado">
         <p class='tipotiradas'>Desventaja <input name="attr_tipotirada" type="radio" value="1" /></p>
         <p class='tipotiradas'>Tirada normal <input name="attr_tipotirada" type="radio" value="2" checked="true"/></p>
         <p class='tipotiradas'>Ventaja <input name="attr_tipotirada" type="radio" value="3" /></p>   
 </div>
-<div class="danios">
-        <div class="col">
-            <span class="negrita">Cansancio</span> <input type="number" name="attr_acansancio"  class="centrado" value="0" />
-            <input type="number" name="attr_acansancio_max" class="oculto"  value="(@{energia})" disabled="true"/>
-        </div>
-        <div class="col">
-            <span class="negrita">Energía actual</span> <input type ="number" name="attr_aeneactual"  class="centrado" value="(@{energia})" />
-            <input type="number" name="attr_aeneactual_max"  class="oculto" value="(@{energia})" disabled="true"/>
-        </div>
-        <div class="col">
-            <span class="negrita">Ptos de trauma</span> <input type ="number" name="attr_apuntostrauma" class="centrado" value="0"/>
-            <input type ="number" name="attr_apuntostrauma_max" class="oculto" value="12" disabled="true"/>
-        </div>     
+<div class="centrado">
+    <table style="margin: 0 auto;">
+        <tbody>
+                <tr class="centrado">
         
+                    <td style="padding-bottom:2px"><input type="number" name="attr_acansancio"  class="centrado bordered" value="0"  style="width: 150px;"/>
+                    <input type="number" name="attr_acansancio_max" class="oculto"  value="(@{energia})" disabled="true"/></td>
+                    <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
+        
+        
+                    <td style="padding-bottom:2px"><input type ="number" name="attr_aeneactual"  class="centrado bordered" value="30"  style="width: 150px;"/>
+                    <input type="number" name="attr_aeneactual_max"  class="oculto" value="(@{energia})" disabled="true"/></td>
+                    <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
+        
+        
+                    <td style="padding-bottom:2px"><input type ="number" name="attr_apuntostrauma" class="centrado bordered" value="0" style="width: 110px;"/>
+                    <input type ="number" name="attr_apuntostrauma_max" class="oculto" value="12" disabled="true"/></td>
+            
+        </tr>
+        <tr class="centrado negrita smaller">
+        
+            <td style="padding-bottom:2px"><span class="negrita">Cansancio</span></td>
+        <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
+        <td style="padding-bottom:2px"><span class="negrita">Energía actual</span></td>
+        <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
+        <td style="padding-bottom:2px"><span class="negrita">Ptos de trauma</span></td>
+    </tr>
+            </tbody>
+        </table>
     </div>
     <hr>
 
@@ -305,22 +321,55 @@
 <!-- ESQUIVA BLOQUEO PELEA-->
     <div class ="3colrow">
         <div class="col centrado">
-            <button name="roll_esquiva" type="roll" value="&{template:@{plantilla}} {{rname=Esquiva}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(@{r3}+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Esquiva</button>
-            <input name="attr_esquiva" type="number"  class="centrado" value="0">
-            <!-- <input name="attr_esquiva" type="number" value="[[(@{rang_esquiva} [Rangos] + @{agi} [Atributo] - 5 + @{esquiva_esp} [Otros])]]" disabled>
-            -->
+            <table style="margin: 0 auto;">
+                <tbody>
+                        <tr class="centrado">
+                            <td style="padding-bottom:2px"><button name="roll_esquiva" type="roll" value="&{template:@{plantilla}} {{rname=Esquiva}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(@{r3}+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Esquiva</button></td>
+                            <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
+                            <td style="padding-bottom:2px"><input name="attr_esquiva" type="number"  class="centrado" value="0" style="width: 70px;"></td>
+                        </tr>
+                        <tr class="negrita smaller">
+                            <td class="centrado"><span>(Agi+esquiva-5)</span></td>
+                            <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
+    
+                            <td class="centrado"><span>Bonificador</span></td>
+                        </tr>
+                </tbody>
+            </table>
             </div>
         <div class="col centrado">
-            <button name="roll_bloqueo" type="roll" value="&{template:@{plantilla}} {{rname=Bloqueo}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{mod=@{bloqueo}}} {{r1=[[(1d12cs0cf0+@{bloqueo})]]}} {{r2=[[(1d12cs0cf0+@{bloqueo})]]}} {{r3=[[(@{r3}+@{bloqueo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Bloqueo</button>    
-            <input name="attr_bloqueo" type="number"  class="centrado" value="0">
-            <!-- <input name="attr_bloqueo" type="number" value="[[(@{rang_bloqueo} [Rangos] + @{des} [Atributo] - 5 + @{bloqueo_esp} [Otros])]]" disabled>
-            -->
+            <table style="margin: 0 auto;">
+                <tbody>
+                        <tr class="centrado">
+                            <td style="padding-bottom:2px"><button name="roll_bloqueo" type="roll" value="&{template:@{plantilla}} {{rname=Bloqueo}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{mod=@{bloqueo}}} {{r1=[[(1d12cs0cf0+@{bloqueo})]]}} {{r2=[[(1d12cs0cf0+@{bloqueo})]]}} {{r3=[[(@{r3}+@{bloqueo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Bloqueo</button></td>
+                            <td style="padding-bottom:2px">&nbsp;&nbsp;</td>    
+                            <td style="padding-bottom:2px"><input name="attr_bloqueo" type="number"  class="centrado" value="0" style="width: 70px;"></td>
+                        </tr>
+                        <tr class="negrita smaller">
+                            <td class="centrado"><span>(Des+bloqueo-5)</span></td>
+                            <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
+    
+                            <td class="centrado"><span>Bonificador</span></td>
+                        </tr>
+                </tbody>
+            </table>
             </div>
         <div class="col centrado">
-            <button name="roll_pelea" type="roll" value="&{template:@{plantilla}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Pelea</button>
-            <input name="attr_pelea" type="number"  class="centrado" value="0">
-            <!-- <input name="attr_pelea" type="number" value="[[(@{rang_pelea} [Rangos] + @{fue} [Atributo] - 5 + @{pelea_esp} [Otros])]]" disabled>
-            -->
+            <table style="margin: 0 auto;">
+                <tbody>
+                        <tr class="centrado">
+                            <td style="padding-bottom:2px"><button name="roll_pelea" type="roll" value="&{template:@{plantilla}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Pelea</button></td>
+                            <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
+                            <td style="padding-bottom:2px"><input name="attr_pelea" type="number"  class="centrado" value="0" style="width: 70px;"></td>
+                        </tr>
+                        <tr class="negrita smaller">
+                            <td class="centrado"><span>(Fue+CsA-5)</span></td>
+                            <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
+    
+                            <td class="centrado"><span>Bonificador</span></td>
+                        </tr>
+                </tbody>
+            </table>
             </div>
     </div>
 
@@ -1198,8 +1247,6 @@
 
 
 
-
-
 <!-- PÁGINA B-->
 <!--SECCIÓN VENTAJAS, TALENTOS, IDEOLOGIA, IDIOMAS, ESTADOS-->
 
@@ -1219,7 +1266,8 @@
             </fieldset>
         </div>
         <br></br>
-        <!--IDEOLOGÍA-->
+
+    <!--IDEOLOGÍA-->
         <h1>Ideología</h1>
     <div class="2colrow">
         <div class="col">
@@ -1281,6 +1329,7 @@
             </p>
         </div>
     </div>
+
     <!--IDIOMAS ESTADO-->
     <div class="2colrow">
         <div class="col">
@@ -1313,90 +1362,114 @@
 <div class="3colrow">
     <div class="col">
         <h1>Equipado</h1>
-        <div class="2colrow">
-            <div class="col">
-                <h5>OBJETO</h5>
-            </div>
-            <div class="col">
-                <h5>Kg</h5>
-            </div>
-        </div>
+        <table style="margin: 0 auto;">
+            <tbody>
+                <tr>
+                <td><h5> OBJETO</h5></td>
+                <td class="centrado"><h5>Kg</h5></td>
+         </tr>
+         <tr>
+            <td><input name="attr_equipado" type="text" style="width: 250;"></td>
+            <td><input name="attr_equipado_peso" type="number"></td>
+        </tr>
+        </tbody>   
+        </table>
         <fieldset class="repeating_equipo">
-            <div class="2colrow">
-                <div class="col">
-                    <input name="attr_equipado" type="text">
-                </div>
-                <div class="col">
-                    <input name="attr_equipado_peso" type="number">
-                </div>
-            </div>
-        </fieldset>
+            <table style="margin: 0 auto;">
+                <tbody>
+            <tr>
+                <td><input name="attr_equipado" type="text" style="width: 250;"></td>
+                <td><input name="attr_equipado_peso" type="number"></td>
+            </tr>   
+        </tbody>   
+    </table>   
+        </fieldset>        
     </div>
+
     <div class="col">
         <h1>En la mochila</h1>
-        <div class="2colrow">
-            <div class="col">
-                <h5>OBJETO</h5>
-            </div>
-            <div class="col">
-                <h5>Kg</h5>
-            </div>
-        </div>
+        <table style="margin: 0 auto;">
+            <tbody>
+                <tr>
+                <td><h5> OBJETO</h5></td>
+                <td class="centrado"><h5>Kg</h5></td>
+         </tr>
+         <tr>
+            <td><input name="attr_mochila" type="text" style="width: 250;"></td>
+            <td><input name="attr_mochila_peso" type="number"></td>
+        </tr>
+        </tbody>   
+        </table>
         <fieldset class="repeating_equipo">
-            <div class="2colrow">
-                <div class="col">
-                    <input name="attr_mochila" type="text">
-                </div>
-                <div class="col">
-                    <input name="attr_mochila_peso" type="number">
-                </div>
-            </div>
-        </fieldset>
+            <table style="margin: 0 auto;">
+                <tbody>
+            <tr>
+                <td><input name="attr_mochila" type="text" style="width: 250;"></td>
+                <td><input name="attr_mochila_peso" type="number"></td>
+            </tr>   
+        </tbody>   
+    </table>   
+        </fieldset> 
     </div>
+
     <div class="col">
         <h1>Otros</h1>
-        <div class="2colrow">
-            <div class="col">
-                <h5>OBJETO</h5>
-            </div>
-            <div class="col">
-                <h5>Kg</h5>
-            </div>
-        </div>
+        <table style="margin: 0 auto;">
+            <tbody>
+                <tr>
+                <td><h5> OBJETO</h5></td>
+                <td class="centrado"><h5>Kg</h5></td>
+         </tr>
+         <tr>
+            <td><input name="attr_otrosobj" type="text" style="width: 250;"></td>
+            <td><input name="attr_otrosobj_peso" type="number"></td>
+        </tr>
+        </tbody>   
+        </table>
         <fieldset class="repeating_equipo">
-            <div class="2colrow">
-                <div class="col">
-                    <input  name="attr_otros" type="text">
-                </div>
-                <div class="col">
-                    <input name="attr_otros_peso" type="number">
-                </div>
-            </div>
-        </fieldset>
+            <table style="margin: 0 auto;">
+                <tbody>
+            <tr>
+                <td><input name="attr_otrosobj" type="text" style="width: 250;"></td>
+                <td><input name="attr_otrosobj_peso" type="number"></td>
+            </tr>   
+        </tbody>   
+    </table>   
+        </fieldset>        
     </div>
+
 </div>
-<br></br>
 <hr>
+<p></p>
+<span class="negrita larger">PESO TOTAL </span><input name="attr_pesobase" type="number" class="bordered negrita larger" style="width: 100;">
+<br></br>
+<p></p>
+<div class="arrow-right"></div>
+<hr>
+
 <!--CARGA TRANSPORTABLE Y DINERO-->
-    <div class="ataques">
-        <h1>Estado de Carga</h1>
-        <span class="negrita">Peso base</span><input name="attr_pesobase" type="number">
-        <p></p><input name="attr_carga" type="radio" value="99" /> <span class="negrita">Límite (Caes derribado)</span> 
-        <p></p><input name="attr_carga" type="radio" value="5" /> <span class="negrita">Exceso (-25 ene y pen. por carga -5)</span> 
-        <p></p><input name="attr_carga" type="radio" value="3" /> <span class="negrita">Carga pesada (-15 ene y pen. por carga -3)</span> 
-        <p></p><input name="attr_carga" type="radio" value="1" /> <span class="negrita">Carga media (-5 ene y pen. por carga -1)</span> 
-        <p></p><input name="attr_carga" type="radio" value="0" checked="true" /> <span class="negrita">Carga ligera (Sin modificadores)</span> 
-        <p></p><input name="attr_carga" type="radio" value="999" /> <span class="negrita">Sin carga (+1 movilidad)</span> 
+    <div class="60porciento">
+        <h1>Estado de Carga</h1> 
+        <p></p><span class="negrita smaller">x12 </span><input name="attr_carga12" type="number" disabled="true" value="(@{carga6}+@{carga6})"><input name="attr_carga" type="radio" value="99" /> <span class="negrita">Límite (Caes derribado)</span> 
+        <p></p><span class="negrita smaller">x12 </span><input name="attr_carga12" type="number" disabled="true" value="(@{carga6}+@{carga6})"><input name="attr_carga" type="radio" value="5" /> <span class="negrita">Exceso (-25 ene y pen. por carga -5)</span> 
+        <p></p><span class="negrita smaller">x6 </span><input name="attr_carga6" type="number" disabled="true" value="(@{carga3}+@{carga3})"><input name="attr_carga" type="radio" value="3" /> <span class="negrita">Carga pesada (-15 ene y pen. por carga -3)</span> 
+        <p></p><span class="negrita smaller">x3 </span><input name="attr_carga3" type="number" disabled="true" value="(@{carga1}+@{carga2})"><input name="attr_carga" type="radio" value="1" /> <span class="negrita">Carga media (-5 ene y pen. por carga -1)</span> 
+        <p></p><span class="negrita smaller">x2 </span><input name="attr_carga2" type="number" disabled="true" value="(@{carga1}+@{carga1})"><input name="attr_carga" type="radio" value="0" checked="true" /> <span class="negrita">Carga ligera (Sin modificadores)</span> 
+        <p></p><span class="negrita smaller">x1 </span><input name="attr_carga1" type="number"><input name="attr_carga" type="radio" value="999" /> <span class="negrita">Sin carga (+1 movilidad)</span> 
+        <p></p><span class="negrita smaller">Carga Transportable</span>
     </div>
-    <div class="desvios">
+    <div>
         <h1>Dinero</h1>
+        <div class="centrado">
         <p class="negrita">ORO (1 oro = 30 pl)</p>
-        <input name="attr_monedas_oro" type="number">
+        <input name="attr_monedas_oro" type="number" style="width: 100px;">
+        <p></p>
         <p class="negrita">PLATA (1 pl = 30 br)</p>
-        <input name="attr_monedas_plata" type="number">
+        <input name="attr_monedas_plata" type="number" style="width: 100px;">
+        <p></p>
         <p class="negrita">BRONCE</p>
-        <input name="attr_monedas_bronce" type="number">
-        
+        <input name="attr_monedas_bronce" type="number" style="width: 100px;">
+        </div>
     </div>
 
 
