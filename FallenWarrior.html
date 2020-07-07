@@ -208,22 +208,21 @@
 </div>
 <div class="danios">
         <div class="col">
-            <span class="negrita">Cansancio</span> <input type="number" name="cansancio"  class="centrado" value="0" />
+            <span class="negrita">Cansancio</span> <input type="number" name="attr_cansancio"  class="centrado" value="0" />
         </div>
         <div class="col">
-            <span class="negrita">Daño Vital</span> <input type ="number" name="danovital"  class="centrado" value="0" />
+            <span class="negrita">Daño Vital</span> <input type ="number" name="attr_danovital"  class="centrado" value="0" />
         </div>
         <div class="col">
-            <span class="negrita">Puntos de trauma</span> <input type ="number" name="puntostrauma"  class="centrado" value="0" />
+            <span class="negrita">Puntos de trauma</span> <input type ="number" name="attr_puntostrauma" class="centrado" value="0" max="12"/>
         </div>     
+        <input name="attr_barradevida" class="oculto" type="number" value="(@{ene} - @{danovital})" style="width: 50px;" disabled="true">
     </div>
     <hr>
 
 
-<!--SECCIÓN MAGOS-->
-<!-- <div>-->
-<!--<input type="checkbox" class="sheet-toggle-show" /><span>Mostrar magia</span>
-<div class="sheet-body"> -->
+
+
 <input type="checkbox" class="tipodeficha" name="tipodeficha" value="1">
 <div class="ficha_luchador">
   Ficha luchador
@@ -232,6 +231,7 @@
   Ficha mago
 </div>
 
+<!--SECCIÓN MAGOS-->
 <div class="ficha_mago">
     <div class="2colrow">
         <div class="col centrado">
@@ -271,6 +271,7 @@
            </select>
         </div>
     </div>
+    <br></br>
     <div class="3colrow">
         <div class="col centrado">
             <button name="roll_intensidad" type="roll" value="&{template:@{plantilla}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{conjuro=Intensidad}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" > Intensidad</button>
@@ -723,7 +724,7 @@
 <div class="ficha_luchador">
 <div class="3colrow">
     <div class="col"> <!--Habilidades Combate-->
-        <h3>Combate</h3>
+        <h3 class="centrado">Combate</h3>
     <table>
         <tbody>
 
@@ -750,7 +751,9 @@
         
         </tr><tr><td style="padding-bottom:5px"><span>Arma de fuego</span></td><td style="padding-bottom:5px">&nbsp;</td><td style="padding-bottom:5px"> <input name="attr_rang_armasfuego" type="number" value="0" /></td>
         
-       </tr><tr><td style="padding-bottom:5px"><span></span></td><td style="padding-bottom:5px">&nbsp;</td><td style="padding-bottom:5px"> <input name="attr_rang_" type="number" value="0" /></td>
+        </tr><tr><td style="padding-bottom:5px"><span></span></td><td style="padding-bottom:5px">&nbsp;</td><td style="padding-bottom:5px"> <input name="attr_rang_" type="number" value="0" /></td>
+        
+        </tr><tr><td style="padding-bottom:5px"><span></span></td><td style="padding-bottom:5px">&nbsp;</td><td style="padding-bottom:5px"> <input name="attr_rang_" type="number" value="0" /></td>
         
         </tr><tr><td style="padding-bottom:5px"><span></span> </td><td style="padding-bottom:5px">&nbsp;</td><td style="padding-bottom:5px"><input name="attr_rang_" type="number" value="0" /></td>  
         </tbody>
@@ -758,7 +761,7 @@
     </div>
     
     <div class="col">
-        <h3>Comunes</h3>
+        <h3 class="centrado">Comunes</h3>
         <!-- <span>Habilidad (atributo)/ Rangos / Mod. Especial / Hab. Final + Roll</span> -->
         <table>
             <tbody>
@@ -852,7 +855,7 @@
     </div>
 
     <div class="col">
-        <h3>Raras</h3>
+        <h3 class="centrado">Raras</h3>
         <!-- <span>Habilidad (atributo)/ Rangos / Mod. Especial / Hab. Final + Roll</span> <p></p> -->
         <table>
             <tbody>
@@ -959,7 +962,7 @@
 <div class="ficha_mago">
 <div class="3colrow">
     <div class="col"> <!--Habilidades Combate-->
-        <h3>Combate</h3>
+        <h3 class="centrado">Combate</h3>
     <table>
         <tbody>
        
@@ -979,13 +982,15 @@
         
         </tr><tr><td style="padding-bottom:5px"><span></span></td><td style="padding-bottom:5px">&nbsp;</td><td style="padding-bottom:5px"> <input name="attr_rang_" type="number" value="0" /></td>
         
+        </tr><tr><td style="padding-bottom:5px"><span></span></td><td style="padding-bottom:5px">&nbsp;</td><td style="padding-bottom:5px"> <input name="attr_rang_" type="number" value="0" /></td>
+        
         </tr><tr><td style="padding-bottom:5px"><span></span> </td><td style="padding-bottom:5px">&nbsp;</td><td style="padding-bottom:5px"><input name="attr_rang_" type="number" value="0" /></td>  
         </tbody>
     </table>
     </div>
     
     <div class="col">
-        <h3>Comunes</h3>
+        <h3 class="centrado">Comunes</h3>
         <!-- <span>Habilidad (atributo)/ Rangos / Mod. Especial / Hab. Final + Roll</span> -->
         <table>
             <tbody>
@@ -1079,7 +1084,7 @@
     </div>
 
     <div class="col">
-        <h3>Raras</h3>
+        <h3 class="centrado">Raras</h3>
         <!-- <span>Habilidad (atributo)/ Rangos / Mod. Especial / Hab. Final + Roll</span> <p></p> -->
         <table>
             <tbody>
@@ -1199,13 +1204,15 @@
 <div class="sheet-block-b">
     <div class="2colrow">
 
-    <!-- Ventajas, ideología, idiomas y estados-->
+    <!-- RASGOS, ideología, idiomas y estados-->
     <div class="col">
         <!--RASGOS-->
         <h1>Rasgos</h1>
         <div>
+            <input name="attr_rasgo_name" type="text" class="negrita" placeholder="Rasgo" style="width: 90px;"><input name="attr_rasgo_desc" type="text" placeholder="Descripción" style="width: 250px;">
+            
             <fieldset class="repeating_rasgos">
-                
+                <p></p>
                 <input name="attr_rasgo_name" type="text" class="negrita" placeholder="Rasgo" style="width: 90px;"><input name="attr_rasgo_desc" type="text" placeholder="Descripción" style="width: 250px;">
             </fieldset>
         </div>
@@ -1272,7 +1279,7 @@
             </p>
         </div>
     </div>
-
+    <!--IDIOMAS ESTADO-->
     <div class="2colrow">
         <div class="col">
             <h1>Idiomas</h1>
@@ -1284,16 +1291,22 @@
         </div>
     </div>
     </div>
+
     <!--TALENTOS-->
     <div class="col">
         <h1>Talentos</h1>
+        <input name="attr_talento_name" type="text" class="negrita" placeholder="Talento" style="width: 90px;"><input name="attr_talento_desc" type="text" placeholder="Descripción" style="width: 250px;">
+        
         <fieldset class="repeating_talentos">
+            <p></p>
             <input name="attr_talento_name" type="text" class="negrita" placeholder="Talento" style="width: 90px;"><input name="attr_talento_desc" type="text" placeholder="Descripción" style="width: 250px;">
         </fieldset>
     </div>
 </div>
+
 <div class="arrow-left"></div>
 <hr>
+
 <!--EQUIPO-->
 <div class="3colrow">
     <div class="col">
