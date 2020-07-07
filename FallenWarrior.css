@@ -366,6 +366,11 @@ h1 {
     font-variant: small-caps;
 }
 
+.sheet-oculto
+{
+    display: none;
+}
+
 hr {
     clear: both;
     visibility: hidden;
