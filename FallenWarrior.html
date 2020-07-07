@@ -163,7 +163,7 @@
                     <tr class="centrado">
                         <td style="padding-bottom:2px"><h4>Energía</h4></td> <!-- <input name="attr_ene_esp" type="number" value="0"> -->
                         <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
-                        <td style="padding-bottom:2px"> <input name="attr_ene" type="number" class="centrado" style="width: 70px;" value="0"> <!-- <input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled> --></td>
+                        <td style="padding-bottom:2px"> <input name="attr_energia" type="number" class="centrado" style="width: 70px;" value="0"> <!-- <input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled> --></td>
                         <td style="padding-bottom:2px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                         <td style="padding-bottom:2px"><h4>Herida</h4></td> <!-- <input name="attr_her_esp" type="number" value="0"> -->
                         <td style="padding-bottom:2px">&nbsp;&nbsp;</td>
@@ -209,14 +209,18 @@
 <div class="danios">
         <div class="col">
             <span class="negrita">Cansancio</span> <input type="number" name="attr_cansancio"  class="centrado" value="0" />
+            <input type="number" name="attr_cansancio_max"  class="oculto" value="(@{energia})" disabled="true"/>
         </div>
         <div class="col">
             <span class="negrita">Daño Vital</span> <input type ="number" name="attr_danovital"  class="centrado" value="0" />
+            
         </div>
         <div class="col">
-            <span class="negrita">Puntos de trauma</span> <input type ="number" name="attr_puntostrauma" class="centrado" value="0" max="12"/>
+            <span class="negrita">Puntos de trauma</span> <input type ="number" name="attr_puntostrauma" class="centrado" value="0"/>
+            <input type ="number" name="attr_puntostrauma_max" class="oculto" value="12" disabled="true"/>
         </div>     
-        <input name="attr_barradevida" class="oculto" type="number" value="(@{ene} - @{danovital})" style="width: 50px;" disabled="true">
+        <input name="attr_barradevida" type="number" value="(@{energia} - @{danovital})" style="width: 50px;" disabled="true">
+        <input name="attr_barradevida_max"  type="number" value="(@{energia})" disabled="true">
     </div>
     <hr>
 
