@@ -357,9 +357,26 @@ h1 {
     font-weight: bold;
 }
 
+.sheet-bordered
+{    
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 6px;      
+}
+
+.sheet-bordecuad
+{    
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 0px;   
+}
+
 .sheet-smaller
 {
     font-size: smaller;
+}
+
+.sheet-larger
+{
+    font-size: larger;
 }
 
 .sheet-versalitas{
@@ -442,14 +459,6 @@ input.sheet-toggle-hide:checked ~ div.sheet-body {
 .sheet-tipodeficha:checked ~ .sheet-ficha_luchador {
   display: none;
 }
-
-
-
-.sheet-danios{
-    width: 50%;
-    float: right;
-}
-
 
 
 button[type=roll],
