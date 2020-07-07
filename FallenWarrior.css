@@ -436,6 +436,11 @@ hr {
     width: 20%;
     }
 
+.sheet-30porcientoder{
+    float: right;
+    width: 30%;
+    }
+
 .sheet-40porciento{
     float: left;
     width: 40%;
@@ -446,9 +451,9 @@ hr {
     width: 60%;
     }
 
-.sheet-75porciento{
+.sheet-70porciento{
     float: left;
-    width: 75%;
+    width: 70%;
     }    
     
 
