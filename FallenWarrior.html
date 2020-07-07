@@ -3,10 +3,10 @@
 
 <!-- SWAP DE PÁGINAS-->
 <input type="checkbox" class="sheet-block-switch" name="attr_block_switch" value="1">
-<div class="sheet-block-a">
+<div class="sheet-block-a negrita">
   Hoja de combate
 </div>
-<div class="sheet-block-b">
+<div class="sheet-block-b negrita">
   Hoja de talentos y equipo
 </div>
 
@@ -204,9 +204,9 @@
 
 <!--SECCIÓN DAÑO Y TIPO TIRADA-->
 <div class="40porciento centrado">
-        <p class='tipotiradas'>Desventaja <input name="attr_tipotirada" type="radio" value="1" /></p>
-        <p class='tipotiradas'>Tirada normal <input name="attr_tipotirada" type="radio" value="2" checked="true"/></p>
-        <p class='tipotiradas'>Ventaja <input name="attr_tipotirada" type="radio" value="3" /></p>   
+        <p class='tipotiradas negrita'>Desventaja <input name="attr_tipotirada" type="radio" value="1" /></p>
+        <p class='tipotiradas negrita'>Tirada normal <input name="attr_tipotirada" type="radio" value="2" checked="true"/></p>
+        <p class='tipotiradas negrita'>Ventaja <input name="attr_tipotirada" type="radio" value="3" /></p>   
 </div>
 <div class="centrado">
     <table style="margin: 0 auto;">
@@ -244,11 +244,13 @@
 
 
 <input type="checkbox" class="tipodeficha" name="tipodeficha" value="1">
-<div class="ficha_luchador">
+<div class="ficha_luchador negrita">
   Ficha luchador
+  <p></p>
 </div>
-<div class="ficha_mago">
+<div class="ficha_mago negrita">
   Ficha mago
+  <p></p>
 </div>
 
 <!--SECCIÓN MAGOS-->
@@ -438,7 +440,7 @@
 
     <!--ARMAS-->                
         <!-- ATAQUE 1-->
-                <div class="75porciento">
+                <div class="70porciento">
                     <input name="attr_melee_nombrearma" type="text"  placeholder=" Nombre del arma" style="width: 165px;" />
                     <span>&nbsp;&nbsp;&nbsp;</span>
                     <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{rname=Desvío}} {{arma=@{melee_nombrearma}}} {{mod=@{melee_desvio}}} {{r1=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r2=[[(1d12cs0cf0+@{melee_desvio})]]}} {{r3=[[(@{r3}+@{melee_desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío</button>
@@ -500,16 +502,34 @@
                             <td class="centrado"><span> Especial</span></td>                            
                         </tr>
                    </tbody>
-                </table>
-                <hr>      
+                </table>      
                 <br>                           
                 </div>            
             
-               
+                <div class="centrado 30porcientoder ficha_mago">
+                    <p class="negrita">Conjuros</p>
+                    <p><input name="attr_conj1" type="text" class="bordetop"></p>
+                    <p><input name="attr_conj2" type="text" ></p>
+                    <p><input name="attr_conj3" type="text" ></p>
+                    <p><input name="attr_conj4" type="text" class="bordebot"></p>
+                </div>
+
+                <div class="centrado 30porcientoder ficha_luchador">
+                    <p class="negrita">Acciones y talentos</p>
+                    <p><input name="attr_acc1" type="text" class="bordetop"></p>
+                    <p><input name="attr_acc2" type="text" ></p>
+                    <p><input name="attr_acc3" type="text" ></p>
+                    <p><input name="attr_acc4" type="text" ></p>
+                    <p><input name="attr_acc5" type="text" ></p>
+                    <p><input name="attr_acc6" type="text" ></p>
+                    <p><input name="attr_acc7" type="text" ></p>
+                    <p><input name="attr_acc8" type="text" ></p>
+                    <p><input name="attr_acc9" type="text" class="bordebot"></p>
+                </div>
             
 
         <!-- ATAQUE 2-->
-                <div class="75porciento ficha_luchador">
+                <div class="70porciento ficha_luchador">
                      <input name="attr_melee_nombrearma2" type="text" placeholder=" Nombre del arma" style="width: 165px;" />
                      <span>&nbsp;&nbsp;&nbsp;</span>
                      <button name="roll_desvio2" type="roll" value="&{template:@{plantilla}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{rname=Desvío}} {{arma=@{melee_nombrearma2}}} {{mod=@{melee_desvio2}}} {{r1=[[(1d12cs0cf0+@{melee_desvio2})]]}} {{r2=[[(1d12cs0cf0+@{melee_desvio2})]]}} {{r3=[[(@{r3}+@{melee_desvio2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío</button>
@@ -570,8 +590,7 @@
                             
                         </tr>
                    </tbody>
-                </table>
-                <hr>      
+                </table>     
                 <br>                              
                 </div>
                             
@@ -579,7 +598,7 @@
             
     
     <!-- ATAQUE 3-->           
-                <div class="75porciento ficha_luchador">
+                <div class="70porciento ficha_luchador">
                     <input name="attr_dist_nombrearma" type="text" placeholder=" Nombre del arma" style="width: 165px;" />
                     <span>&nbsp;&nbsp;&nbsp;</span>
                     <button name="roll_dist_desvio" type="roll" value="&{template:@{plantilla}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{rname=Desvío}} {{arma=@{dist_nombrearma}}} {{mod=@{dist_desvio}}} {{r1=[[(1d12cs0cf0+@{dist_desvio})]]}} {{r2=[[(1d12cs0cf0+@{dist_desvio})]]}} {{r3=[[(@{r3}+@{dist_desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío</button>
@@ -648,8 +667,7 @@
                     </tr>
                 
             </tbody>
-         </table>
-         <hr>      
+         </table>     
          <br>
                 </div>
 
@@ -657,7 +675,7 @@
             
             
      <!-- ATAQUE SIN ARMAS-->
-        <div class="75porciento">
+        <div class="70porciento">
             <input name="attr_sinarmas_nombrearma" type="text" placeholder=" Nombre del arma" style="width: 165px;" />
             <span>&nbsp;&nbsp;&nbsp;</span>
             <button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{rname=Desvío sin armas}} {{defensa= Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{mod=@{sinarmas_desvio}}} {{r1=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r2=[[(1d12cs0cf0+@{sinarmas_desvio})]]}} {{r3=[[(@{r3}+@{sinarmas_desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío sin armas</button>
@@ -1507,7 +1525,7 @@
 <hr>
 
 <!--CARGA TRANSPORTABLE Y DINERO-->
-    <div class="75porciento">
+    <div class="70porciento">
         <h1>Estado de Carga</h1> 
         <p></p><span class="negrita smaller">x12 </span><input name="attr_carga12" type="number" disabled="true" value="(@{carga6}+@{carga6})"><input name="attr_carga" type="radio" value="99" /> <span class="negrita">Límite (Caes derribado)</span> 
         <p></p><span class="negrita smaller">x12 </span><input name="attr_carga12" type="number" disabled="true" value="(@{carga6}+@{carga6})"><input name="attr_carga" type="radio" value="5" /> <span class="negrita">Exceso (-25 ene y pen. por carga -5)</span> 
