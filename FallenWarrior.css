@@ -338,7 +338,9 @@ span.sheet-dee {
 h1 {
     margin-bottom: 0.3em;
     text-align: center;
-    font-variant: small-caps
+    font-variant: small-caps;
+    
+    
 }
 
 
@@ -351,15 +353,19 @@ h1 {
     text-align: center;
 }
 
+.sheet-textoderecha
+{
+    text-align: right;
+}
+
 .sheet-negrita
 {
     font-weight: bold;
 }
 
-.sheet-bordered
-{    
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 6px;      
+.sheet-inline
+{
+    display:inline;
 }
 
 .sheet-dibujito{
@@ -379,12 +385,19 @@ h1 {
     top: 19px;   
 }
 
+.sheet-rango{
+    max-width: 2em;  
+    position: relative;
+    top: 0px;   
+}
+
 input {
     border-top: 0px solid rgb(0, 0, 0);
     border-left: 0px solid rgb(0, 0, 0);
     border-right: 0px solid rgb(0, 0, 0);
     border-radius: 0px; 
     background-color: transparent;
+    
 }
 
 select {
@@ -393,13 +406,21 @@ select {
     border-right: 0px solid rgb(0, 0, 0);
     border-radius: 0px; 
     background-color: transparent;
-    height: 20px !important;
+    
+    vertical-align: middle !important;
+    margin-bottom: 0 !important;
 }
 
 .sheet-bordecuad
 {    
     border: 2px solid rgb(0, 0, 0);
     border-radius: 0px;   
+}
+
+.sheet-bordered
+{    
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 6px;      
 }
 
 .sheet-bordetopbot
@@ -426,6 +447,24 @@ select {
     font-size: smaller;
 }
 
+.sheet-dadito {
+    font-family: dicefontd12; 
+    font-size: large;
+    font-weight: bold;
+}
+
+.sheet-fuentehab
+{
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: small !important;
+    font-weight: bold !important;
+}
+
+.sheet-arial
+{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
 .sheet-larger
 {
     font-size: larger;
@@ -447,8 +486,17 @@ hr {
     margin-bottom: 0.25em;
 }
 
-.sheet-col{
-    margin: 0px !important;
+/*.sheet-col{
+    margin: 2px !important;
+    } */
+
+.sheet-floatright {
+    float: right;  
+    }
+
+.sheet-15porciento{
+    float: left;
+    width: 20%;
     }
 
 .sheet-20porciento{
@@ -456,10 +504,25 @@ hr {
     width: 20%;
     }
 
-.sheet-30porcientoder{
+.sheet-25porciento{
+    float: left;
+    width: 25%;
+    }
+
+.sheet-25porcientoder{
     float: right;
     width: 25%;
     }
+
+.sheet-30porciento{
+    float: left;
+    width: 30%;
+    } 
+    
+.sheet-35porciento{
+    float: left;
+    width: 35%;
+    } 
 
 .sheet-40porciento{
     float: left;
@@ -473,8 +536,13 @@ hr {
 
 .sheet-70porciento{
     float: left;
+    width: 70%;
+    }   
+
+.sheet-75porciento{
+    float: left;
     width: 75%;
-    }    
+    }
     
 
 .sheet-arrow-right
@@ -528,8 +596,7 @@ button[type=compendium],
 button[type=cancel],
 button[type=submit],
 button[type=finish],
-button[type=back],
-label{
+button[type=back] {
     background-color: transparent;
     border: none;
     line-height: 12px;
@@ -543,9 +610,11 @@ label{
     
 }
 
-button[type=roll]::before{
+button[type=roll]::before {
     content: " " !important;
 }
+
+
 /*quitar los dados
 button[type=roll]::before{
     content: " " !important;
