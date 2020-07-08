@@ -639,10 +639,76 @@ button[type=roll]::before {
 }
 
 
+
+/*-----radio boxes-----*/
+
+/* -----Hide actual radio----- */
+input.sheet-normal[type="radio"]
+{
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* -----Fake radio----- */
+input.sheet-normal[type="radio"] + span::before
+{
+    margin-right: 8px;
+    border: solid 1px #a8a8a8;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    
+    
+    
+    color:black;
+    content: "•";
+    width: 12px;
+    height: 12px;
+    font-size: 3em;
+    
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/* -----Remove dot from all radios _after_ selected one----- */
+input.sheet-normal[type="radio"]:checked ~ input.sheet-normal[type="radio"] + span::before
+{    
+    content: "";
+}
+
+/*------------empty traits-----------*/
+input.sheet-zero[type="radio"]:checked + span::before
+{
+    opacity: 0;
+}
+
+input.sheet-zero[type="radio"]:hover + span::before
+{
+    opacity: 1;
+}
+
+input.sheet-zero[type="radio"] + span::before
+{
+    font-size: 12px;
+    content: "✖";
+    opacity: 0.25;
+}
+
+
+
+
+
 /*quitar los dados
 button[type=roll]::before{
     content: " " !important;
 }
 */
-
-
