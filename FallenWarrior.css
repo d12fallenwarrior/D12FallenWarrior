@@ -362,6 +362,23 @@ h1 {
     border-radius: 6px;      
 }
 
+.sheet-dibujito{
+    height: 75px;
+    width: 75px;
+    margin-right: -9px !important;
+    margin-left: 0px;
+    position: relative;
+    top: -11px;   
+}
+.sheet-dibujitoarm{
+    height: 75px;
+    width: 75px;
+    margin-right: -9px !important;
+    margin-left: 0px;
+    position: relative;
+    top: 19px;   
+}
+
 input {
     border-top: 0px solid rgb(0, 0, 0);
     border-left: 0px solid rgb(0, 0, 0);
@@ -430,6 +447,9 @@ hr {
     margin-bottom: 0.25em;
 }
 
+.sheet-col{
+    margin: 0px !important;
+    }
 
 .sheet-20porciento{
     float: left;
@@ -438,7 +458,7 @@ hr {
 
 .sheet-30porcientoder{
     float: right;
-    width: 30%;
+    width: 25%;
     }
 
 .sheet-40porciento{
@@ -453,7 +473,7 @@ hr {
 
 .sheet-70porciento{
     float: left;
-    width: 70%;
+    width: 75%;
     }    
     
 
@@ -520,6 +540,16 @@ label{
     font-weight: bold;
     text-align:left;
     position:relative;
+    
 }
+
+button[type=roll]::before{
+    content: " " !important;
+}
+/*quitar los dados
+button[type=roll]::before{
+    content: " " !important;
+}
+*/
 
 
