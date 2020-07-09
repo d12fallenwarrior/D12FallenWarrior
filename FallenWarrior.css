@@ -660,18 +660,17 @@ input.sheet-normal[type="radio"]
 input.sheet-normal[type="radio"] + span::before
 {
     margin-right: 5px;
-    border: solid 1px #a8a8a8;
+    border: solid 2px black;
     line-height: 14px;
     text-align: center;
     display: inline-block;
     vertical-align: middle;
     
     
-    
     color:black;
     content: "•";
-    width: 12px;
-    height: 12px;
+    width: 13px;
+    height: 13px;
     font-size: 3em;
     
     -moz-border-radius: 50%;
