@@ -659,7 +659,7 @@ input.sheet-normal[type="radio"]
 /* -----Fake radio----- */
 input.sheet-normal[type="radio"] + span::before
 {
-    margin-right: 8px;
+    margin-right: 5px;
     border: solid 1px #a8a8a8;
     line-height: 14px;
     text-align: center;
