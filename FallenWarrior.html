@@ -1440,66 +1440,72 @@
 
     <!--IDEOLOGÍA-->
         <h1>Ideología</h1>
-    <div class="2colrow">
-        <div class="col">
-            <p class="negrita">
-                Compañerismo 
-                <!--
-                <input name="companerismo" type="radio" value="1"> 
-                <input name="companerismo" type="radio" value="2"> 
-                <input name="companerismo" type="radio" value="3"> 
-                <input name="companerismo" type="radio" value="4"> 
-                --> 
-            </p>
-            <p class="negrita">
-                Honor
-                <!--
-                <input name="honor" type="radio" value="1"> 
-                <input name="honor" type="radio" value="2"> 
-                <input name="honor" type="radio" value="3"> 
-                <input name="honor" type="radio" value="4"> 
-                --> 
-            </p>
-            <p class="negrita">
-                Pacifismo 
-                <!--
-                <input name="pacifismo" type="radio" value="1"> 
-                <input name="pacifismo" type="radio" value="2"> 
-                <input name="pacifismo" type="radio" value="3"> 
-                <input name="pacifismo" type="radio" value="4"> 
-                --> 
-            </p>
-        </div>
-        <div class="col">
-            <p class="negrita">
-                Antimagia
-                <!--
-                <input name="antimagia" type="radio" value="1"> 
-                <input name="antimagia" type="radio" value="2"> 
-                <input name="antimagia" type="radio" value="3"> 
-                <input name="antimagia" type="radio" value="4">
-                --> 
-            </p>
-            <p class="negrita">
-                Superstición
-                <!--
-                <input name="honor" type="radio" value="1"> 
-                <input name="honor" type="radio" value="2"> 
-                <input name="honor" type="radio" value="3"> 
-                <input name="honor" type="radio" value="4"> 
-                --> 
-            </p>
-            <p>
-                <input name="attr_ideologiacustom" type="text" class="negrita" style="width: 80px;">
-                <!--
-                <input name="ideo" type="radio" value="1"> 
-                <input name="ideo" type="radio" value="2"> 
-                <input name="ideo" type="radio" value="3"> 
-                <input name="ideo" type="radio" value="4"> 
-                --> 
-            </p>
-        </div>
-    </div>
+        <table style="margin: 0 auto;">
+            <tbody class="negrita">
+
+            <tr>
+                <td style="padding-bottom:10px; padding-top:5px">Compañerismo</td>
+                <td>    
+                <input type="radio" class="sheet-normal sheet-zero" name="attr_companerismo" value="0" checked="checked" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_companerismo" value="1" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_companerismo" value="2" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_companerismo" value="3" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_companerismo" value="4" /><span></span>
+                </td>                       
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            
+                <td style="padding-bottom:10px; padding-top:5px">Antimagia</td>
+                <td>
+                <input type="radio" class="sheet-normal sheet-zero" name="attr_antimagia" value="0" checked="checked" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_antimagia" value="1" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_antimagia" value="2" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_antimagia" value="3" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_antimagia" value="4" /><span></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom:5px; padding-top:5px">Honor</td>
+                <td>
+                <input type="radio" class="sheet-normal sheet-zero" name="attr_honor" value="0" checked="checked" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_honor" value="1" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_honor" value="2" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_honor" value="3" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_honor" value="4" /><span></span>
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                <td style="padding-bottom:5px; padding-top:5px">Pacifismo</td>
+                <td> 
+                <input type="radio" class="sheet-normal sheet-zero" name="attr_pacifismo" value="0" checked="checked" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_pacifismo" value="1" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_pacifismo" value="2" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_pacifismo" value="3" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_pacifismo" value="4" /><span></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom:5px; padding-top:5px">Superstición</td>
+                <td>
+                <input type="radio" class="sheet-normal sheet-zero" name="attr_supersticion" value="0" checked="checked" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_supersticion" value="1" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_supersticion" value="2" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_supersticion" value="3" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_supersticion" value="4" /><span></span>
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                <td style="padding-bottom:5px; padding-top:5px"><input name="attr_otraideologia" type="text" placeholder="Otra" class="negrita" style="width: 80px;"></td>
+                <td>
+                <input type="radio" class="sheet-normal sheet-zero" name="attr_otraideologia" value="0" checked="checked" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_otraideologia" value="1" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_otraideologia" value="2" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_otraideologia" value="3" /><span></span>
+                <input type="radio" class="sheet-normal" name="attr_otraideologia" value="4" /><span></span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    
 
     <!--IDIOMAS ESTADO-->
     <div class="2colrow">
