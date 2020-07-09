@@ -217,6 +217,7 @@
         <p class='tipotiradas negrita'>Normal <input name="attr_tipotirada" type="radio" value="2" checked="true"/></p>
         <p class='tipotiradas negrita'>Ventaja <input name="attr_tipotirada" type="radio" value="3" /></p>   
 </div>
+
 <div class="centrado">
     <table style="margin: 0 auto;">
         <tbody>
@@ -324,7 +325,7 @@
                         <tr class="centrado bordetop">
             <td class="bordebot"><span class="negrita larger">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Éter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
             <td>&nbsp;&nbsp;</td>
-            <td class="bordebot"><select name="attr_eter" type="text" style="width: 80px;">
+            <td class="bordebot"><select name="attr_eter" type="text" style="width: 75px;">
                 <option value="de fuego" selected="selected">Fuego</option>
                 <option value="de agua">Agua</option>
                 <option value="de aire">Aire</option>
@@ -332,7 +333,7 @@
                 <option value="oscuro">Oscuro</option>
             </select></td>
             <td>&nbsp;&nbsp;</td>
-            <td class="bordebot"><select name="attr_eter2" type="text" style="width: 80px;">
+            <td class="bordebot"><select name="attr_eter2" type="text" style="width: 75px;">
                 <option value=" " selected="selected">-</option>
                 <option value=" y fuego">Fuego</option>
                 <option value=" y agua">Agua</option>
@@ -343,9 +344,9 @@
            <tr class="negrita smaller">
             <td class="centrado"><span></span></td>
             <td>&nbsp;&nbsp;</td>    
-            <td class="centrado"><span>Elemento</span></td>
+            <td class="centrado"><span>&nbsp;&nbsp;Elemento&nbsp;&nbsp;</span></td>
             <td>&nbsp;&nbsp;</td>    
-                <td class="centrado"><span>Elemento 2</span></td>
+                <td class="centrado"><span>&nbsp;&nbsp;Elemento 2&nbsp;&nbsp;</span></td>
         </tr>
                 </tbody>
             </table>
@@ -489,7 +490,7 @@
                     <table style="display:inline">
                     <tbody>
                         <tr class="bordetop">                            
-                            <td class="centrado bordebot"><button name="roll_ataque1" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(@{r3}+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 1</button></td>
+                            <td class="centrado bordebot"><button name="roll_ataque1" type="roll" value="&{template:@{plantilla}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(@{r3}+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 1</button></td>
                             <td>&nbsp;</td>
                             <td class="centrado bordebot"><input name="attr_ataque1" type="number"  style="width: 70px;" class="centrado" value="0"></td>
                             <td>&nbsp;</td>
@@ -588,7 +589,7 @@
                     <table style="display:inline">
                     <tbody>
                         <tr class="bordetop">                            
-                            <td class="centrado bordebot"><button name="roll_ataque2" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{dmg2} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can2}}} {{rname=Ataque2}} {{mod=@{ataque2}}} {{arma=@{nombrearma2}}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(@{r3}+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 2</button>
+                            <td class="centrado bordebot"><button name="roll_ataque2" type="roll" value="&{template:@{plantilla}} {{ataque=Daño Vital @{dmg2} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can2}}} {{rname=Ataque2}} {{mod=@{ataque2}}} {{arma=@{nombrearma2}}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(@{r3}+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 2</button>
                             </td>
                             <td>&nbsp;</td>
                             <td class="centrado bordebot"><input name="attr_ataque2" type="number"  style="width: 70px;" class="centrado" value="0"></td>
@@ -681,7 +682,7 @@
                     <tbody>
                         <tr class="bordetop">
                             <td class="centrado bordebot">
-                            <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{arma=@{nombrearma3}}} {{mod=@{ataque3}}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Ataque 3</button>
+                            <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque=Daño Vital @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{arma=@{nombrearma3}}} {{mod=@{ataque3}}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Ataque 3</button>
                             </td>
                             <td>&nbsp;</td>    
                             <td class="centrado bordebot"><input name="attr_ataque3" type="number" style="width: 70px;" class="centrado" value="0"></td>
@@ -769,7 +770,7 @@
                         
                         <tr class="bordetop">
                             <td class="centrado bordebot">
-                            <button name="roll_ataquesa" type="roll" value="&{template:@{plantilla}} {{ataque=Daño @{dmgsa} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{cansa}}} {{rname=Ataque sin armas}} {{mod=@{ataquesa}}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >&nbsp;Ataque sA&nbsp;</button>
+                            <button name="roll_ataquesa" type="roll" value="&{template:@{plantilla}} {{ataque=Daño Vital @{dmgsa} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{cansa}}} {{rname=Ataque sin armas}} {{mod=@{ataquesa}}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >&nbsp;Ataque sA&nbsp;</button>
                             </td>
                             <td>&nbsp;</td>
                             <td class="centrado bordebot"><input name="attr_ataquesa" type="number" style="width: 70px;" class="centrado" value="0"></td>
@@ -870,7 +871,7 @@
                     <td class="centrado bordetopbot"><span class="negrita larger">Armadura</span></td>
                     <td>&nbsp;</td>
 
-            <td class="centrado bordetopbot"><select name="tipoarmadura" style="width: 75px;">
+            <td class="centrado bordetopbot"><select name="tipoarmadura" style="width: 95px;">
                 <option value="Ligera">Ligera</option>
                 <option value="Intermedia">Intermedia</option>
                 <option value="Pesada">Pesada</option>
@@ -880,7 +881,8 @@
             <td class="centrado bordetopbot"><input name="attr_proteccion" type="number" style="width: 70px;" class="centrado" value="0"></td>
             <td>&nbsp;</td>
 
-            <td class="centrado bordetopbot"><input name="attr_refuerzo" type="number" style="width: 70px;" class="centrado" value="0"></td>
+            <td class="centrado bordetopbot"><input name="attr_refuerzo" type="number" style="width: 40px;" class="centrado" value="0">
+                    <input name="attr_refuerzoextra" type="text" style="width: 50px;" class="centrado bordeparentesis"></td>
             <td>&nbsp;</td>
 
             <td class="centrado bordetopbot"><input name="attr_pen_energia" type="number" style="width: 70px;" class="centrado" value="0"></td>
@@ -1631,7 +1633,7 @@
 </div>
 <hr>
 <p></p>
-<span class="negrita larger">PESO TOTAL </span><input name="attr_pesobase" type="number" class="bordered negrita larger" style="width: 100;">
+<span class="negrita larger">PESO TOTAL </span><input name="attr_pesobase" type="number" class="bordered negrita larger" style="width: 100;"><span class="negrita larger"> Kg</span>
 <br></br>
 <p></p>
 <div class="arrow-right"></div>
