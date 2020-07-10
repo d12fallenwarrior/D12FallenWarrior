@@ -363,11 +363,16 @@ h1 {
     font-weight: bold;
 }
 
-.sheet_recolocar{
+.sheet-recolocar {
     position: relative;
-    bottom: -50px;
-    margin: 0px;
-    padding: 0px;
+    bottom: -16px;
+    left: 70px;
+}
+
+.sheet-recolocar2 {
+    position: relative;
+    bottom: -13px;
+    left: 70px;
 }
 
 .sheet-inline
@@ -375,34 +380,7 @@ h1 {
     display:inline;
 }
 
-.sheet-dibujito{
-    height: 70px;
-    width: 70px;
-    margin-right: -9px !important;
-    margin-left: 0px;
-    position: relative;
-    top: -11px;   
-}
-
-.sheet-dibujitomini{
-    height: 40px;
-    width: 40px;
-    margin-right: -9px !important;
-    margin-left: 0px;
-    position: relative;
-    top: 0px;   
-}
-
-.sheet-dibujitoarm{
-    height: 75px;
-    width: 75px;
-    margin-right: -9px !important;
-    margin-left: 0px;
-    position: relative;
-    top: 19px;   
-}
-
-.sheet-rango{
+.sheet-rango {
     max-width: 2em;  
     position: relative;
     top: 0px;   
@@ -489,12 +467,9 @@ select {
     font-family: Arial, Helvetica, sans-serif !important;
     font-size: small !important;
     font-weight: bold !important;
-    line-height: 27px;
-    
+    line-height: 27px;  
 }
     
-
-
 .sheet-arial
 {
     font-family: Arial, Helvetica, sans-serif !important;
@@ -605,7 +580,9 @@ hr {
 }
 
 
-/*Cambios de página y de ficha*/
+/* ################################################### */
+/* ###### CAMBIOS Y TRANSFORMACIONES DE FICHA ######## */
+/* ################################################### */
 
 input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
 input.sheet-toggle-hide:checked ~ div.sheet-body {
@@ -632,8 +609,34 @@ input.sheet-toggle-hide:checked ~ div.sheet-body {
   display: none;
 }
 
+input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
+input.sheet-toggle-hide:checked ~ div.sheet-body {
+    display: none;
+}
 
-/*Cambio de botones*/
+
+
+/* ################################################### */
+/* ############### BOTONES Y DIBUJOS ################# */
+/* ################################################### */
+
+.sheet-dibujito{
+    height: 70px;
+    width: 70px;
+    margin-right: -9px !important;
+    margin-left: 0px;
+    position: relative;
+    top: -11px;   
+}
+
+.sheet-dibujitoarm{
+    height: 70px;
+    width: 70px;
+    margin-right: -9px !important;
+    margin-left: 0px;
+    position: relative;
+    top: 19px;   
+}
 
 button[type=roll],
 button[type=action],
@@ -645,7 +648,6 @@ button[type=back] {
     background-color: transparent;
     border: none;
     line-height: 12px;
-    background-image: none;
     box-shadow: none;
     padding: 0px;
     margin: 0px;
@@ -659,9 +661,88 @@ button[type=roll]::before {
     content: " " !important;
 }
 
+.sheet-botonimagen {
+    position:relative;
+    vertical-align: middle;
+    height: 70px;
+    width: 70px;
+    margin-right: -15px !important;
+    margin-left: 0px;
+    top: -10px;   
 
 
-/*-----radio boxes-----*/
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+}
+
+.sheet-bconjuracion
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png");
+}
+.sheet-bintensidad
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCIntensidad.png");
+}
+
+.sheet-bdisparo
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDisparo.png");
+}
+
+.sheet-bdominio
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDominio.png");
+}
+
+.sheet-besquiva
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCEsquiva.png");
+}
+
+.sheet-bbloqueo
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png");
+}
+
+.sheet-bpelea
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCPelea.png");
+}
+
+.sheet-bataque1
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque1.png");
+}
+
+.sheet-bdesvio
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvio.png");
+}
+
+.sheet-bataque2
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque2.png");
+}
+
+.sheet-bataque3
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque3.png");
+}
+
+.sheet-bataquesa
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaqueSA.png");
+}
+
+.sheet-bdesviosa
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvioSA.png");
+}
+
+
+/* ################################################### */
+/* ################## CIRCULITOS ##################### */
+/* ################################################### */
 
 /* -----Hide actual radio----- */
 input.sheet-rango[type="radio"],
@@ -680,8 +761,6 @@ input.sheet-rango3[type="radio"]
 }
 
 /* -----Fake radio (los circulitos que sí se ven)----- */
-
-
 
 input.sheet-rango[type="radio"] + span::before
 {
