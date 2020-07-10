@@ -643,7 +643,8 @@ button[type=roll]::before {
 /*-----radio boxes-----*/
 
 /* -----Hide actual radio----- */
-input.sheet-normal[type="radio"]
+input.sheet-rango[type="radio"],
+input.sheet-rango2[type="radio"]
 {
     opacity: 0;
     width: 16px;
@@ -656,10 +657,10 @@ input.sheet-normal[type="radio"]
     z-index: 1;
 }
 
-/* -----Fake radio----- */
-input.sheet-normal[type="radio"] + span::before
+/* -----Fake radio (los circulitos que sí se ven)----- */
+input.sheet-rango[type="radio"] + span::before
 {
-    margin-right: 5px;
+    margin-right: 8px;
     border: solid 2px black;
     line-height: 14px;
     text-align: center;
@@ -668,18 +669,51 @@ input.sheet-normal[type="radio"] + span::before
     
     
     color:black;
-    content: "•";
+    content: "⬤";
     width: 13px;
-    height: 13px;
-    font-size: 3em;
-    
+    height: 13px; 
+    font-size: 1em;
+
+    /*Esto hace que sean círculos en vez de cuadrados (puntos varios: •∴⋅⬤)*/
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
 
+input.sheet-rango2[type="radio"] + span::before
+{
+    margin-right: 4px;
+    border: solid 2px black;
+    line-height: 12px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    
+    
+    color:black;
+    content: "⬤";
+    width: 12px;
+    height: 12px; 
+    font-size: 1em;
+
+    /*Esto hace que sean círculos en vez de cuadrados ••●∴⋅⬤*/
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+/*
+input.sheet-circulillo[type="radio"]
+{
+    margin-right: 5px !important;
+    width: 5px !important;
+    height: 5px !important; 
+    font-size: 9px !important;
+}*/
+
+
 /* -----Remove dot from all radios _after_ selected one----- */
-input.sheet-normal[type="radio"]:checked ~ input.sheet-normal[type="radio"] + span::before
+input.sheet-rango[type="radio"]:checked ~ input.sheet-rango[type="radio"] + span::before,
+input.sheet-rango2[type="radio"]:checked ~ input.sheet-rango2[type="radio"] + span::before
 {    
     content: "";
 }
