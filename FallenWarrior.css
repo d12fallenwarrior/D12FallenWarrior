@@ -353,6 +353,11 @@ h1 {
     text-align: center;
 }
 
+.sheet-verticalabajo
+{
+    vertical-align: bottom;
+}
+
 .sheet-textoderecha
 {
     text-align: right;
@@ -363,18 +368,20 @@ h1 {
     font-weight: bold;
 }
 
+.sheet-justify {
+    text-align: justify;
+  }
+
 .sheet-recolocar {
     position: relative;
     bottom: -16px;
     left: 70px;
-
 }
 
 .sheet-recolocar2 {
     position: relative;
     bottom: -13px;
     left: 70px;
-
 }
 
 .sheet-inline
@@ -382,7 +389,7 @@ h1 {
     display:inline;
 }
 
-.sheet-rango {
+.sheet-check {
     max-width: 2em;  
     position: relative;
     top: 0px;   
@@ -753,6 +760,7 @@ input.sheet-rango[type="radio"],
 input.sheet-rango2[type="radio"],
 input.sheet-rango3[type="radio"]
 {
+    max-width: 2em;  
     opacity: 0;
     width: 16px;
     height: 16px;
