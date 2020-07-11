@@ -648,6 +648,7 @@ button[type=submit],
 button[type=finish],
 button[type=back] {
     background-color: transparent;
+    background-image: none;
     border: none;
     line-height: 12px;
     box-shadow: none;
@@ -671,6 +672,7 @@ button[type=roll]::before {
     margin-right: -15px !important;
     margin-left: 0px;
     top: -10px;   
+    background-position: 0;
 
 
     background-size: 70px 70px;
@@ -679,66 +681,66 @@ button[type=roll]::before {
 
 .sheet-bconjuracion
 {
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png");
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png") !important;
 }
 .sheet-bintensidad
 {
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCIntensidad.png");
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCIntensidad.png") !important;
 }
 
 .sheet-bdisparo
 {
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDisparo.png");
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDisparo.png") !important;
 }
 
 .sheet-bdominio
 {
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDominio.png");
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDominio.png") !important;
 }
 
 .sheet-besquiva
 {
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCEsquiva.png");
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCEsquiva.png") !important;
 }
 
 .sheet-bbloqueo
 {
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png");
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png") !important;
 }
 
 .sheet-bpelea
 {
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCPelea.png");
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCPelea.png") !important;
 }
 
 .sheet-bataque1
 {
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque1.png");
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque1.png") !important;
 }
 
 .sheet-bdesvio
 {
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvio.png");
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvio.png") !important;
 }
 
 .sheet-bataque2
 {
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque2.png");
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque2.png") !important;
 }
 
 .sheet-bataque3
 {
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque3.png");
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque3.png") !important;
 }
 
 .sheet-bataquesa
 {
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaqueSA.png");
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaqueSA.png") !important;
 }
 
 .sheet-bdesviosa
 {
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvioSA.png");
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvioSA.png") !important;
 }
 
 
