@@ -2,7 +2,7 @@
 
 
 <!-- SWAP DE PÁGINAS-->
-<input type="checkbox" class="sheet-block-switch rango" name="attr_block_switch" value="1">
+<input type="checkbox" class="sheet-block-switch check" name="attr_block_switch" value="1">
 <div class="sheet-block-a negrita inline">
   HOJA DE COMBATE  (pulsa para cambiar a hoja de talentos y equipo)
 </div>
@@ -212,7 +212,7 @@
 <p></p>
 <!--SECCIÓN DE NOTAS-->
 <div class="sheet-columns">
-        <input type="checkbox" class="sheet-toggle-show rango" />
+        <input type="checkbox" class="sheet-toggle-show check" />
         <span class="negrita">Mostrar notas</span>
         <div class="sheet-body 2colrow">
         
@@ -224,7 +224,7 @@
                             <tr>
                     <td valign="top"><input name="attr_notaiz_name" type="text" class="negrita" placeholder="Nota" style="width: 110px;"></td>
                     <td><span>&nbsp;&nbsp;</span></td>
-                    <td><textarea name="attr_notaizdesc" placeholder="Descripción" class="inline" style="height: 20px; width: 280px;"></textarea></td>
+                    <td><textarea name="attr_notaizdesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
                             </tr>                
                         </tbody>
                     </table>
@@ -237,7 +237,7 @@
                             <tr>
                     <td valign="top"><input name="attr_notaiz_name" type="text" class="negrita" placeholder="Nota" style="width: 110px;"></td>
                     <td><span>&nbsp;&nbsp;</span></td>  
-                    <td><textarea name="attr_notaizdesc" placeholder="Descripción" class="inline" style="height: 20px; width: 280px;"></textarea></td>
+                    <td><textarea name="attr_notaizdesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
                             </tr>
                         </tbody>
                     </table>
@@ -251,7 +251,7 @@
                             <tr>
                     <td valign="top"><input name="attr_notader_name" type="text" class="negrita" placeholder="Nota" style="width: 110px;"></td>
                     <td><span>&nbsp;&nbsp;</span></td>
-                    <td><textarea name="attr_notaderdesc" placeholder="Descripción" class="inline" style="height: 20px; width: 280px;"></textarea></td>
+                    <td><textarea name="attr_notaderdesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
                             </tr>                
                         </tbody>
                     </table>
@@ -264,7 +264,7 @@
                             <tr>
                     <td valign="top"><input name="attr_notader_name" type="text" class="negrita" placeholder="Nota" style="width: 110px;"></td>
                     <td><span>&nbsp;&nbsp;</span></td>  
-                    <td><textarea name="attr_notaderdesc" placeholder="Descripción" class="inline" style="height: 20px; width: 280px;"></textarea></td>
+                    <td><textarea name="attr_notaderdesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
                             </tr>
                         </tbody>
                     </table>
@@ -331,8 +331,7 @@
 
 
 
-
-<input type="checkbox" class="tipodeficha rango" name="tipodeficha" value="1">
+<input type="checkbox" class="tipodeficha check" name="tipodeficha" value="1">
 <div class="ficha_luchador negrita">
   FICHA DE LUCHADOR  (pulsa para cambiar a ficha de mago)
   <p></p>
@@ -623,28 +622,7 @@
                 </table>      
                 <br>                           
                 </div>            
-            <!--Cuadro de notas
-                <div class="centrado 25porcientoder ficha_mago">
-                    <p class="negrita larger">Conjuros</p>
-                    <p><input name="attr_conj1" type="text" class="bordetop"></p>
-                    <p><input name="attr_conj2" type="text" ></p>
-                    <p><input name="attr_conj3" type="text" ></p>
-                    <p><input name="attr_conj4" type="text" class="bordebot"></p>
-                </div>
-
-                <div class="centrado 25porcientoder ficha_luchador">
-                    <p class="negrita larger">Acciones y talentos</p>
-                    <p><input name="attr_acc1" type="text" class="bordetop"></p>
-                    <p><input name="attr_acc2" type="text" ></p>
-                    <p><input name="attr_acc3" type="text" ></p>
-                    <p><input name="attr_acc4" type="text" ></p>
-                    <p><input name="attr_acc5" type="text" ></p>
-                    <p><input name="attr_acc6" type="text" ></p>
-                    <p><input name="attr_acc7" type="text" ></p>
-                    <p><input name="attr_acc8" type="text" ></p>
-                    <p><input name="attr_acc9" type="text" class="bordebot"></p>
-                </div>
-            -->
+            
             <div class="centrado floatright">
                 <button name="roll_desvio" class="botonimagen bdesvio" type="roll" class="bordetopbot" value="&{template:@{plantilla}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{rname=Desvío}} {{arma=@{nombrearma1}}} {{mod=@{desvio1}}} {{r1=[[(1d12cs0cf0+@{desvio1})]]}} {{r2=[[(1d12cs0cf0+@{desvio1})]]}} {{r3=[[(@{r3}+@{desvio1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                             
@@ -967,6 +945,7 @@
                     <td>&nbsp;</td>
 
             <td class="centrado bordetopbot"><select name="tipoarmadura" style="width: 95px;">
+                <option value="Ninguna">-</option>
                 <option value="Ligera">Ligera</option>
                 <option value="Intermedia">Intermedia</option>
                 <option value="Pesada">Pesada</option>
@@ -1361,31 +1340,35 @@
 <!--SECCIÓN VENTAJAS, TALENTOS, IDEOLOGIA, IDIOMAS, ESTADOS-->
 
 <div class="sheet-block-b">
-    <div class="2colrow">
+    <!-- RASGOS Y TALENTOS-->
+<div class="2colrow">
 
-    <!-- RASGOS, ideología, idiomas y estados-->
+    <!-- RASGOS-->
     <div class="col">
         <!--RASGOS-->
-        <h1>Rasgos</h1>
         
+        <h1>Rasgos</h1>
+        <input type="checkbox" class="sheet-toggle-show check" />
+        <span class="negrita">(Mostrar)</span>
+        <div class="sheet-body">
             <table>
                 <tbody>
                     <tr>
             <td valign="top"><input name="attr_rasgo_name" type="text" class="negrita" placeholder="Rasgo" style="width: 110px;"></td>
             <td><span>&nbsp;&nbsp;</span></td>
-            <td><textarea name="attr_rasgodesc" placeholder="Descripción" class="inline" style="height: 20px; width: 280px;"></textarea></td>
+            <td><textarea name="attr_rasgodesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
                     </tr>
                     <p></p>
                     <tr>
             <td valign="top"><input name="attr_rasgo_name2" type="text" class="negrita" placeholder="Rasgo" style="width: 110px;"></td>
             <td><span>&nbsp;&nbsp;</span></td>
-            <td><textarea name="attr_rasgodesc2" placeholder="Descripción" class="inline" style="height: 20px; width: 280px;"></textarea></td>
+            <td><textarea name="attr_rasgodesc2" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
                     </tr>
                     <p></p>
                     <tr>
             <td valign="top"><input name="attr_rasgo_name3" type="text" class="negrita" placeholder="Rasgo" style="width: 110px;"></td>
             <td><span>&nbsp;&nbsp;</span></td>
-            <td><textarea name="attr_rasgodesc3" placeholder="Descripción" class="inline" style="height: 20px; width: 280px;"></textarea></td>
+            <td><textarea name="attr_rasgodesc3" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
                     </tr>                 
                 </tbody>
             </table>
@@ -1398,117 +1381,42 @@
                     <tr>
             <td valign="top"><input name="attr_rasgo_name" type="text" class="negrita" placeholder="Rasgo" style="width: 110px;"></td>
             <td><span>&nbsp;&nbsp;</span></td>  
-            <td><textarea name="attr_rasgodesc" placeholder="Descripción" class="inline" style="height: 20px; width: 280px;"></textarea></td>
+            <td><textarea name="attr_rasgodesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
                     </tr>
                 </tbody>
             </table>
             </fieldset>
-        
+        </div>
+
         <br></br>
-
-    <!--IDEOLOGÍA-->
-        <h1>Ideología</h1>
-        <table style="margin: 0 auto;">
-            <tbody class="negrita">
-
-            <tr>
-                <td style="padding-bottom:10px; padding-top:5px">Compañerismo</td>
-                <td>    
-                <input type="radio" class="rango2 sheet-zero" name="attr_companerismo" value="0" checked="checked" /><span></span>
-                <input type="radio" class="rango2" name="attr_companerismo" value="1" /><span></span>
-                <input type="radio" class="rango2" name="attr_companerismo" value="2" /><span></span>
-                <input type="radio" class="rango2" name="attr_companerismo" value="3" /><span></span>
-                <input type="radio" class="rango2" name="attr_companerismo" value="4" /><span></span>
-                </td>                       
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            
-                <td style="padding-bottom:10px; padding-top:5px">Antimagia</td>
-                <td>
-                <input type="radio" class="rango2 sheet-zero" name="attr_antimagia" value="0" checked="checked" /><span></span>
-                <input type="radio" class="rango2" name="attr_antimagia" value="1" /><span></span>
-                <input type="radio" class="rango2" name="attr_antimagia" value="2" /><span></span>
-                <input type="radio" class="rango2" name="attr_antimagia" value="3" /><span></span>
-                <input type="radio" class="rango2" name="attr_antimagia" value="4" /><span></span>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-bottom:5px; padding-top:5px">Honor</td>
-                <td>
-                <input type="radio" class="rango2 sheet-zero" name="attr_honor" value="0" checked="checked" /><span></span>
-                <input type="radio" class="rango2" name="attr_honor" value="1" /><span></span>
-                <input type="radio" class="rango2" name="attr_honor" value="2" /><span></span>
-                <input type="radio" class="rango2" name="attr_honor" value="3" /><span></span>
-                <input type="radio" class="rango2" name="attr_honor" value="4" /><span></span>
-                </td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-
-                <td style="padding-bottom:5px; padding-top:5px">Pacifismo</td>
-                <td> 
-                <input type="radio" class="rango2 sheet-zero" name="attr_pacifismo" value="0" checked="checked" /><span></span>
-                <input type="radio" class="rango2" name="attr_pacifismo" value="1" /><span></span>
-                <input type="radio" class="rango2" name="attr_pacifismo" value="2" /><span></span>
-                <input type="radio" class="rango2" name="attr_pacifismo" value="3" /><span></span>
-                <input type="radio" class="rango2" name="attr_pacifismo" value="4" /><span></span>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-bottom:5px; padding-top:5px">Superstición</td>
-                <td>
-                <input type="radio" class="rango2 sheet-zero" name="attr_supersticion" value="0" checked="checked" /><span></span>
-                <input type="radio" class="rango2" name="attr_supersticion" value="1" /><span></span>
-                <input type="radio" class="rango2" name="attr_supersticion" value="2" /><span></span>
-                <input type="radio" class="rango2" name="attr_supersticion" value="3" /><span></span>
-                <input type="radio" class="rango2" name="attr_supersticion" value="4" /><span></span>
-                </td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-
-                <td style="padding-bottom:5px; padding-top:5px"><input name="attr_otraideologia" type="text" placeholder="Otra" class="negrita" style="width: 80px;"></td>
-                <td>
-                <input type="radio" class="rango2 sheet-zero" name="attr_otraideologia" value="0" checked="checked" /><span></span>
-                <input type="radio" class="rango2" name="attr_otraideologia" value="1" /><span></span>
-                <input type="radio" class="rango2" name="attr_otraideologia" value="2" /><span></span>
-                <input type="radio" class="rango2" name="attr_otraideologia" value="3" /><span></span>
-                <input type="radio" class="rango2" name="attr_otraideologia" value="4" /><span></span>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+        <br></br>
     
-
-    <!--IDIOMAS ESTADO-->
-    <div class="2colrow">
-        <div class="col">
-            <h1>Idiomas</h1>
-            <textarea name="attr_idiomas" style="height: 40px;"></textarea>
-        </div>
-        <div class="col">
-            <h1>Estado</h1>
-            <textarea name="attr_estados" style="height: 40px;"></textarea>
-        </div>
-    </div>
     </div>
 
     <!--TALENTOS-->
     <div class="col">
         <h1>Talentos</h1>
+        <input type="checkbox" class="sheet-toggle-show check" />
+        <span class="negrita">(Mostrar)</span>
+        <div class="sheet-body">
         <table>
             <tbody>
                 <tr>
         <td valign="top"><input name="attr_talento_name" type="text" class="negrita" placeholder="Talento" style="width: 110px;"></td>
         <td><span>&nbsp;&nbsp;</span></td>
-        <td><textarea name="attr_talentodesc" placeholder="Descripción" class="inline" style="height: 20px; width: 280px;"></textarea></td>
+        <td><textarea name="attr_talentodesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
                 </tr>
                 <p></p>
                 <tr>
         <td valign="top"><input name="attr_talento_name2" type="text" class="negrita" placeholder="Talento" style="width: 110px;"></td>
         <td><span>&nbsp;&nbsp;</span></td>
-        <td><textarea name="attr_talentodesc2" placeholder="Descripción" class="inline" style="height: 20px; width: 280px;"></textarea></td>
+        <td><textarea name="attr_talentodesc2" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
                 </tr>
                 <p></p>
                 <tr>
         <td valign="top"><input name="attr_talento_name3" type="text" class="negrita" placeholder="Talento" style="width: 110px;"></td>
         <td><span>&nbsp;&nbsp;</span></td>
-        <td><textarea name="attr_talentodesc3" placeholder="Descripción" class="inline" style="height: 20px; width: 280px;"></textarea></td>
+        <td><textarea name="attr_talentodesc3" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
                 </tr>                 
             </tbody>
         </table>
@@ -1519,14 +1427,112 @@
                     <tr>
             <p></p>
                 <tr>
-        <td valign="top"><input name="attr_talento_name" type="text" class="negrita" placeholder="talento" style="width: 110px;"></td>
+        <td valign="top"><input name="attr_talento_name" type="text" class="negrita" placeholder="Talento" style="width: 110px;"></td>
         <td><span>&nbsp;&nbsp;</span></td>  
-        <td><textarea name="attr_talentodesc" placeholder="Descripción" class="inline" style="height: 20px; width: 280px;"></textarea></td>
+        <td><textarea name="attr_talentodesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
                 </tr>
             </tbody>
         </table>
         </fieldset>
+        </div>
+
+        <br></br>
+        <br></br>
+        
+        
     </div>
+
+</div>
+
+<hr>
+
+    <!--IDEOLOGÍA, IDIOMAS Y ESTADO-->
+<div class="2colrow">
+
+    <!--IDEOLOGÍA-->
+    <div class="col">   
+        <h1>Ideología</h1>
+    <table style="margin: 0 auto;">
+        <tbody class="negrita">
+
+        <tr>
+            <td style="padding-bottom:10px; padding-top:5px">Compañerismo</td>
+            <td>    
+            <input type="radio" class="rango2 sheet-zero" name="attr_companerismo" value="0" checked="checked" /><span></span>
+            <input type="radio" class="rango2" name="attr_companerismo" value="1" /><span></span>
+            <input type="radio" class="rango2" name="attr_companerismo" value="2" /><span></span>
+            <input type="radio" class="rango2" name="attr_companerismo" value="3" /><span></span>
+            <input type="radio" class="rango2" name="attr_companerismo" value="4" /><span></span>
+            </td>                       
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        
+            <td style="padding-bottom:10px; padding-top:5px">Antimagia</td>
+            <td>
+            <input type="radio" class="rango2 sheet-zero" name="attr_antimagia" value="0" checked="checked" /><span></span>
+            <input type="radio" class="rango2" name="attr_antimagia" value="1" /><span></span>
+            <input type="radio" class="rango2" name="attr_antimagia" value="2" /><span></span>
+            <input type="radio" class="rango2" name="attr_antimagia" value="3" /><span></span>
+            <input type="radio" class="rango2" name="attr_antimagia" value="4" /><span></span>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-bottom:5px; padding-top:5px">Honor</td>
+            <td>
+            <input type="radio" class="rango2 sheet-zero" name="attr_honor" value="0" checked="checked" /><span></span>
+            <input type="radio" class="rango2" name="attr_honor" value="1" /><span></span>
+            <input type="radio" class="rango2" name="attr_honor" value="2" /><span></span>
+            <input type="radio" class="rango2" name="attr_honor" value="3" /><span></span>
+            <input type="radio" class="rango2" name="attr_honor" value="4" /><span></span>
+            </td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+            <td style="padding-bottom:5px; padding-top:5px">Pacifismo</td>
+            <td> 
+            <input type="radio" class="rango2 sheet-zero" name="attr_pacifismo" value="0" checked="checked" /><span></span>
+            <input type="radio" class="rango2" name="attr_pacifismo" value="1" /><span></span>
+            <input type="radio" class="rango2" name="attr_pacifismo" value="2" /><span></span>
+            <input type="radio" class="rango2" name="attr_pacifismo" value="3" /><span></span>
+            <input type="radio" class="rango2" name="attr_pacifismo" value="4" /><span></span>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-bottom:5px; padding-top:5px">Superstición</td>
+            <td>
+            <input type="radio" class="rango2 sheet-zero" name="attr_supersticion" value="0" checked="checked" /><span></span>
+            <input type="radio" class="rango2" name="attr_supersticion" value="1" /><span></span>
+            <input type="radio" class="rango2" name="attr_supersticion" value="2" /><span></span>
+            <input type="radio" class="rango2" name="attr_supersticion" value="3" /><span></span>
+            <input type="radio" class="rango2" name="attr_supersticion" value="4" /><span></span>
+            </td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+            <td style="padding-bottom:5px; padding-top:5px"><input name="attr_otraideologia" type="text" placeholder="Otra" class="negrita" style="width: 80px;"></td>
+            <td>
+            <input type="radio" class="rango2 sheet-zero" name="attr_otraideologia" value="0" checked="checked" /><span></span>
+            <input type="radio" class="rango2" name="attr_otraideologia" value="1" /><span></span>
+            <input type="radio" class="rango2" name="attr_otraideologia" value="2" /><span></span>
+            <input type="radio" class="rango2" name="attr_otraideologia" value="3" /><span></span>
+            <input type="radio" class="rango2" name="attr_otraideologia" value="4" /><span></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <!--IDIOMAS Y ESTADO-->
+    <div class="col">
+    <div class="2colrow verticalabajo">
+        <div class="col">
+            <h1>Idiomas</h1>
+            <textarea name="attr_idiomas" class="centrado" style="height: 80px;"></textarea>
+        </div>
+        <div class="col">
+            <h1>Estado</h1>
+            <textarea name="attr_estados" class="centrado" style="height: 80px;"></textarea>
+        </div>
+    </div>
+    </div>
+
 </div>
 
 <div class="arrow-left"></div>
@@ -1680,24 +1686,24 @@
         <h1>Estado de Carga</h1>
         <table style="margin: 0 auto;">
             <tbody>
-            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="99"  class="rango"/></td><td> <span class="negrita">Límite (Caes derribado)</span> </td></tr>
+            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="99"  class="check"/></td><td> <span class="negrita">Límite (Caes derribado)</span> </td></tr>
             
             <tr><td class="negrita smaller textoderecha">&#215;12&nbsp;&nbsp;</td><td>&nbsp;&nbsp;<input name="attr_carga12" type="number" disabled="true" value="(@{carga6}+@{carga6})" class="centrado" style="width: 60px;">&nbsp;&nbsp;</td></tr>
             
-            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="5"  class="rango"/></td><td> <span class="negrita">Exceso (-25 ene y pen. por carga -5)</span> </td></tr>
+            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="5"  class="check"/></td><td> <span class="negrita">Exceso (-25 Energía y pen. por carga -5)</span> </td></tr>
             
             <tr><td class="negrita smaller textoderecha">&#215;6&nbsp;&nbsp;</td><td>&nbsp;&nbsp;<input name="attr_carga6" type="number" disabled="true" value="(@{carga3}+@{carga3})" class="centrado" style="width: 60px;">&nbsp;&nbsp;</td></tr>
         
-            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="3" class="rango"/></td><td> <span class="negrita">Carga pesada (-15 ene y pen. por carga -3)</span> </td></tr>
+            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="3" class="check"/></td><td> <span class="negrita">Carga pesada (-15 Energía y pen. por carga -3)</span> </td></tr>
             
             <tr><td class="negrita smaller textoderecha">&#215;3&nbsp;&nbsp;</td><td>&nbsp;&nbsp;<input name="attr_carga3" type="number" disabled="true" value="(@{carga1}+@{carga2})" class="centrado" style="width: 60px;">&nbsp;&nbsp;</td></tr>
-            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="1"  class="rango"/></td><td> <span class="negrita">Carga media (-5 ene y pen. por carga -1)</span> </td></tr>
+            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="1"  class="check"/></td><td> <span class="negrita">Carga media (-5 Energía y pen. por carga -1)</span> </td></tr>
         
             <tr><td class="negrita smaller textoderecha">&#215;2&nbsp;&nbsp;</td><td>&nbsp;&nbsp;<input name="attr_carga2" type="number" disabled="true" value="(@{carga1}+@{carga1})" class="centrado" style="width: 60px;">&nbsp;&nbsp;</td></tr>
-            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="0" checked="true"  class="rango"/></td><td> <span class="negrita">Carga ligera (Sin modificadores)</span> </td></tr>
+            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="0" checked="true"  class="check"/></td><td> <span class="negrita">Carga ligera (Sin modificadores)</span> </td></tr>
         
             <tr><td class="negrita smaller textoderecha">&#215;1&nbsp;&nbsp;</td><td>&nbsp;&nbsp;<input name="attr_carga1" type="number" value="0" class="centrado" style="width: 60px;">&nbsp;&nbsp;</td></tr>
-            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="999"  class="rango"/> </td><td><span class="negrita">Sin carga (+1 movilidad)</span> </td></tr>
+            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="999"  class="check"/> </td><td><span class="negrita">Sin carga (+1 movilidad)</span> </td></tr>
        
         <tr><td></td><td class="negrita smaller centrado">Carga <p></p>Transportable</span>
             </tr>
@@ -1709,13 +1715,13 @@
         <br></br>
         <div class="centrado inline">
         <p class="negrita">ORO (1 oro = 30 pl)</p>
-        <input name="attr_monedas_oro" type="number" class="centrado" style="width: 100px;">
+        <p class="centrado"><input name="attr_monedas_oro" type="number" class="centrado" style="width: 100px;"></p>
         <p></p>
         <p class="negrita">PLATA (1 pl = 30 br)</p>
-        <input name="attr_monedas_plata" type="number" class="centrado" style="width: 100px;">
+        <p class="centrado"><input name="attr_monedas_plata" type="number" class="centrado" style="width: 100px;"></p>
         <p></p>
         <p class="negrita">BRONCE</p>
-        <input name="attr_monedas_bronce" type="number" class="centrado" style="width: 100px;">
+        <p class="centrado"><input name="attr_monedas_bronce" type="number" class="centrado" style="width: 100px;"></p>
         </div>
     </div>
 
@@ -2347,3 +2353,4 @@
 
 
 </div>
+
