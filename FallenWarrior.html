@@ -1788,55 +1788,15 @@
                     <div class="adv">
                         <span class="grey">{{r2}}</span>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    {{#moribundo}}
-                        {{#rollGreater() r1 traumaentra}}
-                        <div class="label">
-                            <span class="green">¡¡Aguantas en pie!!</span>
-                        </div>
-                        {{/rollGreater() r1 traumaentra}}
-                        {{#^rollGreater() r1 traumaentra}}
-                        <div class="label">
-                            <span class="red">¡¡Caes moribundo!!</span>
-                        </div>
-                        {{/^rollGreater() r1 traumaentra}}
-                    {{/moribundo}}
-=======
->>>>>>> parent of d790a4b... Update FallenWarrior.html
-=======
->>>>>>> parent of d790a4b... Update FallenWarrior.html
                 {{/rollLess() r1 r2}}
                 {{#rollTotal() r1 r2}}
-                    <div class="arrow-right"></div>    
                     <div class="adv">
                         <span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
                     </div>
                     <div class="advspacer"></div>
-                    <div class="arrow-right"></div>
                     <div class="adv">
                         <span class="green">{{r2}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    {{#moribundo}}
-                        {{#rollGreater() r1 traumaentradoble}}
-                        <div class="arrow-right"></div>
-                        <div class="label">
-                            <span class="green">¡¡Aguantas en pie!!</span>
-                        </div>
-                        {{/rollGreater() r1 traumaentradoble}}
-                        {{#^rollGreater() r1 traumaentradoble}}
-                        <div class="arrow-right"></div>
-                        <div class="label">
-                            <span class="red">¡¡Caes moribundo!!</span>
-                        </div>
-                        {{/^rollGreater() r1 traumaentradoble}}
-                    {{/moribundo}}
-=======
->>>>>>> parent of d790a4b... Update FallenWarrior.html
-=======
->>>>>>> parent of d790a4b... Update FallenWarrior.html
                 {{/rollTotal() r1 r2}}
                 {{#rollGreater() r1 r2}}
                     <div class="adv">
@@ -1846,26 +1806,6 @@
                     <div class="adv">
                         <span>{{r2}}</span>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    {{#moribundo}}
-                        {{#rollGreater() r2 traumaentra}}
-                        <div class="arrow-right"></div>
-                        <div class="label">
-                            <span class="green">¡¡Aguantas en pie!!</span>
-                        </div>
-                        {{/rollGreater() r2 traumaentra}}
-                        {{#^rollGreater() r2 traumaentra}}
-                        <div class="arrow-right"></div>
-                        <div class="label">
-                            <span class="red">¡¡Caes moribundo!!</span>
-                        </div>
-                        {{/^rollGreater() r2 traumaentra}}
-                    {{/moribundo}}
-=======
->>>>>>> parent of d790a4b... Update FallenWarrior.html
-=======
->>>>>>> parent of d790a4b... Update FallenWarrior.html
                 {{/rollGreater() r1 r2}}
         </div>
         <!--
@@ -1875,12 +1815,10 @@
             </div>
         {{/rollTotal() r1 r2}}
         -->
-        {{#rname}}
         <div class="arrow-right"></div>
         <div class="label">
             <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
         </div>
-        {{#rname}}
         {{#arma}}
             <div class="label">
                 <span>{{arma}}</span>
@@ -2347,77 +2285,8 @@
             <span>{{rname}}</span>
         </div> 
     </div>
-</rolltemplate>
-
-<rolltemplate class="sheet-rolltemplate-lesion">
-       
-    <div class="container">
-        <div class="result">
-            <div class="adv"><span>{{r1}}</span></div>
-        </div>
-         
-    {{#rollTotal() r1 1}}
-        <div class="label">
-            <span>Lesión - Herida abierta</span>
-        </div>
-        <div>
-            <span class="red">Vuelves a la vida totalmente recuperado... o casi, algunas de tus heridas no se han cerrado del todo.</span>
-        </div>
-        <div>
-            <span>Recibes {{r2}} de Daño Vital que no puede curarse por ningún medio, ni siquiera al resucitar de nuevo. Esta lesión puede acumularse indefinidamente, recibiendo Daño Vital extra cada vez.</span> 
-        </div>
-    {{/rollTotal() r1 1}}
-
-    {{#rollTotal() r1 2}}
-        <div class="label">
-            <span>Lesión - Pesadillas</span>
-        </div>
-        <div>
-            <span class="red">Terribles pesadillas te atormentan cada noche con imágenes de tu dolorosa muerte.</span>
-        </div>
-        <div>
-            <span>
-                Cada día, al despertar, tira 1d12. Si sale 8 o menos, no has podido dormir bien y quedas cansado todo el día (limita tu Energía a ¾ del total). Si sale 4 o menos, esa noche no has podido dormir en absoluto y quedas extenuado todo el día (limita tu Energía a la mitad).
-            </span> 
-        </div>
-    {{/rollTotal() r1 2}}
-
-    {{#rollTotal() r1 3}}
-        <div class="label">
-            <span>Lesión - Tuerto</span>
-        </div>
-        <div>
-            <span>-1 a Estrategia y desventaja en alerta</span>
-        </div>
-        <div>
-            <span>
-                *Si obtienes tuerto una segunda vez, en su lugar recibes la lesión Ciego y eliminas la lesión Tuerto.
-            </span> 
-        </div>
-    {{/rollTotal() r1 3}}
-
-    {{#rollTotal() r1 4}}
-        <div class="label">
-            <span>Lesión - Aries de grandeza</span>
-        </div>
-        <div>
-            <span class="red">
-                El mismísimo Señor del Mal te ha resucitado, eso debe significar algo. Sin ningún atisbo de duda crees ser el trasgo elegido para comandar las huestes oscuras y el único en quien el Señor del Mal confía, el resto de trasgos son todos una panda de inútiles sin seso, ¡menos mal que estás tú!
-            </span>
-        </div>
-        <div>
-            <span>
-                Debes siempre llevar y hacerte cargo personalmente del objeto de misión. Si no puedes hacerte cargo del objeto de misión (o si lo perdéis), quedarás atormentado por la culpa y tendrás desventaja en toda tirada de Ataque, Defensa y habilidad. 
-            </span> 
-        </div>
-    {{/rollTotal() r1 4}}
-
-    </div>
     
 </rolltemplate>
-
-
-
 
 
 <!--SHEETWORKER.JS-->
