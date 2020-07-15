@@ -262,6 +262,7 @@ span.sheet-dee {
 .sheet-rolltemplate-tres span,
 .sheet-rolltemplate-tresd span,
 .sheet-rolltemplate-triple span,
+.sheet-rolltemplate-lesion span,
 .sheet-rolltemplate-dmg span
 {
     font-size: 12px;
@@ -270,13 +271,25 @@ span.sheet-dee {
     text-align: center;
 }
 
-.sheet-rolltemplate-lesion span
+
+.sheet-rolltemplate-lesion .sheet-lesion
 {
-    font-size: 11px;
-    font-weight: normal;
-    line-height: 11px;
+    margin-top: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 14px;
     text-align: center;
 }
+
+.sheet-rolltemplate-lesion .sheet-texto
+{
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 15px;
+    text-align: center;
+}
+
+
 
 .sheet-rolltemplate-simple .sheet-label,
 .sheet-rolltemplate-moribundo .sheet-label,
@@ -324,6 +337,7 @@ span.sheet-dee {
     border: 0px;
     font-weight: normal;
 }
+
 
 .sheet-rolltemplate-simple .sheet-green,
 .sheet-rolltemplate-moribundo .sheet-green,
@@ -421,6 +435,11 @@ h1 {
 .sheet-justify {
     text-align: justify;
   }
+
+.sheet-margen10
+{
+    padding: 10px !important;
+}
 
 .sheet-recolocar {
     position: relative;
