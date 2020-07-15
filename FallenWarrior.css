@@ -74,6 +74,7 @@ span.sheet-dee {
   .sheet-rolltemplate-simple .sheet-charname,
   .sheet-rolltemplate-tres .sheet-charname,
   .sheet-rolltemplate-tresd .sheet-charname,
+  .sheet-rolltemplate-lesion .sheet-charname,
   .sheet-rolltemplate-dmg .sheet-charname
 {
     text-align: center;
@@ -83,6 +84,7 @@ span.sheet-dee {
 .sheet-rolltemplate-simple .sheet-charname span,
 .sheet-rolltemplate-tres .sheet-charname span, 
 .sheet-rolltemplate-tresd .sheet-charname span, 
+.sheet-rolltemplate-lesion .sheet-charname span,
 .sheet-rolltemplate-dmg .sheet-charname span
 {
     font-size: 11px;
@@ -94,6 +96,7 @@ span.sheet-dee {
 .sheet-rolltemplate-conj,
 .sheet-rolltemplate-tres,
 .sheet-rolltemplate-tresd,
+.sheet-rolltemplate-lesion,
 .sheet-rolltemplate-dmg
 {
     width: 14.35em;
@@ -103,22 +106,17 @@ span.sheet-dee {
 .sheet-rolltemplate-conj .sheet-container,
 .sheet-rolltemplate-tres .sheet-container,
 .sheet-rolltemplate-tresd .sheet-container,
+.sheet-rolltemplate-lesion .sheet-container,
 .sheet-rolltemplate-dmg .sheet-container
 {
     background-color: white;
     border          : 1px solid black;
     color           : black;
     width           : 100%;
-}
-
-.sheet-rolltemplate-simple .sheet-container,
-.sheet-rolltemplate-conj .sheet-container,
-.sheet-rolltemplate-tres .sheet-container,
-.sheet-rolltemplate-tresd .sheet-container,
-.sheet-rolltemplate-dmg .sheet-container
-{
     border-radius: 10px;
 }
+
+
 
 .sheet-rolltemplate-simple .sheet-adv,
 .sheet-rolltemplate-conj .sheet-adv
@@ -138,6 +136,7 @@ span.sheet-dee {
     vertical-align: top;
     width         : 28.75%;
 }
+.sheet-rolltemplate-lesion .sheet-adv,
 .sheet-rolltemplate-dmg .sheet-adv
 {
     display       : inline-block;
@@ -150,6 +149,7 @@ span.sheet-dee {
 
 .sheet-rolltemplate-simple .sheet-adv:first-child,
 .sheet-rolltemplate-conj .sheet-adv:first-child,
+.sheet-rolltemplate-lesion .sheet-adv:first-child,
 .sheet-rolltemplate-dmg .sheet-adv:first-child
 {
     margin-left: 0.2em;
@@ -181,6 +181,8 @@ span.sheet-dee {
 .sheet-rolltemplate-tres .sheet-solo span,
 .sheet-rolltemplate-tresd .sheet-adv span,
 .sheet-rolltemplate-tresd .sheet-solo span,
+.sheet-rolltemplate-lesion .sheet-adv span,
+.sheet-rolltemplate-lesion .sheet-solo span,
 .sheet-rolltemplate-dmg .sheet-adv span,
 .sheet-rolltemplate-dmg .sheet-solo span
 {
@@ -194,6 +196,7 @@ span.sheet-dee {
 .sheet-rolltemplate-conj .sheet-advspacer,
 .sheet-rolltemplate-tres .sheet-advspacer,
 .sheet-rolltemplate-tresd .sheet-advspacer,
+.sheet-rolltemplate-lesion .sheet-advspacer,
 .sheet-rolltemplate-dmg .sheet-advspacer
 {
     border: 1px solid black;
@@ -206,7 +209,8 @@ span.sheet-dee {
 .sheet-rolltemplate-conj .sheet-arrow-right,
 .sheet-rolltemplate-tres .sheet-arrow-right,
 .sheet-rolltemplate-tresd .sheet-arrow-right,
-.sheet-rolltemplate-dmg  .sheet-arrow-right
+.sheet-rolltemplate-lesion .sheet-arrow-right,
+.sheet-rolltemplate-dmg .sheet-arrow-right
 {
     border-bottom: 2px solid transparent;
     border-left: 180px solid black;
@@ -217,7 +221,8 @@ span.sheet-dee {
 .sheet-rolltemplate-conj .sheet-arrow-left,
 .sheet-rolltemplate-tres .sheet-arrow-left,
 .sheet-rolltemplate-tresd .sheet-arrow-left,
-.sheet-rolltemplate-dmg  .sheet-arrow-left
+.sheet-rolltemplate-lesion .sheet-arrow-left,
+.sheet-rolltemplate-dmg .sheet-arrow-left
 {
     border-bottom: 2px solid transparent;
     border-right: 180px solid black;
@@ -228,7 +233,9 @@ span.sheet-dee {
 .sheet-rolltemplate-conj .sheet-solo,
 .sheet-rolltemplate-tres .sheet-solo,
 .sheet-rolltemplate-tresd .sheet-solo,
-.sheet-rolltemplate-dmg .sheet-solo{
+.sheet-rolltemplate-lesion .sheet-solo,
+.sheet-rolltemplate-dmg .sheet-solo
+{
     height        : auto;
     padding-bottom: 0.5em;
     padding-top   : 1em;
@@ -249,10 +256,21 @@ span.sheet-dee {
     text-align: center;
 }
 
+.sheet-rolltemplate-lesion span
+{
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 10px;
+    text-align: justify;
+    padding: 0.3em;
+}
+
+
 .sheet-rolltemplate-simple .sheet-label,
 .sheet-rolltemplate-conj .sheet-label,
 .sheet-rolltemplate-tres .sheet-label,
 .sheet-rolltemplate-tresd .sheet-label,
+.sheet-rolltemplate-lesion .sheet-label,
 .sheet-rolltemplate-dmg .sheet-label
 {
     margin-top: -3px;
@@ -281,6 +299,8 @@ span.sheet-dee {
 .sheet-rolltemplate-tres .sheet-label span span,
 .sheet-rolltemplate-tresd .sheet-grey,
 .sheet-rolltemplate-tresd .sheet-label span span,
+.sheet-rolltemplate-lesion .sheet-grey,
+.sheet-rolltemplate-lesion .sheet-label span span,
 .sheet-rolltemplate-dmg .sheet-grey,
 .sheet-rolltemplate-dmg .sheet-label span span
 {
@@ -295,6 +315,16 @@ span.sheet-dee {
 .sheet-rolltemplate-tresd .sheet-green
 {
     color: #3FB315;
+    border: 0px;
+}
+
+.sheet-rolltemplate-simple .sheet-red,
+.sheet-rolltemplate-conj .sheet-red,
+.sheet-rolltemplate-tres .sheet-red,
+.sheet-rolltemplate-lesion .sheet-red,
+.sheet-rolltemplate-tresd .sheet-red
+{
+    color: #700000;
     border: 0px;
 }
 
