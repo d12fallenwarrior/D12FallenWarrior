@@ -1,9 +1,13 @@
+
+
 /* Set the min-width so that when the window is resized the look will stay consistant */
 
 .charsheet {
-	background-color: rgb(255, 255, 255);
-	min-width: 800px;
+	background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/fondoespada.jpg"); /*black space with tiny white stars*/
+    background-color: white;
+    min-width: 800px;
 }
+
 
 /* Universal styling applied to all elements of these types */
 
@@ -198,12 +202,23 @@ span.sheet-dee {
     width: 0px;
 }
 
-.sheet-rolltemplate-dmg  .sheet-arrow-right {
+.sheet-rolltemplate-simple .sheet-arrow-right,
+.sheet-rolltemplate-conj .sheet-arrow-right,
+.sheet-rolltemplate-tres .sheet-arrow-right,
+.sheet-rolltemplate-tresd .sheet-arrow-right,
+.sheet-rolltemplate-dmg  .sheet-arrow-right
+{
     border-bottom: 2px solid transparent;
     border-left: 180px solid black;
     border-top: 3px solid transparent;
 }
-.sheet-rolltemplate-dmg  .sheet-arrow-left {
+
+.sheet-rolltemplate-simple .sheet-arrow-left,
+.sheet-rolltemplate-conj .sheet-arrow-left,
+.sheet-rolltemplate-tres .sheet-arrow-left,
+.sheet-rolltemplate-tresd .sheet-arrow-left,
+.sheet-rolltemplate-dmg  .sheet-arrow-left
+{
     border-bottom: 2px solid transparent;
     border-right: 180px solid black;
     border-top: 3px solid transparent;
@@ -289,11 +304,6 @@ span.sheet-dee {
     display: none;
 }
 
-h1 {
-    margin-bottom: 1em;
-}
-
-
 .sheet-logo{
     display: inline-block;
     height: 110%;
@@ -317,22 +327,552 @@ h1 {
 .sheet-atributos {
     float: left;
     width: 30%;
-    height: 17em;
+
 }
 
 .sheet-caracteristicas{
     width: 100%;
-    height: 17em;
+
 }
 
-.sheet-combate textarea{
-    max-width: 100%;
+h1 {
+    margin-bottom: 0.3em;
+    text-align: center;
+    font-variant: small-caps;
+    
+    
 }
+
 
 /* ################################################### */
 /* ################## ESTILOS IÑIGO ################## */
 /* ################################################### */
 
-.sheet-armadura{
+.sheet-centrado
+{
     text-align: center;
 }
+
+.sheet-verticalabajo
+{
+    vertical-align: bottom;
+}
+
+.sheet-textoderecha
+{
+    text-align: right;
+}
+
+.sheet-negrita
+{
+    font-weight: bold;
+}
+
+.sheet-justify {
+    text-align: justify;
+  }
+
+.sheet-recolocar {
+    position: relative;
+    bottom: -16px;
+    left: 70px;
+}
+
+.sheet-recolocar2 {
+    position: relative;
+    bottom: -13px;
+    left: 70px;
+}
+
+.sheet-inline
+{
+    display:inline;
+}
+
+.sheet-check {
+    max-width: 2em;  
+    position: relative;
+    top: 0px;   
+}
+
+input {
+    border-top: 0px solid rgb(0, 0, 0);
+    border-left: 0px solid rgb(0, 0, 0);
+    border-right: 0px solid rgb(0, 0, 0);
+    border-radius: 0px; 
+    background-color: transparent;
+    
+}
+
+select {
+    border-top: 0px solid rgb(0, 0, 0);
+    border-left: 0px solid rgb(0, 0, 0);
+    border-right: 0px solid rgb(0, 0, 0);
+    border-radius: 0px; 
+    background-color: transparent;
+    
+    vertical-align: middle !important;
+    margin-bottom: 0 !important;
+}
+
+.sheet-bordecuad
+{    
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 0px;   
+}
+
+.sheet-bordered
+{    
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 6px;      
+}
+
+.sheet-bordeparentesis
+{    
+    border-right: 2px solid rgb(0, 0, 0);
+    border-left: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;      
+}
+
+.sheet-bordetopbot
+{    
+    border-top: 3px solid rgb(0, 0, 0);
+    border-bottom: 3px solid rgb(0, 0, 0);
+    border-radius: 0px;   
+}
+
+.sheet-bordetop
+{    
+    border-top: 3px solid rgb(0, 0, 0);
+    border-radius: 0px;   
+}
+
+.sheet-bordebot
+{    
+    border-bottom: 3px solid rgb(0, 0, 0);
+    border-radius: 0px;   
+}
+
+.sheet-smaller
+{
+    font-size: smaller;
+}
+
+.sheet-dadito {
+    font-family: dicefontd12; 
+    font-size: large;
+    font-weight: bold;
+}
+
+.sheet-fuentehab
+{
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: small !important;
+    font-weight: bold !important;
+}
+
+    .sheet-fuentehabcomb
+{
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: small !important;
+    font-weight: bold !important;
+    line-height: 27px;  
+}
+    
+.sheet-arial
+{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.sheet-larger
+{
+    font-size: larger;
+}
+
+.sheet-versalitas{
+    font-variant: small-caps;
+}
+
+.sheet-oculto
+{
+    display: none;
+}
+
+hr {
+    clear: both;
+    visibility: hidden;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+/*.sheet-col{
+    margin: 2px !important;
+    } */
+
+.sheet-floatright {
+    float: right;  
+    }
+
+.sheet-15porciento{
+    float: left;
+    width: 20%;
+    }
+
+.sheet-20porciento{
+    float: left;
+    width: 20%;
+    }
+
+.sheet-25porciento{
+    float: left;
+    width: 25%;
+    }
+
+.sheet-25porcientoder{
+    float: right;
+    width: 25%;
+    }
+
+.sheet-30porciento{
+    float: left;
+    width: 30%;
+    } 
+    
+.sheet-35porciento{
+    float: left;
+    width: 35%;
+    } 
+
+.sheet-37porciento{
+    float: left;
+    width: 37.5%;
+    } 
+
+.sheet-40porciento{
+    float: left;
+    width: 40%;
+    }    
+
+.sheet-50porciento{
+    float: left;
+    width: 50%;
+    }  
+
+.sheet-60porciento{
+    float: left;
+    width: 60%;
+    }
+
+.sheet-70porciento{
+    float: left;
+    width: 70%;
+    }   
+
+.sheet-75porciento{
+    float: left;
+    width: 75%;
+    }
+    
+
+.sheet-arrow-right
+{
+    border-bottom: 2px solid transparent;
+    border-left: 800px solid black;
+    border-top: 3px solid transparent;
+}
+
+.sheet-arrow-left
+{
+    border-bottom: 2px solid transparent;
+    border-right: 800px solid black;
+    border-top: 3px solid transparent;
+}
+
+
+/* ################################################### */
+/* ###### CAMBIOS Y TRANSFORMACIONES DE FICHA ######## */
+/* ################################################### */
+
+input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
+input.sheet-toggle-hide:checked ~ div.sheet-body {
+    display: none;
+}
+
+.sheet-block-a,
+.sheet-block-switch:checked ~ .sheet-block-b {
+  display: block;
+}
+
+.sheet-block-b,
+.sheet-block-switch:checked ~ .sheet-block-a {
+  display: none;
+}
+
+.sheet-ficha_luchador,
+.sheet-tipodeficha:checked ~ .sheet-ficha_mago {
+  display: block;
+}
+
+.sheet-ficha_mago,
+.sheet-tipodeficha:checked ~ .sheet-ficha_luchador {
+  display: none;
+}
+
+input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
+input.sheet-toggle-hide:checked ~ div.sheet-body {
+    display: none;
+}
+
+
+
+/* ################################################### */
+/* ############### BOTONES Y DIBUJOS ################# */
+/* ################################################### */
+
+.sheet-dibujito{
+    height: 70px;
+    width: 70px;
+    margin-right: -9px !important;
+    margin-left: 0px;
+    position: relative;
+    top: -11px;   
+}
+
+.sheet-dibujitoarm{
+    height: 70px;
+    width: 70px;
+    margin-right: -9px !important;
+    margin-left: 0px;
+    position: relative;
+    top: 19px;   
+}
+
+button[type=roll],
+button[type=action],
+button[type=compendium],
+button[type=cancel],
+button[type=submit],
+button[type=finish],
+button[type=back] {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    line-height: 12px;
+    box-shadow: none;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    text-align:left;
+    position:relative;
+    
+}
+
+button[type=roll]::before {
+    content: " " !important;
+}
+
+.sheet-botonimagen {
+    position:relative;
+    vertical-align: middle;
+    height: 70px;
+    width: 70px;
+    margin-right: -15px !important;
+    margin-left: 0px;
+    top: -10px;   
+    background-position: 0;
+
+
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+}
+
+.sheet-bconjuracion
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png") !important;
+}
+.sheet-bintensidad
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCIntensidad.png") !important;
+}
+
+.sheet-bdisparo
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDisparo.png") !important;
+}
+
+.sheet-bdominio
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDominio.png") !important;
+}
+
+.sheet-besquiva
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCEsquiva.png") !important;
+}
+
+.sheet-bbloqueo
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png") !important;
+}
+
+.sheet-bpelea
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCPelea.png") !important;
+}
+
+.sheet-bataque1
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque1.png") !important;
+}
+
+.sheet-bdesvio
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvio.png") !important;
+}
+
+.sheet-bataque2
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque2.png") !important;
+}
+
+.sheet-bataque3
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque3.png") !important;
+}
+
+.sheet-bataquesa
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaqueSA.png") !important;
+}
+
+.sheet-bdesviosa
+{
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvioSA.png") !important;
+}
+
+
+/* ################################################### */
+/* ################## CIRCULITOS ##################### */
+/* ################################################### */
+
+/* -----Hide actual radio----- */
+input.sheet-rango[type="radio"],
+input.sheet-rango2[type="radio"],
+input.sheet-rango3[type="radio"]
+{
+    max-width: 2em;  
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* -----Fake radio (los circulitos que sí se ven)----- */
+
+input.sheet-rango[type="radio"] + span::before
+{
+    margin-right: 8px;
+    border: solid 2px black;
+    line-height: 13px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    
+    
+    color:black;
+    content: "⬤";
+    width: 13px;
+    height: 13px; 
+    font-size: 1em;
+
+    
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+input.sheet-rango2[type="radio"] + span::before
+{
+    margin-right: 4px;
+    border: solid 2px black;
+    line-height: 12px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    
+    
+    color:black;
+    content: "⬤";
+    width: 12px;
+    height: 12px; 
+    font-size: 1em;
+
+    /*Esto hace que sean círculos en vez de cuadrados ••●∴⋅⬤*/
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+input.sheet-rango3[type="radio"] + span::before
+{
+    margin-right: 5px;
+    border: solid 2px black;
+    line-height: 8px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    
+    
+    color:black;
+    content: "⬤";
+    width: 8px;
+    height: 8px; 
+    font-size: 1em;
+
+
+    /*Esto hace que sean círculos en vez de cuadrados (puntos varios: •∴⋅⬤)*/
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/* -----Remove dot from all radios _after_ selected one----- */
+input.sheet-rango[type="radio"]:checked ~ input.sheet-rango[type="radio"] + span::before,
+input.sheet-rango2[type="radio"]:checked ~ input.sheet-rango2[type="radio"] + span::before,
+input.sheet-rango3[type="radio"]:checked ~ input.sheet-rango3[type="radio"] + span::before
+{    
+    content: "";
+}
+
+/*------------empty traits-----------*/
+input.sheet-zero[type="radio"]:checked + span::before
+{
+    opacity: 0;
+}
+
+input.sheet-zero[type="radio"]:hover + span::before
+{
+    opacity: 1;
+}
+
+input.sheet-zero[type="radio"] + span::before
+{
+    font-size: 12px;
+    content: "✖";
+    opacity: 0.15;
+}
+
+
+
+
+
+/*quitar los dados
+button[type=roll]::before{
+    content: " " !important;
+}
+*/
