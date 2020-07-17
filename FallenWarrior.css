@@ -71,6 +71,7 @@ span.sheet-dee {
 /***************************************/
 /* FORMATO DE LAS PLANTILLAS DE TIRADAS*/
 /***************************************/
+
   .sheet-rolltemplate-simple .sheet-charname,
   .sheet-rolltemplate-moribundo .sheet-charname,
   .sheet-rolltemplate-tres .sheet-charname,
@@ -144,12 +145,28 @@ span.sheet-dee {
 .sheet-rolltemplate-lesion .sheet-adv,
 .sheet-rolltemplate-dmg .sheet-adv
 {
-    display       : inline-block;
+    display       : inline;
     margin-top    : 1em;
     margin-bottom : 0.3em;
     text-align    : center;
-    vertical-align: top;
+    vertical-align: middle;
     width         : 100%;
+}
+
+.sheet-rolltemplate-simple .sheet-templateimagen,
+.sheet-rolltemplate-moribundo .sheet-templateimagen,
+.sheet-rolltemplate-tres .sheet-templateimagen,
+.sheet-rolltemplate-tresd .sheet-templateimagen,
+.sheet-rolltemplate-lesion .sheet-templateimagen,
+.sheet-rolltemplate-dmg .sheet-templateimagen
+{
+    height: 50px;
+    width: 50px;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-right: 2.5em;
+    width: 25%;
 }
 
 .sheet-rolltemplate-simple .sheet-adv:first-child,
@@ -275,7 +292,7 @@ span.sheet-dee {
 .sheet-rolltemplate-lesion .sheet-lesion
 {
     margin-top: 3px;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
     line-height: 14px;
     text-align: center;
@@ -287,7 +304,9 @@ span.sheet-dee {
     font-weight: normal;
     line-height: 15px;
     text-align: center;
+    
 }
+
 
 
 
@@ -360,6 +379,7 @@ span.sheet-dee {
     border: 0px;
 }
 
+
 /* ################################################### */
 /* ################## ESTILOS PABLO ################## */
 /* ################################################### */
@@ -403,7 +423,6 @@ h1 {
     margin-bottom: 0.3em;
     text-align: center;
     font-variant: small-caps;
-    
     
 }
 
@@ -464,7 +483,8 @@ h1 {
     top: 0px;   
 }
 
-input {
+input 
+{
     border-top: 0px solid rgb(0, 0, 0);
     border-left: 0px solid rgb(0, 0, 0);
     border-right: 0px solid rgb(0, 0, 0);
@@ -527,7 +547,8 @@ select {
     font-size: smaller;
 }
 
-.sheet-dadito {
+.sheet-dadito 
+{
     font-family: dicefontd12; 
     font-size: large;
     font-weight: bold;
@@ -540,7 +561,7 @@ select {
     font-weight: bold !important;
 }
 
-    .sheet-fuentehabcomb
+.sheet-fuentehabcomb
 {
     font-family: Arial, Helvetica, sans-serif !important;
     font-size: small !important;
@@ -573,10 +594,6 @@ hr {
     margin-top: 0.25em;
     margin-bottom: 0.25em;
 }
-
-/*.sheet-col{
-    margin: 2px !important;
-    } */
 
 .sheet-floatright {
     float: right;  
