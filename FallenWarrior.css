@@ -149,7 +149,7 @@ span.sheet-dee {
     margin-bottom : 0.3em;
     text-align    : right;
     vertical-align: middle;
-    width         : 50%;
+    width         : 52%;
 }
 
 .sheet-rolltemplate-dmg .sheet-templateimagen
@@ -157,10 +157,12 @@ span.sheet-dee {
     display: inline;
     height: 55px;
     width: 55px;
+    margin-left: 1.5em;
     margin-top: 0.1em;
     margin-bottom: 0.2em;
     margin-right: 0.1em;
-    margin-left: 2.5em;
+    width: 25%;
+    text-align: right;
     
 }
 
@@ -169,10 +171,12 @@ span.sheet-dee {
     display: inline;
     height: 55px;
     width: 75px !important;
+    margin-left: 0.8em;
     margin-top: 0.1em;
     margin-bottom: 0.2em;
     margin-right: 0.1em;
-    margin-left: 1em;
+    width: 25%;
+    text-align: right;
     
 }
 
@@ -299,7 +303,7 @@ span.sheet-dee {
 .sheet-rolltemplate-lesion .sheet-lesion
 {
     margin-top: 3px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     line-height: 14px;
     text-align: center;
