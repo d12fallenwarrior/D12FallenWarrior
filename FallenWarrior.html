@@ -2311,7 +2311,7 @@
                     <div class="adv">
                         <span class="grey">{{r2}}</span>
                     </div>
-                    {{#moribundo}}
+                    
                         {{#rollGreater() r1 traumaentra}}
                         <div class="arrow-right"></div>
                         <div class="label">
@@ -2324,7 +2324,7 @@
                             <span class="red">¡¡Caes moribundo!!</span>
                         </div>
                         {{/^rollGreater() r1 traumaentra}}
-                    {{/moribundo}}
+                    
                 {{/rollLess() r1 r2}}
 
                 {{#rollTotal() r1 r2}}
@@ -2337,7 +2337,7 @@
                     <div class="adv">
                         <span class="green">{{r2}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
                     </div>
-                    {{#moribundo}}
+                    
                         {{#rollGreater() r1 traumaentradoble}}
                         <div class="arrow-right"></div>
                         <div class="label">
@@ -2350,7 +2350,7 @@
                             <span class="red">¡¡Caes moribundo!!</span>
                         </div>
                         {{/^rollGreater() r1 traumaentradoble}}
-                    {{/moribundo}}
+                    
                 {{/rollTotal() r1 r2}}
 
                 {{#rollGreater() r1 r2}}
@@ -2361,7 +2361,7 @@
                     <div class="adv">
                         <span>{{r2}}</span>
                     </div>
-                    {{#moribundo}}
+                    
                         {{#rollGreater() r2 traumaentra}}
                         <div class="arrow-right"></div>
                         <div class="label">
@@ -2374,7 +2374,7 @@
                             <span class="red">¡¡Caes moribundo!!</span>
                         </div>
                         {{/^rollGreater() r2 traumaentra}}
-                    {{/moribundo}}
+                    
                 {{/rollGreater() r1 r2}}
         </div>
     </div>
@@ -2388,14 +2388,25 @@
         <div>
             <div class="adv"><span>{{r1}}</span></div>
             <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/FF.png"/>
-        
-        
         </div>
          
         <div class="arrow-right"></div>
-        <div class="label">
-            <span>{{rname}}</span>
-        </div> 
+        <p></p>
+        {{#rollGreater() r1 trauma3}}
+            <div class="label">
+                <span class="green">¡{{personaje}} está vivo y estable!</span>
+            </div>
+        {{/rollGreater() r1 trauma3}}
+        {{#rollBetween() r1 trauma1 trauma3}}
+            <div class="label">
+                <span>{{personaje}} sigue moribundo</span>
+            </div>
+        {{/rollBetween() r1 trauma1 trauma3}}
+        {{#rollLess() r1 trauma1}}
+            <div class="label">
+                <span class="red">¡¡{{personaje}} muere!!</span>
+            </div>
+        {{/rollLess() r1 trauma1}}
     </div>
 </rolltemplate>
 
