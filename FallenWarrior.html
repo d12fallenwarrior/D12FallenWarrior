@@ -1780,7 +1780,7 @@
 
 <rolltemplate class="sheet-rolltemplate-simple">
             <div class="container">
-                <div class="result">
+                <div>
                         {{#rollLess() r1 r2}}
                             <div class="adv">
                                 <span>{{r1}}</span>
@@ -1867,7 +1867,7 @@
 
 <rolltemplate class="sheet-rolltemplate-conj">
     <div class="container">
-        <div class="result">
+        <div>
                 {{#rollLess() r1 r2}}
                     <div class="adv">
                         <span class="grey">{{r1}}</span>
@@ -1921,7 +1921,7 @@
 
 <rolltemplate class="sheet-rolltemplate-tres">
     <div class="container">
-        <div class="result">
+        <div>
             {{#rollLess() r1 r2}}
                 {{#rollLess() r3 r1}}
                 <!--r3 < r1 < r2-->
@@ -2108,7 +2108,7 @@
    
 <rolltemplate class="sheet-rolltemplate-tresd">
     <div class="container">
-        <div class="result">
+        <div>
             {{#rollLess() r1 r2}}
                 {{#rollLess() r3 r1}}
                 <!--r3 < r1 < r2-->
@@ -2286,7 +2286,8 @@
         &{template:dmg} {{rname=rname}} {{r1=r1}} {{arma=arma}} {{charname=charname}}
     -->
     <div class="container">
-        <div class="result">
+        <div>
+            <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/Trasgociego.png"/>
             <div class="adv"><span>{{r1}}</span></div>
         </div>
          
@@ -2299,7 +2300,8 @@
 
 <rolltemplate class="sheet-rolltemplate-moribundo">
     <div class="container">
-        <div class="result">
+        <div>
+            
                 {{#rollLess() r1 r2}}
                     <div class="adv">
                         <span>{{r1}}</span>
@@ -2380,24 +2382,24 @@
 <rolltemplate class="sheet-rolltemplate-lesion">
        
     <div class="container">
-        <div class="result">
-            <div class="adv"><span>{{r1}}</span></div>
+        <div>
+                <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/Trasgociego.png"/>
+                <div class="adv"><span>{{r1}}</span></div>
+            
         </div>
          
     {{#rollTotal() r1 1}}
-        <div class="label larger lesion">
+        <div class="label lesion">
             Lesión - Herida abierta*
         </div>
-        <p></p>
-        <div class="arrow-right"></div>
+                <div class="arrow-right"></div>
         <p></p> 
         <div class="label red">
             <span>
                 Vuelves a la vida totalmente recuperado... o casi, algunas de tus heridas no se han cerrado del todo.
             </span>
         </div>
-        <p></p>
-        <div class="arrow-left"></div>
+                <div class="arrow-left"></div>
         <p></p> 
         <div class="label texto">
             Recibes {{r2}} puntos de Daño Vital permanente.
@@ -2407,19 +2409,17 @@
     {{/rollTotal() r1 1}}
 
     {{#rollTotal() r1 2}}
-        <div class="label larger lesion">
+        <div class="label lesion">
             Lesión - Pesadillas
         </div>
-        <p></p>
-        <div class="arrow-right"></div>
+                <div class="arrow-right"></div>
         <p></p> 
         <div class="label red">
             <span>
                 Terribles pesadillas te atormentan cada noche con imágenes de tu dolorosa muerte.
             </span>
         </div>
-        <p></p>
-        <div class="arrow-left"></div>
+                <div class="arrow-left"></div>
         <p></p> 
         <div class="label texto">
             Cada día tira 1d12: 8 o menos, no has podido dormir bien y quedas cansado todo el día; 4 o menos, no duermes en absoluto y quedas extenuado.
@@ -2428,34 +2428,31 @@
     {{/rollTotal() r1 2}}
 
     {{#rollTotal() r1 3}}
-        <div class="label larger">
-            <span>Lesión - Tuerto*</span>
+        <div class="label lesion">
+            Lesión - Tuerto*
         </div>
-        <p></p>
-        <div class="arrow-right"></div>
+                <div class="arrow-right"></div>
         <p></p> 
         <div class="label texto">
             -1 a Estrategia y desventaja en alerta.
         <p></p>
-            *Quedas Ciego si obtienes Tuerto una segunda vez.
+            *Quedas Ciego si obtienes Tuerto una segunda vez. [Ciego](!&#13;#Ciego)
             <p></p>
         </div>
     {{/rollTotal() r1 3}}
 
     {{#rollTotal() r1 4}}
-        <div class="label larger">
-            <span>Lesión - Aires de grandeza</span>
+        <div class="label lesion">
+            Lesión - Aires de grandeza
         </div>
-        <p></p>
-        <div class="arrow-right"></div>
+                <div class="arrow-right"></div>
         <p></p> 
         <div class="label red">
             <span>
                 El mismísimo Señor del Mal te ha resucitado, eso debe significar algo. Sin ningún atisbo de duda crees ser el trasgo elegido para comandar las huestes oscuras y el único en quien el Señor del Mal confía, el resto de trasgos son todos una panda de inútiles sin seso, ¡menos mal que estás tú!
             </span>
             </div>
-            <p></p>
-        <div class="arrow-left"></div>
+                    <div class="arrow-left"></div>
         <p></p> 
         <div class="label texto">
                 Debes siempre llevar y hacerte cargo personalmente del objeto de misión o tendrás desventaja en todas tus tiradas de combate y habilidad. 
@@ -2464,19 +2461,17 @@
     {{/rollTotal() r1 4}}
     
     {{#rollTotal() r1 5}}
-        <div class="label larger">
-            <span>Lesión - Sordo</span>
+        <div class="label lesion">
+            Lesión - Sordo
         </div>
-        <p></p>
-        <div class="arrow-right"></div>
+                <div class="arrow-right"></div>
         <p></p> 
         <div class="label red">
             <span>
                 Tus oídos dejan de funcionar y no puedes oír nada en absoluto.
             </span>
             </div>
-            <p></p>
-        <div class="arrow-left"></div>
+                    <div class="arrow-left"></div>
         <p></p> 
         <div class="label texto">
             -1 a Estrategia y desventaja en alerta y conjuración. 
@@ -2485,19 +2480,17 @@
     {{/rollTotal() r1 5}}
 
     {{#rollTotal() r1 6}}
-        <div class="label larger">
-            <span>Lesión - Cojo*</span>
+        <div class="label lesion">
+            Lesión - Cojo*
         </div>
-        <p></p>
-        <div class="arrow-right"></div>
+                <div class="arrow-right"></div>
         <p></p> 
         <div class="label red">
             <span>
                 Una de tus piernas no se ha recuperado del todo tras la resurrección, lo que hace que te mueves muy torpemente.
             </span>
             </div>
-            <p></p>
-        <div class="arrow-left"></div>
+                    <div class="arrow-left"></div>
         <p></p> 
         <div class="label texto">
             -1 a Esquiva, -2 a movilidad y -1 en atletismo, equilibrio y piruetas. 
@@ -2508,19 +2501,17 @@
     {{/rollTotal() r1 6}}
 
     {{#rollTotal() r1 7}}
-        <div class="label larger">
-            <span>Lesión - Ansiedad de trasgo</span>
+        <div class="label lesion">
+            Lesión - Ansiedad de trasgo
         </div>
-        <p></p>
-        <div class="arrow-right"></div>
+                <div class="arrow-right"></div>
         <p></p> 
         <div class="label red">
             <span>
                 Sufres de una terrible inseguridad y permaneces involuntariamente en un continuo estado de angustia y tensión.
             </span>
             </div>
-            <p></p>
-        <div class="arrow-left"></div>
+                    <div class="arrow-left"></div>
         <p></p> 
         <div class="label texto">
             -1 a Espíritu. Ahora sí puedes quedar desmoralizado por la muerte de un compañero trasgo. Además, fuera de combate, durante situaciones tensas, debes tirar 1d12: 4 o menos te quedas bloqueado hasta que alguien te ayude.  
@@ -2529,42 +2520,38 @@
     {{/rollTotal() r1 7}}
 
     {{#rollTotal() r1 8}}
-        <div class="label larger">
-            <span>Lesión - Lisiado*</span>
+        <div class="label lesion">
+            Lesión - Lisiado*
         </div>
-        <p></p>
-        <div class="arrow-right"></div>
+                <div class="arrow-right"></div>
         <p></p> 
         <div class="label red">
             <span>
                 Tus manos han perdido movilidad tras la resurrección y han quedado entumecidas y pálidas.
             </span>
             </div>
-            <p></p>
-        <div class="arrow-left"></div>
+                    <div class="arrow-left"></div>
         <p></p> 
         <div class="label texto">
             -1 a Destreza.
             <p></p>
-            *Quedas Manco de una mano al azar si recibes Lisiado más de una vez.
+            *Quedas Manco de una mano al azar si recibes Lisiado más de una vez. [Manco](!&#13;#Manco)
             <p></p>
             </div>
     {{/rollTotal() r1 8}}
 
     {{#rollTotal() r1 9}}
-        <div class="label larger">
-            <span>Lesión - Nauseas</span>
+        <div class="label lesion">
+            Lesión - Nauseas
         </div>
-        <p></p>
-        <div class="arrow-right"></div>
+                <div class="arrow-right"></div>
         <p></p> 
         <div class="label red">
             <span>
                 Quedas mareado permanentemente.
             </span>
             </div>
-            <p></p>
-        <div class="arrow-left"></div>
+                    <div class="arrow-left"></div>
         <p></p> 
         <div class="label texto">
             Tienes desventaja en todas tus tiradas de Destreza y Agilidad. Al correr o esprintar debes superar una tirada de equilibrio de dificultad 5 para no caer al suelo.
@@ -2573,10 +2560,10 @@
     {{/rollTotal() r1 9}}
 
     {{#rollTotal() r1 10}}
-    <div class="label larger">
-        <span>Lesión - Vacío voraz</span>
+    <div class="label lesion">
+        Lesión - Vacío voraz
     </div>
-    <p></p>
+    
     <div class="arrow-right"></div>
     <p></p> 
     <div class="label red">
@@ -2584,7 +2571,7 @@
             Sientes un hambre atroz y un continuo vacío en tu estómago.
         </span>
         </div>
-        <p></p>
+        
     <div class="arrow-left"></div>
     <p></p> 
     <div class="label texto">
@@ -2594,10 +2581,10 @@
     {{/rollTotal() r1 10}}
 
     {{#rollTotal() r1 11}}
-    <div class="label larger">
-        <span>Lesión - Hemofílico</span>
+    <div class="label lesion">
+        Lesión - Hemofílico
     </div>
-    <p></p>
+    
     <div class="arrow-right"></div>
     <p></p> 
     <div class="label red">
@@ -2605,7 +2592,7 @@
             Hasta la herida más pequeña no deja de sangrar.
         </span>
         </div>
-        <p></p>
+        
     <div class="arrow-left"></div>
     <p></p> 
     <div class="label texto">
@@ -2615,10 +2602,10 @@
     {{/rollTotal() r1 11}}
 
     {{#rollTotal() r1 12}}
-    <div class="label larger">
-        <span>Lesión - Resurrección inestable</span>
+    <div class="label lesion">
+        Lesión - Resurrección inestable
     </div>
-    <p></p>
+    
     <div class="arrow-right"></div>
     <p></p> 
     <div class="label red">
@@ -2626,7 +2613,7 @@
             El poder impío del señor oscuro logra resucitarte, pero tienes la terrible intuición de que algo no ha salido bien del todo.
         </span>
         </div>
-        <p></p>
+        
     <div class="arrow-left"></div>
     <p></p> 
     <div class="label texto">
@@ -2635,6 +2622,47 @@
         </div>
     {{/rollTotal() r1 12}}
 
+    {{#rollTotal() r1 30}}
+    <div class="label lesion">
+        Lesión - Ciego
+    </div>
+    
+    <div class="arrow-right"></div>
+    <p></p> 
+    <div class="label red">
+        <span>
+            No puedes ver nada en absoluto.
+        </span>
+        </div>
+        
+    <div class="arrow-left"></div>
+    <p></p> 
+    <div class="label texto">
+        -1 a Estrategia y tienes desventaja en todas tus tiradas de combate, movilidad y observación. Al no poder ver, tus agresores pueden intentar hacer un ataque sigiloso cada vez que te ataquen.
+        <p></p>
+        </div>
+    {{/rollTotal() r1 30}}
+
+    {{#rollTotal() r1 80}}
+    <div class="label lesion">
+        Lesión - Manco
+    </div>
+    
+    <div class="arrow-right"></div>
+    <p></p> 
+    <div class="label red">
+        <span>
+            Una de tus manos queda totalmente atrofiada.
+        </span>
+        </div>
+        
+    <div class="arrow-left"></div>
+    <p></p> 
+    <div class="label texto">
+        No puedes usar armas a dos manos, arma y escudo ni dos armas a una mano. Tienes desventaja en nadar y pelea (salvo al intentar escapar de un agarre).
+        <p></p>
+        </div>
+    {{/rollTotal() r1 80}}
     </div>
     
 </rolltemplate>
