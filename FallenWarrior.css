@@ -97,6 +97,7 @@ span.sheet-dee {
 .sheet-rolltemplate-simple,
 .sheet-rolltemplate-moribundo,
 .sheet-rolltemplate-muerte,
+.sheet-rolltemplate-golpe,
 .sheet-rolltemplate-conj,
 .sheet-rolltemplate-tres,
 .sheet-rolltemplate-tresd,
@@ -109,6 +110,7 @@ span.sheet-dee {
 .sheet-rolltemplate-simple .sheet-container,
 .sheet-rolltemplate-moribundo .sheet-container,
 .sheet-rolltemplate-muerte .sheet-container,
+.sheet-rolltemplate-golpe .sheet-container,
 .sheet-rolltemplate-conj .sheet-container,
 .sheet-rolltemplate-tres .sheet-container,
 .sheet-rolltemplate-tresd .sheet-container,
@@ -143,8 +145,18 @@ span.sheet-dee {
     vertical-align: top;
     width         : 28.75%;
 }
-.sheet-rolltemplate-lesion .sheet-adv,
+.sheet-rolltemplate-lesion .sheet-adv
+{
+    display       : inline-block;
+    margin-top    : 1em;
+    margin-bottom : 0.3em;
+    text-align    : right;
+    vertical-align: middle;
+    width         : 52%;
+}
+
 .sheet-rolltemplate-muerte .sheet-adv,
+.sheet-rolltemplate-golpe .sheet-adv,
 .sheet-rolltemplate-dmg .sheet-adv
 {
     display       : inline-block;
@@ -156,6 +168,7 @@ span.sheet-dee {
 }
 
 .sheet-rolltemplate-dmg .sheet-templateimagen,
+.sheet-rolltemplate-golpe .sheet-templateimagen,
 .sheet-rolltemplate-muerte .sheet-templateimagen
 {
     display: inline;
@@ -185,6 +198,7 @@ span.sheet-dee {
 .sheet-rolltemplate-simple .sheet-adv:first-child,
 .sheet-rolltemplate-moribundo .sheet-adv:first-child,
 .sheet-rolltemplate-muerte .sheet-adv:first-child,
+.sheet-rolltemplate-golpe .sheet-adv:first-child,
 .sheet-rolltemplate-conj .sheet-adv:first-child,
 .sheet-rolltemplate-lesion .sheet-adv:first-child,
 .sheet-rolltemplate-dmg .sheet-adv:first-child
@@ -200,6 +214,7 @@ span.sheet-dee {
 .sheet-rolltemplate-simple .sheet-adv:nth-child(3),
 .sheet-rolltemplate-moribundo .sheet-adv:nth-child(3),
 .sheet-rolltemplate-muerte .sheet-adv:nth-child(3),
+.sheet-rolltemplate-golpe .sheet-adv:nth-child(3),
 .sheet-rolltemplate-conj .sheet-adv:nth-child(3)
 {
     margin-right: 8px;
@@ -218,6 +233,8 @@ span.sheet-dee {
 .sheet-rolltemplate-moribundo .sheet-solo span,
 .sheet-rolltemplate-muerte .sheet-adv span,
 .sheet-rolltemplate-muerte .sheet-solo span,
+.sheet-rolltemplate-golpe .sheet-adv span,
+.sheet-rolltemplate-golpe .sheet-solo span,
 .sheet-rolltemplate-conj .sheet-adv span,
 .sheet-rolltemplate-conj .sheet-solo span,
 .sheet-rolltemplate-tres .sheet-adv span,
@@ -238,6 +255,7 @@ span.sheet-dee {
 .sheet-rolltemplate-simple .sheet-advspacer,
 .sheet-rolltemplate-moribundo .sheet-advspacer,
 .sheet-rolltemplate-muerte .sheet-advspacer,
+.sheet-rolltemplate-golpe .sheet-advspacer,
 .sheet-rolltemplate-conj .sheet-advspacer,
 .sheet-rolltemplate-tres .sheet-advspacer,
 .sheet-rolltemplate-tresd .sheet-advspacer,
@@ -253,6 +271,7 @@ span.sheet-dee {
 .sheet-rolltemplate-simple .sheet-arrow-right,
 .sheet-rolltemplate-moribundo .sheet-arrow-right,
 .sheet-rolltemplate-muerte .sheet-arrow-right,
+.sheet-rolltemplate-golpe .sheet-arrow-right,
 .sheet-rolltemplate-conj .sheet-arrow-right,
 .sheet-rolltemplate-tres .sheet-arrow-right,
 .sheet-rolltemplate-tresd .sheet-arrow-right,
@@ -267,6 +286,7 @@ span.sheet-dee {
 .sheet-rolltemplate-simple .sheet-arrow-left,
 .sheet-rolltemplate-moribundo .sheet-arrow-left,
 .sheet-rolltemplate-muerte .sheet-arrow-left,
+.sheet-rolltemplate-golpe .sheet-arrow-left,
 .sheet-rolltemplate-conj .sheet-arrow-left,
 .sheet-rolltemplate-tres .sheet-arrow-left,
 .sheet-rolltemplate-tresd .sheet-arrow-left,
@@ -281,6 +301,7 @@ span.sheet-dee {
 .sheet-rolltemplate-simple .sheet-solo,
 .sheet-rolltemplate-moribundo .sheet-solo,
 .sheet-rolltemplate-muerte .sheet-solo,
+.sheet-rolltemplate-golpe .sheet-solo,
 .sheet-rolltemplate-conj .sheet-solo,
 .sheet-rolltemplate-tres .sheet-solo,
 .sheet-rolltemplate-tresd .sheet-solo,
@@ -297,6 +318,7 @@ span.sheet-dee {
 .sheet-rolltemplate-simple span,
 .sheet-rolltemplate-moribundo span,
 .sheet-rolltemplate-muerte span,
+.sheet-rolltemplate-golpe span,
 .sheet-rolltemplate-conj span,
 .sheet-rolltemplate-tres span,
 .sheet-rolltemplate-tresd span,
@@ -333,6 +355,7 @@ span.sheet-dee {
 .sheet-rolltemplate-simple .sheet-label,
 .sheet-rolltemplate-moribundo .sheet-label,
 .sheet-rolltemplate-muerte .sheet-label,
+.sheet-rolltemplate-golpe .sheet-label,
 .sheet-rolltemplate-conj .sheet-label,
 .sheet-rolltemplate-tres .sheet-label,
 .sheet-rolltemplate-tresd .sheet-label,
@@ -347,6 +370,7 @@ span.sheet-dee {
 .sheet-rolltemplate-simple .sheet-label span span,
 .sheet-rolltemplate-moribundo .sheet-label span span,
 .sheet-rolltemplate-muerte .sheet-label span span,
+.sheet-rolltemplate-golpe .sheet-label span span,
 .sheet-rolltemplate-conj .sheet-label span span,
 .sheet-rolltemplate-tres .sheet-label span span,
 .sheet-rolltemplate-tresd .sheet-label span span,
@@ -365,6 +389,8 @@ span.sheet-dee {
 .sheet-rolltemplate-moribundo .sheet-label span span,
 .sheet-rolltemplate-muerte .sheet-grey,
 .sheet-rolltemplate-muerte .sheet-label span span,
+.sheet-rolltemplate-golpe .sheet-grey,
+.sheet-rolltemplate-golpe .sheet-label span span,
 .sheet-rolltemplate-conj .sheet-grey,
 .sheet-rolltemplate-conj .sheet-label span span,
 .sheet-rolltemplate-tres .sheet-grey,
@@ -385,6 +411,7 @@ span.sheet-dee {
 .sheet-rolltemplate-simple .sheet-green,
 .sheet-rolltemplate-moribundo .sheet-green,
 .sheet-rolltemplate-muerte .sheet-green,
+.sheet-rolltemplate-golpe .sheet-green,
 .sheet-rolltemplate-conj .sheet-green,
 .sheet-rolltemplate-tres .sheet-green,
 .sheet-rolltemplate-tresd .sheet-green
@@ -396,6 +423,7 @@ span.sheet-dee {
 .sheet-rolltemplate-simple .sheet-red,
 .sheet-rolltemplate-moribundo .sheet-red,
 .sheet-rolltemplate-muerte .sheet-red,
+.sheet-rolltemplate-golpe .sheet-red,
 .sheet-rolltemplate-conj .sheet-red,
 .sheet-rolltemplate-tres .sheet-red,
 .sheet-rolltemplate-lesion .sheet-red,
