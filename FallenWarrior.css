@@ -162,9 +162,9 @@ span.sheet-dee {
     display       : inline-block;
     margin-top    : 1em;
     margin-bottom : 0.3em;
-    text-align    : right;
+    text-align: center;
     vertical-align: middle;
-    width         : 52%;
+    width         : 67%;
 }
 
 .sheet-rolltemplate-dmg .sheet-templateimagen,
@@ -174,12 +174,11 @@ span.sheet-dee {
     display: inline;
     height: 55px;
     width: 55px;
-    margin-left: 2em;
-    margin-top: 0.1em;
+    margin-left: 0em;
+    margin-top: 0.2em;
     margin-bottom: 0.2em;
     margin-right: 0.1em;
     text-align: right;
-    
 }
 
 .sheet-rolltemplate-lesion .sheet-templateimagen
