@@ -150,9 +150,9 @@ span.sheet-dee {
     display       : inline-block;
     margin-top    : 1em;
     margin-bottom : 0.3em;
-    text-align    : right;
+    text-align    : center;
     vertical-align: middle;
-    width         : 52%;
+    width         : 57%;
 }
 
 .sheet-rolltemplate-muerte .sheet-adv,
@@ -186,7 +186,7 @@ span.sheet-dee {
     display: inline;
     height: 55px;
     width: 75px !important;
-    margin-left: 0.8em;
+    margin-left: 0em;
     margin-top: 0.1em;
     margin-bottom: 0.2em;
     margin-right: 0.1em;
@@ -326,7 +326,7 @@ span.sheet-dee {
 .sheet-rolltemplate-dmg span
 {
     font-size: 12px;
-    font-weight: bold;
+    font-weight: bold !important;
     line-height: 12px;
     text-align: center;
 }
@@ -430,6 +430,35 @@ span.sheet-dee {
 {
     color: #700000;
     border: 0px;
+}
+
+
+/*Estilo de los botones en las macros*/
+.sheet-rolltemplate-simple a[href^='!'],
+.sheet-rolltemplate-simple a[href^='~'],
+.sheet-rolltemplate-moribundo a[href^='!'],
+.sheet-rolltemplate-moribundo a[href^='~'],
+.sheet-rolltemplate-muerte a[href^='!'],
+.sheet-rolltemplate-muerte a[href^='~'],
+.sheet-rolltemplate-golpe a[href^='!'],
+.sheet-rolltemplate-golpe a[href^='~'],
+.sheet-rolltemplate-conj a[href^='!'],
+.sheet-rolltemplate-conj a[href^='~'],
+.sheet-rolltemplate-tres a[href^='!'],
+.sheet-rolltemplate-tres a[href^='~'],
+.sheet-rolltemplate-tresd a[href^='!'],
+.sheet-rolltemplate-tresd a[href^='~'],
+.sheet-rolltemplate-lesion a[href^='!'],
+.sheet-rolltemplate-lesion a[href^='~'],
+.sheet-rolltemplate-dmg a[href^='!'],
+.sheet-rolltemplate-dmg a[href^='~']
+{
+    background-color:transparent;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px; 
+    color:initial;
+    display:inline;
+    padding:1px;
 }
 
 /* ################################################### */
