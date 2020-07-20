@@ -331,7 +331,7 @@ span.sheet-dee {
     text-align: center;
 }
 
-
+.sheet-rolltemplate-golpe .sheet-descontrol,
 .sheet-rolltemplate-lesion .sheet-lesion
 {
     margin-top: 3px;
@@ -341,6 +341,7 @@ span.sheet-dee {
     text-align: center;
 }
 
+.sheet-rolltemplate-golpe .sheet-texto,
 .sheet-rolltemplate-lesion .sheet-texto
 {
     font-size: 13px;
@@ -415,7 +416,7 @@ span.sheet-dee {
 .sheet-rolltemplate-tres .sheet-green,
 .sheet-rolltemplate-tresd .sheet-green
 {
-    color: #238300;
+    color: #238300 !important;
     border: 0px;
 }
 
@@ -428,12 +429,13 @@ span.sheet-dee {
 .sheet-rolltemplate-lesion .sheet-red,
 .sheet-rolltemplate-tresd .sheet-red
 {
-    color: #700000;
+    color: #700000 !important;
     border: 0px;
 }
 
 
 /*Estilo de los botones en las macros*/
+
 .sheet-rolltemplate-simple a[href^='!'],
 .sheet-rolltemplate-simple a[href^='~'],
 .sheet-rolltemplate-moribundo a[href^='!'],
