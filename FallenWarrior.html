@@ -351,35 +351,24 @@
     <div class="2colrow">
        
         <div class="col centrado">
-            <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:conj} {{rname=Conjuración}} {{dificultad=Dificultad [[(5+@{poder})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{mod=@{conjuracion}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
-            
-            <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>
+            <!--<button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:conj} {{rname=Conjuración}} {{dificultad=Dificultad [[(5+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{mod=@{conjuracion}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
             -->
+            <img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>
+            
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_conjuracion" type="roll" value="&{template:conj} {{rname=Conjuración}} {{dificultad=Dificultad [[(5+@{poder})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{mod=@{conjuracion}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" > Conjuración</button></td>
-            <td>&nbsp;&nbsp;</td>
-            <td class="bordebot"><select name="attr_poder" style="width: 40px;">
-                <option value="1" selected="selected">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select></td>
+            <td class="bordebot">
+            <!--<button name="roll_conjuracion" type="roll" value="&{template:conj} {{rname=Conjuración}} {{dificultad=Dificultad [[(5+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{mod=@{conjuracion}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" > Conjuración</button>
+            -->
+            <span class="negrita larger"> Conjuración</span>
+            </td>
             <td>&nbsp;&nbsp;</td>
             <td class="bordebot"><input name="attr_conjuracion" type="number"  class="centrado" value="0" style="width: 70px;"></td>
             </tr>
 
             <tr class="negrita smaller">
                 <td class="centrado"><span>&nbsp;&nbsp;(Ast+conjuración-5)&nbsp;&nbsp;</span></td>
-                <td>&nbsp;&nbsp;</td>    
-                <td class="centrado"><span>Poder</span></td>
                 <td>&nbsp;&nbsp;</td>    
                 <td class="centrado"><span>Bonificador</span></td>
             </tr>                        
@@ -426,14 +415,11 @@
     <br></br>
     <div class="3colrow">
         <div class="col centrado">
-            <button name="roll_intensidad" class="botonimagen bintensidad" type="roll" value="&{template:@{plantilla}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{conjuro=Intensidad}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-            
-            <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCIntensidad.png"/>
-            -->
+            <button name="roll_intensidad" class="botonimagen bintensidad" type="roll" value="&{template:@{plantilla}} {{mmod=@{intensidad}}} {{magia=Intensidad}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{rnormal=[[2d12k1]]}} {{r12=[[1d12]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_intensidad" type="roll" value="&{template:@{plantilla}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{conjuro=Intensidad}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Intensidad</button></td>
+            <td class="bordebot"><button name="roll_intensidad" type="roll" value="&{template:@{plantilla}} {{mmod=@{intensidad}}} {{magia=Intensidad}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{rnormal=[[2d12k1]]}} {{r12=[[1d12]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Intensidad</button></td>
             <td>&nbsp;&nbsp;</td>       
             <td class="bordebot"><input name="attr_intensidad" type="number"  class="centrado" value="0" style="width: 70px;"></td>
             </tr>
@@ -447,14 +433,13 @@
              </div>
 
         <div class="col centrado">
-            <button name="roll_disparo" class="botonimagen bdisparo" type="roll" value="&{template:@{plantilla}} {{rname=Disparo}} {{mod=@{disparo}}} {{conjuro=Disparo}} {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_disparo" class="botonimagen bdisparo" type="roll" value="&{template:@{plantilla}} {{mmod=@{disparo}}} {{magia=Disparo}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{rnormal=[[2d12k1]]}} {{r12=[[1d12]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
             
-            <!-- <img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDisparo.png"/>
-            -->
+            
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_disparo" type="roll" value="&{template:@{plantilla}} {{rname=Disparo}} {{mod=@{disparo}}} {{conjuro=Disparo}} {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Disparo</button></td>
+            <td class="bordebot"><button name="roll_disparo" type="roll" value="&{template:@{plantilla}} {{mmod=@{disparo}}} {{magia=Disparo}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{rnormal=[[2d12k1]]}} {{r12=[[1d12]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Disparo</button></td>
             <td>&nbsp;&nbsp;</td>
             <td class="bordebot"><input name="attr_disparo" type="number"  class="centrado" value="0" style="width: 70px;"></td>
             </tr>
@@ -468,14 +453,13 @@
              </div>
 
         <div class="col centrado">
-            <button name="roll_dominio" class="botonimagen bdominio" type="roll" value="&{template:@{plantilla}} {{rname=Dominio}} {{mod=@{dominio}}} {{conjuro=Dominio}} {{r1=[[(1d12cs0cf0+@{dominio})]]}} {{r2=[[(1d12cs0cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_dominio" class="botonimagen bdominio" type="roll" value="&{template:@{plantilla}} {{mmod=@{dominio}}} {{magia=Dominio}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{rnormal=[[2d12k1]]}} {{r12=[[1d12]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
             
-            <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDominio.png"/>
-            -->
+            
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_dominio" type="roll" value="&{template:@{plantilla}} {{rname=Dominio}} {{mod=@{dominio}}} {{conjuro=Dominio}} {{r1=[[(1d12cs0cf0+@{dominio})]]}} {{r2=[[(1d12cs0cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Dominio</button></td>
+            <td class="bordebot"><button name="roll_dominio" type="roll" value="&{template:@{plantilla}} {{mmod=@{dominio}}} {{magia=Dominio}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{rnormal=[[2d12k1]]}} {{r12=[[1d12]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Dominio</button></td>
             <td>&nbsp;&nbsp;</td>
                 <td class="bordebot"><input name="attr_dominio" type="number"  class="centrado" value="0" style="width: 70px;"></td>
             </tr>
@@ -498,8 +482,6 @@
             
             <button name="roll_esquiva" class="botonimagen besquiva" type="roll" value="&{template:@{plantilla}} {{rname=Esquiva}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(@{r3}+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                             
-            <!-- <img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCEsquiva.png"/>
-            -->
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
@@ -1085,16 +1067,16 @@
   
         </tr><tr><td style="padding-bottom:5px"><span class="fuentehabcomb">Conjuración</span> </td><td style="padding-bottom:5px">
             <input type="radio" class="rango3 sheet-zero" name="attr_rang_conjuracion" value="0" checked="checked" /><span></span><input type="radio" class="rango3" name="attr_rang_conjuracion" value="1" /><span></span><input type="radio" class="rango3" name="attr_rang_conjuracion" value="2" /><span></span><input type="radio" class="rango3" name="attr_rang_conjuracion" value="3" /><span></span><input type="radio" class="rango3" name="attr_rang_conjuracion" value="4" /><span></span><input type="radio" class="rango3" name="attr_rang_conjuracion" value="5" /><span></span><input type="radio" class="rango3" name="attr_rang_conjuracion" value="6" /><span></span></td>
-  
-        </tr><tr><td style="padding-bottom:5px"><span class="fuentehabcomb">Intensidad</span> </td><td style="padding-bottom:5px">
-            <input type="radio" class="rango3 sheet-zero" name="attr_rang_intensidad" value="0" checked="checked" /><span></span><input type="radio" class="rango3" name="attr_rang_intensidad" value="1" /><span></span><input type="radio" class="rango3" name="attr_rang_intensidad" value="2" /><span></span><input type="radio" class="rango3" name="attr_rang_intensidad" value="3" /><span></span><input type="radio" class="rango3" name="attr_rang_intensidad" value="4" /><span></span><input type="radio" class="rango3" name="attr_rang_intensidad" value="5" /><span></span><input type="radio" class="rango3" name="attr_rang_intensidad" value="6" /><span></span></td>
-  
+        
         </tr><tr><td style="padding-bottom:5px"><span class="fuentehabcomb">Disparo</span> </td><td style="padding-bottom:5px">
             <input type="radio" class="rango3 sheet-zero" name="attr_rang_disparo" value="0" checked="checked" /><span></span><input type="radio" class="rango3" name="attr_rang_disparo" value="1" /><span></span><input type="radio" class="rango3" name="attr_rang_disparo" value="2" /><span></span><input type="radio" class="rango3" name="attr_rang_disparo" value="3" /><span></span><input type="radio" class="rango3" name="attr_rang_disparo" value="4" /><span></span><input type="radio" class="rango3" name="attr_rang_disparo" value="5" /><span></span><input type="radio" class="rango3" name="attr_rang_disparo" value="6" /><span></span></td>
    
         </tr><tr><td style="padding-bottom:5px"><span class="fuentehabcomb">Dominio</span></td><td style="padding-bottom:5px">
             <input type="radio" class="rango3 sheet-zero" name="attr_rang_dominio" value="0" checked="checked" /><span></span><input type="radio" class="rango3" name="attr_rang_dominio" value="1" /><span></span><input type="radio" class="rango3" name="attr_rang_dominio" value="2" /><span></span><input type="radio" class="rango3" name="attr_rang_dominio" value="3" /><span></span><input type="radio" class="rango3" name="attr_rang_dominio" value="4" /><span></span><input type="radio" class="rango3" name="attr_rang_dominio" value="5" /><span></span><input type="radio" class="rango3" name="attr_rang_dominio" value="6" /><span></span></td>
    
+        </tr><tr><td style="padding-bottom:5px"><span class="fuentehabcomb">Intensidad</span> </td><td style="padding-bottom:5px">
+            <input type="radio" class="rango3 sheet-zero" name="attr_rang_intensidad" value="0" checked="checked" /><span></span><input type="radio" class="rango3" name="attr_rang_intensidad" value="1" /><span></span><input type="radio" class="rango3" name="attr_rang_intensidad" value="2" /><span></span><input type="radio" class="rango3" name="attr_rang_intensidad" value="3" /><span></span><input type="radio" class="rango3" name="attr_rang_intensidad" value="4" /><span></span><input type="radio" class="rango3" name="attr_rang_intensidad" value="5" /><span></span><input type="radio" class="rango3" name="attr_rang_intensidad" value="6" /><span></span></td>
+  
         </tr><tr><td style="padding-bottom:5px"><input name="attr_name_rara1" placeholder="Arma rara" class="fuentehab" type="text" style="width: 80px;"></span></td><td style="padding-bottom:5px">
             <input type="radio" class="rango3 sheet-zero" name="attr_rang_magrara1" value="0" checked="checked" /><span></span><input type="radio" class="rango3" name="attr_rang_magrara1" value="1" /><span></span><input type="radio" class="rango3" name="attr_rang_magrara1" value="2" /><span></span><input type="radio" class="rango3" name="attr_rang_magrara1" value="3" /><span></span><input type="radio" class="rango3" name="attr_rang_magrara1" value="4" /><span></span><input type="radio" class="rango3" name="attr_rang_magrara1" value="5" /><span></span><input type="radio" class="rango3" name="attr_rang_magrara1" value="6" /><span></span></td>
 
@@ -1809,13 +1791,7 @@
                             </div>
                         {{/rollGreater() r1 r2}}
                 </div>
-                <!--
-                {{#rollTotal() r1 r2}}
-                    <div class="label">
-                        <span>{{crit}}</span>
-                    </div>
-                {{/rollTotal() r1 r2}}
-                -->
+                
                 <div class="arrow-right"></div>
                 <div class="label">
                     <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
@@ -1834,12 +1810,6 @@
                         <span>[Daño Extra](!&#13;#Daño)</span>
                     </div>
                 {{/ataque}}
-                {{#conjuro}}
-                <div class="arrow-left"></div>
-                   <div class="label">
-                        <span>[Daño Extra](!&#13;#Daño)</span>
-                    </div>
-                {{/conjuro}}
                 {{#estrategia}}
                 <div class="arrow-left"></div>
                 <div class="label">
@@ -1850,21 +1820,38 @@
                 <div class="arrow-left"></div> 
                     <div class="label">
                         <span>{{defensa}}</span>
-            </div>
-            <div class="label">
-                <span>{{herida}} [¿Moribundo?](!&#13;#Moribundo)</span>
-            </div>
-                {{/defensa}}
-                       
-                <!-- {{#charname}}
-                    <div class="charname">
-                        <span>{{charname}}</span>
                     </div>
-                {{/charname}} -->
+                <div class="label">
+                    <span>{{herida}} [¿Moribundo?](!&#13;#Moribundo)</span>
+                </div>
+                {{/defensa}}
+
+                {{#magia}}                   
+                    <div class="label">
+                        <span>Conjuración ({{conjuracion}})&nbsp;&nbsp;&nbsp;&nbsp;
+                            {{#^rollLess() rnormal dificultad}}<span class="green">¡¡Éxito!!</span></span>{{/^rollLess() rnormal dificultad}}
+                            {{#rollLess() rnormal dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rnormal dificultad}}
+                    </div>
+                    {{#rollLess() rnormal dificultad}}<div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>{{/rollLess() rnormal dificultad}}
+                        
+                    <div class="label">
+                        <span>{{magia}} ({{mmod}}) &nbsp;&nbsp;&nbsp;&nbsp;Poder {{poder}}{{#rollTotal() r12 12}}<span class="green">+2</span>{{/rollTotal() r12 12}}</span>
+                    </div>
+                    <div class="arrow-left"></div>
+                    <div class="label">         
+                        <span>Éter {{eter}}<span>{{eter2}}</span></span>
+                    </div>       
+                    <div class="label">
+                        <span>[Daño Extra](!&#13;#Daño)</span>
+                    </div>
+                    
+                {{/magia}}
+
+                                  
             </div>
 </rolltemplate>
 
-
+<!--
 <rolltemplate class="sheet-rolltemplate-conj">
     <div class="container">
         <div>
@@ -1897,26 +1884,41 @@
                 {{/rollGreater() r1 r2}}
         </div>
 
-        <div class="arrow-right"></div>        
+        <div class="arrow-right"></div>
+        {{#eter}}        
         <div class="label">
-            <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}</span>
-        </div>
-        {{#eter}}
-        <div class="label"> 
-            <span>{{dificultad}}</span>
+            <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}&nbsp;&nbsp;&nbsp;&nbsp;{{dificultad}}</span>
         </div>
         <div class="arrow-left"></div>
         <div class="label">         
             <span>Éter {{eter}}<span>{{eter2}}</span></span>
         </div>
         {{/eter}}
-        <!-- {{#charname}}
-            <div class="charname">
-                <span>{{charname}}</span>
+        {{#magia}}
+            {{#rollLess rm poder}}
+            <div class="label">
+                <span>[Descontrol](!&#13;#Daño)</span>
             </div>
-        {{/charname}} -->
+            {{/rollLess rm poder}}
+            {{#^rollLess rm poder}}
+            <div class="label">
+                <span>Conjuración ({{conjuracion}})&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">¡¡Éxito!!</span></span>
+            </div>
+            <div class="label">
+                <span>{{rname}}{{#mod}} <span>({{mod}})</span>{{/mod}}&nbsp;&nbsp;&nbsp;&nbsp;{{dificultad}}</span>
+            </div>
+            <div class="arrow-left"></div>
+                <div class="label">         
+                    <span>Éter {{eter}}<span>{{eter2}}</span></span>
+                </div>       
+                <div class="label">
+                    <span>[Daño Extra](!&#13;#Daño)</span>
+                </div>
+            {{/^rollLess rm poder}}
+        {{/magia}}
+        
     </div>
-</rolltemplate>
+</rolltemplate>-->
 
 
 <rolltemplate class="sheet-rolltemplate-tres">
@@ -2861,6 +2863,143 @@
             </div>
         {{/moneda}}
 
+        {{#descontrolele}}
+        <div>
+            <div class="adv"><span>{{r1}}</span></div>
+            <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/Burro.png"/>    
+        </div>
+        <div class="label descontrol">Descontrol elemental</div>
+        <div class="arrow-right"></div>
+
+            {{#rollTotal() r1 1}}
+            <div class="label texto">
+                <span>Forzar éter:</span> logras lanzar el conjuro con éxito, pero recibes Cansancio = (2 × poder).
+            </div>
+            {{/rollTotal() r1 1}}
+
+            {{#rollBetween() r1 2 3}}
+            <div class="label texto">
+                Determina al azar un <span>nuevo objetivo</span> o área.
+            </div>
+            {{/rollBetween() r1 2 3}}
+
+            {{#rollBetween() r1 4 5}}
+            <div class="label texto">
+                <span>Explosión de fuerza</span> frente a ti. Todos los que se encuentren a 2 metros o menos de esa casilla salen despedidos hacia atrás una distancia = (5m × poder). La explosión y la caída posterior causan Cansancio = (5 × poder), la mitad si se evita la caída.
+            </div>
+            {{/rollBetween() r1 4 5}}
+
+            {{#rollTotal() r1 6}}
+            <div class="label texto">
+                <span>Olvidas el conjuro</span>, debes volver a aprenderlo.
+            </div>
+            {{/rollTotal() r1 6}}
+
+            {{#rollTotal() r1 7}}
+            <div class="label texto">
+                <span>Confusión:</span> antes de cada tirada de Conjuración tira 1d12, si sale 6 o menos no logras recordar el conjuro y no puedes lanzarlo perdiendo tu acción. NO pierdes el éter que ibas a usar en el conjuro y NO sufres un descontrol. La confusión dura (1 día × poder).
+            </div>
+            {{/rollTotal() r1 7}}
+
+            {{#rollTotal() r1 8}}
+            <div class="label texto">
+                <span>Energía inestable:</span> durante (1 día × poder) tiras con desventaja todas tus tiradas de Conjuración.
+            </div>
+            {{/rollTotal() r1 8}}
+
+            {{#rollTotal() r1 9}}
+            <div class="label texto">
+                <span>Explosión elemental</span> centrada en ti que provoca Daño Vital = (1d12 + poder) en un radio = (2m + poder).
+            </div>
+            {{/rollTotal() r1 9}}
+
+            {{#rollTotal() r1 10}}
+            <div class="label texto">
+                <span>Descontrol de flujo:</span> el conjuro se lanza con un +2 a poder y como un conjuro imparable, pero afecta a un nuevo objetivo al azar si no superas una nueva tirada de Conjuración. Justo después caes desmayado.
+            </div>
+            {{/rollTotal() r1 10}}
+
+            {{#rollTotal() r1 11}}
+            <div class="label texto">
+                <span>Olvido mayor:</span> olvidas el conjuro y caes desmayado hasta el final del combate. Al despertar olvidas TODOS tus conjuros si no superas una tirada de Voluntad de dificultad = (5 + poder). Los conjuros olvidados deben aprenderse de nuevo.
+            </div>
+            {{/rollTotal() r1 11}}
+
+            {{#rollTotal() r1 12}}
+            <div class="label texto">
+                <span>Catástrofe:</span> haz otra tirada de descontrol de conjuro, aplica sus efectos y los efectos de un descontrol de conjuro Explosión elemental, ambos. <p></p><span>[Catástrofe](!&#13;#Catastrofe)</span>
+            </div>
+            {{/rollTotal() r1 12}}
+        {{/descontrolele}}
+
+        {{#descontrolosc}}
+        <div>
+            <div class="adv"><span>{{r1}}</span></div>
+            <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/Burro.png"/>    
+        </div>
+        <div class="label descontrol">Descontrol oscuro</div>
+        <div class="arrow-right"></div>
+
+            {{#rollTotal() r1 1}}
+            <div class="label texto">
+                <span>Parásito impío:</span> logras lanzar el conjuro con éxito, pero el aliado más cercano cae desmayado hasta el final del combate o escena.
+            </div>
+            {{/rollTotal() r1 1}}
+
+            {{#rollBetween() r1 2 3}}
+            <div class="label texto">
+                <span>Nauseas:</span> quedas mareado durante todo el día.
+            </div>
+            {{/rollBetween() r1 2 3}}
+
+            {{#rollTotal() r1 4}}
+            <div class="label texto">
+                <span>Envejecer:</span> -1 en un atributo físico al azar durante (1 día × poder). Si el atributo está a 0, elige otro.
+            </div>
+            {{/rollTotal() r1 4}}
+
+            {{#rollTotal() r1 5}}
+            <div class="label texto">
+                <span>Hemoptisis:</span> sufres Trauma = (poder/2).
+            </div>
+            {{/rollTotal() r1 5}}
+
+            {{#rollBetween() r1 6 7}}
+            <div class="label texto">
+                <span>Herida abierta:</span> recibes (1d6 + poder) puntos de Daño Vital que no pueden ser curados hasta pasado 1 mes.
+            </div>
+            {{/rollBetween() r1 6 7}}
+
+            {{#rollTotal() r1 8}}
+            <div class="label texto">
+                <span>Dolor paralizante:</span> sufres un terrible dolor que te deja paralizado durante (1 ronda × poder).
+            </div>
+            {{/rollTotal() r1 8}}
+
+            {{#rollTotal() r1 9}}
+            <div class="label texto">
+                <span>Explosión vital:</span> Daño Vital = (6×poder), este daño no causa Trauma. Toda criatura viva en un radio = (5m × poder) recibe una curación mágica = (2 × poder).
+            </div>
+            {{/rollTotal() r1 9}}
+
+            {{#rollTotal() r1 10}}
+            <div class="label texto">
+                <span>Extremidad necrosada:</span> una extremidad al azar queda inutilizada y NO puede curarse sin magia.
+            </div>
+            {{/rollTotal() r1 10}}
+
+            {{#rollTotal() r1 11}}
+            <div class="label texto">
+                <span>Sangre negra:</span> caes desmayado hasta el final del combate o escena y durante (1 día × poder) tienes la mitad de Energía, -2 a Herida y -2 a Vitalidad.
+            </div>
+            {{/rollTotal() r1 11}}
+
+            {{#rollTotal() r1 12}}
+            <div class="label texto">
+                <span>Muerte:</span> caes desmayado; mueres si no superas una tirada de Vitalidad de dificultad = (5 + poder). 
+            </div>
+            {{/rollTotal() r1 12}}
+        {{/descontrolosc}}
     </div>
 </rolltemplate>
 
