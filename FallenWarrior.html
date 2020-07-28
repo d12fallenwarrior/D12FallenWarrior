@@ -358,9 +358,7 @@
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot">
-            
-            <span class="negrita larger"> Conjuración</span>
+            <td class="bordebot"><button name="roll_conjuracion" type="roll" value="&{template:conj} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{mod=@{conjuracion}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" > Conjuración</button></td>
             </td>
             <td>&nbsp;&nbsp;</td>
             <td class="bordebot"><input name="attr_conjuracion" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
@@ -2898,7 +2896,7 @@
         {{#descontrolele}}
         <div>
             <div class="adv"><span>{{r1}}</span></div>
-            <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/Burro.png"/>    
+            <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCEter.png"/>    
         </div>
         <div class="label descontrol">Descontrol elemental</div>
         <div class="arrow-right"></div>
@@ -2967,7 +2965,7 @@
         {{#descontrolosc}}
         <div>
             <div class="adv"><span>{{r1}}</span></div>
-            <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/Burro.png"/>    
+            <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCEter.png"/>    
         </div>
         <div class="label descontrol">Descontrol oscuro</div>
         <div class="arrow-right"></div>
@@ -3063,8 +3061,6 @@
             });
         });
     });
-
-    
 
     // HABILIDADES DE ATRIBUTO VARIABLE
     // Empatía: ast/int, Sanar: des/int, Seguridad: des/int
