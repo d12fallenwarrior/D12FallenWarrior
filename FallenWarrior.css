@@ -134,6 +134,9 @@ span.sheet-dee {
     width         : 57%;
 }
 
+
+
+
 .sheet-rolltemplate-muerte .sheet-adv,
 .sheet-rolltemplate-golpe .sheet-adv,
 .sheet-rolltemplate-dmg .sheet-adv,
@@ -281,7 +284,6 @@ span.sheet-dee {
 .sheet-rolltemplate-conj span,
 .sheet-rolltemplate-tres span,
 .sheet-rolltemplate-tresd span,
-.sheet-rolltemplate-triple span,
 .sheet-rolltemplate-lesion span,
 .sheet-rolltemplate-dmg span
 {
@@ -292,9 +294,16 @@ span.sheet-dee {
 }
 
 .sheet-rolltemplate-golpe .sheet-descontrol,
-.sheet-rolltemplate-lesion .sheet-lesion
+.sheet-rolltemplate-lesion .sheet-lesion,
+.sheet-rolltemplate-simple .sheet-titulo,
+.sheet-rolltemplate-moribundo .sheet-titulo,
+.sheet-rolltemplate-muerte .sheet-titulo,
+.sheet-rolltemplate-golpe .sheet-titulo,
+.sheet-rolltemplate-conj .sheet-titulo,
+.sheet-rolltemplate-tres .sheet-titulo,
+.sheet-rolltemplate-tresd .sheet-titulo
 {
-    margin-top: 3px;
+    margin-top: 3px !important;
     font-size: 16px;
     font-weight: bold;
     line-height: 14px;
