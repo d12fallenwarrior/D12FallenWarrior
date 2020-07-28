@@ -124,27 +124,6 @@ span.sheet-dee {
     border-radius: 10px;
 }
 
-
-
-.sheet-rolltemplate-simple .sheet-adv,
-.sheet-rolltemplate-moribundo .sheet-adv,
-.sheet-rolltemplate-conj .sheet-adv
-{
-    display       : inline-block;
-    margin-top    : 1em;
-    text-align    : center;
-    vertical-align: top;
-    width         : 45%;
-}
-.sheet-rolltemplate-tres .sheet-adv,
-.sheet-rolltemplate-tresd .sheet-adv
-{
-    display       : inline-block;
-    margin-top    : 1em;
-    text-align    : center;
-    vertical-align: top;
-    width         : 28.75%;
-}
 .sheet-rolltemplate-lesion .sheet-adv
 {
     display       : inline-block;
@@ -157,7 +136,12 @@ span.sheet-dee {
 
 .sheet-rolltemplate-muerte .sheet-adv,
 .sheet-rolltemplate-golpe .sheet-adv,
-.sheet-rolltemplate-dmg .sheet-adv
+.sheet-rolltemplate-dmg .sheet-adv,
+.sheet-rolltemplate-simple .sheet-adv,
+.sheet-rolltemplate-moribundo .sheet-adv,
+.sheet-rolltemplate-conj .sheet-adv,
+.sheet-rolltemplate-tres .sheet-adv,
+.sheet-rolltemplate-tresd .sheet-adv
 {
     display       : inline-block;
     margin-top    : 1em;
@@ -169,7 +153,12 @@ span.sheet-dee {
 
 .sheet-rolltemplate-dmg .sheet-templateimagen,
 .sheet-rolltemplate-golpe .sheet-templateimagen,
-.sheet-rolltemplate-muerte .sheet-templateimagen
+.sheet-rolltemplate-muerte .sheet-templateimagen,
+.sheet-rolltemplate-simple .sheet-templateimagen,
+.sheet-rolltemplate-moribundo .sheet-templateimagen,
+.sheet-rolltemplate-conj .sheet-templateimagen,
+.sheet-rolltemplate-tres .sheet-templateimagen,
+.sheet-rolltemplate-tresd .sheet-templateimagen
 {
     display: inline;
     height: 55px;
@@ -194,37 +183,7 @@ span.sheet-dee {
     
 }
 
-.sheet-rolltemplate-simple .sheet-adv:first-child,
-.sheet-rolltemplate-moribundo .sheet-adv:first-child,
-.sheet-rolltemplate-muerte .sheet-adv:first-child,
-.sheet-rolltemplate-golpe .sheet-adv:first-child,
-.sheet-rolltemplate-conj .sheet-adv:first-child,
-.sheet-rolltemplate-lesion .sheet-adv:first-child,
-.sheet-rolltemplate-dmg .sheet-adv:first-child
-{
-    margin-left: 0.2em;
-}
-.sheet-rolltemplate-tres .sheet-adv:first-child,
-.sheet-rolltemplate-tresd .sheet-adv:first-child
-{
-    margin-left: 0.4em;
-}
 
-.sheet-rolltemplate-simple .sheet-adv:nth-child(3),
-.sheet-rolltemplate-moribundo .sheet-adv:nth-child(3),
-.sheet-rolltemplate-muerte .sheet-adv:nth-child(3),
-.sheet-rolltemplate-golpe .sheet-adv:nth-child(3),
-.sheet-rolltemplate-conj .sheet-adv:nth-child(3)
-{
-    margin-right: 8px;
-    margin-left: -3px;
-}
-.sheet-rolltemplate-tres .sheet-adv:nth-child(3),
-.sheet-rolltemplate-tresd .sheet-adv:nth-child(3)
-{
-    margin-right: 0px;
-    margin-left: -3px;
-}
 
 .sheet-rolltemplate-simple .sheet-adv span,
 .sheet-rolltemplate-simple .sheet-solo span,
@@ -263,7 +222,8 @@ span.sheet-dee {
 {
     border: 1px solid black;
     display: inline-block;
-    height: 35px;
+    vertical-align: top;
+    height: 20px;
     width: 0px;
 }
 
