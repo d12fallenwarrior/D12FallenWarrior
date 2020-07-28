@@ -354,23 +354,23 @@ span.sheet-dee {
 
 
 .sheet-rolltemplate-simple .sheet-grey,
-.sheet-rolltemplate-simple .sheet-label span span,
+
 .sheet-rolltemplate-moribundo .sheet-grey,
-.sheet-rolltemplate-moribundo .sheet-label span span,
+
 .sheet-rolltemplate-muerte .sheet-grey,
-.sheet-rolltemplate-muerte .sheet-label span span,
+
 .sheet-rolltemplate-golpe .sheet-grey,
-.sheet-rolltemplate-golpe .sheet-label span span,
+
 .sheet-rolltemplate-conj .sheet-grey,
-.sheet-rolltemplate-conj .sheet-label span span,
+
 .sheet-rolltemplate-tres .sheet-grey,
-.sheet-rolltemplate-tres .sheet-label span span,
+
 .sheet-rolltemplate-tresd .sheet-grey,
-.sheet-rolltemplate-tresd .sheet-label span span,
+
 .sheet-rolltemplate-lesion .sheet-grey,
-.sheet-rolltemplate-lesion .sheet-label span span,
-.sheet-rolltemplate-dmg .sheet-grey,
-.sheet-rolltemplate-dmg .sheet-label span span
+
+.sheet-rolltemplate-dmg .sheet-grey
+
 {
     color: #A0A0A0;
     border: 0px;
