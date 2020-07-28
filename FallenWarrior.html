@@ -1764,30 +1764,23 @@
                         {{#rollLess() r1 r2}}
                             <div class="adv">
                                 <span>{{r1}}</span>
-                            </div>
-                            <div class="advspacer"></div>
-                            <div class="adv">
-                                <span class="grey">{{r2}}</span>
-                            </div>
+                            </div>                           
                         {{/rollLess() r1 r2}}
+
                         {{#rollTotal() r1 r2}}
                             <div class="adv">
                                 <span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
                             </div>
-                            <div class="advspacer"></div>
-                            <div class="adv">
-                                <span class="green">{{r2}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
-                            </div>
                         {{/rollTotal() r1 r2}}
+
                         {{#rollGreater() r1 r2}}
-                            <div class="adv">
-                                <span class="grey">{{r1}}</span>
-                            </div>
-                            <div class="advspacer"></div>
                             <div class="adv">
                                 <span>{{r2}}</span>
                             </div>
                         {{/rollGreater() r1 r2}}
+                    
+                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDisparo.png"/>    
+        
                 </div>
                 
                 <div class="arrow-right"></div>
@@ -1927,43 +1920,29 @@
                 {{#rollLess() r3 r1}}
                 <!--r3 < r1 < r2-->
                     <div class="adv"><span>{{r1}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r2}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r3}}</span></div>
+                    
                 {{/rollLess() r3 r1}}
                 {{#rollTotal() r3 r1}}
                 <!--r3 = r1 < r2-->
                     <div class="adv"><span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r2}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="green">{{r3}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
+                    
                 {{/rollTotal() r3 r1}}
                 {{#rollGreater() r3 r1}}
                     {{#rollLess() r3 r2}}
                     <!--r1 < r3 < r2-->
-                        <div class="adv"><span class="grey">{{r1}}</span></div>
-                        <div class="advspacer"></div>
-                        <div class="adv"><span class="grey">{{r2}}</span></div>
-                        <div class="advspacer"></div>
+                        
                         <div class="adv"><span>{{r3}}</span></div>
                     {{/rollLess() r3 r2}}
                     {{#rollTotal() r3 r2}}
                     <!--r1 < r3 = r2-->
-                        <div class="adv"><span class="grey">{{r1}}</span></div>
-                        <div class="advspacer"></div>
-                        <div class="adv"><span class="green">{{r2}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                        <div class="advspacer"></div>
+                        
                         <div class="adv"><span class="green">{{r3}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
                     {{/rollTotal() r3 r2}}
                     {{#rollGreater() r3 r2}}
                     <!--r1 < r2 < r3-->
-                        <div class="adv"><span class="grey">{{r1}}</span></div>
-                        <div class="advspacer"></div>
+                        
                         <div class="adv"><span>{{r2}}</span></div>
-                        <div class="advspacer"></div>
-                        <div class="adv"><span class="grey">{{r3}}</span></div>
+                        
                     {{/rollGreater() r3 r2}}
                 {{/rollGreater() r3 r1}}
             {{/rollLess() r1 r2}}
@@ -1971,70 +1950,47 @@
                 {{#rollLess() r3 r1}}
                 <!--r3 < r1 = r2-->
                     <div class="adv"><span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="green">{{r2}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r3}}</span></div>
+                    
                 {{/rollLess() r3 r1}}
                 {{#rollTotal() r3 r1}}
                 <!--r1 = r2 = r3-->
                     <div class="adv"><span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="green">{{r2}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="green">{{r3}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
+                    
                 {{/rollTotal() r3 r1}}
                 {{#rollGreater() r3 r1}}
                 <!--r1 = r2 < r3-->
                     <div class="adv"><span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="green">{{r2}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r3}}</span></div>
+                    
                 {{/rollGreater() r3 r1}}
             {{/rollTotal() r1 r2}}
             {{#rollGreater() r1 r2}}
                 {{#rollLess() r3 r1}}
                     {{#rollLess() r3 r2}}
                     <!--r3 < r2 < r1-->
-                        <div class="adv"><span class="grey">{{r1}}</span></div>
-                        <div class="advspacer"></div>
+                        
                         <div class="adv"><span>{{r2}}</span></div>
-                        <div class="advspacer"></div>
-                        <div class="adv"><span class="grey">{{r3}}</span></div>
+                        
                     {{/rollLess() r3 r2}}
                     {{#rollTotal() r3 r2}}
                     <!--r2 = r3 < r1-->
-                        <div class="adv"><span class="grey">{{r1}}</span></div>
-                        <div class="advspacer"></div>
-                        <div class="adv"><span class="green">{{r2}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                        <div class="advspacer"></div>
+                        
                         <div class="adv"><span class="green">{{r3}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
                     {{/rollTotal() r3 r2}}
                     {{#rollGreater() r3 r2}}
                     <!--r2 < r3 < r1-->
-                        <div class="adv"><span class="grey">{{r1}}</span></div>
-                        <div class="advspacer"></div>
-                        <div class="adv"><span class="grey">{{r2}}</span></div>
-                        <div class="advspacer"></div>
+                        
                         <div class="adv"><span>{{r3}}</span></div>
                     {{/rollGreater() r3 r2}}
                 {{/rollLess() r3 r1}}
                 {{#rollTotal() r3 r1}}
                 <!--r2 < r3 = r1-->
                     <div class="adv"><span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r2}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="green">{{r3}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
+                    
                 {{/rollTotal() r3 r1}}
                 {{#rollGreater() r3 r1}}
                 <!--r2 < r1 < r3-->
                     <div class="adv"><span>{{r1}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r2}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r3}}</span></div>
+                    
                 {{/rollGreater() r3 r1}}
             {{/rollGreater() r1 r2}}
         </div>
@@ -2114,114 +2070,79 @@
                 {{#rollLess() r3 r1}}
                 <!--r3 < r1 < r2-->
                     <div class="adv"><span>{{r3}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r2}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r1}}</span></div>
+                    
                 {{/rollLess() r3 r1}}
                 {{#rollTotal() r3 r1}}
                 <!--r3 = r1 < r2-->
                     <div class="adv"><span>{{r1}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r2}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span>{{r3}}</span></div>
+                    
                 {{/rollTotal() r3 r1}}
                 {{#rollGreater() r3 r1}}
                     {{#rollLess() r3 r2}}
                     <!--r1 < r3 < r2-->
-                        <div class="adv"><span class="grey">{{r3}}</span></div>
-                        <div class="advspacer"></div>
-                        <div class="adv"><span class="grey">{{r2}}</span></div>
-                        <div class="advspacer"></div>
+                        
                         <div class="adv"><span>{{r1}}</span></div>
                     {{/rollLess() r3 r2}}
                     {{#rollTotal() r3 r2}}
                     <!--r1 < r3 = r2-->
                         <div class="adv"><span>{{r1}}</span></div>
-                        <div class="advspacer"></div>
-                        <div class="adv"><span class="grey">{{r2}}</span></div>
-                        <div class="advspacer"></div>
-                        <div class="adv"><span class="grey">{{r3}}</span></div>
+                        
                     {{/rollTotal() r3 r2}}
                     {{#rollGreater() r3 r2}}
                     <!--r1 < r2 < r3-->
-                        <div class="adv"><span class="grey">{{r2}}</span></div>
-                        <div class="advspacer"></div>
+                        
                         <div class="adv"><span>{{r1}}</span></div>
-                        <div class="advspacer"></div>
-                        <div class="adv"><span class="grey">{{r3}}</span></div>
+                        
                     {{/rollGreater() r3 r2}}
                 {{/rollGreater() r3 r1}}
             {{/rollLess() r1 r2}}
             {{#rollTotal() r1 r2}}
                 {{#rollLess() r3 r1}}
                 <!--r3 < r1 = r2-->
-                    <div class="adv"><span class="grey">{{r1}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r2}}</span></div>
-                    <div class="advspacer"></div>
+                    
                     <div class="adv"><span>{{r3}}</span></div>
                 {{/rollLess() r3 r1}}
                 {{#rollTotal() r3 r1}}
                 <!--r1 = r2 = r3-->
                     <div class="adv"><span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="green">{{r2}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="green">{{r3}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
+                    
                 {{/rollTotal() r3 r1}}
                 {{#rollGreater() r3 r1}}
                 <!--r1 = r2 < r3-->
                     <div class="adv"><span>{{r1}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span>{{r2}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r3}}</span></div>
+                    
                 {{/rollGreater() r3 r1}}
             {{/rollTotal() r1 r2}}
             {{#rollGreater() r1 r2}}
                 {{#rollLess() r3 r1}}
                     {{#rollLess() r3 r2}}
                     <!--r3 < r2 < r1-->
-                        <div class="adv"><span class="grey">{{r1}}</span></div>
-                        <div class="advspacer"></div>
+                        
                         <div class="adv"><span>{{r3}}</span></div>
-                        <div class="advspacer"></div>
-                        <div class="adv"><span class="grey">{{r2}}</span></div>
+                        
                     {{/rollLess() r3 r2}}
                     {{#rollTotal() r3 r2}}
                     <!--r2 = r3 < r1-->
-                        <div class="adv"><span class="grey">{{r1}}</span></div>
-                        <div class="advspacer"></div>
-                        <div class="adv"><span>{{r2}}</span></div>
-                        <div class="advspacer"></div>
+                        
                         <div class="adv"><span>{{r3}}</span></div>
                     {{/rollTotal() r3 r2}}
                     {{#rollGreater() r3 r2}}
                     <!--r2 < r3 < r1-->
-                        <div class="adv"><span class="grey">{{r1}}</span></div>
-                        <div class="advspacer"></div>
+                        
                         <div class="adv"><span>{{r2}}</span></div>
-                        <div class="advspacer"></div>
-                        <div class="adv"><span class="grey">{{r3}}</span></div>
+                        
                     {{/rollGreater() r3 r2}}
                 {{/rollLess() r3 r1}}
                 {{#rollTotal() r3 r1}}
                 <!--r2 < r3 = r1-->
-                    <div class="adv"><span class="grey">{{r1}}</span></div>
-                    <div class="advspacer"></div>
+                    
                     <div class="adv"><span>{{r2}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r3}}</span></div>
+                    
                 {{/rollTotal() r3 r1}}
                 {{#rollGreater() r3 r1}}
                 <!--r2 < r1 < r3-->
                     <div class="adv"><span>{{r2}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r1}}</span></div>
-                    <div class="advspacer"></div>
-                    <div class="adv"><span class="grey">{{r3}}</span></div>
+                    
                 {{/rollGreater() r3 r1}}
             {{/rollGreater() r1 r2}}
         </div>
