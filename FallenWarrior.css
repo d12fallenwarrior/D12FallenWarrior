@@ -485,6 +485,10 @@ h1 {
 /* ################## ESTILOS IÑIGO ################## */
 /* ################################################### */
 
+.sheet-morao{
+    color: rebeccapurple;
+}
+
 .sheet-centrado
 {
     text-align: center;
@@ -543,7 +547,6 @@ input {
     border-right: 0px solid rgb(0, 0, 0);
     border-radius: 0px; 
     background-color: transparent;
-    
 }
 
 select {
@@ -600,7 +603,8 @@ select {
     font-size: smaller;
 }
 
-.sheet-dadito {
+.sheet-dadito 
+{
     font-family: dicefontd12; 
     font-size: large;
     font-weight: bold;
@@ -613,7 +617,7 @@ select {
     font-weight: bold !important;
 }
 
-    .sheet-fuentehabcomb
+.sheet-fuentehabcomb
 {
     font-family: Arial, Helvetica, sans-serif !important;
     font-size: small !important;
@@ -646,10 +650,6 @@ hr {
     margin-top: 0.25em;
     margin-bottom: 0.25em;
 }
-
-/*.sheet-col{
-    margin: 2px !important;
-    } */
 
 .sheet-floatright {
     float: right;  
@@ -907,6 +907,23 @@ button[type=roll]::before {
     color: red;
   }
 
+
+/* ################################################### */
+/* ########### QUITAR FLECHITAS A INPUT ############## */
+/* ################################################### */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 /* ################################################### */
 /* ################## CIRCULITOS ##################### */
 /* ################################################### */
@@ -914,7 +931,8 @@ button[type=roll]::before {
 /* -----Hide actual radio----- */
 input.sheet-rango[type="radio"],
 input.sheet-rango2[type="radio"],
-input.sheet-rango3[type="radio"]
+input.sheet-rango3[type="radio"],
+input.sheet-rangox[type="checkbox"]
 {
     max-width: 2em;  
     opacity: 0;
@@ -928,6 +946,19 @@ input.sheet-rango3[type="radio"]
     z-index: 1;
 }
 
+/*input.sheet-rangox[type="checkbox"]
+{
+    max-width: 2em;  
+    width: 13px;
+    height: 13px;
+    position: relative;
+    left: 2px;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 5px;
+    border: solid 2px black;
+}*/
+
 /* -----Fake radio (los circulitos que sí se ven)----- */
 
 input.sheet-rango[type="radio"] + span::before
@@ -938,10 +969,11 @@ input.sheet-rango[type="radio"] + span::before
     text-align: center;
     display: inline-block;
     vertical-align: middle;
+    background-color: black;
     
     
     color:black;
-    content: "⬤";
+    content: "•";
     width: 13px;
     height: 13px; 
     font-size: 1em;
@@ -960,10 +992,11 @@ input.sheet-rango2[type="radio"] + span::before
     text-align: center;
     display: inline-block;
     vertical-align: middle;
+    background-color: black;
     
     
     color:black;
-    content: "⬤";
+    content: "•";
     width: 12px;
     height: 12px; 
     font-size: 1em;
@@ -975,6 +1008,29 @@ input.sheet-rango2[type="radio"] + span::before
 }
 
 input.sheet-rango3[type="radio"] + span::before
+{
+    margin-right: 5px;
+    border: solid 2px black;
+    line-height: 8px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: black;
+    
+    color:black;
+    content: "•";
+    width: 8px;
+    height: 8px; 
+    font-size: 1em;
+
+
+    /*Esto hace que sean círculos en vez de cuadrados (puntos varios: •∴⋅⬤)*/
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+input.sheet-rangox[type="checkbox"] + span::before
 {
     margin-right: 5px;
     border: solid 2px black;
@@ -1003,6 +1059,7 @@ input.sheet-rango2[type="radio"]:checked ~ input.sheet-rango2[type="radio"] + sp
 input.sheet-rango3[type="radio"]:checked ~ input.sheet-rango3[type="radio"] + span::before
 {    
     content: "";
+    background-color: transparent;
 }
 
 /*------------empty traits-----------*/
@@ -1021,6 +1078,7 @@ input.sheet-zero[type="radio"] + span::before
     font-size: 12px;
     content: "✖";
     opacity: 0.15;
+    background-color: transparent;
 }
 
 
