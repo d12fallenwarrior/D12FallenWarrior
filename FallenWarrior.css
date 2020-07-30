@@ -675,6 +675,11 @@ hr {
     width: 25%;
     }
 
+    .sheet-28porciento{
+        float: left;
+        width: 28%;
+        }
+
 .sheet-30porciento{
     float: left;
     width: 30%;
@@ -770,6 +775,29 @@ input.sheet-toggle-hide:checked ~ div.sheet-body {
 /* ################################################### */
 /* ############### BOTONES Y DIBUJOS ################# */
 /* ################################################### */
+
+input.sheet-innata
+{
+    max-width: 2em;  
+    width: 12px;
+    height: 12px;
+    position: relative;
+    vertical-align: middle;
+    margin-right: -6px !important;
+    color: black;
+}
+
+input.sheet-innatacomb
+{
+    max-width: 2em;  
+    width: 12px;
+    height: 12px;
+    position: relative;
+    vertical-align: middle;
+    margin-right: 3px !important;
+    color: black;
+    Top: -2px;
+}
 
 .sheet-dibujito{
     height: 70px;
