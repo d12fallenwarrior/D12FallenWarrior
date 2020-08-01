@@ -1345,7 +1345,8 @@
                 <input name="attr_hab_seguridad" type="number" class="centrado" title="Bonificador = (Atributo + habilidad -5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_tactica" value="1"><button name="roll_tactica" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Táctica}} {{mod=@{hab_tactica}}} {{r1=[[(1d12cf0+@{hab_tactica})]]}} {{r2=[[(1d12cf0+@{hab_tactica})]]}} {{r3=[[(@{r3}+@{hab_tactica})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_tactica" value="1">
+            <button name="roll_tactica" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Táctica}} {{mod=@{hab_tactica}}} {{r1=[[(1d12cf0+@{hab_tactica})]]}} {{r2=[[(1d12cf0+@{hab_tactica})]]}} {{r3=[[(@{r3}+@{hab_tactica})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Táctica (Ast)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_tactica" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><!--<input type="checkbox" title="Rango" class="rangox" name="attr_rang_tacticax" value="1"/><span></span><input type="checkbox" title="Rango" class="rangox" name="attr_rang_tacticaxx" value="1"/><span>--></td>
                 <td style="padding-bottom:5px">
@@ -1705,7 +1706,7 @@
 </div>
 <hr>
 <p></p>
-<span class="negrita larger">PESO TOTAL </span><input name="attr_pesobase" type="number" class="bordered negrita larger" style="width: 100;"><span class="negrita larger"> Kg</span>
+<span class="negrita larger">PESO TOTAL </span><input name="attr_pesobase" type="number" class="bordered negrita larger" style="width: 100; text-align: right;"><span class="negrita larger"> Kg</span>
 <br></br>
 <p></p>
 <div class="arrow-right"></div>
