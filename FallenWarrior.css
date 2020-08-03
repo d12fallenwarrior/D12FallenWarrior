@@ -5,7 +5,7 @@
 .charsheet {
 	background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/fondoespada.jpg"); /*black space with tiny white stars*/
     background-color: white;
-    min-width: 800px;
+    min-width: 820px;
 }
 
 
@@ -461,16 +461,9 @@ span.sheet-dee {
     max-width: 1em;
 }
 
-.sheet-atributos {
-    float: left;
-    width: 30%;
 
-}
 
-.sheet-caracteristicas{
-    width: 100%;
 
-}
 
 h1 {
     margin-bottom: 0.3em;
@@ -499,6 +492,16 @@ h1 {
     vertical-align: bottom;
 }
 
+.sheet-acciones
+{
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    height: 360px;
+    margin-right:10px;
+    
+    clear:left;
+}
+
 .sheet-textoderecha
 {
     text-align: right;
@@ -520,15 +523,10 @@ h1 {
 
 .sheet-recolocar {
     position: relative;
-    bottom: -16px;
     left: 70px;
+    margin-bottom:0px;
 }
 
-.sheet-recolocar2 {
-    position: relative;
-    bottom: -13px;
-    left: 70px;
-}
 
 .sheet-inline
 {
@@ -675,10 +673,10 @@ hr {
     width: 25%;
     }
 
-    .sheet-28porciento{
-        float: left;
-        width: 28%;
-        }
+.sheet-28porciento{
+    float: left;
+    width: 28%;
+    }
 
 .sheet-30porciento{
     float: left;
@@ -719,7 +717,10 @@ hr {
     float: left;
     width: 75%;
     }
-    
+
+.sheet-100porciento{
+    width: 100%;
+} 
 
 .sheet-arrow-right
 {
@@ -747,7 +748,7 @@ input.sheet-toggle-hide:checked ~ div.sheet-body {
 
 .sheet-block-a,
 .sheet-block-switch:checked ~ .sheet-block-b {
-  display: block;
+  display: inline;
 }
 
 .sheet-block-b,
@@ -757,7 +758,7 @@ input.sheet-toggle-hide:checked ~ div.sheet-body {
 
 .sheet-ficha_luchador,
 .sheet-tipodeficha:checked ~ .sheet-ficha_mago {
-  display: block;
+  display: inline;
 }
 
 .sheet-ficha_mago,
@@ -875,12 +876,12 @@ button[type=roll]::before {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDominio.png") !important;
 }
 
-.sheet-besquiva
+.sheet-bmovilidad
 {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCEsquiva.png") !important;
 }
 
-.sheet-bbloqueo
+.sheet-bdefensa
 {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png") !important;
 }
