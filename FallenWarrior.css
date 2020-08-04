@@ -94,6 +94,14 @@ span.sheet-dee {
     color: #A0A0A0;
 }
 
+.sheet-rolltemplate-tres .sheet-dadito, 
+.sheet-rolltemplate-tresd .sheet-dadito
+{
+    font-family: dicefontd12; 
+    font-size: large;
+    font-weight: bold;
+}
+
 .sheet-rolltemplate-simple,
 .sheet-rolltemplate-moribundo,
 .sheet-rolltemplate-muerte,
