@@ -433,12 +433,12 @@
     <div class ="3colrow">
         <div class="col centrado">
             
-            <button name="roll_movilidad" class="botonimagen bmovilidad" type="roll" value="&{template:@{plantilla}} {{movilidad=Ah}} {{rname=Movilidad}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_movilidad" class="botonimagen bmovilidad" type="roll" value="&{template:@{plantilla}} {{movilidad=Ah}} {{rname=Movilidad}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                             
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_movilidad" type="roll" value="&{template:@{plantilla}} {{movilidad=Ah}} {{rname=Movilidad}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Movilidad</button></td>
+                            <td  class="bordebot"><button name="roll_movilidad" type="roll" value="&{template:@{plantilla}} {{movilidad=Ah}} {{rname=Movilidad}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Movilidad</button></td>
                             <td >&nbsp;&nbsp;</td>
                             <td  class="bordebot"><input name="attr_movilidad" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
                         </tr>
@@ -452,7 +452,7 @@
             </table>
             </div>
         <div class="col centrado">
-            <button name="roll_defensa" class="botonimagen bdefensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_defensa" class="botonimagen bdefensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                             
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>
         -->
@@ -1793,8 +1793,8 @@
                 {{/estrategia}}
                 {{#defensa}}
                 <div class="label">
-                    {{#rollGreater() piruetas 0}}<span>Invasión </span><span class="green">+{{piruetas}}</span>{{/rollGreater() piruetas 0}}
-                    {{#^rollGreater() piruetas 0}}<span>Invasión +0</span>{{/^rollGreater() piruetas 0}}
+                    {{#rollGreater() piruetas 0}}<span>Contra At. por Invasión </span><span class="green">+{{piruetas}}</span>{{/rollGreater() piruetas 0}}
+                    {{#^rollGreater() piruetas 0}}<span>Contra At. por Invasión +0</span>{{/^rollGreater() piruetas 0}}
                 </div>
 
                 <div class="arrow-left"></div> 
@@ -2019,16 +2019,13 @@
                 -->
                 <div class="arrow-right"></div>
                 <div class="label titulo">
-                    {{rname}}{{#mod}} ({{mod}}){{/mod}}{{#rollWasCrit() r1}}<span class="green"> ¡12!</span>{{/rollWasCrit() r1}} {{#rollWasCrit() r2}}<span class="green"> ¡12!</span>{{/rollWasCrit() r2}} {{#rollWasCrit() r3}}<span class="green"> ¡12!</span>{{/rollWasCrit() r3}}
+                    <span class="dadito green"> 0 </span>{{rname}}{{#mod}} ({{mod}}){{/mod}}<span class="dadito green"> 0 </span>{{#rollWasCrit() r1}}<span class="green"> ¡12!</span>{{/rollWasCrit() r1}} {{#rollWasCrit() r2}}<span class="green"> ¡12!</span>{{/rollWasCrit() r2}} {{#rollWasCrit() r3}}<span class="green"> ¡12!</span>{{/rollWasCrit() r3}}
                 </div>
                 {{#arma}}
                     <div class="label">
                         <span>{{arma}}</span>
                     </div>
                 {{/arma}}
-                <div class="label titulo">
-                    [Con ventaja]
-                 </div>
                 {{#ataque}}
                 <div class="arrow-left"></div>            
                     <div class="label">
@@ -2220,7 +2217,7 @@
         
         <div class="arrow-right"></div>
         <div class="label titulo">
-            {{rname}}{{#mod}} ({{mod}}){{/mod}}
+            <span class="dadito red"> 0 </span>{{rname}}{{#mod}} ({{mod}}){{/mod}}<span class="dadito red"> 0 </span>
             {{#rollWasCrit() r1}}{{#rollWasCrit() r2}}<span class="green"> ¡12!</span>{{/rollWasCrit() r2}}{{/rollWasCrit() r1}}
             {{#rollWasCrit() r1}}{{#rollWasCrit() r3}}<span class="green"> ¡12!</span>{{/rollWasCrit() r3}}{{/rollWasCrit() r1}} 
             {{#rollWasCrit() r2}}{{#rollWasCrit() r3}}<span class="green"> ¡12!</span>{{/rollWasCrit() r3}}{{/rollWasCrit() r2}} 
@@ -2231,9 +2228,7 @@
                 <span>{{arma}}</span>
             </div>
         {{/arma}}
-        <div class="label titulo">
-            [Con desventaja]
-         </div>
+        
         {{#ataque}}
         <div class="arrow-left"></div>            
             <div class="label">
