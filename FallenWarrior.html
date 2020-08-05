@@ -38,7 +38,7 @@
        
     </div>
 </div>
-<br>
+<p></p>
 <div class="arrow-right"></div>
 <hr>
 
@@ -95,7 +95,7 @@
     </div>
 
     <!-- Características secundarias -->
-    <div class="100porciento">
+    <div class="70porciento">
         <h1>Características secundarias</h1>
         <!-- <p>Característica / Fórmula / Mod. Especial / Valor final + Roll</p> -->
         
@@ -154,12 +154,12 @@
 
                         <td><span class="negrita larger">Energía</span></td>
                         <td>&nbsp;&nbsp;</td>
-                        <td> <input name="attr_energia" type="number" class="centrado bordecuad" style="width: 70px;" value="30"> <!-- <input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled> --></td>
+                        <td> <input name="attr_energia" type="number" class="centrado bordecuad" style="width: 70px;" value="5"> <!-- <input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled> --></td>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
                         <td><span class="negrita larger">Herida</span></td>
                         <td>&nbsp;&nbsp;</td>
-                        <td><input name="attr_her" type="number" class="centrado bordecuad" style="width: 70px;" value="0"> <!-- <input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled> --></td> 
+                        <td><input name="attr_her" type="number" class="centrado bordecuad" style="width: 70px;" value="5"> <!-- <input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled> --></td> 
                     </tr>
                     <tr class="negrita smaller">
                         <td class="centrado"><span>(Int+Ast)</span></td>
@@ -202,7 +202,7 @@
   
 </div>
 
-<h1>Combate</h1>
+<h1 style="float:right; margin-right:300px;">Combate</h1>
 <div class="sheet-columns" style="float:left;">
     <input type="checkbox" class="sheet-toggle-show check" />
     <span class="negrita">Mostrar notas</span>
@@ -452,14 +452,14 @@
             </table>
             </div>
         <div class="col centrado">
-            <button name="roll_defensa" class="botonimagen bdefensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_defensa" class="botonimagen bdefensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                             
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>
         -->
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_defensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{defensa=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Defensa</button></td>
+                            <td  class="bordebot"><button name="roll_defensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Defensa</button></td>
                             <td >&nbsp;&nbsp;</td>    
                             <td  class="bordebot"><input name="attr_defensa" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
                         </tr>
@@ -1798,11 +1798,11 @@
                 </div>
 
                 <div class="arrow-left"></div> 
-                    
+                   {{#armadura}}
                     <div class="label">
-                        <span>{{defensa}}</span>
+                        <span>{{armadura}}</span>
                     </div>
-                    
+                    {{/armadura}} 
                 <div class="label">
                     <span>{{herida}} [¿Moribundo?](!&#13;#Moribundo)</span>
                 </div>
@@ -2049,20 +2049,20 @@
                 {{/estrategia}}
                 {{#defensa}}
                 <div class="label">
-                    {{#rollGreater() piruetas 0}}<span>Invasión </span><span class="green">+{{piruetas}}</span>{{/rollGreater() piruetas 0}}
-                    {{#^rollGreater() piruetas 0}}<span>Invasión +0</span>{{/^rollGreater() piruetas 0}}
+                    {{#rollGreater() piruetas 0}}<span>Contra At. por Invasión </span><span class="green">+{{piruetas}}</span>{{/rollGreater() piruetas 0}}
+                    {{#^rollGreater() piruetas 0}}<span>Contra At. por Invasión +0</span>{{/^rollGreater() piruetas 0}}
                 </div>
 
                 <div class="arrow-left"></div> 
-                    
+                   {{#armadura}} 
                     <div class="label">
-                        <span>{{defensa}}</span>
+                        <span>{{armadura}}</span>
                     </div>
-                    
+                    {{/armadura}} 
                 <div class="label">
                     <span>{{herida}} [¿Moribundo?](!&#13;#Moribundo)</span>
                 </div>
-        {{/defensa}}
+                {{/defensa}}
                 {{#magia}}                    
                     <div class="arrow-left"></div>
                     <div class="label">         
@@ -2253,16 +2253,16 @@
         
         {{#defensa}}
                 <div class="label">
-                    {{#rollGreater() piruetas 0}}<span>Invasión </span><span class="green">+{{piruetas}}</span>{{/rollGreater() piruetas 0}}
-                    {{#^rollGreater() piruetas 0}}<span>Invasión +0</span>{{/^rollGreater() piruetas 0}}
+                    {{#rollGreater() piruetas 0}}<span>Contra At. por Invasión </span><span class="green">+{{piruetas}}</span>{{/rollGreater() piruetas 0}}
+                    {{#^rollGreater() piruetas 0}}<span>Contra At. por Invasión +0</span>{{/^rollGreater() piruetas 0}}
                 </div>
 
                 <div class="arrow-left"></div> 
-                    
+                   {{#armadura}} 
                     <div class="label">
-                        <span>{{defensa}}</span>
+                        <span>{{armadura}}</span>
                     </div>
-                    
+                    {{/armadura}} 
                 <div class="label">
                     <span>{{herida}} [¿Moribundo?](!&#13;#Moribundo)</span>
                 </div>
