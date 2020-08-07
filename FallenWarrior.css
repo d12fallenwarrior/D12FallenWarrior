@@ -485,6 +485,8 @@ h1 {
     color: rebeccapurple;
 }
 
+
+
 .sheet-centrado
 {
     text-align: center;
@@ -500,6 +502,15 @@ h1 {
     border: 3px solid rgb(0, 0, 0);
     border-radius: 10px;
     height: 360px;
+    margin-right:10px;
+    clear:left;
+}
+
+.sheet-notascoliseo
+{
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    height: 250px;
     margin-right:10px;
     clear:left;
 }
@@ -747,28 +758,163 @@ hr {
     border-top: 3px solid transparent;
 }
 
+.sheet-descripcion{
+    background: none;
+    min-height: 30px;
+    height: 38px;
+    width: 100%;
+    overflow: auto;
+    resize: vertical;
+    padding-bottom: 0px;
+    padding-right: 5px;
+    border: none;
+}
+
+.sheet-nombre{
+    background: none;
+    border: none;
+    width:100%; 
+    font-size:larger;
+    font-weight: bold;
+}
+
+.sheet-cuadrodmg{
+    background: none;
+    border: 3px solid black;
+    border-radius: 10px;
+    width:130px;
+    font-weight: bold;
+    display: inline;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+/* ################################################### */
+/* ################ CARTELITOS INFO ################## */
+/* ################################################### */
+
+.sheet-botoninfocoliseo {
+    font-family:Pictos; 
+    font-size: x-large; 
+    z-index: 5;
+    position:absolute;
+}
+
+.sheet-infotitulo {
+    border: 0px;
+    font-size: larger;
+    font-weight: bold;
+    display: block;
+    overflow: hidden;
+    min-height: 20px;
+    line-height: 30px;
+    padding-top: 12px;
+}
+
+.sheet-infobonificador {
+    border: 0px;
+    font-weight: bold;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 5px;
+    text-align: left !important;
+}
+
+.sheet-infotitulo1 {
+    border: 0px;
+    font-size: larger;
+    font-weight: bold;
+    display: block;
+    overflow: hidden;
+    min-height: 20px;
+    line-height: 30px;
+    padding-top: 0px;
+}
+
+.textarea {
+    display: block;
+    width: 300px;
+    overflow: hidden;
+    min-height: 40px;
+    line-height: 20px;
+  }
+
+.sheet-infotexto {
+    border: 0px;
+    display: block;
+    overflow: hidden;
+    min-height: 20px;
+    line-height: 20px;
+}
+
+.sheet-tooltip {
+    outline: none;
+    cursor: help;
+}
+
+.sheet-tooltip strong { line-height: 30px; }
+
+.sheet-tooltip:hover .sheet-info {
+    display: block;
+    position: absolute;
+}
+
+.sheet-tooltip:hover { text-decoration: none; }
+
+.sheet-tooltip .sheet-info {
+    display: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #ccc;
+    z-index: 10;
+    padding: 10px 15px;
+    margin-top: -30px;
+    margin-left: 28px;
+    width: 300px;
+    line-height: 16px;
+    color: #111;
+    border: 1px solid #dca;
+    background: #fffaf0;
+}
+
 
 /* ################################################### */
 /* ###### CAMBIOS Y TRANSFORMACIONES DE FICHA ######## */
 /* ################################################### */
 
-input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
-input.sheet-toggle-hide:checked ~ div.sheet-body {
+input.sheet-toggle-show:not(:checked) ~ div.sheet-body {
     display: none;
 }
 
-input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
-input.sheet-toggle-hide:checked ~ div.sheet-body {
+input.sheet-editar_talentos:not(:checked) ~ div.sheet-editable_talentos {
     display: none;
 }
 
-.sheet-block-a,
-.sheet-block-switch:checked ~ .sheet-block-b {
+input.sheet-editar_rasgos:not(:checked) ~ div.sheet-editable_rasgos {
+    display: none;
+}
+
+input.sheet-mostrar_talento1:not(:checked) ~ div.sheet-talento1 {
+    display: none !important;
+}
+
+.sheet-hojacombate,
+.sheet-cambiodehoja:checked ~ .sheet-hojatalentos {
   display: inline;
 }
 
-.sheet-block-b,
-.sheet-block-switch:checked ~ .sheet-block-a {
+.sheet-hojatalentos,
+.sheet-cambiodehoja:checked ~ .sheet-hojacombate {
+  display: none;
+}
+
+.sheet-hojanormal,
+.sheet-modocoliseo:checked ~ .sheet-hojacoliseo {
+  display: inline;
+}
+
+.sheet-hojacoliseo,
+.sheet-modocoliseo:checked ~ .sheet-hojanormal {
   display: none;
 }
 
@@ -791,7 +937,6 @@ input.sheet-toggle-hide:checked ~ div.sheet-body {
 .sheet-cuadronotas:checked ~ .sheet-cuadro_acciones {
   display: none;
 }
-
 
 
 /* ################################################### */
@@ -856,11 +1001,32 @@ button[type=back] {
     font-weight: bold;
     text-align:left;
     position:relative;
-    
 }
 
 button[type=roll]::before {
     content: " " !important;
+}
+
+.sheet-botoncoliseo {
+    position:relative;
+    vertical-align: middle;
+    width: 100px;
+    margin-right: 10px !important;
+    margin-left: 5px !important;
+    top: 10px !important;       
+}
+
+.sheet-imagencoliseo {
+    position:relative;
+    vertical-align: middle;
+    height: 70px;
+    width: 70px;
+    margin-right: -15px !important;
+    margin-left: 0px;
+    top: 10px;   
+    background-position: 0;
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
 }
 
 .sheet-botonimagen {
@@ -872,8 +1038,6 @@ button[type=roll]::before {
     margin-left: 0px;
     top: -10px;   
     background-position: 0;
-
-
     background-size: 70px 70px;
     background-repeat: no-repeat;
 }
@@ -941,70 +1105,6 @@ button[type=roll]::before {
 {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvioSA.png") !important;
 }
-
-
-
-/* ################################################### */
-/* ################ CARTELITOS INFO ################## */
-/* ################################################### */
-.sheet-infotitulo {
-    border: 0px;
-    font-size: larger;
-    font-weight: bold;
-    display: block;
-    width: 280px;
-    overflow: hidden;
-    min-height: 40px;
-    line-height: 20px;
-}
-.sheet-infotexto {
-    border: 0px;
-    display: block;
-    width: 280px;
-    overflow: hidden;
-    
-    min-height: 40px;
-    line-height: 20px;
-    
-}
-.textarea {
-    display: block;
-    width: 280px;
-    overflow: hidden;
-    resize: both;
-    min-height: 40px;
-    line-height: 20px;
-    color: red;
-  }
-
-.sheet-tooltip {
-    outline: none;
-    cursor: help;
-}
-
-.sheet-tooltip strong { line-height: 30px; }
-.sheet-tooltip:hover span {
-    display: block;
-    position: absolute;
-}
-
-.sheet-tooltip:hover { text-decoration: none; }
-.sheet-tooltip span {
-    display: none;
-    border-radius: 10px;
-    box-shadow: 5px 5px 8px #ccc;
-    z-index: 10;
-    padding: 14px 20px;
-    margin-top: -30px;
-    margin-left: 28px;
-    width: 300px;
-    line-height: 16px;
-    color: #111;
-    border: 1px solid #dca;
-    background: #fffaf0;
-    font-family:initial;
-}
-
 
 
 /* ################################################### */
