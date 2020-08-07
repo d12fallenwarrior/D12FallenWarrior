@@ -1,12 +1,212 @@
 <!-- LOGO // OPCIONES Y PESTAÑAS // CABECERA -->
 
 
+<!-- Hoja coliseo-->
+<input type="checkbox" class="modocoliseo check" name="attr_modocoliseo" value="1">
+<div class="hojacoliseo">
+    
+    <div>
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/logo.png"/>
+        </div>
+        <div class="cabecera">
+            <br>
+            <div style="font-weight: bold; font-size: xx-large; text-align: center; margin-right: 150px;">
+                <span name="attr_character_name" type="text"></span>
+            </div>
+            
+            <div style="font-weight: bold; text-align: center; clear:right;">
+                <span name="attr_clase" type="text"></span> / 
+                <span name="attr_raza" type="text"></span>
+            </div>      
+        </div>
+  
+    </div>
+    <p></p>
+    <div class="arrow-right"></div>
+    <hr>
+
+
+    <div class="40porciento centrado" >
+        <span class="centrado negrita larger">Tipo de tirada</span>
+        <p></p>
+            <p class='tipotiradas negrita'>Desventaja <input name="attr_tipotirada" type="radio" value="1" /></p>
+            <p class='tipotiradas negrita'>Normal <input name="attr_tipotirada" type="radio" value="2" checked="true"/></p>
+            <p class='tipotiradas negrita'>Ventaja <input name="attr_tipotirada" type="radio" value="3" /></p>
+    </div>
+    <hr>
+
+    <div>
+    <div class="40porciento centrado" style="margin-top: 40px;">
+        <button name="roll_reflejos" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cf0+@{ref})]]}} {{r2=[[(1d12cf0+@{ref})]]}} {{r3=[[(@{r3}+@{ref})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">
+            <span class="dadito">0</span><span class="arial"> Reflejos</span></button>
+        <button name="roll_vitalidad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cf0+@{vit})]]}} {{r2=[[(1d12cf0+@{vit})]]}} {{r3=[[(@{r3}+@{vit})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
+            <span class="dadito">0</span><span class="arial"> Vitalidad</span></button>        
+        <button name="roll_voluntad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cf0+@{vol})]]}} {{r2=[[(1d12cf0+@{vol})]]}} {{r3=[[(@{r3}+@{vol})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
+            <span class="dadito">0</span><span class="arial"> Voluntad</span></button>
+    </div>
+    <div class="centrado inline">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span style="font-weight: bold;">Energía total: </span> <span name="attr_energia" style="font-weight: bold;"></span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span style="font-weight: bold;">Herida: </span> <span name="attr_her" style="font-weight: bold;"></span>
+        
+        <div class="col cuadrodmg" >
+            <input type="number" name="attr_acansancio"  class="centrado bordered" value="0"  style="font-size: xx-large; border:none;"/>
+            <br><span>Cansancio</span>
+        </div> 
+        <div class="col cuadrodmg">
+            <input type ="number" name="attr_aeneactual"  class="centrado bordered" value="(@{energia})" style="font-size: xx-large; border:none;"/>
+            <input type="number" name="attr_aeneactual_max"  class="oculto" value="(@{energia})" disabled="true"/>
+            <br><span>Energía</span>
+        </div>   
+        <div class="col cuadrodmg">
+            <input type ="number" name="attr_aapuntostrauma"  class="centrado bordered" value="0"  style="font-size: xx-large; border:none;"/>
+            <input type ="number" name="attr_aapuntostrauma_max" class="oculto" value="12" disabled="true"/>
+            <br><span>Trauma</span>
+        </div> 
+    </div>
+    </div>
+
+    <p></p>
+    <div class="arrow-left"></div>
+    <hr>
+
+
+    <!--ACCIONES, ATAQUES, DEFENSAS Y HABILIDADES-->
+    <input type="checkbox" class="cuadronotas check" name="cuadronotas" value="1" style="float:left;">
+    <div class="cuadro_acciones negrita">
+        <span class="larger negrita centrado 25porciento" style="margin-left:-30px;">Acciones</span>
+    </div>
+    <div class="cuadro_especial negrita">
+        <span class="larger negrita centrado 25porciento" style="margin-left:-30px;">Especial</span>
+    </div>
+        
+    <div class="25porciento notascoliseo cuadro_acciones">
+        <div style="margin:10px;"><span class="nota">Acción</span> (gratuita)
+        </div>
+        <div style="margin:10px;"><span class="nota">Acción</span> (normal)
+        </div>
+        <div style="margin:10px;"><span class="nota">Acción</span> (gratuita)
+        </div>
+        <div style="margin:10px;"><span class="nota">Acción</span> (normal)
+        </div>
+    </div>
+
+    <div class="25porciento notascoliseo cuadro_especial">
+        <div style="margin:10px;"><span class="nota">Especial</span> (Talento)
+        </div>
+        <div style="margin:10px;"><span class="nota">Especial</span> (Talento)
+        </div>
+        <div style="margin:10px;"><span class="nota">Especial</span> (Talento)
+        </div>
+        <div style="margin:10px;"><span class="nota">Especial</span> (Talento)
+        </div>
+    </div>
+
+        
+    <div class="centrado" style="margin-top: 15px;"> 
+            
+            <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
+            <div class="info">   
+                <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                <p></p>
+                <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+            </div></span>
+            <button name="roll_defensa" class="imagencoliseo bdefensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo} + @{refuerzoextra}}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>            
+            <button name="roll_defensa" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo} + @{refuerzoextra}}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Defensa</button>
+            
+            <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
+                <div class="info">   
+                    <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                    <p></p>
+                    <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                </div></span>
+            <button name="roll_movilidad" class="imagencoliseo bmovilidad" type="roll" value="&{template:@{plantilla}} {{movilidad=Ah}} {{rname=Movilidad}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>                
+            <button name="roll_movilidad" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{movilidad=Ah}} {{rname=Movilidad}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Movilidad</button>             
+             
+            <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
+                <div class="info">   
+                    <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                    <p></p>
+                    <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                </div></span>
+            <button name="roll_pelea" class="imagencoliseo bpelea" type="roll" value="&{template:@{plantilla}} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cf0+@{pelea})]]}} {{r2=[[(1d12cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_pelea" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cf0+@{pelea})]]}} {{r2=[[(1d12cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Pelea</button>                    
+    </div>
+                          
+    <div class="centrado" style="margin-top: 15px;">               
+        <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
+            <div class="info">   
+                <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                <p></p>
+                <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+            </div></span>
+                <button name="roll_ataque1" class="imagencoliseo bataque1" type="roll" value="&{template:@{plantilla}} {{ataque1=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque1})]]}} {{r2=[[(1d12cf0+@{ataque1})]]}} {{r3=[[(@{r3}+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
+                <button name="roll_ataque1" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataque1=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque1})]]}} {{r2=[[(1d12cf0+@{ataque1})]]}} {{r3=[[(@{r3}+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> <span name="attr_nombrearma1"></span></button>
+            
+                <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
+                    <div class="info">   
+                        <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                        <p></p>
+                        <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                    </div></span>
+                <button name="roll_ataque3" class="imagencoliseo bataque3" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque3})]]}} {{r2=[[(1d12cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
+                <button name="roll_ataque3" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque3})]]}} {{r2=[[(1d12cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> <span name="attr_nombrearma2"></span></button>
+            
+                <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
+                    <div class="info">   
+                        <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                        <p></p>
+                        <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                    </div></span>
+                <button name="roll_ataquesa" class="imagencoliseo bataquesa" type="roll" value="&{template:@{plantilla}} {{ataquesa=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataquesa}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataquesa})]]}} {{r2=[[(1d12cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
+                <button name="roll_ataquesa" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataquesa=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataquesa}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataquesa})]]}} {{r2=[[(1d12cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> At. sin armas</button>                                     
+    </div>            
+
+    <div class="inline 30porciento" style="margin-top: 15px;">
+        <img class="imagencoliseo" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCArmadura.png"/>
+        <button name="roll_ataque3" class="inline botoncoliseo" type="roll"> <span name="attr_nombrearmadura"></span></button>
+            
+    </div>  
+
+    <div style="margin-top: 35px;">               
+            <button name="roll_alerta" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Alerta}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cf0+@{hab_alerta})]]}} {{r2=[[(1d12cf0+@{hab_alerta})]]}} {{r3=[[(@{r3}+@{hab_alerta})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <span class="dadito">0</span><span class="fuentehab"> Alerta</span></button>
+            
+            <button name="roll_atletismo" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Atletismo}} {{mod=@{hab_atletismo}}} {{r1=[[(1d12cf0+@{hab_atletismo})]]}} {{r2=[[(1d12cf0+@{hab_atletismo})]]}} {{r3=[[(@{r3}+@{hab_atletismo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+                <span class="dadito">0</span><span class="fuentehab"> Atletismo</span></button>
+            
+            <button name="roll_empatia" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Empatía}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_empatia}}} {{r1=[[(1d12cf0+@{hab_empatia})]]}} {{r2=[[(1d12cf0+@{hab_empatia})]]}} {{r3=[[(@{r3}+@{hab_empatia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+                <span class="dadito">0</span><span class="fuentehab"> Empatía</span></button>
+            
+    </div>  
+    <div style="margin-top: 15px;">               
+            <button name="roll_enganar" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Engañar}} {{mod=@{hab_enganar}}} {{r1=[[(1d12cf0+@{hab_enganar})]]}} {{r2=[[(1d12cf0+@{hab_enganar})]]}} {{r3=[[(@{r3}+@{hab_enganar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <span class="dadito">0</span><span class="fuentehab"> Engañar</span></button>
+        
+            <button name="roll_equilibrio" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Equilibrio}} {{mod=@{hab_equilibrio}}} {{r1=[[(1d12cf0+@{hab_equilibrio})]]}} {{r2=[[(1d12cf0+@{hab_equilibrio})]]}} {{r3=[[(@{r3}+@{hab_equilibrio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <span class="dadito">0</span><span class="fuentehab"> Equilibrio</span></button>
+        
+            <button name="roll_sigilo" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Sigilo}} {{mod=@{hab_sigilo}}} {{r1=[[(1d12cf0+@{hab_sigilo})]]}} {{r2=[[(1d12cf0+@{hab_sigilo})]]}} {{r3=[[(@{r3}+@{hab_sigilo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <span class="dadito">0</span><span class="fuentehab"> Sigilo</span></button>
+        
+    </div> 
+<hr>
+<div class="arrow-right"></div>
+</div>
+
+
+
+
+
 <!-- SWAP DE PÁGINAS-->
-<input type="checkbox" class="sheet-block-switch check" name="attr_block_switch" value="1">
-<div class="sheet-block-a negrita">
+<div class="hojanormal">
+<input type="checkbox" class="cambiodehoja check" name="attr_cambiodehoja" value="1">
+<div class="hojacombate negrita">
   HOJA DE COMBATE
 </div>
-<div class="sheet-block-b negrita">
+<div class="hojatalentos negrita">
   HOJA DE TALENTOS Y EQUIPO
 </div>
 <p></p>
@@ -22,19 +222,19 @@
     <div class="cabecera">
         <br>
         <span>Nombre de personaje</span> <input name="attr_character_name" type="text" style="width: 140px;"/>
-        
+        &nbsp;&nbsp;&nbsp;&nbsp; 
         <span>Nombre de jugador</span> <input name="attr_player_name" type="text" style="width: 100px;">
-        
+        &nbsp;&nbsp;&nbsp;&nbsp; 
         <span>Experiencia</span> <input name="attr_experiencia" type="number"/> 
         <br>
         <br>
                 
-        <span>Clase</span> <input name="attr_clase" type="text" style="width: 80px;"/>        
-        <span>Raza</span> <input name="attr_raza" type="text"  style="width: 80px;"/> 
-        <span>Región</span> <input name="attr_region" type="text"  style="width: 80px;"/>         
-        <span>Peso</span> <input name="attr_peso" type="number"/>           
-        <span>Altura</span> <input name="attr_altura" type="number"/> 
-        <span>Edad</span> <input name="attr_edad" type="number"/>
+        <span>Clase</span> <input name="attr_clase" type="text" style="width: 80px;"/> &nbsp;       
+        <span>Raza</span> <input name="attr_raza" type="text"  style="width: 80px;"/> &nbsp;
+        <span>Región</span> <input name="attr_region" type="text"  style="width: 80px;"/> &nbsp;     
+        <span>Peso</span> <input name="attr_peso" type="number" style="width: 40px; text-align: center"/> &nbsp;&nbsp;
+        <span>Altura</span> <input name="attr_altura" type="number" style="width: 40px; text-align: center"/> &nbsp;&nbsp;
+        <span>Edad</span> <input name="attr_edad" type="number" style="width: 40px; text-align: center;"/>
        
     </div>
 </div>
@@ -43,7 +243,7 @@
 <hr>
 
 <!-- PÁGINA A-->
-<div class="sheet-block-a">
+<div class="hojacombate">
 
 <!-- SECCIÓN ATRIBUTOS Y CARACTERÍSTICAS SECUNDARIAS -->
 <div>
@@ -192,7 +392,10 @@
 <hr>
 <div class="arrow-left"></div>
 <hr>
-<input type="checkbox" class="tipodeficha check" name="attr_tipodeficha" value="1" style="float:left;">
+
+<!--Cambio ficha mago/luchador-->
+<input type="checkbox" class="tipodeficha check" name="attr_tipodeficha" value="1" style="float:left; display:none">
+<!--<input type="checkbox" class="tipodeficha check" name="attr_tipodeficha" value="1" style="float:left;">
 <div class="ficha_luchador negrita" style="float:left">
   FICHA DE LUCHADOR
   
@@ -201,8 +404,19 @@
   FICHA DE MAGO
   
 </div>
-
+-->
+<!--SECCIÓN DAÑO Y TIPO TIRADA-->
+<div class="35porciento centrado">
+    <span class="centrado negrita larger">Tipo de tirada</span>
+    <p></p>
+        <p class='tipotiradas negrita'>Desventaja <input name="attr_tipotirada" type="radio" value="1" /></p>
+        <p class='tipotiradas negrita'>Normal <input name="attr_tipotirada" type="radio" value="2" checked="true"/></p>
+        <p class='tipotiradas negrita'>Ventaja <input name="attr_tipotirada" type="radio" value="3" /></p>   
+</div>
 <h1 style="float:right; margin-right:300px;">Combate</h1>
+
+<!--SECCIÓN DE NOTAS-->
+<!--
 <div class="sheet-columns" style="float:left;">
     <input type="checkbox" class="sheet-toggle-show check" />
     <span class="negrita">Mostrar notas</span>
@@ -265,22 +479,15 @@
         </div>
     </div>
 </div>
-<!-- <textarea style="height: 20px;"></textarea> -->
+-->
+
 
 <p></p>
-<!--SECCIÓN DE NOTAS-->
+
 
 <br>
 <hr>
 
-<!--SECCIÓN DAÑO Y TIPO TIRADA-->
-<div class="35porciento centrado">
-    <span class="centrado negrita larger">Tipo de tirada</span>
-    <p></p>
-        <p class='tipotiradas negrita'>Desventaja <input name="attr_tipotirada" type="radio" value="1" /></p>
-        <p class='tipotiradas negrita'>Normal <input name="attr_tipotirada" type="radio" value="2" checked="true"/></p>
-        <p class='tipotiradas negrita'>Ventaja <input name="attr_tipotirada" type="radio" value="3" /></p>   
-</div>
 
 <div class="centrado">
     <table style="margin: 0 auto;">
@@ -452,14 +659,14 @@
             </table>
             </div>
         <div class="col centrado">
-            <button name="roll_defensa" class="botonimagen bdefensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_defensa" class="botonimagen bdefensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo} + @{refuerzoextra}}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                             
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>
         -->
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_defensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo}}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Defensa</button></td>
+                            <td  class="bordebot"><button name="roll_defensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo} + @{refuerzoextra}}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Defensa</button></td>
                             <td >&nbsp;&nbsp;</td>    
                             <td  class="bordebot"><input name="attr_defensa" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
                         </tr>
@@ -624,8 +831,8 @@
     <hr>
 </div>
 
-<!--ARMAS-->                
-        <!-- ATAQUE 1-->
+<!--ARMAS Y ACCIONES-->                
+        
         <input type="checkbox" class="cuadronotas check" name="cuadronotas" value="1" style="float:left;">
         <div class="cuadro_acciones negrita">
             <span class="larger negrita centrado 25porciento" style="margin-left:-30px;">Acciones</span>
@@ -656,6 +863,8 @@
             </div>
         </div>
 
+
+        <!-- ATAQUE 1-->
         <input name="attr_nombrearma1" class="recolocar 70porciento" type="text"  placeholder="Nombre del arma" style="width: 165px;" />
                                
             <div class="70porciento" style="margin-top:-6px;">               
@@ -715,7 +924,6 @@
                 <br>                           
                 </div>            
             
-
         <!-- ATAQUE 2-->
         <div class="ficha_luchador">  
              
@@ -1290,7 +1498,7 @@
 <!-- PÁGINA B-->
 <!--SECCIÓN VENTAJAS, TALENTOS, IDEOLOGIA, IDIOMAS, ESTADOS-->
 
-<div class="sheet-block-b">
+<div class="hojatalentos">
     <!-- RASGOS Y TALENTOS-->
 <div class="2colrow">
 
@@ -1299,43 +1507,19 @@
         <!--RASGOS-->
         
         <h1>Rasgos</h1>
-        <input type="checkbox" class="sheet-toggle-show check" />
-        <span class="negrita">(Mostrar)</span>
-        <div class="sheet-body">
-            <table>
-                <tbody>
-                    <tr>
-            <td valign="top"><input name="attr_rasgo_name" type="text" class="negrita" placeholder="Rasgo" style="width: 110px;"></td>
-            <td><span>&nbsp;&nbsp;</span></td>
-            <td><textarea name="attr_rasgodesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
-                    </tr>
-                    <p></p>
-                    <tr>
-            <td valign="top"><input name="attr_rasgo_name2" type="text" class="negrita" placeholder="Rasgo" style="width: 110px;"></td>
-            <td><span>&nbsp;&nbsp;</span></td>
-            <td><textarea name="attr_rasgodesc2" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
-                    </tr>
-                    <p></p>
-                    <tr>
-            <td valign="top"><input name="attr_rasgo_name3" type="text" class="negrita" placeholder="Rasgo" style="width: 110px;"></td>
-            <td><span>&nbsp;&nbsp;</span></td>
-            <td><textarea name="attr_rasgodesc3" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
-                    </tr>                 
-                </tbody>
-            </table>
-                
+        <input type="checkbox" class="editar_rasgos check" />
+        <span class="negrita">Mostrar/Editar rasgos</span>
+        <div class="editable_rasgos">
+            <input name="attr_rasgo_name" type="text" class="nombre" placeholder="Rasgo">
+            <textarea name="attr_rasgodesc" placeholder="Descripción" class="justify descripcion"></textarea>
+            <input name="attr_rasgo_name2" type="text" class="nombre" placeholder="Rasgo">
+            <textarea name="attr_rasgodesc2" placeholder="Descripción" class="justify descripcion"></textarea>
+            <input name="attr_rasgo_name3" type="text" class="nombre" placeholder="Rasgo">
+            <textarea name="attr_rasgodesc3" placeholder="Descripción" class="justify descripcion"></textarea>
+            
             <fieldset class="repeating_rasgos">
-                <table>
-                    <tbody>
-                        <tr>
-                <p></p>
-                    <tr>
-            <td valign="top"><input name="attr_rasgo_name" type="text" class="negrita" placeholder="Rasgo" style="width: 110px;"></td>
-            <td><span>&nbsp;&nbsp;</span></td>  
-            <td><textarea name="attr_rasgodesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
-                    </tr>
-                </tbody>
-            </table>
+                <input name="attr_rasgo_name" type="text" class="nombre" placeholder="Rasgo">
+                <textarea name="attr_rasgodesc" placeholder="Descripción" class="justify descripcion"></textarea>
             </fieldset>
         </div>
 
@@ -1346,53 +1530,37 @@
 
     <!--TALENTOS-->
     <div class="col">
+        
+
         <h1>Talentos</h1>
         <!-- cartelito de info-->
-        <span class="sheet-tooltip" style="font-family:Pictos; font-size:larger;">i<span>
-            <span name="attr_talento_name" class="infotitulo"></span>
-            <span name="attr_talentodesc" class="infotexto"></span>
-            <br>
-        </span></span>
-        <span name="attr_talento_name" class="infotitulo"></span>
-            <span name="attr_talentodesc" class="infotexto"></span>
-        <input type="checkbox" class="sheet-toggle-show check" />
-        <span class="negrita">(Mostrar)</span>
-        <div class="sheet-body">
-        <table>
-            <tbody>
-                <tr>
-        <td valign="top"><input name="attr_talento_name" type="text" class="negrita" placeholder="Talento" style="width: 110px;"></td>
-        <td><span>&nbsp;&nbsp;</span></td>
-        <td><textarea name="attr_talentodesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
-                </tr>
-                <p></p>
-                <tr>
-        <td valign="top"><input name="attr_talento_name2" type="text" class="negrita" placeholder="Talento" style="width: 110px;"></td>
-        <td><span>&nbsp;&nbsp;</span></td>
-        <td><textarea name="attr_talentodesc2" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
-                </tr>
-                <p></p>
-                <tr>
-        <td valign="top"><input name="attr_talento_name3" type="text" class="negrita" placeholder="Talento" style="width: 110px;"></td>
-        <td><span>&nbsp;&nbsp;</span></td>
-        <td><textarea name="attr_talentodesc3" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
-                </tr>                 
-            </tbody>
-        </table>
+        <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+            <div class="info">
+                <div class="talento1">
+                    <span name="attr_talento_name" class="infotitulo1"></span>
+                    <span name="attr_talentodesc" class="infotexto"></span>
+                </div>
+                <span name="attr_talento_name" class="infotitulo1 talento1"></span>
+                <span name="attr_talentodesc" class="infotexto talento1"></span>
+                <span name="attr_talento_name2" class="infotitulo talento2"></span>
+                <span name="attr_talentodesc2" class="infotexto talento2"></span>
+                <span name="attr_talento_name3" class="infotitulo talento3"></span>
+                <span name="attr_talentodesc3" class="infotexto talento3"></span>
+        </div></span>
+        <input type="checkbox" class="editar_talentos check" />
+        <span class="negrita">Mostrar/Editar talentos</span>
+        <div class="editable_talentos">
+            <input name="attr_talento_name" type="text" class="nombre" placeholder="Talento">
+            <textarea name="attr_talentodesc" placeholder="Descripción" class="justify descripcion"></textarea>
+            <input name="attr_talento_name2" type="text" class="nombre" placeholder="Talento">
+            <textarea name="attr_talentodesc2" placeholder="Descripción" class="justify descripcion"></textarea>
+            <input name="attr_talento_name3" type="text" class="nombre" placeholder="Talento">
+            <textarea name="attr_talentodesc3" placeholder="Descripción" class="justify descripcion"></textarea>
             
-        <fieldset class="repeating_talentos">
-            <table>
-                <tbody>
-                    <tr>
-            <p></p>
-                <tr>
-        <td valign="top"><input name="attr_talento_name" type="text" class="negrita" placeholder="Talento" style="width: 110px;"></td>
-        <td><span>&nbsp;&nbsp;</span></td>  
-        <td><textarea name="attr_talentodesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
-                </tr>
-            </tbody>
-        </table>
-        </fieldset>
+            <fieldset class="repeating_talentos">
+                <input name="attr_talento_name" type="text" class="nombre" placeholder="Talento">
+                <textarea name="attr_talentodesc" placeholder="Descripción" class="justify descripcion"></textarea>
+            </fieldset>
         </div>
 
         <br>
@@ -1686,6 +1854,9 @@
 
     <hr>
 </div>
+</div>
+
+
 
 <!--
 <div>
