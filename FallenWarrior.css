@@ -145,8 +145,6 @@ span.sheet-dee {
 }
 
 
-
-
 .sheet-rolltemplate-muerte .sheet-adv,
 .sheet-rolltemplate-golpe .sheet-adv,
 .sheet-rolltemplate-dmg .sheet-adv,
@@ -195,7 +193,6 @@ span.sheet-dee {
     text-align: right;
     
 }
-
 
 
 .sheet-rolltemplate-simple .sheet-adv span,
@@ -331,7 +328,6 @@ span.sheet-dee {
 }
 
 
-
 .sheet-rolltemplate-simple .sheet-label,
 .sheet-rolltemplate-moribundo .sheet-label,
 .sheet-rolltemplate-muerte .sheet-label,
@@ -364,21 +360,13 @@ span.sheet-dee {
 
 
 .sheet-rolltemplate-simple .sheet-grey,
-
 .sheet-rolltemplate-moribundo .sheet-grey,
-
 .sheet-rolltemplate-muerte .sheet-grey,
-
 .sheet-rolltemplate-golpe .sheet-grey,
-
 .sheet-rolltemplate-conj .sheet-grey,
-
 .sheet-rolltemplate-tres .sheet-grey,
-
 .sheet-rolltemplate-tresd .sheet-grey,
-
 .sheet-rolltemplate-lesion .sheet-grey,
-
 .sheet-rolltemplate-dmg .sheet-grey
 
 {
