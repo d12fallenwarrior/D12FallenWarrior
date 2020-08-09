@@ -755,11 +755,11 @@
     <br>
     <div class="3colrow">
         <div class="col centrado">
-            <button name="roll_intensidad" class="botonimagen bintensidad" type="roll" value="&{template:@{plantilla}} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{magia=Intensidad}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{intensidad})]]}} {{r2=[[(1d12cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+            <button name="roll_intensidad" class="botonimagen bintensidad" type="roll" value="&{template:@{plantilla}} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{magia=Intensidad}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{intensidad})]]}} {{r2=[[(1d12cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_intensidad" type="roll" value="&{template:@{plantilla}} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{magia=Intensidad}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{intensidad})]]}} {{r2=[[(1d12cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Intensidad</button></td>
+            <td class="bordebot"><button name="roll_intensidad" type="roll" value="&{template:@{plantilla}} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{magia=Intensidad}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{intensidad})]]}} {{r2=[[(1d12cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Intensidad</button></td>
             <td>&nbsp;&nbsp;</td>       
             <td class="bordebot"><input name="attr_intensidad" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
             </tr>
@@ -773,13 +773,13 @@
              </div>
 
         <div class="col centrado">
-            <button name="roll_disparo" class="botonimagen bdisparo" type="roll" value="&{template:@{plantilla}} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}} {{magia=Disparo}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{intensidad})]]}} {{r2=[[(1d12cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+            <button name="roll_disparo" class="botonimagen bdisparo" type="roll" value="&{template:@{plantilla}} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}} {{magia=Disparo}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{disparo})]]}} {{r2=[[(1d12cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
             
             
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_disparo" type="roll" value="&{template:@{plantilla}} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}} {{magia=Disparo}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{intensidad})]]}} {{r2=[[(1d12cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Disparo</button></td>
+            <td class="bordebot"><button name="roll_disparo" type="roll" value="&{template:@{plantilla}} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}} {{magia=Disparo}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{disparo})]]}} {{r2=[[(1d12cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Disparo</button></td>
             <td>&nbsp;&nbsp;</td>
             <td class="bordebot"><input name="attr_disparo" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
             </tr>
@@ -793,13 +793,13 @@
              </div>
 
         <div class="col centrado">
-            <button name="roll_dominio" class="botonimagen bdominio" type="roll" value="&{template:@{plantilla}} {{dominio=Ah}} {{rname=Dominio}} {{mod=@{dominio}}} {{magia=Dominio}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{intensidad})]]}} {{r2=[[(1d12cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+            <button name="roll_dominio" class="botonimagen bdominio" type="roll" value="&{template:@{plantilla}} {{dominio=Ah}} {{rname=Dominio}} {{mod=@{dominio}}} {{magia=Dominio}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{dominio})]]}} {{r2=[[(1d12cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
             
             
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_dominio" type="roll" value="&{template:@{plantilla}} {{dominio=Ah}} {{rname=Dominio}} {{mod=@{dominio}}} {{magia=Dominio}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{intensidad})]]}} {{r2=[[(1d12cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Dominio</button></td>
+            <td class="bordebot"><button name="roll_dominio" type="roll" value="&{template:@{plantilla}} {{dominio=Ah}} {{rname=Dominio}} {{mod=@{dominio}}} {{magia=Dominio}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{dominio})]]}} {{r2=[[(1d12cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Dominio</button></td>
             <td>&nbsp;&nbsp;</td>
                 <td class="bordebot"><input name="attr_dominio" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
             </tr>
@@ -819,12 +819,12 @@
         <div class="col centrado">
             
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>-->
-            <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:conj} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{mod=@{conjuracion}}} {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:conj} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
             
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_conjuracion" type="roll" value="&{template:conj} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{mod=@{conjuracion}}} {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" > Conjuración</button></td>
+            <td class="bordebot"><button name="roll_conjuracion" type="roll" value="&{template:conj} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" > Conjuración</button></td>
             </td>
             <td>&nbsp;&nbsp;</td>
             <td class="bordebot"><input name="attr_conjuracion" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
@@ -1960,7 +1960,48 @@
     <div class='rolltemplates'>
 
 <rolltemplate class="sheet-rolltemplate-simple">
-            <div class="container">
+    <div class="container">
+        {{#conjuracion}}
+            <div>
+                {{#rollLess() rc1 rc2}}  
+                    <div class="adv">
+                        <span>{{rc2}}</span>
+                    </div>
+                {{/rollLess() rc1 rc2}}
+                {{#rollTotal() rc1 rc2}}
+                    <div class="adv">
+                        <span class="green">{{rc1}}</span>
+                    </div>
+                    
+                {{/rollTotal() rc1 rc2}}
+                {{#rollGreater() rc1 rc2}}
+                    <div class="adv">
+                        <span>{{rc1}}</span>
+                    </div>
+                {{/rollGreater() rc1 rc2}}
+                
+                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                
+            </div>
+
+            <div class="arrow-right"></div>
+
+            <div class="label titulo">
+                 Conjuración ({{conjuracion}})&nbsp;
+                        {{#^rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() rc2 dificultad}}{{/^rollLess() rc1 dificultad}}
+                       {{#^rollLess() rc2 dificultad}}{{#rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() rc1 dificultad}}{{/^rollLess() rc2 dificultad}}
+                      {{#^rollLess() rc1 dificultad}}{{#^rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc2 dificultad}}{{/^rollLess() rc1 dificultad}}
+                      {{#rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc2 dificultad}}{{/rollLess() rc1 dificultad}}
+             </div>
+
+             {{#rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>{{/rollLess() rc2 dificultad}}{{/rollLess() rc1 dificultad}}    
+
+                <div class="label">
+                   <span>Poder {{poder}}{{#rollTotal() rc1 rc2}}<span class="green">+2</span>{{/rollTotal() rc1 rc2}}</span>
+                </div>    
+                <div class="arrow-left"></div>  
+        {{/conjuracion}}
+                
                 <div>
                         {{#rollLess() r1 r2}}
                             <div class="adv">
@@ -1994,9 +2035,6 @@
                     {{#defensa}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>    
                     {{/defensa}}
-                    {{#conjuracion}}
-                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                    {{/conjuracion}}
                     {{#desvio}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvio.png"/>    
                     {{/desvio}}
@@ -2027,11 +2065,13 @@
                 <div class="label titulo">
                     <span class="dadito"> 0 </span>{{rname}}{{#mod}} ({{mod}}){{/mod}}<span class="dadito"> 0 </span> {{#rollWasCrit() r1}}<span class="green"> ¡12!</span>{{/rollWasCrit() r1}} {{#rollWasCrit() r2}}<span class="green"> ¡12!</span>{{/rollWasCrit() r2}}
                 </div>
+
                 {{#arma}}
                     <div class="label">
                         <span>{{arma}}</span>
                     </div>
                 {{/arma}}
+
                 {{#ataque}}
                 <div class="arrow-left"></div>            
                     <div class="label">
@@ -2041,12 +2081,14 @@
                         <span>[Daño Extra](!&#13;#Daño)</span>
                     </div>
                 {{/ataque}}
+
                 {{#estrategia}}
                 <div class="arrow-left"></div>
                 <div class="label">
                         <span>{{estrategia}}</span>
                     </div>
                 {{/estrategia}}
+
                 {{#defensa}}
                 <div class="label">
                     {{#rollGreater() piruetas 0}}<span>Contra At. por Invasión </span><span class="green">+{{piruetas}}</span>{{/rollGreater() piruetas 0}}
@@ -2075,33 +2117,32 @@
                 {{/magia}}
 
                                   
-            </div>
+    </div>
 </rolltemplate>
-
 
 <rolltemplate class="sheet-rolltemplate-conj">
     <div class="container">
+        {{#conjuracion}}
         <div>
-                {{#rollLess() rc1 rc2}}
-                    
+                {{#rollLess() rc1 rc2}}  
                     <div class="adv">
                         <span>{{rc2}}</span>
                     </div>
                 {{/rollLess() rc1 rc2}}
                 {{#rollTotal() rc1 rc2}}
                     <div class="adv">
-                        <span class="green">{{rc1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                        <span class="green">{{rc1}}</span>
                     </div>
                     
                 {{/rollTotal() rc1 rc2}}
                 {{#rollGreater() rc1 rc2}}
                     <div class="adv">
-                        <span>{{r1}}</span>
+                        <span>{{rc1}}</span>
                     </div>
                 {{/rollGreater() rc1 rc2}}
-                {{#conjuracion}}
+                
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                {{/conjuracion}}
+                
         </div>
 
         <div class="arrow-right"></div>
@@ -2120,17 +2161,54 @@
 
         <div class="label">
             <span>Poder {{poder}}{{#rollTotal() rc1 rc2}}<span class="green">+2</span>{{/rollTotal() rc1 rc2}}</span>
-        </div>
-        
-        
-        
-        
+        </div>      
+        {{/conjuracion}}
     </div>
 </rolltemplate>
 
-
 <rolltemplate class="sheet-rolltemplate-tres">
     <div class="container">
+        {{#conjuracion}}
+            <div>
+                {{#rollLess() rc1 rc2}}  
+                    <div class="adv">
+                        <span>{{rc2}}</span>
+                    </div>
+                {{/rollLess() rc1 rc2}}
+                {{#rollTotal() rc1 rc2}}
+                    <div class="adv">
+                        <span class="green">{{rc1}}</span>
+                    </div>
+                    
+                {{/rollTotal() rc1 rc2}}
+                {{#rollGreater() rc1 rc2}}
+                    <div class="adv">
+                        <span>{{rc1}}</span>
+                    </div>
+                {{/rollGreater() rc1 rc2}}
+                
+                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                
+            </div>
+
+            <div class="arrow-right"></div>
+
+            <div class="label titulo">
+                 Conjuración ({{conjuracion}})&nbsp;
+                        {{#^rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() rc2 dificultad}}{{/^rollLess() rc1 dificultad}}
+                       {{#^rollLess() rc2 dificultad}}{{#rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() rc1 dificultad}}{{/^rollLess() rc2 dificultad}}
+                      {{#^rollLess() rc1 dificultad}}{{#^rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc2 dificultad}}{{/^rollLess() rc1 dificultad}}
+                      {{#rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc2 dificultad}}{{/rollLess() rc1 dificultad}}
+             </div>
+
+             {{#rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>{{/rollLess() rc2 dificultad}}{{/rollLess() rc1 dificultad}}    
+
+                <div class="label">
+                   <span>Poder {{poder}}{{#rollTotal() rc1 rc2}}<span class="green">+2</span>{{/rollTotal() rc1 rc2}}</span>
+                </div>    
+                <div class="arrow-left"></div>  
+        {{/conjuracion}}
+        
         <div>
             {{#rollLess() r1 r2}}
                 {{#rollLess() r3 r1}}
@@ -2162,6 +2240,7 @@
                     {{/rollGreater() r3 r2}}
                 {{/rollGreater() r3 r1}}
             {{/rollLess() r1 r2}}
+
             {{#rollTotal() r1 r2}}
                 {{#rollLess() r3 r1}}
                 <!--r3 < r1 = r2-->
@@ -2179,6 +2258,7 @@
                     
                 {{/rollGreater() r3 r1}}
             {{/rollTotal() r1 r2}}
+
             {{#rollGreater() r1 r2}}
                 {{#rollLess() r3 r1}}
                     {{#rollLess() r3 r2}}
@@ -2209,6 +2289,7 @@
                     
                 {{/rollGreater() r3 r1}}
             {{/rollGreater() r1 r2}}
+
             {{#ataque1}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque1.png"/>    
                     {{/ataque1}}
@@ -2224,9 +2305,6 @@
                     {{#defensa}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>    
                     {{/defensa}}
-                    {{#conjuracion}}
-                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                    {{/conjuracion}}
                     {{#desvio}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvio.png"/>    
                     {{/desvio}}
@@ -2338,6 +2416,330 @@
    
 <rolltemplate class="sheet-rolltemplate-tresd">
     <div class="container">
+        {{#conjuracion}}
+            <div>
+            {{#rollLess() rc1 rc2}}
+                {{#rollLess() rc3 rc1}}
+                <!--r3 < r1 < r2-->
+                    <div class="adv"><span>{{rc1}}</span></div>
+                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                
+                    <div class="arrow-right"></div>
+
+                <div class="label titulo">
+                    Conjuración ({{conjuracion}})&nbsp;
+                    {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
+                    {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
+                </div>
+
+                {{#rollLess() rc1 dificultad}}
+                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
+                {{/rollLess() rc1 dificultad}}
+
+                <div class="label">
+                   <span>Poder {{poder}}
+                </div> 
+                  
+                {{/rollLess() rc3 rc1}}
+
+                {{#rollTotal() rc3 rc1}}
+                <!--r3 = r1 < r2-->
+                    <div class="adv"><span class="green">{{rc1}}</span></div>
+                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                                    
+                    <div class="arrow-right"></div>
+
+                <div class="label titulo">
+                    Conjuración ({{conjuracion}})&nbsp;
+                    {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
+                    {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
+                </div>
+
+                {{#rollLess() rc1 dificultad}}
+                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
+                {{/rollLess() rc1 dificultad}}
+
+                <div class="label">
+                   <span>Poder {{poder}}<span class="green">+2</span></span>
+                </div> 
+                {{/rollTotal() rc3 rc1}}
+
+                {{#rollGreater() rc3 rc1}}
+                    {{#rollLess() rc3 rc2}}
+                    <!--r1 < r3 < r2-->
+                        
+                        <div class="adv"><span>{{rc3}}</span></div>
+                        <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                                        
+                    <div class="arrow-right"></div>
+
+                    <div class="label titulo">
+                        Conjuración ({{conjuracion}})&nbsp;
+                        {{#^rollLess() rc3 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc3 dificultad}}
+                        {{#rollLess() rc3 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc3 dificultad}}
+                    </div>
+    
+                    {{#rollLess() rc3 dificultad}}
+                    <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
+                    {{/rollLess() rc3 dificultad}}
+    
+                    <div class="label">
+                       <span>Poder {{poder}}
+                    </div> 
+                    {{/rollLess() rc3 rc2}}
+
+                    {{#rollTotal() rc3 rc2}}
+                    <!--r1 < r3 = r2-->
+                           
+                        <div class="adv"><span class="green">{{rc3}}/span></div>
+                        <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                
+                    <div class="arrow-right"></div>
+
+                    <div class="label titulo">
+                        Conjuración ({{conjuracion}})&nbsp;
+                        {{#^rollLess() rc3 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc3 dificultad}}
+                        {{#rollLess() rc3 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc3 dificultad}}
+                    </div>
+    
+                    {{#rollLess() rc3 dificultad}}
+                    <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
+                    {{/rollLess() rc3 dificultad}}
+    
+                    <div class="label">
+                       <span>Poder {{poder}}<span class="green">+2</span></span>
+                    </div> 
+                    {{/rollTotal() rc3 rc2}}
+
+                    {{#rollGreater() rc3 rc2}}
+                    <!--r1 < r2 < r3-->
+                        
+                        <div class="adv"><span>{{rc2}}</span></div>
+                        <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                                        
+                    <div class="arrow-right"></div>
+
+                <div class="label titulo">
+                    Conjuración ({{conjuracion}})&nbsp;
+                    {{#^rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc2 dificultad}}
+                    {{#rollLess() rc2 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc2 dificultad}}
+                </div>
+
+                {{#rollLess() rc2 dificultad}}
+                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
+                {{/rollLess() rc2 dificultad}}
+
+                <div class="label">
+                   <span>Poder {{poder}}
+                </div> 
+                    {{/rollGreater() rc3 rc2}}
+                {{/rollGreater() rc3 rc1}}
+            {{/rollLess() rc1 rc2}}
+
+            {{#rollTotal() rc1 rc2}}
+                {{#rollLess() rc3 rc1}}
+                <!--r3 < r1 = r2-->
+                    <div class="adv"><span class="green">{{rc1}}</span></div>
+                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                                        
+                    <div class="arrow-right"></div>
+
+                <div class="label titulo">
+                    Conjuración ({{conjuracion}})&nbsp;
+                    {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
+                    {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
+                </div>
+
+                {{#rollLess() rc1 dificultad}}
+                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
+                {{/rollLess() rc1 dificultad}}
+
+                <div class="label">
+                   <span>Poder {{poder}}<span class="green">+2</span></span>
+                </div> 
+                {{/rollLess() rc3 rc1}}
+                {{#rollTotal() rc3 rc1}}
+                <!--r1 = r2 = r3-->
+                    <div class="adv"><span class="green">{{rc1}}</span></div>
+                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                                        
+                    <div class="arrow-right"></div>
+
+                <div class="label titulo">
+                    Conjuración ({{conjuracion}})&nbsp;
+                    {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
+                    {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
+                </div>
+
+                {{#rollLess() rc1 dificultad}}
+                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
+                {{/rollLess() rc1 dificultad}}
+
+                <div class="label">
+                   <span>Poder {{poder}}<span class="green">+2</span></span>
+                </div>                     
+                <div class="arrow-right"></div>
+
+            <div class="label titulo">
+                Conjuración ({{conjuracion}})&nbsp;
+                {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
+                {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
+            </div>
+
+            {{#rollLess() rc1 dificultad}}
+            <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
+            {{/rollLess() rc1 dificultad}}
+
+            <div class="label">
+               <span>Poder {{poder}}<span class="green">+2</span></span>
+            </div> 
+                {{/rollTotal() rc3 rc1}}
+
+                {{#rollGreater() rc3 rc1}}
+                <!--r1 = r2 < r3-->
+                    <div class="adv"><span class="green">{{rc1}}</span></div>
+                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                                        
+                    <div class="arrow-right"></div>
+
+                <div class="label titulo">
+                    Conjuración ({{conjuracion}})&nbsp;
+                    {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
+                    {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
+                </div>
+
+                {{#rollLess() rc1 dificultad}}
+                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
+                {{/rollLess() rc1 dificultad}}
+
+                <div class="label">
+                   <span>Poder {{poder}}<span class="green">+2</span></span>
+                </div>     
+                {{/rollGreater() rc3 rc1}}
+            {{/rollTotal() rc1 rc2}}
+
+            {{#rollGreater() rc1 rc2}}
+                {{#rollLess() rc3 rc1}}
+                    {{#rollLess() rc3 rc2}}
+                    <!--r3 < r2 < r1-->
+                        
+                        <div class="adv"><span>{{rc2}}</span></div>
+                        <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                                        
+                    <div class="arrow-right"></div>
+
+                    <div class="label titulo">
+                        Conjuración ({{conjuracion}})&nbsp;
+                        {{#^rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc2 dificultad}}
+                        {{#rollLess() rc2 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc2 dificultad}}
+                    </div>
+    
+                    {{#rollLess() rc2 dificultad}}
+                    <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
+                    {{/rollLess() rc2 dificultad}}
+    
+                    <div class="label">
+                       <span>Poder {{poder}}
+                    </div> 
+                    {{/rollLess() rc3 rc2}}
+                    {{#rollTotal() rc3 rc2}}
+                    <!--r2 = r3 < r1-->
+                        
+                        <div class="adv"><span class="green">{{rc3}}</span></div>
+                        <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                                        
+                    <div class="arrow-right"></div>
+
+                    <div class="label titulo">
+                        Conjuración ({{conjuracion}})&nbsp;
+                        {{#^rollLess() rc3 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc3 dificultad}}
+                        {{#rollLess() rc3 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc3 dificultad}}
+                    </div>
+    
+                    {{#rollLess() rc3 dificultad}}
+                    <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
+                    {{/rollLess() rc3 dificultad}}
+    
+                    <div class="label">
+                       <span>Poder {{poder}}<span class="green">+2</span></span>
+                    </div> 
+                    {{/rollTotal() rc3 rc2}}
+
+                    {{#rollGreater() rc3 rc2}}
+                    <!--r2 < r3 < r1-->
+                        
+                        <div class="adv"><span>{{rc3}}</span></div>
+                        <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                                        
+                    <div class="arrow-right"></div>
+
+                    <div class="label titulo">
+                        Conjuración ({{conjuracion}})&nbsp;
+                        {{#^rollLess() rc3 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc3 dificultad}}
+                        {{#rollLess() rc3 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc3 dificultad}}
+                    </div>
+    
+                    {{#rollLess() rc3 dificultad}}
+                    <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
+                    {{/rollLess() rc3 dificultad}}
+    
+                    <div class="label">
+                       <span>Poder {{poder}}
+                    </div> 
+                    {{/rollGreater() rc3 rc2}}
+                {{/rollLess() rc3 rc1}}
+
+                {{#rollTotal() rc3 rc1}}
+                <!--r2 < r3 = r1-->
+                    <div class="adv"><span class="green">{{rc1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
+                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                                        
+                    <div class="arrow-right"></div>
+
+                <div class="label titulo">
+                    Conjuración ({{conjuracion}})&nbsp;
+                    {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
+                    {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
+                </div>
+
+                {{#rollLess() rc1 dificultad}}
+                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
+                {{/rollLess() rc1 dificultad}}
+
+                <div class="label">
+                   <span>Poder {{poder}}<span class="green">+2</span></span>
+                </div> 
+                {{/rollTotal() rc3 rc1}}
+
+                {{#rollGreater() rc3 rc1}}
+                <!--r2 < r1 < r3-->
+                    <div class="adv"><span>{{rc1}}</span></div>
+                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                                        
+                    <div class="arrow-right"></div>
+
+                <div class="label titulo">
+                    Conjuración ({{conjuracion}})&nbsp;
+                    {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
+                    {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
+                </div>
+
+                {{#rollLess() rc1 dificultad}}
+                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
+                {{/rollLess() rc1 dificultad}}
+
+                <div class="label">
+                   <span>Poder {{poder}}
+                </div> 
+                {{/rollGreater() rc3 rc1}}
+            {{/rollGreater() rc1 rc2}}
+                
+                    
+            </div>
+
+            <div class="arrow-left"></div>  
+        {{/conjuracion}}
+        
         <div>
             {{#rollLess() r1 r2}}
                 {{#rollLess() r3 r1}}
@@ -2433,9 +2835,6 @@
                     {{#defensa}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>    
                     {{/defensa}}
-                    {{#conjuracion}}
-                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                    {{/conjuracion}}
                     {{#desvio}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvio.png"/>    
                     {{/desvio}}
