@@ -511,8 +511,9 @@ h1 {
     border: 3px solid rgb(0, 0, 0);
     border-radius: 10px;
     height: 250px;
-    margin-right:10px;
+    margin-right:0px;
     clear:left;
+    padding: 5px;
 }
 
 .sheet-nota
@@ -520,7 +521,10 @@ h1 {
     font-weight: bold;
     text-align: center;
     font-size: larger;
-    margin:30px;
+    margin-left:5px;
+    margin-right:10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .sheet-textoderecha
@@ -798,7 +802,10 @@ hr {
     font-family:Pictos; 
     font-size: x-large; 
     z-index: 5;
-    position:absolute;
+    position:relative;
+    text-align: left !important;
+    left: 15px;
+    top: -15px;
 }
 
 .sheet-infotitulo {
@@ -812,15 +819,6 @@ hr {
     padding-top: 12px;
 }
 
-.sheet-infobonificador {
-    border: 0px;
-    font-weight: bold;
-    display: inline-block;
-    overflow: hidden;
-    margin-left: 5px;
-    text-align: left !important;
-}
-
 .sheet-infotitulo1 {
     border: 0px;
     font-size: larger;
@@ -832,6 +830,23 @@ hr {
     padding-top: 0px;
 }
 
+.sheet-infobonificador {
+    border: 0px;
+    font-weight: bold;
+    display: inline;
+    overflow: hidden;
+    text-align: left !important;
+}
+
+.sheet-infotexto {
+    border: 0px;
+    display: block;
+    overflow: hidden;
+    min-height: 20px;
+    line-height: 20px;
+    text-align: left !important;
+}
+
 .textarea {
     display: block;
     width: 300px;
@@ -840,14 +855,6 @@ hr {
     line-height: 20px;
   }
 
-.sheet-infotexto {
-    border: 0px;
-    display: block;
-    overflow: hidden;
-    min-height: 20px;
-    line-height: 20px;
-}
-
 .sheet-tooltip {
     outline: none;
     cursor: help;
@@ -855,7 +862,9 @@ hr {
 
 .sheet-tooltip strong { line-height: 30px; }
 
-.sheet-tooltip:hover .sheet-info {
+.sheet-tooltip:hover .sheet-info,
+.sheet-tooltip:hover .sheet-infocoliseo
+{
     display: block;
     position: absolute;
 }
@@ -871,6 +880,22 @@ hr {
     margin-top: -30px;
     margin-left: 28px;
     width: 300px;
+    line-height: 16px;
+    color: #111;
+    border: 1px solid #dca;
+    background: #fffaf0;
+}
+
+.sheet-tooltip .sheet-infocoliseo {
+    display: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #ccc;
+    z-index: 10;
+    padding: 10px 15px;
+    margin-top: -90px;
+    margin-left: 35px;
+    min-width: 200px;
+    max-width: 300px;
     line-height: 16px;
     color: #111;
     border: 1px solid #dca;
@@ -1010,8 +1035,7 @@ button[type=roll]::before {
 .sheet-botoncoliseo {
     position:relative;
     vertical-align: middle;
-    width: 100px;
-    margin-right: 10px !important;
+    width: 91px;
     margin-left: 5px !important;
     top: 10px !important;       
 }
