@@ -14,7 +14,15 @@
             <div style="font-weight: bold; font-size: xx-large; text-align: center; margin-right: 150px;">
                 <span name="attr_character_name" type="text"></span>
             </div>
-            
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">
+                    <span name="attr_talento_name" class="infotitulo1 talento1"></span>
+                    <span name="attr_talentodesc" class="infotexto talento1"></span>
+                    <span name="attr_talento_name2" class="infotitulo talento2"></span>
+                    <span name="attr_talentodesc2" class="infotexto talento2"></span>
+                    <span name="attr_talento_name3" class="infotitulo talento3"></span>
+                    <span name="attr_talentodesc3" class="infotexto talento3"></span>
+            </div></span>
             <div style="font-weight: bold; text-align: center; clear:right;">
                 <span name="attr_clase" type="text"></span> / 
                 <span name="attr_raza" type="text"></span>
@@ -81,96 +89,135 @@
     <div class="cuadro_especial negrita">
         <span class="larger negrita centrado 25porciento" style="margin-left:-30px;">Especial</span>
     </div>
-        
+        <hr>
     <div class="25porciento notascoliseo cuadro_acciones">
-        <div style="margin:10px;"><span class="nota">Acción</span> (gratuita)
+        
+        <div>
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">         
+            </div></span>
+            <span class="nota">Acción</span> (Gratuita)
         </div>
-        <div style="margin:10px;"><span class="nota">Acción</span> (normal)
+        <div>
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">         
+            </div></span>
+            <span class="nota">Acción</span> (Normal)
         </div>
-        <div style="margin:10px;"><span class="nota">Acción</span> (gratuita)
-        </div>
-        <div style="margin:10px;"><span class="nota">Acción</span> (normal)
+        <div>
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">         
+            </div></span>
+            <span class="nota">Acción </span> (Normal)
         </div>
     </div>
 
     <div class="25porciento notascoliseo cuadro_especial">
-        <div style="margin:10px;"><span class="nota">Especial</span> (Talento)
+        <div>
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">         
+            </div></span>
+            <span class="nota">Especial</span>(Talento)
         </div>
-        <div style="margin:10px;"><span class="nota">Especial</span> (Talento)
+        <div>
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">         
+            </div></span>
+            <span class="nota">Especial</span> (Talento)
         </div>
-        <div style="margin:10px;"><span class="nota">Especial</span> (Talento)
-        </div>
-        <div style="margin:10px;"><span class="nota">Especial</span> (Talento)
+        <div>
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">         
+            </div></span>
+            <span class="nota">Especial</span> (Raza)
         </div>
     </div>
 
         
-    <div class="centrado" style="margin-top: 15px;"> 
-            
+    <div style="float:right; margin-top: -20px;"> 
             <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
-            <div class="info">   
+            <div class="infocoliseo">   
+                <span class="infotitulo1">Defensa</span>
                 <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
-                <p></p>
-                <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                <hr><span class="infotexto">Blablabla blabla blabla</span>
             </div></span>
             <button name="roll_defensa" class="imagencoliseo bdefensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo} + @{refuerzoextra}}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>            
             <button name="roll_defensa" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo} + @{refuerzoextra}}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Defensa</button>
             
             <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
-                <div class="info">   
-                    <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
-                    <p></p>
-                    <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                <div class="infocoliseo" style="right:144px">   
+                    <span class="infotitulo1">Movilidad</span>
+                    <span class="infobonificador">Bonificador: </span><span name="attr_movilidad" class="infobonificador"></span>
+                    <hr><span class="infobonificador">Movimiento: </span><input name="attr_movimiento" type="number" class="infobonificador" value="[[(6+@{movilidad})]]" disabled>
+                    <hr><span class="infotexto">Blablabla blabla blabla</span>
                 </div></span>
             <button name="roll_movilidad" class="imagencoliseo bmovilidad" type="roll" value="&{template:@{plantilla}} {{movilidad=Ah}} {{rname=Movilidad}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>                
             <button name="roll_movilidad" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{movilidad=Ah}} {{rname=Movilidad}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Movilidad</button>             
              
             <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
-                <div class="info">   
-                    <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
-                    <p></p>
-                    <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                <div class="infocoliseo" style="right:10px">   
+                    <span class="infotitulo1">Pelea</span>
+                    <span class="infobonificador">Bonificador: </span><span name="attr_pelea" class="infobonificador"></span>
+                    <hr><span class="infotexto">Blablabla blabla blabla</span>
                 </div></span>
             <button name="roll_pelea" class="imagencoliseo bpelea" type="roll" value="&{template:@{plantilla}} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cf0+@{pelea})]]}} {{r2=[[(1d12cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
             <button name="roll_pelea" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cf0+@{pelea})]]}} {{r2=[[(1d12cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Pelea</button>                    
     </div>
                           
-    <div class="centrado" style="margin-top: 15px;">               
+    <div style="float:right; margin-top: 20px;">               
         <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
-            <div class="info">   
-                <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
-                <p></p>
-                <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+            <div class="infocoliseo">   
+                    <span class="infotitulo1">Ataque (<span class="infobonificador" name="attr_nombrearma1"></span>)</span>
+                    <span class="infobonificador">Bonificador: </span><span name="attr_ataque1" class="infobonificador"></span>
+                    <hr><span class="infobonificador">Daño Vital: </span><span name="attr_tipodmg1" class="infobonificador"></span><span name="attr_dmg1" class="infobonificador"></span>
+                    <hr><span class="infobonificador">Cansancio: </span><span name="attr_can1" class="infobonificador"></span>
+                    <hr><span class="infobonificador">Especial: </span><span name="attr_esp1" class="infobonificador"></span>
             </div></span>
                 <button name="roll_ataque1" class="imagencoliseo bataque1" type="roll" value="&{template:@{plantilla}} {{ataque1=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque1})]]}} {{r2=[[(1d12cf0+@{ataque1})]]}} {{r3=[[(@{r3}+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
                 <button name="roll_ataque1" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataque1=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque1})]]}} {{r2=[[(1d12cf0+@{ataque1})]]}} {{r3=[[(@{r3}+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> <span name="attr_nombrearma1"></span></button>
             
                 <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
-                    <div class="info">   
-                        <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
-                        <p></p>
-                        <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                    <div class="infocoliseo" style="right:144px">
+                        <span class="infotitulo1">Ataque (<span class="infobonificador" name="attr_nombrearma3"></span>)</span>   
+                        <span class="infobonificador">Bonificador: </span><span name="attr_ataque3" class="infobonificador"></span>
+                        <hr><span class="infobonificador">Daño Vital: </span><span name="attr_tipodmg3" class="infobonificador"></span><span name="attr_dmg3" class="infobonificador"></span>
+                        <hr><span class="infobonificador">Cansancio: </span><span name="attr_can3" class="infobonificador"></span>
+                        <hr><span class="infobonificador">Especial: </span><span name="attr_esp3" class="infobonificador"></span>
                     </div></span>
                 <button name="roll_ataque3" class="imagencoliseo bataque3" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque3})]]}} {{r2=[[(1d12cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
-                <button name="roll_ataque3" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque3})]]}} {{r2=[[(1d12cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> <span name="attr_nombrearma2"></span></button>
+                <button name="roll_ataque3" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque3})]]}} {{r2=[[(1d12cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> <span name="attr_nombrearma3"></span></button>
             
                 <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
-                    <div class="info">   
-                        <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
-                        <p></p>
-                        <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                    <div class="infocoliseo" style="right:10px">   
+                        <span class="infotitulo1">Ataque sin armas</span>   
+                        <span class="infobonificador">Bonificador: </span><span name="attr_ataquesa" class="infobonificador"></span>
+                        <hr><span class="infobonificador">Daño Vital: </span><span name="attr_tipodmgsa" class="infobonificador"></span><span name="attr_dmgsa" class="infobonificador"></span>
+                        <hr><span class="infobonificador">Cansancio: </span><span name="attr_cansa" class="infobonificador"></span>
+                        <hr><span class="infobonificador">Especial: </span><span name="attr_espsa" class="infobonificador"></span>
                     </div></span>
                 <button name="roll_ataquesa" class="imagencoliseo bataquesa" type="roll" value="&{template:@{plantilla}} {{ataquesa=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataquesa}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataquesa})]]}} {{r2=[[(1d12cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
                 <button name="roll_ataquesa" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataquesa=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataquesa}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataquesa})]]}} {{r2=[[(1d12cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> At. sin armas</button>                                     
     </div>            
 
-    <div class="inline 30porciento" style="margin-top: 15px;">
-        <img class="imagencoliseo" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCArmadura.png"/>
-        <button name="roll_ataque3" class="inline botoncoliseo" type="roll"> <span name="attr_nombrearmadura"></span></button>
+    <div class="inline 35porciento" style="margin-top: 20px;">
+        <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
+            <div class="infocoliseo" style="bottom:150px">   
+                <span class="infotitulo1">Ataque (<span class="infobonificador" name="attr_nombrearmadura"></span>)</span>   
+                        <span class="infobonificador">Tipo: </span><span name="attr_tipoarmadura" class="infobonificador"></span>
+                        <hr><span class="infobonificador">Protección: </span><span name="attr_proteccion" class="infobonificador">
+                        <hr><span class="infobonificador">Refuerzo: </span><span name="attr_refuerzo" class="infobonificador"></span></span><span name="attr_refuerzoextra" class="infobonificador"></span>
+                        <hr><span class="infobonificador">Penalizador: </span><span name="attr_esp3" class="infobonificador"></span>
+                        <hr><span class="infobonificador"> Energía </span><span name="attr_pen_energia" class="infobonificador"></span>&nbsp;&nbsp;&nbsp;<span class="infobonificador"> Destreza </span><span name="attr_pen_destreza" class="infobonificador"></span>&nbsp;&nbsp;&nbsp;<span class="infobonificador"> Sigilo </span><span name="attr_pen_sigilo" class="infobonificador"></span>&nbsp;&nbsp;&nbsp;<span class="infobonificador"> Por carga </span><span name="attr_penarm" class="infobonificador"></span>
+            </div></span>
+        <img class="imagencoliseo centrado" style="left:3px" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCArmadura.png"/>
+        <span name="attr_nombrearmadura" class="negrita centrado" style="font-size:larger; position:relative; top:12px; left:15px;"></span>
             
     </div>  
 
-    <div style="margin-top: 35px;">               
+    <div class="centrado" style="margin-top: 25px; float:right">
+        <span class="negrita larger"> Habilidades</span> 
+     
+        <div class="centrado" style="margin-top: 5px;">            
             <button name="roll_alerta" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Alerta}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cf0+@{hab_alerta})]]}} {{r2=[[(1d12cf0+@{hab_alerta})]]}} {{r3=[[(@{r3}+@{hab_alerta})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="dadito">0</span><span class="fuentehab"> Alerta</span></button>
             
@@ -178,10 +225,10 @@
                 <span class="dadito">0</span><span class="fuentehab"> Atletismo</span></button>
             
             <button name="roll_empatia" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Empatía}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_empatia}}} {{r1=[[(1d12cf0+@{hab_empatia})]]}} {{r2=[[(1d12cf0+@{hab_empatia})]]}} {{r3=[[(@{r3}+@{hab_empatia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-                <span class="dadito">0</span><span class="fuentehab"> Empatía</span></button>
-            
-    </div>  
-    <div style="margin-top: 15px;">               
+                <span class="dadito">0</span><span class="fuentehab"> Empatía</span></button>  
+        </div> 
+
+        <div class="centrado" style="margin-top: 12px;">              
             <button name="roll_enganar" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Engañar}} {{mod=@{hab_enganar}}} {{r1=[[(1d12cf0+@{hab_enganar})]]}} {{r2=[[(1d12cf0+@{hab_enganar})]]}} {{r3=[[(@{r3}+@{hab_enganar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="dadito">0</span><span class="fuentehab"> Engañar</span></button>
         
@@ -190,8 +237,8 @@
         
             <button name="roll_sigilo" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Sigilo}} {{mod=@{hab_sigilo}}} {{r1=[[(1d12cf0+@{hab_sigilo})]]}} {{r2=[[(1d12cf0+@{hab_sigilo})]]}} {{r3=[[(@{r3}+@{hab_sigilo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="dadito">0</span><span class="fuentehab"> Sigilo</span></button>
-        
-    </div> 
+        </div> 
+    </div>
 <hr>
 <div class="arrow-right"></div>
 </div>
@@ -499,7 +546,7 @@
                     <td>&nbsp;&nbsp;</td>
         
         
-                    <td><input type ="number" name="attr_aeneactual"  class="centrado bordered" value="30"  style="width: 100px;"/>
+                    <td><input type ="number" name="attr_aeneactual"  class="centrado bordered" value="(@{energia})"  style="width: 100px;"/>
                     <input type="number" name="attr_aeneactual_max"  class="oculto" value="(@{energia})" disabled="true"/></td>
                     <td>&nbsp;&nbsp;</td>
 
@@ -571,7 +618,7 @@
                 <td class="centrado bordetopbot"><span class="negrita larger">Armadura</span></td>
                 <td>&nbsp;</td>
 
-        <td class="centrado bordetopbot"><select name="tipoarmadura" style="width: 90px;">
+        <td class="centrado bordetopbot"><select name="attr_tipoarmadura" style="width: 90px;">
             <option value="Ninguna">-</option>
             <option value="Ligera">Ligera</option>
             <option value="Intermedia">Intermedia</option>
@@ -641,7 +688,7 @@
         <div class="col centrado">
             
             <button name="roll_movilidad" class="botonimagen bmovilidad" type="roll" value="&{template:@{plantilla}} {{movilidad=Ah}} {{rname=Movilidad}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-                            
+            <input name="attr_movimiento" type="number" class="oculto" value="[[(6+@{movilidad})]]" disabled>
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
@@ -772,12 +819,12 @@
         <div class="col centrado">
             
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>-->
-            <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:conj} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{mod=@{conjuracion}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:conj} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{mod=@{conjuracion}}} {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
             
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_conjuracion" type="roll" value="&{template:conj} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{mod=@{conjuracion}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" > Conjuración</button></td>
+            <td class="bordebot"><button name="roll_conjuracion" type="roll" value="&{template:conj} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{mod=@{conjuracion}}} {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" > Conjuración</button></td>
             </td>
             <td>&nbsp;&nbsp;</td>
             <td class="bordebot"><input name="attr_conjuracion" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
@@ -1507,6 +1554,15 @@
         <!--RASGOS-->
         
         <h1>Rasgos</h1>
+        <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+            <div class="info">
+                <span name="attr_talento_name" class="infotitulo1 talento1"></span>
+                <span name="attr_talentodesc" class="infotexto talento1"></span>
+                <span name="attr_talento_name2" class="infotitulo talento2"></span>
+                <span name="attr_talentodesc2" class="infotexto talento2"></span>
+                <span name="attr_talento_name3" class="infotitulo talento3"></span>
+                <span name="attr_talentodesc3" class="infotexto talento3"></span>
+        </div></span>
         <input type="checkbox" class="editar_rasgos check" />
         <span class="negrita">Mostrar/Editar rasgos</span>
         <div class="editable_rasgos">
@@ -1536,10 +1592,6 @@
         <!-- cartelito de info-->
         <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
             <div class="info">
-                <div class="talento1">
-                    <span name="attr_talento_name" class="infotitulo1"></span>
-                    <span name="attr_talentodesc" class="infotexto"></span>
-                </div>
                 <span name="attr_talento_name" class="infotitulo1 talento1"></span>
                 <span name="attr_talentodesc" class="infotexto talento1"></span>
                 <span name="attr_talento_name2" class="infotitulo talento2"></span>
@@ -2030,23 +2082,23 @@
 <rolltemplate class="sheet-rolltemplate-conj">
     <div class="container">
         <div>
-                {{#rollLess() r1 r2}}
+                {{#rollLess() rc1 rc2}}
                     
                     <div class="adv">
-                        <span>{{r2}}</span>
+                        <span>{{rc2}}</span>
                     </div>
-                {{/rollLess() r1 r2}}
-                {{#rollTotal() r1 r2}}
+                {{/rollLess() rc1 rc2}}
+                {{#rollTotal() rc1 rc2}}
                     <div class="adv">
-                        <span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                        <span class="green">{{rc1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
                     </div>
                     
-                {{/rollTotal() r1 r2}}
-                {{#rollGreater() r1 r2}}
+                {{/rollTotal() rc1 rc2}}
+                {{#rollGreater() rc1 rc2}}
                     <div class="adv">
                         <span>{{r1}}</span>
                     </div>
-                {{/rollGreater() r1 r2}}
+                {{/rollGreater() rc1 rc2}}
                 {{#conjuracion}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
                 {{/conjuracion}}
@@ -2056,25 +2108,25 @@
 
         <div class="label titulo">
             Conjuración ({{conjuracion}})&nbsp;&nbsp;
-                {{#^rollLess() r1 dificultad}}{{#rollLess() r2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() r2 dificultad}}{{/^rollLess() r1 dificultad}}
-                {{#^rollLess() r2 dificultad}}{{#rollLess() r1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() r1 dificultad}}{{/^rollLess() r2 dificultad}}
-                {{#^rollLess() r1 dificultad}}{{#^rollLess() r2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() r2 dificultad}}{{/^rollLess() r1 dificultad}}
-                {{#rollLess() r1 dificultad}}{{#rollLess() r2 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() r2 dificultad}}{{/rollLess() r1 dificultad}}
+                {{#^rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() rc2 dificultad}}{{/^rollLess() rc1 dificultad}}
+                {{#^rollLess() rc2 dificultad}}{{#rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() rc1 dificultad}}{{/^rollLess() rc2 dificultad}}
+                {{#^rollLess() rc1 dificultad}}{{#^rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc2 dificultad}}{{/^rollLess() rc1 dificultad}}
+                {{#rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc2 dificultad}}{{/rollLess() rc1 dificultad}}
         </div>
 
         <div class="arrow-left"></div>
 
-        {{#rollLess() r1 dificultad}}{{#rollLess() r2 dificultad}}<div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>{{/rollLess() r2 dificultad}}{{/rollLess() r1 dificultad}}    
+        {{#rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>{{/rollLess() rc2 dificultad}}{{/rollLess() rc1 dificultad}}    
 
         <div class="label">
-            <span>Poder {{poder}}{{#rollTotal() r1 r2}}<span class="green">+2</span>{{/rollTotal() r1 r2}}</span>
+            <span>Poder {{poder}}{{#rollTotal() rc1 rc2}}<span class="green">+2</span>{{/rollTotal() rc1 rc2}}</span>
         </div>
         
         
         
         
     </div>
-</rolltemplate>-->
+</rolltemplate>
 
 
 <rolltemplate class="sheet-rolltemplate-tres">
