@@ -313,12 +313,15 @@ span.sheet-dee {
     margin-top: 3px !important;
     font-size: 16px;
     font-weight: bold;
-    line-height: 14px;
+    line-height: 16px;
     text-align: center;
 }
 
 .sheet-rolltemplate-golpe .sheet-texto,
-.sheet-rolltemplate-lesion .sheet-texto
+.sheet-rolltemplate-lesion .sheet-texto,
+.sheet-rolltemplate-tres .sheet-texto,
+.sheet-rolltemplate-tresd .sheet-texto,
+.sheet-rolltemplate-simple .sheet-texto
 {
     font-size: 13px;
     font-weight: normal;
