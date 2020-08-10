@@ -907,6 +907,18 @@ input.sheet-editar_rasgos:not(:checked) ~ div.sheet-editable_rasgos {
     display: none;
 }
 
+input.sheet-mostrar_intensidad:not(:checked) ~ div.sheet-especial_intensidad {
+    display: none !important;
+}
+
+input.sheet-mostrar_disparo:not(:checked) ~ div.sheet-especial_disparo {
+    display: none !important;
+}
+
+input.sheet-mostrar_dominio:not(:checked) ~ div.sheet-especial_dominio {
+    display: none !important;
+}
+
 input.sheet-mostrar_talento1:not(:checked) ~ div.sheet-talento1 {
     display: none !important;
 }
