@@ -108,24 +108,26 @@
     </div>
 
     <div class="25porciento notascoliseo cuadro_especial">
-        <input type="checkbox" name="attr_mostrar_intensidad" class="mostrar_intensidad check" value="0" />
+        <input type="checkbox" name="attr_mostrar_intensidad" class="mostrar_intensidad check oculto" value="1" />
         <div class="especial_intensidad">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="info">         
             </div></span>
             <button name="roll_intensidad" type="roll" class="nota" value="&{template:@{plantilla}} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{magia=Intensidad}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{intensidad})]]}} {{r2=[[(1d12cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Intensidad</button>(Conjuro)
         </div>
-        <div>
+        <input type="checkbox" name="attr_mostrar_disparo" class="mostrar_disparo check oculto" value="1" />
+        <div class="especial_disparo">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="info">         
             </div></span>
-            <span class="nota">Especial</span> (Talento)
+            <button name="roll_disparo" type="roll" class="nota" value="&{template:@{plantilla}} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}} {{magia=Disparo}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{disparo})]]}} {{r2=[[(1d12cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Disparo</button> (Conjuro)
         </div>
-        <div>
+        <input type="checkbox" name="attr_mostrar_dominio" class="mostrar_dominio check oculto" value="1" />
+        <div class="especial_dominio">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="info">         
             </div></span>
-            <span class="nota">Especial</span> (Raza)
+            <button name="roll_dominio" type="roll" class="nota" value="&{template:@{plantilla}} {{dominio=Ah}} {{rname=Dominio}} {{mod=@{dominio}}} {{magia=Dominio}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{dominio})]]}} {{r2=[[(1d12cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Dominio</button> (Conjuro)
         </div>
     </div>
 
@@ -197,7 +199,7 @@
 
     <div class="inline 35porciento" style="margin-top: 25px;">
         <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
-            <div class="infocoliseo">   
+            <div class="infocoliseo" style="bottom:-150px">   
                 <span class="infotitulo1">Ataque (<span class="infobonificador" name="attr_nombrearmadura"></span>)</span>   
                         <span class="infobonificador">Tipo: </span><span name="attr_tipoarmadura" class="infobonificador"></span>
                         <hr><span class="infobonificador">Protección: </span><span name="attr_proteccion" class="infobonificador">
@@ -437,26 +439,26 @@
 <hr>
 
 <!--Cambio ficha mago/luchador-->
-<input type="checkbox" class="oculto" name="attr_tipodeficha" value="1">
-<!--<input type="checkbox" class="tipodeficha check" name="attr_tipodeficha" value="1" style="float:left;">
-<div class="ficha_luchador negrita" style="float:left">
+<!--<input type="checkbox" class="tipodeficha check oculto" name="attr_tipodeficha" value="1">-->
+<input type="checkbox" class="tipodeficha check" name="attr_tipodeficha" value="1" style="float:right;">
+<div class="ficha_luchador negrita" style="float:right">
   FICHA DE LUCHADOR
   
 </div>
-<div class="ficha_mago negrita" style="float:left;">
+<div class="ficha_mago negrita" style="float:right;">
   FICHA DE MAGO
   
 </div>
--->
+
 <!--SECCIÓN DAÑO Y TIPO TIRADA-->
-<div class="35porciento centrado">
+<div class="40porciento centrado">
     <span class="centrado negrita larger">Tipo de tirada</span>
     <p></p>
         <p class='tipotiradas negrita'>Desventaja <input name="attr_tipotirada" type="radio" value="1" /></p>
         <p class='tipotiradas negrita'>Normal <input name="attr_tipotirada" type="radio" value="2" checked="true"/></p>
         <p class='tipotiradas negrita'>Ventaja <input name="attr_tipotirada" type="radio" value="3" /></p>   
 </div>
-<h1 style="float:right; margin-right:300px;">Combate</h1>
+<h1 style="text-align: left;">Combate</h1>
 
 <!--SECCIÓN DE NOTAS-->
 <!--
@@ -527,8 +529,6 @@
 
 <p></p>
 
-
-<br>
 <hr>
 
 
@@ -1550,7 +1550,7 @@
         <!--RASGOS-->
         
         <h1>Rasgos</h1>
-        <input type="checkbox" class="editar_rasgos check" />
+        <input type="checkbox" name="attr_mostrarrasgos" class="editar_rasgos check" value="1"/>
         <span class="negrita">Mostrar/Editar rasgos</span>
         <div class="editable_rasgos">
             <input name="attr_rasgo_name" type="text" class="nombre" placeholder="Rasgo">
@@ -1576,7 +1576,7 @@
         
 
         <h1>Talentos</h1>
-        <input type="checkbox" class="editar_talentos check" />
+        <input type="checkbox" name="attr_mostrartalentos" class="editar_talentos check" value="1"/>
         <span class="negrita">Mostrar/Editar talentos</span>
         <div class="editable_talentos">
             <input name="attr_talento_name" type="text" class="nombre" placeholder="Talento">
@@ -3271,7 +3271,7 @@
     <div class="arrow-left"></div>
     <p></p> 
     <div class="label texto">
-        Tira 1d12 al comienzo de cada evento para... (efecto secreto).
+        Recibes 2 lesiones inmediatamente.
         <p></p>
         </div>
     {{/rollTotal() r1 12}}
@@ -3365,6 +3365,24 @@
             <span class="green">Motivación extra</span>
         </div>
         {{/motivacion}}
+
+        {{#flechaperdida}}
+        <div>
+            <div class="adv"><span class="red">Ataque {{r1}}</span></div>
+            <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque3.png"/>    
+        </div>
+         
+        <div class="label titulo">
+            Flecha perdida
+        </div>
+        <div class="arrow-right"></div>
+        <div class="label">
+            <span>Daño igual que el original.</span>
+        </div>
+        <div class="label">
+            <span>[Daño Extra](!&#13;#Daño)</span>
+        </div>
+        {{/flechaperdida}}
 
         {{#burro}}
         <div>
