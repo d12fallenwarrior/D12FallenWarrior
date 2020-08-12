@@ -51,11 +51,11 @@
         <span class="larger negrita">Estrategia</span>&nbsp;&nbsp;<span name="attr_est" class="negrita larger"></span>
     
     <div style="margin-top: 5px;">
-        <button name="roll_reflejos" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cf0+@{ref})]]}} {{r2=[[(1d12cf0+@{ref})]]}} {{r3=[[(@{r3}+@{ref})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">
+        <button name="roll_reflejos" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cs0cf0+@{ref})]]}} {{r2=[[(1d12cs0cf0+@{ref})]]}} {{r3=[[(@{r3}+@{ref})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">
             <span class="dadito">0</span><span> Reflejos</span></button> <span name="attr_ref" class="negrita larger"></span>&nbsp;&nbsp;
-        <button name="roll_vitalidad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cf0+@{vit})]]}} {{r2=[[(1d12cf0+@{vit})]]}} {{r3=[[(@{r3}+@{vit})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
+        <button name="roll_vitalidad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cs0cf0+@{vit})]]}} {{r2=[[(1d12cs0cf0+@{vit})]]}} {{r3=[[(@{r3}+@{vit})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
             <span class="dadito">0</span><span> Vitalidad</span></button> <span name="attr_vit" class="negrita larger"></span>&nbsp;&nbsp;        
-        <button name="roll_voluntad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cf0+@{vol})]]}} {{r2=[[(1d12cf0+@{vol})]]}} {{r3=[[(@{r3}+@{vol})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
+        <button name="roll_voluntad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cs0cf0+@{vol})]]}} {{r2=[[(1d12cs0cf0+@{vol})]]}} {{r3=[[(@{r3}+@{vol})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
             <span class="dadito">0</span><span> Voluntad</span></button><span name="attr_vol" class="negrita larger"></span>&nbsp;&nbsp;
     </div>
     </div>
@@ -184,12 +184,20 @@
         </div>
         </div>
 
+        <input type="checkbox" name="attr_mostrar_conjuracion" class="mostrar_conjuracion check oculto" value="1" />
+        <div class="especial_conjuracion">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">         
+            </div></span>
+            <button name="roll_conjuracion" type="roll" value="&{template:@{plantilla}} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(3+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{dificultad2=[[(1+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button>(Conjuro)
+        </div>
+
         <input type="checkbox" name="attr_mostrar_intensidad" class="mostrar_intensidad check oculto" value="1" />
         <div class="especial_intensidad">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="info">         
             </div></span>
-            <button name="roll_intensidad" type="roll" class="nota" value="&{template:@{plantilla}} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{magia=Intensidad}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{intensidad})]]}} {{r2=[[(1d12cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Intensidad</button>(Conjuro)
+            <button name="roll_intensidad" type="roll" value="&{template:@{plantilla}} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{magia=Intensidad}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Intensidad</button>(Conjuro)
         </div>
 
         <input type="checkbox" name="attr_mostrar_disparo" class="mostrar_disparo check oculto" value="1" />
@@ -197,7 +205,7 @@
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="info">         
             </div></span>
-            <button name="roll_disparo" type="roll" class="nota" value="&{template:@{plantilla}} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}} {{magia=Disparo}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{disparo})]]}} {{r2=[[(1d12cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Disparo</button> (Conjuro)
+            <button name="roll_disparo" type="roll" value="&{template:@{plantilla}} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}} {{magia=Disparo}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Disparo</button> (Conjuro)
         </div>
 
         <input type="checkbox" name="attr_mostrar_dominio" class="mostrar_dominio check oculto" value="1" />
@@ -205,12 +213,12 @@
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="info">         
             </div></span>
-            <button name="roll_dominio" type="roll" class="nota" value="&{template:@{plantilla}} {{dominio=Ah}} {{rname=Dominio}} {{mod=@{dominio}}} {{magia=Dominio}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{dominio})]]}} {{r2=[[(1d12cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Dominio</button> (Conjuro)
+            <button name="roll_dominio" type="roll" value="&{template:@{plantilla}} {{dominio=Ah}} {{rname=Dominio}} {{mod=@{dominio}}} {{magia=Dominio}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{dominio})]]}} {{r2=[[(1d12cs0cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Dominio</button> (Conjuro)
         </div>
 
     </div>
 
-        
+
     <div style="float:right; margin-top: -10px;"> 
             <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
             <div class="infocoliseo">   
@@ -218,8 +226,8 @@
                 <span class="infobonificador">Bonificador: </span><span name="attr_desvio" class="infobonificador"></span>
                 <hr><span class="infotexto">Blablabla blabla blabla</span>
             </div></span>
-            <button name="roll_desvio" class="imagencoliseo bdesvio" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Desvio}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cf0+@{desvio})]]}} {{r2=[[(1d12cf0+@{desvio})]]}} {{r3=[[(@{r3}+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>            
-            <button name="roll_desvio" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Desvio}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cf0+@{desvio})]]}} {{r2=[[(1d12cf0+@{desvio})]]}} {{r3=[[(@{r3}+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío</button>
+            <button name="roll_desvio" class="imagencoliseo bdesvio" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Desvio}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(@{r3}+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>            
+            <button name="roll_desvio" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Desvio}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(@{r3}+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío</button>
             
             <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
                 <div class="infocoliseo" style="right:144px">   
@@ -228,8 +236,8 @@
                     <hr><span class="infobonificador">Movimiento: </span><input name="attr_movimiento" type="number" class="infobonificador" value="[[(6+@{movilidad})]]" disabled>
                     <hr><span class="infotexto">Blablabla blabla blabla</span>
                 </div></span>
-            <button name="roll_movilidad" class="imagencoliseo bmovilidad" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>                
-            <button name="roll_movilidad" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}}{{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Movilidad</button>             
+            <button name="roll_movilidad" class="imagencoliseo bmovilidad" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cs0cf0+@{movilidad})]]}} {{r2=[[(1d12cs0cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>                
+            <button name="roll_movilidad" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}}{{mod=@{movilidad}}} {{r1=[[(1d12cs0cf0+@{movilidad})]]}} {{r2=[[(1d12cs0cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Movilidad</button>             
              
             <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
                 <div class="infocoliseo" style="right:10px">   
@@ -237,8 +245,8 @@
                     <span class="infobonificador">Bonificador: </span><span name="attr_pelea" class="infobonificador"></span>
                     <hr><span class="infotexto">Blablabla blabla blabla</span>
                 </div></span>
-            <button name="roll_pelea" class="imagencoliseo bpelea" type="roll" value="&{template:@{plantilla}} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cf0+@{pelea})]]}} {{r2=[[(1d12cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-            <button name="roll_pelea" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cf0+@{pelea})]]}} {{r2=[[(1d12cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Pelea</button>                    
+            <button name="roll_pelea" class="imagencoliseo bpelea" type="roll" value="&{template:@{plantilla}} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_pelea" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Pelea</button>                    
     </div>
                           
     <div style="float:right; margin-top: 25px;">               
@@ -250,8 +258,8 @@
                     <hr><span class="infobonificador">Cansancio: </span><span name="attr_can1" class="infobonificador"></span>
                     <hr><span class="infobonificador">Especial: </span><span name="attr_esp1" class="infobonificador"></span>
             </div></span>
-                <button name="roll_ataque1" class="imagencoliseo bataque1" type="roll" value="&{template:@{plantilla}} {{ataque1=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque1})]]}} {{r2=[[(1d12cf0+@{ataque1})]]}} {{r3=[[(@{r3}+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
-                <button name="roll_ataque1" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataque1=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque1})]]}} {{r2=[[(1d12cf0+@{ataque1})]]}} {{r3=[[(@{r3}+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> <span name="attr_nombrearma1"></span></button>
+                <button name="roll_ataque1" class="imagencoliseo bataque1" type="roll" value="&{template:@{plantilla}} {{ataque1=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(@{r3}+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
+                <button name="roll_ataque1" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataque1=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(@{r3}+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> <span name="attr_nombrearma1"></span></button>
             
                 <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
                     <div class="infocoliseo" style="right:144px">
@@ -261,8 +269,8 @@
                         <hr><span class="infobonificador">Cansancio: </span><span name="attr_can3" class="infobonificador"></span>
                         <hr><span class="infobonificador">Especial: </span><span name="attr_esp3" class="infobonificador"></span>
                     </div></span>
-                <button name="roll_ataque3" class="imagencoliseo bataque3" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma3} (@{tipodmg3})}} {{r1=[[(1d12cf0+@{ataque3})]]}} {{r2=[[(1d12cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
-                <button name="roll_ataque3" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma3} (@{tipodmg3})}} {{r1=[[(1d12cf0+@{ataque3})]]}} {{r2=[[(1d12cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> <span name="attr_nombrearma3"></span></button>
+                <button name="roll_ataque3" class="imagencoliseo bataque3" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma3} (@{tipodmg3})}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
+                <button name="roll_ataque3" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma3} (@{tipodmg3})}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> <span name="attr_nombrearma3"></span></button>
             
                 <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
                     <div class="infocoliseo" style="right:10px">   
@@ -272,8 +280,8 @@
                         <hr><span class="infobonificador">Cansancio: </span><span name="attr_cansa" class="infobonificador"></span>
                         <hr><span class="infobonificador">Especial: </span><span name="attr_espsa" class="infobonificador"></span>
                     </div></span>
-                <button name="roll_ataquesa" class="imagencoliseo bataquesa" type="roll" value="&{template:@{plantilla}} {{ataquesa=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataquesa}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataquesa})]]}} {{r2=[[(1d12cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
-                <button name="roll_ataquesa" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataquesa=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataquesa}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataquesa})]]}} {{r2=[[(1d12cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> At. sin armas</button>                                     
+                <button name="roll_ataquesa" class="imagencoliseo bataquesa" type="roll" value="&{template:@{plantilla}} {{ataquesa=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataquesa}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
+                <button name="roll_ataquesa" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataquesa=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataquesa}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> At. sin armas</button>                                     
     </div>            
 
     <div class="inline 30porciento" style="margin-top: 35px;">
@@ -295,24 +303,24 @@
         <span class="negrita larger"> Habilidades</span> 
      
         <div class="centrado" style="margin-top: 5px;">            
-            <button name="roll_alerta" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Alerta}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cf0+@{hab_alerta})]]}} {{r2=[[(1d12cf0+@{hab_alerta})]]}} {{r3=[[(@{r3}+@{hab_alerta})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_alerta" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Alerta}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r2=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r3=[[(@{r3}+@{hab_alerta})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="dadito">0</span><span class="fuentehab"> Alerta</span></button><span name="attr_hab_alerta" class="negrita"></span>&nbsp;&nbsp;
             
-            <button name="roll_atletismo" type="roll" style="width: 75px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Atletismo}} {{mod=@{hab_atletismo}}} {{r1=[[(1d12cf0+@{hab_atletismo})]]}} {{r2=[[(1d12cf0+@{hab_atletismo})]]}} {{r3=[[(@{r3}+@{hab_atletismo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_atletismo" type="roll" style="width: 75px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Atletismo}} {{mod=@{hab_atletismo}}} {{r1=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r2=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r3=[[(@{r3}+@{hab_atletismo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
                 <span class="dadito">0</span><span class="fuentehab"> Atletismo</span></button><span name="attr_hab_atletismo" class="negrita"></span>&nbsp;&nbsp;
             
-            <button name="roll_empatia" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Empatía}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_empatia}}} {{r1=[[(1d12cf0+@{hab_empatia})]]}} {{r2=[[(1d12cf0+@{hab_empatia})]]}} {{r3=[[(@{r3}+@{hab_empatia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_empatia" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Empatía}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_empatia}}} {{r1=[[(1d12cs0cf0+@{hab_empatia})]]}} {{r2=[[(1d12cs0cf0+@{hab_empatia})]]}} {{r3=[[(@{r3}+@{hab_empatia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
                 <span class="dadito">0</span><span class="fuentehab"> Empatía</span></button><span name="attr_hab_empatia" class="negrita"></span>&nbsp;&nbsp;
         </div> 
 
         <div class="centrado" style="margin-top: 12px;">              
-            <button name="roll_enganar" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Engañar}} {{mod=@{hab_enganar}}} {{r1=[[(1d12cf0+@{hab_enganar})]]}} {{r2=[[(1d12cf0+@{hab_enganar})]]}} {{r3=[[(@{r3}+@{hab_enganar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_enganar" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Engañar}} {{mod=@{hab_enganar}}} {{r1=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r2=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r3=[[(@{r3}+@{hab_enganar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="dadito">0</span><span class="fuentehab"> Engañar</span></button><span name="attr_hab_enganar" class="negrita"></span>&nbsp;&nbsp;
         
-            <button name="roll_equilibrio" type="roll" style="width: 75px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Equilibrio}} {{mod=@{hab_equilibrio}}} {{r1=[[(1d12cf0+@{hab_equilibrio})]]}} {{r2=[[(1d12cf0+@{hab_equilibrio})]]}} {{r3=[[(@{r3}+@{hab_equilibrio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_equilibrio" type="roll" style="width: 75px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Equilibrio}} {{mod=@{hab_equilibrio}}} {{r1=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{r2=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{r3=[[(@{r3}+@{hab_equilibrio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="dadito">0</span><span class="fuentehab"> Equilibrio</span></button><span name="attr_hab_equilibrio" class="negrita"></span>&nbsp;&nbsp;
         
-            <button name="roll_sigilo" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Sigilo}} {{mod=@{hab_sigilo}}} {{r1=[[(1d12cf0+@{hab_sigilo})]]}} {{r2=[[(1d12cf0+@{hab_sigilo})]]}} {{r3=[[(@{r3}+@{hab_sigilo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_sigilo" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Sigilo}} {{mod=@{hab_sigilo}}} {{r1=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{r2=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{r3=[[(@{r3}+@{hab_sigilo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="dadito">0</span><span class="fuentehab"> Sigilo</span></button><span name="attr_hab_sigilo" class="negrita"></span>&nbsp;&nbsp;
         </div> 
     </div>
@@ -428,21 +436,21 @@
             <tbody>
                 <tr class="centrado">
             
-                    <td><button name="roll_reflejos" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cf0+@{ref})]]}} {{r2=[[(1d12cf0+@{ref})]]}} {{r3=[[(@{r3}+@{ref})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">
+                    <td><button name="roll_reflejos" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cs0cf0+@{ref})]]}} {{r2=[[(1d12cs0cf0+@{ref})]]}} {{r3=[[(@{r3}+@{ref})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">
                         <span class="dadito">0</span><span> Reflejos</span></button></td>
                     <td><input name="attr_ref" type="number" class="centrado bordecuad" style="width: 70px;" value="-5"></td>
                 <!-- <input name="attr_ref_esp" type="number" value="0">
                 <input name="attr_ref" type="number" value="[[(@{agi} [Agi] + @{ast} [Ast] -5 + @{ref_esp} [Otros])]]" disabled> -->
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
-                    <td><button name="roll_vitalidad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cf0+@{vit})]]}} {{r2=[[(1d12cf0+@{vit})]]}} {{r3=[[(@{r3}+@{vit})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
+                    <td><button name="roll_vitalidad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cs0cf0+@{vit})]]}} {{r2=[[(1d12cs0cf0+@{vit})]]}} {{r3=[[(@{r3}+@{vit})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
                         <span class="dadito">0</span><span> Vitalidad</span></button></td>
                     <td><input name="attr_vit" type="number" class="centrado bordecuad" style="width: 70px;" value="-5"></td>
                 <!-- <input name="attr_vit_esp" type="number" value="0">
                 <input name="attr_vit" type="number" value="[[(@{res} [Res] + @{fue} [Fue] - 5 + @{vit_esp} [Otros])]]" disabled> --> 
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
-                    <td><button name="roll_voluntad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cf0+@{vol})]]}} {{r2=[[(1d12cf0+@{vol})]]}} {{r3=[[(@{r3}+@{vol})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
+                    <td><button name="roll_voluntad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cs0cf0+@{vol})]]}} {{r2=[[(1d12cs0cf0+@{vol})]]}} {{r3=[[(@{r3}+@{vol})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
                         <span class="dadito">0</span><span> Voluntad</span></button></td>
                     <td><input name="attr_vol" type="number" class="centrado bordecuad" style="width: 70px;" value="-5"></td>
                 <!-- <input name="attr_vol_esp" type="number" value="0">
@@ -762,12 +770,12 @@
     <div class ="3colrow">
         <div class="col centrado">
             
-            <button name="roll_movilidad" class="botonimagen bmovilidad" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_movilidad" class="botonimagen bmovilidad" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{movilidad=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cs0cf0+@{movilidad})]]}} {{r2=[[(1d12cs0cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
             <input name="attr_movimiento" type="number" class="oculto" value="[[(6+@{movilidad})]]" disabled>
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_movilidad" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Movilidad</button></td>
+                            <td  class="bordebot"><button name="roll_movilidad" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{movilidad=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cs0cf0+@{movilidad})]]}} {{r2=[[(1d12cs0cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Movilidad</button></td>
                             <td >&nbsp;&nbsp;</td>
                             <td  class="bordebot"><input name="attr_movilidad" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
                         </tr>
@@ -781,19 +789,19 @@
             </table>
             </div>
         <div class="col centrado">
-            <button name="roll_desvio" class="botonimagen bdesvio" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cf0+@{desvio})]]}} {{r2=[[(1d12cf0+@{desvio})]]}} {{r3=[[(@{r3}+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_desvio" class="botonimagen bdesvio" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(@{r3}+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                             
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>
         -->
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cf0+@{desvio})]]}} {{r2=[[(1d12cf0+@{desvio})]]}} {{r3=[[(@{r3}+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío</button></td>
+                            <td  class="bordebot"><button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(@{r3}+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío</button></td>
                             <td >&nbsp;&nbsp;</td>    
                             <td  class="bordebot"><input name="attr_desvio" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
                         </tr>
                         <tr class="negrita smaller">
-                            <td class="centrado"><span>&nbsp;&nbsp;(Des+H. arma-5)&nbsp;&nbsp;</span></td>
+                            <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-5)&nbsp;&nbsp;</span></td>
                             <td >&nbsp;&nbsp;</td>
     
                             <td class="centrado"><span>Bonificador</span></td>
@@ -802,14 +810,14 @@
             </table>
             </div>
         <div class="col centrado">
-            <button name="roll_pelea" class="botonimagen bpelea" type="roll" value="&{template:@{plantilla}} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cf0+@{pelea})]]}} {{r2=[[(1d12cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_pelea" class="botonimagen bpelea" type="roll" value="&{template:@{plantilla}} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                             
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCPelea.png"/>
             -->
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_pelea" type="roll" value="&{template:@{plantilla}} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cf0+@{pelea})]]}} {{r2=[[(1d12cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Pelea</button></td>
+                            <td  class="bordebot"><button name="roll_pelea" type="roll" value="&{template:@{plantilla}} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(@{r3}+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Pelea</button></td>
                             <td >&nbsp;&nbsp;</td>
                             <td  class="bordebot"><input name="attr_pelea" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
                         </tr>
@@ -830,11 +838,11 @@
     <br>
     <div class="3colrow">
         <div class="col centrado">
-            <button name="roll_intensidad" class="botonimagen bintensidad" type="roll" value="&{template:@{plantilla}} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{magia=Intensidad}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{intensidad})]]}} {{r2=[[(1d12cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+            <button name="roll_intensidad" class="botonimagen bintensidad" type="roll" value="&{template:@{plantilla}} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{magia=Intensidad}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_intensidad" type="roll" value="&{template:@{plantilla}} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{magia=Intensidad}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{intensidad})]]}} {{r2=[[(1d12cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Intensidad</button></td>
+            <td class="bordebot"><button name="roll_intensidad" type="roll" value="&{template:@{plantilla}} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{magia=Intensidad}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Intensidad</button></td>
             <td>&nbsp;&nbsp;</td>       
             <td class="bordebot"><input name="attr_intensidad" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
             </tr>
@@ -848,13 +856,13 @@
              </div>
 
         <div class="col centrado">
-            <button name="roll_disparo" class="botonimagen bdisparo" type="roll" value="&{template:@{plantilla}} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}} {{magia=Disparo}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{disparo})]]}} {{r2=[[(1d12cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+            <button name="roll_disparo" class="botonimagen bdisparo" type="roll" value="&{template:@{plantilla}} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}} {{magia=Disparo}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
             
             
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_disparo" type="roll" value="&{template:@{plantilla}} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}} {{magia=Disparo}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{disparo})]]}} {{r2=[[(1d12cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Disparo</button></td>
+            <td class="bordebot"><button name="roll_disparo" type="roll" value="&{template:@{plantilla}} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}} {{magia=Disparo}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Disparo</button></td>
             <td>&nbsp;&nbsp;</td>
             <td class="bordebot"><input name="attr_disparo" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
             </tr>
@@ -868,13 +876,13 @@
              </div>
 
         <div class="col centrado">
-            <button name="roll_dominio" class="botonimagen bdominio" type="roll" value="&{template:@{plantilla}} {{dominio=Ah}} {{rname=Dominio}} {{mod=@{dominio}}} {{magia=Dominio}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{dominio})]]}} {{r2=[[(1d12cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+            <button name="roll_dominio" class="botonimagen bdominio" type="roll" value="&{template:@{plantilla}} {{dominio=Ah}} {{rname=Dominio}} {{mod=@{dominio}}} {{magia=Dominio}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{dominio})]]}} {{r2=[[(1d12cs0cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
             
             
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_dominio" type="roll" value="&{template:@{plantilla}} {{dominio=Ah}} {{rname=Dominio}} {{mod=@{dominio}}} {{magia=Dominio}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{dominio})]]}} {{r2=[[(1d12cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Dominio</button></td>
+            <td class="bordebot"><button name="roll_dominio" type="roll" value="&{template:@{plantilla}} {{dominio=Ah}} {{rname=Dominio}} {{mod=@{dominio}}} {{magia=Dominio}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{dominio})]]}} {{r2=[[(1d12cs0cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Dominio</button></td>
             <td>&nbsp;&nbsp;</td>
                 <td class="bordebot"><input name="attr_dominio" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
             </tr>
@@ -894,12 +902,12 @@
         <div class="col centrado">
             
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>-->
-            <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:conj} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:@{plantilla}} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(3+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(1+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
             
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_conjuracion" type="roll" value="&{template:conj} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{charname=@{character_name}}}" > Conjuración</button></td>
+            <td class="bordebot"><button name="roll_conjuracion" type="roll" value="&{template:@{plantilla}} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(3+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{dificultad2=[[(1+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button></td>
             </td>
             <td>&nbsp;&nbsp;</td>
             <td class="bordebot"><input name="attr_conjuracion" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
@@ -987,17 +995,17 @@
 
 
         <!-- ATAQUE 1-->
-        <input name="attr_nombrearma1" class="recolocar 70porciento" type="text"  placeholder="Nombre del arma" style="width: 165px;" />
+        <input name="attr_nombrearma1" class="recolocar" type="text"  placeholder="Nombre del arma" style="width: 165px;" />
                                
-            <div class="70porciento" style="margin-top:-6px;">               
-                <button name="roll_ataque1" class="botonimagen bataque1" type="roll" value="&{template:@{plantilla}} {{ataque1=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque1})]]}} {{r2=[[(1d12cf0+@{ataque1})]]}} {{r3=[[(@{r3}+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+            <div style="margin-top:-6px;">               
+                <button name="roll_ataque1" class="botonimagen bataque1" type="roll" value="&{template:@{plantilla}} {{ataque1=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(@{r3}+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
                             
                     <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque1.png"/>
                     -->
                     <table style="display:inline">
                     <tbody>
                         <tr class="bordetop">                            
-                            <td class="centrado bordebot"><button name="roll_ataque1" type="roll" value="&{template:@{plantilla}} {{ataque1=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque1})]]}} {{r2=[[(1d12cf0+@{ataque1})]]}} {{r3=[[(@{r3}+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 1</button></td>
+                            <td class="centrado bordebot"><button name="roll_ataque1" type="roll" value="&{template:@{plantilla}} {{ataque1=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(@{r3}+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 1</button></td>
                             <td>&nbsp;</td>
                             <td class="centrado bordebot"><input name="attr_ataque1" type="number"  style="width: 70px;" class="centrado" value="-5"></td>
                             <td>&nbsp;</td>
@@ -1052,17 +1060,17 @@
         <!-- ATAQUE 2-->
         <div class="ficha_luchador">  
              
-        <input name="attr_nombrearma2" class="recolocar 70porciento" type="text" placeholder="Nombre del arma" style="width: 165px;" />
+        <input name="attr_nombrearma2" class="recolocar" type="text" placeholder="Nombre del arma" style="width: 165px;" />
                     
-                <div class="70porciento" style="margin-top:-6px;">
-                    <button name="roll_ataque2" class="botonimagen bataque2" type="roll" value="&{template:@{plantilla}} {{ataque2=Ah}} {{ataque=Daño Vital @{dmg2} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can2}}} {{rname=Ataque2}} {{mod=@{ataque2}}} {{arma=@{nombrearma2} (@{tipodmg2})}} {{r1=[[(1d12cf0+@{ataque2})]]}} {{r2=[[(1d12cf0+@{ataque2})]]}} {{r3=[[(@{r3}+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+                <div style="margin-top:-6px;">
+                    <button name="roll_ataque2" class="botonimagen bataque2" type="roll" value="&{template:@{plantilla}} {{ataque2=Ah}} {{ataque=Daño Vital @{dmg2} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can2}}} {{rname=Ataque2}} {{mod=@{ataque2}}} {{arma=@{nombrearma2} (@{tipodmg2})}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(@{r3}+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
                                                      
                     <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque2.png"/>
                     -->
                     <table style="display:inline">
                     <tbody>
                         <tr class="bordetop">                            
-                            <td class="centrado bordebot"><button name="roll_ataque2" type="roll" value="&{template:@{plantilla}} {{ataque2=Ah}} {{ataque=Daño Vital @{dmg2} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can2}}} {{rname=Ataque2}} {{mod=@{ataque2}}} {{arma=@{nombrearma2} (@{tipodmg2})}} {{r1=[[(1d12cf0+@{ataque2})]]}} {{r2=[[(1d12cf0+@{ataque2})]]}} {{r3=[[(@{r3}+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 2</button>
+                            <td class="centrado bordebot"><button name="roll_ataque2" type="roll" value="&{template:@{plantilla}} {{ataque2=Ah}} {{ataque=Daño Vital @{dmg2} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can2}}} {{rname=Ataque2}} {{mod=@{ataque2}}} {{arma=@{nombrearma2} (@{tipodmg2})}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(@{r3}+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 2</button>
                             </td>
                             <td>&nbsp;</td>
                             <td class="centrado bordebot"><input name="attr_ataque2" type="number"  style="width: 70px;" class="centrado" value="-5"></td>
@@ -1120,7 +1128,7 @@
     
     <!-- ATAQUE 3-->           
         <div class="ficha_luchador">
-            <div class="70porciento recolocar">
+            <div class="recolocar">
             <input name="attr_nombrearma3" type="text" placeholder="Nombre del arma" style="width: 165px;" />
             <span>&nbsp;&nbsp;&nbsp;</span>
             <span class="negrita larger">&nbsp;&nbsp;&nbsp;Munición</span>
@@ -1130,9 +1138,9 @@
             </div>
                                 
                                  
-            <div class="70porciento" style="margin-top:-6px;">
+            <div style="margin-top:-6px;">
                     
-                <button name="roll_ataque" class="botonimagen bataque3" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{arma=@{nombrearma3} (@{tipodmg3})}} {{mod=@{ataque3}}} {{r1=[[(1d12cf0+@{ataque3})]]}} {{r2=[[(1d12cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+                <button name="roll_ataque" class="botonimagen bataque3" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{arma=@{nombrearma3} (@{tipodmg3})}} {{mod=@{ataque3}}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                             
                     <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque3.png"/>
                     -->
@@ -1140,7 +1148,7 @@
                     <tbody>
                         <tr class="bordetop">
                             <td class="centrado bordebot">
-                            <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{arma=@{nombrearma3} (@{tipodmg3})}} {{mod=@{ataque3}}} {{r1=[[(1d12cf0+@{ataque3})]]}} {{r2=[[(1d12cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Ataque 3</button>
+                            <button name="roll_ataque" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{arma=@{nombrearma3} (@{tipodmg3})}} {{mod=@{ataque3}}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Ataque 3</button>
                             </td>
                             <td>&nbsp;</td>    
                             <td class="centrado bordebot"><input name="attr_ataque3" type="number" style="width: 70px;" class="centrado" value="-5"></td>
@@ -1202,11 +1210,11 @@
             
            
      <!-- ATAQUE SIN ARMAS-->
-     <input name="attr_nombrearmasa" class="recolocar 70porciento" type="text" placeholder="Nombre del arma" style="width: 165px;" />
+     <input name="attr_nombrearmasa" class="recolocar" type="text" placeholder="Nombre del arma" style="width: 165px;" />
      
        
-     <div class="70porciento" style="margin-top:-6px;">
-        <button name="roll_ataquesa" class="botonimagen bataquesa" type="roll" value="&{template:@{plantilla}} {{ataquesa=Ah}} {{ataque=Daño Vital @{dmgsa} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{cansa}}} {{rname=Ataque sin armas}} {{arma=@{nombrearmasa} (@{tipodmgsa})}} {{mod=@{ataquesa}}} {{r1=[[(1d12cf0+@{ataquesa})]]}} {{r2=[[(1d12cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+     <div style="margin-top:-6px;">
+        <button name="roll_ataquesa" class="botonimagen bataquesa" type="roll" value="&{template:@{plantilla}} {{ataquesa=Ah}} {{ataque=Daño Vital @{dmgsa} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{cansa}}} {{rname=Ataque sin armas}} {{arma=@{nombrearmasa} (@{tipodmgsa})}} {{mod=@{ataquesa}}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                            
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaqueSA.png"/>
             -->
@@ -1215,7 +1223,7 @@
                         
                         <tr class="bordetop">
                             <td class="centrado bordebot">
-                            <button name="roll_ataquesa" type="roll" value="&{template:@{plantilla}} {{ataquesa=Ah}} {{ataque=Daño Vital @{dmgsa} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{cansa}}} {{rname=Ataque sin armas}} {{arma=@{nombrearmasa} (@{tipodmgsa})}} {{mod=@{ataquesa}}} {{r1=[[(1d12cf0+@{ataquesa})]]}} {{r2=[[(1d12cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >&nbsp;Ataque sA&nbsp;</button>
+                            <button name="roll_ataquesa" type="roll" value="&{template:@{plantilla}} {{ataquesa=Ah}} {{ataque=Daño Vital @{dmgsa} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{cansa}}} {{rname=Ataque sin armas}} {{arma=@{nombrearmasa} (@{tipodmgsa})}} {{mod=@{ataquesa}}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >&nbsp;Ataque sA&nbsp;</button>
                             </td>
                             <td>&nbsp;</td>
                             <td class="centrado bordebot"><input name="attr_ataquesa" type="number" style="width: 70px;" class="centrado" value="-5"></td>
@@ -1390,7 +1398,7 @@
         
         <tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_alerta" value="1">
-            <button name="roll_alerta" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Alerta}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cf0+@{hab_alerta})]]}} {{r2=[[(1d12cf0+@{hab_alerta})]]}} {{r3=[[(@{r3}+@{hab_alerta})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_alerta" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Alerta}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r2=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r3=[[(@{r3}+@{hab_alerta})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Alerta (Ast)</span></button>
             </td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_alerta" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_alerta" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_alerta" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_alerta" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_alerta" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_alerta" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_alerta"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
@@ -1399,7 +1407,7 @@
             
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_atletismo" value="1">
-            <button name="roll_atletismo" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Atletismo}} {{mod=@{hab_atletismo}}} {{r1=[[(1d12cf0+@{hab_atletismo})]]}} {{r2=[[(1d12cf0+@{hab_atletismo})]]}} {{r3=[[(@{r3}+@{hab_atletismo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_atletismo" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Atletismo}} {{mod=@{hab_atletismo}}} {{r1=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r2=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r3=[[(@{r3}+@{hab_atletismo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Atletismo (Fue)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_atletismo" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1407,7 +1415,7 @@
             
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_diplomacia" value="1">
-            <button name="roll_diplomacia" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Diplomacia}} {{mod=@{hab_diplomacia}}} {{r1=[[(1d12cf0+@{hab_diplomacia})]]}} {{r2=[[(1d12cf0+@{hab_diplomacia})]]}} {{r3=[[(@{r3}+@{hab_diplomacia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_diplomacia" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Diplomacia}} {{mod=@{hab_diplomacia}}} {{r1=[[(1d12cs0cf0+@{hab_diplomacia})]]}} {{r2=[[(1d12cs0cf0+@{hab_diplomacia})]]}} {{r3=[[(@{r3}+@{hab_diplomacia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Diplomacia (Ast)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_diplomacia" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_diplomacia" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_diplomacia" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_diplomacia" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_diplomacia" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_diplomacia" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_diplomacia"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1415,7 +1423,7 @@
 
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_empatia" value="1">
-            <button name="roll_empatia" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Empatía}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_empatia}}} {{r1=[[(1d12cf0+@{hab_empatia})]]}} {{r2=[[(1d12cf0+@{hab_empatia})]]}} {{r3=[[(@{r3}+@{hab_empatia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_empatia" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Empatía}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_empatia}}} {{r1=[[(1d12cs0cf0+@{hab_empatia})]]}} {{r2=[[(1d12cs0cf0+@{hab_empatia})]]}} {{r3=[[(@{r3}+@{hab_empatia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Empatía (Ast/Int)</span></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_empatia" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_empatia" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_empatia" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_empatia" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_empatia" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_empatia" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_empatia"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1423,7 +1431,7 @@
          
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_enganar" value="1">
-            <button name="roll_enganar" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Engañar}} {{mod=@{hab_enganar}}} {{r1=[[(1d12cf0+@{hab_enganar})]]}} {{r2=[[(1d12cf0+@{hab_enganar})]]}} {{r3=[[(@{r3}+@{hab_enganar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_enganar" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Engañar}} {{mod=@{hab_enganar}}} {{r1=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r2=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r3=[[(@{r3}+@{hab_enganar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Engañar (Ast)</span></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_engañar" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_engañar" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_engañar" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_engañar" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_engañar" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_engañar" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_engañar"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1431,7 +1439,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_equilibrio" value="1">
-            <button name="roll_equilibrio" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Equilibrio}} {{mod=@{hab_equilibrio}}} {{r1=[[(1d12cf0+@{hab_equilibrio})]]}} {{r2=[[(1d12cf0+@{hab_equilibrio})]]}} {{r3=[[(@{r3}+@{hab_equilibrio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_equilibrio" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Equilibrio}} {{mod=@{hab_equilibrio}}} {{r1=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{r2=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{r3=[[(@{r3}+@{hab_equilibrio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Equilibrio (Agi)</span></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_equilibrio" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_equilibrio" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_equilibrio" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_equilibrio" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_equilibrio" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_equilibrio" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_equilibrio"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1439,7 +1447,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_intimidar" value="1">
-            <button name="roll_intimidar" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Intimidar}} {{mod=@{hab_intimidar}}} {{r1=[[(1d12cf0+@{hab_intimidar})]]}} {{r2=[[(1d12cf0+@{hab_intimidar})]]}} {{r3=[[(@{r3}+@{hab_intimidar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_intimidar" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Intimidar}} {{mod=@{hab_intimidar}}} {{r1=[[(1d12cs0cf0+@{hab_intimidar})]]}} {{r2=[[(1d12cs0cf0+@{hab_intimidar})]]}} {{r3=[[(@{r3}+@{hab_intimidar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Intimidar (Fue)</span></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_intimidar" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intimidar" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intimidar" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intimidar" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intimidar" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intimidar" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intimidar"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1447,7 +1455,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_nadar" value="1">
-            <button name="roll_nadar" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Nadar}} {{mod=@{hab_nadar}}} {{r1=[[(1d12cf0+@{hab_nadar})]]}} {{r2=[[(1d12cf0+@{hab_nadar})]]}} {{r3=[[(@{r3}+@{hab_nadar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_nadar" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Nadar}} {{mod=@{hab_nadar}}} {{r1=[[(1d12cs0cf0+@{hab_nadar})]]}} {{r2=[[(1d12cs0cf0+@{hab_nadar})]]}} {{r3=[[(@{r3}+@{hab_nadar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Nadar (Fue)</span></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_nadar" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_nadar" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_nadar" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_nadar" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_nadar" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_nadar" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_nadar"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1455,7 +1463,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_observacion" value="1">
-            <button name="roll_observacion" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Observación}} {{mod=@{hab_observacion}}} {{r1=[[(1d12cf0+@{hab_observacion})]]}} {{r2=[[(1d12cf0+@{hab_observacion})]]}} {{r3=[[(@{r3}+@{hab_observacion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_observacion" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Observación}} {{mod=@{hab_observacion}}} {{r1=[[(1d12cs0cf0+@{hab_observacion})]]}} {{r2=[[(1d12cs0cf0+@{hab_observacion})]]}} {{r3=[[(@{r3}+@{hab_observacion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Observación (Int)</span></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_observacion" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_observacion" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_observacion" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_observacion" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_observacion" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_observacion" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_observacion"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1463,7 +1471,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_sigilo" value="1">
-            <button name="roll_sigilo" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Sigilo}} {{mod=@{hab_sigilo}}} {{r1=[[(1d12cf0+@{hab_sigilo})]]}} {{r2=[[(1d12cf0+@{hab_sigilo})]]}} {{r3=[[(@{r3}+@{hab_sigilo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_sigilo" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Sigilo}} {{mod=@{hab_sigilo}}} {{r1=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{r2=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{r3=[[(@{r3}+@{hab_sigilo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Sigilo (Agi)</span></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_sigilo" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sigilo" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sigilo" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sigilo" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sigilo" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sigilo" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sigilo"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1471,7 +1479,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_supervivencia" value="1">
-            <button name="roll_supervivencia" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Supervivencia}} {{mod=@{hab_supervivencia}}} {{r1=[[(1d12cf0+@{hab_supervivencia})]]}} {{r2=[[(1d12cf0+@{hab_supervivencia})]]}} {{r3=[[(@{r3}+@{hab_supervivencia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_supervivencia" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Supervivencia}} {{mod=@{hab_supervivencia}}} {{r1=[[(1d12cs0cf0+@{hab_supervivencia})]]}} {{r2=[[(1d12cs0cf0+@{hab_supervivencia})]]}} {{r3=[[(@{r3}+@{hab_supervivencia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Supervivencia (Int)</span></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_supervivencia" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_supervivencia" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_supervivencia" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_supervivencia" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_supervivencia" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_supervivencia" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_supervivencia"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1479,7 +1487,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_tasacion" value="1">
-            <button name="roll_tasacion" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Tasación}} {{mod=@{hab_tasacion}}} {{r1=[[(1d12cf0+@{hab_tasacion})]]}} {{r2=[[(1d12cf0+@{hab_tasacion})]]}} {{r3=[[(@{r3}+@{hab_tasacion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_tasacion" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Tasación}} {{mod=@{hab_tasacion}}} {{r1=[[(1d12cs0cf0+@{hab_tasacion})]]}} {{r2=[[(1d12cs0cf0+@{hab_tasacion})]]}} {{r3=[[(@{r3}+@{hab_tasacion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Tasacion (Int)</span></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_tasacion" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tasacion" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tasacion" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tasacion" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tasacion" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tasacion" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tasacion"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1487,7 +1495,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_tratoanimal" value="1">
-            <button name="roll_tratoanimal" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Trato Animal}} {{mod=@{hab_tratoanimal}}} {{r1=[[(1d12cf0+@{hab_tratoanimal})]]}} {{r2=[[(1d12cf0+@{hab_tratoanimal})]]}} {{r3=[[(@{r3}+@{hab_tratoanimal})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_tratoanimal" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Trato Animal}} {{mod=@{hab_tratoanimal}}} {{r1=[[(1d12cs0cf0+@{hab_tratoanimal})]]}} {{r2=[[(1d12cs0cf0+@{hab_tratoanimal})]]}} {{r3=[[(@{r3}+@{hab_tratoanimal})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Trato Animal (Int)</span></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_tratoanimal" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tratoanimal" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tratoanimal" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tratoanimal" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tratoanimal" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tratoanimal" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tratoanimal"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1507,7 +1515,7 @@
         <tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_arte1" value="1"><span>&nbsp;&nbsp;</span>
             <input name="attr_name_arte1" placeholder="Artesanía" class="fuentehab" type="text" style="width: 100px;">
-                <button name="roll_arte1" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Arte (@{name_arte1})}} {{mod=@{hab_arte1}}} {{r1=[[(1d12cf0+@{hab_arte1})]]}} {{r2=[[(1d12cf0+@{hab_arte1})]]}} {{r3=[[(@{r3}+@{hab_arte1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ><span class="dadito">0</span></button>
+                <button name="roll_arte1" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Arte (@{name_arte1})}} {{mod=@{hab_arte1}}} {{r1=[[(1d12cs0cf0+@{hab_arte1})]]}} {{r2=[[(1d12cs0cf0+@{hab_arte1})]]}} {{r3=[[(@{r3}+@{hab_arte1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ><span class="dadito">0</span></button>
                 </td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_artesania1" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania1" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania1" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania1" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania1" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania1" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania1"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1516,7 +1524,7 @@
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_arte2" value="1"><span>&nbsp;&nbsp;</span>
             <input name="attr_name_arte2" placeholder="Artesanía" class="fuentehab" type="text" style="width: 100px;">
-                <button name="roll_arte2" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Arte (@{name_arte2})}} {{mod=@{hab_arte2}}} {{r1=[[(1d12cf0+@{hab_arte2})]]}} {{r2=[[(1d12cf0+@{hab_arte2})]]}} {{r3=[[(@{r3}+@{hab_arte2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ><span class="dadito">0</span></button>
+                <button name="roll_arte2" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Arte (@{name_arte2})}} {{mod=@{hab_arte2}}} {{r1=[[(1d12cs0cf0+@{hab_arte2})]]}} {{r2=[[(1d12cs0cf0+@{hab_arte2})]]}} {{r3=[[(@{r3}+@{hab_arte2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ><span class="dadito">0</span></button>
                 </td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_artesania2" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania2" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania2" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania2" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania2" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania2" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania2"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1524,7 +1532,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_idiomas" value="1">
-            <button name="roll_idiomas" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Idiomas}} {{mod=@{hab_idiomas}}} {{r1=[[(1d12cf0+@{hab_idiomas})]]}} {{r2=[[(1d12cf0+@{hab_idiomas})]]}} {{r3=[[(@{r3}+@{hab_idiomas})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_idiomas" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Idiomas}} {{mod=@{hab_idiomas}}} {{r1=[[(1d12cs0cf0+@{hab_idiomas})]]}} {{r2=[[(1d12cs0cf0+@{hab_idiomas})]]}} {{r3=[[(@{r3}+@{hab_idiomas})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Idiomas (Int)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_idiomas" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_idiomas" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_idiomas" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_idiomas" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_idiomas" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_idiomas" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_idiomas" value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1532,7 +1540,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_piruetas" value="1">
-            <button name="roll_piruetas" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Piruetas}} {{mod=@{hab_piruetas}}} {{r1=[[(1d12cf0+@{hab_piruetas})]]}} {{r2=[[(1d12cf0+@{hab_piruetas})]]}} {{r3=[[(@{r3}+@{hab_piruetas})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_piruetas" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Piruetas}} {{mod=@{hab_piruetas}}} {{r1=[[(1d12cs0cf0+@{hab_piruetas})]]}} {{r2=[[(1d12cs0cf0+@{hab_piruetas})]]}} {{r3=[[(@{r3}+@{hab_piruetas})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Piruetas (Agi)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_piruetas" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_piruetas" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_piruetas" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_piruetas" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_piruetas" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_piruetas" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_piruetas" value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1540,7 +1548,7 @@
        
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_rastrear" value="1">
-            <button name="roll_rastrear" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Rastrear}} {{mod=@{hab_rastrear}}} {{r1=[[(1d12cf0+@{hab_rastrear})]]}} {{r2=[[(1d12cf0+@{hab_rastrear})]]}} {{r3=[[(@{r3}+@{hab_rastrear})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_rastrear" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Rastrear}} {{mod=@{hab_rastrear}}} {{r1=[[(1d12cs0cf0+@{hab_rastrear})]]}} {{r2=[[(1d12cs0cf0+@{hab_rastrear})]]}} {{r3=[[(@{r3}+@{hab_rastrear})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Rastrear (Int)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_rastrear" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rastrear" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rastrear" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rastrear" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rastrear" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rastrear" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rastrear" value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1548,7 +1556,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_sarcano" value="1">
-            <button name="roll_sarcano" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Saber Arcano}} {{mod=@{hab_sarcano}}} {{r1=[[(1d12cf0+@{hab_sarcano})]]}} {{r2=[[(1d12cf0+@{hab_sarcano})]]}} {{r3=[[(@{r3}+@{hab_sarcano})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_sarcano" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Saber Arcano}} {{mod=@{hab_sarcano}}} {{r1=[[(1d12cs0cf0+@{hab_sarcano})]]}} {{r2=[[(1d12cs0cf0+@{hab_sarcano})]]}} {{r3=[[(@{r3}+@{hab_sarcano})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">S. Arcano (Int)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_sarcano" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sarcano" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sarcano" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sarcano" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sarcano" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sarcano" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sarcano" value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1556,7 +1564,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_sbajosfondos" value="1">
-            <button name="roll_sbajosfondos" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Saber Bajos Fondos}} {{mod=@{hab_sbajosfondos}}} {{r1=[[(1d12cf0+@{hab_sbajosfondos})]]}} {{r2=[[(1d12cf0+@{hab_sbajosfondos})]]}} {{r3=[[(@{r3}+@{hab_sbajosfondos})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_sbajosfondos" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Saber Bajos Fondos}} {{mod=@{hab_sbajosfondos}}} {{r1=[[(1d12cs0cf0+@{hab_sbajosfondos})]]}} {{r2=[[(1d12cs0cf0+@{hab_sbajosfondos})]]}} {{r3=[[(@{r3}+@{hab_sbajosfondos})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">S. Bajos Fondos (Int)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_sbajos" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sbajos" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sbajos" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sbajos" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sbajos" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sbajos" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sbajos" value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1564,7 +1572,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_sculturas" value="1">
-            <button name="roll_sculturas" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Saber Culturas}} {{mod=@{hab_sculturas}}} {{r1=[[(1d12cf0+@{hab_sculturas})]]}} {{r2=[[(1d12cf0+@{hab_sculturas})]]}} {{r3=[[(@{r3}+@{hab_sculturas})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_sculturas" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Saber Culturas}} {{mod=@{hab_sculturas}}} {{r1=[[(1d12cs0cf0+@{hab_sculturas})]]}} {{r2=[[(1d12cs0cf0+@{hab_sculturas})]]}} {{r3=[[(@{r3}+@{hab_sculturas})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">S. Culturas (Int)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_sculturas" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sculturas" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sculturas" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sculturas" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sculturas" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sculturas" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sculturas" value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1572,7 +1580,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_snaturaleza" value="1">
-            <button name="roll_snaturaleza" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Saber Naturaleza}} {{mod=@{hab_snaturaleza}}} {{r1=[[(1d12cf0+@{hab_snaturaleza})]]}} {{r2=[[(1d12cf0+@{hab_snaturaleza})]]}} {{r3=[[(@{r3}+@{hab_snaturaleza})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_snaturaleza" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Saber Naturaleza}} {{mod=@{hab_snaturaleza}}} {{r1=[[(1d12cs0cf0+@{hab_snaturaleza})]]}} {{r2=[[(1d12cs0cf0+@{hab_snaturaleza})]]}} {{r3=[[(@{r3}+@{hab_snaturaleza})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">S. Naturaleza (Int)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_snaturaleza" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_snaturaleza" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_snaturaleza" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_snaturaleza" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_snaturaleza" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_snaturaleza" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_snaturaleza" value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1580,7 +1588,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_ssociedad" value="1">
-            <button name="roll_ssociedad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Saber Sociedad}} {{mod=@{hab_ssociedad}}} {{r1=[[(1d12cf0+@{hab_ssociedad})]]}} {{r2=[[(1d12cf0+@{hab_ssociedad})]]}} {{r3=[[(@{r3}+@{hab_ssociedad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_ssociedad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Saber Sociedad}} {{mod=@{hab_ssociedad}}} {{r1=[[(1d12cs0cf0+@{hab_ssociedad})]]}} {{r2=[[(1d12cs0cf0+@{hab_ssociedad})]]}} {{r3=[[(@{r3}+@{hab_ssociedad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">S. Sociedad (Int)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_ssociedad" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ssociedad" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ssociedad" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ssociedad" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ssociedad" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ssociedad" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ssociedad" value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1588,7 +1596,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" title="Habilidad innata" name="attr_innata_sanar" value="1">
-            <button name="roll_sanar" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Sanar}} {{mod=@{hab_sanar}}} {{r1=[[(1d12cf0+@{hab_sanar})]]}} {{r2=[[(1d12cf0+@{hab_sanar})]]}} {{r3=[[(@{r3}+@{hab_sanar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_sanar" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Sanar}} {{mod=@{hab_sanar}}} {{r1=[[(1d12cs0cf0+@{hab_sanar})]]}} {{r2=[[(1d12cs0cf0+@{hab_sanar})]]}} {{r3=[[(@{r3}+@{hab_sanar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Sanar (Des/Int)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_sanar" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sanar" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sanar" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sanar" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sanar" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sanar" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sanar" value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1596,7 +1604,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_seguridad" value="1">
-            <button name="roll_seguridad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Seguridad}} {{mod=@{hab_seguridad}}} {{r1=[[(1d12cf0+@{hab_seguridad})]]}} {{r2=[[(1d12cf0+@{hab_seguridad})]]}} {{r3=[[(@{r3}+@{hab_seguridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_seguridad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Seguridad}} {{mod=@{hab_seguridad}}} {{r1=[[(1d12cs0cf0+@{hab_seguridad})]]}} {{r2=[[(1d12cs0cf0+@{hab_seguridad})]]}} {{r3=[[(@{r3}+@{hab_seguridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Seguridad (Des/Int)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_seguridad" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_seguridad" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_seguridad" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_seguridad" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_seguridad" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_seguridad" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_seguridad" value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
                 <td style="padding-bottom:5px">
@@ -1604,7 +1612,7 @@
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_tactica" value="1">
-            <button name="roll_tactica" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Táctica}} {{mod=@{hab_tactica}}} {{r1=[[(1d12cf0+@{hab_tactica})]]}} {{r2=[[(1d12cf0+@{hab_tactica})]]}} {{r3=[[(@{r3}+@{hab_tactica})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <button name="roll_tactica" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Táctica}} {{mod=@{hab_tactica}}} {{r1=[[(1d12cs0cf0+@{hab_tactica})]]}} {{r2=[[(1d12cs0cf0+@{hab_tactica})]]}} {{r3=[[(@{r3}+@{hab_tactica})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
             <span class="fuentehab">Táctica (Ast)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_tactica" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><!--<input type="checkbox" title="Rango" class="rangox" name="attr_rang_tacticax" value="1"/><span></span><input type="checkbox" title="Rango" class="rangox" name="attr_rang_tacticaxx" value="1"/><span>--></td>
                 <td style="padding-bottom:5px">
@@ -1978,8 +1986,8 @@
 <div>
     <p>Atributos a hacer invisibles con CSS</p>
     !-- Para las plantillas de 2 o 3 dados --
-    plantilla <input name="attr_plantilla" type="num" value="simple">
-    r3<input name="attr_r3" type="num" value="0"/> !--Se cambia con js. O bien es "" o bien es " name="1d12cf0". Así la macro no lanza un dado 3d extra en el caso normal--
+    plantilla <input name="attr_plantilla" type="num" value="normal">
+    r3<input name="attr_r3" type="num" value="0"/> !--Se cambia con js. O bien es "" o bien es " name="1d12cs0cf0". Así la macro no lanza un dado 3d extra en el caso normal--
     !-- Para las habilidades que cogen el mayor de 2 atributos --
     max_desint <input name="attr_max_desint" type="num" value="0">
     max_astint<input name="attr_max_astint" type="num" value="0">
@@ -1998,16 +2006,16 @@
 <!--
 <span>
     <p>NOMBRE (ATR)</p> <input name="attr_rang_NOMBRE" type="number" value="0" /> <input name="attr_hab_NOMBRE_esp" type="number" value="0">
-    <input name="attr_hab_NOMBRE" type="number" value="&{template:simple} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cf0]]}} {{r2=[[1d12cf0]]}} {{crit=¡¡Doble!! Bono de +2}} {{charname=charname}}]]" disabled>
+    <input name="attr_hab_NOMBRE" type="number" value="&{template:normal} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cs0cf0]]}} {{r2=[[1d12cs0cf0]]}} {{crit=¡¡Doble!! Bono de +2}} {{charname=charname}}]]" disabled>
     <button name="roll_NOMBRE" type="roll" value="/roll 2d12mkl1 [Dados] + @{hab_NOMBRE}"></button>
 </span>
 <span>
     <p>HABILIDAD (ATR)</p> <input name="attr_rang_arte" type="number" value="0" /> <input name="attr_hab_arte_esp" type="number" value="0">
     <input name="attr_hab_HABILIDAD" type="number" value="[[(@{rang_HABILIDAD} [Rangos] + @{STAT} [Atributo] - 5 + @{hab_HABILIDAD_esp} [Otros])]]" disabled>
-    <button name="roll_HABILIDAD" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=HABILIDAD}} {{mod=@{hab_HABILIDAD}}} {{r1=[[(1d12cf0+@{hab_HABILIDAD})]]}} {{r2=[[(1d12cf0+@{hab_HABILIDAD})]]}} {{r3=[[(@{r3}+@{hab_HABILIDAD})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+    <button name="roll_HABILIDAD" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=HABILIDAD}} {{mod=@{hab_HABILIDAD}}} {{r1=[[(1d12cs0cf0+@{hab_HABILIDAD})]]}} {{r2=[[(1d12cs0cf0+@{hab_HABILIDAD})]]}} {{r3=[[(@{r3}+@{hab_HABILIDAD})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
 </span>
 
-&{template:?{Dados|2,simple|3,tres}} {{rname=?{Habilidad}}} {{mod=?{mod|0}}} {{r1=[[(1d12cf0+?{mod|0})]]}} {{r2=[[(1d12cf0+?{mod|0})]]}} {{r3=[[(@{r3}+?{mod|0})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=Especialista}
+&{template:?{Dados|2,normal|3,tres}} {{rname=?{Habilidad}}} {{mod=?{mod|0}}} {{r1=[[(1d12cs0cf0+?{mod|0})]]}} {{r2=[[(1d12cs0cf0+?{mod|0})]]}} {{r3=[[(@{r3}+?{mod|0})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=Especialista}
 -->
 <!-- FIN PLANTILLA -->
 
@@ -2015,75 +2023,132 @@
 
 <!--ROLL TEMPLATE-->
 <!-- Macro:
-    &{template:simple} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cf0]]}} {{r2=[[1d12cf0]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=charname}}
-    &{template:tres} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cf0]]}} {{r2=[[1d12cf0]]}} {{r3=[[1d12cf0]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=charname}}
-    &{template:dmg} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cf0]]}} {{charname=charname}}
+    &{template:normal} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cs0cf0]]}} {{r2=[[1d12cs0cf0]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=charname}}
+    &{template:ventaja} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cs0cf0]]}} {{r2=[[1d12cs0cf0]]}} {{r3=[[1d12cs0cf0]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=charname}}
+    &{template:dmg} {{rname=rname}} {{mod=mod}} {{r1=[[1d12cs0cf0]]}} {{charname=charname}}
 -->
 
 <div class='rolltemplates'>
     <div class='rolltemplates'>
 
-<rolltemplate class="sheet-rolltemplate-simple">
-    <div class="container">
-        {{#conjuracion}}
+<rolltemplate class="sheet-rolltemplate-normal">
+    <div class="container">        
             <div>
-                {{#rollLess() rc1 rc2}}  
-                    <div class="adv">
-                        <span>{{rc2}}</span>
+                {{#rollLess() r1 r2}}
+                    {{#rollLess() r3 r1}}
+                    <!--r3 < r1 < r2-->
+                        <div class="adv"><span>{{r1}}</span>
+                        {{#^rollLess() r1 dificultad}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r1 dificultad}}
+                        {{#rollLess() r1 dificultad}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r1 dificultad}}
                     </div>
-                {{/rollLess() rc1 rc2}}
-                {{#rollTotal() rc1 rc2}}
-                    <div class="adv">
-                        <span class="green">{{rc1}}</span>
+                    {{/rollLess() r3 r1}}
+
+                    {{#rollTotal() r3 r1}}
+                    <!--r3 = r1 < r2-->
+                        <div class="adv"><span>{{r1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                        {{#^rollLess() r1 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r1 dificultad2}}
+                        {{#rollLess() r1 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r1 dificultad2}}
                     </div>
-                    
-                {{/rollTotal() rc1 rc2}}
-                {{#rollGreater() rc1 rc2}}
-                    <div class="adv">
-                        <span>{{rc1}}</span>
+                    {{/rollTotal() r3 r1}}
+
+                    {{#rollGreater() r3 r1}}
+                        {{#rollLess() r3 r2}}
+                        <!--r1 < r3 < r2-->
+                            <div class="adv"><span>{{r3}}</span>
+                            {{#^rollLess() r3 dificultad}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r3 dificultad}}
+                            {{#rollLess() r3 dificultad}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r3 dificultad}}
+                        </div>    
+                        {{/rollLess() r3 r2}}
+
+                        {{#rollTotal() r3 r2}}
+                        <!--r1 < r3 = r2-->
+                            <div class="adv"><span>{{r3}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            {{#^rollLess() r3 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r3 dificultad2}}
+                            {{#rollLess() r3 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r3 dificultad2}}
+                        </div>    
+                        {{/rollTotal() r3 r2}}
+
+                        {{#rollGreater() r3 r2}}
+                        <!--r1 < r2 < r3-->
+                            <div class="adv"><span>{{r2}}</span>
+                            {{#^rollLess() r2 dificultad}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r2 dificultad}}
+                            {{#rollLess() r2 dificultad}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r2 dificultad}}
+                        </div>
+                        {{/rollGreater() r3 r2}}
+                    {{/rollGreater() r3 r1}}
+                {{/rollLess() r1 r2}}
+    
+                {{#rollTotal() r1 r2}}
+                    {{#rollLess() r3 r1}}
+                    <!--r3 < r1 = r2-->
+                        <div class="adv"><span>{{r1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                        {{#^rollLess() r1 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r1 dificultad2}}
+                        {{#rollLess() r1 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r1 dificultad2}}
                     </div>
-                {{/rollGreater() rc1 rc2}}
-                
-                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                
-            </div>
+                    {{/rollLess() r3 r1}}
 
-            <div class="arrow-right"></div>
+                    {{#rollTotal() r3 r1}}
+                    <!--r1 = r2 = r3-->
+                        <div class="adv"><span>{{r1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                        {{#^rollLess() r1 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r1 dificultad2}}
+                        {{#rollLess() r1 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r1 dificultad2}}
+                    </div>
+                    {{/rollTotal() r3 r1}}
 
-            <div class="label titulo">
-                 Conjuración ({{conjuracion}})&nbsp;
-                        {{#^rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() rc2 dificultad}}{{/^rollLess() rc1 dificultad}}
-                       {{#^rollLess() rc2 dificultad}}{{#rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() rc1 dificultad}}{{/^rollLess() rc2 dificultad}}
-                      {{#^rollLess() rc1 dificultad}}{{#^rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc2 dificultad}}{{/^rollLess() rc1 dificultad}}
-                      {{#rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc2 dificultad}}{{/rollLess() rc1 dificultad}}
-             </div>
-
-             {{#rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>{{/rollLess() rc2 dificultad}}{{/rollLess() rc1 dificultad}}    
-
-                <div class="label">
-                   <span>Poder {{poder}}{{#rollTotal() rc1 rc2}}<span class="green">+2</span>{{/rollTotal() rc1 rc2}}</span>
-                </div>    
-                <div class="arrow-left"></div>  
-        {{/conjuracion}}
-                
-                <div>
-                        {{#rollLess() r1 r2}}
-                            <div class="adv">
-                                <span>{{r1}}</span>
-                            </div>                           
-                        {{/rollLess() r1 r2}}
-
-                        {{#rollTotal() r1 r2}}
-                            <div class="adv">
-                                <span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                    {{#rollGreater() r3 r1}}
+                    <!--r1 = r2 < r3-->
+                        <div class="adv"><span>{{r1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                        {{#^rollLess() r1 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r1 dificultad2}}
+                        {{#rollLess() r1 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r1 dificultad2}}
+                        </div>
+                    {{/rollGreater() r3 r1}}
+                {{/rollTotal() r1 r2}}
+    
+                {{#rollGreater() r1 r2}}
+                    {{#rollLess() r3 r1}}
+                        {{#rollLess() r3 r2}}
+                        <!--r3 < r2 < r1-->
+                            <div class="adv"><span>{{r2}}</span>
+                            {{#^rollLess() r2 dificultad}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r2 dificultad}}
+                            {{#rollLess() r2 dificultad}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r2 dificultad}}
                             </div>
-                        {{/rollTotal() r1 r2}}
+                        {{/rollLess() r3 r2}}
 
-                        {{#rollGreater() r1 r2}}
-                            <div class="adv">
-                                <span>{{r2}}</span>
+                        {{#rollTotal() r3 r2}}
+                        <!--r2 = r3 < r1-->
+                            <div class="adv"><span>{{r3}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            {{#^rollLess() r3 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r3 dificultad2}}
+                            {{#rollLess() r3 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r3 dificultad2}}
                             </div>
-                        {{/rollGreater() r1 r2}}
+                        {{/rollTotal() r3 r2}}
+
+                        {{#rollGreater() r3 r2}}
+                        <!--r2 < r3 < r1-->
+                            <div class="adv"><span>{{r3}}</span>
+                            {{#^rollLess() r3 dificultad}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r3 dificultad}}
+                            {{#rollLess() r3 dificultad}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r3 dificultad}}
+                            </div>
+                        {{/rollGreater() r3 r2}}
+                    {{/rollLess() r3 r1}}
+
+                    {{#rollTotal() r3 r1}}
+                    <!--r2 < r3 = r1-->
+                        <div class="adv"><span>{{r1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                        {{#^rollLess() r1 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r1 dificultad2}}
+                        {{#rollLess() r1 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r1 dificultad2}}
+                        </div>
+                    {{/rollTotal() r3 r1}}
+
+                    {{#rollGreater() r3 r1}}
+                    <!--r2 < r1 < r3-->
+                        <div class="adv"><span>{{r1}}</span>
+                        {{#^rollLess() r1 dificultad}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r1 dificultad}}
+                        {{#rollLess() r1 dificultad}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r1 dificultad}}
+                        </div>
+                    {{/rollGreater() r3 r1}}
+                {{/rollGreater() r1 r2}}
+
+
                     {{#ataque1}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque1.png"/>    
                     {{/ataque1}}
@@ -2105,6 +2170,9 @@
                     {{#desviosa}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvioSA.png"/>    
                     {{/desviosa}}
+                    {{#conjuracion}}
+                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                    {{/conjuracion}}
                     {{#disparo}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDisparo.png"/>    
                     {{/disparo}}
@@ -2123,11 +2191,11 @@
                     {{#logo}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/Logoxs.png"/>    
                     {{/logo}}
-                </div>
+            </div>
                 
                 <div class="arrow-right"></div>
                 <div class="label titulo">
-                    <span class="dadito"> 0 </span>{{rname}}{{#mod}} ({{mod}}){{/mod}}<span class="dadito"> 0 </span> {{#rollWasCrit() r1}}<span class="green"> ¡12!</span>{{/rollWasCrit() r1}} {{#rollWasCrit() r2}}<span class="green"> ¡12!</span>{{/rollWasCrit() r2}}
+                    <span class="dadito"> 0 </span>{{rname}}{{#mod}} ({{mod}}){{/mod}}<span class="dadito"> 0 </span>
                 </div>
 
                 {{#arma}}
@@ -2178,9 +2246,15 @@
                     <div class="label">
                         <span>[Daño Extra](!&#13;#Daño)</span>
                     </div>
-                {{/magia}}
+                {{/magia}}   
 
-                                  
+                {{#conjuracion}}
+                <div class="arrow-left"></div>
+
+                <div class="label">
+                    <span>Poder {{poder}}</span>
+                </div>      
+                {{/conjuracion}}
     </div>
 </rolltemplate>
 
@@ -2188,22 +2262,22 @@
     <div class="container">
         {{#conjuracion}}
         <div>
-                {{#rollLess() rc1 rc2}}  
+                {{#rollLess() r1 r2}}  
                     <div class="adv">
-                        <span>{{rc2}}</span>
+                        <span>{{r2}}</span>
                     </div>
-                {{/rollLess() rc1 rc2}}
-                {{#rollTotal() rc1 rc2}}
+                {{/rollLess() r1 r2}}
+                {{#rollTotal() r1 r2}}
                     <div class="adv">
-                        <span class="green">{{rc1}}</span>
+                        <span class="green">{{r1}}</span>
                     </div>
                     
-                {{/rollTotal() rc1 rc2}}
-                {{#rollGreater() rc1 rc2}}
+                {{/rollTotal() r1 r2}}
+                {{#rollGreater() r1 r2}}
                     <div class="adv">
-                        <span>{{rc1}}</span>
+                        <span>{{r1}}</span>
                     </div>
-                {{/rollGreater() rc1 rc2}}
+                {{/rollGreater() r1 r2}}
                 
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
                 
@@ -2213,148 +2287,74 @@
 
         <div class="label titulo">
             Conjuración ({{conjuracion}})&nbsp;&nbsp;
-                {{#^rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() rc2 dificultad}}{{/^rollLess() rc1 dificultad}}
-                {{#^rollLess() rc2 dificultad}}{{#rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() rc1 dificultad}}{{/^rollLess() rc2 dificultad}}
-                {{#^rollLess() rc1 dificultad}}{{#^rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc2 dificultad}}{{/^rollLess() rc1 dificultad}}
-                {{#rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc2 dificultad}}{{/rollLess() rc1 dificultad}}
+                {{#^rollLess() r1 dificultad}}{{#rollLess() r2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() r2 dificultad}}{{/^rollLess() r1 dificultad}}
+                {{#^rollLess() r2 dificultad}}{{#rollLess() r1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() r1 dificultad}}{{/^rollLess() r2 dificultad}}
+                {{#^rollLess() r1 dificultad}}{{#^rollLess() r2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() r2 dificultad}}{{/^rollLess() r1 dificultad}}
+                {{#rollLess() r1 dificultad}}{{#rollLess() r2 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() r2 dificultad}}{{/rollLess() r1 dificultad}}
         </div>
 
         <div class="arrow-left"></div>
 
-        {{#rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>{{/rollLess() rc2 dificultad}}{{/rollLess() rc1 dificultad}}    
+        {{#rollLess() r1 dificultad}}{{#rollLess() r2 dificultad}}<div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>{{/rollLess() r2 dificultad}}{{/rollLess() r1 dificultad}}    
 
         <div class="label">
-            <span>Poder {{poder}}{{#rollTotal() rc1 rc2}}<span class="green">+2</span>{{/rollTotal() rc1 rc2}}</span>
+            <span>Poder {{poder}}{{#rollTotal() r1 r2}}<span class="green">+2</span>{{/rollTotal() r1 r2}}</span>
         </div>      
         {{/conjuracion}}
     </div>
 </rolltemplate>
 
-<rolltemplate class="sheet-rolltemplate-tres">
-    <div class="container">
-        {{#conjuracion}}
-            <div>
-                {{#rollLess() rc1 rc2}}  
-                    <div class="adv">
-                        <span>{{rc2}}</span>
-                    </div>
-                {{/rollLess() rc1 rc2}}
-                {{#rollTotal() rc1 rc2}}
-                    <div class="adv">
-                        <span class="green">{{rc1}}</span>
-                    </div>
-                    
-                {{/rollTotal() rc1 rc2}}
-                {{#rollGreater() rc1 rc2}}
-                    <div class="adv">
-                        <span>{{rc1}}</span>
-                    </div>
-                {{/rollGreater() rc1 rc2}}
-                
-                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                
-            </div>
-
-            <div class="arrow-right"></div>
-
-            <div class="label titulo">
-                 Conjuración ({{conjuracion}})&nbsp;
-                        {{#^rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() rc2 dificultad}}{{/^rollLess() rc1 dificultad}}
-                       {{#^rollLess() rc2 dificultad}}{{#rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/rollLess() rc1 dificultad}}{{/^rollLess() rc2 dificultad}}
-                      {{#^rollLess() rc1 dificultad}}{{#^rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc2 dificultad}}{{/^rollLess() rc1 dificultad}}
-                      {{#rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc2 dificultad}}{{/rollLess() rc1 dificultad}}
-             </div>
-
-             {{#rollLess() rc1 dificultad}}{{#rollLess() rc2 dificultad}}<div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>{{/rollLess() rc2 dificultad}}{{/rollLess() rc1 dificultad}}    
-
-                <div class="label">
-                   <span>Poder {{poder}}{{#rollTotal() rc1 rc2}}<span class="green">+2</span>{{/rollTotal() rc1 rc2}}</span>
-                </div>    
-                <div class="arrow-left"></div>  
-        {{/conjuracion}}
-        
+<rolltemplate class="sheet-rolltemplate-ventaja">
+    <div class="container">       
         <div>
-            {{#rollLess() r1 r2}}
-                {{#rollLess() r3 r1}}
-                <!--r3 < r1 < r2-->
-                    <div class="adv"><span>{{r1}}</span></div>
-                    
-                {{/rollLess() r3 r1}}
-                {{#rollTotal() r3 r1}}
-                <!--r3 = r1 < r2-->
-                    <div class="adv"><span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    
-                {{/rollTotal() r3 r1}}
-                {{#rollGreater() r3 r1}}
-                    {{#rollLess() r3 r2}}
-                    <!--r1 < r3 < r2-->
-                        
-                        <div class="adv"><span>{{r3}}</span></div>
-                    {{/rollLess() r3 r2}}
-                    {{#rollTotal() r3 r2}}
-                    <!--r1 < r3 = r2-->
-                        
-                        <div class="adv"><span class="green">{{r3}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    {{/rollTotal() r3 r2}}
-                    {{#rollGreater() r3 r2}}
-                    <!--r1 < r2 < r3-->
-                        
-                        <div class="adv"><span>{{r2}}</span></div>
-                        
-                    {{/rollGreater() r3 r2}}
-                {{/rollGreater() r3 r1}}
-            {{/rollLess() r1 r2}}
+                {{#rollLess() r1 r2}}  
+                    <div class="adv">
+                        <span>{{r2}}</span>
 
-            {{#rollTotal() r1 r2}}
-                {{#rollLess() r3 r1}}
-                <!--r3 < r1 = r2-->
-                    <div class="adv"><span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    
-                {{/rollLess() r3 r1}}
-                {{#rollTotal() r3 r1}}
-                <!--r1 = r2 = r3-->
-                    <div class="adv"><span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    
-                {{/rollTotal() r3 r1}}
-                {{#rollGreater() r3 r1}}
-                <!--r1 = r2 < r3-->
-                    <div class="adv"><span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    
-                {{/rollGreater() r3 r1}}
-            {{/rollTotal() r1 r2}}
+                        {{#^rollTotal() r1 r3}}{{#^rollTotal() r2 r3}}
+                            {{#^rollLess() r2 dificultad}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r2 dificultad}}
+                            {{#rollLess() r2 dificultad}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r2 dificultad}}
+                        {{/^rollTotal() r2 r3}}{{/^rollTotal() r1 r3}}
+                        {{#rollTotal() r1 r3}}<span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            {{#^rollLess() r2 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r2 dificultad2}}
+                            {{#rollLess() r2 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r2 dificultad2}}
+                        {{/rollTotal() r1 r3}}
+                        {{#rollTotal() r2 r3}}<span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            {{#^rollLess() r2 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r2 dificultad2}}
+                            {{#rollLess() r2 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r2 dificultad2}}
+                        {{/rollTotal() r2 r3}}
+                    </div>
+                {{/rollLess() r1 r2}}
 
-            {{#rollGreater() r1 r2}}
-                {{#rollLess() r3 r1}}
-                    {{#rollLess() r3 r2}}
-                    <!--r3 < r2 < r1-->
-                        
-                        <div class="adv"><span>{{r2}}</span></div>
-                        
-                    {{/rollLess() r3 r2}}
-                    {{#rollTotal() r3 r2}}
-                    <!--r2 = r3 < r1-->
-                        
-                        <div class="adv"><span class="green">{{r3}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    {{/rollTotal() r3 r2}}
-                    {{#rollGreater() r3 r2}}
-                    <!--r2 < r3 < r1-->
-                        
-                        <div class="adv"><span>{{r3}}</span></div>
-                    {{/rollGreater() r3 r2}}
-                {{/rollLess() r3 r1}}
-                {{#rollTotal() r3 r1}}
-                <!--r2 < r3 = r1-->
-                    <div class="adv"><span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    
-                {{/rollTotal() r3 r1}}
-                {{#rollGreater() r3 r1}}
-                <!--r2 < r1 < r3-->
-                    <div class="adv"><span>{{r1}}</span></div>
-                    
-                {{/rollGreater() r3 r1}}
-            {{/rollGreater() r1 r2}}
+                {{#rollTotal() r1 r2}}
+                    <div class="adv">
+                        <span>{{r1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
 
-            {{#ataque1}}
+                        {{#^rollLess() r2 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r2 dificultad2}}
+                        {{#rollLess() r2 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r2 dificultad2}}
+                    </div>
+                {{/rollTotal() r1 r2}}
+
+                {{#rollGreater() r1 r2}}
+                    <div class="adv">
+                        <span>{{r1}}</span>
+
+                        {{#^rollTotal() r1 r3}}{{#^rollTotal() r2 r3}}
+                            {{#^rollLess() r1 dificultad}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r1 dificultad}}
+                            {{#rollLess() r1 dificultad}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r1 dificultad}}
+                        {{/^rollTotal() r2 r3}}{{/^rollTotal() r1 r3}}
+                        {{#rollTotal() r1 r3}}<span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            {{#^rollLess() r1 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r1 dificultad2}}
+                            {{#rollLess() r1 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r1 dificultad2}}
+                        {{/rollTotal() r1 r3}}
+                        {{#rollTotal() r2 r3}}<span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            {{#^rollLess() r1 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r1 dificultad2}}
+                            {{#rollLess() r1 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r1 dificultad2}}
+                        {{/rollTotal() r2 r3}}
+                    </div>
+                {{/rollGreater() r1 r2}}
+
+                    {{#ataque1}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque1.png"/>    
                     {{/ataque1}}
                     {{#ataque2}}
@@ -2366,15 +2366,18 @@
                     {{#ataquesa}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaqueSA.png"/>    
                     {{/ataquesa}}
-                    {{#defensa}}
+                    {{#bloqueo}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>    
-                    {{/defensa}}
+                    {{/bloqueo}}
                     {{#desvio}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvio.png"/>    
                     {{/desvio}}
                     {{#desviosa}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvioSA.png"/>    
                     {{/desviosa}}
+                    {{#conjuracion}}
+                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                    {{/conjuracion}}
                     {{#disparo}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDisparo.png"/>    
                     {{/disparo}}
@@ -2417,13 +2420,14 @@
                 -->
                 <div class="arrow-right"></div>
                 <div class="label titulo">
-                    <span class="dadito green"> 0 </span>{{rname}}{{#mod}} ({{mod}}){{/mod}}<span class="dadito green"> 0 </span>{{#rollWasCrit() r1}}<span class="green"> ¡12!</span>{{/rollWasCrit() r1}} {{#rollWasCrit() r2}}<span class="green"> ¡12!</span>{{/rollWasCrit() r2}} {{#rollWasCrit() r3}}<span class="green"> ¡12!</span>{{/rollWasCrit() r3}}
+                    <span class="dadito green"> 0 </span>{{rname}}{{#mod}} ({{mod}}){{/mod}}<span class="dadito green"> 0 </span>
                 </div>
                 {{#arma}}
                     <div class="label">
                         <span>{{arma}}</span>
                     </div>
                 {{/arma}}
+
                 {{#ataque}}
                 <div class="arrow-left"></div>            
                     <div class="label">
@@ -2433,18 +2437,14 @@
                         <span><span>[Daño Extra](!&#13;#Daño)</span></span>
                     </div>
                 {{/ataque}}
-                {{#conjuro}}
-                <div class="arrow-left"></div>
-                   <div class="label">
-                        <span><span>[Daño Extra](!&#13;#Daño)</span></span>
-                    </div>
-                {{/conjuro}}
+                
                 {{#estrategia}}
                 <div class="arrow-left"></div>
                 <div class="label">
                         <span>{{estrategia}}</span>
                     </div>
                 {{/estrategia}}
+
                 {{#defensa}}
                 <div class="label">
                     {{#rollGreater() piruetas 0}}<span>Contra At. por Invasión </span><span class="green">+{{piruetas}}</span>{{/rollGreater() piruetas 0}}
@@ -2452,7 +2452,7 @@
                 </div>
 
                 <div class="arrow-left"></div> 
-                   {{#armadura}} 
+                    {{#armadura}} 
                     <div class="label">
                         <span>{{armadura}}</span>
                     </div>
@@ -2461,6 +2461,7 @@
                     <span>{{herida}} [¿Moribundo?](!&#13;#Moribundo)</span>
                 </div>
                 {{/defensa}}
+
                 {{#magia}}                    
                     <div class="arrow-left"></div>
                     <div class="label">         
@@ -2470,421 +2471,69 @@
                         <span>[Daño Extra](!&#13;#Daño)</span>
                     </div>
                 {{/magia}}
-        <!-- {{#charname}}
-            <div class="charname">
-                <span>{{charname}}</span>
-            </div>
-        {{/charname}} -->
+
+                {{#conjuracion}}
+                <div class="arrow-left"></div>
+
+                <div class="label">
+                    <span>Poder {{poder}}</span>
+                </div>      
+                {{/conjuracion}}
+        
     </div>
 </rolltemplate>
 
-<rolltemplate class="sheet-rolltemplate-tresd">
+<rolltemplate class="sheet-rolltemplate-desventaja">
     <div class="container">
-        {{#conjuracion}}
-            <div>
-            {{#rollLess() rc1 rc2}}
-                {{#rollLess() rc3 rc1}}
-                <!--r3 < r1 < r2-->
-                    <div class="adv"><span>{{rc1}}</span></div>
-                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                
-                    <div class="arrow-right"></div>
-
-                <div class="label titulo">
-                    Conjuración ({{conjuracion}})&nbsp;
-                    {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
-                    {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
-                </div>
-
-                {{#rollLess() rc1 dificultad}}
-                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
-                {{/rollLess() rc1 dificultad}}
-
-                <div class="label">
-                   <span>Poder {{poder}}
-                </div> 
-                  
-                {{/rollLess() rc3 rc1}}
-
-                {{#rollTotal() rc3 rc1}}
-                <!--r3 = r1 < r2-->
-                    <div class="adv"><span class="green">{{rc1}}</span></div>
-                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                                    
-                    <div class="arrow-right"></div>
-
-                <div class="label titulo">
-                    Conjuración ({{conjuracion}})&nbsp;
-                    {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
-                    {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
-                </div>
-
-                {{#rollLess() rc1 dificultad}}
-                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
-                {{/rollLess() rc1 dificultad}}
-
-                <div class="label">
-                   <span>Poder {{poder}}<span class="green">+2</span></span>
-                </div> 
-                {{/rollTotal() rc3 rc1}}
-
-                {{#rollGreater() rc3 rc1}}
-                    {{#rollLess() rc3 rc2}}
-                    <!--r1 < r3 < r2-->
-                        
-                        <div class="adv"><span>{{rc3}}</span></div>
-                        <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                                        
-                    <div class="arrow-right"></div>
-
-                    <div class="label titulo">
-                        Conjuración ({{conjuracion}})&nbsp;
-                        {{#^rollLess() rc3 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc3 dificultad}}
-                        {{#rollLess() rc3 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc3 dificultad}}
-                    </div>
-    
-                    {{#rollLess() rc3 dificultad}}
-                    <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
-                    {{/rollLess() rc3 dificultad}}
-    
-                    <div class="label">
-                       <span>Poder {{poder}}
-                    </div> 
-                    {{/rollLess() rc3 rc2}}
-
-                    {{#rollTotal() rc3 rc2}}
-                    <!--r1 < r3 = r2-->
-                           
-                        <div class="adv"><span class="green">{{rc3}}/span></div>
-                        <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                
-                    <div class="arrow-right"></div>
-
-                    <div class="label titulo">
-                        Conjuración ({{conjuracion}})&nbsp;
-                        {{#^rollLess() rc3 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc3 dificultad}}
-                        {{#rollLess() rc3 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc3 dificultad}}
-                    </div>
-    
-                    {{#rollLess() rc3 dificultad}}
-                    <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
-                    {{/rollLess() rc3 dificultad}}
-    
-                    <div class="label">
-                       <span>Poder {{poder}}<span class="green">+2</span></span>
-                    </div> 
-                    {{/rollTotal() rc3 rc2}}
-
-                    {{#rollGreater() rc3 rc2}}
-                    <!--r1 < r2 < r3-->
-                        
-                        <div class="adv"><span>{{rc2}}</span></div>
-                        <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                                        
-                    <div class="arrow-right"></div>
-
-                <div class="label titulo">
-                    Conjuración ({{conjuracion}})&nbsp;
-                    {{#^rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc2 dificultad}}
-                    {{#rollLess() rc2 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc2 dificultad}}
-                </div>
-
-                {{#rollLess() rc2 dificultad}}
-                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
-                {{/rollLess() rc2 dificultad}}
-
-                <div class="label">
-                   <span>Poder {{poder}}
-                </div> 
-                    {{/rollGreater() rc3 rc2}}
-                {{/rollGreater() rc3 rc1}}
-            {{/rollLess() rc1 rc2}}
-
-            {{#rollTotal() rc1 rc2}}
-                {{#rollLess() rc3 rc1}}
-                <!--r3 < r1 = r2-->
-                    <div class="adv"><span class="green">{{rc1}}</span></div>
-                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                                        
-                    <div class="arrow-right"></div>
-
-                <div class="label titulo">
-                    Conjuración ({{conjuracion}})&nbsp;
-                    {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
-                    {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
-                </div>
-
-                {{#rollLess() rc1 dificultad}}
-                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
-                {{/rollLess() rc1 dificultad}}
-
-                <div class="label">
-                   <span>Poder {{poder}}<span class="green">+2</span></span>
-                </div> 
-                {{/rollLess() rc3 rc1}}
-                {{#rollTotal() rc3 rc1}}
-                <!--r1 = r2 = r3-->
-                    <div class="adv"><span class="green">{{rc1}}</span></div>
-                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                                        
-                    <div class="arrow-right"></div>
-
-                <div class="label titulo">
-                    Conjuración ({{conjuracion}})&nbsp;
-                    {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
-                    {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
-                </div>
-
-                {{#rollLess() rc1 dificultad}}
-                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
-                {{/rollLess() rc1 dificultad}}
-
-                <div class="label">
-                   <span>Poder {{poder}}<span class="green">+2</span></span>
-                </div>                     
-                <div class="arrow-right"></div>
-
-            <div class="label titulo">
-                Conjuración ({{conjuracion}})&nbsp;
-                {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
-                {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
-            </div>
-
-            {{#rollLess() rc1 dificultad}}
-            <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
-            {{/rollLess() rc1 dificultad}}
-
-            <div class="label">
-               <span>Poder {{poder}}<span class="green">+2</span></span>
-            </div> 
-                {{/rollTotal() rc3 rc1}}
-
-                {{#rollGreater() rc3 rc1}}
-                <!--r1 = r2 < r3-->
-                    <div class="adv"><span class="green">{{rc1}}</span></div>
-                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                                        
-                    <div class="arrow-right"></div>
-
-                <div class="label titulo">
-                    Conjuración ({{conjuracion}})&nbsp;
-                    {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
-                    {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
-                </div>
-
-                {{#rollLess() rc1 dificultad}}
-                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
-                {{/rollLess() rc1 dificultad}}
-
-                <div class="label">
-                   <span>Poder {{poder}}<span class="green">+2</span></span>
-                </div>     
-                {{/rollGreater() rc3 rc1}}
-            {{/rollTotal() rc1 rc2}}
-
-            {{#rollGreater() rc1 rc2}}
-                {{#rollLess() rc3 rc1}}
-                    {{#rollLess() rc3 rc2}}
-                    <!--r3 < r2 < r1-->
-                        
-                        <div class="adv"><span>{{rc2}}</span></div>
-                        <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                                        
-                    <div class="arrow-right"></div>
-
-                    <div class="label titulo">
-                        Conjuración ({{conjuracion}})&nbsp;
-                        {{#^rollLess() rc2 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc2 dificultad}}
-                        {{#rollLess() rc2 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc2 dificultad}}
-                    </div>
-    
-                    {{#rollLess() rc2 dificultad}}
-                    <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
-                    {{/rollLess() rc2 dificultad}}
-    
-                    <div class="label">
-                       <span>Poder {{poder}}
-                    </div> 
-                    {{/rollLess() rc3 rc2}}
-                    {{#rollTotal() rc3 rc2}}
-                    <!--r2 = r3 < r1-->
-                        
-                        <div class="adv"><span class="green">{{rc3}}</span></div>
-                        <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                                        
-                    <div class="arrow-right"></div>
-
-                    <div class="label titulo">
-                        Conjuración ({{conjuracion}})&nbsp;
-                        {{#^rollLess() rc3 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc3 dificultad}}
-                        {{#rollLess() rc3 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc3 dificultad}}
-                    </div>
-    
-                    {{#rollLess() rc3 dificultad}}
-                    <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
-                    {{/rollLess() rc3 dificultad}}
-    
-                    <div class="label">
-                       <span>Poder {{poder}}<span class="green">+2</span></span>
-                    </div> 
-                    {{/rollTotal() rc3 rc2}}
-
-                    {{#rollGreater() rc3 rc2}}
-                    <!--r2 < r3 < r1-->
-                        
-                        <div class="adv"><span>{{rc3}}</span></div>
-                        <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                                        
-                    <div class="arrow-right"></div>
-
-                    <div class="label titulo">
-                        Conjuración ({{conjuracion}})&nbsp;
-                        {{#^rollLess() rc3 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc3 dificultad}}
-                        {{#rollLess() rc3 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc3 dificultad}}
-                    </div>
-    
-                    {{#rollLess() rc3 dificultad}}
-                    <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
-                    {{/rollLess() rc3 dificultad}}
-    
-                    <div class="label">
-                       <span>Poder {{poder}}
-                    </div> 
-                    {{/rollGreater() rc3 rc2}}
-                {{/rollLess() rc3 rc1}}
-
-                {{#rollTotal() rc3 rc1}}
-                <!--r2 < r3 = r1-->
-                    <div class="adv"><span class="green">{{rc1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                                        
-                    <div class="arrow-right"></div>
-
-                <div class="label titulo">
-                    Conjuración ({{conjuracion}})&nbsp;
-                    {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
-                    {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
-                </div>
-
-                {{#rollLess() rc1 dificultad}}
-                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
-                {{/rollLess() rc1 dificultad}}
-
-                <div class="label">
-                   <span>Poder {{poder}}<span class="green">+2</span></span>
-                </div> 
-                {{/rollTotal() rc3 rc1}}
-
-                {{#rollGreater() rc3 rc1}}
-                <!--r2 < r1 < r3-->
-                    <div class="adv"><span>{{rc1}}</span></div>
-                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
-                                        
-                    <div class="arrow-right"></div>
-
-                <div class="label titulo">
-                    Conjuración ({{conjuracion}})&nbsp;
-                    {{#^rollLess() rc1 dificultad}}<span class="green">¡¡Éxito!!</span>{{/^rollLess() rc1 dificultad}}
-                    {{#rollLess() rc1 dificultad}}<span class="red">¡¡Fallas!!</span>{{/rollLess() rc1 dificultad}}
-                </div>
-
-                {{#rollLess() rc1 dificultad}}
-                <div class="label"><span>Descontrol: [elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span></div>   
-                {{/rollLess() rc1 dificultad}}
-
-                <div class="label">
-                   <span>Poder {{poder}}
-                </div> 
-                {{/rollGreater() rc3 rc1}}
-            {{/rollGreater() rc1 rc2}}
-                
-                    
-            </div>
-
-            <div class="arrow-left"></div>  
-        {{/conjuracion}}
-        
         <div>
-            {{#rollLess() r1 r2}}
-                {{#rollLess() r3 r1}}
-                <!--r3 < r1 < r2-->
-                    <div class="adv"><span>{{r3}}</span></div>
-                    
-                {{/rollLess() r3 r1}}
-                {{#rollTotal() r3 r1}}
-                <!--r3 = r1 < r2-->
-                    <div class="adv"><span>{{r1}}</span></div>
-                    
-                {{/rollTotal() r3 r1}}
-                {{#rollGreater() r3 r1}}
-                    {{#rollLess() r3 r2}}
-                    <!--r1 < r3 < r2-->
-                        
-                        <div class="adv"><span>{{r1}}</span></div>
-                    {{/rollLess() r3 r2}}
-                    {{#rollTotal() r3 r2}}
-                    <!--r1 < r3 = r2-->
-                        <div class="adv"><span>{{r1}}</span></div>
-                        
-                    {{/rollTotal() r3 r2}}
-                    {{#rollGreater() r3 r2}}
-                    <!--r1 < r2 < r3-->
-                        
-                        <div class="adv"><span>{{r1}}</span></div>
-                        
-                    {{/rollGreater() r3 r2}}
-                {{/rollGreater() r3 r1}}
-            {{/rollLess() r1 r2}}
-            {{#rollTotal() r1 r2}}
-                {{#rollLess() r3 r1}}
-                <!--r3 < r1 = r2-->
-                    
-                    <div class="adv"><span>{{r3}}</span></div>
-                {{/rollLess() r3 r1}}
-                {{#rollTotal() r3 r1}}
-                <!--r1 = r2 = r3-->
-                    <div class="adv"><span class="green">{{r1}}{{#critbonus}}+{{critbonus}}{{/critbonus}}</span></div>
-                    
-                {{/rollTotal() r3 r1}}
-                {{#rollGreater() r3 r1}}
-                <!--r1 = r2 < r3-->
-                    <div class="adv"><span>{{r1}}</span></div>
-                    
-                {{/rollGreater() r3 r1}}
-            {{/rollTotal() r1 r2}}
-            {{#rollGreater() r1 r2}}
-                {{#rollLess() r3 r1}}
-                    {{#rollLess() r3 r2}}
-                    <!--r3 < r2 < r1-->
-                        
-                        <div class="adv"><span>{{r3}}</span></div>
-                        
-                    {{/rollLess() r3 r2}}
-                    {{#rollTotal() r3 r2}}
-                    <!--r2 = r3 < r1-->
-                        
-                        <div class="adv"><span>{{r3}}</span></div>
-                    {{/rollTotal() r3 r2}}
-                    {{#rollGreater() r3 r2}}
-                    <!--r2 < r3 < r1-->
-                        
-                        <div class="adv"><span>{{r2}}</span></div>
-                        
-                    {{/rollGreater() r3 r2}}
-                {{/rollLess() r3 r1}}
-                {{#rollTotal() r3 r1}}
-                <!--r2 < r3 = r1-->
-                    
-                    <div class="adv"><span>{{r2}}</span></div>
-                    
-                {{/rollTotal() r3 r1}}
-                {{#rollGreater() r3 r1}}
-                <!--r2 < r1 < r3-->
-                    <div class="adv"><span>{{r2}}</span></div>
-                    
-                {{/rollGreater() r3 r1}}
-            {{/rollGreater() r1 r2}}
-            {{#ataque1}}
+            {{#rollLess() r1 r2}}  
+                    <div class="adv">
+                        <span>{{r1}}</span>
+
+                        {{#^rollTotal() r1 r3}}{{#^rollTotal() r2 r3}}
+                            {{#^rollLess() r1 dificultad}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r1 dificultad}}
+                            {{#rollLess() r1 dificultad}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r1 dificultad}}
+                        {{/^rollTotal() r2 r3}}{{/^rollTotal() r1 r3}}
+                        {{#rollTotal() r1 r3}}<span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            {{#^rollLess() r1 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r1 dificultad2}}
+                          {{#rollLess() r1 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r1 dificultad2}}
+                        {{/rollTotal() r1 r3}}
+                        {{#rollTotal() r2 r3}}<span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                           {{#^rollLess() r1 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r1 dificultad2}}
+                           {{#rollLess() r1 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r1 dificultad2}}
+                        {{/rollTotal() r2 r3}}
+                    </div>
+                {{/rollLess() r1 r2}}
+
+                {{#rollTotal() r1 r2}}
+                    <div class="adv">
+                        <span>{{r1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+
+                        {{#^rollLess() r2 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r2 dificultad2}}
+                        {{#rollLess() r2 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r2 dificultad2}}
+                    </div>
+                {{/rollTotal() r1 r2}}
+
+                {{#rollGreater() r1 r2}}
+                    <div class="adv">
+                        <span>{{r2}}</span>
+
+                        {{#^rollTotal() r1 r3}}{{#^rollTotal() r2 r3}}
+                            {{#^rollLess() r2 dificultad}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r2 dificultad}}
+                            {{#rollLess() r2 dificultad}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r2 dificultad}}
+                        {{/^rollTotal() r2 r3}}{{/^rollTotal() r1 r3}}
+                        {{#rollTotal() r1 r3}}<span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            {{#^rollLess() r2 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r2 dificultad2}}
+                            {{#rollLess() r2 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r2 dificultad2}}
+                        {{/rollTotal() r1 r3}}
+                        {{#rollTotal() r2 r3}}<span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            {{#^rollLess() r2 dificultad2}}<p></p><span class="green">¡¡Éxito!!</span>{{/^rollLess() r2 dificultad2}}
+                            {{#rollLess() r2 dificultad2}}<p></p><span class="red">¡¡Descontrol!!</span><p></p><span style="font-size:small;">[elemental](!&#13;#Descontrolele)&nbsp;&nbsp;&nbsp;[oscuro](!&#13;#Descontrolosc)</span>{{/rollLess() r2 dificultad2}}
+                        {{/rollTotal() r2 r3}}
+                    </div>
+                {{/rollGreater() r1 r2}}
+
+                    {{#ataque1}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque1.png"/>    
                     {{/ataque1}}
                     {{#ataque2}}
@@ -2896,15 +2545,18 @@
                     {{#ataquesa}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaqueSA.png"/>    
                     {{/ataquesa}}
-                    {{#defensa}}
+                    {{#bloqueo}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>    
-                    {{/defensa}}
+                    {{/bloqueo}}
                     {{#desvio}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvio.png"/>    
                     {{/desvio}}
                     {{#desviosa}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvioSA.png"/>    
                     {{/desviosa}}
+                    {{#conjuracion}}
+                    <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>    
+                    {{/conjuracion}}
                     {{#disparo}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDisparo.png"/>    
                     {{/disparo}}
@@ -2936,10 +2588,7 @@
         
         <div class="arrow-right"></div>
         <div class="label titulo">
-            <span class="dadito red"> 0 </span>{{rname}}{{#mod}} ({{mod}}){{/mod}}<span class="dadito red"> 0 </span>
-            {{#rollWasCrit() r1}}{{#rollWasCrit() r2}}<span class="green"> ¡12!</span>{{/rollWasCrit() r2}}{{/rollWasCrit() r1}}
-            {{#rollWasCrit() r1}}{{#rollWasCrit() r3}}<span class="green"> ¡12!</span>{{/rollWasCrit() r3}}{{/rollWasCrit() r1}} 
-            {{#rollWasCrit() r2}}{{#rollWasCrit() r3}}<span class="green"> ¡12!</span>{{/rollWasCrit() r3}}{{/rollWasCrit() r2}} 
+            <span class="dadito red"> 0 </span>{{rname}}{{#mod}} ({{mod}}){{/mod}}<span class="dadito red"> 0 </span> 
          </div>
          
         {{#arma}}
@@ -2957,12 +2606,7 @@
                 <span>[Daño Extra](!&#13;#Daño)</span>
             </div>
         {{/ataque}}
-        {{#conjuro}}
-        <div class="arrow-left"></div>
-           <div class="label">
-                <span>[Daño Extra](!&#13;#Daño)</span>
-            </div>
-        {{/conjuro}}
+       
         {{#estrategia}}
         <div class="arrow-left"></div>
         <div class="label">
@@ -2995,12 +2639,15 @@
                     <div class="label">
                         <span>[Daño Extra](!&#13;#Daño)</span>
                     </div>
-                {{/magia}}
-        <!-- {{#charname}}
-            <div class="charname">
-                <span>{{charname}}</span>
-            </div>
-        {{/charname}} -->
+        {{/magia}}
+        
+        {{#conjuracion}}
+                <div class="arrow-left"></div>
+
+                <div class="label">
+                    <span>Poder {{poder}}</span>
+                </div>      
+        {{/conjuracion}}           
     </div>
 </rolltemplate>
 
@@ -3762,16 +3409,16 @@
             let newpla = "";
             let newr3 = "";
             if (tipo === 3) {
-                newpla = "tres";
-                newr3 = "1d12cf0";
+                newpla = "ventaja";
+                newr3 = "1d12cs0cf0";
               } 
               else if (tipo === 1) {
-                newpla = "tresd";
-                newr3 = "1d12cf0";
+                newpla = "desventaja";
+                newr3 = "1d12cs0cf0";
               }
               else {
-                newpla = "simple";
-                newr3 = "0";
+                newpla = "normal";
+                newr3 = "1d12cs0cf0";
               };
             setAttrs({
                 r3: newr3, plantilla: newpla
