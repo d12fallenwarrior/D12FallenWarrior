@@ -214,12 +214,12 @@
     <div style="float:right; margin-top: -10px;"> 
             <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
             <div class="infocoliseo">   
-                <span class="infotitulo1">Defensa</span>
-                <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
+                <span class="infotitulo1">Desvío</span>
+                <span class="infobonificador">Bonificador: </span><span name="attr_desvio" class="infobonificador"></span>
                 <hr><span class="infotexto">Blablabla blabla blabla</span>
             </div></span>
-            <button name="roll_defensa" class="imagencoliseo bdefensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>            
-            <button name="roll_defensa" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Defensa</button>
+            <button name="roll_desvio" class="imagencoliseo bdesvio" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Desvio}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cf0+@{desvio})]]}} {{r2=[[(1d12cf0+@{desvio})]]}} {{r3=[[(@{r3}+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>            
+            <button name="roll_desvio" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Desvio}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cf0+@{desvio})]]}} {{r2=[[(1d12cf0+@{desvio})]]}} {{r3=[[(@{r3}+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío</button>
             
             <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
                 <div class="infocoliseo" style="right:144px">   
@@ -228,8 +228,8 @@
                     <hr><span class="infobonificador">Movimiento: </span><input name="attr_movimiento" type="number" class="infobonificador" value="[[(6+@{movilidad})]]" disabled>
                     <hr><span class="infotexto">Blablabla blabla blabla</span>
                 </div></span>
-            <button name="roll_movilidad" class="imagencoliseo bmovilidad" type="roll" value="&{template:@{plantilla}} {{movilidad=Ah}} {{rname=Movilidad}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>                
-            <button name="roll_movilidad" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{movilidad=Ah}} {{rname=Movilidad}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Movilidad</button>             
+            <button name="roll_movilidad" class="imagencoliseo bmovilidad" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>                
+            <button name="roll_movilidad" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}}{{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Movilidad</button>             
              
             <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
                 <div class="infocoliseo" style="right:10px">   
@@ -762,12 +762,12 @@
     <div class ="3colrow">
         <div class="col centrado">
             
-            <button name="roll_movilidad" class="botonimagen bmovilidad" type="roll" value="&{template:@{plantilla}} {{movilidad=Ah}} {{rname=Movilidad}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_movilidad" class="botonimagen bmovilidad" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
             <input name="attr_movimiento" type="number" class="oculto" value="[[(6+@{movilidad})]]" disabled>
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_movilidad" type="roll" value="&{template:@{plantilla}} {{movilidad=Ah}} {{rname=Movilidad}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Movilidad</button></td>
+                            <td  class="bordebot"><button name="roll_movilidad" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cf0+@{movilidad})]]}} {{r2=[[(1d12cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Movilidad</button></td>
                             <td >&nbsp;&nbsp;</td>
                             <td  class="bordebot"><input name="attr_movilidad" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
                         </tr>
@@ -781,19 +781,19 @@
             </table>
             </div>
         <div class="col centrado">
-            <button name="roll_defensa" class="botonimagen bdefensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_desvio" class="botonimagen bdesvio" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cf0+@{desvio})]]}} {{r2=[[(1d12cf0+@{desvio})]]}} {{r3=[[(@{r3}+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                             
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>
         -->
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_defensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Defensa</button></td>
+                            <td  class="bordebot"><button name="roll_desvio" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cf0+@{desvio})]]}} {{r2=[[(1d12cf0+@{desvio})]]}} {{r3=[[(@{r3}+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío</button></td>
                             <td >&nbsp;&nbsp;</td>    
-                            <td  class="bordebot"><input name="attr_defensa" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
+                            <td  class="bordebot"><input name="attr_desvio" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
                         </tr>
                         <tr class="negrita smaller">
-                            <td class="centrado"><span>&nbsp;&nbsp;(Des+defensa-5)&nbsp;&nbsp;</span></td>
+                            <td class="centrado"><span>&nbsp;&nbsp;(Des+H. arma-5)&nbsp;&nbsp;</span></td>
                             <td >&nbsp;&nbsp;</td>
     
                             <td class="centrado"><span>Bonificador</span></td>
@@ -1002,7 +1002,7 @@
                             <td class="centrado bordebot"><input name="attr_ataque1" type="number"  style="width: 70px;" class="centrado" value="-5"></td>
                             <td>&nbsp;</td>
 
-                    <td class="centrado bordebot"><select name="attr_tipodmg1" style="width: 40px;">
+                    <td class="centrado bordebot"><select name="attr_tipodmg1" style="width: 50px;">
                         <option value="P">P</option>
                         <option value="C" selected="selected">C</option>
                         <option value="T">T</option>
@@ -1068,7 +1068,7 @@
                             <td class="centrado bordebot"><input name="attr_ataque2" type="number"  style="width: 70px;" class="centrado" value="-5"></td>
                             <td>&nbsp;</td>
                            
-                    <td class="centrado bordebot"><select name="attr_tipodmg2" style="width: 40px;">
+                    <td class="centrado bordebot"><select name="attr_tipodmg2" style="width: 50px;">
                         <option value="P">P</option>
                         <option value="C" selected="selected">C</option>
                         <option value="T">T</option>
@@ -1146,7 +1146,7 @@
                             <td class="centrado bordebot"><input name="attr_ataque3" type="number" style="width: 70px;" class="centrado" value="-5"></td>
                             <td>&nbsp;</td>
 
-                    <td class="centrado bordebot"><select name="attr_tipodmg3" style="width: 40px;">
+                    <td class="centrado bordebot"><select name="attr_tipodmg3" style="width: 50px;">
                         <option value="P" selected="selected">P</option>
                         <option value="C">C</option>
                         <option value="T">T</option>
@@ -1221,7 +1221,7 @@
                             <td class="centrado bordebot"><input name="attr_ataquesa" type="number" style="width: 70px;" class="centrado" value="-5"></td>
                             <td>&nbsp;</td>
                      
-                    <td class="centrado bordebot"><select name="attr_tipodmgsa" style="width: 40px;">
+                    <td class="centrado bordebot"><select name="attr_tipodmgsa" style="width: 50px;">
                         <option value="P">P</option>
                         <option value="C">C</option>
                         <option value="T" selected="selected">T</option>
@@ -1286,10 +1286,6 @@
             <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_sa" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="6" /><span></span></td>
         
         </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_defensa" value="1"><span class="fuentehabcomb">Defensa</span> </td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_defensa" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_defensa" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_defensa" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_defensa" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_defensa" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_defensa" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_defensa" value="6" /><span></span></td>   
-  
-        </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_movilidad" value="1"><span class="fuentehabcomb">Movilidad</span> </td><td style="padding-bottom:5px">
             <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_movilidad" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="6" /><span></span></td>   
         
@@ -1333,6 +1329,10 @@
             <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_rara2" value="1"><input name="attr_name_rara2" placeholder="Arma rara" class="fuentehab" type="text" style="width: 80px;"></span></td><td style="padding-bottom:5px">
             <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_rara2" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara2" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara2" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara2" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara2" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara2" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara2" value="6" /><span></span></td>
 
+        </tr><tr><td style="padding-bottom:5px">
+            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_rara3" value="1"><input name="attr_name_rara3" placeholder="Arma rara" class="fuentehab" type="text" style="width: 80px;"></span></td><td style="padding-bottom:5px">
+            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_rara3" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara3" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara3" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara3" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara3" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara3" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara3" value="6" /><span></span></td>
+
         </tbody>
     </table>
     </div>
@@ -1346,10 +1346,6 @@
             <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_sa" value="1"><span class="fuentehabcomb">C. sin armas</span> </td><td style="padding-bottom:5px">
             <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_magsa" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="6" /><span></span></td>
         
-        </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_defensa" value="1"><span class="fuentehabcomb">Defensa</span> </td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_magdefensa" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magdefensa" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magdefensa" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magdefensa" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magdefensa" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magdefensa" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magdefensa" value="6" /><span></span></td>   
-
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_movilidad" value="1"><span class="fuentehabcomb">Movilidad</span> </td><td style="padding-bottom:5px">
             <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_magmovilidad" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magmovilidad" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magmovilidad" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magmovilidad" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magmovilidad" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magmovilidad" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magmovilidad" value="6" /><span></span></td>   
@@ -2100,9 +2096,9 @@
                     {{#ataquesa}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaqueSA.png"/>    
                     {{/ataquesa}}
-                    {{#defensa}}
+                    {{#bloqueo}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>    
-                    {{/defensa}}
+                    {{/bloqueo}}
                     {{#desvio}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvio.png"/>    
                     {{/desvio}}
