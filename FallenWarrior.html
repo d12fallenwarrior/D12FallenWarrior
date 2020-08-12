@@ -16,6 +16,13 @@
                 <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: xx-large; margin-left:150px">i</div>
                     <div class="info">
                         "Bio e info del personaje"
+                        <span class="infotitulo">Atributos </span>
+                        <hr>&nbsp;<span class="infobonificador">Fuerza: </span><span name="attr_Fuerza" class="infobonificador"></span>
+                        <hr>&nbsp;<span class="infobonificador">Destreza: </span><span name="attr_Destreza" class="infobonificador"></span>
+                        <hr>&nbsp;<span class="infobonificador">Agilidad: </span><span name="attr_Agilidad" class="infobonificador"></span>
+                        <hr>&nbsp;<span class="infobonificador">Resistencia: </span><span name="attr_Resistencia" class="infobonificador"></span>
+                        <hr>&nbsp;<span class="infobonificador">Astucia: </span><span name="attr_Astucia" class="infobonificador"></span>
+                        <hr>&nbsp;<span class="infobonificador">Inteligencia: </span><span name="attr_Inteligencia" class="infobonificador"></span>
                 </div></span><span name="attr_character_name" type="text" style="font-weight: bold; font-size: xx-large; text-align: center; margin-right: 150px;"></span>
             </div>
             <div style="font-weight: bold; text-align: center; clear:right;">
@@ -30,7 +37,7 @@
     <hr>
 
 
-    <div class="40porciento centrado" >
+    <div class="50porciento centrado" style="margin-bottom: -25px;">
         <span class="centrado negrita larger">Tipo de tirada</span>
         <p></p>
             <p class='tipotiradas negrita'>Desventaja <input name="attr_tipotirada" type="radio" value="1" /></p>
@@ -40,18 +47,22 @@
     <hr>
 
     <div>
-    <div class="40porciento centrado" style="margin-top: 40px;">
+    <div class="50porciento centrado" style="margin-top: 30px;">
+        <span class="larger negrita">Estrategia</span>&nbsp;&nbsp;<span name="attr_est" class="negrita larger"></span>
+    
+    <div style="margin-top: 5px;">
         <button name="roll_reflejos" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cf0+@{ref})]]}} {{r2=[[(1d12cf0+@{ref})]]}} {{r3=[[(@{r3}+@{ref})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">
-            <span class="dadito">0</span><span class="arial"> Reflejos</span></button>
+            <span class="dadito">0</span><span> Reflejos</span></button> <span name="attr_ref" class="negrita larger"></span>&nbsp;&nbsp;
         <button name="roll_vitalidad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cf0+@{vit})]]}} {{r2=[[(1d12cf0+@{vit})]]}} {{r3=[[(@{r3}+@{vit})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
-            <span class="dadito">0</span><span class="arial"> Vitalidad</span></button>        
+            <span class="dadito">0</span><span> Vitalidad</span></button> <span name="attr_vit" class="negrita larger"></span>&nbsp;&nbsp;        
         <button name="roll_voluntad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cf0+@{vol})]]}} {{r2=[[(1d12cf0+@{vol})]]}} {{r3=[[(@{r3}+@{vol})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
-            <span class="dadito">0</span><span class="arial"> Voluntad</span></button>
+            <span class="dadito">0</span><span> Voluntad</span></button><span name="attr_vol" class="negrita larger"></span>&nbsp;&nbsp;
+    </div>
     </div>
     <div class="centrado inline">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <span style="font-weight: bold;">Energía total: </span> <span name="attr_energia" style="font-weight: bold;"></span>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <span style="font-weight: bold;">Herida: </span> <span name="attr_her" style="font-weight: bold;"></span>
         
         <div class="col cuadrodmg" >
@@ -88,26 +99,91 @@
     <div class="25porciento notascoliseo cuadro_acciones">
         
         <div>
+            <input type="checkbox" name="attr_mostrar_accion1" class="mostrar_accion1 check oculto" value="1" />
+        <div class="nota_accion1">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
-                <div class="info">         
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_accion1_nombre"></span><span name="attr_accion1_tipo"></span>
+                    <span class="infotexto" name="attr_accion1_desc">
             </div></span>
-            <span class="nota">Acción</span> (Gratuita)
+            <span class="nota" name="attr_accion1_nombre" value="Acción"></span><span name="attr_accion1_tipo" value="(Tipo)"></span>
         </div>
-        <div>
-            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
-                <div class="info">         
-            </div></span>
-            <span class="nota">Acción</span> (Normal)
         </div>
+
         <div>
+            <input type="checkbox" name="attr_mostrar_accion2" class="mostrar_accion2 check oculto" value="1" />
+        <div class="nota_accion2">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
-                <div class="info">         
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_accion2_nombre"></span><span name="attr_accion2_tipo"></span>
+                    <span class="infotexto" name="attr_accion2_desc">
             </div></span>
-            <span class="nota">Acción </span> (Normal)
+            <span class="nota" name="attr_accion2_nombre" value="Acción"></span><span name="attr_accion2_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_accion3" class="mostrar_accion3 check oculto" value="1" />
+        <div class="nota_accion3">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_accion3_nombre"></span><span name="attr_accion3_tipo"></span>
+                    <span class="infotexto" name="attr_accion3_desc">
+            </div></span>
+            <span class="nota" name="attr_accion3_nombre" value="Acción"></span><span name="attr_accion3_tipo" value="(Tipo)"></span>
+        </div>
         </div>
     </div>
 
     <div class="25porciento notascoliseo cuadro_especial">
+        <div>
+            <input type="checkbox" name="attr_mostrar_especial1" class="mostrar_especial1 check oculto" value="1" />
+        <div class="nota_especial1">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_especial1_nombre"></span><span name="attr_especial1_tipo"></span>
+                    <span class="infotexto" name="attr_especial1_desc">
+            </div></span>
+            <span class="nota" name="attr_especial1_nombre" value="Acción"></span><span name="attr_especial1_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_especial2" class="mostrar_especial2 check oculto" value="1" />
+        <div class="nota_especial2">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_especial2_nombre"></span><span name="attr_especial2_tipo"></span>
+                    <span class="infotexto" name="attr_especial2_desc">
+            </div></span>
+            <span class="nota" name="attr_especial2_nombre" value="Acción"></span><span name="attr_especial2_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_especial3" class="mostrar_especial3 check oculto" value="1" />
+        <div class="nota_especial3">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_especial3_nombre"></span><span name="attr_especial3_tipo"></span>
+                    <span class="infotexto" name="attr_especial3_desc">
+            </div></span>
+            <span class="nota" name="attr_especial3_nombre" value="Acción"></span><span name="attr_especial3_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_especial4" class="mostrar_especial4 check oculto" value="1" />
+        <div class="nota_especial4">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_especial4_nombre"></span><span name="attr_especial4_tipo"></span>
+                    <span class="infotexto" name="attr_especial4_desc">
+            </div></span>
+            <span class="nota" name="attr_especial4_nombre" value="Acción"></span><span name="attr_especial4_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
         <input type="checkbox" name="attr_mostrar_intensidad" class="mostrar_intensidad check oculto" value="1" />
         <div class="especial_intensidad">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
@@ -115,6 +191,7 @@
             </div></span>
             <button name="roll_intensidad" type="roll" class="nota" value="&{template:@{plantilla}} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{magia=Intensidad}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{intensidad})]]}} {{r2=[[(1d12cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Intensidad</button>(Conjuro)
         </div>
+
         <input type="checkbox" name="attr_mostrar_disparo" class="mostrar_disparo check oculto" value="1" />
         <div class="especial_disparo">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
@@ -122,6 +199,7 @@
             </div></span>
             <button name="roll_disparo" type="roll" class="nota" value="&{template:@{plantilla}} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}} {{magia=Disparo}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{disparo})]]}} {{r2=[[(1d12cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Disparo</button> (Conjuro)
         </div>
+
         <input type="checkbox" name="attr_mostrar_dominio" class="mostrar_dominio check oculto" value="1" />
         <div class="especial_dominio">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
@@ -129,18 +207,19 @@
             </div></span>
             <button name="roll_dominio" type="roll" class="nota" value="&{template:@{plantilla}} {{dominio=Ah}} {{rname=Dominio}} {{mod=@{dominio}}} {{magia=Dominio}} {{conjuracion=@{conjuracion}}} {{dificultad=[[(5+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{eter=@{eter}}} {{eter2=@{eter2}}}  {{rc1=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc2=[[(1d12cs0cf0+@{conjuracion})]]}} {{rc3=[[(@{r3}+@{conjuracion})]]}} {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cf0+@{dominio})]]}} {{r2=[[(1d12cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Dominio</button> (Conjuro)
         </div>
+
     </div>
 
         
-    <div style="float:right; margin-top: -20px;"> 
+    <div style="float:right; margin-top: -10px;"> 
             <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
             <div class="infocoliseo">   
                 <span class="infotitulo1">Defensa</span>
                 <span class="infobonificador">Bonificador: </span><span name="attr_defensa" class="infobonificador"></span>
                 <hr><span class="infotexto">Blablabla blabla blabla</span>
             </div></span>
-            <button name="roll_defensa" class="imagencoliseo bdefensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo} + @{refuerzoextra}}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>            
-            <button name="roll_defensa" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo} + @{refuerzoextra}}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Defensa</button>
+            <button name="roll_defensa" class="imagencoliseo bdefensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>            
+            <button name="roll_defensa" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Defensa</button>
             
             <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
                 <div class="infocoliseo" style="right:144px">   
@@ -165,7 +244,7 @@
     <div style="float:right; margin-top: 25px;">               
         <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
             <div class="infocoliseo">   
-                    <span class="infotitulo1">Ataque (<span class="infobonificador" name="attr_nombrearma1"></span>)</span>
+                    <span class="infotitulo1">Ataque (<span name="attr_nombrearma1"></span>)</span>
                     <span class="infobonificador">Bonificador: </span><span name="attr_ataque1" class="infobonificador"></span>
                     <hr><span class="infobonificador">Daño Vital: </span><span name="attr_tipodmg1" class="infobonificador"></span><span name="attr_dmg1" class="infobonificador"></span>
                     <hr><span class="infobonificador">Cansancio: </span><span name="attr_can1" class="infobonificador"></span>
@@ -176,14 +255,14 @@
             
                 <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
                     <div class="infocoliseo" style="right:144px">
-                        <span class="infotitulo1">Ataque (<span class="infobonificador" name="attr_nombrearma3"></span>)</span>   
+                        <span class="infotitulo1">Ataque (<span name="attr_nombrearma3"></span>)</span>   
                         <span class="infobonificador">Bonificador: </span><span name="attr_ataque3" class="infobonificador"></span>
                         <hr><span class="infobonificador">Daño Vital: </span><span name="attr_tipodmg3" class="infobonificador"></span><span name="attr_dmg3" class="infobonificador"></span>
                         <hr><span class="infobonificador">Cansancio: </span><span name="attr_can3" class="infobonificador"></span>
                         <hr><span class="infobonificador">Especial: </span><span name="attr_esp3" class="infobonificador"></span>
                     </div></span>
-                <button name="roll_ataque3" class="imagencoliseo bataque3" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque3})]]}} {{r2=[[(1d12cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
-                <button name="roll_ataque3" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataque3})]]}} {{r2=[[(1d12cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> <span name="attr_nombrearma3"></span></button>
+                <button name="roll_ataque3" class="imagencoliseo bataque3" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma3} (@{tipodmg3})}} {{r1=[[(1d12cf0+@{ataque3})]]}} {{r2=[[(1d12cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
+                <button name="roll_ataque3" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataque3=Ah}} {{ataque=Daño Vital @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma3} (@{tipodmg3})}} {{r1=[[(1d12cf0+@{ataque3})]]}} {{r2=[[(1d12cf0+@{ataque3})]]}} {{r3=[[(@{r3}+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> <span name="attr_nombrearma3"></span></button>
             
                 <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
                     <div class="infocoliseo" style="right:10px">   
@@ -197,44 +276,44 @@
                 <button name="roll_ataquesa" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataquesa=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataquesa}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cf0+@{ataquesa})]]}} {{r2=[[(1d12cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> At. sin armas</button>                                     
     </div>            
 
-    <div class="inline 35porciento" style="margin-top: 25px;">
+    <div class="inline 30porciento" style="margin-top: 35px;">
         <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
             <div class="infocoliseo" style="bottom:-150px">   
-                <span class="infotitulo1">Ataque (<span class="infobonificador" name="attr_nombrearmadura"></span>)</span>   
+                <span class="infotitulo1">Armadura (<span name="attr_nombrearmadura"></span>)</span>   
                         <span class="infobonificador">Tipo: </span><span name="attr_tipoarmadura" class="infobonificador"></span>
-                        <hr><span class="infobonificador">Protección: </span><span name="attr_proteccion" class="infobonificador">
-                        <hr><span class="infobonificador">Refuerzo: </span><span name="attr_refuerzo" class="infobonificador"></span></span><span name="attr_refuerzoextra" class="infobonificador"></span>
-                        <hr><span class="infobonificador">Penalizador: </span><span name="attr_esp3" class="infobonificador"></span>
-                        <hr><span class="infobonificador"> Energía </span><span name="attr_pen_energia" class="infobonificador"></span>&nbsp;&nbsp;&nbsp;<span class="infobonificador"> Destreza </span><span name="attr_pen_destreza" class="infobonificador"></span>&nbsp;&nbsp;&nbsp;<span class="infobonificador"> Sigilo </span><span name="attr_pen_sigilo" class="infobonificador"></span>&nbsp;&nbsp;&nbsp;<span class="infobonificador"> Por carga </span><span name="attr_penarm" class="infobonificador"></span>
+                        <hr><span class="infobonificador">Protección: </span><span name="attr_proteccion" class="infobonificador"></span>
+                        <hr><span class="infobonificador">Refuerzo: </span><span name="attr_refuerzo" class="infobonificador"></span><span name="attr_refuerzoextra" class="infobonificador"></span>
+                        <hr><span class="infobonificador">Penalizador: </span>
+                        <hr><span class="infobonificador"> Energía </span><span name="attr_pen_energia" class="infobonificador"></span>&nbsp;&nbsp;&nbsp;<span class="infobonificador">/ Destreza </span><span name="attr_pen_destreza" class="infobonificador"></span>&nbsp;&nbsp;&nbsp;<span class="infobonificador">/ Sigilo </span><span name="attr_pen_sigilo" class="infobonificador"></span>&nbsp;&nbsp;&nbsp;<span class="infobonificador">/ Por carga </span><span name="attr_penarm" class="infobonificador"></span>
             </div></span>
-        <img class="imagencoliseo centrado" style="left:3px" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCArmadura.png"/>
-        <span name="attr_nombrearmadura" class="negrita centrado" style="font-size:larger; position:relative; top:12px; left:15px;"></span>
+        <img class="imagencoliseoarm centrado" style="left:3px" style="height: 50; width: 50;" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCArmadura.png"/>
+        <span name="attr_nombrearmadura" class="negrita centrado" style="position:relative; top:12px; left:15px;"></span>
             
     </div>  
 
-    <div class="centrado" style="margin-top: 25px; float:right">
+    <div class="centrado" style="margin-top: 20px; float:right">
         <span class="negrita larger"> Habilidades</span> 
      
         <div class="centrado" style="margin-top: 5px;">            
-            <button name="roll_alerta" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Alerta}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cf0+@{hab_alerta})]]}} {{r2=[[(1d12cf0+@{hab_alerta})]]}} {{r3=[[(@{r3}+@{hab_alerta})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-            <span class="dadito">0</span><span class="fuentehab"> Alerta</span></button>
+            <button name="roll_alerta" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Alerta}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cf0+@{hab_alerta})]]}} {{r2=[[(1d12cf0+@{hab_alerta})]]}} {{r3=[[(@{r3}+@{hab_alerta})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <span class="dadito">0</span><span class="fuentehab"> Alerta</span></button><span name="attr_hab_alerta" class="negrita"></span>&nbsp;&nbsp;
             
-            <button name="roll_atletismo" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Atletismo}} {{mod=@{hab_atletismo}}} {{r1=[[(1d12cf0+@{hab_atletismo})]]}} {{r2=[[(1d12cf0+@{hab_atletismo})]]}} {{r3=[[(@{r3}+@{hab_atletismo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-                <span class="dadito">0</span><span class="fuentehab"> Atletismo</span></button>
+            <button name="roll_atletismo" type="roll" style="width: 75px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Atletismo}} {{mod=@{hab_atletismo}}} {{r1=[[(1d12cf0+@{hab_atletismo})]]}} {{r2=[[(1d12cf0+@{hab_atletismo})]]}} {{r3=[[(@{r3}+@{hab_atletismo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+                <span class="dadito">0</span><span class="fuentehab"> Atletismo</span></button><span name="attr_hab_atletismo" class="negrita"></span>&nbsp;&nbsp;
             
-            <button name="roll_empatia" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Empatía}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_empatia}}} {{r1=[[(1d12cf0+@{hab_empatia})]]}} {{r2=[[(1d12cf0+@{hab_empatia})]]}} {{r3=[[(@{r3}+@{hab_empatia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-                <span class="dadito">0</span><span class="fuentehab"> Empatía</span></button>  
+            <button name="roll_empatia" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Empatía}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_empatia}}} {{r1=[[(1d12cf0+@{hab_empatia})]]}} {{r2=[[(1d12cf0+@{hab_empatia})]]}} {{r3=[[(@{r3}+@{hab_empatia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+                <span class="dadito">0</span><span class="fuentehab"> Empatía</span></button><span name="attr_hab_empatia" class="negrita"></span>&nbsp;&nbsp;
         </div> 
 
         <div class="centrado" style="margin-top: 12px;">              
-            <button name="roll_enganar" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Engañar}} {{mod=@{hab_enganar}}} {{r1=[[(1d12cf0+@{hab_enganar})]]}} {{r2=[[(1d12cf0+@{hab_enganar})]]}} {{r3=[[(@{r3}+@{hab_enganar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-            <span class="dadito">0</span><span class="fuentehab"> Engañar</span></button>
+            <button name="roll_enganar" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Engañar}} {{mod=@{hab_enganar}}} {{r1=[[(1d12cf0+@{hab_enganar})]]}} {{r2=[[(1d12cf0+@{hab_enganar})]]}} {{r3=[[(@{r3}+@{hab_enganar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <span class="dadito">0</span><span class="fuentehab"> Engañar</span></button><span name="attr_hab_enganar" class="negrita"></span>&nbsp;&nbsp;
         
-            <button name="roll_equilibrio" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Equilibrio}} {{mod=@{hab_equilibrio}}} {{r1=[[(1d12cf0+@{hab_equilibrio})]]}} {{r2=[[(1d12cf0+@{hab_equilibrio})]]}} {{r3=[[(@{r3}+@{hab_equilibrio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-            <span class="dadito">0</span><span class="fuentehab"> Equilibrio</span></button>
+            <button name="roll_equilibrio" type="roll" style="width: 75px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Equilibrio}} {{mod=@{hab_equilibrio}}} {{r1=[[(1d12cf0+@{hab_equilibrio})]]}} {{r2=[[(1d12cf0+@{hab_equilibrio})]]}} {{r3=[[(@{r3}+@{hab_equilibrio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <span class="dadito">0</span><span class="fuentehab"> Equilibrio</span></button><span name="attr_hab_equilibrio" class="negrita"></span>&nbsp;&nbsp;
         
-            <button name="roll_sigilo" type="roll" style="width: 85px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Sigilo}} {{mod=@{hab_sigilo}}} {{r1=[[(1d12cf0+@{hab_sigilo})]]}} {{r2=[[(1d12cf0+@{hab_sigilo})]]}} {{r3=[[(@{r3}+@{hab_sigilo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-            <span class="dadito">0</span><span class="fuentehab"> Sigilo</span></button>
+            <button name="roll_sigilo" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Sigilo}} {{mod=@{hab_sigilo}}} {{r1=[[(1d12cf0+@{hab_sigilo})]]}} {{r2=[[(1d12cf0+@{hab_sigilo})]]}} {{r3=[[(@{r3}+@{hab_sigilo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <span class="dadito">0</span><span class="fuentehab"> Sigilo</span></button><span name="attr_hab_sigilo" class="negrita"></span>&nbsp;&nbsp;
         </div> 
     </div>
 <hr>
@@ -350,21 +429,21 @@
                 <tr class="centrado">
             
                     <td><button name="roll_reflejos" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cf0+@{ref})]]}} {{r2=[[(1d12cf0+@{ref})]]}} {{r3=[[(@{r3}+@{ref})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">
-                        <span class="dadito">0</span><span class="arial"> Reflejos</span></button></td>
+                        <span class="dadito">0</span><span> Reflejos</span></button></td>
                     <td><input name="attr_ref" type="number" class="centrado bordecuad" style="width: 70px;" value="-5"></td>
                 <!-- <input name="attr_ref_esp" type="number" value="0">
                 <input name="attr_ref" type="number" value="[[(@{agi} [Agi] + @{ast} [Ast] -5 + @{ref_esp} [Otros])]]" disabled> -->
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
                     <td><button name="roll_vitalidad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cf0+@{vit})]]}} {{r2=[[(1d12cf0+@{vit})]]}} {{r3=[[(@{r3}+@{vit})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
-                        <span class="dadito">0</span><span class="arial"> Vitalidad</span></button></td>
+                        <span class="dadito">0</span><span> Vitalidad</span></button></td>
                     <td><input name="attr_vit" type="number" class="centrado bordecuad" style="width: 70px;" value="-5"></td>
                 <!-- <input name="attr_vit_esp" type="number" value="0">
                 <input name="attr_vit" type="number" value="[[(@{res} [Res] + @{fue} [Fue] - 5 + @{vit_esp} [Otros])]]" disabled> --> 
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
                     <td><button name="roll_voluntad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cf0+@{vol})]]}} {{r2=[[(1d12cf0+@{vol})]]}} {{r3=[[(@{r3}+@{vol})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
-                        <span class="dadito">0</span><span class="arial"> Voluntad</span></button></td>
+                        <span class="dadito">0</span><span> Voluntad</span></button></td>
                     <td><input name="attr_vol" type="number" class="centrado bordecuad" style="width: 70px;" value="-5"></td>
                 <!-- <input name="attr_vol_esp" type="number" value="0">
                 <input name="attr_vol" type="number" value="[[(@{int} [Int] + @{ast} [Ast] - 5 + @{vol_esp} [Otros])]]" disabled> -->
@@ -702,14 +781,14 @@
             </table>
             </div>
         <div class="col centrado">
-            <button name="roll_defensa" class="botonimagen bdefensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo} + @{refuerzoextra}}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_defensa" class="botonimagen bdefensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                             
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>
         -->
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_defensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp&nbsp&nbsp Refuerzo @{refuerzo} + @{refuerzoextra}}} {{movilidad=[[@{hab_movilidad}]]}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Defensa</button></td>
+                            <td  class="bordebot"><button name="roll_defensa" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Defensa}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{defensa}}} {{r1=[[(1d12cf0+@{defensa})]]}} {{r2=[[(1d12cf0+@{defensa})]]}} {{r3=[[(@{r3}+@{defensa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Defensa</button></td>
                             <td >&nbsp;&nbsp;</td>    
                             <td  class="bordebot"><input name="attr_defensa" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
                         </tr>
@@ -927,6 +1006,9 @@
                         <option value="P">P</option>
                         <option value="C" selected="selected">C</option>
                         <option value="T">T</option>
+                        <option value="PC">PC</option>
+                        <option value="CT">CT</option>
+                        <option value="CT">PT</option>
                     </select>
                     <input name="attr_dmg1" type="number"  class="centrado" value="0" /></td>
                     <td>&nbsp;</td>
@@ -990,6 +1072,9 @@
                         <option value="P">P</option>
                         <option value="C" selected="selected">C</option>
                         <option value="T">T</option>
+                        <option value="PC">PC</option>
+                        <option value="CT">CT</option>
+                        <option value="CT">PT</option>
                     </select>
                     <input name="attr_dmg2" type="number"  class="centrado" value="0" /></td>
                     <td>&nbsp;</td>
@@ -1065,6 +1150,9 @@
                         <option value="P" selected="selected">P</option>
                         <option value="C">C</option>
                         <option value="T">T</option>
+                        <option value="PC">PC</option>
+                        <option value="CT">CT</option>
+                        <option value="CT">PT</option>
                     </select>
                     <input name="attr_dmg3" type="number"  class="centrado" value="0" /></td>
                     <td>&nbsp;</td>
@@ -1137,6 +1225,9 @@
                         <option value="P">P</option>
                         <option value="C">C</option>
                         <option value="T" selected="selected">T</option>
+                        <option value="PC">PC</option>
+                        <option value="CT">CT</option>
+                        <option value="CT">PT</option>
                     </select>
                     <input name="attr_dmgsa" type="number"  class="centrado" value="0" /></td>
                     <td>&nbsp;</td>
