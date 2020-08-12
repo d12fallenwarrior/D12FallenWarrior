@@ -714,6 +714,11 @@ hr {
     width: 40%;
     }    
 
+.sheet-45porciento{
+    float: left;
+    width: 45%;
+    }  
+
 .sheet-50porciento{
     float: left;
     width: 50%;
@@ -777,11 +782,11 @@ hr {
     background: none;
     border: 3px solid black;
     border-radius: 10px;
-    width:130px;
+    width:120px;
     font-weight: bold;
     display: inline;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 3px;
+    margin-left: 3px;
 
 }
 
@@ -826,6 +831,8 @@ hr {
     font-weight: bold;
     display: inline;
     overflow: hidden;
+    margin-left: 15px;
+    margin-right: -12px;
     text-align: left !important;
 }
 
@@ -833,6 +840,7 @@ hr {
     border: 0px;
     display: block;
     overflow: hidden;
+    margin-top: 3px;
     min-height: 20px;
     line-height: 20px;
     text-align: left !important;
@@ -886,7 +894,7 @@ hr {
     margin-top: -90px;
     margin-left: 35px;
     min-width: 200px;
-    max-width: 300px;
+    max-width: 250px;
     line-height: 16px;
     color: #111;
     border: 1px solid #dca;
@@ -922,7 +930,19 @@ input.sheet-mostrar_dominio:not(:checked) ~ div.sheet-especial_dominio {
     display: none !important;
 }
 
-input.sheet-mostrar_talento1:not(:checked) ~ div.sheet-talento1 {
+input.sheet-mostrar_accion1:not(:checked) ~ div.sheet-nota_accion1,
+input.sheet-mostrar_accion2:not(:checked) ~ div.sheet-nota_accion2,
+input.sheet-mostrar_accion3:not(:checked) ~ div.sheet-nota_accion3,
+input.sheet-mostrar_accion4:not(:checked) ~ div.sheet-nota_accion4
+ {
+    display: none !important;
+}
+
+input.sheet-mostrar_especial1:not(:checked) ~ div.sheet-nota_especial1,
+input.sheet-mostrar_especial2:not(:checked) ~ div.sheet-nota_especial2,
+input.sheet-mostrar_especial3:not(:checked) ~ div.sheet-nota_especial3,
+input.sheet-mostrar_especial4:not(:checked) ~ div.sheet-nota_especial4
+{
     display: none !important;
 }
 
@@ -1053,6 +1073,19 @@ button[type=roll]::before {
     top: 10px;   
     background-position: 0;
     background-size: 70px 70px;
+    background-repeat: no-repeat;
+}
+
+.sheet-imagencoliseoarm {
+    position:relative;
+    vertical-align: middle;
+    height: 50px;
+    width: 50px;
+    margin-right: -15px !important;
+    margin-left: 0px;
+    top: 10px;   
+    background-position: 0;
+    background-size: 50x 50px;
     background-repeat: no-repeat;
 }
 
