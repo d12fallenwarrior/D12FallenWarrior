@@ -189,7 +189,7 @@
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="info">         
             </div></span>
-            <button name="roll_conjuracion" type="roll" value="&{template:@{plantilla}} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(3+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{dificultad2=[[(1+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button>(Conjuro)
+            <button name="roll_conjuracion" type="roll" value="&{template:@{plantilla}} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button>(Conjuro)
         </div>
 
         <input type="checkbox" name="attr_mostrar_intensidad" class="mostrar_intensidad check oculto" value="1" />
@@ -902,12 +902,12 @@
         <div class="col centrado">
             
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCConjuracion.png"/>-->
-            <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:@{plantilla}} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(3+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(1+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:@{plantilla}} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
             
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_conjuracion" type="roll" value="&{template:@{plantilla}} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(3+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{dificultad2=[[(1+?{¿Con qué poder lanzas el conjuro?|1} -@{conjuracion})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button></td>
+            <td class="bordebot"><button name="roll_conjuracion" type="roll" value="&{template:@{plantilla}} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button></td>
             </td>
             <td>&nbsp;&nbsp;</td>
             <td class="bordebot"><input name="attr_conjuracion" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
