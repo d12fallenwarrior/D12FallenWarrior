@@ -17,15 +17,24 @@
                     <div class="info">
                         "Bio e info del personaje"
                         <span class="infotitulo">Atributos </span>
-                        <hr>&nbsp;<span class="infobonificador">Fuerza: </span><span name="attr_Fuerza" class="infobonificador"></span>
-                        <hr>&nbsp;<span class="infobonificador">Destreza: </span><span name="attr_Destreza" class="infobonificador"></span>
-                        <hr>&nbsp;<span class="infobonificador">Agilidad: </span><span name="attr_Agilidad" class="infobonificador"></span>
-                        <hr>&nbsp;<span class="infobonificador">Resistencia: </span><span name="attr_Resistencia" class="infobonificador"></span>
-                        <hr>&nbsp;<span class="infobonificador">Astucia: </span><span name="attr_Astucia" class="infobonificador"></span>
-                        <hr>&nbsp;<span class="infobonificador">Inteligencia: </span><span name="attr_Inteligencia" class="infobonificador"></span>
-                </div></span><span name="attr_character_name" type="text" style="font-weight: bold; font-size: xx-large; text-align: center; margin-right: 150px;"></span>
+                        <div class="2colrow">
+                            <div class="col">&nbsp;<span class="infobonificador">Fuerza: </span><span name="attr_Fuerza" class="infobonificador"></span>
+                                <hr>&nbsp;<span class="infobonificador">Destreza: </span><span name="attr_Destreza" class="infobonificador"></span>
+                                <hr>&nbsp;<span class="infobonificador">Agilidad: </span><span name="attr_Agilidad" class="infobonificador"></span>
+                            </div>
+                            
+                            <div class="col">&nbsp;<span class="infobonificador">Resistencia: </span><span name="attr_Resistencia" class="infobonificador"></span>
+                                <hr>&nbsp;<span class="infobonificador">Astucia: </span><span name="attr_Astucia" class="infobonificador"></span>
+                                <hr>&nbsp;<span class="infobonificador">Inteligencia: </span><span name="attr_Inteligencia" class="infobonificador"></span>
+                            </div>
+            
+                        </div>
+                        
+                </div></span>
+                <span name="attr_character_name" type="text" style="font-weight: bold; font-size: xx-large; text-align: center;"></span>
             </div>
-            <div style="font-weight: bold; text-align: center; clear:right;">
+            
+            <div style="font-weight: bold; text-align: center; clear:right; margin-left: 30px">
                 <span name="attr_clase" type="text"></span> / 
                 <span name="attr_raza" type="text"></span>
             </div>      
@@ -38,7 +47,7 @@
 
 
     <div class="50porciento centrado" style="margin-bottom: -25px;">
-        <span class="centrado negrita larger">Tipo de tirada</span>
+        <span class="dadito"> 0 </span><span class="centrado negrita larger">Tipo de tirada</span><span class="dadito"> 0 </span>
         <p></p>
             <p class='tipotiradas negrita'>Desventaja <input name="attr_tipotirada" type="radio" value="1" /></p>
             <p class='tipotiradas negrita'>Normal <input name="attr_tipotirada" type="radio" value="2" checked="true"/></p>
@@ -103,7 +112,7 @@
         <div class="nota_accion1">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="info">  
-                    <span class="infotitulo1" name="attr_accion1_nombre"></span><span name="attr_accion1_tipo"></span>
+                    <span class="infotitulo1" name="attr_accion1_nombre"></span><span class="infotipo" name="attr_accion1_tipo"></span>
                     <span class="infotexto" name="attr_accion1_desc">
             </div></span>
             <span class="nota" name="attr_accion1_nombre" value="Acción"></span><span name="attr_accion1_tipo" value="(Tipo)"></span>
@@ -115,7 +124,7 @@
         <div class="nota_accion2">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="info">  
-                    <span class="infotitulo1" name="attr_accion2_nombre"></span><span name="attr_accion2_tipo"></span>
+                    <span class="infotitulo1" name="attr_accion2_nombre"></span><span class="infotipo" name="attr_accion2_tipo"></span>
                     <span class="infotexto" name="attr_accion2_desc">
             </div></span>
             <span class="nota" name="attr_accion2_nombre" value="Acción"></span><span name="attr_accion2_tipo" value="(Tipo)"></span>
@@ -127,60 +136,94 @@
         <div class="nota_accion3">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="info">  
-                    <span class="infotitulo1" name="attr_accion3_nombre"></span><span name="attr_accion3_tipo"></span>
+                    <span class="infotitulo1" name="attr_accion3_nombre"></span><span class="infotipo" name="attr_accion3_tipo"></span>
                     <span class="infotexto" name="attr_accion3_desc">
             </div></span>
             <span class="nota" name="attr_accion3_nombre" value="Acción"></span><span name="attr_accion3_tipo" value="(Tipo)"></span>
         </div>
         </div>
-    </div>
 
-    <div class="25porciento notascoliseo cuadro_especial">
         <div>
-            <input type="checkbox" name="attr_mostrar_especial1" class="mostrar_especial1 check oculto" value="1" />
-        <div class="nota_especial1">
+            <input type="checkbox" name="attr_mostrar_accion4" class="mostrar_accion4 check oculto" value="1" />
+        <div class="nota_accion4">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="info">  
-                    <span class="infotitulo1" name="attr_especial1_nombre"></span><span name="attr_especial1_tipo"></span>
-                    <span class="infotexto" name="attr_especial1_desc">
+                    <span class="infotitulo1" name="attr_accion4_nombre"></span><span class="infotipo" name="attr_accion4_tipo"></span>
+                    <span class="infotexto" name="attr_accion4_desc">
             </div></span>
-            <span class="nota" name="attr_especial1_nombre" value="Acción"></span><span name="attr_especial1_tipo" value="(Tipo)"></span>
+            <span class="nota" name="attr_accion4_nombre" value="Acción"></span><span name="attr_accion4_tipo" value="(Tipo)"></span>
         </div>
         </div>
 
         <div>
-            <input type="checkbox" name="attr_mostrar_especial2" class="mostrar_especial2 check oculto" value="1" />
-        <div class="nota_especial2">
+            <input type="checkbox" name="attr_mostrar_accion5" class="mostrar_accion5 check oculto" value="1" />
+        <div class="nota_accion5">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="info">  
-                    <span class="infotitulo1" name="attr_especial2_nombre"></span><span name="attr_especial2_tipo"></span>
-                    <span class="infotexto" name="attr_especial2_desc">
+                    <span class="infotitulo1" name="attr_accion5_nombre"></span><span class="infotipo" name="attr_accion5_tipo"></span>
+                    <span class="infotexto" name="attr_accion5_desc">
             </div></span>
-            <span class="nota" name="attr_especial2_nombre" value="Acción"></span><span name="attr_especial2_tipo" value="(Tipo)"></span>
+            <span class="nota" name="attr_accion5_nombre" value="Acción"></span><span name="attr_accion5_tipo" value="(Tipo)"></span>
         </div>
         </div>
 
         <div>
-            <input type="checkbox" name="attr_mostrar_especial3" class="mostrar_especial3 check oculto" value="1" />
-        <div class="nota_especial3">
+            <input type="checkbox" name="attr_mostrar_accion6" class="mostrar_accion6 check oculto" value="1" />
+        <div class="nota_accion6">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="info">  
-                    <span class="infotitulo1" name="attr_especial3_nombre"></span><span name="attr_especial3_tipo"></span>
-                    <span class="infotexto" name="attr_especial3_desc">
+                    <span class="infotitulo1" name="attr_accion6_nombre"></span><span class="infotipo" name="attr_accion6_tipo"></span>
+                    <span class="infotexto" name="attr_accion6_desc">
             </div></span>
-            <span class="nota" name="attr_especial3_nombre" value="Acción"></span><span name="attr_especial3_tipo" value="(Tipo)"></span>
+            <span class="nota" name="attr_accion6_nombre" value="Acción"></span><span name="attr_accion6_tipo" value="(Tipo)"></span>
         </div>
         </div>
 
         <div>
-            <input type="checkbox" name="attr_mostrar_especial4" class="mostrar_especial4 check oculto" value="1" />
-        <div class="nota_especial4">
+            <input type="checkbox" name="attr_mostrar_accion7" class="mostrar_accion7 check oculto" value="1" />
+        <div class="nota_accion7">
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="info">  
-                    <span class="infotitulo1" name="attr_especial4_nombre"></span><span name="attr_especial4_tipo"></span>
-                    <span class="infotexto" name="attr_especial4_desc">
+                    <span class="infotitulo1" name="attr_accion7_nombre"></span><span class="infotipo" name="attr_accion7_tipo"></span>
+                    <span class="infotexto" name="attr_accion7_desc">
             </div></span>
-            <span class="nota" name="attr_especial4_nombre" value="Acción"></span><span name="attr_especial4_tipo" value="(Tipo)"></span>
+            <span class="nota" name="attr_accion7_nombre" value="Acción"></span><span name="attr_accion7_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_accion8" class="mostrar_accion8 check oculto" value="1" />
+        <div class="nota_accion8">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_accion8_nombre"></span><span class="infotipo" name="attr_accion8_tipo"></span>
+                    <span class="infotexto" name="attr_accion8_desc">
+            </div></span>
+            <span class="nota" name="attr_accion8_nombre" value="Acción"></span><span name="attr_accion8_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_accion9" class="mostrar_accion9 check oculto" value="1" />
+        <div class="nota_accion9">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_accion9_nombre"></span><span class="infotipo" name="attr_accion9_tipo"></span>
+                    <span class="infotexto" name="attr_accion9_desc">
+            </div></span>
+            <span class="nota" name="attr_accion9_nombre" value="Acción"></span><span name="attr_accion9_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_accion10" class="mostrar_accion10 check oculto" value="1" />
+        <div class="nota_accion10">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_accion10_nombre"></span><span class="infotipo" name="attr_accion10_tipo"></span>
+                    <span class="infotexto" name="attr_accion10_desc">
+            </div></span>
+            <span class="nota" name="attr_accion10_nombre" value="Acción"></span><span name="attr_accion10_tipo" value="(Tipo)"></span>
         </div>
         </div>
 
@@ -215,6 +258,130 @@
             </div></span>
             <button name="roll_dominio" type="roll" value="&{template:@{plantilla}} {{dominio=Ah}} {{rname=Dominio}} {{mod=@{dominio}}} {{magia=Dominio}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{dominio})]]}} {{r2=[[(1d12cs0cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Dominio</button> (Conjuro)
         </div>
+    </div>
+
+    <div class="25porciento notascoliseo cuadro_especial">
+        <div>
+            <input type="checkbox" name="attr_mostrar_especial1" class="mostrar_especial1 check oculto" value="1" />
+        <div class="nota_especial1">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_especial1_nombre"></span><span class="infotipo" name="attr_especial1_tipo"></span>
+                    <span class="infotexto" name="attr_especial1_desc">
+            </div></span>
+            <span class="nota" name="attr_especial1_nombre" value="Acción"></span><span name="attr_especial1_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_especial2" class="mostrar_especial2 check oculto" value="1" />
+        <div class="nota_especial2">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_especial2_nombre"></span><span class="infotipo" name="attr_especial2_tipo"></span>
+                    <span class="infotexto" name="attr_especial2_desc">
+            </div></span>
+            <span class="nota" name="attr_especial2_nombre" value="Acción"></span><span name="attr_especial2_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_especial3" class="mostrar_especial3 check oculto" value="1" />
+        <div class="nota_especial3">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_especial3_nombre"></span><span class="infotipo" name="attr_especial3_tipo"></span>
+                    <span class="infotexto" name="attr_especial3_desc">
+            </div></span>
+            <span class="nota" name="attr_especial3_nombre" value="Acción"></span><span name="attr_especial3_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_especial4" class="mostrar_especial4 check oculto" value="1" />
+        <div class="nota_especial4">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_especial4_nombre"></span><span class="infotipo" name="attr_especial4_tipo"></span>
+                    <span class="infotexto" name="attr_especial4_desc">
+            </div></span>
+            <span class="nota" name="attr_especial4_nombre" value="Acción"></span><span name="attr_especial4_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_especial5" class="mostrar_especial5 check oculto" value="1" />
+        <div class="nota_especial5">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_especial5_nombre"></span><span class="infotipo" name="attr_especial5_tipo"></span>
+                    <span class="infotexto" name="attr_especial5_desc">
+            </div></span>
+            <span class="nota" name="attr_especial5_nombre" value="Acción"></span><span name="attr_especial5_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_especial6" class="mostrar_especial6 check oculto" value="1" />
+        <div class="nota_especial6">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_especial6_nombre"></span><span class="infotipo" name="attr_especial6_tipo"></span>
+                    <span class="infotexto" name="attr_especial6_desc">
+            </div></span>
+            <span class="nota" name="attr_especial6_nombre" value="Acción"></span><span name="attr_especial6_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_especial7" class="mostrar_especial7 check oculto" value="1" />
+        <div class="nota_especial7">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_especial7_nombre"></span><span class="infotipo" name="attr_especial7_tipo"></span>
+                    <span class="infotexto" name="attr_especial7_desc">
+            </div></span>
+            <span class="nota" name="attr_especial7_nombre" value="Acción"></span><span name="attr_especial7_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_especial8" class="mostrar_especial8 check oculto" value="1" />
+        <div class="nota_especial8">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_especial8_nombre"></span><span class="infotipo" name="attr_especial8_tipo"></span>
+                    <span class="infotexto" name="attr_especial8_desc">
+            </div></span>
+            <span class="nota" name="attr_especial8_nombre" value="Acción"></span><span name="attr_especial8_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_especial9" class="mostrar_especial9 check oculto" value="1" />
+        <div class="nota_especial9">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_especial9_nombre"></span><span class="infotipo" name="attr_especial9_tipo"></span>
+                    <span class="infotexto" name="attr_especial9_desc">
+            </div></span>
+            <span class="nota" name="attr_especial9_nombre" value="Acción"></span><span name="attr_especial9_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="attr_mostrar_especial10" class="mostrar_especial10 check oculto" value="1" />
+        <div class="nota_especial10">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">  
+                    <span class="infotitulo1" name="attr_especial10_nombre"></span><span class="infotipo" name="attr_especial10_tipo"></span>
+                    <span class="infotexto" name="attr_especial10_desc">
+            </div></span>
+            <span class="nota" name="attr_especial10_nombre" value="Acción"></span><span name="attr_especial10_tipo" value="(Tipo)"></span>
+        </div>
+        </div>
+
 
     </div>
 
@@ -231,13 +398,12 @@
             
             <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
                 <div class="infocoliseo" style="right:144px">   
-                    <span class="infotitulo1">Movilidad</span>
-                    <span class="infobonificador">Bonificador: </span><span name="attr_movilidad" class="infobonificador"></span>
-                    <hr><span class="infobonificador">Movimiento: </span><input name="attr_movimiento" type="number" class="infobonificador" value="[[(6+@{movilidad})]]" disabled>
+                    <span class="infotitulo1">Esquiva</span>
+                    <span class="infobonificador">Bonificador: </span><span name="attr_esquiva" class="infobonificador"></span>
                     <hr><span class="infotexto">Blablabla blabla blabla</span>
                 </div></span>
-            <button name="roll_movilidad" class="imagencoliseo bmovilidad" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cs0cf0+@{movilidad})]]}} {{r2=[[(1d12cs0cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>                
-            <button name="roll_movilidad" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}}{{mod=@{movilidad}}} {{r1=[[(1d12cs0cf0+@{movilidad})]]}} {{r2=[[(1d12cs0cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Movilidad</button>             
+            <button name="roll_esquiva" class="imagencoliseo besquiva" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=esquiva}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(@{r3}+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>                
+            <button name="roll_esquiva" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{rname=esquiva}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}}{{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(@{r3}+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Esquiva</button>             
              
             <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
                 <div class="infocoliseo" style="right:10px">   
@@ -284,7 +450,7 @@
                 <button name="roll_ataquesa" class="inline botoncoliseo" type="roll" value="&{template:@{plantilla}} {{ataquesa=Ah}} {{ataque=Daño Vital @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataquesa}}} {{arma=@{nombrearma1} (@{tipodmg1})}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(@{r3}+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> At. sin armas</button>                                     
     </div>            
 
-    <div class="inline 30porciento" style="margin-top: 35px;">
+    <div class="inline 20porciento" style="margin-top: 35px;">
         <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
             <div class="infocoliseo" style="bottom:-150px">   
                 <span class="infotitulo1">Armadura (<span name="attr_nombrearmadura"></span>)</span>   
@@ -295,7 +461,7 @@
                         <hr><span class="infobonificador"> Energía </span><span name="attr_pen_energia" class="infobonificador"></span>&nbsp;&nbsp;&nbsp;<span class="infobonificador">/ Destreza </span><span name="attr_pen_destreza" class="infobonificador"></span>&nbsp;&nbsp;&nbsp;<span class="infobonificador">/ Sigilo </span><span name="attr_pen_sigilo" class="infobonificador"></span>&nbsp;&nbsp;&nbsp;<span class="infobonificador">/ Por carga </span><span name="attr_penarm" class="infobonificador"></span>
             </div></span>
         <img class="imagencoliseoarm centrado" style="left:3px" style="height: 50; width: 50;" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCArmadura.png"/>
-        <span name="attr_nombrearmadura" class="negrita centrado" style="position:relative; top:12px; left:15px;"></span>
+        <span name="attr_tipoarmadura" class="negrita centrado" style="font-size: larger; position:relative; top:12px; left:20px;"></span>
             
     </div>  
 
@@ -303,25 +469,28 @@
         <span class="negrita larger"> Habilidades</span> 
      
         <div class="centrado" style="margin-top: 5px;">            
-            <button name="roll_alerta" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Alerta}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r2=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r3=[[(@{r3}+@{hab_alerta})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-            <span class="dadito">0</span><span class="fuentehab"> Alerta</span></button><span name="attr_hab_alerta" class="negrita"></span>&nbsp;&nbsp;
+            <button name="roll_alerta" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Alerta}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r2=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r3=[[(@{r3}+@{hab_alerta})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <span class="dadito">0</span><span class="fuentehab"> Alerta</span></button>&nbsp;<span name="attr_hab_alerta" class="negrita"></span>&nbsp;&nbsp;&nbsp;
             
-            <button name="roll_atletismo" type="roll" style="width: 75px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Atletismo}} {{mod=@{hab_atletismo}}} {{r1=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r2=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r3=[[(@{r3}+@{hab_atletismo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-                <span class="dadito">0</span><span class="fuentehab"> Atletismo</span></button><span name="attr_hab_atletismo" class="negrita"></span>&nbsp;&nbsp;
+            <button name="roll_atletismo" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Atletismo}} {{mod=@{hab_atletismo}}} {{r1=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r2=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r3=[[(@{r3}+@{hab_atletismo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+                <span class="dadito">0</span><span class="fuentehab"> Atletismo</span></button>&nbsp;<span name="attr_hab_atletismo" class="negrita"></span>&nbsp;&nbsp;&nbsp;
             
-            <button name="roll_empatia" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Empatía}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_empatia}}} {{r1=[[(1d12cs0cf0+@{hab_empatia})]]}} {{r2=[[(1d12cs0cf0+@{hab_empatia})]]}} {{r3=[[(@{r3}+@{hab_empatia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-                <span class="dadito">0</span><span class="fuentehab"> Empatía</span></button><span name="attr_hab_empatia" class="negrita"></span>&nbsp;&nbsp;
+            <button name="roll_empatia" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Empatía}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_empatia}}} {{r1=[[(1d12cs0cf0+@{hab_empatia})]]}} {{r2=[[(1d12cs0cf0+@{hab_empatia})]]}} {{r3=[[(@{r3}+@{hab_empatia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+                <span class="dadito">0</span><span class="fuentehab"> Empatía</span></button>&nbsp;<span name="attr_hab_empatia" class="negrita"></span>&nbsp;&nbsp;&nbsp;
+
+                <button name="roll_enganar" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Engañar}} {{mod=@{hab_enganar}}} {{r1=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r2=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r3=[[(@{r3}+@{hab_enganar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+                    <span class="dadito">0</span><span class="fuentehab"> Engañar</span></button>&nbsp;<span name="attr_hab_enganar" class="negrita"></span>&nbsp;&nbsp;&nbsp;
         </div> 
 
         <div class="centrado" style="margin-top: 12px;">              
-            <button name="roll_enganar" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Engañar}} {{mod=@{hab_enganar}}} {{r1=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r2=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r3=[[(@{r3}+@{hab_enganar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-            <span class="dadito">0</span><span class="fuentehab"> Engañar</span></button><span name="attr_hab_enganar" class="negrita"></span>&nbsp;&nbsp;
+            <button name="roll_equilibrio" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Equilibrio}} {{mod=@{hab_equilibrio}}} {{r1=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{r2=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{r3=[[(@{r3}+@{hab_equilibrio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <span class="dadito">0</span><span class="fuentehab"> Equilibrio</span></button>&nbsp;<span name="attr_hab_equilibrio" class="negrita"></span>&nbsp;&nbsp;&nbsp;
         
-            <button name="roll_equilibrio" type="roll" style="width: 75px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Equilibrio}} {{mod=@{hab_equilibrio}}} {{r1=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{r2=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{r3=[[(@{r3}+@{hab_equilibrio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-            <span class="dadito">0</span><span class="fuentehab"> Equilibrio</span></button><span name="attr_hab_equilibrio" class="negrita"></span>&nbsp;&nbsp;
-        
-            <button name="roll_sigilo" type="roll" style="width: 70px;" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Sigilo}} {{mod=@{hab_sigilo}}} {{r1=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{r2=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{r3=[[(@{r3}+@{hab_sigilo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-            <span class="dadito">0</span><span class="fuentehab"> Sigilo</span></button><span name="attr_hab_sigilo" class="negrita"></span>&nbsp;&nbsp;
+            <button name="roll_movilidad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Movilidad}} {{mod=@{hab_movilidad}}} {{r1=[[(1d12cs0cf0+@{hab_movilidad})]]}} {{r2=[[(1d12cs0cf0+@{hab_movilidad})]]}} {{r3=[[(@{r3}+@{hab_movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+                <span class="dadito">0</span><span class="fuentehab"> Movilidad</span></button>&nbsp;<span name="attr_hab_movilidad" class="negrita"></span>&nbsp;&nbsp;&nbsp;
+
+            <button name="roll_sigilo" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Sigilo}} {{mod=@{hab_sigilo}}} {{r1=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{r2=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{r3=[[(@{r3}+@{hab_sigilo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <span class="dadito">0</span><span class="fuentehab"> Sigilo</span></button>&nbsp;<span name="attr_hab_sigilo" class="negrita"></span>&nbsp;&nbsp;&nbsp;
         </div> 
     </div>
 <hr>
@@ -494,7 +663,7 @@
                         <td><input name="attr_her" type="number" class="centrado bordecuad" style="width: 70px;" value="5"> <!-- <input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled> --></td> 
                     </tr>
                     <tr class="negrita smaller">
-                        <td class="centrado"><span>(Int+Ast)</span></td>
+                        <td class="centrado"><span>(2+Int+Ast)</span></td>
                         <td>&nbsp;&nbsp;</td>
 
                         <td class="centrado"><span>Valor</span></td>
@@ -530,16 +699,14 @@
 <input type="checkbox" class="tipodeficha check" name="attr_tipodeficha" value="1" style="float:right;">
 <div class="ficha_luchador negrita" style="float:right">
   FICHA DE LUCHADOR
-  
 </div>
 <div class="ficha_mago negrita" style="float:right;">
   FICHA DE MAGO
-  
 </div>
 
 <!--SECCIÓN DAÑO Y TIPO TIRADA-->
 <div class="40porciento centrado">
-    <span class="centrado negrita larger">Tipo de tirada</span>
+    <span class="dadito"> 0 </span><span class="centrado negrita larger">Tipo de tirada</span><span class="dadito"> 0 </span>
     <p></p>
         <p class='tipotiradas negrita'>Desventaja <input name="attr_tipotirada" type="radio" value="1" /></p>
         <p class='tipotiradas negrita'>Normal <input name="attr_tipotirada" type="radio" value="2" checked="true"/></p>
@@ -548,77 +715,142 @@
 <h1 style="text-align: left;">Combate</h1>
 
 <!--SECCIÓN DE NOTAS-->
-<!--
-<div class="sheet-columns" style="float:left;">
-    <input type="checkbox" class="sheet-toggle-show check" />
-    <span class="negrita">Mostrar notas</span>
-  
-    <div class="sheet-body 2colrow">
-    
+<input type="checkbox" name="attr_mostrarnotas" class="mostrar_notas check" value="1"/>
+<span class="negrita">Editar notas</span>
+<div class="editable_notas">
+    <h1>Notas</h1>
+    <div class="2colrow">
         <div class="col">
-            <h1>Notas</h1>
-            
-                <table>
-                    <tbody>
-                        <tr>
-                <td valign="top"><input name="attr_notaiz_name" type="text" class="negrita" placeholder="Nota" style="width: 110px;"></td>
-                <td><span>&nbsp;&nbsp;</span></td>
-                <td><textarea name="attr_notaizdesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
-                        </tr>                
-                    </tbody>
-                </table>
-                    
-                <fieldset class="repeating_notasiz">
-                    <table>
-                        <tbody>
-                            <tr>
-                    <p></p>
-                        <tr>
-                <td valign="top"><input name="attr_notaiz_name" type="text" class="negrita" placeholder="Nota" style="width: 110px;"></td>
-                <td><span>&nbsp;&nbsp;</span></td>  
-                <td><textarea name="attr_notaizdesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
-                        </tr>
-                    </tbody>
-                </table>
-                </fieldset>
+            <input name="attr_accion1_nombre" type="text" class="nombre" placeholder="Accion" style="width: 235px;">
+            <input name="attr_accion1_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_accion1" class="mostrar_accion1 check" value="1" />
+            <textarea name="attr_accion1_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_accion2_nombre" type="text" class="nombre" placeholder="Accion" style="width: 235px;">
+            <input name="attr_accion2_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_accion2" class="mostrar_accion2 check" value="1" />
+            <textarea name="attr_accion2_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_accion3_nombre" type="text" class="nombre" placeholder="Accion" style="width: 235px;">
+            <input name="attr_accion3_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_accion3" class="mostrar_accion3 check" value="1" />
+            <textarea name="attr_accion3_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_accion4_nombre" type="text" class="nombre" placeholder="Accion" style="width: 235px;">
+            <input name="attr_accion4_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_accion4" class="mostrar_accion4 check" value="1" />
+            <textarea name="attr_accion4_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_accion5_nombre" type="text" class="nombre" placeholder="Accion" style="width: 235px;">
+            <input name="attr_accion5_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_accion5" class="mostrar_accion5 check" value="1" />
+            <textarea name="attr_accion5_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_accion6_nombre" type="text" class="nombre" placeholder="Accion" style="width: 235px;">
+            <input name="attr_accion6_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_accion6" class="mostrar_accion6 check" value="1" />
+            <textarea name="attr_accion6_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_accion7_nombre" type="text" class="nombre" placeholder="Accion" style="width: 235px;">
+            <input name="attr_accion7_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_accion7" class="mostrar_accion7 check" value="1" />
+            <textarea name="attr_accion7_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_accion8_nombre" type="text" class="nombre" placeholder="Accion" style="width: 235px;">
+            <input name="attr_accion8_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_accion8" class="mostrar_accion8 check" value="1" />
+            <textarea name="attr_accion8_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_accion9_nombre" type="text" class="nombre" placeholder="Accion" style="width: 235px;">
+            <input name="attr_accion9_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_accion9" class="mostrar_accion9 check" value="1" />
+            <textarea name="attr_accion9_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_accion10_nombre" type="text" class="nombre" placeholder="Accion" style="width: 235px;">
+            <input name="attr_accion10_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_accion10" class="mostrar_accion10 check" value="1" />
+            <textarea name="attr_accion10_desc" placeholder="Descripción" class="justify descripcion"></textarea>
         </div>
+        
         <div class="col">
-            <h1>Notas</h1>
-            
-                <table>
-                    <tbody>
-                        <tr>
-                <td valign="top"><input name="attr_notader_name" type="text" class="negrita" placeholder="Nota" style="width: 110px;"></td>
-                <td><span>&nbsp;&nbsp;</span></td>
-                <td><textarea name="attr_notaderdesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
-                        </tr>                
-                    </tbody>
-                </table>
-                    
-                <fieldset class="repeating_notasder">
-                    <table>
-                        <tbody>
-                            <tr>
-                    <p></p>
-                        <tr>
-                <td valign="top"><input name="attr_notader_name" type="text" class="negrita" placeholder="Nota" style="width: 110px;"></td>
-                <td><span>&nbsp;&nbsp;</span></td>  
-                <td><textarea name="attr_notaderdesc" placeholder="Descripción" class="inline justify" style="height: 40px; width: 280px;"></textarea></td>
-                        </tr>
-                    </tbody>
-                </table>
-                </fieldset>
+            <input name="attr_especial1_nombre" type="text" class="nombre" placeholder="Especial" style="width: 235px;">
+            <input name="attr_especial1_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_especial1" class="mostrar_especial1 check" value="1" />
+            <textarea name="attr_especial1_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_especial2_nombre" type="text" class="nombre" placeholder="Especial" style="width: 235px;">
+            <input name="attr_especial2_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_especial2" class="mostrar_especial2 check" value="1" />
+            <textarea name="attr_especial2_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_especial3_nombre" type="text" class="nombre" placeholder="Especial" style="width: 235px;">
+            <input name="attr_especial3_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_especial3" class="mostrar_especial3 check" value="1" />
+            <textarea name="attr_especial3_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_especial4_nombre" type="text" class="nombre" placeholder="Especial" style="width: 235px;">
+            <input name="attr_especial4_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_especial4" class="mostrar_especial4 check" value="1" />
+            <textarea name="attr_especial4_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_especial5_nombre" type="text" class="nombre" placeholder="Especial" style="width: 235px;">
+            <input name="attr_especial5_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_especial5" class="mostrar_especial5 check" value="1" />
+            <textarea name="attr_especial5_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_especial6_nombre" type="text" class="nombre" placeholder="Especial" style="width: 235px;">
+            <input name="attr_especial6_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_especial6" class="mostrar_especial6 check" value="1" />
+            <textarea name="attr_especial6_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_especial7_nombre" type="text" class="nombre" placeholder="Especial" style="width: 235px;">
+            <input name="attr_especial7_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_especial7" class="mostrar_especial7 check" value="1" />
+            <textarea name="attr_especial7_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_especial8_nombre" type="text" class="nombre" placeholder="Especial" style="width: 235px;">
+            <input name="attr_especial8_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_especial8" class="mostrar_especial8 check" value="1" />
+            <textarea name="attr_especial8_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_especial9_nombre" type="text" class="nombre" placeholder="Especial" style="width: 235px;">
+            <input name="attr_especial9_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_especial9" class="mostrar_especial9 check" value="1" />
+            <textarea name="attr_especial9_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
+            <input name="attr_especial10_nombre" type="text" class="nombre" placeholder="Especial" style="width: 235px;">
+            <input name="attr_especial10_tipo" type="text" class="tipo centrado" placeholder="(Tipo)" style="width: 70px;">
+            <span class="negrita">Mostrar</span>
+            <input type="checkbox" name="attr_mostrar_especial10" class="mostrar_especial10 check" value="1" />
+            <textarea name="attr_especial10_desc" placeholder="Descripción" class="justify descripcion"></textarea>
+
         </div>
     </div>
 </div>
--->
-
-
 <p></p>
 
 <hr>
 
-
+<!--Cuadro de Cansancio, daño y trauma-->
 <div class="centrado">
     <table style="margin: 0 auto;">
         <tbody>
@@ -627,7 +859,6 @@
                     <td><input type="number" name="attr_acansancio"  class="centrado bordered" value="0"  style="width: 100px;"/>
                     <input type="number" name="attr_acansancio_max" class="oculto"  value="(@{energia})" disabled="true"/></td>
                     <td>&nbsp;&nbsp;</td>
-        
         
                     <td><input type ="number" name="attr_aeneactual"  class="centrado bordered" value="(@{energia})"  style="width: 100px;"/>
                     <input type="number" name="attr_aeneactual_max"  class="oculto" value="(@{energia})" disabled="true"/></td>
@@ -770,17 +1001,17 @@
     <div class ="3colrow">
         <div class="col centrado">
             
-            <button name="roll_movilidad" class="botonimagen bmovilidad" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{movilidad=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cs0cf0+@{movilidad})]]}} {{r2=[[(1d12cs0cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-            <input name="attr_movimiento" type="number" class="oculto" value="[[(6+@{movilidad})]]" disabled>
+            <button name="roll_esquiva" class="botonimagen besquiva" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{esquiva=Ah}} {{rname=esquiva}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(@{r3}+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <input name="attr_movimiento" type="number" class="oculto" value="[[(6+@{esquiva})]]" disabled>
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_movilidad" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{movilidad=Ah}} {{rname=Movilidad}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{movilidad}}} {{r1=[[(1d12cs0cf0+@{movilidad})]]}} {{r2=[[(1d12cs0cf0+@{movilidad})]]}} {{r3=[[(@{r3}+@{movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Movilidad</button></td>
+                            <td  class="bordebot"><button name="roll_esquiva" type="roll" value="&{template:@{plantilla}} {{defensa=Ah}} {{esquiva=Ah}} {{rname=esquiva}} {{armadura=Protección @{proteccion} &nbsp&nbsp&nbsp Refuerzo @{refuerzo} (@{refuerzoextra})}} {{piruetas=[[@{hab_piruetas}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(@{r3}+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Esquiva</button></td>
                             <td >&nbsp;&nbsp;</td>
-                            <td  class="bordebot"><input name="attr_movilidad" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
+                            <td  class="bordebot"><input name="attr_esquiva" type="number"  class="centrado" value="-5" style="width: 70px;"></td>
                         </tr>
                         <tr class="negrita smaller">
-                            <td class="centrado"><span>&nbsp;&nbsp;(Agi+movilidad-5)&nbsp;&nbsp;</span></td>
+                            <td class="centrado"><span>&nbsp;&nbsp;(Agi+esquiva-5)&nbsp;&nbsp;</span></td>
                             <td >&nbsp;&nbsp;</td>
     
                             <td class="centrado"><span>Bonificador</span></td>
@@ -833,6 +1064,7 @@
     
     <div class="arrow-left"></div>
     <hr>
+
 <!--SECCIÓN MAGOS-->
 <div class="ficha_mago">
     <br>
@@ -962,7 +1194,8 @@
 </div>
 
 <!--ARMAS Y ACCIONES-->                
-        
+    
+    <!--Cuadro notas-->
         <input type="checkbox" class="cuadronotas check" name="cuadronotas" value="1" style="float:left;">
         <div class="cuadro_acciones negrita">
             <span class="larger negrita centrado 25porciento" style="margin-left:-30px;">Acciones</span>
@@ -972,25 +1205,282 @@
         </div>
             
         <div class="25porciento notas cuadro_acciones">
-            <div style="margin:10px;"><span class="nota">Acción</span> (gratuita)
+            <div>
+                <input type="checkbox" name="attr_mostrar_accion1" class="mostrar_accion1 check oculto" value="1" />
+            <div class="nota_accion1">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_accion1_nombre"></span><span class="infotipo" name="attr_accion1_tipo"></span>
+                        <span class="infotexto" name="attr_accion1_desc">
+                </div></span>
+                <span class="nota" name="attr_accion1_nombre" value="Acción"></span><span name="attr_accion1_tipo" value="(Tipo)"></span>
             </div>
-            <div style="margin:10px;"><span class="nota">Acción</span> (normal)
             </div>
-            <div style="margin:10px;"><span class="nota">Acción</span> (gratuita)
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_accion2" class="mostrar_accion2 check oculto" value="1" />
+            <div class="nota_accion2">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_accion2_nombre"></span><span class="infotipo" name="attr_accion2_tipo"></span>
+                        <span class="infotexto" name="attr_accion2_desc">
+                </div></span>
+                <span class="nota" name="attr_accion2_nombre" value="Acción"></span><span name="attr_accion2_tipo" value="(Tipo)"></span>
             </div>
-            <div style="margin:10px;"><span class="nota">Acción</span> (normal)
             </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_accion3" class="mostrar_accion3 check oculto" value="1" />
+            <div class="nota_accion3">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_accion3_nombre"></span><span class="infotipo" name="attr_accion3_tipo"></span>
+                        <span class="infotexto" name="attr_accion3_desc">
+                </div></span>
+                <span class="nota" name="attr_accion3_nombre" value="Acción"></span><span name="attr_accion3_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_accion4" class="mostrar_accion4 check oculto" value="1" />
+            <div class="nota_accion4">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_accion4_nombre"></span><span class="infotipo" name="attr_accion4_tipo"></span>
+                        <span class="infotexto" name="attr_accion4_desc">
+                </div></span>
+                <span class="nota" name="attr_accion4_nombre" value="Acción"></span><span name="attr_accion4_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_accion5" class="mostrar_accion5 check oculto" value="1" />
+            <div class="nota_accion5">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_accion5_nombre"></span><span class="infotipo" name="attr_accion5_tipo"></span>
+                        <span class="infotexto" name="attr_accion5_desc">
+                </div></span>
+                <span class="nota" name="attr_accion5_nombre" value="Acción"></span><span name="attr_accion5_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_accion6" class="mostrar_accion6 check oculto" value="1" />
+            <div class="nota_accion6">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_accion6_nombre"></span><span class="infotipo" name="attr_accion6_tipo"></span>
+                        <span class="infotexto" name="attr_accion6_desc">
+                </div></span>
+                <span class="nota" name="attr_accion6_nombre" value="Acción"></span><span name="attr_accion6_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_accion7" class="mostrar_accion7 check oculto" value="1" />
+            <div class="nota_accion7">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_accion7_nombre"></span><span class="infotipo" name="attr_accion7_tipo"></span>
+                        <span class="infotexto" name="attr_accion7_desc">
+                </div></span>
+                <span class="nota" name="attr_accion7_nombre" value="Acción"></span><span name="attr_accion7_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_accion8" class="mostrar_accion8 check oculto" value="1" />
+            <div class="nota_accion8">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_accion8_nombre"></span><span class="infotipo" name="attr_accion8_tipo"></span>
+                        <span class="infotexto" name="attr_accion8_desc">
+                </div></span>
+                <span class="nota" name="attr_accion8_nombre" value="Acción"></span><span name="attr_accion8_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_accion9" class="mostrar_accion9 check oculto" value="1" />
+            <div class="nota_accion9">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_accion9_nombre"></span><span class="infotipo" name="attr_accion9_tipo"></span>
+                        <span class="infotexto" name="attr_accion9_desc">
+                </div></span>
+                <span class="nota" name="attr_accion9_nombre" value="Acción"></span><span name="attr_accion9_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_accion10" class="mostrar_accion10 check oculto" value="1" />
+            <div class="nota_accion10">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_accion10_nombre"></span><span class="infotipo" name="attr_accion10_tipo"></span>
+                        <span class="infotexto" name="attr_accion10_desc">
+                </div></span>
+                <span class="nota" name="attr_accion10_nombre" value="Acción"></span><span name="attr_accion10_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+
+            <input type="checkbox" name="attr_mostrar_conjuracion" class="mostrar_conjuracion check oculto" value="1" />
+        <div class="especial_conjuracion">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">         
+            </div></span>
+            <button name="roll_conjuracion" type="roll" value="&{template:@{plantilla}} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(@{r3}+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button>(Conjuro)
+        </div>
+
+        <input type="checkbox" name="attr_mostrar_intensidad" class="mostrar_intensidad check oculto" value="1" />
+        <div class="especial_intensidad">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">         
+            </div></span>
+            <button name="roll_intensidad" type="roll" value="&{template:@{plantilla}} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}} {{magia=Intensidad}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(@{r3}+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Intensidad</button>(Conjuro)
+        </div>
+
+        <input type="checkbox" name="attr_mostrar_disparo" class="mostrar_disparo check oculto" value="1" />
+        <div class="especial_disparo">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">         
+            </div></span>
+            <button name="roll_disparo" type="roll" value="&{template:@{plantilla}} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}} {{magia=Disparo}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(@{r3}+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Disparo</button> (Conjuro)
+        </div>
+
+        <input type="checkbox" name="attr_mostrar_dominio" class="mostrar_dominio check oculto" value="1" />
+        <div class="especial_dominio">
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                <div class="info">         
+            </div></span>
+            <button name="roll_dominio" type="roll" value="&{template:@{plantilla}} {{dominio=Ah}} {{rname=Dominio}} {{mod=@{dominio}}} {{magia=Dominio}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{dominio})]]}} {{r2=[[(1d12cs0cf0+@{dominio})]]}} {{r3=[[(@{r3}+@{dominio})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Dominio</button> (Conjuro)
+        </div>
+        
         </div>
 
         <div class="25porciento notas cuadro_especial">
-            <div style="margin:10px;"><span class="nota">Especial</span> (Talento)
+            <div>
+                <input type="checkbox" name="attr_mostrar_especial1" class="mostrar_especial1 check oculto" value="1" />
+            <div class="nota_especial1">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_especial1_nombre"></span><span class="infotipo" name="attr_especial1_tipo"></span>
+                        <span class="infotexto" name="attr_especial1_desc">
+                </div></span>
+                <span class="nota" name="attr_especial1_nombre" value="Acción"></span><span name="attr_especial1_tipo" value="(Tipo)"></span>
             </div>
-            <div style="margin:10px;"><span class="nota">Especial</span> (Talento)
             </div>
-            <div style="margin:10px;"><span class="nota">Especial</span> (Talento)
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_especial2" class="mostrar_especial2 check oculto" value="1" />
+            <div class="nota_especial2">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_especial2_nombre"></span><span class="infotipo" name="attr_especial2_tipo"></span>
+                        <span class="infotexto" name="attr_especial2_desc">
+                </div></span>
+                <span class="nota" name="attr_especial2_nombre" value="Acción"></span><span name="attr_especial2_tipo" value="(Tipo)"></span>
             </div>
-            <div style="margin:10px;"><span class="nota">Especial</span> (Talento)
             </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_especial3" class="mostrar_especial3 check oculto" value="1" />
+            <div class="nota_especial3">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_especial3_nombre"></span><span class="infotipo" name="attr_especial3_tipo"></span>
+                        <span class="infotexto" name="attr_especial3_desc">
+                </div></span>
+                <span class="nota" name="attr_especial3_nombre" value="Acción"></span><span name="attr_especial3_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_especial4" class="mostrar_especial4 check oculto" value="1" />
+            <div class="nota_especial4">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_especial4_nombre"></span><span class="infotipo" name="attr_especial4_tipo"></span>
+                        <span class="infotexto" name="attr_especial4_desc">
+                </div></span>
+                <span class="nota" name="attr_especial4_nombre" value="Acción"></span><span name="attr_especial4_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_especial5" class="mostrar_especial5 check oculto" value="1" />
+            <div class="nota_especial5">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_especial5_nombre"></span><span class="infotipo" name="attr_especial5_tipo"></span>
+                        <span class="infotexto" name="attr_especial5_desc">
+                </div></span>
+                <span class="nota" name="attr_especial5_nombre" value="Acción"></span><span name="attr_especial5_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+    
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_especial6" class="mostrar_especial6 check oculto" value="1" />
+            <div class="nota_especial6">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_especial6_nombre"></span><span class="infotipo" name="attr_especial6_tipo"></span>
+                        <span class="infotexto" name="attr_especial6_desc">
+                </div></span>
+                <span class="nota" name="attr_especial6_nombre" value="Acción"></span><span name="attr_especial6_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_especial7" class="mostrar_especial7 check oculto" value="1" />
+            <div class="nota_especial7">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_especial7_nombre"></span><span class="infotipo" name="attr_especial7_tipo"></span>
+                        <span class="infotexto" name="attr_especial7_desc">
+                </div></span>
+                <span class="nota" name="attr_especial7_nombre" value="Acción"></span><span name="attr_especial7_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_especial8" class="mostrar_especial8 check oculto" value="1" />
+            <div class="nota_especial8">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_especial8_nombre"></span><span class="infotipo" name="attr_especial8_tipo"></span>
+                        <span class="infotexto" name="attr_especial8_desc">
+                </div></span>
+                <span class="nota" name="attr_especial8_nombre" value="Acción"></span><span name="attr_especial8_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_especial9" class="mostrar_especial9 check oculto" value="1" />
+            <div class="nota_especial9">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_especial9_nombre"></span><span class="infotipo" name="attr_especial9_tipo"></span>
+                        <span class="infotexto" name="attr_especial9_desc">
+                </div></span>
+                <span class="nota" name="attr_especial9_nombre" value="Acción"></span><span name="attr_especial9_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+    
+            <div>
+                <input type="checkbox" name="attr_mostrar_especial10" class="mostrar_especial10 check oculto" value="1" />
+            <div class="nota_especial10">
+                <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
+                    <div class="info">  
+                        <span class="infotitulo1" name="attr_especial10_nombre"></span><span class="infotipo" name="attr_especial10_tipo"></span>
+                        <span class="infotexto" name="attr_especial10_desc">
+                </div></span>
+                <span class="nota" name="attr_especial10_nombre" value="Acción"></span><span name="attr_especial10_tipo" value="(Tipo)"></span>
+            </div>
+            </div>
+            
         </div>
 
 
@@ -1294,8 +1784,8 @@
             <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_sa" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="6" /><span></span></td>
         
         </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_movilidad" value="1"><span class="fuentehabcomb">Movilidad</span> </td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_movilidad" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="6" /><span></span></td>   
+            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_esquiva" value="1"><span class="fuentehabcomb">Esquiva</span> </td><td style="padding-bottom:5px">
+            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_esquiva" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_esquiva" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_esquiva" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_esquiva" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_esquiva" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_esquiva" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_esquiva" value="6" /><span></span></td>   
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_espada" value="1"><span class="fuentehabcomb">Espada</span> </td><td style="padding-bottom:5px">
@@ -1355,8 +1845,8 @@
             <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_magsa" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="6" /><span></span></td>
         
         </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_movilidad" value="1"><span class="fuentehabcomb">Movilidad</span> </td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_magmovilidad" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magmovilidad" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magmovilidad" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magmovilidad" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magmovilidad" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magmovilidad" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magmovilidad" value="6" /><span></span></td>   
+            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_esquiva" value="1"><span class="fuentehabcomb">Esquiva</span> </td><td style="padding-bottom:5px">
+            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_magesquiva" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magesquiva" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magesquiva" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magesquiva" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magesquiva" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magesquiva" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magesquiva" value="6" /><span></span></td>   
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_conjuracion" value="1"><span class="fuentehabcomb">Conjuración</span> </td><td style="padding-bottom:5px">
@@ -1453,6 +1943,14 @@
                 <td style="padding-bottom:5px">
                 <input name="attr_hab_intimidar" type="number" class="centrado" title="Bonificador = (Atributo + habilidad -5)" value="-5" style="width: 25px;"></td>
         
+        </tr><tr><td style="padding-bottom:5px">
+            <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_movilidad" value="1">
+            <button name="roll_movilidad" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Movilidad}} {{mod=@{hab_movilidad}}} {{r1=[[(1d12cs0cf0+@{hab_movilidad})]]}} {{r2=[[(1d12cs0cf0+@{hab_movilidad})]]}} {{r3=[[(@{r3}+@{hab_movilidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
+            <span class="fuentehab">Movilidad (Agi)</span></td><td style="padding-bottom:5px">
+                <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_movilidad" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_movilidad"value="6" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_x" value="6"/><span></span></td>
+                <td style="padding-bottom:5px">
+                <input name="attr_hab_movilidad" type="number" class="centrado" title="Bonificador = (Atributo + habilidad -5)" value="-5" style="width: 25px;"></td>    
+
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_nadar" value="1">
             <button name="roll_nadar" type="roll" value="&{template:@{plantilla}} {{logo=Ah}} {{rname=Nadar}} {{mod=@{hab_nadar}}} {{r1=[[(1d12cs0cf0+@{hab_nadar})]]}} {{r2=[[(1d12cs0cf0+@{hab_nadar})]]}} {{r3=[[(@{r3}+@{hab_nadar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
@@ -1645,7 +2143,7 @@
         <!--RASGOS-->
         
         <h1>Rasgos</h1>
-        <input type="checkbox" name="attr_mostrarrasgos" class="editar_rasgos check" value="1"/>
+        <input type="checkbox" name="attr_mostrarrasgos" class="mostrar_rasgos check" value="1"/>
         <span class="negrita">Mostrar/Editar rasgos</span>
         <div class="editable_rasgos">
             <input name="attr_rasgo_name" type="text" class="nombre" placeholder="Rasgo">
@@ -1671,7 +2169,7 @@
         
 
         <h1>Talentos</h1>
-        <input type="checkbox" name="attr_mostrartalentos" class="editar_talentos check" value="1"/>
+        <input type="checkbox" name="attr_mostrartalentos" class="mostrar_talentos check" value="1"/>
         <span class="negrita">Mostrar/Editar talentos</span>
         <div class="editable_talentos">
             <input name="attr_talento_name" type="text" class="nombre" placeholder="Talento">
@@ -1954,7 +2452,7 @@
             <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="0" checked="true"  class="check"/></td><td> <span class="negrita">Carga ligera (Sin modificadores)</span> </td></tr>
         
             <tr><td class="negrita smaller textoderecha">&#215;1&nbsp;&nbsp;</td><td>&nbsp;&nbsp;<input name="attr_carga1" type="number" value="0" class="centrado" style="width: 60px;">&nbsp;&nbsp;</td></tr>
-            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="999"  class="check"/> </td><td><span class="negrita">Sin carga (+1 movilidad)</span> </td></tr>
+            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="999"  class="check"/> </td><td><span class="negrita">Sin carga (+1 esquiva)</span> </td></tr>
        
         <tr><td></td><td class="negrita smaller centrado">Carga <p></p>Transportable</span>
             </tr>
@@ -1993,7 +2491,7 @@
     max_astint<input name="attr_max_astint" type="num" value="0">
     !-- Para los modificadores de carga --
     penarm <input name="attr_penarm" type="num" value="0"> !-- Pen ene y armadura--
-    bonocarga <input name="attr_bonocarga" type="num" value="0"> !-- Movilidad--
+    bonocarga <input name="attr_bonocarga" type="num" value="0"> !-- esquiva--
     Carga:<span name="attr_carga"></span>
     
     
@@ -2179,9 +2677,9 @@
                     {{#dominio}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDominio.png"/>    
                     {{/dominio}}
-                    {{#movilidad}}
+                    {{#esquiva}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCEsquiva.png"/>    
-                    {{/movilidad}}
+                    {{/esquiva}}
                     {{#intensidad}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCIntensidad.png"/>    
                     {{/intensidad}}
@@ -2384,9 +2882,9 @@
                     {{#dominio}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDominio.png"/>    
                     {{/dominio}}
-                    {{#movilidad}}
+                    {{#esquiva}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCEsquiva.png"/>    
-                    {{/movilidad}}
+                    {{/esquiva}}
                     {{#intensidad}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCIntensidad.png"/>    
                     {{/intensidad}}
@@ -2563,9 +3061,9 @@
                     {{#dominio}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDominio.png"/>    
                     {{/dominio}}
-                    {{#movilidad}}
+                    {{#esquiva}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCEsquiva.png"/>    
-                    {{/movilidad}}
+                    {{/esquiva}}
                     {{#intensidad}}
                     <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCIntensidad.png"/>    
                     {{/intensidad}}
@@ -2880,7 +3378,7 @@
                     <div class="arrow-left"></div>
         <p></p> 
         <div class="label texto">
-            -1 a Esquiva, -2 a movilidad y -1 en atletismo, equilibrio y piruetas. 
+            -1 a Esquiva, -2 a esquiva y -1 en atletismo, equilibrio y piruetas. 
             <p></p>
             *Lesión acumulable una segunda vez.
             <p></p>
@@ -2914,7 +3412,7 @@
         <p></p> 
         <div class="label red">
             <span>
-                Tus manos han perdido movilidad tras la resurrección y han quedado entumecidas y pálidas.
+                Tus manos han perdido esquiva tras la resurrección y han quedado entumecidas y pálidas.
             </span>
             </div>
                     <div class="arrow-left"></div>
@@ -3026,7 +3524,7 @@
     <div class="arrow-left"></div>
     <p></p> 
     <div class="label texto">
-        -1 a Estrategia y tienes desventaja en todas tus tiradas de combate, movilidad y observación. Al no poder ver, tus agresores pueden intentar hacer un ataque sigiloso cada vez que te ataquen.
+        -1 a Estrategia y tienes desventaja en todas tus tiradas de combate, esquiva y observación. Al no poder ver, tus agresores pueden intentar hacer un ataque sigiloso cada vez que te ataquen.
         <p></p>
         </div>
     {{/rollTotal() r1 30}}
@@ -3102,7 +3600,12 @@
 
         {{#flechaperdida}}
         <div>
-            <div class="adv"><span class="red">Ataque {{r1}}</span></div>
+            {{#rollGreater() r1 5}}
+            <div class="adv"><span class="green">Ataque {{r1}}</span></div>
+            {{/rollGreater() r1 5}}
+            {{#^rollGreater() r1 5}}
+            <div class="adv"><span class="red">¡Fallo!</span></div>
+            {{/^rollGreater() r1 5}}
             <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque3.png"/>    
         </div>
          
