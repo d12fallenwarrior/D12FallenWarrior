@@ -477,7 +477,6 @@ h1 {
 }
 
 
-
 .sheet-centrado
 {
     text-align: center;
@@ -494,7 +493,9 @@ h1 {
     border-radius: 10px;
     height: 360px;
     margin-right:10px;
+    padding: 5px;
     clear:left;
+    overflow: auto;
 }
 
 .sheet-notascoliseo
@@ -505,17 +506,19 @@ h1 {
     margin-right:0px;
     clear:left;
     padding: 5px;
+    overflow: auto;
 }
 
 .sheet-nota
 {
     font-weight: bold;
-    text-align: center;
     font-size: larger;
-    margin-left:5px;
+    line-height: 12px;
+
     margin-right:10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    text-indent: -30px !important;
 }
 
 .sheet-textoderecha
@@ -778,6 +781,13 @@ hr {
     font-weight: bold;
 }
 
+.sheet-tipo{
+    background: none;
+    border: none;
+    width:100%;
+    text-align: center;
+}
+
 .sheet-cuadrodmg{
     background: none;
     border: 3px solid black;
@@ -811,8 +821,9 @@ hr {
     display: block;
     overflow: hidden;
     min-height: 20px;
-    line-height: 30px;
+    margin-bottom: 10px;
     padding-top: 12px;
+    min-height: 20px;
 }
 
 .sheet-infotitulo1 {
@@ -822,8 +833,16 @@ hr {
     display: block;
     overflow: hidden;
     min-height: 20px;
-    line-height: 30px;
+    margin-bottom: 10px;
     padding-top: 0px;
+    min-height: 20px;
+}
+
+.sheet-infotipo {
+    border: 0px;
+    overflow: hidden;
+    font-style: italic;
+    margin-left: 10px;
 }
 
 .sheet-infobonificador {
@@ -843,7 +862,8 @@ hr {
     margin-top: 3px;
     min-height: 20px;
     line-height: 20px;
-    text-align: left !important;
+    text-align: justify !important;
+    text-indent: 10px;
 }
 
 .textarea {
@@ -910,34 +930,31 @@ input.sheet-toggle-show:not(:checked) ~ div.sheet-body {
     display: none;
 }
 
-input.sheet-editar_talentos:not(:checked) ~ div.sheet-editable_talentos {
+input.sheet-mostrar_talentos:not(:checked) ~ div.sheet-editable_talentos,
+input.sheet-mostrar_rasgos:not(:checked) ~ div.sheet-editable_rasgos, 
+input.sheet-mostrar_notas:not(:checked) ~ div.sheet-editable_notas 
+{
     display: none;
 }
 
-input.sheet-editar_rasgos:not(:checked) ~ div.sheet-editable_rasgos {
-    display: none;
-}
-
-input.sheet-mostrar_conjuracion:not(:checked) ~ div.sheet-especial_conjuracion {
-    display: none !important;
-}
-
-input.sheet-mostrar_intensidad:not(:checked) ~ div.sheet-especial_intensidad {
-    display: none !important;
-}
-
-input.sheet-mostrar_disparo:not(:checked) ~ div.sheet-especial_disparo {
-    display: none !important;
-}
-
-input.sheet-mostrar_dominio:not(:checked) ~ div.sheet-especial_dominio {
+input.sheet-mostrar_conjuracion:not(:checked) ~ div.sheet-especial_conjuracion,
+input.sheet-mostrar_intensidad:not(:checked) ~ div.sheet-especial_intensidad,
+input.sheet-mostrar_disparo:not(:checked) ~ div.sheet-especial_disparo,
+input.sheet-mostrar_dominio:not(:checked) ~ div.sheet-especial_dominio 
+{
     display: none !important;
 }
 
 input.sheet-mostrar_accion1:not(:checked) ~ div.sheet-nota_accion1,
 input.sheet-mostrar_accion2:not(:checked) ~ div.sheet-nota_accion2,
 input.sheet-mostrar_accion3:not(:checked) ~ div.sheet-nota_accion3,
-input.sheet-mostrar_accion4:not(:checked) ~ div.sheet-nota_accion4
+input.sheet-mostrar_accion4:not(:checked) ~ div.sheet-nota_accion4,
+input.sheet-mostrar_accion5:not(:checked) ~ div.sheet-nota_accion5,
+input.sheet-mostrar_accion6:not(:checked) ~ div.sheet-nota_accion6,
+input.sheet-mostrar_accion7:not(:checked) ~ div.sheet-nota_accion7,
+input.sheet-mostrar_accion8:not(:checked) ~ div.sheet-nota_accion8,
+input.sheet-mostrar_accion9:not(:checked) ~ div.sheet-nota_accion9,
+input.sheet-mostrar_accion10:not(:checked) ~ div.sheet-nota_accion10
  {
     display: none !important;
 }
@@ -945,7 +962,13 @@ input.sheet-mostrar_accion4:not(:checked) ~ div.sheet-nota_accion4
 input.sheet-mostrar_especial1:not(:checked) ~ div.sheet-nota_especial1,
 input.sheet-mostrar_especial2:not(:checked) ~ div.sheet-nota_especial2,
 input.sheet-mostrar_especial3:not(:checked) ~ div.sheet-nota_especial3,
-input.sheet-mostrar_especial4:not(:checked) ~ div.sheet-nota_especial4
+input.sheet-mostrar_especial4:not(:checked) ~ div.sheet-nota_especial4,
+input.sheet-mostrar_especial5:not(:checked) ~ div.sheet-nota_especial5,
+input.sheet-mostrar_especial6:not(:checked) ~ div.sheet-nota_especial6,
+input.sheet-mostrar_especial7:not(:checked) ~ div.sheet-nota_especial7,
+input.sheet-mostrar_especial8:not(:checked) ~ div.sheet-nota_especial8,
+input.sheet-mostrar_especial9:not(:checked) ~ div.sheet-nota_especial9,
+input.sheet-mostrar_especial10:not(:checked) ~ div.sheet-nota_especial10
 {
     display: none !important;
 }
@@ -1125,7 +1148,7 @@ button[type=roll]::before {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDominio.png") !important;
 }
 
-.sheet-bmovilidad
+.sheet-besquiva
 {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCEsquiva.png") !important;
 }
