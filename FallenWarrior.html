@@ -599,7 +599,7 @@
         <h1>Características secundarias</h1>
         <!-- <p>Característica / Fórmula / Mod. Especial / Valor final + Roll</p> -->
         
-        <div style="margin-top:45px"></div>
+        <div style="margin-top:25px"></div>
         <table style="margin:auto;">
             <tbody>
                 <tr class="centrado">
@@ -641,10 +641,13 @@
             </tr>
         </tbody>
         </table>
-        <br>
+        
 
         <table style="margin:auto;">
             <tbody>
+                <tr>
+                    <td style="height:25px"></td>
+                </tr>
                 <tr class="centrado">         
                     <td><span class="negrita larger">Estrategia</span></td> <!-- <input name="attr_est_esp" type="number" value="0"> -->
                     <td>&nbsp;&nbsp;</td>
@@ -670,16 +673,18 @@
                     <td class="centrado"><span>Valor</span></td>
                     <td>&nbsp;&nbsp;</td>
                 </tr>
-        
-                <tr class="centrado">        
-                        <td style="margin-top:15px;"><span class="negrita larger">Energía</span></td>
-                        <td style="margin-top:15px;">&nbsp;&nbsp;</td>
-                        <td style="margin-top:15px;"> <input name="attr_energia" type="number" class="centrado bordecuad" style="width: 70px;" value="5"> <!-- <input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled> --></td>
-                        <td style="margin-top:15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <tr>
+            <td style="height:10px"></td>
+        </tr>
+                    <tr class="centrado">        
+                        <td><span class="negrita larger">Energía</span></td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td> <input name="attr_energia" type="number" class="centrado bordecuad" style="width: 70px;" value="5"> <!-- <input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled> --></td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
-                        <td style="margin-top:15px;"><span class="negrita larger">Herida</span></td>
-                        <td style="margin-top:15px;">&nbsp;&nbsp;</td>
-                        <td style="margin-top:15px;"><input name="attr_her" type="number" class="centrado bordecuad" style="width: 70px;" value="5"> <!-- <input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled> --></td> 
+                        <td><span class="negrita larger">Herida</span></td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td><input name="attr_her" type="number" class="centrado bordecuad" style="width: 70px;" value="5"> <!-- <input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled> --></td> 
                     </tr>
                     <tr class="negrita smaller">
                         <td class="centrado"><span>(5+10&#215;Res)</span></td>
@@ -692,8 +697,7 @@
                         <td>&nbsp;&nbsp;</td>
 
                         <td class="centrado"><span>Valor</span></td>                        
-                </tr>
-
+                    </tr>
             </tbody>
         </table>
 
