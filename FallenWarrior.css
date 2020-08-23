@@ -72,58 +72,46 @@ span.sheet-dee {
 /***************************************/
 /* FORMATO DE LAS PLANTILLAS DE TIRADAS*/
 /***************************************/
-  .sheet-rolltemplate-normal .sheet-charname,
+  .sheet-rolltemplate-tirada .sheet-charname,
   .sheet-rolltemplate-moribundo .sheet-charname,
-  .sheet-rolltemplate-ventaja .sheet-charname,
-  .sheet-rolltemplate-desventaja .sheet-charname,
   .sheet-rolltemplate-lesion .sheet-charname,
   .sheet-rolltemplate-dmg .sheet-charname
 {
-    text-align: center;
-    margin-top: -10px;
+    text-align: left;
 }
 
-.sheet-rolltemplate-normal .sheet-charname span,
+.sheet-rolltemplate-tirada .sheet-charname span,
 .sheet-rolltemplate-moribundo .sheet-charname span,
-.sheet-rolltemplate-ventaja .sheet-charname span, 
-.sheet-rolltemplate-desventaja .sheet-charname span, 
 .sheet-rolltemplate-lesion .sheet-charname span,
 .sheet-rolltemplate-dmg .sheet-charname span
 {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: normal;
-    color: #A0A0A0;
+    color: #666666;
+    margin-left: 5px;
 }
 
-.sheet-rolltemplate-normal .sheet-dadito,
-.sheet-rolltemplate-ventaja .sheet-dadito, 
-.sheet-rolltemplate-desventaja .sheet-dadito
+.sheet-rolltemplate-tirada .sheet-dadito
 {
     font-family: dicefontd12; 
     font-size: large;
     font-weight: bold;
 }
 
-.sheet-rolltemplate-normal,
+.sheet-rolltemplate-tirada,
 .sheet-rolltemplate-moribundo,
 .sheet-rolltemplate-muerte,
 .sheet-rolltemplate-golpe,
-.sheet-rolltemplate-conj,
-.sheet-rolltemplate-ventaja,
-.sheet-rolltemplate-desventaja,
 .sheet-rolltemplate-lesion,
 .sheet-rolltemplate-dmg
 {
     width: 14.35em;
 }
 
-.sheet-rolltemplate-normal .sheet-container,
+.sheet-rolltemplate-tirada .sheet-container,
 .sheet-rolltemplate-moribundo .sheet-container,
 .sheet-rolltemplate-muerte .sheet-container,
 .sheet-rolltemplate-golpe .sheet-container,
-.sheet-rolltemplate-conj .sheet-container,
-.sheet-rolltemplate-ventaja .sheet-container,
-.sheet-rolltemplate-desventaja .sheet-container,
 .sheet-rolltemplate-lesion .sheet-container,
 .sheet-rolltemplate-dmg .sheet-container
 {
@@ -144,19 +132,15 @@ span.sheet-dee {
     width         : 57%;
 }
 
-
 .sheet-rolltemplate-muerte .sheet-adv,
 .sheet-rolltemplate-golpe .sheet-adv,
 .sheet-rolltemplate-dmg .sheet-adv,
-.sheet-rolltemplate-normal .sheet-adv,
-.sheet-rolltemplate-moribundo .sheet-adv,
-.sheet-rolltemplate-conj .sheet-adv,
-.sheet-rolltemplate-ventaja .sheet-adv,
-.sheet-rolltemplate-desventaja .sheet-adv
+.sheet-rolltemplate-tirada .sheet-adv,
+.sheet-rolltemplate-moribundo .sheet-adv
 {
     display       : inline-block;
     margin-top    : 1em;
-    margin-bottom : 0.3em;
+    margin-bottom : 0.1em;
     text-align: center;
     vertical-align: middle;
     width         : 67%;
@@ -165,11 +149,8 @@ span.sheet-dee {
 .sheet-rolltemplate-dmg .sheet-templateimagen,
 .sheet-rolltemplate-golpe .sheet-templateimagen,
 .sheet-rolltemplate-muerte .sheet-templateimagen,
-.sheet-rolltemplate-normal .sheet-templateimagen,
-.sheet-rolltemplate-moribundo .sheet-templateimagen,
-.sheet-rolltemplate-conj .sheet-templateimagen,
-.sheet-rolltemplate-ventaja .sheet-templateimagen,
-.sheet-rolltemplate-desventaja .sheet-templateimagen
+.sheet-rolltemplate-tirada .sheet-templateimagen,
+.sheet-rolltemplate-moribundo .sheet-templateimagen
 {
     display: inline;
     height: 55px;
@@ -179,7 +160,9 @@ span.sheet-dee {
     margin-bottom: 0.2em;
     margin-right: 0.1em;
     text-align: right;
+    vertical-align: middle;
 }
+
 
 .sheet-rolltemplate-lesion .sheet-templateimagen
 {
@@ -191,24 +174,16 @@ span.sheet-dee {
     margin-bottom: 0.2em;
     margin-right: 0.1em;
     text-align: right;
-    
 }
 
-
-.sheet-rolltemplate-normal .sheet-adv span,
-.sheet-rolltemplate-normal .sheet-solo span,
+.sheet-rolltemplate-tirada .sheet-adv span,
+.sheet-rolltemplate-tirada .sheet-solo span,
 .sheet-rolltemplate-moribundo .sheet-adv span,
 .sheet-rolltemplate-moribundo .sheet-solo span,
 .sheet-rolltemplate-muerte .sheet-adv span,
 .sheet-rolltemplate-muerte .sheet-solo span,
 .sheet-rolltemplate-golpe .sheet-adv span,
 .sheet-rolltemplate-golpe .sheet-solo span,
-.sheet-rolltemplate-conj .sheet-adv span,
-.sheet-rolltemplate-conj .sheet-solo span,
-.sheet-rolltemplate-ventaja .sheet-adv span,
-.sheet-rolltemplate-ventaja .sheet-solo span,
-.sheet-rolltemplate-desventaja .sheet-adv span,
-.sheet-rolltemplate-desventaja .sheet-solo span,
 .sheet-rolltemplate-lesion .sheet-adv span,
 .sheet-rolltemplate-lesion .sheet-solo span,
 .sheet-rolltemplate-dmg .sheet-adv span,
@@ -220,13 +195,10 @@ span.sheet-dee {
     padding: 0px;
 }
 
-.sheet-rolltemplate-normal .sheet-advspacer,
+.sheet-rolltemplate-tirada .sheet-advspacer,
 .sheet-rolltemplate-moribundo .sheet-advspacer,
 .sheet-rolltemplate-muerte .sheet-advspacer,
 .sheet-rolltemplate-golpe .sheet-advspacer,
-.sheet-rolltemplate-conj .sheet-advspacer,
-.sheet-rolltemplate-ventaja .sheet-advspacer,
-.sheet-rolltemplate-desventaja .sheet-advspacer,
 .sheet-rolltemplate-lesion .sheet-advspacer,
 .sheet-rolltemplate-dmg .sheet-advspacer
 {
@@ -237,13 +209,10 @@ span.sheet-dee {
     width: 0px;
 }
 
-.sheet-rolltemplate-normal .sheet-arrow-right,
+.sheet-rolltemplate-tirada .sheet-arrow-right,
 .sheet-rolltemplate-moribundo .sheet-arrow-right,
 .sheet-rolltemplate-muerte .sheet-arrow-right,
 .sheet-rolltemplate-golpe .sheet-arrow-right,
-.sheet-rolltemplate-conj .sheet-arrow-right,
-.sheet-rolltemplate-ventaja .sheet-arrow-right,
-.sheet-rolltemplate-desventaja .sheet-arrow-right,
 .sheet-rolltemplate-lesion .sheet-arrow-right,
 .sheet-rolltemplate-dmg .sheet-arrow-right
 {
@@ -252,13 +221,10 @@ span.sheet-dee {
     border-top: 3px solid transparent;
 }
 
-.sheet-rolltemplate-normal .sheet-arrow-left,
+.sheet-rolltemplate-tirada .sheet-arrow-left,
 .sheet-rolltemplate-moribundo .sheet-arrow-left,
 .sheet-rolltemplate-muerte .sheet-arrow-left,
 .sheet-rolltemplate-golpe .sheet-arrow-left,
-.sheet-rolltemplate-conj .sheet-arrow-left,
-.sheet-rolltemplate-ventaja .sheet-arrow-left,
-.sheet-rolltemplate-desventaja .sheet-arrow-left,
 .sheet-rolltemplate-lesion .sheet-arrow-left,
 .sheet-rolltemplate-dmg .sheet-arrow-left
 {
@@ -267,13 +233,10 @@ span.sheet-dee {
     border-top: 3px solid transparent;
 }
 
-.sheet-rolltemplate-normal .sheet-solo,
+.sheet-rolltemplate-tirada .sheet-solo,
 .sheet-rolltemplate-moribundo .sheet-solo,
 .sheet-rolltemplate-muerte .sheet-solo,
 .sheet-rolltemplate-golpe .sheet-solo,
-.sheet-rolltemplate-conj .sheet-solo,
-.sheet-rolltemplate-ventaja .sheet-solo,
-.sheet-rolltemplate-desventaja .sheet-solo,
 .sheet-rolltemplate-lesion .sheet-solo,
 .sheet-rolltemplate-dmg .sheet-solo
 {
@@ -284,13 +247,10 @@ span.sheet-dee {
     width         : 100%;
 }
 
-.sheet-rolltemplate-normal span,
+.sheet-rolltemplate-tirada span,
 .sheet-rolltemplate-moribundo span,
 .sheet-rolltemplate-muerte span,
 .sheet-rolltemplate-golpe span,
-.sheet-rolltemplate-conj span,
-.sheet-rolltemplate-ventaja span,
-.sheet-rolltemplate-desventaja span,
 .sheet-rolltemplate-lesion span,
 .sheet-rolltemplate-dmg span
 {
@@ -302,13 +262,10 @@ span.sheet-dee {
 
 .sheet-rolltemplate-golpe .sheet-descontrol,
 .sheet-rolltemplate-lesion .sheet-lesion,
-.sheet-rolltemplate-normal .sheet-titulo,
+.sheet-rolltemplate-tirada .sheet-titulo,
 .sheet-rolltemplate-moribundo .sheet-titulo,
 .sheet-rolltemplate-muerte .sheet-titulo,
-.sheet-rolltemplate-golpe .sheet-titulo,
-.sheet-rolltemplate-conj .sheet-titulo,
-.sheet-rolltemplate-ventaja .sheet-titulo,
-.sheet-rolltemplate-desventaja .sheet-titulo
+.sheet-rolltemplate-golpe .sheet-titulo
 {
     margin-top: 3px !important;
     font-size: 16px;
@@ -319,9 +276,7 @@ span.sheet-dee {
 
 .sheet-rolltemplate-golpe .sheet-texto,
 .sheet-rolltemplate-lesion .sheet-texto,
-.sheet-rolltemplate-ventaja .sheet-texto,
-.sheet-rolltemplate-desventaja .sheet-texto,
-.sheet-rolltemplate-normal .sheet-texto
+.sheet-rolltemplate-tirada .sheet-texto
 {
     font-size: 13px;
     font-weight: normal;
@@ -331,13 +286,10 @@ span.sheet-dee {
 }
 
 
-.sheet-rolltemplate-normal .sheet-label,
+.sheet-rolltemplate-tirada .sheet-label,
 .sheet-rolltemplate-moribundo .sheet-label,
 .sheet-rolltemplate-muerte .sheet-label,
 .sheet-rolltemplate-golpe .sheet-label,
-.sheet-rolltemplate-conj .sheet-label,
-.sheet-rolltemplate-ventaja .sheet-label,
-.sheet-rolltemplate-desventaja .sheet-label,
 .sheet-rolltemplate-lesion .sheet-label,
 .sheet-rolltemplate-dmg .sheet-label
 {
@@ -346,13 +298,10 @@ span.sheet-dee {
     text-align: center;
 }
 
-.sheet-rolltemplate-normal .sheet-label span span,
+.sheet-rolltemplate-tirada .sheet-label span span,
 .sheet-rolltemplate-moribundo .sheet-label span span,
 .sheet-rolltemplate-muerte .sheet-label span span,
 .sheet-rolltemplate-golpe .sheet-label span span,
-.sheet-rolltemplate-conj .sheet-label span span,
-.sheet-rolltemplate-ventaja .sheet-label span span,
-.sheet-rolltemplate-desventaja .sheet-label span span,
 .sheet-rolltemplate-dmg .sheet-label span span
 {
     padding: 0px;
@@ -362,13 +311,10 @@ span.sheet-dee {
 }
 
 
-.sheet-rolltemplate-normal .sheet-grey,
+.sheet-rolltemplate-tirada .sheet-grey,
 .sheet-rolltemplate-moribundo .sheet-grey,
 .sheet-rolltemplate-muerte .sheet-grey,
 .sheet-rolltemplate-golpe .sheet-grey,
-.sheet-rolltemplate-conj .sheet-grey,
-.sheet-rolltemplate-ventaja .sheet-grey,
-.sheet-rolltemplate-desventaja .sheet-grey,
 .sheet-rolltemplate-lesion .sheet-grey,
 .sheet-rolltemplate-dmg .sheet-grey
 
@@ -379,26 +325,20 @@ span.sheet-dee {
 }
 
 
-.sheet-rolltemplate-normal .sheet-green,
+.sheet-rolltemplate-tirada .sheet-green,
 .sheet-rolltemplate-moribundo .sheet-green,
 .sheet-rolltemplate-muerte .sheet-green,
-.sheet-rolltemplate-golpe .sheet-green,
-.sheet-rolltemplate-conj .sheet-green,
-.sheet-rolltemplate-ventaja .sheet-green,
-.sheet-rolltemplate-desventaja .sheet-green
+.sheet-rolltemplate-golpe .sheet-green
 {
     color: #238300 !important;
     border: 0px;
 }
 
-.sheet-rolltemplate-normal .sheet-red,
+.sheet-rolltemplate-tirada .sheet-red,
 .sheet-rolltemplate-moribundo .sheet-red,
 .sheet-rolltemplate-muerte .sheet-red,
 .sheet-rolltemplate-golpe .sheet-red,
-.sheet-rolltemplate-conj .sheet-red,
-.sheet-rolltemplate-ventaja .sheet-red,
-.sheet-rolltemplate-lesion .sheet-red,
-.sheet-rolltemplate-desventaja .sheet-red
+.sheet-rolltemplate-lesion .sheet-red
 {
     color: #700000 !important;
     border: 0px;
@@ -407,20 +347,14 @@ span.sheet-dee {
 
 /*Estilo de los botones en las macros*/
 
-.sheet-rolltemplate-normal a[href^='!'],
-.sheet-rolltemplate-normal a[href^='~'],
+.sheet-rolltemplate-tirada a[href^='!'],
+.sheet-rolltemplate-tirada a[href^='~'],
 .sheet-rolltemplate-moribundo a[href^='!'],
 .sheet-rolltemplate-moribundo a[href^='~'],
 .sheet-rolltemplate-muerte a[href^='!'],
 .sheet-rolltemplate-muerte a[href^='~'],
 .sheet-rolltemplate-golpe a[href^='!'],
 .sheet-rolltemplate-golpe a[href^='~'],
-.sheet-rolltemplate-conj a[href^='!'],
-.sheet-rolltemplate-conj a[href^='~'],
-.sheet-rolltemplate-ventaja a[href^='!'],
-.sheet-rolltemplate-ventaja a[href^='~'],
-.sheet-rolltemplate-desventaja a[href^='!'],
-.sheet-rolltemplate-desventaja a[href^='~'],
 .sheet-rolltemplate-lesion a[href^='!'],
 .sheet-rolltemplate-lesion a[href^='~'],
 .sheet-rolltemplate-dmg a[href^='!'],
@@ -843,8 +777,8 @@ hr {
     display: block;
     overflow: hidden;
     min-height: 20px;
-    margin-bottom: 10px;
-    padding-top: 12px;
+    margin-bottom: 3px;
+    padding-top: 15px;
     min-height: 20px;
 }
 
@@ -855,7 +789,7 @@ hr {
     display: block;
     overflow: hidden;
     min-height: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
     padding-top: 0px;
     min-height: 20px;
 }
@@ -904,6 +838,7 @@ hr {
 .sheet-tooltip strong { line-height: 30px; }
 
 .sheet-tooltip:hover .sheet-info,
+.sheet-tooltip:hover .sheet-infoacciones,
 .sheet-tooltip:hover .sheet-infocoliseo
 {
     display: block;
@@ -921,6 +856,22 @@ hr {
     margin-top: -30px;
     margin-left: 28px;
     width: 300px;
+    line-height: 16px;
+    color: #111;
+    border: 1px solid #dca;
+    background: #fffaf0;
+}
+
+.sheet-tooltip .sheet-infoacciones {
+    display: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #ccc;
+    z-index: 10;
+    padding: 10px 15px;
+    margin-top: -90px;
+    margin-left: 28px;
+    min-width: 200px;
+    max-width: 500px;
     line-height: 16px;
     color: #111;
     border: 1px solid #dca;
