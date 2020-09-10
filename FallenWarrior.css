@@ -425,7 +425,7 @@ h1 {
 {
     border: 3px solid rgb(0, 0, 0);
     border-radius: 10px;
-    height: 360px;
+    height: 330px;
     margin-right:10px;
     padding: 5px;
     clear:left;
@@ -635,6 +635,11 @@ hr {
     float: left;
     width: 30%;
     } 
+
+    .sheet-33porciento{
+        float: left;
+        width: 33%;
+        } 
     
 .sheet-35porciento{
     float: left;
@@ -695,6 +700,26 @@ hr {
     border-top: 3px solid transparent;
 }
 
+.sheet-arrow-subright
+{
+    position: absolute;
+    z-index: 2;
+    border-bottom: 2px solid transparent;
+    border-left: 100px solid black;
+    left: 72%;
+    border-top: 3px solid transparent;
+}
+
+.sheet-arrow-subleft
+{
+    position: absolute;
+    z-index: 3;
+    border-bottom: 2px solid transparent;
+    border-right: 100px solid black;
+    right: 27%;
+    border-top: 3px solid transparent;
+}
+
 .sheet-descripcion{
     background: none;
     min-height: 30px;
@@ -734,23 +759,6 @@ hr {
 
 }
 
-/* ################################################### */
-/* ################ CARTELITOS INFO ################## */
-/* ################################################### */
-
-.sheet-botoninfocoliseo {
-    font-family:Pictos; 
-    font-size: x-large; 
-    z-index: 5;
-    position:relative;
-    text-align: left !important;
-    left: 0px;
-    top: -15px;
-    margin-left: -10px;
-    margin-right: -15px;
-
-}
-
 .sheet-bonificadorcoliseo {
     display: inline-block;
     font-size: 17px; 
@@ -768,6 +776,51 @@ hr {
     background-color: white;
     width: 30px;
     height: 30px !important;
+}
+
+.sheet-bonificadorcoliseo2 {
+    display: inline-block;
+    font-size: 17px; 
+    font-weight: bold;
+    z-index: 3;
+    position: relative;
+    text-align: center;
+    left: -30px;
+    top: -15px;
+    margin-right: -35px;
+    line-height: 30px;
+
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px; 
+    background-color: white;
+    width: 30px;
+    height: 30px !important;
+}
+
+.sheet-salvaciones {
+    display: inline-block !important;
+    margin: 10px !important;
+    border: 3px solid rgb(0, 0, 0) !important;
+    border-radius: 10px !important;
+    padding: 8px 15px !important;
+    font-size: large !important;
+}
+
+/* ################################################### */
+/* ################ CARTELITOS INFO ################## */
+/* ################################################### */
+
+.sheet-botoninfocoliseo {
+    font-family:Pictos; 
+    font-size: x-large; 
+    z-index: 5;
+    position:relative;
+    text-align: left !important;
+    left: 0px;
+    top: -15px;
+    margin-left: -10px;
+    margin-right: -15px;
+
 }
 
 .sheet-infotitulo {
@@ -991,29 +1044,6 @@ input.sheet-mostrar_especial10:not(:checked) ~ div.sheet-nota_especial10
 /* ############### BOTONES Y DIBUJOS ################# */
 /* ################################################### */
 
-input.sheet-innata
-{
-    max-width: 2em;  
-    width: 12px;
-    height: 12px;
-    position: relative;
-    vertical-align: middle;
-    margin-right: -6px !important;
-    color: black;
-}
-
-input.sheet-innatacomb
-{
-    max-width: 2em;  
-    width: 12px;
-    height: 12px;
-    position: relative;
-    vertical-align: middle;
-    margin-right: 3px !important;
-    color: black;
-    Top: -2px;
-}
-
 .sheet-dibujito{
     height: 70px;
     width: 70px;
@@ -1183,15 +1213,35 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-/* ################################################### */
-/* ################## CIRCULITOS ##################### */
-/* ################################################### */
 
-/* -----Hide actual radio----- */
-input.sheet-rango[type="radio"],
-input.sheet-rango2[type="radio"],
-input.sheet-rango3[type="radio"],
-input.sheet-rangox[type="checkbox"]
+/* ################################################### */
+/* ################# CUSTOM CHECKS ################### */
+/* ################################################### */
+input.sheet-innata
+{
+    max-width: 2em;  
+    width: 12px;
+    height: 12px;
+    position: relative;
+    vertical-align: middle;
+    margin-right: -6px !important;
+}
+
+input.sheet-innatacomb
+{
+    max-width: 2em;  
+    width: 12px;
+    height: 12px;
+    position: relative;
+    vertical-align: middle;
+    margin-right: 3px !important;
+    color: black;
+    Top: -2px;
+}
+
+
+input.sheet-rangoextra,
+input.sheet-atributoextra
 {
     max-width: 2em;  
     opacity: 0;
@@ -1205,40 +1255,104 @@ input.sheet-rangox[type="checkbox"]
     z-index: 1;
 }
 
-/*input.sheet-rangox[type="checkbox"]
+/* -----Fake check (los circulitos que sí se ven)----- */
+
+input.sheet-rangoextra + span
+{
+    content: "";
+    background-color: transparent;
+    margin-right: 5px;
+    border: solid 2px black;
+    line-height: 8px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgb(100, 0, 0);
+    
+    color:black;
+    content: "•";
+    width: 8px;
+    height: 8px; 
+    font-size: 1em;
+
+
+    /*Esto hace que sean círculos en vez de cuadrados*/
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+input.sheet-atributoextra + span
+{
+    margin-right: 5px;
+    border: solid 2px black;
+    line-height: 8px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgb(100, 0, 0);
+    
+    
+    color:black;
+    content: "•";
+    width: 12px;
+    height: 12px; 
+    font-size: 1em;
+
+    /*Esto hace que sean círculos en vez de cuadrados ••●∴⋅⬤*/
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+input.sheet-rangoextra:checked + span,
+input.sheet-atributoextra:checked + span,
+{    
+    content: "";
+    background-color: transparent;
+}
+  
+/* ################################################### */
+/* ################## CIRCULITOS ##################### */
+/* ################################################### */
+
+/* -----Hide actual radio----- */
+input.sheet-rango[type="radio"],
+input.sheet-rango2[type="radio"],
+input.sheet-rango3[type="radio"]
 {
     max-width: 2em;  
-    width: 13px;
-    height: 13px;
+    opacity: 0;
+    width: 16px;
+    height: 16px;
     position: relative;
-    left: 2px;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
     cursor: pointer;
-    padding: 0;
-    border-radius: 5px;
-    border: solid 2px black;
-}*/
+    z-index: 1;
+}
 
 /* -----Fake radio (los circulitos que sí se ven)----- */
 
 input.sheet-rango[type="radio"] + span::before
 {
-    margin-right: 8px;
+    margin-right: 5px;
     border: solid 2px black;
-    line-height: 13px;
+    line-height: 12px;
     text-align: center;
     display: inline-block;
     vertical-align: middle;
     background-color: black;
     
     
-    
     color:black;
     content: "•";
-    width: 13px;
-    height: 13px; 
-    font-size: 1em;
+    width: 12px;
+    height: 12px; 
+    font-size: 1.4em;
 
-    
+    /*Esto hace que sean círculos en vez de cuadrados ••●∴⋅⬤*/
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -1259,7 +1373,7 @@ input.sheet-rango2[type="radio"] + span::before
     content: "•";
     width: 12px;
     height: 12px; 
-    font-size: 1em;
+    font-size: 1.4em;
 
     /*Esto hace que sean círculos en vez de cuadrados ••●∴⋅⬤*/
     -moz-border-radius: 50%;
@@ -1290,29 +1404,7 @@ input.sheet-rango3[type="radio"] + span::before
     border-radius: 50%;
 }
 
-input.sheet-rangox[type="checkbox"] + span::before
-{
-    margin-right: 5px;
-    border: solid 2px black;
-    line-height: 8px;
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-    
-    
-    
-    color:black;
-    content: "⬤";
-    width: 8px;
-    height: 8px; 
-    font-size: 1em;
 
-
-    /*Esto hace que sean círculos en vez de cuadrados (puntos varios: •∴⋅⬤)*/
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
 
 /* -----Remove dot from all radios _after_ selected one----- */
 input.sheet-rango[type="radio"]:checked ~ input.sheet-rango[type="radio"] + span::before,
@@ -1336,10 +1428,11 @@ input.sheet-zero[type="radio"]:hover + span::before
 
 input.sheet-zero[type="radio"] + span::before
 {
-    font-size: 12px;
     content: "✖";
-    opacity: 0.15;
+    opacity: 0.20;
     background-color: transparent;
+    border: none;
+    margin-right: 6px !important;
 }
 
 
