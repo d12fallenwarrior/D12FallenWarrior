@@ -706,7 +706,7 @@ hr {
     z-index: 2;
     border-bottom: 2px solid transparent;
     border-left: 100px solid black;
-    left: 72%;
+    left: 77%;
     border-top: 3px solid transparent;
 }
 
@@ -716,7 +716,7 @@ hr {
     z-index: 3;
     border-bottom: 2px solid transparent;
     border-right: 100px solid black;
-    right: 27%;
+    right: 23%;
     border-top: 3px solid transparent;
 }
 
@@ -769,6 +769,25 @@ hr {
     left: -18px;
     top: -15px;
     margin-right: -35px;
+    line-height: 30px;
+
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px; 
+    background-color: white;
+    width: 30px;
+    height: 30px !important;
+}
+
+.sheet-bonificadorcoliseoarm {
+    display: inline-block;
+    font-size: 17px; 
+    font-weight: bold;
+    z-index: 3;
+    position: relative;
+    text-align: center;
+    left: -18px;
+    top: -15px;
+    margin-right: -15px;
     line-height: 30px;
 
     border: 2px solid rgb(0, 0, 0);
