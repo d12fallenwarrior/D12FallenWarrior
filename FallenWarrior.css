@@ -1038,16 +1038,6 @@ input.sheet-mostrar_especial10:not(:checked) ~ div.sheet-nota_especial10
   display: none;
 }
 
-.sheet-ficha_luchador,
-.sheet-tipodeficha:checked ~ .sheet-ficha_mago {
-  display: inline;
-}
-
-.sheet-ficha_mago,
-.sheet-tipodeficha:checked ~ .sheet-ficha_luchador {
-  display: none;
-}
-
 .sheet-cuadro_acciones,
 .sheet-cuadronotas:checked ~ .sheet-cuadro_especial {
   display: inline;
