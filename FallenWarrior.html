@@ -222,16 +222,6 @@
 <div class="arrow-left"></div>
 <hr>
 
-<!--Cambio ficha mago/luchador-->
-<!--<input type="checkbox" class="tipodeficha check oculto" name="attr_tipodeficha" value="1">-->
-<input type="checkbox" class="tipodeficha check" name="attr_tipodeficha" value="1" style="float:right;">
-<div class="ficha_luchador negrita" style="float:right">
-  FICHA DE LUCHADOR
-</div>
-<div class="ficha_mago negrita" style="float:right;">
-  FICHA DE MAGO
-</div>
-
 <!--SECCIÓN DAÑO Y TIPO TIRADA-->
 
 
@@ -501,14 +491,11 @@
     </tr>
 
     </tbody>
-</table>
-
-       
+</table> 
 </div>
 
-<br>
+<p></p>
 <hr>
-
 
 <!-- ESQUIVA BLOQUEO PELEA-->
     <div class ="3colrow">
@@ -574,11 +561,8 @@
             </div>
     </div>
     
-    
 
 <!--SECCIÓN MAGOS-->
-<div class="ficha_mago">
-    <br>
     <hr>
     <div class="3colrow">
         <div class="col">
@@ -644,8 +628,6 @@
     </div>
     <br>
 
-
-</div>
 
 <div class="arrow-left"></div>
     <hr>
@@ -1219,7 +1201,7 @@
 
 
 
-    <div class="28porciento ficha_luchador"> <!--Habilidades Combate LUCHADOR-->
+    <div class="28porciento"> <!--Habilidades Combate-->
         <h3 class="centrado">Combate</h3>
     <table style="margin: 0 auto;">
         <tbody>
@@ -1229,17 +1211,29 @@
             <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_sa" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sa" value="6" /><span></span></td>
         
         </tr><tr><td style="padding-bottom:5px">
+            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_conjuracion" value="1"><span class="fuentehabcomb">Conjuración</span> </td><td style="padding-bottom:5px">
+            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_conjuracion" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_conjuracion" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_conjuracion" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_conjuracion" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_conjuracion" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_conjuracion" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_conjuracion" value="6" /><span></span></td>
+        
+        </tr><tr><td style="padding-bottom:5px">
+            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_disparo" value="1"><span class="fuentehabcomb">Disparo</span> </td><td style="padding-bottom:5px">
+            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_disparo" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_disparo" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_disparo" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_disparo" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_disparo" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_disparo" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_disparo" value="6" /><span></span></td>
+   
+        </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_esquiva" value="1"><span class="fuentehabcomb">Esquiva*</span> </td><td style="padding-bottom:5px">
             <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_esquiva" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_esquiva" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_esquiva" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_esquiva" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_esquiva" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_esquiva" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_esquiva" value="6" /><span></span></td>   
-        
+
+        </tr><tr><td style="padding-bottom:5px">
+            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_intensidad" value="1"><span class="fuentehabcomb">Intensidad</span> </td><td style="padding-bottom:5px">
+            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_intensidad" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intensidad" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intensidad" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intensidad" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intensidad" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intensidad" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intensidad" value="6" /><span></span></td>
+
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_espada" value="1"><span class="fuentehabcomb">Espada</span> </td><td style="padding-bottom:5px">
             <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_espada" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_espada" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_espada" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_espada" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_espada" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_espada" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_espada" value="6" /><span></span></td>
   
         </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_maza" value="1"><span class="fuentehabcomb">Maza y martillo</span> </td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_maza" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_maza" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_maza" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_maza" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_maza" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_maza" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_maza" value="6" /><span></span></td>
-  
+            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_hacha" value="1"><span class="fuentehabcomb">Hacha y maza</span> </td><td style="padding-bottom:5px">
+            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_hacha" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_hacha" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_hacha" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_hacha" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_hacha" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_hacha" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_hacha" value="6" /><span></span></td>
+   
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_mangual" value="1"><span class="fuentehabcomb">Mangual y cadena</span> </td><td style="padding-bottom:5px">
             <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_mangual" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_mangual" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_mangual" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_mangual" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_mangual" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_mangual" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_mangual" value="6" /><span></span></td>
@@ -1249,17 +1243,9 @@
             <input type="radio" title="Rango" title="Rango" class="rango3 sheet-zero" name="attr_rang_asta" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_asta" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_asta" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_asta" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_asta" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_asta" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_asta" value="6" /><span></span></td>
    
         </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_hacha" value="1"><span class="fuentehabcomb">Hacha y pico</span> </td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_hacha" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_hacha" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_hacha" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_hacha" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_hacha" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_hacha" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_hacha" value="6" /><span></span></td>
-   
-        </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_arco" value="1"><span class="fuentehabcomb">Arco</span> </td><td style="padding-bottom:5px">
+            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_arco" value="1"><span class="fuentehabcomb">Arco y ballesta</span> </td><td style="padding-bottom:5px">
             <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_arco" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_arco" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_arco" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_arco" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_arco" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_arco" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_arco" value="6" /><span></span></td>
   
-        </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_ballesta" value="1"><span class="fuentehabcomb">Ballesta</span></td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_ballesta" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ballesta" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ballesta" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ballesta" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ballesta" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ballesta" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ballesta" value="6" /><span></span></td>
-   
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_afuego" value="1"><span class="fuentehabcomb">Arma de fuego</span></td><td style="padding-bottom:5px">
             <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_afuego" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_afuego" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_afuego" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_afuego" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_afuego" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_afuego" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_afuego" value="6" /><span></span></td>
@@ -1271,51 +1257,6 @@
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_rara2" value="1"><input name="attr_name_rara2" placeholder="Arma rara" class="fuentehab" type="text" style="width: 80px;"></span></td><td style="padding-bottom:5px">
             <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_rara2" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara2" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara2" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara2" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara2" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara2" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara2" value="6" /><span></span></td>
-
-        </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_rara3" value="1"><input name="attr_name_rara3" placeholder="Arma rara" class="fuentehab" type="text" style="width: 80px;"></span></td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_rara3" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara3" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara3" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara3" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara3" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara3" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rara3" value="6" /><span></span></td>
-
-        </tbody>
-    </table>
-    </div>
-
-    <div class="28porciento ficha_mago"> <!--Habilidades Combate MAGO-->
-        <h3 class="centrado">Combate</h3>
-    <table style="margin: 0 auto;">
-        <tbody>
-        
-        <tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_sa" value="1"><span class="fuentehabcomb">C. sin armas</span> </td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_magsa" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magsa" value="6" /><span></span></td>
-        
-        </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_esquiva" value="1"><span class="fuentehabcomb">Esquiva*</span> </td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_magesquiva" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magesquiva" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magesquiva" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magesquiva" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magesquiva" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magesquiva" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magesquiva" value="6" /><span></span></td>   
-        
-        </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_conjuracion" value="1"><span class="fuentehabcomb">Conjuración</span> </td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_conjuracion" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_conjuracion" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_conjuracion" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_conjuracion" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_conjuracion" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_conjuracion" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_conjuracion" value="6" /><span></span></td>
-        
-        </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_disparo" value="1"><span class="fuentehabcomb">Disparo</span> </td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_disparo" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_disparo" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_disparo" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_disparo" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_disparo" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_disparo" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_disparo" value="6" /><span></span></td>
-   
-        </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_intensidad" value="1"><span class="fuentehabcomb">Intensidad</span> </td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_intensidad" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intensidad" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intensidad" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intensidad" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intensidad" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intensidad" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intensidad" value="6" /><span></span></td>
-  
-        </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_rara1" value="1"><input name="attr_name_rara1" placeholder="Arma rara" class="fuentehab" type="text" style="width: 80px;"></span></td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_magrara1" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara1" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara1" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara1" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara1" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara1" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara1" value="6" /><span></span></td>
-
-        </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_rara2" value="1"><input name="attr_name_rara2" placeholder="Arma rara" class="fuentehab" type="text" style="width: 80px;"></span></td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_magrara2" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara2" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara2" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara2" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara2" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara2" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara2" value="6" /><span></span></td>
-
-        </tr><tr><td style="padding-bottom:5px">
-            <input type="checkbox" class="innatacomb" title="Habilidad innata" name="attr_innata_rara3" value="1"><input name="attr_name_rara3" placeholder="Arma rara" class="fuentehab" type="text" style="width: 80px;"> </td><td style="padding-bottom:5px">
-            <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_magrara3" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara3" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara3" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara3" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara3" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara3" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_magrara3" value="6" /><span></span></td>
 
         </tbody>
     </table>
