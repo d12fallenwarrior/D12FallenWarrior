@@ -636,10 +636,10 @@ hr {
     width: 30%;
     } 
 
-    .sheet-33porciento{
-        float: left;
-        width: 33%;
-        } 
+.sheet-33porciento{
+    float: left;
+    width: 33%;
+    } 
     
 .sheet-35porciento{
     float: left;
@@ -665,6 +665,11 @@ hr {
     float: left;
     width: 50%;
     }  
+
+.sheet-54porciento{
+    float: left;
+    width: 54%;
+    }     
 
 .sheet-60porciento{
     float: left;
