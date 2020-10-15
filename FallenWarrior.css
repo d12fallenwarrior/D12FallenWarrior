@@ -982,7 +982,8 @@ input.sheet-toggle-show:not(:checked) ~ div.sheet-body {
 
 input.sheet-mostrar_talentos:not(:checked) ~ div.sheet-editable_talentos,
 input.sheet-mostrar_rasgos:not(:checked) ~ div.sheet-editable_rasgos, 
-input.sheet-mostrar_notas:not(:checked) ~ div.sheet-editable_notas 
+input.sheet-mostrar_notas:not(:checked) ~ div.sheet-editable_notas,
+input.sheet-mostrar_magia:not(:checked) ~ div.sheet-editable_magia 
 {
     display: none;
 }
@@ -1332,6 +1333,7 @@ input.sheet-atributoextra:checked + span,
 
 /* -----Hide actual radio----- */
 input.sheet-rango[type="radio"],
+input.sheet-rangorojo[type="radio"],
 input.sheet-rango2[type="radio"],
 input.sheet-rango3[type="radio"]
 {
@@ -1361,6 +1363,29 @@ input.sheet-rango[type="radio"] + span::before
     
     
     color:black;
+    content: "•";
+    width: 12px;
+    height: 12px; 
+    font-size: 1.4em;
+
+    /*Esto hace que sean círculos en vez de cuadrados ••●∴⋅⬤*/
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+input.sheet-rangorojo[type="radio"] + span::before
+{
+    margin-right: 5px;
+    border: solid 2px black;
+    line-height: 12px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgb(100, 0, 0);
+    
+    
+    color: rgb(100, 0, 0);
     content: "•";
     width: 12px;
     height: 12px; 
@@ -1422,6 +1447,7 @@ input.sheet-rango3[type="radio"] + span::before
 
 /* -----Remove dot from all radios _after_ selected one----- */
 input.sheet-rango[type="radio"]:checked ~ input.sheet-rango[type="radio"] + span::before,
+input.sheet-rangorojo[type="radio"]:checked ~ input.sheet-rangorojo[type="radio"] + span::before,
 input.sheet-rango2[type="radio"]:checked ~ input.sheet-rango2[type="radio"] + span::before,
 input.sheet-rango3[type="radio"]:checked ~ input.sheet-rango3[type="radio"] + span::before
 {    
@@ -1448,9 +1474,6 @@ input.sheet-zero[type="radio"] + span::before
     border: none;
     margin-right: 6px !important;
 }
-
-
-
 
 
 /*quitar los dados
