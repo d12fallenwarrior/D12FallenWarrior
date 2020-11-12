@@ -3400,6 +3400,121 @@
             </div>
             {{/rollTotal() r1 12}}
         {{/descontrolosc}}
+
+        {{#ideología}}
+        <div>
+            <div class="adv"><span>{{r1}}</span></div>
+            <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/Logoxs.png"/>    
+        </div>
+        <div class="label descontrol">Ideología a prueba</div>
+        <div class="arrow-right"></div>
+
+            {{#rollBetween() r1 -10 5}}
+            <div class="label texto">
+                Aguantas estoicamente, <span>no pasa nada</span>.
+            </div>
+            {{/rollBetween() r1 -10 5}}
+
+            {{#rollBetween() r1 6 10}}
+            <div class="label texto">
+                Reduce un rango la ideología afectada permanentemente y sufres un desequilibrio.
+                <p></p><span>[Desequilibrio](!&#13;#Desequilibrio)</span>
+            </div>
+            {{/rollBetween() r1 6 10}}
+
+            {{#rollBetween() r1 11 20}}
+            <div class="label texto">
+                Sufres un desequilibrio y una secuela (ambos), pero NO reduces el rango de tu ideología.
+                <p></p><span>[Desequilibrio](!&#13;#Desequilibrio)&nbsp;&nbsp;[Secuela](!&#13;#Secuela)</span>
+            </div>
+            {{/rollBetween() r1 11 20}}
+
+        {{/ideología}}
+
+        {{#desequilibrio}}
+        <div>
+            <div class="adv"><span>{{r1}}</span></div>
+            <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/Logoxs.png"/>    
+        </div>
+        <div class="label descontrol">Desequilibrio</div>
+        <div class="arrow-right"></div>
+
+            {{#rollBetween() r1 1 2}}
+            <div class="label texto">
+                <span>Ansiedad:</span> quedas aturdido una ronda. -1 a Voluntad durante {{r2}} días.
+            </div>
+            {{/rollBetween() r1 1 2}}
+
+            {{#rollBetween() r1 3 4}}
+            <div class="label texto">
+                <span>Pánico:</span> cada ronda huyes del combate o escena por todos los medios hasta alejarte de aquello que provocó el desequilibrio. -1 a Reflejos durante {{r2}} días.
+            </div>
+            {{/rollBetween() r1 3 4}}
+
+            {{#rollBetween() r1 5 6}}
+            <div class="label texto">
+                <span>Náuseas:</span> quedas aturdido una ronda y mareado hasta el final del combate o escena. Reduce {{r3}} tu Energía durante {{r2}} días.
+            </div>
+            {{/rollBetween() r1 5 6}}
+
+            {{#rollBetween() r1 7 8}}
+            <div class="label texto">
+                <span>Rechazo:</span> ignora por completo aquello que te causó el desequilibrio, llegando incluso a perder la memoria o modificar tus recuerdos. Recibes la mitad de experiencia en esta sesión.
+            </div>
+            {{/rollBetween() r1 7 8}}
+
+            {{#rollBetween() r1 9 10}}
+            <div class="label texto">
+                <span>Frenesí:</span> hasta el final del combate o escena te lanzas y tratas por todos los medios de solucionar lo que sea que causó el desequilibrio o de castigar al responsable. -1 a Estrategia durante {{r2}} días.
+            </div>
+            {{/rollBetween() r1 9 10}}
+
+            {{#rollBetween() r1 11 12}}
+            <div class="label texto">
+                <span>Shock:</span> durante todo el combate o escena no puedes hacer ninguna acción y sólo puedes moverte si tiran de ti. -1 a todas tus tiradas durante el resto de la sesión.
+            </div>
+            {{/rollBetween() r1 11 12}}
+        {{/desequilibrio}}
+
+        {{#secuela}}
+        <div>
+            <div class="adv"><span>{{r1}}</span></div>
+            <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/Logoxs.png"/>    
+        </div>
+        <div class="label descontrol">Secuela</div>
+        <div class="arrow-right"></div>
+
+            {{#rollBetween() r1 1 3}}
+            <div class="label texto">
+                <span>Adicción:</span> recibes una adicción permanentemente.
+            </div>
+            {{/rollBetween() r1 1 3}}
+
+            {{#rollBetween() r1 4 6}}
+            <div class="label texto">
+                <span>Impresionable:</span> recibes el rasgo impresionable permanentemente (-1 a Voluntad).
+            </div>
+            {{/rollBetween() r1 4 6}}
+
+            {{#rollBetween() r1 7 9}}
+            <div class="label texto">
+                <span>Fobia:</span> recibes el rasgo fobia permanentemente.
+            </div>
+            {{/rollBetween() r1 7 9}}
+
+            {{#rollBetween() r1 10 11}}
+            <div class="label texto">
+                <span>Pesadillas:</span> recibes el rasgo insomnio permanentemente.
+            </div>
+            {{/rollBetween() r1 10 11}}
+
+            {{#rollTotal() r1 12}}
+            <div class="label texto">
+                <span>Locura:</span> recibes un trastorno mental al azar permanentemente.
+            </div>
+            {{/rollTotal() r1 12}}
+        {{/secuela}}
+
     </div>
 </rolltemplate>
 
