@@ -114,36 +114,36 @@
             
                     <td><button name="roll_reflejos" type="roll" value="&{template:tirada} {{logo=Ah}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cs0cf0+@{ref})]]}} {{r2=[[(1d12cs0cf0+@{ref})]]}} {{r3=[[(1d12cs0cf0+@{ref})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">
                         <span class="dadito">0</span><span> Reflejos</span></button></td>
-                    <td><input name="attr_ref" type="number" class="centrado bordecuad" style="width: 70px;" value="-6"></td>
+                    <td><input name="attr_ref" type="number" class="centrado bordecuad" style="width: 70px;" value="-5"></td>
                 <!-- <input name="attr_ref_esp" type="number" value="0">
-                <input name="attr_ref" type="number" value="[[(@{agi} [Agi] + @{ast} [Ast] -6 + @{ref_esp} [Otros])]]" disabled> -->
+                <input name="attr_ref" type="number" value="[[(@{agi} [Agi] + @{ast} [Ast] -5 + @{ref_esp} [Otros])]]" disabled> -->
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
                     <td><button name="roll_vitalidad" type="roll" value="&{template:tirada} {{logo=Ah}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cs0cf0+@{vit})]]}} {{r2=[[(1d12cs0cf0+@{vit})]]}} {{r3=[[(1d12cs0cf0+@{vit})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
                         <span class="dadito">0</span><span> Vitalidad</span></button></td>
-                    <td><input name="attr_vit" type="number" class="centrado bordecuad" style="width: 70px;" value="-6"></td>
+                    <td><input name="attr_vit" type="number" class="centrado bordecuad" style="width: 70px;" value="-5"></td>
                 <!-- <input name="attr_vit_esp" type="number" value="0">
                 <input name="attr_vit" type="number" value="[[(@{res} [Res] + @{fue} [Fue] - 5 + @{vit_esp} [Otros])]]" disabled> --> 
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
                     <td><button name="roll_voluntad" type="roll" value="&{template:tirada} {{logo=Ah}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cs0cf0+@{vol})]]}} {{r2=[[(1d12cs0cf0+@{vol})]]}} {{r3=[[(1d12cs0cf0+@{vol})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> 
                         <span class="dadito">0</span><span> Voluntad</span></button></td>
-                    <td><input name="attr_vol" type="number" class="centrado bordecuad" style="width: 70px;" value="-6"></td>
+                    <td><input name="attr_vol" type="number" class="centrado bordecuad" style="width: 70px;" value="-5"></td>
                 <!-- <input name="attr_vol_esp" type="number" value="0">
                 <input name="attr_vol" type="number" value="[[(@{int} [Int] + @{ast} [Ast] - 5 + @{vol_esp} [Otros])]]" disabled> -->
             </tr>
             <tr class="negrita smaller">
-                <td class="centrado"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Agi+Ast-6)</span></td>
+                <td class="centrado"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Agi+Ast-5)</span></td>
 
                 <td class="centrado"><span>Bonificador</span></td>
                 <td>&nbsp;</td>
 
-                <td class="centrado"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Res+Fue-6)</span></td>
+                <td class="centrado"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Res+Fue-5)</span></td>
 
                 <td class="centrado"><span>Bonificador</span></td>
                 <td>&nbsp;</td>
 
-                <td class="centrado"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Int+Res-6)</span></td>
+                <td class="centrado"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Int+Res-5)</span></td>
 
                 <td class="centrado"><span>Bonificador</span></td>                        
             </tr>
@@ -510,10 +510,10 @@
                         <tr class="centrado bordetop">
                             <td  class="bordebot"><button name="roll_esquiva" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{rang_piruetas}]]}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12cs0cf0+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >Esquiva*</button></td>
                             <td >&nbsp;</td>
-                            <td  class="bordebot"><input name="attr_esquiva" type="number"  class="centrado" value="-6" style="width: 65px;"></td>
+                            <td  class="bordebot"><input name="attr_esquiva" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
                         </tr>
                         <tr class="negrita smaller">
-                            <td class="centrado"><span>&nbsp;&nbsp;(Agi+esquiva-6)&nbsp;&nbsp;</span></td>
+                            <td class="centrado"><span>&nbsp;&nbsp;(Agi+esquiva-5)&nbsp;&nbsp;</span></td>
                             <td >&nbsp;</td>
     
                             <td class="centrado"><span>Bonificador</span></td>
@@ -531,10 +531,10 @@
                         <tr class="centrado bordetop">
                             <td  class="bordebot"><button name="roll_desvio" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{rang_piruetas}]]}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12cs0cf0+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >Desvío</button></td>
                             <td >&nbsp;</td>    
-                            <td  class="bordebot"><input name="attr_desvio" type="number"  class="centrado" value="-6" style="width: 65px;"></td>
+                            <td  class="bordebot"><input name="attr_desvio" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
                         </tr>
                         <tr class="negrita smaller">
-                            <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-6)&nbsp;&nbsp;</span></td>
+                            <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-5)&nbsp;&nbsp;</span></td>
                             <td >&nbsp;</td>
     
                             <td class="centrado"><span>Bonificador</span></td>
@@ -552,10 +552,10 @@
                         <tr class="centrado bordetop">
                             <td  class="bordebot"><button name="roll_pelea" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(1d12cs0cf0+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >Pelea</button></td>
                             <td >&nbsp;</td>
-                            <td  class="bordebot"><input name="attr_pelea" type="number" class="centrado" value="-6" style="width: 65px;"></td>
+                            <td  class="bordebot"><input name="attr_pelea" type="number" class="centrado" value="-5" style="width: 65px;"></td>
                         </tr>
                         <tr class="negrita smaller">
-                            <td class="centrado"><span>&nbsp;&nbsp;(Fue+CsA-6)&nbsp;&nbsp;</span></td>
+                            <td class="centrado"><span>&nbsp;&nbsp;(Fue+CsA-5)&nbsp;&nbsp;</span></td>
                             <td >&nbsp;</td>    
                             <td class="centrado"><span>Bonificador</span></td>
                         </tr>
@@ -578,11 +578,11 @@
             <td class="bordebot"><button name="roll_conjuracion" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(3+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{dificultad2=[[(1+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >Conjuración</button></td>
             </td>
             <td>&nbsp;</td>
-            <td class="bordebot"><input name="attr_conjuracion" type="number"  class="centrado" value="-6" style="width: 65px;"></td>
+            <td class="bordebot"><input name="attr_conjuracion" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
             </tr>
 
             <tr class="negrita smaller">
-                <td class="centrado"><span>(Ast+conjuración-6)</span></td>
+                <td class="centrado"><span>(Ast+conjuración-5)</span></td>
                 <td>&nbsp;</td>    
                 <td class="centrado"><span>Bonificador</span></td>
             </tr>                        
@@ -597,10 +597,10 @@
                         <tr class="centrado bordetop">
             <td class="bordebot"><button name="roll_intensidad" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}}  {{magia=Intensidad}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(1d12cs0cf0+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">Intensidad</button></td>
             <td>&nbsp;</td>       
-            <td class="bordebot"><input name="attr_intensidad" type="number"  class="centrado" value="-6" style="width: 65px;"></td>
+            <td class="bordebot"><input name="attr_intensidad" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
             </tr>
             <tr class="negrita smaller">
-                <td class="centrado"><span>&nbsp;&nbsp;(Int+intensidad-6)&nbsp;&nbsp;</span></td>
+                <td class="centrado"><span>&nbsp;&nbsp;(Int+intensidad-5)&nbsp;&nbsp;</span></td>
                 <td>&nbsp;</td>    
                 <td class="centrado"><span>Bonificador</span></td>
             </tr>
@@ -617,10 +617,10 @@
                         <tr class="centrado bordetop">
             <td class="bordebot"><button name="roll_disparo" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}}  {{magia=Disparo}}  {{eter=@{eter}}} {{eter2=@{eter2}}} {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(1d12cs0cf0+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">Disparo</button></td>
             <td>&nbsp;</td>
-            <td class="bordebot"><input name="attr_disparo" type="number"  class="centrado" value="-6" style="width: 65px;"></td>
+            <td class="bordebot"><input name="attr_disparo" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
             </tr>
             <tr class="negrita smaller">
-                <td class="centrado"><span>&nbsp;&nbsp;(Ast+disparo-6)&nbsp;&nbsp;</span></td>
+                <td class="centrado"><span>&nbsp;&nbsp;(Ast+disparo-5)&nbsp;&nbsp;</span></td>
                 <td>&nbsp;</td>    
                 <td class="centrado"><span>Bonificador</span></td>
             </tr>
@@ -930,7 +930,7 @@
                         <tr class="bordetop">                            
                             <td class="centrado bordebot"><button name="roll_ataque1" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{ataque=Daño @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=(@{tipodmg1})}} {{alcance=@{alc1}}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12cs0cf0+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 1</button></td>
                             <td>&nbsp;</td>
-                            <td class="centrado bordebot"><input name="attr_ataque1" type="number"  style="width: 70px;" class="centrado" value="-6"></td>
+                            <td class="centrado bordebot"><input name="attr_ataque1" type="number"  style="width: 70px;" class="centrado" value="-5"></td>
                             <td>&nbsp;</td>
 
                     <td class="centrado bordebot"><select name="attr_tipodmg1" style="width: 48px;">
@@ -954,7 +954,7 @@
                     </tr>
 
                         <tr class="negrita smaller">
-                            <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-6)&nbsp;&nbsp;</span></td>
+                            <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-5)&nbsp;&nbsp;</span></td>
                             <td>&nbsp;</td>
                             <td class="centrado"><span>Bonificador</span></td>
                             <td>&nbsp;</td>
@@ -989,7 +989,7 @@
                             <td class="centrado bordebot"><button name="roll_ataque2" type="roll" value="&{template:tirada} {{ataque2=Ah}} {{ataque=Daño @{dmg2} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can2}}} {{rname=Ataque}} {{mod=@{ataque2}}} {{arma=@{nombrearma2}}} {{tipodmg=(@{tipodmg2})}} {{alcance=@{alc2}}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(1d12cs0cf0+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 2</button>
                             </td>
                             <td>&nbsp;</td>
-                            <td class="centrado bordebot"><input name="attr_ataque2" type="number"  style="width: 70px;" class="centrado" value="-6"></td>
+                            <td class="centrado bordebot"><input name="attr_ataque2" type="number"  style="width: 70px;" class="centrado" value="-5"></td>
                             <td>&nbsp;</td>
                            
                     <td class="centrado bordebot"><select name="attr_tipodmg2" style="width: 48px;">
@@ -1012,7 +1012,7 @@
                     <td class="bordebot"><input name="attr_esp2" type="text"  style="width: 185px;"></td>
                         </tr>
                         <tr class="negrita smaller">
-                            <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-6)&nbsp;&nbsp;</span></td>
+                            <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-5)&nbsp;&nbsp;</span></td>
                             <td>&nbsp;</td>
                             <td class="centrado"><span>Bonificador</span></td>
                             <td>&nbsp;</td>
@@ -1060,7 +1060,7 @@
                             <button name="roll_ataque" type="roll" value="&{template:tirada} {{ataque3=Ah}} {{ataque=Daño @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{arma=@{nombrearma3}}} {{tipodmg=(@{tipodmg3})}} {{mod=@{ataque3}}} {{alcance=@{alc3}}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(1d12cs0cf0+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Ataque 3</button>
                             </td>
                             <td>&nbsp;</td>    
-                            <td class="centrado bordebot"><input name="attr_ataque3" type="number" style="width: 70px;" class="centrado" value="-6"></td>
+                            <td class="centrado bordebot"><input name="attr_ataque3" type="number" style="width: 70px;" class="centrado" value="-5"></td>
                             <td>&nbsp;</td>
 
                     <td class="centrado bordebot"><select name="attr_tipodmg3" style="width: 48px;">
@@ -1086,7 +1086,7 @@
                     </tr>
 
                     <tr class="negrita smaller">
-                        <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-6)&nbsp;&nbsp;</span></td>
+                        <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-5)&nbsp;&nbsp;</span></td>
                         <td>&nbsp;</td>
                         <td class="centrado"><span>Bonificador</span></td>
                         <td>&nbsp;</td>
@@ -1129,7 +1129,7 @@
                             <button name="roll_ataquesa" type="roll" value="&{template:tirada} {{ataquesa=Ah}} {{ataque=Daño @{dmgsa} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{cansa}}} {{rname=Ataque}} {{arma=@{nombrearmasa}}} {{tipodmg=(@{tipodmgsa})}} {{mod=@{ataquesa}}} {{alcance=@{alcsa}}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(1d12cs0cf0+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >&nbsp;Ataque sA&nbsp;</button>
                             </td>
                             <td>&nbsp;</td>
-                            <td class="centrado bordebot"><input name="attr_ataquesa" type="number" style="width: 70px;" class="centrado" value="-6"></td>
+                            <td class="centrado bordebot"><input name="attr_ataquesa" type="number" style="width: 70px;" class="centrado" value="-5"></td>
                             <td>&nbsp;</td>
                      
                     <td class="centrado bordebot"><select name="attr_tipodmgsa" style="width: 48px;">
@@ -1155,7 +1155,7 @@
                    </tr>
 
                    <tr class="negrita smaller">
-                    <td class="centrado"><span>&nbsp;&nbsp;(Des+C.sA-6)&nbsp;&nbsp;</span></td>
+                    <td class="centrado"><span>&nbsp;&nbsp;(Des+C.sA-5)&nbsp;&nbsp;</span></td>
                     <td>&nbsp;</td>
                     <td class="centrado"><span>Bonificador</span></td>
                     <td>&nbsp;</td>
@@ -1268,7 +1268,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_alerta" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_alerta" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_alerta" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_alerta" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_alerta" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_alerta" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_alerta" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_alertax" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_alertaxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_alerta" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_alerta" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
             
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_atletismo" value="1">
@@ -1277,7 +1277,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_atletismo" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_atletismox" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_atletismoxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_atletismo" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_atletismo" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
             
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_diplomacia" value="1">
@@ -1286,7 +1286,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_diplomacia" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_diplomacia" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_diplomacia" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_diplomacia" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_diplomacia" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_diplomacia" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_diplomacia" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_diplomaciax" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_diplomaciaxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_diplomacia" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_diplomacia" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
 
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_empatia" value="1">
@@ -1295,7 +1295,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_empatia" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_empatia" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_empatia" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_empatia" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_empatia" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_empatia" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_empatia" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_empatiax" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_empatiaxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_empatia" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_empatia" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
          
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_engañar" value="1">
@@ -1304,7 +1304,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_engañar" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_engañar" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_engañar" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_engañar" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_engañar" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_engañar" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_engañar" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_engañarx" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_engañarxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_enganar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_enganar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_equilibrio" value="1">
@@ -1313,7 +1313,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_equilibrio" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_equilibrio" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_equilibrio" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_equilibrio" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_equilibrio" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_equilibrio" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_equilibrio" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_equilibriox" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_equilibrioxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_equilibrio" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_equilibrio" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_intimidar" value="1">
@@ -1322,7 +1322,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_intimidar" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intimidar" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intimidar" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intimidar" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intimidar" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intimidar" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_intimidar" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_intimidarx" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_intimidarxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_intimidar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_intimidar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_nadar" value="1">
@@ -1331,7 +1331,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_nadar" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_nadar" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_nadar" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_nadar" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_nadar" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_nadar" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_nadar" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_nadarx" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_nadarxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_nadar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_nadar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_observacion" value="1">
@@ -1340,7 +1340,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_observacion" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_observacion" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_observacion" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_observacion" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_observacion" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_observacion" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_observacion" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_observacionx" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_observacionxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_observacion" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_observacion" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_sigilo" value="1">
@@ -1349,7 +1349,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_sigilo" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sigilo" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sigilo" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sigilo" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sigilo" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sigilo" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sigilo" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_sigilox" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_sigiloxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_sigilo" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_sigilo" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_supervivencia" value="1">
@@ -1358,7 +1358,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_supervivencia" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_supervivencia" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_supervivencia" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_supervivencia" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_supervivencia" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_supervivencia" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_supervivencia" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_supervivenciax" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_supervivenciaxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_supervivencia" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_supervivencia" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_tasacion" value="1">
@@ -1367,7 +1367,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_tasacion" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tasacion" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tasacion" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tasacion" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tasacion" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tasacion" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tasacion" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_tasacionx" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_tasacionxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_tasacion" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_tasacion" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_tratoanimal" value="1">
@@ -1376,7 +1376,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_tratoanimal" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tratoanimal" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tratoanimal" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tratoanimal" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tratoanimal" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tratoanimal" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tratoanimal" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_tratoanimalx" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_tratoanimalxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_tratoanimal" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_tratoanimal" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         </tr>
 
         </tbody>
@@ -1397,7 +1397,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_artesania1" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania1" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania1" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania1" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania1" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania1" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania1" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_artesania1x" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_artesania1xx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_arte1" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_arte1" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_arte2" value="1"><span>&nbsp;&nbsp;</span>
@@ -1407,7 +1407,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_artesania2" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania2" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania2" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania2" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania2" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania2" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_artesania2" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_artesania2x" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_artesania2xx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_arte2" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_arte2" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_idiomas" value="1">
@@ -1416,7 +1416,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_idiomas" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_idiomas" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_idiomas" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_idiomas" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_idiomas" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_idiomas" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_idiomas" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_idiomasx" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_idiomasxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_idiomas" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_idiomas" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_piruetas" value="1">
@@ -1425,7 +1425,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_piruetas" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_piruetas" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_piruetas" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_piruetas" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_piruetas" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_piruetas" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_piruetas" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_piruetasx" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_piruetasxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_piruetas" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_piruetas" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
        
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_rastrear" value="1">
@@ -1434,7 +1434,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_rastrear" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rastrear" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rastrear" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rastrear" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rastrear" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rastrear" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_rastrear" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_rastrearx" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_rastrearxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_rastrear" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_rastrear" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_sarcano" value="1">
@@ -1443,7 +1443,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_sarcano" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sarcano" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sarcano" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sarcano" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sarcano" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sarcano" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sarcano" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_sarcanox" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_sarcanoxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_sarcano" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_sarcano" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_sbajosfondos" value="1">
@@ -1452,7 +1452,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_sbajos" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sbajos" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sbajos" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sbajos" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sbajos" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sbajos" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sbajos" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_sbajosx" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_sbajosxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_sbajosfondos" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_sbajosfondos" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_sculturas" value="1">
@@ -1461,7 +1461,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_sculturas" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sculturas" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sculturas" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sculturas" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sculturas" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sculturas" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sculturas" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_sculturasx" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_sculturasxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_sculturas" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_sculturas" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_snaturaleza" value="1">
@@ -1470,7 +1470,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_snaturaleza" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_snaturaleza" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_snaturaleza" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_snaturaleza" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_snaturaleza" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_snaturaleza" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_snaturaleza" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_snaturalezax" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_snaturalezaxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_snaturaleza" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_snaturaleza" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_ssociedad" value="1">
@@ -1479,7 +1479,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_ssociedad" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ssociedad" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ssociedad" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ssociedad" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ssociedad" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ssociedad" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_ssociedad" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_ssociedadx" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_ssociedadxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_ssociedad" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_ssociedad" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" title="Habilidad innata" name="attr_innata_sanar" value="1">
@@ -1488,7 +1488,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_sanar" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sanar" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sanar" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sanar" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sanar" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sanar" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_sanar" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_sanarx" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_sanarxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_sanar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_sanar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_seguridad" value="1">
@@ -1497,7 +1497,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_seguridad" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_seguridad" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_seguridad" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_seguridad" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_seguridad" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_seguridad" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_seguridad" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_seguridadx" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_seguridadxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_seguridad" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_seguridad" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_tactica" value="1">
@@ -1506,7 +1506,7 @@
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_tactica" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_tactica" value="6"/><span></span>
                 <input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_tacticax" checked="checked"/><span></span><input type="checkbox" title="Rango extra" class="rangoextra" name="attr_rang_tacticaxx" checked="checked"/><span></span></td>
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_tactica" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-6)" value="-6" style="width: 25px;"></td>
+                <input name="attr_hab_tactica" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="-5" style="width: 25px;"></td>
         
         </tr>
         </tbody>
@@ -1627,16 +1627,6 @@
             </td>
             <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
-            <td style="padding-bottom:5px; padding-top:5px">Pacifismo</td>
-            <td> 
-            <input type="radio" title="Rango" class="rango2 sheet-zero" name="attr_pacifismo" value="0"/><span></span>
-            <input type="radio" title="Rango" class="rango2" name="attr_pacifismo" value="1" /><span></span>
-            <input type="radio" title="Rango" class="rango2" name="attr_pacifismo" value="2" checked="checked"/><span></span>
-            <input type="radio" title="Rango" class="rango2" name="attr_pacifismo" value="3" /><span></span>
-            <input type="radio" title="Rango" class="rango2" name="attr_pacifismo" value="4" /><span></span>
-            </td>
-        </tr>
-        <tr>
             <td style="padding-bottom:5px; padding-top:5px">Superstición</td>
             <td>
             <input type="radio" title="Rango" class="rango2 sheet-zero" name="attr_supersticion" value="0" /><span></span>
@@ -1644,6 +1634,17 @@
             <input type="radio" title="Rango" class="rango2" name="attr_supersticion" value="2" checked="checked"/><span></span>
             <input type="radio" title="Rango" class="rango2" name="attr_supersticion" value="3" /><span></span>
             <input type="radio" title="Rango" class="rango2" name="attr_supersticion" value="4" /><span></span>
+            </td>
+            
+        </tr>
+        <tr>
+            <td style="padding-bottom:5px; padding-top:5px">Pacifismo</td>
+            <td> 
+            <input type="radio" title="Rango" class="rango2 sheet-zero" name="attr_pacifismo" value="0"/><span></span>
+            <input type="radio" title="Rango" class="rango2" name="attr_pacifismo" value="1" /><span></span>
+            <input type="radio" title="Rango" class="rango2" name="attr_pacifismo" value="2" checked="checked"/><span></span>
+            <input type="radio" title="Rango" class="rango2" name="attr_pacifismo" value="3" /><span></span>
+            <input type="radio" title="Rango" class="rango2" name="attr_pacifismo" value="4" /><span></span>
             </td>
             <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
@@ -1693,22 +1694,22 @@
          <tr>
             <td><input name="attr_equipado" type="text" style="width: 250;"></td>
             <td>&nbsp;&nbsp;</td>
-            <td><input name="attr_equipado_peso" type="number"></td>
+            <td><input name="attr_equipado_peso" type="number" step="any" style="text-align: center"></td>
         </tr>
         <tr>
             <td><input name="attr_equipado2" type="text" style="width: 250;"></td>
             <td>&nbsp;&nbsp;</td>
-            <td><input name="attr_equipado2_peso" type="number"></td>
+            <td><input name="attr_equipado2_peso" type="number" step="any" style="text-align: center"></td>
         </tr>
         <tr>
             <td><input name="attr_equipado3" type="text" style="width: 250;"></td>
             <td>&nbsp;&nbsp;</td>
-            <td><input name="attr_equipado3_peso" type="number"></td>
+            <td><input name="attr_equipado3_peso" type="number" step="any" style="text-align: center"></td>
         </tr>
         <tr>
             <td><input name="attr_equipado4" type="text" style="width: 250;"></td>
             <td>&nbsp;&nbsp;</td>
-            <td><input name="attr_equipado4_peso" type="number"></td>
+            <td><input name="attr_equipado4_peso" type="number" step="any" style="text-align: center"></td>
         </tr>
         </tbody>   
         </table>
@@ -1718,11 +1719,11 @@
             <tr>
                 <td><input name="attr_equipado" type="text" style="width: 250;"></td>
                 <td>&nbsp;&nbsp;</td>
-                <td><input name="attr_equipado_peso" type="number"></td>
+                <td><input name="attr_equipado_peso" type="number" step="any" style="text-align: center"></td>
             </tr>   
         </tbody>   
     </table>   
-        </fieldset>        
+        </fieldset>      
     </div>
 
     <div class="col">
@@ -1737,22 +1738,22 @@
          <tr>
             <td><input name="attr_mochila" type="text" style="width: 250;"></td>
             <td>&nbsp;&nbsp;</td>
-            <td><input name="attr_mochila_peso" type="number"></td>
+            <td><input name="attr_mochila_peso" type="number" step="any" style="text-align: center"></td>
         </tr>
         <tr>
             <td><input name="attr_mochila2" type="text" style="width: 250;"></td>
             <td>&nbsp;&nbsp;</td>
-            <td><input name="attr_mochila2_peso" type="number"></td>
+            <td><input name="attr_mochila2_peso" type="number" step="any" style="text-align: center"></td>
         </tr>
         <tr>
             <td><input name="attr_mochila3" type="text" style="width: 250;"></td>
             <td>&nbsp;&nbsp;</td>
-            <td><input name="attr_mochila3_peso" type="number"></td>
+            <td><input name="attr_mochila3_peso" type="number" step="any" style="text-align: center"></td>
         </tr>
         <tr>
             <td><input name="attr_mochila4" type="text" style="width: 250;"></td>
             <td>&nbsp;&nbsp;</td>
-            <td><input name="attr_mochila4_peso" type="number"></td>
+            <td><input name="attr_mochila4_peso" type="number" step="any" style="text-align: center"></td>
         </tr>
         </tbody>   
         </table>
@@ -1762,11 +1763,11 @@
             <tr>
                 <td><input name="attr_mochila" type="text" style="width: 250;"></td>
                 <td>&nbsp;&nbsp;</td>
-                <td><input name="attr_mochila_peso" type="number"></td>
+                <td><input name="attr_mochila_peso" type="number" step="any" style="text-align: center"></td>
             </tr>   
         </tbody>   
     </table>   
-        </fieldset> 
+        </fieldset>
     </div>
 
     <div class="col">
@@ -1781,22 +1782,22 @@
          <tr>
             <td><input name="attr_otrosobj" type="text" style="width: 250;"></td>
             <td>&nbsp;&nbsp;</td>
-            <td><input name="attr_otrosobj_peso" type="number"></td>
+            <td><input name="attr_otrosobj_peso" type="number" step="any" style="text-align: center"></td>
         </tr>
         <tr>
             <td><input name="attr_otrosobj2" type="text" style="width: 250;"></td>
             <td>&nbsp;&nbsp;</td>
-            <td><input name="attr_otrosobj2_peso" type="number"></td>
+            <td><input name="attr_otrosobj2_peso" type="number" step="any" style="text-align: center"></td>
         </tr>
         <tr>
             <td><input name="attr_otrosobj3" type="text" style="width: 250;"></td>
             <td>&nbsp;&nbsp;</td>
-            <td><input name="attr_otrosobj3_peso" type="number"></td>
+            <td><input name="attr_otrosobj3_peso" type="number" step="any" style="text-align: center"></td>
         </tr>
         <tr>
             <td><input name="attr_otrosobj4" type="text" style="width: 250;"></td>
             <td>&nbsp;&nbsp;</td>
-            <td><input name="attr_otrosobj4_peso" type="number"></td>
+            <td><input name="attr_otrosobj4_peso" type="number" step="any" style="text-align: center"></td>
         </tr>
         </tbody>   
         </table>
@@ -1806,18 +1807,30 @@
             <tr>
                 <td><input name="attr_otrosobj" type="text" style="width: 250;"></td>
                 <td>&nbsp;&nbsp;</td>
-                <td><input name="attr_otrosobj_peso" type="number"></td>
+                <td><input name="attr_otrosobj_peso" type="number" step="any" style="text-align: center"></td>
             </tr>   
         </tbody>   
     </table>   
-        </fieldset>        
+        </fieldset>
+        <p></p>      
+        
     </div>
-
 </div>
+<p></p>  
 <hr>
-<p></p>
-<span class="negrita larger">PESO TOTAL </span><input name="attr_pesobase" type="number" class="bordered negrita larger" style="width: 100; text-align: right;"><span class="negrita larger"> Kg</span>
-<br>
+    <div class="3colrow">    
+        <div class="col centrado">  
+            <span class="negrita larger">Peso equipo &nbsp;</span><input name="attr_pesoequipo" type="number" class="bordered negrita larger" step="any" style="width: 100; text-align: center;"><span class="negrita larger"> Kg</span>
+        </div>
+           
+        <div class="col centrado">  
+            <span class="negrita larger">Peso mochila &nbsp;</span><input name="attr_pesomochila" type="number" class="bordered negrita larger" step="any" style="width: 100; text-align: center;"><span class="negrita larger"> Kg</span>
+        </div> 
+        <div class="col centrado">  
+            <span class="negrita larger">PESO TOTAL &nbsp;</span><input name="attr_pesototal" type="number" class="bordered negrita larger" step="any" style="width: 100; text-align: center;"><span class="negrita larger"> Kg</span>
+        </div>
+    </div>
+<hr>
 <p></p>
 <div class="arrow-right"></div>
 <hr>
@@ -2099,7 +2112,7 @@
                         <span class="infotitulo1">Conjuración</span>
                         <span class="infobonificador">Bonificador: </span><span name="attr_conjuracion" class="infobonificador"></span>   
                 </div></span>
-                <button name="roll_conjuracion" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(3+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{dificultad2=[[(1+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button>(Conjuro)
+                <button name="roll_conjuracion" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button>(Conjuro)
             </div>
     
             <input type="checkbox" name="attr_mostrar_intensidad" class="mostrar_intensidad check oculto" value="1" />
@@ -3285,7 +3298,7 @@
 
             {{#rollBetween() r1 4 5}}
             <div class="label texto">
-                <span>Explosión de fuerza</span> frente a ti. Todos los que se encuentren a 2 metros o menos de ti salen despedidos hacia atrás una distancia = (3m×poder) y caen derribados perdiendo inmediatamente su movimiento. La explosión y la caída posterior causan Cansancio = (4×poder), la mitad si se evita la caída.
+                <span>Explosión de fuerza</span> frente a ti. Todos los que se encuentren a 2 metros o menos de ti salen despedidos hacia atrás una distancia = (2m×poder) y caen derribados perdiendo todo el movimiento que les quede. La explosión y la caída posterior causan Cansancio = (3×poder), la mitad si se evita la caída.
             </div>
             {{/rollBetween() r1 4 5}}
 
@@ -3354,7 +3367,7 @@
 
             {{#rollTotal() r1 4}}
             <div class="label texto">
-                <span>Envejecer:</span> -1 en un atributo físico al azar durante (1 día × poder). Si el atributo está a 0, elige otro.
+                <span>Envejecimiento:</span> -1 en un atributo físico al azar durante (1 día × poder). Si el atributo está a 0, elige otro.
             </div>
             {{/rollTotal() r1 4}}
 
@@ -3366,19 +3379,19 @@
 
             {{#rollBetween() r1 6 7}}
             <div class="label texto">
-                <span>Herida abierta:</span> recibes (1d6 + poder) puntos de Daño que no pueden ser curados hasta pasado 1 mes.
+                <span>Herida abierta:</span> sufres (1d6+poder) puntos de Daño que no pueden ser curados hasta pasado 1 mes desde el descontrol.
             </div>
             {{/rollBetween() r1 6 7}}
 
             {{#rollTotal() r1 8}}
             <div class="label texto">
-                <span>Dolor paralizante:</span> sufres un terrible dolor que te deja paralizado durante (1 ronda × poder).
+                <span>Dolor paralizante:</span> sufres un terrible dolor que te deja paralizado durante (1 ronda ×poder).
             </div>
             {{/rollTotal() r1 8}}
 
             {{#rollTotal() r1 9}}
             <div class="label texto">
-                <span>Explosión vital:</span> Daño = (6×poder), este daño no causa Trauma. Toda criatura viva en un radio = (5m × poder) recibe una curación mágica = (2 × poder).
+                <span>Explosión vital:</span> Daño = (6×poder), este daño no causa Trauma. Toda criatura viva en un radio = (5m×poder) recibe una curación mágica = (2 × poder).
             </div>
             {{/rollTotal() r1 9}}
 
@@ -3390,13 +3403,13 @@
 
             {{#rollTotal() r1 11}}
             <div class="label texto">
-                <span>Sangre negra:</span> caes desmayado hasta el final del combate o escena y durante (1 día × poder) tienes la mitad de Energía, -2 a Herida y -2 a Vitalidad.
+                <span>Sangre negra:</span> caes desmayado hasta el final del combate o escena y durante (1 día ×poder) tienes la mitad de Energía, -2 a Herida y -2 a Vitalidad.
             </div>
             {{/rollTotal() r1 11}}
 
             {{#rollTotal() r1 12}}
             <div class="label texto">
-                <span>Muerte:</span> caes desmayado; mueres si no superas una tirada de Vitalidad de dificultad = (5 + poder). 
+                <span>Muerte:</span> caes desmayado; mueres si no superas una tirada de Vitalidad de dificultad = (5+poder). 
             </div>
             {{/rollTotal() r1 12}}
         {{/descontrolosc}}
@@ -3498,7 +3511,7 @@
 
             {{#rollBetween() r1 7 9}}
             <div class="label texto">
-                <span>Fobia:</span> recibes el rasgo fobia permanentemente.
+                <span>Fobia:</span> recibes el rasgo fobia/trauma permanentemente.
             </div>
             {{/rollBetween() r1 7 9}}
 
