@@ -455,6 +455,12 @@ h1 {
     text-indent: -30px !important;
 }
 
+.sheet-mininota
+{
+    font-size: smaller;
+    line-height: 12px;
+}
+
 .sheet-textoderecha
 {
     text-align: right;
