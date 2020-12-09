@@ -1530,8 +1530,18 @@
     <!-- RASGOS-->
     <div class="col">
         <!--RASGOS-->
-        
         <h1>Rasgos</h1>
+        <!-- (Intento de poner etiqueta informativa con todos los rasgos)
+            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: large">i</div>
+            <div class="info">
+                <span class="infotitulo1">Rasgos </span>
+                <span class="infotexto" name="attr_rasgo_name"></span>
+                <span class="infotexto" name="attr_rasgo_name2"></span>
+                <span class="infotexto" name="attr_rasgo_name3"></span>
+                <span class="infotexto" name="repeating_rasgos_$0_attr_rasgo_name"></span>
+            
+        </div></span>
+        -->
         <input type="checkbox" name="attr_mostrarrasgos" class="mostrar_rasgos check" value="1"/>
         <span class="negrita">Mostrar/Editar rasgos</span>
         <div class="editable_rasgos">
@@ -2779,7 +2789,7 @@
                 <div class="arrow-left"></div>
         <p></p> 
         <div class="label texto">
-            Recibes {{r2}} puntos de Daño permanente.
+            Recibes <span>{{r2}}</span> puntos de Daño permanente.
             <p></p>*Lesión acumulable.
             <p></p>
         </div>
@@ -3157,25 +3167,19 @@
 
         {{#sapo}}
         <div>
-            <div class="adv"><span>¡¡Piiiiiiiii!!</span></div>
+            <div class="adv"><span>¡¡Piiiiiiiiiii!!</span></div>
             <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/Sapo.png"/>    
         </div>
         <div class="arrow-right"></div>
         <div class="label">
-            <span>Dificultad {{dif1}} </span>
+            <span>Esquiva <span class="green"> {{dif}}</span> / <span class="red">(+4)</span></span>
         </div>
         <div class="label">
-            <span class="green">Daño/Cansancio {{dmg1}} </span>
+            <span>Reflejos <span class="green"> (-4)</span> / <span class="red">{{ref}}</span></span>
         </div>
         <div class="arrow-left"></div>
         <div class="label">
-            <span>Dificultad {{dif2}} </span>
-        </div>
-        <div class="label">
-            <span>Reflejos {{ref}} </span>
-        </div>
-        <div class="label">
-            <span class="red">Daño/Cansancio {{dmg2}} </span>
+            <span>Daño y Cansancio <span class="green"> {{dmg1}}</span> / <span class="red">{{dmg2}}</span></span>
         </div>
         {{/sapo}}
 
@@ -3283,7 +3287,7 @@
 
             {{#rollTotal() r1 1}}
             <div class="label texto">
-                <span>Forzar éter:</span> logras lanzar el conjuro con éxito, pero recibes Cansancio = (2 × poder).
+                <span>Forzar éter:</span> logras lanzar el conjuro con éxito, pero recibes Cansancio = (2×poder).
             </div>
             {{/rollTotal() r1 1}}
 
@@ -3295,7 +3299,7 @@
 
             {{#rollBetween() r1 4 5}}
             <div class="label texto">
-                <span>Explosión de fuerza</span> frente a ti. Todos los que se encuentren a 2 metros o menos de ti salen despedidos hacia atrás una distancia = (2m×poder) y caen derribados perdiendo todo el movimiento que les quede. La explosión y la caída posterior causan Cansancio = (3×poder), la mitad si se evita la caída.
+                <span>Explosión de fuerza</span> frente a ti. Todos los que se encuentren a 2 metros o menos de ti salen despedidos hacia atrás una distancia = (2m ×poder) y caen derribados perdiendo todo el movimiento que les quede. La explosión y la caída posterior causan Cansancio = (3×poder), la mitad si se evita la caída.
             </div>
             {{/rollBetween() r1 4 5}}
 
@@ -3313,13 +3317,13 @@
 
             {{#rollTotal() r1 8}}
             <div class="label texto">
-                <span>Energía inestable:</span> durante (1 día × poder) tiras con desventaja todas tus tiradas de Conjuración.
+                <span>Energía inestable:</span> durante (1día ×poder) tiras con desventaja todas tus tiradas de Conjuración.
             </div>
             {{/rollTotal() r1 8}}
 
             {{#rollTotal() r1 9}}
             <div class="label texto">
-                <span>Explosión elemental</span> centrada en ti que provoca Daño = (1d12 + poder) en un radio = (2m + poder).
+                <span>Explosión elemental</span> centrada en ti que provoca Daño = (1d12+poder) en un radio = (2m+poder).
             </div>
             {{/rollTotal() r1 9}}
 
@@ -3331,7 +3335,7 @@
 
             {{#rollTotal() r1 11}}
             <div class="label texto">
-                <span>Olvido mayor:</span> olvidas el conjuro y caes desmayado hasta el final del combate. Al despertar olvidas TODOS tus conjuros si no superas una tirada de Voluntad de dificultad = (5 + poder). Los conjuros olvidados deben aprenderse de nuevo.
+                <span>Olvido mayor:</span> olvidas el conjuro y caes desmayado hasta el final del combate. Al despertar olvidas TODOS tus conjuros si no superas una tirada de Voluntad de dificultad = (5+poder). Los conjuros olvidados deben aprenderse de nuevo.
             </div>
             {{/rollTotal() r1 11}}
 
@@ -3451,19 +3455,19 @@
 
             {{#rollBetween() r1 1 2}}
             <div class="label texto">
-                <span>Ansiedad:</span> quedas aturdido una ronda. -1 a Voluntad durante {{r2}} días.
+                <span>Ansiedad:</span> quedas aturdido una ronda. -1 a Voluntad durante <span>{{r2}}</span> días.
             </div>
             {{/rollBetween() r1 1 2}}
 
             {{#rollBetween() r1 3 4}}
             <div class="label texto">
-                <span>Pánico:</span> cada ronda huyes del combate o escena por todos los medios hasta alejarte de aquello que provocó el desequilibrio. -1 a Reflejos durante {{r2}} días.
+                <span>Pánico:</span> cada ronda huyes del combate o escena por todos los medios hasta alejarte de aquello que provocó el desequilibrio. -1 a Reflejos durante <span>{{r2}}</span> días.
             </div>
             {{/rollBetween() r1 3 4}}
 
             {{#rollBetween() r1 5 6}}
             <div class="label texto">
-                <span>Náuseas:</span> quedas aturdido una ronda y mareado hasta el final del combate o escena. Reduce {{r3}} tu Energía durante {{r2}} días.
+                <span>Náuseas:</span> quedas aturdido una ronda y mareado hasta el final del combate o escena. Reduce <span>{{r3}}</span> tu Energía durante <span>{{r2}}</span> días.
             </div>
             {{/rollBetween() r1 5 6}}
 
@@ -3475,7 +3479,7 @@
 
             {{#rollBetween() r1 9 10}}
             <div class="label texto">
-                <span>Frenesí:</span> hasta el final del combate o escena te lanzas y tratas por todos los medios de solucionar lo que sea que causó el desequilibrio o de castigar al responsable. -1 a Estrategia durante {{r2}} días.
+                <span>Frenesí:</span> hasta el final del combate o escena te lanzas y tratas por todos los medios de solucionar lo que sea que causó el desequilibrio o de castigar al responsable. -1 a Estrategia durante <span>{{r2}}</span> días.
             </div>
             {{/rollBetween() r1 9 10}}
 
