@@ -632,6 +632,11 @@ hr {
     width: 25%;
     }
 
+.sheet-26porciento{
+    float: left;
+    width: 26%;
+    }
+
 .sheet-28porciento{
     float: left;
     width: 28%;
@@ -681,6 +686,11 @@ hr {
     float: left;
     width: 60%;
     }
+
+.sheet-67porciento{
+    float: left;
+    width: 67%;
+    }  
 
 .sheet-70porciento{
     float: left;
@@ -996,8 +1006,7 @@ input.sheet-mostrar_magia:not(:checked) ~ div.sheet-editable_magia
 
 input.sheet-mostrar_conjuracion:not(:checked) ~ div.sheet-especial_conjuracion,
 input.sheet-mostrar_intensidad:not(:checked) ~ div.sheet-especial_intensidad,
-input.sheet-mostrar_disparo:not(:checked) ~ div.sheet-especial_disparo,
-input.sheet-mostrar_dominio:not(:checked) ~ div.sheet-especial_dominio 
+input.sheet-mostrar_disparo:not(:checked) ~ div.sheet-especial_disparo
 {
     display: none !important;
 }
@@ -1167,11 +1176,6 @@ button[type=roll]::before {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDisparo.png") !important;
 }
 
-.sheet-bdominio
-{
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDominio.png") !important;
-}
-
 .sheet-besquiva
 {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCEsquiva.png") !important;
@@ -1276,7 +1280,46 @@ input.sheet-atributoextra
     z-index: 1;
 }
 
+input.sheet-rangoextraneg,
+input.sheet-atributoextraneg
+{
+    max-width: 2em;  
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
 /* -----Fake check (los circulitos que sí se ven)----- */
+
+input.sheet-rangoextraneg + span
+{
+    content: "";
+    background-color: transparent;
+    margin-right: 5px;
+    border: solid 2px black;
+    line-height: 8px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgb(100, 0, 0);
+    
+    color:black;
+    width: 8px;
+    height: 8px; 
+    font-size: 1em;
+
+
+    /*Esto hace que sean círculos en vez de cuadrados*/
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
 
 input.sheet-rangoextra + span
 {
@@ -1288,7 +1331,7 @@ input.sheet-rangoextra + span
     text-align: center;
     display: inline-block;
     vertical-align: middle;
-    background-color: rgb(100, 0, 0);
+    background-color: rgb(2, 145, 21);
     
     color:black;
     content: "•";
@@ -1304,6 +1347,29 @@ input.sheet-rangoextra + span
 }
 
 input.sheet-atributoextra + span
+{
+    margin-right: 5px;
+    border: solid 2px black;
+    line-height: 8px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgb(2, 145, 21);
+    
+    
+    color:black;
+    content: "•";
+    width: 12px;
+    height: 12px; 
+    font-size: 1em;
+
+    /*Esto hace que sean círculos en vez de cuadrados ••●∴⋅⬤*/
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+input.sheet-atributoextraneg + span
 {
     margin-right: 5px;
     border: solid 2px black;
@@ -1328,6 +1394,8 @@ input.sheet-atributoextra + span
 
 input.sheet-rangoextra:checked + span,
 input.sheet-atributoextra:checked + span,
+input.sheet-rangoextraneg:checked + span,
+input.sheet-atributoextraneg:checked + span
 {    
     content: "";
     background-color: transparent;
