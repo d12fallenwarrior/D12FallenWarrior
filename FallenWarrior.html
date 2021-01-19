@@ -918,30 +918,27 @@
         <input name="attr_nombrearma1" class="recolocar" type="text"  placeholder="Nombre del arma" style="width: 165px;" />
                                
             <div style="margin-top:-6px;">               
-                <button name="roll_ataque1" class="botonimagen bataque1" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{ataque=Daño @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=(@{tipodmg1})}} {{alcance=@{alc1}}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12cs0cf0+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+                <button name="roll_ataque1" class="botonimagen bataque1" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{Daño=[[@{dmg1}]]}} {{Cansancio=[[@{can1}]]}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=[[@{tipodmg1}]]}} {{alcance=[[@{alc1}]]}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12cs0cf0+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
                           
                     <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque1.png"/>
                     -->
                     <table style="display:inline">
                     <tbody>
                         <tr class="bordetop">                            
-                            <td class="centrado bordebot"><button name="roll_ataque1" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{ataque=Daño @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=(@{tipodmg1})}} {{alcance=@{alc1}}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12cs0cf0+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 1</button></td>
+                            <td class="centrado bordebot"><button name="roll_ataque1" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{Daño=[[@{dmg1}]]}} {{Cansancio=[[@{can1}]]}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=[[@{tipodmg1}]]}} {{alcance=[[@{alc1}]]}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12cs0cf0+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 1</button></td>
                             <td>&nbsp;</td>
                             <td class="centrado bordebot"><input name="attr_ataque1" type="number"  style="width: 70px;" class="centrado" value="-5"></td>
                             <td>&nbsp;</td>
 
                     <td class="centrado bordebot"><select name="attr_tipodmg1" style="width: 48px;">
-                        <option value="P">P</option>
-                        <option value="C" selected="selected">C</option>
-                        <option value="T">T</option>
-                        <option value="PC">PC</option>
-                        <option value="CT">CT</option>
-                        <option value="CT">PT</option>
+                        <option value="1">P</option>
+                        <option value="2" selected="selected">C</option>
+                        <option value="3">T</option>
                     </select>
-                    <input name="attr_dmg1" type="number"  class="centrado" value="0" style="width: 22px;"/></td>
+                    <input name="attr_dmg1" type="number"  title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 22px;"/></td>
                     <td>&nbsp;</td>
 
-                    <td class="centrado bordebot"><input name="attr_can1" type="number"  class="centrado" value="0" style="width: 40px;"/></td>
+                    <td class="centrado bordebot"><input name="attr_can1" type="number" title="Cansancio=Fuerza (+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 40px;"/></td>
                     <td>&nbsp;</td>
 
                     <td class="centrado bordebot"><input name="attr_alc1" type="number"  class="centrado" value="1" style="width: 40px;"/></td>
@@ -976,31 +973,28 @@
         <input name="attr_nombrearma2" class="recolocar" type="text" placeholder="Nombre del arma" style="width: 165px;" />
                     
                 <div style="margin-top:-6px;">
-                    <button name="roll_ataque2" class="botonimagen bataque2" type="roll" value="&{template:tirada} {{ataque2=Ah}} {{ataque=Daño @{dmg2} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can2}}} {{rname=Ataque}} {{mod=@{ataque2}}} {{arma=@{nombrearma2}}} {{tipodmg=(@{tipodmg2})}} {{alcance=@{alc2}}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(1d12cs0cf0+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+                    <button name="roll_ataque2" class="botonimagen bataque2" type="roll" value="&{template:tirada} {{ataque2=Ah}} {{Daño=[[@{dmg2}]]}} {{Cansancio=[[@{can2}]]}} {{rname=Ataque}} {{mod=@{ataque2}}} {{arma=@{nombrearma2}}} {{tipodmg=[[@{tipodmg2}]]}} {{alcance=[[@{alc2}]]}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(1d12cs0cf0+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
                                                      
                     <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque2.png"/>
                     -->
                     <table style="display:inline">
                     <tbody>
                         <tr class="bordetop">                            
-                            <td class="centrado bordebot"><button name="roll_ataque2" type="roll" value="&{template:tirada} {{ataque2=Ah}} {{ataque=Daño @{dmg2} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can2}}} {{rname=Ataque}} {{mod=@{ataque2}}} {{arma=@{nombrearma2}}} {{tipodmg=(@{tipodmg2})}} {{alcance=@{alc2}}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(1d12cs0cf0+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 2</button>
+                            <td class="centrado bordebot"><button name="roll_ataque2" type="roll" value="&{template:tirada} {{ataque2=Ah}} {{Daño=[[@{dmg2}]]}} {{Cansancio=[[@{can2}]]}} {{rname=Ataque}} {{mod=@{ataque2}}} {{arma=@{nombrearma2}}} {{tipodmg=[[@{tipodmg2}]]}} {{alcance=[[@{alc2}]]}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(1d12cs0cf0+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 2</button>
                             </td>
                             <td>&nbsp;</td>
                             <td class="centrado bordebot"><input name="attr_ataque2" type="number"  style="width: 70px;" class="centrado" value="-5"></td>
                             <td>&nbsp;</td>
                            
                     <td class="centrado bordebot"><select name="attr_tipodmg2" style="width: 48px;">
-                        <option value="P">P</option>
-                        <option value="C" selected="selected">C</option>
-                        <option value="T">T</option>
-                        <option value="PC">PC</option>
-                        <option value="CT">CT</option>
-                        <option value="CT">PT</option>
+                        <option value="1">P</option>
+                        <option value="2" selected="selected">C</option>
+                        <option value="3">T</option>
                     </select>
-                    <input name="attr_dmg2" type="number"  class="centrado" value="0" style="width: 22px;"/></td>
+                    <input name="attr_dmg2" type="number"  title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 22px;"/></td>
                     <td>&nbsp;</td>
 
-                    <td class="centrado bordebot"><input name="attr_can2" type="number"  class="centrado" value="0" style="width: 40px;"/></td>
+                    <td class="centrado bordebot"><input name="attr_can2" type="number" title="Cansancio=Fuerza (+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 40px;"/></td>
                     <td>&nbsp;</td>
 
                     <td class="centrado bordebot"><input name="attr_alc2" type="number"  class="centrado" value="1" style="width: 40px;"/></td>
@@ -1046,7 +1040,7 @@
                                  
             <div style="margin-top:-6px;">
                     
-                <button name="roll_ataque" class="botonimagen bataque3" type="roll" value="&{template:tirada} {{ataque3=Ah}} {{ataque=Daño @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{arma=@{nombrearma3}}} {{tipodmg=(@{tipodmg3})}} {{mod=@{ataque3}}} {{alcance=@{alc3}}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(1d12cs0cf0+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+                <button name="roll_ataque" class="botonimagen bataque3" type="roll" value="&{template:tirada} {{ataque3=Ah}} {{Daño=[[@{dmg3}]]}} {{Cansancio=[[@{can3}]]}} {{rname=Ataque}} {{arma=@{nombrearma3}}} {{tipodmg=[[@{tipodmg3}]]}} {{mod=@{ataque3}}} {{alcance=[[@{alc3}]]}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(1d12cs0cf0+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                             
                     <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque3.png"/>
                     -->
@@ -1054,24 +1048,21 @@
                     <tbody>
                         <tr class="bordetop">
                             <td class="centrado bordebot">
-                            <button name="roll_ataque" type="roll" value="&{template:tirada} {{ataque3=Ah}} {{ataque=Daño @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{arma=@{nombrearma3}}} {{tipodmg=(@{tipodmg3})}} {{mod=@{ataque3}}} {{alcance=@{alc3}}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(1d12cs0cf0+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Ataque 3</button>
+                            <button name="roll_ataque" type="roll" value="&{template:tirada} {{ataque3=Ah}} {{Daño=[[@{dmg3}]]}} {{Cansancio=[[@{can3}]]}} {{rname=Ataque}} {{arma=@{nombrearma3}}} {{tipodmg=[[@{tipodmg3}]]}} {{mod=@{ataque3}}} {{alcance=[[@{alc3}]]}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(1d12cs0cf0+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Ataque 3</button>
                             </td>
                             <td>&nbsp;</td>    
                             <td class="centrado bordebot"><input name="attr_ataque3" type="number" style="width: 70px;" class="centrado" value="-5"></td>
                             <td>&nbsp;</td>
 
                     <td class="centrado bordebot"><select name="attr_tipodmg3" style="width: 48px;">
-                        <option value="P" selected="selected">P</option>
-                        <option value="C">C</option>
-                        <option value="T">T</option>
-                        <option value="PC">PC</option>
-                        <option value="CT">CT</option>
-                        <option value="CT">PT</option>
+                        <option value="1" selected="selected">P</option>
+                        <option value="2">C</option>
+                        <option value="3">T</option>
                     </select>
-                    <input name="attr_dmg3" type="number"  class="centrado" value="0" style="width: 22px;"/></td>
+                    <input name="attr_dmg3" type="number" title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 22px;"/></td>
                     <td>&nbsp;</td>
 
-                    <td class="centrado bordebot"><input name="attr_can3" type="number"  class="centrado" value="0" style="width: 40px;"/></td>
+                    <td class="centrado bordebot"><input name="attr_can3" type="number" title="Cansancio=Fuerza (+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 40px;"/></td>
                     <td>&nbsp;</td>
 
                     <td class="centrado bordebot"><input name="attr_alc3" type="number"  class="centrado" value="1" style="width: 40px;"/></td>
@@ -1114,7 +1105,7 @@
      
        
      <div style="margin-top:-6px;">
-        <button name="roll_ataquesa" class="botonimagen bataquesa" type="roll" value="&{template:tirada} {{ataquesa=Ah}} {{ataque=Daño @{dmgsa} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{cansa}}} {{rname=Ataque}} {{arma=@{nombrearmasa}}} {{tipodmg=(@{tipodmgsa})}} {{mod=@{ataquesa}}} {{alcance=@{alcsa}}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(1d12cs0cf0+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+        <button name="roll_ataquesa" class="botonimagen bataquesa" type="roll" value="&{template:tirada} {{ataquesa=Ah}} {{Daño=[[@{dmgsa}]]}} {{Cansancio=[[@{cansa}]]}} {{rname=Ataque}} {{arma=@{nombrearmasa}}} {{tipodmg=[[@{tipodmgsa}]]}} {{mod=@{ataquesa}}} {{alcance=[[@{alcsa}]]}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(1d12cs0cf0+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                            
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaqueSA.png"/>
             -->
@@ -1123,24 +1114,21 @@
                         
                         <tr class="bordetop">
                             <td class="centrado bordebot">
-                            <button name="roll_ataquesa" type="roll" value="&{template:tirada} {{ataquesa=Ah}} {{ataque=Daño @{dmgsa} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{cansa}}} {{rname=Ataque}} {{arma=@{nombrearmasa}}} {{tipodmg=(@{tipodmgsa})}} {{mod=@{ataquesa}}} {{alcance=@{alcsa}}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(1d12cs0cf0+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >&nbsp;Ataque sA&nbsp;</button>
+                            <button name="roll_ataquesa" type="roll" value="&{template:tirada} {{ataquesa=Ah}} {{Daño=[[@{dmgsa}]]}} {{Cansancio=[[@{cansa}]]}} {{rname=Ataque}} {{arma=@{nombrearmasa}}} {{tipodmg=[[@{tipodmgsa}]]}} {{mod=@{ataquesa}}} {{alcance=[[@{alcsa}]]}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(1d12cs0cf0+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >&nbsp;Ataque sA&nbsp;</button>
                             </td>
                             <td>&nbsp;</td>
                             <td class="centrado bordebot"><input name="attr_ataquesa" type="number" style="width: 70px;" class="centrado" value="-5"></td>
                             <td>&nbsp;</td>
                      
                     <td class="centrado bordebot"><select name="attr_tipodmgsa" style="width: 48px;">
-                        <option value="P">P</option>
-                        <option value="C">C</option>
-                        <option value="T" selected="selected">T</option>
-                        <option value="PC">PC</option>
-                        <option value="CT">CT</option>
-                        <option value="CT">PT</option>
+                        <option value="1">P</option>
+                        <option value="2">C</option>
+                        <option value="3" selected="selected">T</option>
                     </select>
-                    <input name="attr_dmgsa" type="number"  class="centrado" value="0" style="width: 22px;"/></td>
+                    <input name="attr_dmgsa" type="number" title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 22px;"/></td>
                     <td>&nbsp;</td>
 
-                    <td class="centrado bordebot"><input name="attr_cansa" type="number"  class="centrado" value="0" style="width: 40px;"/></td>
+                    <td class="centrado bordebot"><input name="attr_cansa" type="number" title="Cansancio=Fuerza (+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 40px;"/></td>
                     <td>&nbsp;</td>
 
                     <td class="centrado bordebot"><input name="attr_alcsa" type="number"  class="centrado" value="1" style="width: 40px;"/></td>
@@ -1656,7 +1644,7 @@
             </td>
             <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
-            <td style="padding-bottom:2px; padding-top:7px"><input name="attr_otraideologia" type="text" placeholder="Otra" class="negrita" style="width: 95px;"></td>
+            <td style="padding-bottom:2px; padding-top:7px"><input name="attr_ideologiarara" type="text" placeholder="Otra" class="negrita" style="width: 95px;"></td>
             <td>
             <input type="radio" title="Rango" class="rango2 sheet-zero" name="attr_otraideologia" value="0" checked="checked" /><span></span>
             <input type="radio" title="Rango" class="rango2" name="attr_otraideologia" value="1" /><span></span>
@@ -1667,7 +1655,7 @@
         </tr>
         
         <tr>
-            <td style="padding-bottom:5px; padding-top:2px"><input name="attr_otraideologia2" type="text" placeholder="Otra" class="negrita" style="width: 95px;"></td>
+            <td style="padding-bottom:5px; padding-top:2px"><input name="attr_ideologiarara2" type="text" placeholder="Otra" class="negrita" style="width: 95px;"></td>
             <td>
             <input type="radio" title="Rango" class="rango2 sheet-zero" name="attr_otraideologia2" value="0" checked="checked"/><span></span>
             <input type="radio" title="Rango" class="rango2" name="attr_otraideologia2" value="1" /><span></span>
@@ -1677,7 +1665,7 @@
             </td>
             <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
-            <td style="padding-bottom:5px; padding-top:2px"><input name="attr_otraideologia3" type="text" placeholder="Otra" class="negrita" style="width: 95px;"></td>
+            <td style="padding-bottom:5px; padding-top:2px"><input name="attr_ideologiarara3" type="text" placeholder="Otra" class="negrita" style="width: 95px;"></td>
             <td>
             <input type="radio" title="Rango" class="rango2 sheet-zero" name="attr_otraideologia3" value="0" checked="checked"/><span></span>
             <input type="radio" title="Rango" class="rango2" name="attr_otraideologia3" value="1" /><span></span>
@@ -1923,10 +1911,10 @@
 <button name="roll_disparo" class="tokenaction" type="roll" value="&{template:tirada} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}}  {{magia=Disparo}}    {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(1d12cs0cf0+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
 <button name="roll_intensidad" class="tokenaction" type="roll" value="&{template:tirada} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}}  {{magia=Intensidad}}    {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(1d12cs0cf0+@{intensidad})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
 
-<button name="roll_Ataque1" class="tokenaction" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{ataque=Daño @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=(@{tipodmg1})}} {{alcance=@{alc1}}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12cs0cf0+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
-<button name="roll_Ataque2" class="tokenaction" type="roll" value="&{template:tirada} {{ataque2=Ah}} {{ataque=Daño @{dmg2} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can2}}} {{rname=Ataque}} {{mod=@{ataque2}}} {{arma=@{nombrearma2}}} {{tipodmg=(@{tipodmg2})}} {{alcance=@{alc2}}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(1d12cs0cf0+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
-<button name="roll_AtaqueDist" class="tokenaction" type="roll" value="&{template:tirada} {{ataque3=Ah}} {{ataque=Daño @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{arma=@{nombrearma3}}} {{tipodmg=(@{tipodmg3})}} {{mod=@{ataque3}}} {{alcance=@{alc3}}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(1d12cs0cf0+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-<button name="roll_AtaqueSA" class="tokenaction" type="roll" value="&{template:tirada} {{ataquesa=Ah}} {{ataque=Daño @{dmgsa} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{cansa}}} {{rname=Ataque}} {{arma=@{nombrearmasa}}} {{tipodmg=(@{tipodmgsa})}} {{mod=@{ataquesa}}} {{alcance=@{alcsa}}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(1d12cs0cf0+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+<button name="roll_Ataque1" class="tokenaction" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{Daño=[[@{dmg1}]]}} {{Cansancio=[[@{can1}]]}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=[[@{tipodmg1}]]}} {{alcance=[[@{alc1}]]}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12cs0cf0+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+<button name="roll_Ataque2" class="tokenaction" type="roll" value="&{template:tirada} {{ataque2=Ah}} {{Daño=[[@{dmg2}]]}} {{Cansancio=[[@{can2}]]}} {{rname=Ataque}} {{mod=@{ataque2}}} {{arma=@{nombrearma2}}} {{tipodmg=[[@{tipodmg2}]]}} {{alcance=[[@{alc2}]]}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(1d12cs0cf0+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+<button name="roll_AtaqueDist" class="tokenaction" type="roll" value="&{template:tirada} {{ataque3=Ah}} {{Daño=[[@{dmg3}]]}} {{Cansancio=[[@{can3}]]}} {{rname=Ataque}} {{arma=@{nombrearma3}}} {{tipodmg=[[@{tipodmg3}]]}} {{mod=@{ataque3}}} {{alcance=[[@{alc3}]]}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(1d12cs0cf0+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+<button name="roll_AtaqueSA" class="tokenaction" type="roll" value="&{template:tirada} {{ataquesa=Ah}} {{Daño=[[@{dmgsa}]]}} {{Cansancio=[[@{cansa}]]}} {{rname=Ataque}} {{arma=@{nombrearmasa}}} {{tipodmg=[[@{tipodmgsa}]]}} {{mod=@{ataquesa}}} {{alcance=[[@{alcsa}]]}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(1d12cs0cf0+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
 
 <button name="roll_Moribundo" class="tokenaction" type="roll" value="&{template:muerte} {{r1=[[(1d12cs0cf0+?{¿Bonificador a tirada de trauma?|0})]]}} {{trauma1=[[ @{aapuntostrauma} +1 ]]}} {{trauma3=[[ @{aapuntostrauma} +@{aapuntostrauma} ]]}} {{personaje=@{character_name}}}" ></button>
 
@@ -1958,7 +1946,6 @@
                                     <hr>&nbsp;<span class="infobonificador">Astucia: </span><span name="attr_Astucia" class="infobonificador"></span>
                                     <hr>&nbsp;<span class="infobonificador">Inteligencia: </span><span name="attr_Inteligencia" class="infobonificador"></span>
                                 </div>
-                
                             </div>
                             
                     </div></span>
@@ -2341,9 +2328,9 @@
                         <hr><span class="infobonificador">Alcance: </span><span name="attr_alc1" class="infobonificador"></span>
                         <hr><span class="infobonificador">Especial: </span><span name="attr_esp1" class="infobonificador"></span>
                 </div></span>
-                    <button name="roll_ataque1" class="imagencoliseo bataque1" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{ataque=Daño @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=(@{tipodmg1})}} {{alcance=@{alc1}}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12cs0cf0+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
+                    <button name="roll_ataque1" class="imagencoliseo bataque1" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{Daño=[[@{dmg1}]]}} {{Cansancio=[[@{can1}]]}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=[[@{tipodmg1}]]}} {{alcance=[[@{alc1}]]}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12cs0cf0+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
                     <span name="attr_ataque1" class="bonificadorcoliseo inline"></span>
-                    <button name="roll_ataque1" class="inline botoncoliseo" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{ataque=Daño @{dmg1} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can1}}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=(@{tipodmg1})}} {{alcance=@{alc1}}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12cs0cf0+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 1</button>
+                    <button name="roll_ataque1" class="inline botoncoliseo" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{Daño=[[@{dmg1}]]}} {{Cansancio=[[@{can1}]]}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=[[@{tipodmg1}]]}} {{alcance=[[@{alc1}]]}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12cs0cf0+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 1</button>
                 
                     <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
                         <div class="infocoliseo" style="right:144px">
@@ -2354,9 +2341,9 @@
                             <hr><span class="infobonificador">Alcance: </span><span name="attr_alc3" class="infobonificador"></span>
                             <hr><span class="infobonificador">Especial: </span><span name="attr_esp3" class="infobonificador"></span>
                         </div></span>
-                    <button name="roll_ataque3" class="imagencoliseo bataque3" type="roll" value="&{template:tirada} {{ataque3=Ah}} {{ataque=Daño @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma3}}} {{tipodmg=(@{tipodmg3})}} {{alcance=@{alc3}}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(1d12cs0cf0+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
+                    <button name="roll_ataque3" class="imagencoliseo bataque3" type="roll" value="&{template:tirada} {{ataque3=Ah}} {{Daño=[[@{dmg3}]]}} {{Cansancio=[[@{can3}]]}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma3}}} {{tipodmg=[[@{tipodmg3}]]}} {{alcance=[[@{alc3}]]}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(1d12cs0cf0+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
                     <span name="attr_ataque3" class="bonificadorcoliseo inline"></span>
-                    <button name="roll_ataque3" class="inline botoncoliseo" type="roll" value="&{template:tirada} {{ataque3=Ah}} {{ataque=Daño @{dmg3} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{can3}}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma3}}} {{tipodmg=(@{tipodmg3})}} {{alcance=@{alc3}}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(1d12cs0cf0+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 2</button>
+                    <button name="roll_ataque3" class="inline botoncoliseo" type="roll" value="&{template:tirada} {{ataque3=Ah}} {{Daño=[[@{dmg3}]]}} {{Cansancio=[[@{can3}]]}} {{rname=Ataque}} {{mod=@{ataque3}}} {{arma=@{nombrearma3}}} {{tipodmg=[[@{tipodmg3}]]}} {{alcance=[[@{alc3}]]}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(1d12cs0cf0+@{ataque3})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Ataque 2</button>
                 
                     <span class="sheet-tooltip"><div class="inline botoninfocoliseo">i</div>
                         <div class="infocoliseo" style="right:10px">   
@@ -2367,9 +2354,9 @@
                             <hr><span class="infobonificador">Alcance: </span><span name="attr_alcsa" class="infobonificador"></span>
                             <hr><span class="infobonificador">Especial: </span><span name="attr_espsa" class="infobonificador"></span>
                         </div></span>
-                    <button name="roll_ataquesa" class="imagencoliseo bataquesa" type="roll" value="&{template:tirada} {{ataquesa=Ah}} {{ataque=Daño @{dmgsa} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{cansa}}} {{rname=Ataque}} {{mod=@{ataquesa}}} {{arma=@{nombrearmasa}}} {{tipodmg=(@{tipodmgsa})}} {{alcance=@{alcsa}}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(1d12cs0cf0+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
+                    <button name="roll_ataquesa" class="imagencoliseo bataquesa" type="roll" value="&{template:tirada} {{ataquesa=Ah}} {{Daño=[[@{dmgsa}]]}} {{Cansancio=[[@{cansa}]]}} {{rname=Ataque}} {{mod=@{ataquesa}}} {{arma=@{nombrearmasa}}} {{tipodmg=[[@{tipodmgsa}]]}} {{alcance=[[@{alcsa}]]}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(1d12cs0cf0+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>                                                 
                     <span name="attr_ataquesa" class="bonificadorcoliseo inline"></span>
-                    <button name="roll_ataquesa" class="inline botoncoliseo" type="roll" value="&{template:tirada} {{ataquesa=Ah}} {{ataque=Daño @{dmgsa} &nbsp&nbsp&nbsp&nbsp&nbsp Cansancio @{cansa}}} {{rname=Ataque}} {{mod=@{ataquesa}}} {{arma=@{nombrearmasa}}} {{tipodmg=(@{tipodmgsa})}} {{alcance=@{alcsa}}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(1d12cs0cf0+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> At. sin armas</button>                                     
+                    <button name="roll_ataquesa" class="inline botoncoliseo" type="roll" value="&{template:tirada} {{ataquesa=Ah}} {{Daño=[[@{dmgsa}]]}} {{Cansancio=[[@{cansa}]]}} {{rname=Ataque}} {{mod=@{ataquesa}}} {{arma=@{nombrearmasa}}} {{tipodmg=[[@{tipodmgsa}]]}} {{alcance=[[@{alcsa}]]}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(1d12cs0cf0+@{ataquesa})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> At. sin armas</button>                                     
         </div>     
     
         <div class="inline 25porciento" style="margin-top: 25px; margin-left: 15px">
@@ -2626,25 +2613,57 @@
                     <span class="dadito"> 0 </span>{{rname}}{{#mod}} ({{mod}}){{/mod}}<span class="dadito"> 0 </span>
                 </div>
 
-                {{#ataque}}
+                {{#Daño}}
                     {{#arma}}
                     <div class="label">
-                        <span>{{arma}} {{tipodmg}}</span>
+                        <span>{{arma}} (
+                            
+                        {{#rollTotal() tipodmg 1}}
+                            <span class="red">P</span>
+                        {{/rollTotal() tipodmg 1}}
+                        {{#rollTotal() tipodmg 2}}
+                            <span class="red">C</span>
+                        {{/rollTotal() tipodmg 2}}
+                        {{#rollTotal() tipodmg 3}}
+                            <span class="red">T</span>
+                        {{/rollTotal() tipodmg 3}}        
+                        
+                        )</span>
                     </div>
                     {{/arma}}
-                    {{#alcance}}
+
+                {{#rollGreater() alcance 1}}
                     <div class="label">
                         <span>Alcance {{alcance}} metros</span>
                     </div>
-                    {{/alcance}}
+                {{/rollGreater() alcance 1}}
+
                 <div class="arrow-left"></div>            
                     <div class="label">
                         <span>{{ataque}} </span>
+                        <span>Daño {{Daño}} </span>&nbsp;&nbsp;&nbsp;&nbsp;<span>Cansancio {{Cansancio}}</span>
+                        {{#rollTotal() tipodmg 2}}
+                            <span class="red"> +1</span>
+                        {{/rollTotal() tipodmg 2}}
+                        {{#rollTotal() tipodmg 3}}
+                            <span class="red"> +2</span>
+                        {{/rollTotal() tipodmg 3}}
                     </div>
+                    {{#rollTotal() tipodmg 1}}
+                        <div class="label">
+                            <span class="red"> Ignora 1 de protección</span>
+                        </div>
+                    {{/rollTotal() tipodmg 1}}
                     <div class="label">
                         <span>[Daño Extra](!&#13;#Daño)</span>
+                        {{#rollTotal() tipodmg 1}}
+                            <span class="red"> +1</span>
+                        {{/rollTotal() tipodmg 1}}
+                        {{#rollTotal() tipodmg 2}}
+                            <span class="red"> +1</span>
+                        {{/rollTotal() tipodmg 2}}
                     </div>
-                {{/ataque}}
+                {{/Daño}}
 
                 {{#estrategia}}
                 <div class="arrow-left"></div>
@@ -2656,12 +2675,7 @@
                 {{#defensa}}
                 <div class="label">
                     {{#rollGreater() piruetas 0}}
-                        {{#rollGreater() piruetas agilidad}}
-                            <span>Contra At. por invasión </span><span class="green">+{{agilidad}}</span>
-                        {{/rollGreater() piruetas agilidad}}
-                        {{#^rollGreater() piruetas agilidad}}
-                            <span>Contra At. por invasión </span><span class="green">+{{piruetas}}</span>
-                        {{/^rollGreater() piruetas agilidad}}
+                        <span>Contra At. por invasión </span><span class="green">+{{piruetas}}</span>
                     {{/rollGreater() piruetas 0}}
                 </div>
 
