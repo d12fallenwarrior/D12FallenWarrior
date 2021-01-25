@@ -5,8 +5,8 @@
 .charsheet {
 	background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/fondoespada.jpg");
     background-color: white;
-    min-width: 825px;
-    max-width: 825px;
+    min-width: 830px;
+    max-width: 830px;
 }
 
 
@@ -657,6 +657,11 @@ hr {
     width: 35%;
     } 
 
+    .sheet-36porciento{
+        float: left;
+        width: 36%;
+        } 
+
 .sheet-37porciento{
     float: left;
     width: 37.5%;
@@ -1252,6 +1257,17 @@ input.sheet-innata
     margin-right: -6px !important;
 }
 
+input.sheet-fallida
+{
+    max-width: 1em;  
+    width: 8px;
+    height: 8px;
+    position: relative;
+    vertical-align: top;
+    margin-right: -7px !important;
+    margin-left: 3px !important;
+}
+
 input.sheet-innatacomb
 {
     max-width: 2em;  
@@ -1260,8 +1276,18 @@ input.sheet-innatacomb
     position: relative;
     vertical-align: middle;
     margin-right: 3px !important;
-    color: black;
     Top: -2px;
+}
+
+input.sheet-fallidacomb
+{
+    max-width: 1em;  
+    width: 8px;
+    height: 8px;
+    position: relative;
+    vertical-align: top;
+    margin-right: 0px !important;
+    margin-left: -6px !important;
 }
 
 
@@ -1547,6 +1573,7 @@ input.sheet-zero[type="radio"] + span::before
     background-color: transparent;
     border: none;
     margin-right: 6px !important;
+    margin-left: -6px !important;
 }
 
 
