@@ -567,12 +567,12 @@
     <div class="3colrow editable_magia">
         <div class="col">
             
-            <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(3+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(1+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[?{¿Intensidad o Disparo?|(Ninguno), 5|Intensidad, 0|Disparo, 1}]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{modd=@{disparo}}} {{rd1=[[(1d12cs0cf0+@{disparo})]]}} {{rd2=[[(1d12cs0cf0+@{disparo})]]}} {{rd3=[[(1d12cs0cf0+@{disparo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
             
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_conjuracion" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(3+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{dificultad2=[[(1+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >Conjuración</button></td>
+            <td class="bordebot"><button name="roll_conjuracion" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[?{¿Intensidad o Disparo?|(Ninguno), 5|Intensidad, 0|Disparo, 1}]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{modd=@{disparo}}} {{rd1=[[(1d12cs0cf0+@{disparo})]]}} {{rd2=[[(1d12cs0cf0+@{disparo})]]}} {{rd3=[[(1d12cs0cf0+@{disparo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >Conjuración</button></td>
             </td>
             <td>&nbsp;</td>
             <td class="bordebot"><input name="attr_conjuracion" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
@@ -588,11 +588,11 @@
         </div>
 
         <div class="col">
-            <button name="roll_intensidad" class="botonimagen bintensidad" type="roll" value="&{template:tirada} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}}  {{magia=Intensidad}}    {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(1d12cs0cf0+@{intensidad})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+            <button name="roll_intensidad" class="botonimagen bintensidad" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[0]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_intensidad" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}}  {{magia=Intensidad}}    {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(1d12cs0cf0+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">Intensidad</button></td>
+            <td class="bordebot"><button name="roll_intensidad" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[0]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">Intensidad</button></td>
             <td>&nbsp;</td>       
             <td class="bordebot"><input name="attr_intensidad" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
             </tr>
@@ -606,13 +606,13 @@
              </div>
 
         <div class="col">
-            <button name="roll_disparo" class="botonimagen bdisparo" type="roll" value="&{template:tirada} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}}  {{magia=Disparo}}    {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(1d12cs0cf0+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+            <button name="roll_disparo" class="botonimagen bdisparo" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[1]]}}  {{modd=@{disparo}}} {{rd1=[[(1d12cs0cf0+@{disparo})]]}} {{rd2=[[(1d12cs0cf0+@{disparo})]]}} {{rd3=[[(1d12cs0cf0+@{disparo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
             
             
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_disparo" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}}  {{magia=Disparo}}    {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(1d12cs0cf0+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">Disparo</button></td>
+            <td class="bordebot"><button name="roll_disparo" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[1]]}}  {{modd=@{disparo}}} {{rd1=[[(1d12cs0cf0+@{disparo})]]}} {{rd2=[[(1d12cs0cf0+@{disparo})]]}} {{rd3=[[(1d12cs0cf0+@{disparo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">Disparo</button></td>
             <td>&nbsp;</td>
             <td class="bordebot"><input name="attr_disparo" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
             </tr>
@@ -768,7 +768,7 @@
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="infoacciones">         
             </div></span>
-            <button name="roll_conjuracion" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(3+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{dificultad2=[[(1+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button>(Conjuro)
+            <button name="roll_conjuracion" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[?{¿Intensidad o Disparo?|(Ninguno), 5|Intensidad, 0|Disparo, 1}]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{modd=@{disparo}}} {{rd1=[[(1d12cs0cf0+@{disparo})]]}} {{rd2=[[(1d12cs0cf0+@{disparo})]]}} {{rd3=[[(1d12cs0cf0+@{disparo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button>(Conjuro)
         </div>
 
         <input type="checkbox" name="attr_mostrar_intensidad" class="mostrar_intensidad check oculto" value="1" />
@@ -776,7 +776,7 @@
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="infoacciones">         
             </div></span>
-            <button name="roll_intensidad" type="roll" value="&{template:tirada} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}}  {{magia=Intensidad}}    {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(1d12cs0cf0+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Intensidad</button>(Conjuro)
+            <button name="roll_intensidad" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[0]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Intensidad</button>(Conjuro)
         </div>
 
         <input type="checkbox" name="attr_mostrar_disparo" class="mostrar_disparo check oculto" value="1" />
@@ -784,7 +784,7 @@
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="infoacciones">         
             </div></span>
-            <button name="roll_disparo" type="roll" value="&{template:tirada} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}}  {{magia=Disparo}}    {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(1d12cs0cf0+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Disparo</button> (Conjuro)
+            <button name="roll_disparo" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[1]]}}  {{modd=@{disparo}}} {{rd1=[[(1d12cs0cf0+@{disparo})]]}} {{rd2=[[(1d12cs0cf0+@{disparo})]]}} {{rd3=[[(1d12cs0cf0+@{disparo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Disparo</button> (Conjuro)
         </div>
         
         </div>
@@ -1953,17 +1953,15 @@
 
 
 <!--Tokenactions-->
-<button name="roll_Ref" class="tokenaction" type="roll" value="&{template:tirada} {{logo=Ah}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cs0cf0+@{ref})]]}} {{r2=[[(1d12cs0cf0+@{ref})]]}} {{r3=[[(1d12cs0cf0+@{ref})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
-<button name="roll_Vit" type="roll" class="tokenaction" value="&{template:tirada} {{logo=Ah}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cs0cf0+@{vit})]]}} {{r2=[[(1d12cs0cf0+@{vit})]]}} {{r3=[[(1d12cs0cf0+@{vit})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>      
-<button name="roll_Vol" type="roll" class="tokenaction" value="&{template:tirada} {{logo=Ah}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cs0cf0+@{vol})]]}} {{r2=[[(1d12cs0cf0+@{vol})]]}} {{r3=[[(1d12cs0cf0+@{vol})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+<button name="roll_Reflejos" class="tokenaction" type="roll" value="&{template:tirada} {{logo=Ah}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cs0cf0+@{ref})]]}} {{r2=[[(1d12cs0cf0+@{ref})]]}} {{r3=[[(1d12cs0cf0+@{ref})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+<button name="roll_Vitalidad" type="roll" class="tokenaction" value="&{template:tirada} {{logo=Ah}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cs0cf0+@{vit})]]}} {{r2=[[(1d12cs0cf0+@{vit})]]}} {{r3=[[(1d12cs0cf0+@{vit})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>      
+<button name="roll_Voluntad" type="roll" class="tokenaction" value="&{template:tirada} {{logo=Ah}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cs0cf0+@{vol})]]}} {{r2=[[(1d12cs0cf0+@{vol})]]}} {{r3=[[(1d12cs0cf0+@{vol})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
 
 <button name="roll_esquiva" class="tokenaction" type="roll" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12cs0cf0+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
 <button name="roll_desvío" class="tokenaction" type="roll" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12cs0cf0+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
 <button name="roll_pelea" class="tokenaction" type="roll" value="&{template:tirada} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(1d12cs0cf0+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
 
-<button name="roll_conjuracion" class="tokenaction" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(3+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{dificultad2=[[(1+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-<button name="roll_disparo" class="tokenaction" type="roll" value="&{template:tirada} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}}  {{magia=Disparo}}    {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(1d12cs0cf0+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
-<button name="roll_intensidad" class="tokenaction" type="roll" value="&{template:tirada} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}}  {{magia=Intensidad}}    {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(1d12cs0cf0+@{intensidad})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+<button name="roll_conjuro" class="tokenaction" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[?{¿Intensidad o Disparo?|(Ninguno), 5|Intensidad, 0|Disparo, 1}]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{modd=@{disparo}}} {{rd1=[[(1d12cs0cf0+@{disparo})]]}} {{rd2=[[(1d12cs0cf0+@{disparo})]]}} {{rd3=[[(1d12cs0cf0+@{disparo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
 
 <button name="roll_Ataque1" class="tokenaction" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{Daño=[[@{dmg1}]]}} {{Cansancio=[[@{can1}]]}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=[[@{tipodmg1}]]}} {{alcance=[[@{alc1}]]}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12cs0cf0+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
 <button name="roll_Ataque2" class="tokenaction" type="roll" value="&{template:tirada} {{ataque2=Ah}} {{Daño=[[@{dmg2}]]}} {{Cansancio=[[@{can2}]]}} {{rname=Ataque}} {{mod=@{ataque2}}} {{arma=@{nombrearma2}}} {{tipodmg=[[@{tipodmg2}]]}} {{alcance=[[@{alc2}]]}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(1d12cs0cf0+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
@@ -2066,7 +2064,7 @@
         <hr>
         <div class="arrow-left"></div>
         
-        <!--ACCIONES, ATAQUES, DEFENSAS Y HABILIDADES-->
+<!--ACCIONES, ATAQUES, DEFENSAS Y HABILIDADES-->
         <input type="checkbox" class="cuadronotas check" name="cuadronotas" value="1" style="float:left;">
         <div class="cuadro_acciones negrita">
             <span class="larger negrita centrado 25porciento" style="margin-left:-30px;">Acciones</span>
@@ -2204,7 +2202,7 @@
                         <span class="infotitulo1">Conjuración</span>
                         <span class="infobonificador">Bonificador: </span><span name="attr_conjuracion" class="infobonificador"></span>   
                 </div></span>
-                <button name="roll_conjuracion" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=@{conjuracion}}} {{dificultad=[[(3+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{dificultad2=[[(1+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador?|0})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button>(Conjuro)
+                <button name="roll_conjuracion" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button>(Conjuro)
             </div>
     
             <input type="checkbox" name="attr_mostrar_intensidad" class="mostrar_intensidad check oculto" value="1" />
@@ -2214,7 +2212,7 @@
                         <span class="infotitulo1">Intensidad</span>
                         <span class="infobonificador">Bonificador: </span><span name="attr_intensidad" class="infobonificador"></span>  
                 </div></span>
-                <button name="roll_intensidad" type="roll" value="&{template:tirada} {{intensidad=Ah}} {{rname=Intensidad}} {{mod=@{intensidad}}}  {{magia=Intensidad}}    {{r1=[[(1d12cs0cf0+@{intensidad})]]}} {{r2=[[(1d12cs0cf0+@{intensidad})]]}} {{r3=[[(1d12cs0cf0+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Intensidad</button>(Conjuro)
+                <button name="roll_intensidad" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[0]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Intensidad</button>(Conjuro)
             </div>
     
             <input type="checkbox" name="attr_mostrar_disparo" class="mostrar_disparo check oculto" value="1" />
@@ -2224,7 +2222,7 @@
                         <span class="infotitulo1">Disparo</span>
                         <span class="infobonificador">Bonificador: </span><span name="attr_disparo" class="infobonificador"></span>
                 </div></span>
-                <button name="roll_disparo" type="roll" value="&{template:tirada} {{disparo=Ah}} {{rname=Disparo}} {{mod=@{disparo}}}  {{magia=Disparo}}    {{r1=[[(1d12cs0cf0+@{disparo})]]}} {{r2=[[(1d12cs0cf0+@{disparo})]]}} {{r3=[[(1d12cs0cf0+@{disparo})]]}}   {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Disparo</button> (Conjuro)
+                <button name="roll_disparo" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[1]]}}  {{modd=@{disparo}}} {{rd1=[[(1d12cs0cf0+@{disparo})]]}} {{rd2=[[(1d12cs0cf0+@{disparo})]]}} {{rd3=[[(1d12cs0cf0+@{disparo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Disparo</button> (Conjuro)
             </div>
             
         </div>
@@ -2741,18 +2739,277 @@
                     {{/armadura}} 
                 {{/defensa}}
 
-                {{#magia}}                      
-                    <div class="label">
-                        <span>[Daño Extra](!&#13;#Daño)</span>
-                    </div>
-                {{/magia}}   
 
                 {{#conjuracion}}
+                <div class="label">
+                    <span>Poder {{poder}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>Dificultad {{dificultad}}</span>
+                </div>
+
+                {{#rollTotal() tipo 0}}
                 <div class="arrow-left"></div>
+                
+                <div>
+                    {{#rollLess() ri1 ri2}}
+                        {{#rollLess() ri3 ri1}}
+                        <!--ri3 < ri1 < ri2-->
+                            <div class="adv"><span>{{ri1}}</span>
+                            <p></p>
+                            <span class="dadito green"> 0 </span>{{ri2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{ri1}}
+                      </div>
+                        {{/rollLess() ri3 ri1}}
+                
+                        {{#rollTotal() ri3 ri1}}
+                        <!--ri3 = ri1 < ri2-->
+                            <div class="adv"><span>{{ri1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            <p></p>
+                            <span class="dadito green"> 0 </span>{{ri2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{ri1}}
+                     </div>
+                        {{/rollTotal() ri3 ri1}}
+                
+                        {{#rollGreater() ri3 ri1}}
+                            {{#rollLess() ri3 ri2}}
+                            <!--ri1 < ri3 < ri2-->
+                                <div class="adv"><span>{{ri3}}</span>
+                                <p></p>
+                                <span class="dadito green"> 0 </span>{{ri2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{ri1}}
+                          </div>    
+                            {{/rollLess() ri3 ri2}}
+                
+                            {{#rollTotal() ri3 ri2}}
+                            <!--ri1 < ri3 = ri2-->
+                                <div class="adv"><span>{{ri3}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                                <p></p>
+                                <span class="dadito green"> 0 </span>{{ri2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{ri1}}
+                           </div>    
+                            {{/rollTotal() ri3 ri2}}
+                
+                            {{#rollGreater() ri3 ri2}}
+                            <!--ri1 < ri2 < ri3-->
+                                <div class="adv"><span>{{ri2}}</span>
+                                <p></p>
+                                <span class="dadito green"> 0 </span>{{ri2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{ri1}}
+                           </div>
+                            {{/rollGreater() ri3 ri2}}
+                        {{/rollGreater() ri3 ri1}}
+                    {{/rollLess() ri1 ri2}}
+                
+                    {{#rollTotal() ri1 ri2}}
+                        {{#rollLess() ri3 ri1}}
+                        <!--ri3 < ri1 = ri2-->
+                            <div class="adv"><span>{{ri1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            <p></p>
+                            <span class="dadito green"> 0 </span>{{ri2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{ri1}}
+                        </div>
+                        {{/rollLess() ri3 ri1}}
+                
+                        {{#rollTotal() ri3 ri1}}
+                        <!--ri1 = ri2 = ri3-->
+                            <div class="adv"><span>{{ri1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            <p></p>
+                            <span class="dadito green"> 0 </span>{{ri2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{ri1}}
+                       </div>
+                        {{/rollTotal() ri3 ri1}}
+                
+                        {{#rollGreater() ri3 ri1}}
+                        <!--ri1 = ri2 < ri3-->
+                            <div class="adv"><span>{{ri1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            <p></p>
+                            <span class="dadito green"> 0 </span>{{ri2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{ri1}}
+                          </div>
+                        {{/rollGreater() ri3 ri1}}
+                    {{/rollTotal() ri1 ri2}}
+                
+                    {{#rollGreater() ri1 ri2}}
+                        {{#rollLess() ri3 ri1}}
+                            {{#rollLess() ri3 ri2}}
+                            <!--ri3 < ri2 < ri1-->
+                                <div class="adv"><span>{{ri2}}</span>
+                                <p></p>
+                                <span class="dadito green"> 0 </span>{{ri1}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{ri2}}
+                               </div>
+                            {{/rollLess() ri3 ri2}}
+                
+                            {{#rollTotal() ri3 ri2}}
+                            <!--ri2 = ri3 < ri1-->
+                                <div class="adv"><span>{{ri3}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                                <p></p>
+                                <span class="dadito green"> 0 </span>{{ri1}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{ri2}}
+                                </div>
+                            {{/rollTotal() ri3 ri2}}
+                
+                            {{#rollGreater() ri3 ri2}}
+                            <!--ri2 < ri3 < ri1-->
+                                <div class="adv"><span>{{ri3}}</span>
+                                <p></p>
+                                <span class="dadito green"> 0 </span>{{ri1}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{ri2}}
+                                </div>
+                            {{/rollGreater() ri3 ri2}}
+                        {{/rollLess() ri3 ri1}}
+                
+                        {{#rollTotal() ri3 ri1}}
+                        <!--ri2 < ri3 = ri1-->
+                            <div class="adv"><span>{{ri1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            <p></p>
+                            <span class="dadito green"> 0 </span>{{ri1}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{ri2}}
+                            </div>
+                        {{/rollTotal() ri3 ri1}}
+                
+                        {{#rollGreater() ri3 ri1}}
+                        <!--ri2 < ri1 < ri3-->
+                            <div class="adv"><span>{{ri1}}</span>
+                            <p></p>
+                            <span class="dadito green"> 0 </span>{{ri1}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{ri2}}
+                            </div>
+                        {{/rollGreater() ri3 ri1}}
+                    {{/rollGreater() ri1 ri2}}
+                
+                        
+                        <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCIntensidad.png"/>    
+                        
+                
+                </div>
+                
+                <div class="arrow-right"></div>
+                <div class="label titulo">
+                    <span class="dadito"> 0 </span>Intensidad{{#modi}} ({{modi}}){{/modi}}<span class="dadito"> 0 </span>
+                </div>
+                {{/rollTotal() tipo 0}}
+
+
+                {{#rollTotal() tipo 1}}
+                <div class="arrow-left"></div>
+                
+                <div>
+                    {{#rollLess() rd1 rd2}}
+                        {{#rollLess() rd3 rd1}}
+                        <!--rd3 < rd1 < rd2-->
+                            <div class="adv"><span>{{rd1}}</span>
+                            <p></p>
+                            <span class="dadito green"> 0 </span>{{rd2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{rd1}}
+                      </div>
+                        {{/rollLess() rd3 rd1}}
+                
+                        {{#rollTotal() rd3 rd1}}
+                        <!--rd3 = rd1 < rd2-->
+                            <div class="adv"><span>{{rd1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            <p></p>
+                            <span class="dadito green"> 0 </span>{{rd2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{rd1}}
+                     </div>
+                        {{/rollTotal() rd3 rd1}}
+                
+                        {{#rollGreater() rd3 rd1}}
+                            {{#rollLess() rd3 rd2}}
+                            <!--rd1 < rd3 < rd2-->
+                                <div class="adv"><span>{{rd3}}</span>
+                                <p></p>
+                                <span class="dadito green"> 0 </span>{{rd2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{rd1}}
+                          </div>    
+                            {{/rollLess() rd3 rd2}}
+                
+                            {{#rollTotal() rd3 rd2}}
+                            <!--rd1 < rd3 = rd2-->
+                                <div class="adv"><span>{{rd3}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                                <p></p>
+                                <span class="dadito green"> 0 </span>{{rd2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{rd1}}
+                           </div>    
+                            {{/rollTotal() rd3 rd2}}
+                
+                            {{#rollGreater() rd3 rd2}}
+                            <!--rd1 < rd2 < rd3-->
+                                <div class="adv"><span>{{rd2}}</span>
+                                <p></p>
+                                <span class="dadito green"> 0 </span>{{rd2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{rd1}}
+                           </div>
+                            {{/rollGreater() rd3 rd2}}
+                        {{/rollGreater() rd3 rd1}}
+                    {{/rollLess() rd1 rd2}}
+                
+                    {{#rollTotal() rd1 rd2}}
+                        {{#rollLess() rd3 rd1}}
+                        <!--rd3 < rd1 = rd2-->
+                            <div class="adv"><span>{{rd1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            <p></p>
+                            <span class="dadito green"> 0 </span>{{rd2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{rd1}}
+                        </div>
+                        {{/rollLess() rd3 rd1}}
+                
+                        {{#rollTotal() rd3 rd1}}
+                        <!--rd1 = rd2 = rd3-->
+                            <div class="adv"><span>{{rd1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            <p></p>
+                            <span class="dadito green"> 0 </span>{{rd2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{rd1}}
+                       </div>
+                        {{/rollTotal() rd3 rd1}}
+                
+                        {{#rollGreater() rd3 rd1}}
+                        <!--rd1 = rd2 < rd3-->
+                            <div class="adv"><span>{{rd1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            <p></p>
+                            <span class="dadito green"> 0 </span>{{rd2}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{rd1}}
+                          </div>
+                        {{/rollGreater() rd3 rd1}}
+                    {{/rollTotal() rd1 rd2}}
+                
+                    {{#rollGreater() rd1 rd2}}
+                        {{#rollLess() rd3 rd1}}
+                            {{#rollLess() rd3 rd2}}
+                            <!--rd3 < rd2 < rd1-->
+                                <div class="adv"><span>{{rd2}}</span>
+                                <p></p>
+                                <span class="dadito green"> 0 </span>{{rd1}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{rd2}}
+                               </div>
+                            {{/rollLess() rd3 rd2}}
+                
+                            {{#rollTotal() rd3 rd2}}
+                            <!--rd2 = rd3 < rd1-->
+                                <div class="adv"><span>{{rd3}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                                <p></p>
+                                <span class="dadito green"> 0 </span>{{rd1}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{rd2}}
+                                </div>
+                            {{/rollTotal() rd3 rd2}}
+                
+                            {{#rollGreater() rd3 rd2}}
+                            <!--rd2 < rd3 < rd1-->
+                                <div class="adv"><span>{{rd3}}</span>
+                                <p></p>
+                                <span class="dadito green"> 0 </span>{{rd1}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{rd2}}
+                                </div>
+                            {{/rollGreater() rd3 rd2}}
+                        {{/rollLess() rd3 rd1}}
+                
+                        {{#rollTotal() rd3 rd1}}
+                        <!--rd2 < rd3 = rd1-->
+                            <div class="adv"><span>{{rd1}}</span><span class="green">{{#critbonus}}+{{critbonus}}{{/critbonus}}</span>
+                            <p></p>
+                            <span class="dadito green"> 0 </span>{{rd1}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{rd2}}
+                            </div>
+                        {{/rollTotal() rd3 rd1}}
+                
+                        {{#rollGreater() rd3 rd1}}
+                        <!--rd2 < rd1 < rd3-->
+                            <div class="adv"><span>{{rd1}}</span>
+                            <p></p>
+                            <span class="dadito green"> 0 </span>{{rd1}} &nbsp;&nbsp;<span class="dadito red"> 0 </span>{{rd2}}
+                            </div>
+                        {{/rollGreater() rd3 rd1}}
+                    {{/rollGreater() rd1 rd2}}
+                
+                        <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDisparo.png"/>    
+                        
+                
+                </div>
+                
+                <div class="arrow-right"></div>
+                <div class="label titulo">
+                    <span class="dadito"> 0 </span>Disparo{{#modd}} ({{modd}}){{/modd}}<span class="dadito"> 0 </span>
+                </div>
+                {{/rollTotal() tipo 1}}
+
 
                 <div class="label">
-                    <span>Poder {{poder}}</span>
-                </div>      
+                    <span>[Daño Extra](!&#13;#Daño)</span>
+                </div>
+
                 {{/conjuracion}}
 
                 {{#charname}}
@@ -2848,7 +3105,7 @@
                 <div class="arrow-left"></div>
         <p></p> 
         <div class="label texto">
-            Cada día tira 1d12: 8 o menos, no has podido dormir bien y quedas cansado todo el día (-25% Energía); 4 o menos, no duermes en absoluto y quedas extenuado (-50% Energía).
+            Nunca llegas a dormir bien y nunca puedes descansar del todo, lo que te deja cansado todo el día (-25% Energía).
             <p></p>
         </div>
     {{/rollTotal() r1 2}}
@@ -2940,8 +3197,8 @@
                     <div class="arrow-left"></div>
         <p></p> 
         <div class="label texto">
-            -1 a Espíritu. Ahora sufres Daño Psicológico cada vez que caiga moribundo UN compañero trasgo. Además, fuera de combate, durante situaciones tensas, debes tirar 1d12: 4 o menos te quedas bloqueado hasta que alguien te ayude.  
-            <p></p>
+            -1 a Voluntad. Ahora cada vez que caiga moribundo UN compañero trasgo sufres Daño Psicológico = (Trauma sufrido). <p></p>
+            Además, fuera de combate, durante situaciones tensas, debes tirar 1d12. Si sacas 4 o menos te quedas en shock y totalmente bloqueado, sin poder hacer acciones ni movimientos hasta que alguien te ayude.
             </div>
     {{/rollTotal() r1 7}}
 
@@ -2968,7 +3225,7 @@
 
     {{#rollTotal() r1 9}}
         <div class="label lesion">
-            Lesión - Nauseas
+            Lesión - Náuseas
         </div>
                 <div class="arrow-right"></div>
         <p></p> 
@@ -3114,6 +3371,7 @@
                 </div>
             {{/texto}}
         {{/general}}
+
 
         {{#golpe}}
         <div>
@@ -3383,7 +3641,7 @@
 
             {{#rollBetween() r1 2 3}}
             <div class="label texto">
-                <span>Nauseas:</span> quedas mareado durante todo el día.
+                <span>Náuseas:</span> quedas mareado durante todo el día.
             </div>
             {{/rollBetween() r1 2 3}}
 
