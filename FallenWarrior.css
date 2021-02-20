@@ -1016,7 +1016,7 @@ input.sheet-mostrar_magia:not(:checked) ~ div.sheet-editable_magia
 
 input.sheet-mostrar_conjuracion:not(:checked) ~ div.sheet-especial_conjuracion,
 input.sheet-mostrar_intensidad:not(:checked) ~ div.sheet-especial_intensidad,
-input.sheet-mostrar_disparo:not(:checked) ~ div.sheet-especial_disparo
+input.sheet-mostrar_celeridad:not(:checked) ~ div.sheet-especial_celeridad
 {
     display: none !important;
 }
@@ -1181,9 +1181,9 @@ button[type=roll]::before {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCIntensidad.png") !important;
 }
 
-.sheet-bdisparo
+.sheet-bceleridad
 {
-    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDisparo.png") !important;
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCCeleridad.png") !important;
 }
 
 .sheet-besquiva
