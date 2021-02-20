@@ -189,7 +189,7 @@ span.sheet-dee {
 .sheet-rolltemplate-dmg .sheet-adv span,
 .sheet-rolltemplate-dmg .sheet-solo span
 {
-    background-color: transparent !important;
+    background-color: transparent;
     border: 0px;
     font-size: 1.2em;
     padding: 0px;
@@ -1331,7 +1331,7 @@ input.sheet-atributoextraneg
 input.sheet-rangoextraneg + span
 {
     content: "";
-    background-color: transparent !important;
+    background-color: transparent;
     margin-right: 5px;
     border: solid 2px black;
     line-height: 8px;
@@ -1355,7 +1355,7 @@ input.sheet-rangoextraneg + span
 input.sheet-rangoextra + span
 {
     content: "";
-    background-color: transparent !important;
+    background-color: transparent;
     margin-right: 5px;
     border: solid 2px black;
     line-height: 8px;
@@ -1429,7 +1429,7 @@ input.sheet-rangoextraneg:checked + span,
 input.sheet-atributoextraneg:checked + span
 {    
     content: "";
-    background-color: transparent !important;
+    background-color: transparent;
 }
   
 /* ################################################### */
