@@ -1296,96 +1296,53 @@ input.sheet-fallidacomb
 }
 
 
-input.sheet-rangoextra,
-input.sheet-atributoextra
+/*----------------RANGO EXTRA---------------*/
+
+input.sheet-rangoex
 {
-    max-width: 2em;  
+    max-width: 2em; 
     opacity: 0;
     width: 16px;
     height: 16px;
-    position: relative;
-    top: 5px;
-    left: 6px;
-    margin: -10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 0px; /*poner left 8 y margin -10 para q funcione*/
     cursor: pointer;
-    z-index: 1;
 }
 
-input.sheet-rangoextraneg,
-input.sheet-atributoextraneg
+input.sheet-minirangoex
 {
-    max-width: 2em;  
+    max-width: 2em; 
     opacity: 0;
-    width: 16px;
-    height: 16px;
-    position: relative;
-    top: 5px;
-    left: 6px;
-    margin: -10px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    margin: 0px; /*poner left 8 y margin -10 para q funcione*/
     cursor: pointer;
-    z-index: 1;
 }
 
-/* -----Fake check (los circulitos que sí se ven)----- */
 
-input.sheet-rangoextraneg + span
+input.sheet-rangovacio
+{z-index: 4;}
+
+
+input.sheet-rangovacio:checked + span + input.sheet-rangopos,
+input.sheet-rangopos:checked + span + input.sheet-rangoneg,
+input.sheet-rangoneg:checked + span + input.sheet-rangovacio { z-index: 5; }
+
+
+input.sheet-rangoex:checked + span
 {
-    content: "";
-    background-color: transparent;
-    margin-right: 5px;
+    margin-right: -2px;
     border: solid 2px black;
     line-height: 8px;
     text-align: center;
     display: inline-block;
     vertical-align: middle;
-    background-color: rgb(100, 0, 0);
-    
-    color:black;
-    width: 8px;
-    height: 8px; 
-    font-size: 1em;
-
-
-    /*Esto hace que sean círculos en vez de cuadrados*/
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
-
-input.sheet-rangoextra + span
-{
-    content: "";
-    background-color: transparent;
-    margin-right: 5px;
-    border: solid 2px black;
-    line-height: 8px;
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-    background-color: rgb(2, 145, 21);
-    
-    color:black;
-    content: "•";
-    width: 8px;
-    height: 8px; 
-    font-size: 1em;
-
-
-    /*Esto hace que sean círculos en vez de cuadrados*/
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
-
-input.sheet-atributoextra + span
-{
-    margin-right: 5px;
-    border: solid 2px black;
-    line-height: 8px;
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-    background-color: rgb(2, 145, 21);
+    z-index: 0;
     
     
     color:black;
@@ -1394,44 +1351,36 @@ input.sheet-atributoextra + span
     height: 12px; 
     font-size: 1em;
 
-    /*Esto hace que sean círculos en vez de cuadrados ••●∴⋅⬤*/
+    
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
 
-input.sheet-atributoextraneg + span
+input.sheet-minirangoex:checked + span
 {
-    margin-right: 5px;
+    margin-right: -3px;
     border: solid 2px black;
     line-height: 8px;
     text-align: center;
     display: inline-block;
     vertical-align: middle;
-    background-color: rgb(100, 0, 0);
+    z-index: 0;
     
     
     color:black;
     content: "•";
-    width: 12px;
-    height: 12px; 
+    width: 8px;
+    height: 8px; 
     font-size: 1em;
 
-    /*Esto hace que sean círculos en vez de cuadrados ••●∴⋅⬤*/
+    
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
 
-input.sheet-rangoextra:checked + span,
-input.sheet-atributoextra:checked + span,
-input.sheet-rangoextraneg:checked + span,
-input.sheet-atributoextraneg:checked + span
-{    
-    content: "";
-    background-color: transparent;
-}
-  
+
 /* ################################################### */
 /* ################## CIRCULITOS ##################### */
 /* ################################################### */
@@ -1580,6 +1529,7 @@ input.sheet-zero[type="radio"] + span::before
     margin-right: 6px !important;
     margin-left: -6px !important;
 }
+
 
 
 /*quitar los dados
