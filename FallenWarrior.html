@@ -476,9 +476,8 @@
                     <p></p><span></span><input type="radio" title="Rango" class="rangorojo" name="attr_aapuntostrauma" value="7" /><span></span><input type="radio" title="Rango" class="rangorojo" name="attr_aapuntostrauma" value="8" /><span></span><input type="radio" title="Rango" class="rangorojo" name="attr_aapuntostrauma" value="9" /><span></span><input type="radio" title="Rango" class="rangorojo" name="attr_aapuntostrauma" value="10" /><span></span><input type="radio" title="Rango" class="rangorojo" name="attr_aapuntostrauma" value="11" /><span></span><input type="radio" title="Rango" class="rangorojo" name="attr_aapuntostrauma" value="12" /><span></span>
                     
                     <input type ="number" name="attr_aapuntostrauma_max" class="oculto" value="12" disabled="true"/></td>
-                    
-            
         </tr>
+
         <tr class="centrado negrita smaller">
         
             <td><span class="negrita">Cansancio</span></td>
@@ -511,46 +510,46 @@
     
                 <td class="centrado"><span>Protección</span></td>
                 <td>&nbsp;</td>
-    
-                <td class="centrado"><span>Penalizador</span></td>
+
+                <td class="centrado" colspan="2"><span>RD</span></td>
                 <td>&nbsp;</td>
     
-                <td class="centrado"></td>
-                <td>&nbsp;</td>
-    
-                <td class="centrado"></td>
-                <td>&nbsp;</td>
-        
-                <td class="centrado"></td>
+                <td class="centrado" colspan="4"><span>Penalizadores</span></td>
                 
+    
+                 
             </tr>
 
             <tr>                    
                 <td class="centrado bordetopbot"><span class="negrita larger">Armadura</span></td>
                 <td>&nbsp;</td>
 
-        <td class="centrado bordetopbot"><select name="attr_tipoarmadura" style="width: 90px;">
-            <option value="Ninguna">-</option>
-            <option value="Ligera">Ligera</option>
-            <option value="Intermedia">Intermedia</option>
-            <option value="Pesada">Pesada</option>
-        </select></td>
-        <td>&nbsp;</td>
+            <td class="centrado bordetopbot"><select name="attr_tipoarmadura" style="width: 90px;">
+                <option value="Ninguna">-</option>
+                <option value="Ligera">Ligera</option>
+                <option value="Intermedia">Intermedia</option>
+                <option value="Pesada">Pesada</option>
+            </select></td>
+            <td>&nbsp;</td>
 
-        <td class="centrado bordetopbot"><input name="attr_proteccion" type="number" style="width: 70px;" class="centrado" value="0"></td>
-        <td>&nbsp;</td>
+            <td class="centrado bordetopbot"><input name="attr_proteccion" type="number" title="Defensa mínima gracias a tu armadura" style="width: 70px;" class="centrado" value="0"></td>
+            <td>&nbsp;</td>
 
-        <td class="centrado bordetopbot"><input name="attr_pen_energia" type="number" style="width: 55px;" class="centrado" value="0"></td>
-        <td class="bordetop">&nbsp;</td>
+            <td class="centrado bordetopbot"><input name="attr_RD" type="number" title="Reducción de Daño" style="width: 35px;" class="centrado" value="0"></td>
 
-        <td class="centrado bordetopbot"><input name="attr_pen_destreza" type="number" style="width: 55px;" class="centrado" value="0"></td>
-        <td class="bordetop">&nbsp;</td>
+            <td class="centrado bordetopbot"> (<input name="attr_RDesp" type="text" title="Contra qué tipo de daño tienes reducción" style="width: 40px;" class="centrado">)</td>
+            <td>&nbsp;</td>
 
-        <td class="centrado bordetopbot"><input name="attr_pen_sigilo" type="number" style="width: 55px;" class="centrado" value="0"></td>
-        <td class="bordetop">&nbsp;</td>
+            <td class="centrado bordetopbot"><input name="attr_pen_energia" type="number" style="width: 55px;" class="centrado" value="0"></td>
+            <td class="bordetop">&nbsp;</td>
 
-        <td class="centrado bordetopbot"><input name="attr_pen_porcarga" type="number" style="width: 55px;" class="centrado" value="0"></td>
-        
+            <td class="centrado bordetopbot"><input name="attr_pen_destreza" type="number" style="width: 55px;" class="centrado" value="0"></td>
+            <td class="bordetop">&nbsp;</td>
+
+            <td class="centrado bordetopbot"><input name="attr_pen_sigilo" type="number" style="width: 55px;" class="centrado" value="0"></td>
+            <td class="bordetop">&nbsp;</td>
+
+            <td class="centrado bordetopbot"><input name="attr_pen_porcarga" type="number" style="width: 55px;" class="centrado" value="0"></td>
 
     </tr>
 
@@ -562,6 +561,9 @@
         <td>&nbsp;</td>
 
         <td class="centrado"></td>
+        <td>&nbsp;</td>
+
+        <td class="centrado"  colspan="2"></td>
         <td>&nbsp;</td>
 
         <td class="centrado"><span>Energía</span></td>
@@ -588,11 +590,11 @@
     <div class ="3colrow">
         <div class="col">
             
-            <button name="roll_esquiva" class="botonimagen besquiva" type="roll" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12cs0cf0+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_esquiva" class="botonimagen besquiva" type="roll" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12cs0cf0+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_esquiva" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12cs0cf0+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >Esquiva*</button></td>
+                            <td  class="bordebot"><button name="roll_esquiva" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12cs0cf0+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >Esquiva*</button></td>
                             <td >&nbsp;</td>
                             <td  class="bordebot"><input name="attr_esquiva" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
                         </tr>
@@ -606,14 +608,14 @@
             </table>
             </div>
         <div class="col">
-            <button name="roll_desvio" class="botonimagen bdesvio" type="roll" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12cs0cf0+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_desvio" class="botonimagen bdesvio" type="roll" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12cs0cf0+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
                             
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>
         -->
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_desvio" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12cs0cf0+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >Desvío</button></td>
+                            <td  class="bordebot"><button name="roll_desvio" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12cs0cf0+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >Desvío</button></td>
                             <td >&nbsp;</td>    
                             <td  class="bordebot"><input name="attr_desvio" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
                         </tr>
@@ -654,12 +656,12 @@
     <div class="3colrow editable_magia">
         <div class="col">
             
-            <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[?{¿Intensidad o Celeridad?|(Ninguno), 5|Intensidad, 0|Celeridad, 1}]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{modd=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+            <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[?{¿Intensidad o Celeridad?|(Ninguno), 5|Intensidad, 0|Celeridad, 1}]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{modc=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
             
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_conjuracion" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[?{¿Intensidad o Celeridad?|(Ninguno), 5|Intensidad, 0|Celeridad, 1}]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{modd=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >Conjuración</button></td>
+            <td class="bordebot"><button name="roll_conjuracion" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[?{¿Intensidad o Celeridad?|(Ninguno), 5|Intensidad, 0|Celeridad, 1}]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{modc=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >Conjuración</button></td>
             </td>
             <td>&nbsp;</td>
             <td class="bordebot"><input name="attr_conjuracion" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
@@ -693,13 +695,13 @@
              </div>
 
         <div class="col">
-            <button name="roll_celeridad" class="botonimagen bceleridad" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[1]]}}  {{modd=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
+            <button name="roll_celeridad" class="botonimagen bceleridad" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[1]]}}  {{modc=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
             
             
             <table style="margin: 0 auto; display:inline">
                 <tbody>
                         <tr class="centrado bordetop">
-            <td class="bordebot"><button name="roll_celeridad" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[1]]}}  {{modd=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">Celeridad</button></td>
+            <td class="bordebot"><button name="roll_celeridad" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[1]]}}  {{modc=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}">Celeridad</button></td>
             <td>&nbsp;</td>
             <td class="bordebot"><input name="attr_celeridad" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
             </tr>
@@ -855,7 +857,7 @@
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="infoacciones">         
             </div></span>
-            <button name="roll_conjuracion" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[?{¿Intensidad o Celeridad?|(Ninguno), 5|Intensidad, 0|Celeridad, 1}]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{modd=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button>(Conjuro)
+            <button name="roll_conjuracion" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[?{¿Intensidad o Celeridad?|(Ninguno), 5|Intensidad, 0|Celeridad, 1}]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{modc=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Conjuración</button>(Conjuro)
         </div>
 
         <input type="checkbox" name="attr_mostrar_intensidad" class="mostrar_intensidad check oculto" value="1" />
@@ -871,7 +873,7 @@
             <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: x-large;">i</div>
                 <div class="infoacciones">         
             </div></span>
-            <button name="roll_celeridad" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[1]]}}  {{modd=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Celeridad</button> (Conjuro)
+            <button name="roll_celeridad" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[1]]}}  {{modc=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Celeridad</button> (Conjuro)
         </div>
         
         </div>
@@ -1022,7 +1024,7 @@
                         <option value="2" selected="selected">C</option>
                         <option value="3">T</option>
                     </select>
-                    <input name="attr_dmg1" type="number"  title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 22px;"/></td>
+                    <input name="attr_dmg1" type="number"  title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe/-1 equipo pequeño)" class="centrado" value="0" style="width: 22px;"/></td>
                     <td>&nbsp;</td>
 
                     <td class="centrado bordebot"><input name="attr_can1" type="number" title="Cansancio=Fuerza (+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 40px;"/></td>
@@ -1031,7 +1033,7 @@
                     <td class="centrado bordebot"><input name="attr_alc1" type="number"  class="centrado" value="1" style="width: 40px;"/></td>
                     <td>&nbsp;</td>
 
-                    <td class="bordebot"><input name="attr_esp1" type="text"  style="width: 185px;"></td>
+                    <td class="bordebot"><input name="attr_esp1" type="text"  style="width: 200px;"></td>
                     </tr>
 
                         <tr class="negrita smaller">
@@ -1078,7 +1080,7 @@
                         <option value="2" selected="selected">C</option>
                         <option value="3">T</option>
                     </select>
-                    <input name="attr_dmg2" type="number"  title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 22px;"/></td>
+                    <input name="attr_dmg2" type="number"  title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe/-1 equipo pequeño)" class="centrado" value="0" style="width: 22px;"/></td>
                     <td>&nbsp;</td>
 
                     <td class="centrado bordebot"><input name="attr_can2" type="number" title="Cansancio=Fuerza (+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 40px;"/></td>
@@ -1087,7 +1089,7 @@
                     <td class="centrado bordebot"><input name="attr_alc2" type="number"  class="centrado" value="1" style="width: 40px;"/></td>
                     <td>&nbsp;</td>
 
-                    <td class="bordebot"><input name="attr_esp2" type="text"  style="width: 185px;"></td>
+                    <td class="bordebot"><input name="attr_esp2" type="text"  style="width: 200px;"></td>
                         </tr>
                         <tr class="negrita smaller">
                             <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-5)&nbsp;&nbsp;</span></td>
@@ -1146,7 +1148,7 @@
                         <option value="2">C</option>
                         <option value="3">T</option>
                     </select>
-                    <input name="attr_dmg3" type="number" title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 22px;"/></td>
+                    <input name="attr_dmg3" type="number" title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe/-1 equipo pequeño)" class="centrado" value="0" style="width: 22px;"/></td>
                     <td>&nbsp;</td>
 
                     <td class="centrado bordebot"><input name="attr_can3" type="number" title="Cansancio=Fuerza (+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 40px;"/></td>
@@ -1155,7 +1157,7 @@
                     <td class="centrado bordebot"><input name="attr_alc3" type="number"  class="centrado" value="1" style="width: 40px;"/></td>
                     <td>&nbsp;</td>
 
-                    <td class="bordebot"><input name="attr_esp3" type="text" style="width: 185px;"></td>
+                    <td class="bordebot"><input name="attr_esp3" type="text" style="width: 200px;"></td>
                     
 
                     </tr>
@@ -1212,7 +1214,7 @@
                         <option value="2">C</option>
                         <option value="3" selected="selected">T</option>
                     </select>
-                    <input name="attr_dmgsa" type="number" title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 22px;"/></td>
+                    <input name="attr_dmgsa" type="number" title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe/-1 equipo pequeño)" class="centrado" value="0" style="width: 22px;"/></td>
                     <td>&nbsp;</td>
 
                     <td class="centrado bordebot"><input name="attr_cansa" type="number" title="Cansancio=Fuerza (+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 40px;"/></td>
@@ -1221,7 +1223,7 @@
                     <td class="centrado bordebot"><input name="attr_alcsa" type="number"  class="centrado" value="1" style="width: 40px;"/></td>
                     <td>&nbsp;</td>
 
-                    <td class="bordebot"><input name="attr_espsa" type="text" style="width: 175px;"></td>
+                    <td class="bordebot"><input name="attr_espsa" type="text" style="width: 190px;"></td>
                     
 
                    </tr>
@@ -1352,7 +1354,7 @@
     </table>
     </div>
     
-    <div class="36porciento inline">
+    <div class="37porciento inline">
         <h3 class="centrado">Comunes</h3>
         <!-- <span>Habilidad (atributo)/ Rangos / Mod. Especial / Hab. Final + Roll</span> -->
         <table style="margin: 0 auto;">
@@ -1381,8 +1383,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_alertax3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>   
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_alerta" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_alerta} [Rangos] + @{Astucia} [Atributo] - 5 + @{hab_alerta_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                <input name="attr_hab_alerta_esp" value="[[(@{rang_alertax1} + @{rang_alertax2} + @{rang_alertax3} + @{rang_Astuciax1} + @{rang_Astuciax2} + @{rang_Astuciax3} )]]" style="display:none" disabled></td>
+                <input name="attr_hab_alerta" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_alerta} [Rangos] + @{Astucia} [Atributo] - 5 + @{hab_alerta_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                <input name="attr_hab_alerta_esp" value="[[(@{rang_alertax1} + @{rang_alertax2} + @{rang_alertax3} + @{rang_Astuciax1} + @{rang_Astuciax2} + @{rang_Astuciax3} )]]" style="display:none" disabled>
         
             </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_atletismo" value="1">
@@ -1406,8 +1408,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_atletismox3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_atletismo" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_atletismo} [Rangos] + @{Fuerza} [Atributo] - 5 + @{hab_atletismo_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                    <input name="attr_hab_atletismo_esp" value="[[(@{rang_atletismox1} + @{rang_atletismox2} + @{rang_atletismox3} + @{rang_Fuerzax1} + @{rang_Fuerzax2} + @{rang_Fuerzax3} )]]" style="display:none" disabled></td>
+                    <input name="attr_hab_atletismo" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_atletismo} [Rangos] + @{Fuerza} [Atributo] - 5 + @{hab_atletismo_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                    <input name="attr_hab_atletismo_esp" value="[[(@{rang_atletismox1} + @{rang_atletismox2} + @{rang_atletismox3} + @{rang_Fuerzax1} + @{rang_Fuerzax2} + @{rang_Fuerzax3} )]]" style="display:none" disabled>
 
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_diplomacia" value="1">
@@ -1431,8 +1433,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_diplomaciax3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_diplomacia" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_diplomacia} [Rangos] + @{Astucia} [Atributo] - 5 + @{hab_diplomacia_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                <input name="attr_hab_diplomacia_esp" value="[[(@{rang_diplomaciax1} + @{rang_diplomaciax2} + @{rang_diplomaciax3} + @{rang_Astuciax1} + @{rang_Astuciax2} + @{rang_Astuciax3} )]]" style="display:none" disabled></td>
+                <input name="attr_hab_diplomacia" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_diplomacia} [Rangos] + @{Astucia} [Atributo] - 5 + @{hab_diplomacia_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                <input name="attr_hab_diplomacia_esp" value="[[(@{rang_diplomaciax1} + @{rang_diplomaciax2} + @{rang_diplomaciax3} + @{rang_Astuciax1} + @{rang_Astuciax2} + @{rang_Astuciax3} )]]" style="display:none" disabled>
 
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_empatia" value="1">
@@ -1456,10 +1458,11 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_empatiax3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_empatia" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_empatia} [Rangos] + @{Astucia} [Atributo] - 5 + @{hab_empatia_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                <input name="attr_hab_empatia_esp" value="[[(@{rang_empatiax1} + @{rang_empatiax2} + @{rang_empatiax3} + @{rang_Astuciax1} + @{rang_Astuciax2} + @{rang_Astuciax3} )]]" style="display:none" disabled></td>
-
-        </tr><tr><td style="padding-bottom:5px">
+                <input name="attr_hab_empatia" type="number" class="centrado inline" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_empatia} [Rangos] + @{Astucia} [Atributo] - 5 + @{hab_empatia_esp} [Otros])]]" style="width: 19px;" disabled><span>/</span><input name="attr_hab_empatia2" type="number" class="centrado inline" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_empatia} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_empatia_esp2} [Otros])]]" style="width: 19px;" disabled></td>
+                <input name="attr_hab_empatia_esp" value="[[(@{rang_empatiax1} + @{rang_empatiax2} + @{rang_empatiax3} + @{rang_Astuciax1} + @{rang_Astuciax2} + @{rang_Astuciax3} )]]" style="display:none;" disabled>
+                <input name="attr_hab_empatia_esp2" value="[[(@{rang_empatiax1} + @{rang_empatiax2} + @{rang_empatiax3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none;" disabled>
+                       
+            </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_engañar" value="1">
             <input type="checkbox" class="fallida" title="¿Habilidad fallida?" name="attr_fallida_engañar" value="1">
             <button name="roll_enganar" type="roll" value="&{template:tirada} {{logo=Ah}} {{rname=Engañar}} {{mod=@{hab_enganar}}} {{r1=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r2=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r3=[[(1d12cs0cf0+@{hab_enganar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
@@ -1481,8 +1484,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_engañarx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_engañar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_engañar} [Rangos] + @{Astucia} [Atributo] - 5 + @{hab_engañar_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                <input name="attr_hab_engañar_esp" value="[[(@{rang_engañarx1} + @{rang_engañarx2} + @{rang_engañarx3} + @{rang_Astuciax1} + @{rang_Astuciax2} + @{rang_Astuciax3} )]]" style="display:none" disabled></td>
+                <input name="attr_hab_engañar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_engañar} [Rangos] + @{Astucia} [Atributo] - 5 + @{hab_engañar_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                <input name="attr_hab_engañar_esp" value="[[(@{rang_engañarx1} + @{rang_engañarx2} + @{rang_engañarx3} + @{rang_Astuciax1} + @{rang_Astuciax2} + @{rang_Astuciax3} )]]" style="display:none" disabled>
 
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_equilibrio" value="1">
@@ -1506,8 +1509,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_equilibriox3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_equilibrio" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_equilibrio} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_equilibrio_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                <input name="attr_hab_equilibrio_esp" value="[[(@{rang_equilibriox1} + @{rang_equilibriox2} + @{rang_equilibriox3} + @{rang_Agilidadx1} + @{rang_Agilidadx2} + @{rang_Agilidadx3} )]]" style="display:none" disabled></td>
+                <input name="attr_hab_equilibrio" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_equilibrio} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_equilibrio_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                <input name="attr_hab_equilibrio_esp" value="[[(@{rang_equilibriox1} + @{rang_equilibriox2} + @{rang_equilibriox3} + @{rang_Agilidadx1} + @{rang_Agilidadx2} + @{rang_Agilidadx3} )]]" style="display:none" disabled>
 
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_intimidar" value="1">
@@ -1531,8 +1534,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_intimidarx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_intimidar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_intimidar} [Rangos] + @{Fuerza} [Atributo] - 5 + @{hab_intimidar_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                <input name="attr_hab_intimidar_esp" value="[[(@{rang_intimidarx1} + @{rang_intimidarx2} + @{rang_intimidarx3} + @{rang_Fuerzax1} + @{rang_Fuerzax2} + @{rang_Fuerzax3} )]]" style="display:none" disabled></td>
+                <input name="attr_hab_intimidar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_intimidar} [Rangos] + @{Fuerza} [Atributo] - 5 + @{hab_intimidar_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                <input name="attr_hab_intimidar_esp" value="[[(@{rang_intimidarx1} + @{rang_intimidarx2} + @{rang_intimidarx3} + @{rang_Fuerzax1} + @{rang_Fuerzax2} + @{rang_Fuerzax3} )]]" style="display:none" disabled>
 
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_nadar" value="1">
@@ -1556,8 +1559,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_nadarx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_nadar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_nadar} [Rangos] + @{Fuerza} [Atributo] - 5 + @{hab_nadar_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                <input name="attr_hab_nadar_esp" value="[[(@{rang_nadarx1} + @{rang_nadarx2} + @{rang_nadarx3} + @{rang_Fuerzax1} + @{rang_Fuerzax2} + @{rang_Fuerzax3} )]]" style="display:none" disabled></td>
+                <input name="attr_hab_nadar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_nadar} [Rangos] + @{Fuerza} [Atributo] - 5 + @{hab_nadar_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                <input name="attr_hab_nadar_esp" value="[[(@{rang_nadarx1} + @{rang_nadarx2} + @{rang_nadarx3} + @{rang_Fuerzax1} + @{rang_Fuerzax2} + @{rang_Fuerzax3} )]]" style="display:none" disabled>
 
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_observacion" value="1">
@@ -1581,8 +1584,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_observacionx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_observacion" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_observacion} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_observacion_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                <input name="attr_hab_observacion_esp" value="[[(@{rang_observacionx1} + @{rang_observacionx2} + @{rang_observacionx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled></td>
+                <input name="attr_hab_observacion" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_observacion} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_observacion_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                <input name="attr_hab_observacion_esp" value="[[(@{rang_observacionx1} + @{rang_observacionx2} + @{rang_observacionx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled>
 
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_sigilo" value="1">
@@ -1606,8 +1609,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_sigilox3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_sigilo" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_sigilo} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_sigilo_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                <input name="attr_hab_sigilo_esp" value="[[(@{rang_sigilox1} + @{rang_sigilox2} + @{rang_sigilox3} + @{rang_Agilidadx1} + @{rang_Agilidadx2} + @{rang_Agilidadx3} )]]" style="display:none" disabled></td>
+                <input name="attr_hab_sigilo" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_sigilo} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_sigilo_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                <input name="attr_hab_sigilo_esp" value="[[(@{rang_sigilox1} + @{rang_sigilox2} + @{rang_sigilox3} + @{rang_Agilidadx1} + @{rang_Agilidadx2} + @{rang_Agilidadx3} )]]" style="display:none" disabled>
 
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_supervivencia" value="1">
@@ -1631,8 +1634,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_supervivenciax3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_supervivencia" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_supervivencia} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_supervivencia_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                <input name="attr_hab_supervivencia_esp" value="[[(@{rang_supervivenciax1} + @{rang_supervivenciax2} + @{rang_supervivenciax3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled></td>
+                <input name="attr_hab_supervivencia" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_supervivencia} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_supervivencia_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                <input name="attr_hab_supervivencia_esp" value="[[(@{rang_supervivenciax1} + @{rang_supervivenciax2} + @{rang_supervivenciax3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled>
 
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_tasacion" value="1">
@@ -1656,8 +1659,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_tasacionx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_tasacion" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_tasacion} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_tasacion_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                <input name="attr_hab_tasacion_esp" value="[[(@{rang_tasacionx1} + @{rang_tasacionx2} + @{rang_tasacionx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled></td>
+                <input name="attr_hab_tasacion" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_tasacion} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_tasacion_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                <input name="attr_hab_tasacion_esp" value="[[(@{rang_tasacionx1} + @{rang_tasacionx2} + @{rang_tasacionx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled>
 
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_tratoanimal" value="1">
@@ -1681,8 +1684,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_tratoanimalx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_tratoanimal" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_tratoanimal} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_tratoanimal_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                <input name="attr_hab_tratoanimal_esp" value="[[(@{rang_tratoanimalx1} + @{rang_tratoanimalx2} + @{rang_tratoanimalx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled></td></tr>
+                <input name="attr_hab_tratoanimal" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_tratoanimal} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_tratoanimal_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                <input name="attr_hab_tratoanimal_esp" value="[[(@{rang_tratoanimalx1} + @{rang_tratoanimalx2} + @{rang_tratoanimalx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled></tr>
 
         </tbody>
     </table>
@@ -1718,8 +1721,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_artesania1x3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_artesania1" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_artesania1} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_artesania1_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                    <input name="attr_hab_artesania1_esp" value="[[(@{rang_artesania1x1} + @{rang_artesania1x2} + @{rang_artesania1x3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled></td>
+                    <input name="attr_hab_artesania1" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_artesania1} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_artesania1_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                    <input name="attr_hab_artesania1_esp" value="[[(@{rang_artesania1x1} + @{rang_artesania1x2} + @{rang_artesania1x3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled>
     
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_arte2" value="1">
@@ -1745,8 +1748,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_artesania2x3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_artesania2" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_artesania2} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_artesania2_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                    <input name="attr_hab_artesania2_esp" value="[[(@{rang_artesania2x1} + @{rang_artesania2x2} + @{rang_artesania2x3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled></td>
+                    <input name="attr_hab_artesania2" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_artesania2} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_artesania2_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                    <input name="attr_hab_artesania2_esp" value="[[(@{rang_artesania2x1} + @{rang_artesania2x2} + @{rang_artesania2x3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled>
     
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_idiomas" value="1">
@@ -1770,8 +1773,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_idiomasx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_idiomas" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_idiomas} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_idiomas_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                    <input name="attr_hab_idiomas_esp" value="[[(@{rang_idiomasx1} + @{rang_idiomasx2} + @{rang_idiomasx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled></td>
+                    <input name="attr_hab_idiomas" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_idiomas} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_idiomas_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                    <input name="attr_hab_idiomas_esp" value="[[(@{rang_idiomasx1} + @{rang_idiomasx2} + @{rang_idiomasx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled>
     
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_piruetas" value="1">
@@ -1795,8 +1798,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_piruetasx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_piruetas" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_piruetas} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_piruetas_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                    <input name="attr_hab_piruetas_esp" value="[[(@{rang_piruetasx1} + @{rang_piruetasx2} + @{rang_piruetasx3} + @{rang_Agilidadx1} + @{rang_Agilidadx2} + @{rang_Agilidadx3} )]]" style="display:none" disabled></td>
+                    <input name="attr_hab_piruetas" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_piruetas} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_piruetas_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                    <input name="attr_hab_piruetas_esp" value="[[(@{rang_piruetasx1} + @{rang_piruetasx2} + @{rang_piruetasx3} + @{rang_Agilidadx1} + @{rang_Agilidadx2} + @{rang_Agilidadx3} )]]" style="display:none" disabled>
     
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_rastrear" value="1">
@@ -1820,8 +1823,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_rastrearx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_rastrear" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_rastrear} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_rastrear_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                    <input name="attr_hab_rastrear_esp" value="[[(@{rang_rastrearx1} + @{rang_rastrearx2} + @{rang_rastrearx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled></td>
+                    <input name="attr_hab_rastrear" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_rastrear} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_rastrear_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                    <input name="attr_hab_rastrear_esp" value="[[(@{rang_rastrearx1} + @{rang_rastrearx2} + @{rang_rastrearx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled>
     
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_sarcano" value="1">
@@ -1845,8 +1848,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_sarcanox3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_sarcano" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_sarcano} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_sarcano_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                    <input name="attr_hab_sarcano_esp" value="[[(@{rang_sarcanox1} + @{rang_sarcanox2} + @{rang_sarcanox3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled></td>
+                    <input name="attr_hab_sarcano" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_sarcano} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_sarcano_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                    <input name="attr_hab_sarcano_esp" value="[[(@{rang_sarcanox1} + @{rang_sarcanox2} + @{rang_sarcanox3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled>
     
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_sbajosfondos" value="1">
@@ -1870,8 +1873,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_sbajosx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_sbajos" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_sbajos} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_sbajos_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                    <input name="attr_hab_sbajos_esp" value="[[(@{rang_sbajosx1} + @{rang_sbajosx2} + @{rang_sbajosx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled></td>
+                    <input name="attr_hab_sbajos" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_sbajos} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_sbajos_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                    <input name="attr_hab_sbajos_esp" value="[[(@{rang_sbajosx1} + @{rang_sbajosx2} + @{rang_sbajosx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled>
     
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_sculturas" value="1">
@@ -1895,8 +1898,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_sculturasx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_sculturas" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_sculturas} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_sculturas_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                    <input name="attr_hab_sculturas_esp" value="[[(@{rang_sculturasx1} + @{rang_sculturasx2} + @{rang_sculturasx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled></td>
+                    <input name="attr_hab_sculturas" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_sculturas} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_sculturas_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                    <input name="attr_hab_sculturas_esp" value="[[(@{rang_sculturasx1} + @{rang_sculturasx2} + @{rang_sculturasx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled>
     
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_snaturaleza" value="1">
@@ -1920,8 +1923,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_snaturalezax3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_snaturaleza" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_snaturaleza} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_snaturaleza_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                    <input name="attr_hab_snaturaleza_esp" value="[[(@{rang_snaturalezax1} + @{rang_snaturalezax2} + @{rang_snaturalezax3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled></td>
+                    <input name="attr_hab_snaturaleza" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_snaturaleza} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_snaturaleza_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                    <input name="attr_hab_snaturaleza_esp" value="[[(@{rang_snaturalezax1} + @{rang_snaturalezax2} + @{rang_snaturalezax3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled>
     
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_ssociedad" value="1">
@@ -1945,8 +1948,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_ssociedadx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_ssociedad" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_ssociedad} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_ssociedad_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                    <input name="attr_hab_ssociedad_esp" value="[[(@{rang_ssociedadx1} + @{rang_ssociedadx2} + @{rang_ssociedadx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled></td>
+                    <input name="attr_hab_ssociedad" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_ssociedad} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_ssociedad_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                    <input name="attr_hab_ssociedad_esp" value="[[(@{rang_ssociedadx1} + @{rang_ssociedadx2} + @{rang_ssociedadx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled>
     
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" title="Habilidad innata" name="attr_innata_sanar" value="1">
@@ -1970,10 +1973,11 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_sanarx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_sanar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_sanar} [Rangos] + @{Destreza} [Atributo] - 5 + @{hab_sanar_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                    <input name="attr_hab_sanar_esp" value="[[(@{rang_sanarx1} + @{rang_sanarx2} + @{rang_sanarx3} + @{rang_Destrezax1} + @{rang_Destrezax2} + @{rang_Destrezax3} )]]" style="display:none" disabled></td>
-    
-        </tr><tr><td style="padding-bottom:5px">
+                    <input name="attr_hab_sanar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_sanar} [Rangos] + @{Destreza} [Atributo] - 5 + @{hab_sanar_esp} [Otros])]]" style="width: 19px;" disabled><span>/</span><input name="attr_hab_sanar2" type="number" class="centrado inline" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_sanar} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_sanar_esp2} [Otros])]]" style="width: 19px;" disabled></td>
+                    <input name="attr_hab_sanar_esp" value="[[(@{rang_sanarx1} + @{rang_sanarx2} + @{rang_sanarx3} + @{rang_Destrezax1} + @{rang_Destrezax2} + @{rang_Destrezax3} )]]" style="display:none" disabled>
+                    <input name="attr_hab_sanar_esp2" value="[[(@{rang_sanarx1} + @{rang_sanarx2} + @{rang_sanarx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none;" disabled>
+        
+            </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_seguridad" value="1">
             <input type="checkbox" class="fallida" title="¿Habilidad fallida?" name="attr_fallida_seguridad" value="1">
             <button name="roll_seguridad" type="roll" value="&{template:tirada} {{logo=Ah}} {{rname=Seguridad}} {{mod=@{hab_seguridad}}} {{r1=[[(1d12cs0cf0+@{hab_seguridad})]]}} {{r2=[[(1d12cs0cf0+@{hab_seguridad})]]}} {{r3=[[(1d12cs0cf0+@{hab_seguridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
@@ -1995,9 +1999,10 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_seguridadx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_seguridad" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_seguridad} [Rangos] + @{Destreza} [Atributo] - 5 + @{hab_seguridad_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                    <input name="attr_hab_seguridad_esp" value="[[(@{rang_seguridadx1} + @{rang_seguridadx2} + @{rang_seguridadx3} + @{rang_Destrezax1} + @{rang_Destrezax2} + @{rang_Destrezax3} )]]" style="display:none" disabled></td>
-    
+                    <input name="attr_hab_seguridad" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_seguridad} [Rangos] + @{Destreza} [Atributo] - 5 + @{hab_seguridad_esp} [Otros])]]" style="width: 19px;" disabled><span>/</span><input name="attr_hab_seguridad2" type="number" class="centrado inline" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_seguridad} [Rangos] + @{Inteligencia} [Atributo] - 5 + @{hab_seguridad_esp2} [Otros])]]" style="width: 19px;" disabled></td>
+                    <input name="attr_hab_seguridad_esp" value="[[(@{rang_seguridadx1} + @{rang_seguridadx2} + @{rang_seguridadx3} + @{rang_Destrezax1} + @{rang_Destrezax2} + @{rang_Destrezax3} )]]" style="display:none" disabled>
+                    <input name="attr_hab_seguridad_esp2" value="[[(@{rang_seguridadx1} + @{rang_seguridadx2} + @{rang_seguridadx3} + @{rang_Inteligenciax1} + @{rang_Inteligenciax2} + @{rang_Inteligenciax3} )]]" style="display:none" disabled>
+
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_tactica" value="1">
             <input type="checkbox" class="fallida" title="¿Habilidad fallida?" name="attr_fallida_tactica" value="1">
@@ -2020,8 +2025,8 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_tacticax3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_tactica" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_tactica} [Rangos] + @{Astucia} [Atributo] - 5 + @{hab_tactica_esp} [Otros])]]" style="width: 21px;" disabled></td>
-                    <input name="attr_hab_tactica_esp" value="[[(@{rang_tacticax1} + @{rang_tacticax2} + @{rang_tacticax3} + @{rang_Astuciax1} + @{rang_Astuciax2} + @{rang_Astuciax3} )]]" style="display:none" disabled></td>
+                    <input name="attr_hab_tactica" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_tactica} [Rangos] + @{Astucia} [Atributo] - 5 + @{hab_tactica_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                    <input name="attr_hab_tactica_esp" value="[[(@{rang_tacticax1} + @{rang_tacticax2} + @{rang_tacticax3} + @{rang_Astuciax1} + @{rang_Astuciax2} + @{rang_Astuciax3} )]]" style="display:none" disabled>
     
         </tr>
         </tbody>
@@ -2433,11 +2438,11 @@
 <button name="roll_Vitalidad" type="roll" class="tokenaction" value="&{template:tirada} {{logo=Ah}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cs0cf0+@{vit})]]}} {{r2=[[(1d12cs0cf0+@{vit})]]}} {{r3=[[(1d12cs0cf0+@{vit})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>      
 <button name="roll_Voluntad" type="roll" class="tokenaction" value="&{template:tirada} {{logo=Ah}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cs0cf0+@{vol})]]}} {{r2=[[(1d12cs0cf0+@{vol})]]}} {{r3=[[(1d12cs0cf0+@{vol})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
 
-<button name="roll_esquiva" class="tokenaction" type="roll" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12cs0cf0+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
-<button name="roll_desvío" class="tokenaction" type="roll" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12cs0cf0+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+<button name="roll_esquiva" class="tokenaction" type="roll" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12cs0cf0+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+<button name="roll_desvío" class="tokenaction" type="roll" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12cs0cf0+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
 <button name="roll_pelea" class="tokenaction" type="roll" value="&{template:tirada} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(1d12cs0cf0+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
 
-<button name="roll_conjuro" class="tokenaction" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[?{¿Intensidad o Celeridad?|(Ninguno), 5|Intensidad, 0|Celeridad, 1}]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{modd=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
+<button name="roll_conjuro" class="tokenaction" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[?{¿Intensidad o Celeridad?|(Ninguno), 5|Intensidad, 0|Celeridad, 1}]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12cs0cf0+@{intensidad})]]}} {{modc=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
 
 <button name="roll_Ataque1" class="tokenaction" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{Daño=[[@{dmg1}]]}} {{Cansancio=[[@{can1}]]}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=[[@{tipodmg1}]]}} {{alcance=[[@{alc1}]]}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12cs0cf0+@{ataque1})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
 <button name="roll_Ataque2" class="tokenaction" type="roll" value="&{template:tirada} {{ataque2=Ah}} {{Daño=[[@{dmg2}]]}} {{Cansancio=[[@{can2}]]}} {{rname=Ataque}} {{mod=@{ataque2}}} {{arma=@{nombrearma2}}} {{tipodmg=[[@{tipodmg2}]]}} {{alcance=[[@{alc2}]]}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(1d12cs0cf0+@{ataque2})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"></button>
@@ -2698,7 +2703,7 @@
                         <span class="infotitulo1">Celeridad</span>
                         <span class="infobonificador">Bonificador: </span><span name="attr_celeridad" class="infobonificador"></span>
                 </div></span>
-                <button name="roll_celeridad" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[1]]}}  {{modd=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Celeridad</button> (Conjuro)
+                <button name="roll_celeridad" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{mod=[[@{conjuracion}+?{¿Modificador a Conjuración?|0}]]}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultad2=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r2=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{r3=[[(1d12cs0cf0+@{conjuracion}+?{¿Modificador a Conjuración?|0})]]}} {{tipo=[[1]]}}  {{modc=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12cs0cf0+@{celeridad})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}"> Celeridad</button> (Conjuro)
             </div>
             
         </div>
@@ -2831,14 +2836,14 @@
     <!--CIRCULITOS DE ATAQUE Y DEFENSA-->
         <div style="float:right; margin-top: -10px;"> 
                             
-                <button name="roll_desvio" class="imagencoliseo bdesvio" type="roll" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12cs0cf0+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>            
+                <button name="roll_desvio" class="imagencoliseo bdesvio" type="roll" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12cs0cf0+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>            
                 <span name="attr_desvio" class="bonificadorcoliseo inline"></span>
-                <button name="roll_desvio" class="inline botoncoliseo" type="roll" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12cs0cf0+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío</button>
+                <button name="roll_desvio" class="inline botoncoliseo" type="roll" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12cs0cf0+@{desvio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Desvío</button>
                 
                 
-                <button name="roll_esquiva" class="imagencoliseo besquiva" type="roll" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12cs0cf0+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>                
+                <button name="roll_esquiva" class="imagencoliseo besquiva" type="roll" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12cs0cf0+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>                
                 <span name="attr_esquiva" class="bonificadorcoliseo inline"></span>
-                <button name="roll_esquiva" class="inline botoncoliseo" type="roll" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}}{{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12cs0cf0+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Esquiva</button>             
+                <button name="roll_esquiva" class="inline botoncoliseo" type="roll" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}}{{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12cs0cf0+@{esquiva})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" > Esquiva</button>             
                  
         
                 <button name="roll_pelea" class="imagencoliseo bpelea" type="roll" value="&{template:tirada} {{pelea=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(1d12cs0cf0+@{pelea})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" ></button>
@@ -2915,25 +2920,23 @@
             
             <div class="centrado" style="margin-top: 8px;">            
                 <button name="roll_alerta" type="roll" value="&{template:tirada} {{logo=Ah}} {{rname=Alerta}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_alerta}}} {{r1=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r2=[[(1d12cs0cf0+@{hab_alerta})]]}} {{r3=[[(1d12cs0cf0+@{hab_alerta})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-                <span class="dadito">0</span><span class="fuentehab"> Alerta</span></button>&nbsp;<span name="attr_hab_alerta" class="negrita"></span>&nbsp;&nbsp;&nbsp;
-                
+                <span class="dadito">0</span><span class="fuentehab"> Alerta</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                 <button name="roll_atletismo" type="roll" value="&{template:tirada} {{logo=Ah}} {{rname=Atletismo}} {{mod=@{hab_atletismo}}} {{r1=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r2=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r3=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-                <span class="dadito">0</span><span class="fuentehab"> Atletismo</span></button>&nbsp;<span name="attr_hab_atletismo" class="negrita"></span>&nbsp;&nbsp;&nbsp;
-                
+                <span class="dadito">0</span><span class="fuentehab"> Atletismo</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button name="roll_empatia" type="roll" value="&{template:tirada} {{logo=Ah}} {{rname=Empatía}} {{estrategia=Estrategia @{est}}} {{mod=@{hab_empatia}}} {{r1=[[(1d12cs0cf0+@{hab_empatia})]]}} {{r2=[[(1d12cs0cf0+@{hab_empatia})]]}} {{r3=[[(1d12cs0cf0+@{hab_empatia})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-                <span class="dadito">0</span><span class="fuentehab"> Empatía</span></button>&nbsp;<span name="attr_hab_empatia" class="negrita"></span>&nbsp;&nbsp;&nbsp;
-    
+                <span class="dadito">0</span><span class="fuentehab"> Empatía</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div> 
     
             <div class="centrado" style="margin-top: 12px;">              
                 <button name="roll_enganar" type="roll" value="&{template:tirada} {{logo=Ah}} {{rname=Engañar}} {{mod=@{hab_enganar}}} {{r1=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r2=[[(1d12cs0cf0+@{hab_enganar})]]}} {{r3=[[(1d12cs0cf0+@{hab_enganar})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-                <span class="dadito">0</span><span class="fuentehab"> Engañar</span></button>&nbsp;<span name="attr_hab_enganar" class="negrita"></span>&nbsp;&nbsp;&nbsp;
-                
+                <span class="dadito">0</span><span class="fuentehab"> Engañar</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                 <button name="roll_equilibrio" type="roll" value="&{template:tirada} {{logo=Ah}} {{rname=Equilibrio}} {{mod=@{hab_equilibrio}}} {{r1=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{r2=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{r3=[[(1d12cs0cf0+@{hab_equilibrio})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-                <span class="dadito">0</span><span class="fuentehab"> Equilibrio</span></button>&nbsp;<span name="attr_hab_equilibrio" class="negrita"></span>&nbsp;&nbsp;&nbsp;
-            
+                <span class="dadito">0</span><span class="fuentehab"> Equilibrio</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
                 <button name="roll_sigilo" type="roll" value="&{template:tirada} {{logo=Ah}} {{rname=Sigilo}} {{mod=@{hab_sigilo}}} {{r1=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{r2=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{r3=[[(1d12cs0cf0+@{hab_sigilo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-                <span class="dadito">0</span><span class="fuentehab"> Sigilo</span></button>&nbsp;<span name="attr_hab_sigilo" class="negrita"></span>&nbsp;&nbsp;&nbsp;
+                <span class="dadito">0</span><span class="fuentehab"> Sigilo</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div> 
         </div>
     
@@ -3212,7 +3215,13 @@
                     <div class="label">
                         <span >{{armadura}} </span>&nbsp;&nbsp;&nbsp;&nbsp;<span> {{herida}}</span>
                     </div>
-                    {{/armadura}} 
+                    {{/armadura}}
+                
+                <div class="label">
+                    {{#rollGreater() RD 0}}
+                        <span>RD {{RD}} ({{RDesp}})</span>
+                    {{/rollGreater() RD 0}}
+                </div>
                 {{/defensa}}
 
 
@@ -3221,10 +3230,10 @@
                     <span>Poder {{poder}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>Dificultad {{dificultad}}</span>
                 </div>
 
-                {{#rollTotal() tipo 0}}
-                <div class="arrow-left"></div>
+                    {{#rollTotal() tipo 0}}
+                        <div class="arrow-left"></div>
                 
-                <div>
+                        <div>
                     {{#rollLess() ri1 ri2}}
                         {{#rollLess() ri3 ri1}}
                         <!--ri3 < ri1 < ri2-->
@@ -3343,19 +3352,18 @@
                         <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCIntensidad.png"/>    
                         
                 
-                </div>
+                        </div>
                 
-                <div class="arrow-right"></div>
-                <div class="label titulo">
-                    <span class="dadito"> 0 </span>Intensidad{{#modi}} ({{modi}}){{/modi}}<span class="dadito"> 0 </span>
-                </div>
-                {{/rollTotal() tipo 0}}
+                        <div class="arrow-right"></div>
+                        <div class="label titulo">
+                            <span class="dadito"> 0 </span>Intensidad{{#modi}} ({{modi}}){{/modi}}<span class="dadito"> 0 </span>
+                        </div>
+                    {{/rollTotal() tipo 0}}
 
-
-                {{#rollTotal() tipo 1}}
-                <div class="arrow-left"></div>
+                    {{#rollTotal() tipo 1}}
+                        <div class="arrow-left"></div>
                 
-                <div>
+                        <div>
                     {{#rollLess() rd1 rd2}}
                         {{#rollLess() rd3 rd1}}
                         <!--rd3 < rd1 < rd2-->
@@ -3473,19 +3481,17 @@
                         <img class="templateimagen" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCCeleridad.png"/>    
                         
                 
-                </div>
+                        </div>
                 
-                <div class="arrow-right"></div>
-                <div class="label titulo">
-                    <span class="dadito"> 0 </span>Celeridad{{#modd}} ({{modd}}){{/modd}}<span class="dadito"> 0 </span>
-                </div>
-                {{/rollTotal() tipo 1}}
-
+                        <div class="arrow-right"></div>
+                        <div class="label titulo">
+                            <span class="dadito"> 0 </span>Celeridad{{#modc}} ({{modc}}){{/modc}}<span class="dadito"> 0 </span>
+                        </div>
+                    {{/rollTotal() tipo 1}}
 
                 <div class="label">
                     <span>[Daño Extra](!&#13;#Daño)</span>
                 </div>
-
                 {{/conjuracion}}
 
                 {{#charname}}
