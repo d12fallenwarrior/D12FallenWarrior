@@ -5,8 +5,8 @@
 .charsheet {
 	background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/fondoespada.jpg");
     background-color: white;
-    min-width: 830px;
-    max-width: 830px;
+    min-width: 860px;
+    max-width: 860px;
 }
 
 
@@ -720,14 +720,14 @@ hr {
 .sheet-arrow-right
 {
     border-bottom: 2px solid transparent;
-    border-left: 825px solid black;
+    border-left: 855px solid black;
     border-top: 3px solid transparent;
 }
 
 .sheet-arrow-left
 {
     border-bottom: 2px solid transparent;
-    border-right: 825px solid black;
+    border-right: 855px solid black;
     border-top: 3px solid transparent;
 }
 
