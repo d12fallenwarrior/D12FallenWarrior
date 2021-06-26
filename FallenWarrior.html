@@ -1390,7 +1390,7 @@
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_atletismo" value="1">
             <input type="checkbox" class="fallida" title="¿Habilidad fallida?" name="attr_fallida_atletismo" value="1">
             <button name="roll_atletismo" type="roll" value="&{template:tirada} {{logo=Ah}} {{rname=Atletismo}} {{mod=@{hab_atletismo}}} {{r1=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r2=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{r3=[[(1d12cs0cf0+@{hab_atletismo})]]}} {{crit=¡¡Doble!!}} {{critbonus=2}} {{charname=@{character_name}}}" >
-            <span class="fuentehab">Atletismo* (Fue)</span></button></td><td style="padding-bottom:5px">
+            <span class="fuentehab">Atletismo* (Fue/Agi)</span></button></td><td style="padding-bottom:5px">
                 <input type="radio" title="Rango" class="rango3 sheet-zero" name="attr_rang_atletismo" value="0" checked="checked" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="1" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="2" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="3" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="4" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="5" /><span></span><input type="radio" title="Rango" class="rango3" name="attr_rang_atletismo" value="6"/><span></span>
                 <span style="position: relative; left: -4px;">
                     <input type="radio" title="Rango extra" class="minirangoex rangovacio" name="attr_rang_atletismox1" value="0" checked="checked"/><span style="background-color: transparent;"></span>
@@ -1408,8 +1408,9 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_atletismox3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_atletismo" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_atletismo} [Rangos] + @{Fuerza} [Atributo] - 5 + @{hab_atletismo_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                    <input name="attr_hab_atletismo" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_atletismo} [Rangos] + @{Fuerza} [Atributo] - 5 + @{hab_atletismo_esp} [Otros])]]" style="width: 19px;" disabled><span>/</span><input name="attr_hab_atletismo2" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_atletismo} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_atletismo_esp2} [Otros])]]" style="width: 19px;" disabled></td></td>
                     <input name="attr_hab_atletismo_esp" value="[[(@{rang_atletismox1} + @{rang_atletismox2} + @{rang_atletismox3} + @{rang_Fuerzax1} + @{rang_Fuerzax2} + @{rang_Fuerzax3} )]]" style="display:none" disabled>
+                    <input name="attr_hab_atletismo_esp2" value="[[(@{rang_atletismox1} + @{rang_atletismox2} + @{rang_atletismox3} + @{rang_Agilidadx1} + @{rang_Agilidadx2} + @{rang_Agilidadx3} )]]" style="display:none" disabled>
 
         </tr><tr><td style="padding-bottom:5px">
             <input type="checkbox" class="innata" title="Habilidad innata" name="attr_innata_diplomacia" value="1">
