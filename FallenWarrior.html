@@ -2223,21 +2223,12 @@
     <!-- RASGOS-->
     <div class="col">
         <!--RASGOS-->
-        <h1>Rasgos/Especial</h1>
-        <!-- (Intento de poner etiqueta informativa con todos los rasgos)
-            <span class="sheet-tooltip"> <div class="inline" style="font-family:Pictos; font-size: large">i</div>
-            <div class="info">
-                <span class="infotitulo1">Rasgos </span>
-                <span class="infotexto" name="attr_rasgo_name"></span>
-                <span class="infotexto" name="attr_rasgo_name2"></span>
-                <span class="infotexto" name="attr_rasgo_name3"></span>
-                <span class="infotexto" name="repeating_rasgos_$0_attr_rasgo_name"></span>
-            
-        </div></span>
-        -->
-        <input type="checkbox" name="attr_mostrarrasgos" class="mostrar_rasgos check" value="1"/>
-        <span class="negrita">Editar rasgos</span>
-        <div class="editable_rasgos" style="position: absolute;">
+        
+         
+        <input type="checkbox" name="attr_tabrasgos" class="sheet-tabrasgos sheet-tab2rasgos" style="margin-left:50px" value="2" title="Editar rasgos" /><span></span>
+        <h1 style="text-align: left;">Rasgos/Especial</h1>      
+        
+        <div class="sheet-tabrasgos-content sheet-tab2rasgos" style="position: absolute;">
             <div class="col recuadro">
                 <input name="attr_rasgo1_nombre" type="text" class="nombre" placeholder="Rasgo" style="width: 318px;">
                 <span class="negrita">Mostrar</span>
@@ -2507,10 +2498,10 @@
     <!--TALENTOS-->
     <div class="col">
         
-        <h1>Talentos</h1>
-        <input type="checkbox" name="attr_mostrartalentos" class="mostrar_talentos check" value="1"/>
-        <span class="negrita">Editar talentos</span>
-        <div class="editable_talentos" style="position: absolute;">
+        <input type="checkbox" name="attr_tabtalentos" class="sheet-tabtalentos sheet-tab2talentos" style="margin-left:100px" value="2" title="Editar talentos" /><span></span>
+        <h1 style="text-align: left;">Talentos</h1>
+
+        <div class="sheet-tabtalentos-content sheet-tab2talentos" style="position: absolute;">
             <div class="col recuadro">
             <input name="attr_talento1_nombre" type="text" class="nombre" placeholder="Talento" style="width: 318px;">
             <span class="negrita">Mostrar</span>
@@ -3016,182 +3007,6 @@
 </div>
 
 <div class="sheet-tabgrimorio-content sheet-tabgrimorio2">
-    <span class="negrita" style="float: right; margin-right: 40px; margin-top: 5px;">Editar grimorio</span>
-    <input type="checkbox" name="attr_mostrargrimorio" class="mostrar_conjuros check" style="float: right; margin-top: 5px;" value="1"/>
-    <hr>
-        <div class="editable_conjuros" style="position: absolute;">
-            <div class="col recuadrogrimorio">
-                <input name="attr_conjuro1_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
-                <span class="negrita">Mostrar</span>
-                <input type="checkbox" name="attr_mostrar_conjuro1" class="mostrar_conjuro1 check" value="1" />
-                <input name="attr_conjuro1_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro1_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro1_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro1_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro1_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro1_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro1_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro1_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                <textarea name="attr_conjuro1_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
-                <textarea name="attr_conjuro1_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
-                   
-                <div class="shortarrow-right"></div>
-                <hr>
-
-                <input name="attr_conjuro2_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
-                <span class="negrita">Mostrar</span>
-                <input type="checkbox" name="attr_mostrar_conjuro2" class="mostrar_conjuro2 check" value="1" />
-                <input name="attr_conjuro2_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro2_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro2_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro2_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro2_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro2_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro2_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro2_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                <textarea name="attr_conjuro2_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
-                <textarea name="attr_conjuro2_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
-                   
-                <div class="shortarrow-right"></div>
-                <hr>
-
-                <input name="attr_conjuro3_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
-                <span class="negrita">Mostrar</span>
-                <input type="checkbox" name="attr_mostrar_conjuro3" class="mostrar_conjuro3 check" value="1" />
-                <input name="attr_conjuro3_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro3_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro3_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro3_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro3_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro3_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro3_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro3_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                <textarea name="attr_conjuro3_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
-                <textarea name="attr_conjuro3_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
-                   
-                <div class="shortarrow-right"></div>
-                <hr>
-    
-                <input name="attr_conjuro4_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
-                <span class="negrita">Mostrar</span>
-                <input type="checkbox" name="attr_mostrar_conjuro4" class="mostrar_conjuro4 check" value="1" />
-                <input name="attr_conjuro4_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro4_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro4_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro4_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro4_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro4_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro4_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro4_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                <textarea name="attr_conjuro4_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
-                <textarea name="attr_conjuro4_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
-                   
-                <div class="shortarrow-right"></div>
-                <hr>
-    
-                <input name="attr_conjuro5_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
-                <span class="negrita">Mostrar</span>
-                <input type="checkbox" name="attr_mostrar_conjuro5" class="mostrar_conjuro5 check" value="1" />
-                <input name="attr_conjuro5_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro5_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro5_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro5_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro5_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro5_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro5_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro5_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                <textarea name="attr_conjuro5_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
-                <textarea name="attr_conjuro5_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
-                   
-                <div class="shortarrow-right"></div>
-                <hr>
-    
-                <input name="attr_conjuro6_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
-                <span class="negrita">Mostrar</span>
-                <input type="checkbox" name="attr_mostrar_conjuro6" class="mostrar_conjuro6 check" value="1" />
-                <input name="attr_conjuro6_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro6_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro6_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro6_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro6_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro6_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro6_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro6_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                <textarea name="attr_conjuro6_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
-                <textarea name="attr_conjuro6_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
-                   
-                <div class="shortarrow-right"></div>
-                <hr>
-    
-                <input name="attr_conjuro7_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
-                <span class="negrita">Mostrar</span>
-                <input type="checkbox" name="attr_mostrar_conjuro7" class="mostrar_conjuro7 check" value="1" />
-                <input name="attr_conjuro7_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro7_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro7_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro7_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro7_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro7_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro7_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro7_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                <textarea name="attr_conjuro7_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
-                <textarea name="attr_conjuro7_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
-                   
-                <div class="shortarrow-right"></div>
-                <hr>
-    
-                <input name="attr_conjuro8_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
-                <span class="negrita">Mostrar</span>
-                <input type="checkbox" name="attr_mostrar_conjuro8" class="mostrar_conjuro8 check" value="1" />
-                <input name="attr_conjuro8_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro8_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro8_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro8_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro8_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro8_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro8_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro8_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                <textarea name="attr_conjuro8_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
-                <textarea name="attr_conjuro8_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
-                   
-                <div class="shortarrow-right"></div>
-                <hr>
-    
-                <input name="attr_conjuro9_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
-                <span class="negrita">Mostrar</span>
-                <input type="checkbox" name="attr_mostrar_conjuro9" class="mostrar_conjuro9 check" value="1" />
-                <input name="attr_conjuro9_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro9_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro9_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro9_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro9_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro9_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro9_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro9_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                <textarea name="attr_conjuro9_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
-                <textarea name="attr_conjuro9_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
-                   
-                <div class="shortarrow-right"></div>
-                <hr>
-    
-                <input name="attr_conjuro10_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
-                <span class="negrita">Mostrar</span>
-                <input type="checkbox" name="attr_mostrar_conjuro10" class="mostrar_conjuro10 check" value="1" />
-                <input name="attr_conjuro10_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro10_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro10_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro10_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro10_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro10_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro10_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                    <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro10_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
-                <textarea name="attr_conjuro10_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
-                <textarea name="attr_conjuro10_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
-                   
-                <div class="shortarrow-right"></div>
-                <hr>
-            </div>
-        </div>
     <div class="3colrow">
         <div class="col">
             <h1>Equipado</h1>
@@ -3321,8 +3136,182 @@
         </div>
     
         <div class="col">
-            <h1>Grimorio</h1>
-            
+            <input type="checkbox" name="attr_tabconjuros" class="sheet-tabconjuros sheet-tab2conjuros" style="float: left; margin-right:15px" value="2" title="Editar conjuros" /><span></span>
+            <h1  style="text-align: left;">Grimorio</h1>
+            <div class="sheet-tabconjuros-content sheet-tab2conjuros" style="position: absolute;">
+                <div class="col recuadrogrimorio">
+                    <input name="attr_conjuro1_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
+                    <span class="negrita">Mostrar</span>
+                    <input type="checkbox" name="attr_mostrar_conjuro1" class="mostrar_conjuro1 check" value="1" />
+                    <input name="attr_conjuro1_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro1_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro1_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro1_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro1_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro1_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro1_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro1_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                    <textarea name="attr_conjuro1_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
+                    <textarea name="attr_conjuro1_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
+                       
+                    <div class="shortarrow-right"></div>
+                    <hr>
+    
+                    <input name="attr_conjuro2_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
+                    <span class="negrita">Mostrar</span>
+                    <input type="checkbox" name="attr_mostrar_conjuro2" class="mostrar_conjuro2 check" value="1" />
+                    <input name="attr_conjuro2_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro2_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro2_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro2_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro2_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro2_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro2_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro2_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                    <textarea name="attr_conjuro2_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
+                    <textarea name="attr_conjuro2_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
+                       
+                    <div class="shortarrow-right"></div>
+                    <hr>
+    
+                    <input name="attr_conjuro3_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
+                    <span class="negrita">Mostrar</span>
+                    <input type="checkbox" name="attr_mostrar_conjuro3" class="mostrar_conjuro3 check" value="1" />
+                    <input name="attr_conjuro3_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro3_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro3_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro3_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro3_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro3_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro3_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro3_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                    <textarea name="attr_conjuro3_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
+                    <textarea name="attr_conjuro3_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
+                       
+                    <div class="shortarrow-right"></div>
+                    <hr>
+        
+                    <input name="attr_conjuro4_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
+                    <span class="negrita">Mostrar</span>
+                    <input type="checkbox" name="attr_mostrar_conjuro4" class="mostrar_conjuro4 check" value="1" />
+                    <input name="attr_conjuro4_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro4_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro4_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro4_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro4_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro4_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro4_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro4_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                    <textarea name="attr_conjuro4_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
+                    <textarea name="attr_conjuro4_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
+                       
+                    <div class="shortarrow-right"></div>
+                    <hr>
+        
+                    <input name="attr_conjuro5_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
+                    <span class="negrita">Mostrar</span>
+                    <input type="checkbox" name="attr_mostrar_conjuro5" class="mostrar_conjuro5 check" value="1" />
+                    <input name="attr_conjuro5_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro5_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro5_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro5_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro5_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro5_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro5_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro5_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                    <textarea name="attr_conjuro5_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
+                    <textarea name="attr_conjuro5_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
+                       
+                    <div class="shortarrow-right"></div>
+                    <hr>
+        
+                    <input name="attr_conjuro6_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
+                    <span class="negrita">Mostrar</span>
+                    <input type="checkbox" name="attr_mostrar_conjuro6" class="mostrar_conjuro6 check" value="1" />
+                    <input name="attr_conjuro6_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro6_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro6_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro6_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro6_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro6_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro6_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro6_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                    <textarea name="attr_conjuro6_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
+                    <textarea name="attr_conjuro6_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
+                       
+                    <div class="shortarrow-right"></div>
+                    <hr>
+        
+                    <input name="attr_conjuro7_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
+                    <span class="negrita">Mostrar</span>
+                    <input type="checkbox" name="attr_mostrar_conjuro7" class="mostrar_conjuro7 check" value="1" />
+                    <input name="attr_conjuro7_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro7_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro7_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro7_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro7_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro7_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro7_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro7_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                    <textarea name="attr_conjuro7_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
+                    <textarea name="attr_conjuro7_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
+                       
+                    <div class="shortarrow-right"></div>
+                    <hr>
+        
+                    <input name="attr_conjuro8_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
+                    <span class="negrita">Mostrar</span>
+                    <input type="checkbox" name="attr_mostrar_conjuro8" class="mostrar_conjuro8 check" value="1" />
+                    <input name="attr_conjuro8_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro8_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro8_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro8_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro8_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro8_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro8_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro8_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                    <textarea name="attr_conjuro8_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
+                    <textarea name="attr_conjuro8_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
+                       
+                    <div class="shortarrow-right"></div>
+                    <hr>
+        
+                    <input name="attr_conjuro9_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
+                    <span class="negrita">Mostrar</span>
+                    <input type="checkbox" name="attr_mostrar_conjuro9" class="mostrar_conjuro9 check" value="1" />
+                    <input name="attr_conjuro9_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro9_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro9_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro9_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro9_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro9_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro9_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro9_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                    <textarea name="attr_conjuro9_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
+                    <textarea name="attr_conjuro9_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
+                       
+                    <div class="shortarrow-right"></div>
+                    <hr>
+        
+                    <input name="attr_conjuro10_nombre" type="text" class="nombre" placeholder="Conjuro" style="width: 318px;">
+                    <span class="negrita">Mostrar</span>
+                    <input type="checkbox" name="attr_mostrar_conjuro10" class="mostrar_conjuro10 check" value="1" />
+                    <input name="attr_conjuro10_esp" type="text" class="infoespconj" placeholder="Especial" style="width: 300px;"><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Poder mínimo: </span><input name="attr_conjuro10_poder" type="text" class="infobonificador" style="width: 280px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Alcance: </span><input name="attr_conjuro10_alcance" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Objetivo: </span><input name="attr_conjuro10_objetivo" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Ataque: </span><input name="attr_conjuro10_ataque" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Defensa: </span><input name="attr_conjuro10_defensa" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Efecto: </span><input name="attr_conjuro10_efecto" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                        <span class="infobonificador" style="font-variant:small-caps;">Duración: </span><input name="attr_conjuro10_duracion" type="text" class="infobonificador" style="width: 300px;"></input><br>
+                    <textarea name="attr_conjuro10_desc" placeholder="Descripción principal" class="justify descripcion"></textarea>
+                    <textarea name="attr_conjuro10_desc2" placeholder="Descripción secundaria" class="justify descripcion"></textarea>
+                       
+                    <div class="shortarrow-right"></div>
+                    <hr>
+                </div>
+            </div>
+
             <div class="notasgrimorio">
                 <div>
                     <input type="checkbox" name="attr_mostrar_conjuro1" class="mostrar_conjuro1 check oculto" value="1" />
