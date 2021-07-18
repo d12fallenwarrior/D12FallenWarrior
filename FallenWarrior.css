@@ -5,8 +5,8 @@
 .charsheet {
 	background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/fondoespada.jpg");
     background-color: white;
-    min-width: 860px;
-    max-width: 860px;
+    min-width: 865px;
+    max-width: 865px;
 }
 
 
@@ -415,6 +415,12 @@ h1 {
     color: rebeccapurple;
 }
 
+.sheet-noseleccionable {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */      
+}
 
 .sheet-centrado
 {
@@ -437,6 +443,27 @@ h1 {
     overflow: auto;
 }
 
+.sheet-notasgrimorio
+{
+    height: 280px;
+    margin-right:10px;
+    padding: 5px;
+    clear:left;
+    overflow: auto;
+}
+
+.sheet-notasgrande
+{
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    max-height: 300px;
+    min-height: 100px;
+    margin-right:10px;
+    padding: 5px;
+    clear:left;
+    overflow: auto;
+}
+
 .sheet-notascoliseo
 {
     border: 3px solid rgb(0, 0, 0);
@@ -452,6 +479,18 @@ h1 {
 {
     font-weight: bold;
     font-size: larger;
+    line-height: 12px;
+
+    margin-right:10px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    text-indent: -30px !important;
+}
+
+.sheet-notagrimorio
+{
+    font-weight: bold;
+    font-size: medium;
     line-height: 12px;
 
     margin-right:10px;
@@ -724,6 +763,13 @@ hr {
     border-top: 3px solid transparent;
 }
 
+.sheet-shortarrow-right
+{
+    border-bottom: 2px solid transparent;
+    border-left: 405px solid black;
+    border-top: 2px solid transparent;
+}
+
 .sheet-arrow-left
 {
     border-bottom: 2px solid transparent;
@@ -860,6 +906,37 @@ hr {
 /* ################ CARTELITOS INFO ################## */
 /* ################################################### */
 
+.sheet-recuadro {
+    display: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #ccc;
+    z-index: 5;
+    padding: 10px 15px;
+    margin-top: 2px;
+    margin-left: 0px;
+    width: 400px !important;
+    line-height: 16px;
+    color: #111;
+    border: 1px solid #dca;
+    background: #fffaf0;
+}
+
+.sheet-recuadrogrimorio {
+    display: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #ccc;
+    z-index: 5;
+    padding: 10px 15px;
+    margin-top: 0px;
+    margin-left: 370px;
+    width: 400px !important;
+    line-height: 16px;
+    color: #111;
+    border: 1px solid #dca;
+    background: #fffaf0;
+}
+
+
 .sheet-botoninfocoliseo {
     font-family:Pictos; 
     font-size: x-large; 
@@ -897,21 +974,24 @@ hr {
     min-height: 20px;
 }
 
-.sheet-infotipo {
+.sheet-infoespconj {
     border: 0px;
     overflow: hidden;
     font-style: italic;
-    margin-left: 10px;
+    margin-left: 3px;
+    text-transform: uppercase;
 }
 
 .sheet-infobonificador {
     border: 0px;
     font-weight: bold;
     display: inline;
-    overflow: hidden;
-    margin-left: 15px;
-    margin-right: -12px;
+    overflow: hidden;    
     text-align: left !important;
+    line-height: 20px;
+    margin-left: 10px;
+    margin-right: -8px;
+    
 }
 
 .sheet-infotexto {
@@ -919,6 +999,7 @@ hr {
     display: block;
     overflow: hidden;
     margin-top: 3px;
+    margin-bottom: 3px;
     min-height: 20px;
     line-height: 20px;
     text-align: justify !important;
@@ -931,7 +1012,7 @@ hr {
     overflow: hidden;
     min-height: 40px;
     line-height: 20px;
-  }
+}
 
 .sheet-tooltip {
     outline: none;
@@ -942,6 +1023,7 @@ hr {
 
 .sheet-tooltip:hover .sheet-info,
 .sheet-tooltip:hover .sheet-infoacciones,
+.sheet-tooltip:hover .sheet-infogrimorio,
 .sheet-tooltip:hover .sheet-infocoliseo
 {
     display: block;
@@ -981,6 +1063,22 @@ hr {
     background: #fffaf0;
 }
 
+.sheet-tooltip .sheet-infogrimorio {
+    display: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #ccc;
+    z-index: 10;
+    padding: 10px 15px;
+    margin-top: -90px;
+    margin-left: -538px;
+    min-width: 200px;
+    max-width: 500px;
+    line-height: 16px;
+    color: #111;
+    border: 1px solid #dca;
+    background: #fffaf0;
+}
+
 .sheet-tooltip .sheet-infocoliseo {
     display: none;
     border-radius: 10px;
@@ -1008,6 +1106,8 @@ input.sheet-toggle-show:not(:checked) ~ div.sheet-body {
 
 input.sheet-mostrar_talentos:not(:checked) ~ div.sheet-editable_talentos,
 input.sheet-mostrar_rasgos:not(:checked) ~ div.sheet-editable_rasgos, 
+input.sheet-mostrar_conjuros:not(:checked) ~ div.sheet-editable_conjuros,
+input.sheet-mostrar_conjuropreparado:not(:checked) ~ div.sheet-editable_conjuropreparado,
 input.sheet-mostrar_notas:not(:checked) ~ div.sheet-editable_notas,
 input.sheet-mostrar_magia:not(:checked) ~ div.sheet-editable_magia 
 {
@@ -1021,31 +1121,64 @@ input.sheet-mostrar_celeridad:not(:checked) ~ div.sheet-especial_celeridad
     display: none !important;
 }
 
-input.sheet-mostrar_accion1:not(:checked) ~ div.sheet-nota_accion1,
-input.sheet-mostrar_accion2:not(:checked) ~ div.sheet-nota_accion2,
-input.sheet-mostrar_accion3:not(:checked) ~ div.sheet-nota_accion3,
-input.sheet-mostrar_accion4:not(:checked) ~ div.sheet-nota_accion4,
-input.sheet-mostrar_accion5:not(:checked) ~ div.sheet-nota_accion5,
-input.sheet-mostrar_accion6:not(:checked) ~ div.sheet-nota_accion6,
-input.sheet-mostrar_accion7:not(:checked) ~ div.sheet-nota_accion7,
-input.sheet-mostrar_accion8:not(:checked) ~ div.sheet-nota_accion8,
-input.sheet-mostrar_accion9:not(:checked) ~ div.sheet-nota_accion9,
-input.sheet-mostrar_accion10:not(:checked) ~ div.sheet-nota_accion10
+input.sheet-mostrar_rasgo1:not(:checked) ~ div.sheet-nota_rasgo1,
+input.sheet-mostrar_rasgo2:not(:checked) ~ div.sheet-nota_rasgo2,
+input.sheet-mostrar_rasgo3:not(:checked) ~ div.sheet-nota_rasgo3,
+input.sheet-mostrar_rasgo4:not(:checked) ~ div.sheet-nota_rasgo4,
+input.sheet-mostrar_rasgo5:not(:checked) ~ div.sheet-nota_rasgo5,
+input.sheet-mostrar_rasgo6:not(:checked) ~ div.sheet-nota_rasgo6,
+input.sheet-mostrar_rasgo7:not(:checked) ~ div.sheet-nota_rasgo7,
+input.sheet-mostrar_rasgo8:not(:checked) ~ div.sheet-nota_rasgo8,
+input.sheet-mostrar_rasgo9:not(:checked) ~ div.sheet-nota_rasgo9,
+input.sheet-mostrar_rasgo10:not(:checked) ~ div.sheet-nota_rasgo10,
+input.sheet-mostrar_rasgo11:not(:checked) ~ div.sheet-nota_rasgo11,
+input.sheet-mostrar_rasgo12:not(:checked) ~ div.sheet-nota_rasgo12,
+input.sheet-mostrar_rasgo13:not(:checked) ~ div.sheet-nota_rasgo13,
+input.sheet-mostrar_rasgo14:not(:checked) ~ div.sheet-nota_rasgo14,
+input.sheet-mostrar_rasgo15:not(:checked) ~ div.sheet-nota_rasgo15
  {
     display: none !important;
 }
 
-input.sheet-mostrar_especial1:not(:checked) ~ div.sheet-nota_especial1,
-input.sheet-mostrar_especial2:not(:checked) ~ div.sheet-nota_especial2,
-input.sheet-mostrar_especial3:not(:checked) ~ div.sheet-nota_especial3,
-input.sheet-mostrar_especial4:not(:checked) ~ div.sheet-nota_especial4,
-input.sheet-mostrar_especial5:not(:checked) ~ div.sheet-nota_especial5,
-input.sheet-mostrar_especial6:not(:checked) ~ div.sheet-nota_especial6,
-input.sheet-mostrar_especial7:not(:checked) ~ div.sheet-nota_especial7,
-input.sheet-mostrar_especial8:not(:checked) ~ div.sheet-nota_especial8,
-input.sheet-mostrar_especial9:not(:checked) ~ div.sheet-nota_especial9,
-input.sheet-mostrar_especial10:not(:checked) ~ div.sheet-nota_especial10
+input.sheet-mostrar_talento1:not(:checked) ~ div.sheet-nota_talento1,
+input.sheet-mostrar_talento2:not(:checked) ~ div.sheet-nota_talento2,
+input.sheet-mostrar_talento3:not(:checked) ~ div.sheet-nota_talento3,
+input.sheet-mostrar_talento4:not(:checked) ~ div.sheet-nota_talento4,
+input.sheet-mostrar_talento5:not(:checked) ~ div.sheet-nota_talento5,
+input.sheet-mostrar_talento6:not(:checked) ~ div.sheet-nota_talento6,
+input.sheet-mostrar_talento7:not(:checked) ~ div.sheet-nota_talento7,
+input.sheet-mostrar_talento8:not(:checked) ~ div.sheet-nota_talento8,
+input.sheet-mostrar_talento9:not(:checked) ~ div.sheet-nota_talento9,
+input.sheet-mostrar_talento10:not(:checked) ~ div.sheet-nota_talento10
 {
+    display: none !important;
+}
+
+input.sheet-mostrar_conjuro1:not(:checked) ~ div.sheet-nota_conjuro1,
+input.sheet-mostrar_conjuro2:not(:checked) ~ div.sheet-nota_conjuro2,
+input.sheet-mostrar_conjuro3:not(:checked) ~ div.sheet-nota_conjuro3,
+input.sheet-mostrar_conjuro4:not(:checked) ~ div.sheet-nota_conjuro4,
+input.sheet-mostrar_conjuro5:not(:checked) ~ div.sheet-nota_conjuro5,
+input.sheet-mostrar_conjuro6:not(:checked) ~ div.sheet-nota_conjuro6,
+input.sheet-mostrar_conjuro7:not(:checked) ~ div.sheet-nota_conjuro7,
+input.sheet-mostrar_conjuro8:not(:checked) ~ div.sheet-nota_conjuro8,
+input.sheet-mostrar_conjuro9:not(:checked) ~ div.sheet-nota_conjuro9,
+input.sheet-mostrar_conjuro10:not(:checked) ~ div.sheet-nota_conjuro10
+ {
+    display: none !important;
+}
+
+input.sheet-mostrar_conjuropreparado1:not(:checked) ~ div.sheet-nota_conjuropreparado1,
+input.sheet-mostrar_conjuropreparado2:not(:checked) ~ div.sheet-nota_conjuropreparado2,
+input.sheet-mostrar_conjuropreparado3:not(:checked) ~ div.sheet-nota_conjuropreparado3,
+input.sheet-mostrar_conjuropreparado4:not(:checked) ~ div.sheet-nota_conjuropreparado4,
+input.sheet-mostrar_conjuropreparado5:not(:checked) ~ div.sheet-nota_conjuropreparado5,
+input.sheet-mostrar_conjuropreparado6:not(:checked) ~ div.sheet-nota_conjuropreparado6,
+input.sheet-mostrar_conjuropreparado7:not(:checked) ~ div.sheet-nota_conjuropreparado7,
+input.sheet-mostrar_conjuropreparado8:not(:checked) ~ div.sheet-nota_conjuropreparado8,
+input.sheet-mostrar_conjuropreparado9:not(:checked) ~ div.sheet-nota_conjuropreparado9,
+input.sheet-mostrar_conjuropreparado10:not(:checked) ~ div.sheet-nota_conjuropreparado10
+ {
     display: none !important;
 }
 
@@ -1078,6 +1211,241 @@ input.sheet-mostrar_especial10:not(:checked) ~ div.sheet-nota_especial10
 .sheet-cuadronotas:checked ~ .sheet-cuadro_acciones {
   display: none;
 }
+
+
+div.sheet-tab-content { display: none; }
+input.sheet-tab1:checked ~ div.sheet-tab1,
+input.sheet-tab2:checked ~ div.sheet-tab2
+{
+    display: block;
+}
+input.sheet-tab{
+    width:100px;
+    height: 16px;
+    top: 5px;
+    left: 6px;
+    margin: 4px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    float: right;
+    cursor: pointer;
+    z-index: 1;
+}
+input.sheet-tab::before{
+    content: attr(title);
+
+    border-radius:.5em;
+    border:2px solid black;
+    text-align: center;
+    display: inline-block;
+    
+    background: #CCCCCC;
+    color:black;
+    width: 100px;
+    height: 16px;
+    font-size: 14px;
+    font-weight: bold;
+}
+input.sheet-tab:checked::before{
+    background:black;
+    color:white;
+    border-radius:.5em;
+    border:2px solid black;
+}
+
+div.sheet-tabmagia-content { display: none; }
+input.sheet-tab1magia:checked ~ div.sheet-tab1magia,
+input.sheet-tab2magia:checked ~ div.sheet-tab2magia
+{
+    display: block;
+}
+input.sheet-tabmagia{
+    width:100px;
+    height: 16px;
+    top: 5px;
+    left: 6px;
+    margin: 4px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    float: right;
+    cursor: pointer;
+    z-index: 1;
+}
+input.sheet-tabmagia::before{
+    content: attr(title);
+
+    border-radius:.5em;
+    border:2px solid black;
+    text-align: center;
+    display: inline-block;
+    
+    background: #CCCCCC;
+    color:black;
+    width: 100px;
+    height: 16px;
+    font-size: 14px;
+    font-weight: bold;
+}
+input.sheet-tabmagia:checked::before{
+    background:black;
+    color:white;
+    border-radius:.5em;
+    border:2px solid black;
+}
+
+div.sheet-tabrasgos-content { display: none; }
+input.sheet-tab1rasgos:checked ~ div.sheet-tab1rasgos,
+input.sheet-tab2rasgos:checked ~ div.sheet-tab2rasgos
+{
+    display: block;
+}
+input.sheet-tabrasgos{
+    width:64px;
+    height: 32px;
+    top: 5px;
+    left: 6px;
+    margin: 4px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    float: right;
+    cursor: pointer;
+    z-index: 2;
+}
+input.sheet-tabrasgos::before{
+    content: "";
+
+    border-radius:.5em;
+    border:2px solid black;
+    text-align: center;
+    display: inline-block;
+    
+    background: #CCCCCC;
+    color:black;
+    width: 64px;
+    height: 32px;
+    font-size: 14px;
+    font-weight: bold;
+
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCPelea.png") !important;
+    background-position: 0;
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+}
+input.sheet-tabrasgos:checked::before{
+    background:black;
+    color:white;
+    border-radius:.5em;
+    border:2px solid black;
+}
+
+div.sheet-tabnotas-content { display: none; }
+input.sheet-tabnotas1:checked ~ div.sheet-tabnotas1,
+input.sheet-tabnotas2:checked ~ div.sheet-tabnotas2,
+input.sheet-tabnotas3:checked ~ div.sheet-tabnotas3
+{
+    display: block;
+}
+input.sheet-tabnotas{
+    width:68px;
+    height: 13px;
+    top: 5px;
+    left: 6px;
+    margin: 4px;
+    margin-top: 1px;
+    margin-bottom: 6px;
+    float: left;
+    cursor: pointer;
+    z-index: 1;
+}
+input.sheet-tabnotas::before{
+    content: attr(title);
+
+    border-radius:.5em;
+    border:2px solid black;
+    text-align: center;
+    display: inline-block;
+    
+    background: #CCCCCC;
+    color:black;
+    width: 68px;
+    height: 13px;
+    font-size: 12px;
+    font-weight: bold;
+}
+input.sheet-tabnotas:checked::before{
+    background:black;
+    color:white;
+    border-radius:.5em;
+    border:2px solid black;
+}
+
+div.sheet-tabgrimorio-content { display: none; }
+input.sheet-tabgrimorio1:checked ~ div.sheet-tabgrimorio1,
+input.sheet-tabgrimorio2:checked ~ div.sheet-tabgrimorio2
+{
+    display: block;
+}
+input.sheet-tabgrimorio{
+    width:100px;
+    height: 16px;
+    top: 5px;
+    left: 6px;
+    margin: 4px;
+    margin-top: 1px;
+    margin-bottom: 3px;
+    float: right;
+    cursor: pointer;
+    z-index: 1;
+}
+input.sheet-tabgrimorio::before{
+    content: attr(title);
+
+    border-radius:.5em;
+    border:2px solid black;
+    text-align: center;
+    display: inline-block;
+    
+    background: #CCCCCC;
+    color:black;
+    width: 100px;
+    height: 16px;
+    font-size: 14px;
+    font-weight: bold;
+}
+input.sheet-tabgrimorio:checked::before{
+    background:black;
+    color:white;
+    border-radius:.5em;
+    border:2px solid black;
+}
+
+
+
+/* Hide the toggle checkbox */
+#sheet-expand-toggle {
+    display: none;
+  }
+  
+  /* Hide expandable content by default */
+  .sheet-expandable {
+    visibility: collapse;
+    background: #ddd;
+  }
+  
+  /* Style the button */
+  #sheet-expand-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 5px 11px;
+    background-color: #ff7;
+    border: 1px solid;
+    border-radius: 3px;
+  }
+  
+  /* Show hidden content when the checkbox is checked */
+  #sheet-expand-toggle:checked ~ * .sheet-expandable {
+    visibility: visible;
+  }
 
 
 /* ################################################### */
