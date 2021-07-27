@@ -1547,6 +1547,63 @@ input.sheet-tabgrimorio:checked::before{
 }
 
 
+div.sheet-tabedicion-content { display: none; }
+input.sheet-tab2edicion:not(:checked) ~ div.sheet-tab1edicion,
+input.sheet-tab2edicion:checked ~ div.sheet-tab2edicion
+{
+    display: inline-block;
+}
+input.sheet-tabedicion{
+    width: 25px;
+    height: 25px;
+    
+    float: left;
+    cursor: pointer;
+    z-index: 1;
+
+    border: none;
+    background: none;
+    color: none;
+    
+    opacity: 0;
+}
+input.sheet-tabedicion + span::before{
+    content: "";
+
+    border: none;
+    text-align: center;
+    float: left;
+    background: none;
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-left: -25px;
+    margin-right: 15px;
+
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/scroll.png") !important;
+    background-position: 0;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+}
+input.sheet-tabedicion:checked + span::before{
+    content: "✖";
+    background:none;
+    border: none;
+
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    color:red;
+
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/scroll.png") !important;
+    background-position: 0;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+}
+
 
 /* Hide the toggle checkbox */
 #sheet-expand-toggle {
