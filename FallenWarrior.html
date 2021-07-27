@@ -51,13 +51,13 @@
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" title="Combate" checked="checked" />
 
 
-<hr>
-
 <!-- PÁGINA A-->
 <div class="sheet-tab-content sheet-tab1">
+    <input type="checkbox" name="attr_tabedicion" class="sheet-tabedicion sheet-tab2edicion" value="2" title="Modo edición" /><span></span>    
+<hr>
 
 <!-- SECCIÓN ATRIBUTOS Y CARACTERÍSTICAS SECUNDARIAS -->
-<div>
+
     <!-- Atributos -->
     <div class="33porciento">
         <table style="margin: 0 auto;">
@@ -200,7 +200,117 @@
     </div>
 
     <!-- Características secundarias -->
-    <div class="67porciento">
+    <div class="67porciento sheet-tabedicion-content sheet-tab1edicion">
+        <h1>Características secundarias</h1>
+        <!-- <p>Característica / Fórmula / Mod. Especial / Valor final + Roll</p> -->
+        
+        <div style="margin-top:25px"></div>
+        <table style="margin:auto;">
+            <tbody>
+                <tr class="centrado">
+            
+                    <td><button name="roll_reflejos" type="roll" value="&{template:tirada} {{logo=Ah}} {{habilidad=Ah}} {{rname=Reflejos}} {{mod=@{ref}}} {{r1=[[(1d12cs0cf0+@{ref})]]}} {{r2=[[(1d12cs0cf0+@{ref})]]}} {{r3=[[(1d12+@{ref})]]}}  {{charname=@{character_name}}}">
+                        <span class="dadito">0</span><span> Reflejos</span></button></td>
+                    <td><input name="attr_ref" type="number" class="centrado bordecuad" style="width: 70px;" value="-5" readonly></td>
+                <!-- <input name="attr_ref_esp" type="number" value="0">
+                <input name="attr_ref" type="number" value="[[(@{agi} [Agi] + @{ast} [Ast] -5 + @{ref_esp} [Otros])]]" disabled> -->
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                    <td><button name="roll_vitalidad" type="roll" value="&{template:tirada} {{logo=Ah}} {{habilidad=Ah}} {{rname=Vitalidad}} {{mod=@{vit}}} {{r1=[[(1d12cs0cf0+@{vit})]]}} {{r2=[[(1d12cs0cf0+@{vit})]]}} {{r3=[[(1d12+@{vit})]]}}  {{charname=@{character_name}}}"> 
+                        <span class="dadito">0</span><span> Vitalidad</span></button></td>
+                    <td><input name="attr_vit" type="number" class="centrado bordecuad" style="width: 70px;" value="-5" readonly></td>
+                <!-- <input name="attr_vit_esp" type="number" value="0">
+                <input name="attr_vit" type="number" value="[[(@{res} [Res] + @{fue} [Fue] - 5 + @{vit_esp} [Otros])]]" disabled> --> 
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                    <td><button name="roll_voluntad" type="roll" value="&{template:tirada} {{logo=Ah}} {{habilidad=Ah}} {{rname=Voluntad}} {{mod=@{vol}}} {{r1=[[(1d12cs0cf0+@{vol})]]}} {{r2=[[(1d12cs0cf0+@{vol})]]}} {{r3=[[(1d12+@{vol})]]}}  {{charname=@{character_name}}}"> 
+                        <span class="dadito">0</span><span> Voluntad</span></button></td>
+                    <td><input name="attr_vol" type="number" class="centrado bordecuad" style="width: 70px;" value="-5" readonly></td>
+                <!-- <input name="attr_vol_esp" type="number" value="0">
+                <input name="attr_vol" type="number" value="[[(@{int} [Int] + @{ast} [Ast] - 5 + @{vol_esp} [Otros])]]" disabled> -->
+            </tr>
+            <tr class="negrita smaller">
+                <td class="centrado"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Agi+Ast-5)</span></td>
+
+                <td class="centrado"><span>Bonificador</span></td>
+                <td>&nbsp;</td>
+
+                <td class="centrado"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Res+Fue-5)</span></td>
+
+                <td class="centrado"><span>Bonificador</span></td>
+                <td>&nbsp;</td>
+
+                <td class="centrado"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Int+Res-5)</span></td>
+
+                <td class="centrado"><span>Bonificador</span></td>                        
+            </tr>
+        </tbody>
+        </table>
+        
+
+        <table style="margin:auto;">
+            <tbody>
+                <tr>
+                    <td style="height:25px"></td>
+                </tr>
+                <tr class="centrado">         
+                    <td><span class="negrita larger">Estrategia</span></td> <!-- <input name="attr_est_esp" type="number" value="0"> -->
+                    <td>&nbsp;&nbsp;</td>
+                    <td><input name="attr_est" type="number" class="centrado bordecuad" style="width: 70px;" value="0" readonly><!-- <input name="attr_est" type="number" value="[[(@{int} [Int] + @{ast} [Ast] + @{est_esp} [Otros])]]" disabled> --></td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                    <td><span class="negrita larger">Movimiento*</span></td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td> <input name="attr_movimiento" type="number" class="centrado bordecuad" style="width: 70px;" value="6" readonly></td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                </tr>
+                <tr class="negrita smaller">
+                    <td class="centrado"><span>(Int+Ast)</span></td>
+                    <td>&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><span>Valor</span></td>
+                    <td>&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><span>(4+Agi)</span></td>
+                    <td>&nbsp;&nbsp;</td>
+
+                    <td class="centrado"><span>Valor</span></td>
+                    <td>&nbsp;&nbsp;</td>
+                </tr>
+        <tr>
+            <td style="height:10px"></td>
+        </tr>
+                    <tr class="centrado">        
+                        <td><span class="negrita larger">Energía</span></td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td> <input name="attr_energia" type="number" class="centrado bordecuad" style="width: 70px;" value="20" readonly> <!-- <input name="attr_ene" type="number" value="[[(5 + ( 10 * @{res} [Res]) - (5 * @{penarm}) [Carga] + @{ene_esp} [Otros])]]" disabled> --></td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                        <td><span class="negrita larger">Herida</span></td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td><input name="attr_her" type="number" class="centrado bordecuad" style="width: 70px;" value="5" readonly> <!-- <input name="attr_her" type="number" value="[[( 1 + @{res} [Res] + @{fue} [Fue] + @{her_esp} [Otros])]]" disabled> --></td> 
+                    </tr>
+                    <tr class="negrita smaller">
+                        <td class="centrado"><span>(20+5&#215;Res)</span></td>
+                        <td>&nbsp;&nbsp;</td>
+
+                        <td class="centrado"><span>Valor</span></td>
+                        <td>&nbsp;&nbsp;</td>
+
+                        <td class="centrado"><span>(6+Res)</span></td>
+                        <td>&nbsp;&nbsp;</td>
+
+                        <td class="centrado"><span>Valor</span></td>                        
+                    </tr>
+            </tbody>
+        </table>
+
+        
+    </table>
+    </div>
+
+    <div class="67porciento sheet-tabedicion-content sheet-tab2edicion">
         <h1>Características secundarias</h1>
         <!-- <p>Característica / Fórmula / Mod. Especial / Valor final + Roll</p> -->
         
@@ -308,10 +418,7 @@
 
         
     </table>
-        </div>
-        
-     
-</div>
+    </div>
 
 
 <!--SECCIÓN COMBATE-->
@@ -320,21 +427,16 @@
 <div class="arrow-left"></div>
 <hr>
 
-<!--Cambio ficha mago/luchador-->
-<!--<input type="checkbox" class="tipodeficha check oculto" name="attr_tipodeficha" value="1">-->
-<!--<input type="checkbox" name="attr_mostrarmagia" class="mostrar_magia check" style="float:right;" value="1"/>
-<span class="negrita" style="float:right">Mostrar sección magia</span>-->
-
 <input type="checkbox" name="attr_tabmagia" class="sheet-tabmagia sheet-tab2magia" style="margin-right:15px" value="2" title="Con magia" />
 
-<!--SECCIÓN DE NOTAS-->
 <h1 class="inline" style="margin-left:360px;">Combate</h1>
 <p></p>
 
 <hr>
 
-<!--Cansancio, daño y trauma-->
-<div class="centrado">
+
+    <!--Cansancio, daño y trauma-->
+    <div class="centrado">
     <table style="margin: 0 auto;">
         <tbody>
                 <tr class="centrado" style="vertical-align: middle;">
@@ -375,14 +477,15 @@
     <hr>
 
 
-<!--ARMADURA-->
-<div class="centrado">
-    <img class="dibujitoarm" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCArmadura.png"/>
+    <!--ARMADURA-->
+    
+    <div class="sheet-tabedicion-content sheet-tab1edicion">
+    <img class="dibujitoarm" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCArmadura.png" style="margin-left: 70px;"/>
 
-    <table style="margin:auto; display:inline">
+    <table style="display:inline">
         <tbody>
             <tr class="negrita">
-                <td><input name="attr_nombrearmadura" placeholder=" Nombre de armadura" type="text" style="width: 140px;"/></td>
+                <td><input name="attr_nombrearmadura" placeholder=" Nombre de armadura" type="text" style="width: 140px;" readonly/></td>
                 <td>&nbsp;</td>
     
                 <td class="centrado"><span>Tipo</span></td>
@@ -395,42 +498,34 @@
                 <td>&nbsp;</td>
     
                 <td class="centrado" colspan="4"><span>Penalizadores</span></td>
-                
-    
-                 
             </tr>
 
             <tr>                    
                 <td class="centrado bordetopbot"><span class="negrita larger">Armadura</span></td>
                 <td>&nbsp;</td>
 
-            <td class="centrado bordetopbot"><select name="attr_tipoarmadura" style="width: 90px;">
-                <option value="Ninguna">-</option>
-                <option value="Ligera">Ligera</option>
-                <option value="Intermedia">Intermedia</option>
-                <option value="Pesada">Pesada</option>
-            </select></td>
+            <td class="centrado bordetopbot"><input name="attr_tipoarmadura" style="width: 90px;" class="centrado" readonly/>
+                </td>
             <td>&nbsp;</td>
 
-            <td class="centrado bordetopbot"><input name="attr_proteccion" type="number" title="Defensa mínima gracias a tu armadura" style="width: 70px;" class="centrado" value="0"></td>
+            <td class="centrado bordetopbot"><input name="attr_proteccion" type="number" title="Defensa mínima gracias a tu armadura" style="width: 70px;" class="centrado" value="0" readonly></td>
             <td>&nbsp;</td>
 
-            <td class="centrado bordetopbot"><input name="attr_RD" type="number" title="Reducción de Daño" style="width: 35px;" class="centrado" value="0"></td>
+            <td class="centrado bordetopbot"><input name="attr_RD" type="number" title="Reducción de Daño" style="width: 35px;" class="centrado" value="0"  readonly></td>
 
-            <td class="centrado bordetopbot"> (<input name="attr_RDesp" type="text" title="Contra qué tipo de daño tienes reducción" style="width: 40px;" class="centrado">)</td>
+            <td class="centrado bordetopbot"> (<input name="attr_RDesp" type="text" title="Contra qué tipo de daño tienes reducción" style="width: 40px;" class="centrado" readonly>)</td>
             <td>&nbsp;</td>
 
-            <td class="centrado bordetopbot"><input name="attr_pen_energia" type="number" style="width: 55px;" class="centrado" value="0"></td>
+            <td class="centrado bordetopbot"><input name="attr_pen_energia" type="number" style="width: 55px;" class="centrado" value="0" readonly></td>
             <td class="bordetop">&nbsp;</td>
 
-            <td class="centrado bordetopbot"><input name="attr_pen_destreza" type="number" style="width: 55px;" class="centrado" value="0"></td>
+            <td class="centrado bordetopbot"><input name="attr_pen_destreza" type="number" style="width: 55px;" class="centrado" value="0" readonly></td>
             <td class="bordetop">&nbsp;</td>
 
-            <td class="centrado bordetopbot"><input name="attr_pen_sigilo" type="number" style="width: 55px;" class="centrado" value="0"></td>
+            <td class="centrado bordetopbot"><input name="attr_pen_sigilo" type="number" style="width: 55px;" class="centrado" value="0" readonly></td>
             <td class="bordetop">&nbsp;</td>
 
-            <td class="centrado bordetopbot"><input name="attr_pen_porcarga" type="number" style="width: 55px;" class="centrado" value="0"></td>
-
+            <td class="centrado bordetopbot"><input name="attr_pen_porcarga" type="number" style="width: 55px;" class="centrado" value="[[( @{carga} )]]" disabled></td>
     </tr>
 
     <tr class="negrita smaller">
@@ -456,86 +551,292 @@
         <td>&nbsp;</td>
 
         <td class="centrado"><span>Por carga</span></td>
-        
     </tr>
 
     </tbody>
 </table> 
-</div>
+    </div>
+
+    <div class="sheet-tabedicion-content sheet-tab2edicion">
+        <img class="dibujitoarm" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCArmadura.png" style="margin-left: 70px;"/>
+    
+        <table style="display:inline">
+            <tbody>
+                <tr class="negrita">
+                    <td><input name="attr_nombrearmadura" placeholder=" Nombre de armadura" type="text" style="width: 140px;"/></td>
+                    <td>&nbsp;</td>
+        
+                    <td class="centrado"><span>Tipo</span></td>
+                    <td>&nbsp;</td>
+        
+                    <td class="centrado"><span>Protección</span></td>
+                    <td>&nbsp;</td>
+    
+                    <td class="centrado" colspan="2"><span>RD</span></td>
+                    <td>&nbsp;</td>
+        
+                    <td class="centrado" colspan="4"><span>Penalizadores</span></td>
+                </tr>
+    
+                <tr>                    
+                    <td class="centrado bordetopbot"><span class="negrita larger">Armadura</span></td>
+                    <td>&nbsp;</td>
+    
+                <td class="centrado bordetopbot"><select name="attr_tipoarmadura" style="width: 90px;">
+                    <option value="Ninguna">-</option>
+                    <option value="Ligera">Ligera</option>
+                    <option value="Intermedia">Intermedia</option>
+                    <option value="Pesada">Pesada</option>
+                </select></td>
+                <td>&nbsp;</td>
+    
+                <td class="centrado bordetopbot"><input name="attr_proteccion" type="number" title="Defensa mínima gracias a tu armadura" style="width: 70px;" class="centrado" value="0"></td>
+                <td>&nbsp;</td>
+    
+                <td class="centrado bordetopbot"><input name="attr_RD" type="number" title="Reducción de Daño" style="width: 35px;" class="centrado" value="0"></td>
+    
+                <td class="centrado bordetopbot"> (<input name="attr_RDesp" type="text" title="Contra qué tipo de daño tienes reducción" style="width: 40px;" class="centrado">)</td>
+                <td>&nbsp;</td>
+    
+                <td class="centrado bordetopbot"><input name="attr_pen_energia" type="number" style="width: 55px;" class="centrado" value="0"></td>
+                <td class="bordetop">&nbsp;</td>
+    
+                <td class="centrado bordetopbot"><input name="attr_pen_destreza" type="number" style="width: 55px;" class="centrado" value="0"></td>
+                <td class="bordetop">&nbsp;</td>
+    
+                <td class="centrado bordetopbot"><input name="attr_pen_sigilo" type="number" style="width: 55px;" class="centrado" value="0"></td>
+                <td class="bordetop">&nbsp;</td>
+    
+                <td class="centrado bordetopbot"><input name="attr_pen_porcarga" type="number" style="width: 55px;" class="centrado" value="[[( @{carga} )]]" disabled></td>
+        </tr>
+    
+        <tr class="negrita smaller">
+            <td class="centrado"></td>
+            <td>&nbsp;</td>
+    
+            <td class="centrado"></td>
+            <td>&nbsp;</td>
+    
+            <td class="centrado"></td>
+            <td>&nbsp;</td>
+    
+            <td class="centrado"  colspan="2"></td>
+            <td>&nbsp;</td>
+    
+            <td class="centrado"><span>Energía</span></td>
+            <td>&nbsp;</td>
+    
+            <td class="centrado"><span>Destreza</span></td>
+            <td>&nbsp;</td>
+    
+            <td class="centrado"><span>Sigilo</span></td>
+            <td>&nbsp;</td>
+    
+            <td class="centrado"><span>Por carga</span></td>
+        </tr>
+    
+        </tbody>
+    </table> 
+    </div>
 
 <p></p>
 <hr>
 
-<!-- ESQUIVA BLOQUEO PELEA-->
-    <div class ="3colrow">
-        <div class="col">
+
+    <!-- ESQUIVA BLOQUEO PELEA-->
+    <div class="33porciento sheet-tabedicion-content sheet-tab1edicion">
             
-            <button name="roll_esquiva" class="botonimagen besquiva" type="roll" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12+@{esquiva})]]}}  {{charname=@{character_name}}}" ></button>
-            <table style="margin: 0 auto; display:inline">
-                <tbody>
-                        <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_esquiva" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12+@{esquiva})]]}}  {{charname=@{character_name}}}" >Esquiva*</button></td>
-                            <td >&nbsp;</td>
-                            <td  class="bordebot"><input name="attr_esquiva" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
-                        </tr>
-                        <tr class="negrita smaller">
-                            <td class="centrado"><span>&nbsp;&nbsp;(Agi+esquiva-5)&nbsp;&nbsp;</span></td>
-                            <td >&nbsp;</td>
-    
-                            <td class="centrado"><span>Bonificador</span></td>
-                        </tr>
-                </tbody>
-            </table>
-            </div>
-        <div class="col">
-            <button name="roll_desvio" class="botonimagen bdesvio" type="roll" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12+@{desvio})]]}}  {{charname=@{character_name}}}" ></button>
-                            
-            <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>
+        <button name="roll_esquiva" class="botonimagen besquiva" type="roll" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12+@{esquiva})]]}}  {{charname=@{character_name}}}" ></button>
+        <table style="margin: 0 auto; display:inline">
+            <tbody>
+                    <tr class="centrado bordetop">
+                        <td  class="bordebot"><button name="roll_esquiva" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12+@{esquiva})]]}}  {{charname=@{character_name}}}" >Esquiva*</button></td>
+                        <td >&nbsp;</td>
+                        <td  class="bordebot"><input name="attr_esquiva" type="number"  class="centrado" value="-5" style="width: 65px;" readonly></td>
+                    </tr>
+                    <tr class="negrita smaller">
+                        <td class="centrado"><span>&nbsp;&nbsp;(Agi+esquiva-5)&nbsp;&nbsp;</span></td>
+                        <td >&nbsp;</td>
+
+                        <td class="centrado"><span>Bonificador</span></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="33porciento sheet-tabedicion-content sheet-tab1edicion">
+        <button name="roll_desvio" class="botonimagen bdesvio" type="roll" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12+@{desvio})]]}}  {{charname=@{character_name}}}" ></button>
+                        
+        <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>
+    -->
+        <table style="margin: 0 auto; display:inline">
+            <tbody>
+                    <tr class="centrado bordetop">
+                        <td  class="bordebot"><button name="roll_desvio" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12+@{desvio})]]}}  {{charname=@{character_name}}}" >Desvío</button></td>
+                        <td >&nbsp;</td>    
+                        <td  class="bordebot"><input name="attr_desvio" type="number"  class="centrado" value="-5" style="width: 65px;" readonly></td>
+                    </tr>
+                    <tr class="negrita smaller">
+                        <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-5)&nbsp;&nbsp;</span></td>
+                        <td >&nbsp;</td>
+
+                        <td class="centrado"><span>Bonificador</span></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="33porciento sheet-tabedicion-content sheet-tab1edicion">
+        <button name="roll_pelea" class="botonimagen bpelea" type="roll" value="&{template:tirada} {{pelea=Ah}} {{habilidad=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(1d12+@{pelea})]]}}  {{charname=@{character_name}}}" ></button>
+                        
+        <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCPelea.png"/>
         -->
-            <table style="margin: 0 auto; display:inline">
-                <tbody>
-                        <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_desvio" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12+@{desvio})]]}}  {{charname=@{character_name}}}" >Desvío</button></td>
-                            <td >&nbsp;</td>    
-                            <td  class="bordebot"><input name="attr_desvio" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
-                        </tr>
-                        <tr class="negrita smaller">
-                            <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-5)&nbsp;&nbsp;</span></td>
-                            <td >&nbsp;</td>
-    
-                            <td class="centrado"><span>Bonificador</span></td>
-                        </tr>
-                </tbody>
-            </table>
-            </div>
-        <div class="col">
-            <button name="roll_pelea" class="botonimagen bpelea" type="roll" value="&{template:tirada} {{pelea=Ah}} {{habilidad=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(1d12+@{pelea})]]}}  {{charname=@{character_name}}}" ></button>
-                            
-            <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCPelea.png"/>
-            -->
-            <table style="margin: 0 auto; display:inline">
-                <tbody>
-                        <tr class="centrado bordetop">
-                            <td  class="bordebot"><button name="roll_pelea" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{pelea=Ah}} {{habilidad=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(1d12+@{pelea})]]}}  {{charname=@{character_name}}}" >Pelea</button></td>
-                            <td >&nbsp;</td>
-                            <td  class="bordebot"><input name="attr_pelea" type="number" class="centrado" value="-5" style="width: 65px;"></td>
-                        </tr>
-                        <tr class="negrita smaller">
-                            <td class="centrado"><span>&nbsp;&nbsp;(Fue+CsA-5)&nbsp;&nbsp;</span></td>
-                            <td >&nbsp;</td>    
-                            <td class="centrado"><span>Bonificador</span></td>
-                        </tr>
-                </tbody>
-            </table>
-            </div>
+        <table style="margin: 0 auto; display:inline">
+            <tbody>
+                    <tr class="centrado bordetop">
+                        <td  class="bordebot"><button name="roll_pelea" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{pelea=Ah}} {{habilidad=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(1d12+@{pelea})]]}}  {{charname=@{character_name}}}" >Pelea</button></td>
+                        <td >&nbsp;</td>
+                        <td  class="bordebot"><input name="attr_pelea" type="number" class="centrado" value="-5" style="width: 65px;" readonly></td>
+                    </tr>
+                    <tr class="negrita smaller">
+                        <td class="centrado"><span>&nbsp;&nbsp;(Fue+CsA-5)&nbsp;&nbsp;</span></td>
+                        <td >&nbsp;</td>    
+                        <td class="centrado"><span>Bonificador</span></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="33porciento sheet-tabedicion-content sheet-tab2edicion">
+            
+        <button name="roll_esquiva" class="botonimagen besquiva" type="roll" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12+@{esquiva})]]}}  {{charname=@{character_name}}}" ></button>
+        <table style="margin: 0 auto; display:inline">
+            <tbody>
+                    <tr class="centrado bordetop">
+                        <td  class="bordebot"><button name="roll_esquiva" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{defensa=Ah}} {{esquiva=Ah}} {{rname=Esquiva}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{esquiva}}} {{r1=[[(1d12cs0cf0+@{esquiva})]]}} {{r2=[[(1d12cs0cf0+@{esquiva})]]}} {{r3=[[(1d12+@{esquiva})]]}}  {{charname=@{character_name}}}" >Esquiva*</button></td>
+                        <td >&nbsp;</td>
+                        <td  class="bordebot"><input name="attr_esquiva" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
+                    </tr>
+                    <tr class="negrita smaller">
+                        <td class="centrado"><span>&nbsp;&nbsp;(Agi+esquiva-5)&nbsp;&nbsp;</span></td>
+                        <td >&nbsp;</td>
+
+                        <td class="centrado"><span>Bonificador</span></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="33porciento sheet-tabedicion-content sheet-tab2edicion">
+        <button name="roll_desvio" class="botonimagen bdesvio" type="roll" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12+@{desvio})]]}}  {{charname=@{character_name}}}" ></button>
+                        
+        <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCBloqueo.png"/>
+    -->
+        <table style="margin: 0 auto; display:inline">
+            <tbody>
+                    <tr class="centrado bordetop">
+                        <td  class="bordebot"><button name="roll_desvio" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{defensa=Ah}} {{desvio=Ah}} {{rname=Desvío}} {{armadura=Protección @{proteccion}}} {{piruetas=[[@{hab_piruetas}]]}} {{RD=[[@{RD}]]}} {{RDesp=@{RDesp}}} {{agilidad=[[@{agilidad}]]}} {{herida=Herida @{her}}} {{mod=@{desvio}}} {{r1=[[(1d12cs0cf0+@{desvio})]]}} {{r2=[[(1d12cs0cf0+@{desvio})]]}} {{r3=[[(1d12+@{desvio})]]}}  {{charname=@{character_name}}}" >Desvío</button></td>
+                        <td >&nbsp;</td>    
+                        <td  class="bordebot"><input name="attr_desvio" type="number"  class="centrado" value="-5" style="width: 65px;"></td>
+                    </tr>
+                    <tr class="negrita smaller">
+                        <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-5)&nbsp;&nbsp;</span></td>
+                        <td >&nbsp;</td>
+
+                        <td class="centrado"><span>Bonificador</span></td>
+                    </tr>
+            </tbody>
+        </table>
     </div>
     
+    <div class="33porciento sheet-tabedicion-content sheet-tab2edicion">
+        <button name="roll_pelea" class="botonimagen bpelea" type="roll" value="&{template:tirada} {{pelea=Ah}} {{habilidad=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(1d12+@{pelea})]]}}  {{charname=@{character_name}}}" ></button>
+                        
+        <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCPelea.png"/>
+        -->
+        <table style="margin: 0 auto; display:inline">
+            <tbody>
+                    <tr class="centrado bordetop">
+                        <td  class="bordebot"><button name="roll_pelea" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{pelea=Ah}} {{habilidad=Ah}} {{rname=Pelea}} {{mod=@{pelea}}} {{r1=[[(1d12cs0cf0+@{pelea})]]}} {{r2=[[(1d12cs0cf0+@{pelea})]]}} {{r3=[[(1d12+@{pelea})]]}}  {{charname=@{character_name}}}" >Pelea</button></td>
+                        <td >&nbsp;</td>
+                        <td  class="bordebot"><input name="attr_pelea" type="number" class="centrado" value="-5" style="width: 65px;"></td>
+                    </tr>
+                    <tr class="negrita smaller">
+                        <td class="centrado"><span>&nbsp;&nbsp;(Fue+CsA-5)&nbsp;&nbsp;</span></td>
+                        <td >&nbsp;</td>    
+                        <td class="centrado"><span>Bonificador</span></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
 
-<!--SECCIÓN MAGOS-->
+
+    <!--SECCIÓN MAGOS-->
     <hr>
     <div class="sheet-tabmagia-content sheet-tab2magia">
-    <div class="3colrow">
-        <div class="col">
+    <input type="checkbox" name="attr_tabedicion" class="sheet-tabedicion sheet-tab2edicion oculto" value="2" title="Modo edición" />  
+
+        <div class="33porciento sheet-tabedicion-content sheet-tab1edicion">
+            
+            <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultadmenos=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}}  {{dificultadmas=[[(6+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r2=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r3=[[(1d12+@{conjuracion} )]]}} {{charname=@{character_name}}}" ></button>
+            
+            <table style="margin: 0 auto; display:inline">
+                <tbody>
+                        <tr class="centrado bordetop">
+            <td class="bordebot"><button name="roll_conjuracion" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultadmenos=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}}  {{dificultadmas=[[(6+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r2=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r3=[[(1d12+@{conjuracion} )]]}} {{charname=@{character_name}}}" >Conjuración</button></td>
+            </td>
+            <td>&nbsp;</td>
+            <td class="bordebot"><input name="attr_conjuracion" type="number"  class="centrado" value="-5" style="width: 65px;" readonly></td>
+            </tr>
+
+            <tr class="negrita smaller">
+                <td class="centrado"><span>(Ast+conjuración-5)</span></td>
+                <td>&nbsp;</td>    
+                <td class="centrado"><span>Bonificador</span></td>
+            </tr>                        
+                </tbody>
+            </table>
+        </div>
+
+        <div class="33porciento sheet-tabedicion-content sheet-tab1edicion">
+            <button name="roll_intensidad" class="botonimagen bintensidad" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultadmenos=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}}  {{dificultadmas=[[(6+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r2=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r3=[[(1d12+@{conjuracion} )]]}} {{tipo=[[0]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12+@{intensidad})]]}}  {{charname=@{character_name}}}"></button>
+            <table style="margin: 0 auto; display:inline">
+                <tbody>
+                        <tr class="centrado bordetop">
+            <td class="bordebot"><button name="roll_intensidad" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultadmenos=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}}  {{dificultadmas=[[(6+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r2=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r3=[[(1d12+@{conjuracion} )]]}} {{tipo=[[0]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12+@{intensidad})]]}}  {{charname=@{character_name}}}">Intensidad</button></td>
+            <td>&nbsp;</td>       
+            <td class="bordebot"><input name="attr_intensidad" type="number"  class="centrado" value="-5" style="width: 65px;" readonly></td>
+            </tr>
+            <tr class="negrita smaller">
+                <td class="centrado"><span>&nbsp;&nbsp;(Int+intensidad-5)&nbsp;&nbsp;</span></td>
+                <td>&nbsp;</td>    
+                <td class="centrado"><span>Bonificador</span></td>
+            </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="33porciento sheet-tabedicion-content sheet-tab1edicion">
+            <button name="roll_celeridad" class="botonimagen bceleridad" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultadmenos=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}}  {{dificultadmas=[[(6+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r2=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r3=[[(1d12+@{conjuracion} )]]}} {{tipo=[[1]]}}  {{modc=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12+@{celeridad})]]}}  {{charname=@{character_name}}}"></button>
+            
+            
+            <table style="margin: 0 auto; display:inline">
+                <tbody>
+                        <tr class="centrado bordetop">
+            <td class="bordebot"><button name="roll_celeridad" type="roll" style="width: 100px; text-align: center;" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultadmenos=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}}  {{dificultadmas=[[(6+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r2=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r3=[[(1d12+@{conjuracion} )]]}} {{tipo=[[1]]}}  {{modc=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12+@{celeridad})]]}}  {{charname=@{character_name}}}">Celeridad</button></td>
+            <td>&nbsp;</td>
+            <td class="bordebot"><input name="attr_celeridad" type="number"  class="centrado" value="-5" style="width: 65px;" readonly></td>
+            </tr>
+            <tr class="negrita smaller">
+                <td class="centrado"><span>&nbsp;&nbsp;(Ast+celeridad-5)&nbsp;&nbsp;</span></td>
+                <td>&nbsp;</td>    
+                <td class="centrado"><span>Bonificador</span></td>
+            </tr>
+                </tbody>
+            </table>
+        </div>
+  
+        <div class="33porciento sheet-tabedicion-content sheet-tab2edicion">
             
             <button name="roll_conjuracion" type="roll" class="botonimagen bconjuracion" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultadmenos=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}}  {{dificultadmas=[[(6+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r2=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r3=[[(1d12+@{conjuracion} )]]}} {{charname=@{character_name}}}" ></button>
             
@@ -557,7 +858,7 @@
             </table>
         </div>
 
-        <div class="col">
+        <div class="33porciento sheet-tabedicion-content sheet-tab2edicion">
             <button name="roll_intensidad" class="botonimagen bintensidad" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultadmenos=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}}  {{dificultadmas=[[(6+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r2=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r3=[[(1d12+@{conjuracion} )]]}} {{tipo=[[0]]}} {{modi=@{intensidad}}} {{ri1=[[(1d12cs0cf0+@{intensidad})]]}} {{ri2=[[(1d12cs0cf0+@{intensidad})]]}} {{ri3=[[(1d12+@{intensidad})]]}}  {{charname=@{character_name}}}"></button>
             <table style="margin: 0 auto; display:inline">
                 <tbody>
@@ -573,9 +874,9 @@
             </tr>
                 </tbody>
             </table>
-             </div>
+        </div>
 
-        <div class="col">
+        <div class="33porciento sheet-tabedicion-content sheet-tab2edicion">
             <button name="roll_celeridad" class="botonimagen bceleridad" type="roll" value="&{template:tirada} {{conjuracion=ah}} {{rname=Conjuración}} {{dificultad=[[(4+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{poder=?{¿Con qué poder lanzas el conjuro?|1}}} {{dificultadmenos=[[(2+?{¿Con qué poder lanzas el conjuro?|1})]]}}  {{dificultadmas=[[(6+?{¿Con qué poder lanzas el conjuro?|1})]]}} {{r1=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r2=[[(1d12cs0cf0+@{conjuracion} )]]}} {{r3=[[(1d12+@{conjuracion} )]]}} {{tipo=[[1]]}}  {{modc=@{celeridad}}} {{rd1=[[(1d12cs0cf0+@{celeridad})]]}} {{rd2=[[(1d12cs0cf0+@{celeridad})]]}} {{rd3=[[(1d12+@{celeridad})]]}}  {{charname=@{character_name}}}"></button>
             
             
@@ -595,27 +896,16 @@
             </table>
         </div>
 
+    <hr>
     </div>
-    </div>
-
 
 <div class="arrow-left"></div>
     <hr>
 
-<!--ARMAS Y ACCIONES-->                
-    
-    <!--Cuadro notas-->
-        <!--<input type="checkbox" class="cuadronotas check" name="cuadronotas" value="1" style="float:left;">
-        <div class="cuadro_acciones negrita">
-            <span class="larger negrita centrado 25porciento" style="margin-left:-20px;">Rasgos</span>
-        </div>
-        <div class="cuadro_especial negrita">
-            <span class="larger negrita centrado 25porciento" style="margin-left:-20px;">Talentos</span>
-        </div>
-    -->
-        
-        <input type="radio" name="attr_tabnotas" class="sheet-tabnotas sheet-tabnotas2" value="2" title="Talentos" />
-        <input type="radio" name="attr_tabnotas" class="sheet-tabnotas sheet-tabnotas1" value="1" title="Rasgos" checked="checked" />
+
+    <!--ARMAS Y ACCIONES-->                       
+        <input type="radio" name="attr_tabnotas" class="sheet-tabnotas sheet-tabnotas2" value="2" title="Talentos" checked="checked" />
+        <input type="radio" name="attr_tabnotas" class="sheet-tabnotas sheet-tabnotas1" value="1" title="Rasgos" />
         
         <div class="sheet-tabmagia-content sheet-tab2magia" class="inline">
             <input type="radio" name="attr_tabnotas" class="sheet-tabnotas sheet-tabnotas3" value="3" title="Conjuros" />
@@ -1171,8 +1461,256 @@
         </div>
 
         
+<div class="sheet-tabedicion-content sheet-tab1edicion">
+    <!-- ATAQUE 1-->
+        <input name="attr_nombrearma1" class="recolocar" type="text"  placeholder="Nombre del arma" style="width: 165px;"  readonly/>
+                               
+            <div style="margin-top:-6px;">               
+                <button name="roll_ataque1" class="botonimagen bataque1" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{Daño=[[@{dmg1}]]}} {{Cansancio=[[@{can1}]]}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=[[@{tipodmg1}]]}} {{alcance=[[@{alc1}]]}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12+@{ataque1})]]}}  {{charname=@{character_name}}}"></button>
+                          
+                    <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque1.png"/>
+                    -->
+                    <table style="display:inline">
+                    <tbody>
+                        <tr class="bordetop">                            
+                            <td class="centrado bordebot"><button name="roll_ataque1" type="roll" value="&{template:tirada} {{ataque1=Ah}} {{Daño=[[@{dmg1}]]}} {{Cansancio=[[@{can1}]]}} {{rname=Ataque}} {{mod=@{ataque1}}} {{arma=@{nombrearma1}}} {{tipodmg=[[@{tipodmg1}]]}} {{alcance=[[@{alc1}]]}} {{r1=[[(1d12cs0cf0+@{ataque1})]]}} {{r2=[[(1d12cs0cf0+@{ataque1})]]}} {{r3=[[(1d12+@{ataque1})]]}}  {{charname=@{character_name}}}"> Ataque 1</button></td>
+                            <td>&nbsp;</td>
+                            <td class="centrado bordebot"><input name="attr_ataque1" type="number"  style="width: 70px;" class="centrado" value="-5" readonly></td>
+                            <td>&nbsp;</td>
 
-        <!-- ATAQUE 1-->
+                    <td class="centrado bordebot"><select name="attr_tipodmg1" style="width: 48px;">
+                        <option value="1">P</option>
+                        <option value="2" selected="selected">C</option>
+                        <option value="3">T</option>
+                    </select>
+                    <input name="attr_dmg1" type="number"  title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe/-1 equipo pequeño)" class="centrado" value="0" style="width: 22px;" readonly/></td>
+                    <td>&nbsp;</td>
+
+                    <td class="centrado bordebot"><input name="attr_can1" type="number" title="Cansancio=Fuerza (+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 40px;" readonly/></td>
+                    <td>&nbsp;</td>
+
+                    <td class="centrado bordebot"><input name="attr_alc1" type="number"  class="centrado" value="1" style="width: 40px;" readonly/></td>
+                    <td>&nbsp;</td>
+
+                    <td class="bordebot"><input name="attr_esp1" type="text"  style="width: 200px;" readonly></td>
+                    </tr>
+
+                        <tr class="negrita smaller">
+                            <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-5)&nbsp;&nbsp;</span></td>
+                            <td>&nbsp;</td>
+                            <td class="centrado"><span>Bonificador</span></td>
+                            <td>&nbsp;</td>
+
+                            <td class="centrado"><span>Daño</span></td>
+                            <td>&nbsp;</td>
+
+                            <td class="centrado"><span>Can</span></td>
+                            <td>&nbsp;</td>
+
+                            <td class="centrado"><span>Alc</span></td>
+                            <td>&nbsp;</td>
+                    
+                            <td class="centrado"><span> Especial</span></td>                            
+                        </tr>
+                   </tbody>
+                </table>      
+                <br>                           
+            </div>            
+            
+    <!-- ATAQUE 2-->     
+        <input name="attr_nombrearma2" class="recolocar" type="text" placeholder="Nombre del arma" style="width: 165px;" readonly/>
+                    
+            <div style="margin-top:-6px;">
+                    <button name="roll_ataque2" class="botonimagen bataque2" type="roll" value="&{template:tirada} {{ataque2=Ah}} {{Daño=[[@{dmg2}]]}} {{Cansancio=[[@{can2}]]}} {{rname=Ataque}} {{mod=@{ataque2}}} {{arma=@{nombrearma2}}} {{tipodmg=[[@{tipodmg2}]]}} {{alcance=[[@{alc2}]]}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(1d12+@{ataque2})]]}}  {{charname=@{character_name}}}"></button>
+                                                     
+                    <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque2.png"/>
+                    -->
+                    <table style="display:inline">
+                    <tbody>
+                        <tr class="bordetop">                            
+                            <td class="centrado bordebot"><button name="roll_ataque2" type="roll" value="&{template:tirada} {{ataque2=Ah}} {{Daño=[[@{dmg2}]]}} {{Cansancio=[[@{can2}]]}} {{rname=Ataque}} {{mod=@{ataque2}}} {{arma=@{nombrearma2}}} {{tipodmg=[[@{tipodmg2}]]}} {{alcance=[[@{alc2}]]}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(1d12+@{ataque2})]]}}  {{charname=@{character_name}}}"> Ataque 2</button>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td class="centrado bordebot"><input name="attr_ataque2" type="number"  style="width: 70px;" class="centrado" value="-5" readonly></td>
+                            <td>&nbsp;</td>
+                           
+                    <td class="centrado bordebot"><select name="attr_tipodmg2" style="width: 48px;">
+                        <option value="1">P</option>
+                        <option value="2" selected="selected">C</option>
+                        <option value="3">T</option>
+                    </select>
+                    <input name="attr_dmg2" type="number"  title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe/-1 equipo pequeño)" class="centrado" value="0" style="width: 22px;" readonly/></td>
+                    <td>&nbsp;</td>
+
+                    <td class="centrado bordebot"><input name="attr_can2" type="number" title="Cansancio=Fuerza (+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 40px;" readonly/></td>
+                    <td>&nbsp;</td>
+
+                    <td class="centrado bordebot"><input name="attr_alc2" type="number"  class="centrado" value="1" style="width: 40px;" readonly/></td>
+                    <td>&nbsp;</td>
+
+                    <td class="bordebot"><input name="attr_esp2" type="text"  style="width: 200px;" readonly></td>
+                        </tr>
+                        <tr class="negrita smaller">
+                            <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-5)&nbsp;&nbsp;</span></td>
+                            <td>&nbsp;</td>
+                            <td class="centrado"><span>Bonificador</span></td>
+                            <td>&nbsp;</td>
+
+                            <td class="centrado"><span>Daño</span></td>
+                            <td>&nbsp;</td>
+
+                            <td class="centrado"><span>Can</span></td>
+                            <td>&nbsp;</td>
+
+                            <td class="centrado"><span>Alc</span></td>
+                            <td>&nbsp;</td>
+                    
+                            <td class="centrado"><span> Especial</span></td>
+                            
+                        </tr>
+                   </tbody>
+                </table>     
+                <br>                              
+            </div>
+            
+    
+    <!-- ATAQUE 3-->           
+        
+            <div class="recolocar">
+            <input name="attr_nombrearma3" type="text" placeholder="Nombre del arma" style="width: 165px;"  readonly/>
+            <span>&nbsp;&nbsp;&nbsp;</span>
+            <span class="negrita larger">&nbsp;&nbsp;&nbsp;Munición</span>
+            <input name="attr_municion_max" type="number" class="centrado" placeholder="Total" style="width: 40px;">
+            <span class="negrita larger">/</span>
+            <input name="attr_municion" type="number" class="centrado" placeholder="Gastada" style="width: 60px;">
+            </div>
+                                
+                                 
+            <div style="margin-top:-6px;">
+                    
+                <button name="roll_ataque" class="botonimagen bataque3" type="roll" value="&{template:tirada} {{ataque3=Ah}} {{Daño=[[@{dmg3}]]}} {{Cansancio=[[@{can3}]]}} {{rname=Ataque}} {{arma=@{nombrearma3}}} {{tipodmg=[[@{tipodmg3}]]}} {{mod=@{ataque3}}} {{alcance=[[@{alc3}]]}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(1d12+@{ataque3})]]}}  {{charname=@{character_name}}}" ></button>
+                            
+                    <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque3.png"/>
+                    -->
+                    <table style="display:inline">
+                    <tbody>
+                        <tr class="bordetop">
+                            <td class="centrado bordebot">
+                            <button name="roll_ataque" type="roll" value="&{template:tirada} {{ataque3=Ah}} {{Daño=[[@{dmg3}]]}} {{Cansancio=[[@{can3}]]}} {{rname=Ataque}} {{arma=@{nombrearma3}}} {{tipodmg=[[@{tipodmg3}]]}} {{mod=@{ataque3}}} {{alcance=[[@{alc3}]]}} {{r1=[[(1d12cs0cf0+@{ataque3})]]}} {{r2=[[(1d12cs0cf0+@{ataque3})]]}} {{r3=[[(1d12+@{ataque3})]]}}  {{charname=@{character_name}}}" > Ataque 3</button>
+                            </td>
+                            <td>&nbsp;</td>    
+                            <td class="centrado bordebot"><input name="attr_ataque3" type="number" style="width: 70px;" class="centrado" value="-5" readonly></td>
+                            <td>&nbsp;</td>
+
+                    <td class="centrado bordebot"><select name="attr_tipodmg3" style="width: 48px;">
+                        <option value="1" selected="selected">P</option>
+                        <option value="2">C</option>
+                        <option value="3">T</option>
+                    </select>
+                    <input name="attr_dmg3" type="number" title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe/-1 equipo pequeño)" class="centrado" value="0" style="width: 22px;" readonly/></td>
+                    <td>&nbsp;</td>
+
+                    <td class="centrado bordebot"><input name="attr_can3" type="number" title="Cansancio=Fuerza (+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 40px;" readonly/></td>
+                    <td>&nbsp;</td>
+
+                    <td class="centrado bordebot"><input name="attr_alc3" type="number"  class="centrado" value="1" style="width: 40px;" readonly/></td>
+                    <td>&nbsp;</td>
+
+                    <td class="bordebot"><input name="attr_esp3" type="text" style="width: 200px;" readonly></td>
+                    
+
+                    </tr>
+
+                    <tr class="negrita smaller">
+                        <td class="centrado"><span>&nbsp;&nbsp;(Des+H.arma-5)&nbsp;&nbsp;</span></td>
+                        <td>&nbsp;</td>
+                        <td class="centrado"><span>Bonificador</span></td>
+                        <td>&nbsp;</td>
+
+                        <td class="centrado"><span>Daño</span></td>
+                        <td>&nbsp;</td>
+
+                        <td class="centrado"><span>Can</span></td>
+                        <td>&nbsp;</td>
+
+                        <td class="centrado"><span>Alc</span></td>
+                        <td>&nbsp;</td>
+                
+                        <td class="centrado"><span> Especial</span></td>  
+                    </tr>
+                
+            </tbody>
+         </table>     
+         <br>
+            </div> 
+            
+           
+    <!-- ATAQUE SIN ARMAS-->
+     <input name="attr_nombrearmasa" class="recolocar" type="text" placeholder="Nombre del arma" style="width: 165px;"  readonly/>
+     
+        <div style="margin-top:-6px;">
+        <button name="roll_ataquesa" class="botonimagen bataquesa" type="roll" value="&{template:tirada} {{ataquesa=Ah}} {{Daño=[[@{dmgsa}]]}} {{Cansancio=[[@{cansa}]]}} {{rname=Ataque}} {{arma=@{nombrearmasa}}} {{tipodmg=[[@{tipodmgsa}]]}} {{mod=@{ataquesa}}} {{alcance=[[@{alcsa}]]}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(1d12+@{ataquesa})]]}}  {{charname=@{character_name}}}" ></button>
+                           
+            <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaqueSA.png"/>
+            -->
+            <table style="display:inline">
+                    <tbody>
+                        
+                        <tr class="bordetop">
+                            <td class="centrado bordebot">
+                            <button name="roll_ataquesa" type="roll" value="&{template:tirada} {{ataquesa=Ah}} {{Daño=[[@{dmgsa}]]}} {{Cansancio=[[@{cansa}]]}} {{rname=Ataque}} {{arma=@{nombrearmasa}}} {{tipodmg=[[@{tipodmgsa}]]}} {{mod=@{ataquesa}}} {{alcance=[[@{alcsa}]]}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(1d12+@{ataquesa})]]}}  {{charname=@{character_name}}}" >&nbsp;Ataque sA&nbsp;</button>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td class="centrado bordebot"><input name="attr_ataquesa" type="number" style="width: 70px;" class="centrado" value="-5" readonly></td>
+                            <td>&nbsp;</td>
+                     
+                    <td class="centrado bordebot"><select name="attr_tipodmgsa" style="width: 48px;">
+                        <option value="1">P</option>
+                        <option value="2">C</option>
+                        <option value="3" selected="selected">T</option>
+                    </select>
+                    <input name="attr_dmgsa" type="number" title="Daño=Fuerza (+1 con armas no ligeras/+1 arma a dos manos/-1 mano torpe/-1 equipo pequeño)" class="centrado" value="0" style="width: 22px;" readonly/></td>
+                    <td>&nbsp;</td>
+
+                    <td class="centrado bordebot"><input name="attr_cansa" type="number" title="Cansancio=Fuerza (+1 arma a dos manos/-1 mano torpe)" class="centrado" value="0" style="width: 40px;" readonly/></td>
+                    <td>&nbsp;</td>
+
+                    <td class="centrado bordebot"><input name="attr_alcsa" type="number"  class="centrado" value="1" style="width: 40px;" readonly/></td>
+                    <td>&nbsp;</td>
+
+                    <td class="bordebot"><input name="attr_espsa" type="text" style="width: 190px;" readonly></td>
+                    
+
+                   </tr>
+
+                   <tr class="negrita smaller">
+                    <td class="centrado"><span>&nbsp;&nbsp;(Des+C.sA-5)&nbsp;&nbsp;</span></td>
+                    <td>&nbsp;</td>
+                    <td class="centrado"><span>Bonificador</span></td>
+                    <td>&nbsp;</td>
+
+                    <td class="centrado"><span>Daño</span></td>
+                    <td>&nbsp;</td>
+
+                    <td class="centrado"><span>Can</span></td>
+                    <td>&nbsp;</td>
+
+                    <td class="centrado"><span>Alc</span></td>
+                        <td>&nbsp;</td>
+                            
+                    <td class="centrado"><span> Especial</span></td>
+                    
+                </tr>
+
+                   </tbody>
+                </table>
+                <hr>      
+        </div>
+
+</div>
+
+<div class="sheet-tabedicion-content sheet-tab2edicion">
+    <!-- ATAQUE 1-->
         <input name="attr_nombrearma1" class="recolocar" type="text"  placeholder="Nombre del arma" style="width: 165px;" />
                                
             <div style="margin-top:-6px;">               
@@ -1225,12 +1763,12 @@
                    </tbody>
                 </table>      
                 <br>                           
-                </div>            
+            </div>            
             
-        <!-- ATAQUE 2-->     
+    <!-- ATAQUE 2-->     
         <input name="attr_nombrearma2" class="recolocar" type="text" placeholder="Nombre del arma" style="width: 165px;" />
                     
-                <div style="margin-top:-6px;">
+            <div style="margin-top:-6px;">
                     <button name="roll_ataque2" class="botonimagen bataque2" type="roll" value="&{template:tirada} {{ataque2=Ah}} {{Daño=[[@{dmg2}]]}} {{Cansancio=[[@{can2}]]}} {{rname=Ataque}} {{mod=@{ataque2}}} {{arma=@{nombrearma2}}} {{tipodmg=[[@{tipodmg2}]]}} {{alcance=[[@{alc2}]]}} {{r1=[[(1d12cs0cf0+@{ataque2})]]}} {{r2=[[(1d12cs0cf0+@{ataque2})]]}} {{r3=[[(1d12+@{ataque2})]]}}  {{charname=@{character_name}}}"></button>
                                                      
                     <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque2.png"/>
@@ -1281,7 +1819,7 @@
                    </tbody>
                 </table>     
                 <br>                              
-                </div>
+            </div>
             
     
     <!-- ATAQUE 3-->           
@@ -1352,17 +1890,13 @@
             </tbody>
          </table>     
          <br>
-            </div>
-
-                                       
-        
+            </div> 
             
            
-     <!-- ATAQUE SIN ARMAS-->
+    <!-- ATAQUE SIN ARMAS-->
      <input name="attr_nombrearmasa" class="recolocar" type="text" placeholder="Nombre del arma" style="width: 165px;" />
      
-       
-     <div style="margin-top:-6px;">
+        <div style="margin-top:-6px;">
         <button name="roll_ataquesa" class="botonimagen bataquesa" type="roll" value="&{template:tirada} {{ataquesa=Ah}} {{Daño=[[@{dmgsa}]]}} {{Cansancio=[[@{cansa}]]}} {{rname=Ataque}} {{arma=@{nombrearmasa}}} {{tipodmg=[[@{tipodmgsa}]]}} {{mod=@{ataquesa}}} {{alcance=[[@{alcsa}]]}} {{r1=[[(1d12cs0cf0+@{ataquesa})]]}} {{r2=[[(1d12cs0cf0+@{ataquesa})]]}} {{r3=[[(1d12+@{ataquesa})]]}}  {{charname=@{character_name}}}" ></button>
                            
             <!--<img class="dibujito" src="https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaqueSA.png"/>
@@ -1421,8 +1955,9 @@
                 <hr>      
         </div>
 
-        <hr>
+</div>
 
+<hr>
 
 
 <!--SECCIÓN HABILIDADES-->
@@ -1431,10 +1966,6 @@
 <hr>
 
 <h1>Habilidades</h1>
-<!--Algunas habilidades tienen dos atributos y cogen el mayor:  Empatía: ast/int, Sanar: des/int, Seguridad: des/int. Defino esos máximos aquí y esto se edita con la API-->
-
-
-
 
     <div class="25porciento"> <!--Habilidades Combate-->
         <h3 class="centrado">Combate</h3>
@@ -1577,7 +2108,7 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_atletismox3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_atletismo" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_atletismo} [Rangos] + @{Fuerza} [Atributo] - 5 + @{hab_atletismo_esp} [Otros])]]" style="width: 19px;" disabled><span>/</span><input name="attr_hab_atletismo2" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_atletismo} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_atletismo_esp2} [Otros])]]" style="width: 19px;" disabled></td></td>
+                    <input name="attr_hab_atletismo" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_atletismo} [Rangos] + @{Fuerza} [Atributo] - 5 + @{hab_atletismo_esp} [Otros] - @{carga} )]]" style="width: 19px;" disabled><span>/</span><input name="attr_hab_atletismo2" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_atletismo} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_atletismo_esp2} [Otros] - @{carga} )]]" style="width: 19px;" disabled></td></td>
                     <input name="attr_hab_atletismo_esp" value="[[(@{rang_atletismox1} + @{rang_atletismox2} + @{rang_atletismox3} + @{rang_Fuerzax1} + @{rang_Fuerzax2} + @{rang_Fuerzax3} )]]" style="display:none" disabled>
                     <input name="attr_hab_atletismo_esp2" value="[[(@{rang_atletismox1} + @{rang_atletismox2} + @{rang_atletismox3} + @{rang_Agilidadx1} + @{rang_Agilidadx2} + @{rang_Agilidadx3} )]]" style="display:none" disabled>
                     
@@ -1679,7 +2210,7 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_equilibriox3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_equilibrio" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_equilibrio} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_equilibrio_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                <input name="attr_hab_equilibrio" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_equilibrio} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_equilibrio_esp} [Otros] - @{carga} )]]" style="width: 38px;" disabled></td>
                 <input name="attr_hab_equilibrio_esp" value="[[(@{rang_equilibriox1} + @{rang_equilibriox2} + @{rang_equilibriox3} + @{rang_Agilidadx1} + @{rang_Agilidadx2} + @{rang_Agilidadx3} )]]" style="display:none" disabled>
 
         </tr><tr><td style="padding-bottom:5px">
@@ -1729,7 +2260,7 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_nadarx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_nadar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_nadar} [Rangos] + @{Fuerza} [Atributo] - 5 + @{hab_nadar_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                <input name="attr_hab_nadar" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_nadar} [Rangos] + @{Fuerza} [Atributo] - 5 + @{hab_nadar_esp} [Otros] - @{carga} )]]" style="width: 38px;" disabled></td>
                 <input name="attr_hab_nadar_esp" value="[[(@{rang_nadarx1} + @{rang_nadarx2} + @{rang_nadarx3} + @{rang_Fuerzax1} + @{rang_Fuerzax2} + @{rang_Fuerzax3} )]]" style="display:none" disabled>
 
         </tr><tr><td style="padding-bottom:5px">
@@ -1779,7 +2310,7 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_sigilox3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                <input name="attr_hab_sigilo" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_sigilo} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_sigilo_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                <input name="attr_hab_sigilo" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_sigilo} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_sigilo_esp} [Otros]  - @{carga} )]]" style="width: 38px;" disabled></td>
                 <input name="attr_hab_sigilo_esp" value="[[(@{rang_sigilox1} + @{rang_sigilox2} + @{rang_sigilox3} + @{rang_Agilidadx1} + @{rang_Agilidadx2} + @{rang_Agilidadx3} )]]" style="display:none" disabled>
 
         </tr><tr><td style="padding-bottom:5px">
@@ -1968,7 +2499,7 @@
                     <input type="radio" title="Rango extra" class="minirangoex rangoneg" name="attr_rang_piruetasx3" value="-1" /><span style="background-color: rgb(150, 0, 0);"></span>
                 </span>  
                 <td style="padding-bottom:5px">
-                    <input name="attr_hab_piruetas" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_piruetas} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_piruetas_esp} [Otros])]]" style="width: 38px;" disabled></td>
+                    <input name="attr_hab_piruetas" type="number" class="centrado" title="Bonificador=(Atributo+habilidad-5)" value="[[(@{rang_piruetas} [Rangos] + @{Agilidad} [Atributo] - 5 + @{hab_piruetas_esp} [Otros] - @{carga} )]]" style="width: 38px;" disabled></td>
                     <input name="attr_hab_piruetas_esp" value="[[(@{rang_piruetasx1} + @{rang_piruetasx2} + @{rang_piruetasx3} + @{rang_Agilidadx1} + @{rang_Agilidadx2} + @{rang_Agilidadx3} )]]" style="display:none" disabled>
     
         </tr><tr><td style="padding-bottom:5px">
@@ -2213,10 +2744,13 @@
 
 
 
+
+
 <!-- PÁGINA B-->
 <!--SECCIÓN VENTAJAS, TALENTOS, IDEOLOGIA, IDIOMAS, ESTADOS-->
 
 <div class="sheet-tab-content sheet-tab2">
+    <hr>
     <!-- RASGOS Y TALENTOS-->
 <div class="2colrow">
 
@@ -3553,11 +4087,11 @@
         <table style="margin: 0 auto;">
             <tbody>
             
-            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="99"  class="check"/></td><td> <span class="negrita">Límite (Caes derribado)</span> </td></tr>
+            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="10"  class="check"/></td><td> <span class="negrita">Límite (Caes derribado)</span> </td></tr>
             
             <tr><td class="negrita smaller textoderecha">&#215;10&nbsp;&nbsp;</td><td>&nbsp;&nbsp;<input name="attr_carga6" type="number" disabled="true" value="(@{carga3}+@{carga3})" class="centrado" style="width: 60px;">&nbsp;&nbsp;</td></tr>
         
-            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="6" class="check"/></td><td> <span class="negrita">Exceso (-25 Energía y pen. por carga -5)</span> </td></tr>
+            <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="5" class="check"/></td><td> <span class="negrita">Exceso (-25 Energía y pen. por carga -5)</span> </td></tr>
             
             <tr><td class="negrita smaller textoderecha">&#215;5&nbsp;&nbsp;</td><td>&nbsp;&nbsp;<input name="attr_carga3" type="number" disabled="true" value="(@{carga1}+@{carga2}+@{carga2})" class="centrado" style="width: 60px;">&nbsp;&nbsp;</td></tr>
             <tr><td></td><td></td><td><input name="attr_carga" type="radio" value="3"  class="check"/></td><td> <span class="negrita">Carga pesada (-15 Energía y pen. por carga -3)</span> </td></tr>
