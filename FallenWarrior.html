@@ -287,7 +287,7 @@
                     <tr class="centrado">        
                         <td><span class="negrita larger">Energía</span></td>
                         <td>&nbsp;&nbsp;</td>
-                        <td> <input name="attr_energia" type="number" class="centrado bordecuad" style="width: 70px;" value="[[( @{energia_base} + @{energia_mod} - @{energia_carga} )]]" disabled></td>
+                        <td> <input name="attr_energia" type="number" class="centrado bordecuad" style="width: 70px;" value="15" readonly></td>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
                         <td><span class="negrita larger">Herida</span></td>
@@ -501,19 +501,21 @@
                         <td> 
                             <input type="checkbox" name="attr_tabeditarenergia" class="sheet-tabeditar sheet-tabeditarenergia" value="2" title="Editar" /><span></span>
                             <div class="sheet-tabeditar-content sheet-tabeditarenergia" style="position: absolute; margin-top: 20px">
-                                <div class="col recuadroeditar">
+                                <div class="col recuadroeditarenergia">
                                     <table style="margin: 10px 0px;">
                                         <tbody>
                                             <tr class="centrado negrita">
-                                                <td><input name="attr_energia_base" type="number" class="centrado negrita" style="width: 40px;" title="Bonificador base = (20+5×Resistencia)" value="[[( 15 + 5*@{Resistencia} + 5*@{Resistencia_esp} )]]" disabled/></td><td><span class="centrado negrita"> + </span></td>
+                                                <td><input name="attr_energia_base" type="number" class="centrado negrita" style="width: 40px;" title="Bonificador base = (15+5×Resistencia)" value="15" readonly/></td><td><span class="centrado negrita"> + </span></td>
                                                 <td><input name="attr_energia_mod" type="number" class="centrado negrita bordered" style="width: 40px;" title="Modificador" value="0" /></td><td><span class="centrado negrita"> - </span></td>
-                                                <td><input name="attr_energia_carga" type="number" class="centrado negrita" style="width: 40px;" title="Penalizador por carga" value="[[( 5*@{carga} )]]" disabled/></td><td><span class="centrado negrita"> = </span></td>
-                                                <td><input name="attr_energia" type="number" class="centrado negrita" style="width: 40px;" title="Bonificador" value="[[( @{energia_base} + @{energia_mod} - @{energia_carga} )]]" disabled/></td>
+                                                <td><input name="attr_energia_carga" type="number" class="centrado negrita" style="width: 40px;" title="Penalizador por carga" value="0" readonly/></td><td><span class="centrado negrita"> - </span></td>
+                                                <td><input name="attr_pen_energia" type="number" class="centrado negrita" style="width: 40px;" title="Penalizador de armadura" value="0" readonly/></td><td><span class="centrado negrita"> = </span></td>
+                                                <td><input name="attr_energia" type="number" class="centrado negrita" style="width: 40px;" title="Bonificador" value="15" readonly/></td>
                                             </tr>
                                             <tr class="centrado negrita">
                                                 <td>Base</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                 <td>Modificador</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                                <td>P.carga</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                                <td>Pen. Carga</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                                <td>Pen. Arm.</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                 <td>Total</td>
                                             </tr>
                                         <tbody>
@@ -521,7 +523,7 @@
                                     <textarea name="attr_notas_energia" placeholder="(Notas)" class="justify descripcion"></textarea>
                                 </div>
                             </div>
-                            <input name="attr_energia" type="number" class="centrado bordecuad" style="width: 70px;" value="[[( @{energia_base} + @{energia_mod} - @{energia_carga} )]]" disabled></td>
+                            <input name="attr_energia" type="number" class="centrado bordecuad" style="width: 70px;" value="15" readonly></td>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
                         <td><span class="negrita larger">Herida</span></td>
@@ -597,7 +599,7 @@
                     <input type="number" name="attr_aeneactual_max"  class="oculto" value="(@{energia})" disabled="true"/></td>
                     <td>&nbsp;&nbsp;</td>
 
-                    <td><input type ="number" name="attr_dvtratado"  class="centrado bordeparentesis" value="0"/></td>
+                    <td><input type ="number" name="attr_tratado"  class="centrado bordeparentesis" value="0"/></td>
                         <td>&nbsp;&nbsp;</td>
         
                     <td><!--<input type ="number" name="attr_apuntostrauma" class="centrado bordered" value="0" style="width: 110px;"/>-->
@@ -606,6 +608,8 @@
                     <p></p><span></span><input type="radio" title="Rango" class="rangorojo" name="attr_aapuntostrauma" value="7" /><span></span><input type="radio" title="Rango" class="rangorojo" name="attr_aapuntostrauma" value="8" /><span></span><input type="radio" title="Rango" class="rangorojo" name="attr_aapuntostrauma" value="9" /><span></span><input type="radio" title="Rango" class="rangorojo" name="attr_aapuntostrauma" value="10" /><span></span><input type="radio" title="Rango" class="rangorojo" name="attr_aapuntostrauma" value="11" /><span></span><input type="radio" title="Rango" class="rangorojo" name="attr_aapuntostrauma" value="12" /><span></span>
                     
                     <input type ="number" name="attr_aapuntostrauma_max" class="oculto" value="12" disabled="true"/></td>
+                    <td><button type="action" name="act_tratarheridas" title="Tratar heridas" style="font-size: 30px; font-weight: bold;text-align: center;">&#128158;</button></td>
+                    
         </tr>
 
         <tr class="centrado negrita smaller">
@@ -617,7 +621,7 @@
         <td><span class="negrita">(Daño tdo.)</span></td>
         <td></td>
         <td><span class="negrita">Trauma</span></td>
-        
+        <td></td>
     </tr>
             </tbody>
         </table>
@@ -6505,3 +6509,54 @@
 </rolltemplate>
 
 </div>
+
+
+<!------SCRIPT------>
+
+
+<script type="text/worker">
+
+    on('clicked:tratarheridas', function() {
+       
+        getAttrs(["aeneactual","tratado","aapuntostrauma","energia"], function(values) {
+                
+            let aeneactual = parseInt(values.aeneactual)||0;
+            let tratado = parseInt(values.tratado)||0;
+            let aapuntostrauma = parseInt(values.aapuntostrauma)||0;
+            let energia = parseInt(values.energia)||0;
+                       
+            let daño = energia - aeneactual + aapuntostrauma + tratado ;
+            let energia2 = energia - Math.floor(daño/2) ;
+            let tratado2 = Math.ceil(daño/2) ;
+                        
+            setAttrs({                            
+                aeneactual: energia2,
+                tratado: tratado2,
+                aapuntostrauma: 0
+                               
+            });
+        });
+    });
+
+    on("change:Resistencia change:energia_mod change:carga change:rang_Resistenciax1 change:rang_Resistenciax2 change:rang_Resistenciax3 change:pen_energia sheet:opened", function() {
+         getAttrs(["Resistencia","energia_mod","carga","rang_Resistenciax1","rang_Resistenciax2","rang_Resistenciax3","pen_energia"], function(values) {
+             let Resistencia = parseInt(values.Resistencia)||0;
+             let energia_mod = parseInt(values.energia_mod)||0;
+             let carga = parseInt(values.carga)||0;
+             let rang_Resistenciax1 = parseInt(values.rang_Resistenciax1)||0;
+             let rang_Resistenciax2 = parseInt(values.rang_Resistenciax2)||0;
+             let rang_Resistenciax3 = parseInt(values.rang_Resistenciax3)||0;
+             let pen_energia = parseInt(values.pen_energia)||0;
+             
+             let energiabase = 15 + 5*(Resistencia + rang_Resistenciax1 + rang_Resistenciax2 + rang_Resistenciax3) ;
+             let energiacarga = 5*carga ;
+             let energiatotal = 15 + 5*(Resistencia + rang_Resistenciax1 + rang_Resistenciax2 + rang_Resistenciax3) + energia_mod - Math.abs(5*carga) - Math.abs(pen_energia)
+
+             setAttrs({                            
+                 energia_base: energiabase,
+                 energia_carga: energiacarga,
+                 energia: energiatotal
+             });
+         });
+     });
+</script>
