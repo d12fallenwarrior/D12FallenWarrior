@@ -910,6 +910,7 @@ hr {
     display: none;
     border-radius: 10px;
     box-shadow: 5px 5px 8px #ccc;
+    position:relative;
     z-index: 5;
     padding: 10px 15px;
     margin-top: 2px;
@@ -921,10 +922,43 @@ hr {
     background: #fffaf0;
 }
 
+.sheet-recuadroeditar {
+    display: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #ccc;
+    position:relative;
+    z-index: 5;
+    padding: 10px 15px;
+    margin-top: 2px;
+    margin-left: -125px;
+    width: 250px !important;
+    line-height: 16px;
+    color: #111;
+    border: 1px solid #dca;
+    background: #fffaf0;
+}
+
+.sheet-recuadroeditardesvio {
+    display: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #ccc;
+    position:relative;
+    z-index: 5;
+    padding: 10px 15px;
+    margin-top: 2px;
+    margin-left: -125px;
+    width: 280px !important;
+    line-height: 16px;
+    color: #111;
+    border: 1px solid #dca;
+    background: #fffaf0;
+}
+
 .sheet-recuadrogrimorio {
     display: none;
     border-radius: 10px;
     box-shadow: 5px 5px 8px #ccc;
+    position:relative;
     z-index: 5;
     padding: 10px 15px;
     margin-top: 0px;
@@ -998,8 +1032,6 @@ hr {
     border: 0px;
     display: block;
     overflow: hidden;
-    margin-top: 3px;
-    margin-bottom: 3px;
     min-height: 20px;
     line-height: 20px;
     text-align: justify !important;
@@ -1295,8 +1327,7 @@ input.sheet-tabmagia:checked::before{
 
 
 div.sheet-tabrasgos-content { display: none; }
-input.sheet-tab1rasgos:checked ~ div.sheet-tab1rasgos,
-input.sheet-tab2rasgos:checked ~ div.sheet-tab2rasgos
+input.sheet-tabrasgos:checked ~ div.sheet-tabrasgos
 {
     display: inline-block;
 }
@@ -1352,8 +1383,7 @@ input.sheet-tabrasgos:checked + span::before{
 }
 
 div.sheet-tabtalentos-content { display: none; }
-input.sheet-tab1talentos:checked ~ div.sheet-tab1talentos,
-input.sheet-tab2talentos:checked ~ div.sheet-tab2talentos
+input.sheet-tabtalentos:checked ~ div.sheet-tabtalentos
 {
     display: inline-block;
 }
@@ -1603,6 +1633,77 @@ input.sheet-tabedicion:checked + span::before{
     background-size: 25px 25px;
     background-repeat: no-repeat;
 }
+
+div.sheet-tabeditar-content { display: none; }
+input.sheet-tabeditarref:checked ~ div.sheet-tabeditarref,
+input.sheet-tabeditarvit:checked ~ div.sheet-tabeditarvit,
+input.sheet-tabeditarvol:checked ~ div.sheet-tabeditarvol,
+input.sheet-tabeditarest:checked ~ div.sheet-tabeditarest,
+input.sheet-tabeditarmovimiento:checked ~ div.sheet-tabeditarmovimiento,
+input.sheet-tabeditarenergia:checked ~ div.sheet-tabeditarenergia,
+input.sheet-tabeditarher:checked ~ div.sheet-tabeditarher,
+input.sheet-tabeditaresquiva:checked ~ div.sheet-tabeditaresquiva,
+input.sheet-tabeditardesvio:checked ~ div.sheet-tabeditardesvio,
+input.sheet-tabeditarpelea:checked ~ div.sheet-tabeditarpelea,
+input.sheet-tabeditarconjuracion:checked ~ div.sheet-tabeditarconjuracion,
+input.sheet-tabeditarintensidad:checked ~ div.sheet-tabeditarintensidad,
+input.sheet-tabeditarceleridad:checked ~ div.sheet-tabeditarceleridad
+{
+    display: inline-block;
+}
+
+input.sheet-tabeditar{
+    width: 20px;
+    height: 20px;
+    
+    float: left;
+    position:absolute;
+    cursor: pointer;
+    z-index: 2;
+
+    border: none;
+    background: none;
+    color: none;
+    
+    opacity: 0;
+}
+input.sheet-tabeditar + span::before{
+    content: "";
+
+    border: none;
+    text-align: center;
+    float: left;
+    position:absolute;
+    background: none;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+
+    
+
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/scroll.png") !important;
+    background-position: 0;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+input.sheet-tabeditar:checked + span::before{
+    content: "✖";
+    background:none;
+    border: none;
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    color:red;
+
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/scroll.png") !important;
+    background-position: 0;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
 
 
 /* Hide the toggle checkbox */
