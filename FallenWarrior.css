@@ -938,23 +938,7 @@ hr {
     background: #fffaf0;
 }
 
-.sheet-recuadroeditardesvio {
-    display: none;
-    border-radius: 10px;
-    box-shadow: 5px 5px 8px #ccc;
-    position:relative;
-    z-index: 5;
-    padding: 10px 15px;
-    margin-top: 2px;
-    margin-left: -125px;
-    width: 280px !important;
-    line-height: 16px;
-    color: #111;
-    border: 1px solid #dca;
-    background: #fffaf0;
-}
-
-.sheet-recuadroeditarenergia {
+.sheet-recuadroeditarxl {
     display: none;
     border-radius: 10px;
     box-shadow: 5px 5px 8px #ccc;
@@ -964,6 +948,22 @@ hr {
     margin-top: 2px;
     margin-left: -125px;
     width: 300px !important;
+    line-height: 16px;
+    color: #111;
+    border: 1px solid #dca;
+    background: #fffaf0;
+}
+
+.sheet-recuadroeditarxxl {
+    display: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #ccc;
+    position:relative;
+    z-index: 5;
+    padding: 10px 15px;
+    margin-top: 2px;
+    margin-left: -125px;
+    width: 350px !important;
     line-height: 16px;
     color: #111;
     border: 1px solid #dca;
@@ -1398,6 +1398,62 @@ input.sheet-tabrasgos:checked + span::before{
     background-repeat: no-repeat;
 }
 
+div.sheet-tabcarga-content { display: none; }
+input.sheet-tabcarga:checked ~ div.sheet-tabcarga
+{
+    display: inline-block;
+}
+input.sheet-tabcarga{
+    width: 32px;
+    height: 32px;
+    
+    float: left;
+    cursor: pointer;
+    z-index: 1;
+
+    border: none;
+    background: none;
+    color: none;
+    
+    opacity: 0;
+}
+input.sheet-tabcarga + span::before{
+    content: "";
+
+    border: none;
+    text-align: center;
+    float: left;
+    background: none;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-left: -32px;
+    margin-right: 15px;
+
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/scroll.png") !important;
+    background-position: 0;
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+}
+input.sheet-tabcarga:checked + span::before{
+    content: "✖";
+    background:none;
+    border: none;
+
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    color:red;
+
+    background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/scroll.png") !important;
+    background-position: 0;
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+}
+
 div.sheet-tabtalentos-content { display: none; }
 input.sheet-tabtalentos:checked ~ div.sheet-tabtalentos
 {
@@ -1663,7 +1719,11 @@ input.sheet-tabeditardesvio:checked ~ div.sheet-tabeditardesvio,
 input.sheet-tabeditarpelea:checked ~ div.sheet-tabeditarpelea,
 input.sheet-tabeditarconjuracion:checked ~ div.sheet-tabeditarconjuracion,
 input.sheet-tabeditarintensidad:checked ~ div.sheet-tabeditarintensidad,
-input.sheet-tabeditarceleridad:checked ~ div.sheet-tabeditarceleridad
+input.sheet-tabeditarceleridad:checked ~ div.sheet-tabeditarceleridad,
+input.sheet-tabeditarattack1:checked ~ div.sheet-tabeditarattack1,
+input.sheet-tabeditarattack2:checked ~ div.sheet-tabeditarattack2,
+input.sheet-tabeditarattack3:checked ~ div.sheet-tabeditarattack3,
+input.sheet-tabeditarattack4:checked ~ div.sheet-tabeditarattack4
 {
     display: inline-block;
 }
@@ -1870,7 +1930,7 @@ button[type=roll]::before {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCPelea.png") !important;
 }
 
-.sheet-bataque1
+.sheet-battack1
 {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque1.png") !important;
 }
@@ -1880,17 +1940,17 @@ button[type=roll]::before {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCDesvio.png") !important;
 }
 
-.sheet-bataque2
+.sheet-battack2
 {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque2.png") !important;
 }
 
-.sheet-bataque3
+.sheet-battack3
 {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaque3.png") !important;
 }
 
-.sheet-bataquesa
+.sheet-battack4
 {
     background-image: url("https://raw.githubusercontent.com/d12fallenwarrior/d12FallenWarrior/master/imagenes/CCAtaqueSA.png") !important;
 }
