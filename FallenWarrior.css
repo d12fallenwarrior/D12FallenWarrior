@@ -1211,7 +1211,18 @@ input.sheet-mostrar_conjuro6:not(:checked) ~ div.sheet-nota_conjuro6,
 input.sheet-mostrar_conjuro7:not(:checked) ~ div.sheet-nota_conjuro7,
 input.sheet-mostrar_conjuro8:not(:checked) ~ div.sheet-nota_conjuro8,
 input.sheet-mostrar_conjuro9:not(:checked) ~ div.sheet-nota_conjuro9,
-input.sheet-mostrar_conjuro10:not(:checked) ~ div.sheet-nota_conjuro10
+input.sheet-mostrar_conjuro10:not(:checked) ~ div.sheet-nota_conjuro10,
+input.sheet-mostrar_conjuro11:not(:checked) ~ div.sheet-nota_conjuro11,
+input.sheet-mostrar_conjuro12:not(:checked) ~ div.sheet-nota_conjuro12,
+input.sheet-mostrar_conjuro13:not(:checked) ~ div.sheet-nota_conjuro13,
+input.sheet-mostrar_conjuro14:not(:checked) ~ div.sheet-nota_conjuro14,
+input.sheet-mostrar_conjuro15:not(:checked) ~ div.sheet-nota_conjuro15,
+input.sheet-mostrar_conjuro16:not(:checked) ~ div.sheet-nota_conjuro16,
+input.sheet-mostrar_conjuro17:not(:checked) ~ div.sheet-nota_conjuro17,
+input.sheet-mostrar_conjuro18:not(:checked) ~ div.sheet-nota_conjuro18,
+input.sheet-mostrar_conjuro19:not(:checked) ~ div.sheet-nota_conjuro19,
+input.sheet-mostrar_conjuro20:not(:checked) ~ div.sheet-nota_conjuro20,
+input.sheet-mostrar_conjuro21:not(:checked) ~ div.sheet-nota_conjuro21
  {
     display: none !important;
 }
@@ -1225,7 +1236,18 @@ input.sheet-mostrar_conjuropreparado6:not(:checked) ~ div.sheet-nota_conjuroprep
 input.sheet-mostrar_conjuropreparado7:not(:checked) ~ div.sheet-nota_conjuropreparado7,
 input.sheet-mostrar_conjuropreparado8:not(:checked) ~ div.sheet-nota_conjuropreparado8,
 input.sheet-mostrar_conjuropreparado9:not(:checked) ~ div.sheet-nota_conjuropreparado9,
-input.sheet-mostrar_conjuropreparado10:not(:checked) ~ div.sheet-nota_conjuropreparado10
+input.sheet-mostrar_conjuropreparado10:not(:checked) ~ div.sheet-nota_conjuropreparado10,
+input.sheet-mostrar_conjuropreparado11:not(:checked) ~ div.sheet-nota_conjuropreparado11,
+input.sheet-mostrar_conjuropreparado12:not(:checked) ~ div.sheet-nota_conjuropreparado12,
+input.sheet-mostrar_conjuropreparado13:not(:checked) ~ div.sheet-nota_conjuropreparado13,
+input.sheet-mostrar_conjuropreparado14:not(:checked) ~ div.sheet-nota_conjuropreparado14,
+input.sheet-mostrar_conjuropreparado15:not(:checked) ~ div.sheet-nota_conjuropreparado15,
+input.sheet-mostrar_conjuropreparado16:not(:checked) ~ div.sheet-nota_conjuropreparado16,
+input.sheet-mostrar_conjuropreparado17:not(:checked) ~ div.sheet-nota_conjuropreparado17,
+input.sheet-mostrar_conjuropreparado18:not(:checked) ~ div.sheet-nota_conjuropreparado18,
+input.sheet-mostrar_conjuropreparado19:not(:checked) ~ div.sheet-nota_conjuropreparado19,
+input.sheet-mostrar_conjuropreparado20:not(:checked) ~ div.sheet-nota_conjuropreparado20,
+input.sheet-mostrar_conjuropreparado21:not(:checked) ~ div.sheet-nota_conjuropreparado21
  {
     display: none !important;
 }
