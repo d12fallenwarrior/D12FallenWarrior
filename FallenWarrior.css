@@ -978,8 +978,8 @@ hr {
     z-index: 5;
     padding: 10px 15px;
     margin-top: 0px;
-    margin-left: -220px;
-    width: 400px !important;
+    margin-left: -620px;
+    width: 850px !important;
     line-height: 16px;
     color: #111;
     border: 1px solid #dca;
@@ -2140,7 +2140,8 @@ input.sheet-minirangoex:checked + span
 input.sheet-rango[type="radio"],
 input.sheet-rangorojo[type="radio"],
 input.sheet-rango2[type="radio"],
-input.sheet-rango3[type="radio"]
+input.sheet-rango3[type="radio"],
+input.sheet-rango4[type="radio"]
 {
     max-width: 2em;  
     opacity: 0;
@@ -2248,13 +2249,32 @@ input.sheet-rango3[type="radio"] + span::before
     border-radius: 50%;
 }
 
+input.sheet-rango4[type="radio"] + span::before
+{
+    margin-right: 5px;
+    border: solid 2px black;
+    line-height: 3px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: black;
+    
+    color:black;
+    content: " ";
+    width: 11px;
+    height: 2px; 
+    font-size: 1em;
+
+}
+
 
 
 /* -----Remove dot from all radios _after_ selected one----- */
 input.sheet-rango[type="radio"]:checked ~ input.sheet-rango[type="radio"] + span::before,
 input.sheet-rangorojo[type="radio"]:checked ~ input.sheet-rangorojo[type="radio"] + span::before,
 input.sheet-rango2[type="radio"]:checked ~ input.sheet-rango2[type="radio"] + span::before,
-input.sheet-rango3[type="radio"]:checked ~ input.sheet-rango3[type="radio"] + span::before
+input.sheet-rango3[type="radio"]:checked ~ input.sheet-rango3[type="radio"] + span::before,
+input.sheet-rango4[type="radio"]:checked ~ input.sheet-rango4[type="radio"] + span::before
 {    
     content: "";
     background-color: transparent !important;
@@ -2274,7 +2294,7 @@ input.sheet-zero[type="radio"]:hover + span::before
 input.sheet-zero[type="radio"] + span::before
 {
     content: "✖";
-    opacity: 0.20;
+    opacity: 0.15;
     background-color: transparent;
     border: none;
     margin-right: 6px !important;
